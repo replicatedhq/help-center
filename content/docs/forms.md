@@ -1,12 +1,12 @@
-+++
-date = "2017-04-10T16:40:50+01:00"
-title = "Forms"
-draft = false
-weight = 60
-description = "Rows and columns for all sorts of tables"
-bref = 'Forms come in all forms and shapes in Kube, and you can do all sorts of things with them, especially when combining with <a href="/docs/custom-plugins/">custom plugins</a> for extra interactivity. These forms are ideal building material for your awesome projects!'
-toc = true
-+++
+---
+date: 2017-04-10T16:40:50+01:00
+title: Forms
+draft: false
+weight: 60
+description: Rows and columns for all sorts of tables
+bref: Forms come in all forms and shapes in Kube, and you can do all sorts of things with them, especially when combining with <a href="/docs/custom-plugins/">custom plugins</a> for extra interactivity. These forms are ideal building material for your awesome projects!
+toc: true
+---
 
 <h3 class="section-head" id="h-base"><a href="#h-base">Base</a></h3>
 <p>This is the most basic form with all the basic inputs.</p>

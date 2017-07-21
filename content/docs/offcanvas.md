@@ -1,12 +1,12 @@
-+++
-date = "2017-04-10T16:42:43+01:00"
-draft = false
-weight = 180
-description = "Navigation, menus and content sliding from outside the page"
-title = "Offcanvas"
-bref="Offcanvas makes it look like a menu is sliding from the outside of the page. This may be useful in many different cases, one of them being when you need to save space on screen and don't have to display sidebar at all times"
-toc= true
-+++
+---
+date: 2017-04-10T16:42:43+01:00
+draft: false
+weight: 180
+description: Navigation, menus and content sliding from outside the page
+title: Offcanvas
+bref: Offcanvas makes it look like a menu is sliding from the outside of the page. This may be useful in many different cases, one of them being when you need to save space on screen and don't have to display sidebar at all times
+toc: true
+---
 
 <h3 class="section-head" id="h-demo"><a href="#h-demo">Demo</a></h3>
 <p>This feature is very easy to set up. It is based on <code>data-component</code> set to <var>offcanvas</var>, <code>data-target</code> set to the menu layer (<var>#offcanvas-right</var> in example below) and a feature-specific <code>data-direction</code> which is required for right menu to be set to <var>right</var>.</p>

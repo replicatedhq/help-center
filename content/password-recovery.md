@@ -1,7 +1,7 @@
 
-+++
-title = "Password Recovery"
-+++
+---
+title: "Password Recovery"
+---
 <form id="form-recovery-form" action="" data-component="validate" method="post" class="form form-centered"><input type="hidden" name="authorize-token" value="">
 
     <div class="form-item">

@@ -1,11 +1,11 @@
-+++
-title = "Custom Plugins"
-description = "Flexible and extensible way to add custom features"
-weight = 20
-draft = false
-toc = true
-bref = "Kube has a lot to offer in terms of extensibility and flexibility, and plugins are the way of doing incredible things without bloating the core. With plugins, you can extend existing features, make them more interactive, or you can crate completely new functionality."
-+++
+---
+title: Custom Plugins
+description: Flexible and extensible way to add custom features
+weight: 20
+draft: false
+toc: true
+bref: Kube has a lot to offer in terms of extensibility and flexibility, and plugins are the way of doing incredible things without bloating the core. With plugins, you can extend existing features, make them more interactive, or you can crate completely new functionality.
+---
 
 <h3 class="section-head" id="h-plugin"><a href="#h-plugin">Plugin Template</a></h3>
 <p>Here's what a generic plugin looks like. This template gives an overall idea of what you can do with plugins in Kube. Feel free to use this one as a boilerplate for your custom plugins.</p>

@@ -1,12 +1,11 @@
-+++
-date = "2017-04-10T16:40:43+01:00"
-title = "Labels"
-draft = false
-weight = 80
-description = "Label things with all sorts of labels"
-bref = "Labels have all standard Kube styling options available: outline, states (success, error, warning), inverted color, and more. You can also customize labels to your requirements, and place them inside other elements, such as buttons, for example"
-toc = true
-+++
+---
+date: 2017-04-10T16:40:43+01:00
+title: Labels
+draft: false
+weight: 80
+description: Label things with all sorts of labels
+toc: true
+---
 
 <h3 class="section-head" id="h-base"><a href="#h-base">Base</a></h3>
 <div class="example">

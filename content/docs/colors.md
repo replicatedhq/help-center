@@ -1,12 +1,12 @@
-+++
-date = "2017-04-10T16:43:14+01:00"
-draft = false
-weight = 210
-description = "The basic set of colors"
-title = "Colors"
-bref="Kube has a basic set of colors for text, links, buttons, states and gray palette. These colors help to create uniformity and harmony in the look of UI elements. All colors are carefully selected and combined with each other. Of course, you can change the color scheme to your choice in the framework settings."
-toc = true
-+++
+---
+date: 2017-04-10T16:43:14+01:00
+draft: false
+weight: 210
+description: The basic set of colors
+title: Colors
+bref: Kube has a basic set of colors for text, links, buttons, states and gray palette. These colors help to create uniformity and harmony in the look of UI elements. All colors are carefully selected and combined with each other. Of course, you can change the color scheme to your choice in the framework settings.
+toc: true
+---
 
 <h3 class="section-head">Text</h3>
 <p>Contrasting black color for headings and less intense dark gray for the text helps to improve readability.</p>

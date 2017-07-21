@@ -1,12 +1,12 @@
-+++
-title = "Modal"
-draft = false
-weight = 150
-date = "2017-04-10T16:42:18+01:00"
-description = "Clean, functional, and extensible modal window dialogs"
-bref="Modal windows are used for various reasons and purposes. Kube makes the way you design and operate modal windows very straightforward. First, you set a <code>div</code> which will represent the content of the modal window, then you set up a way to open and close this window, and finally you add a way to call the modal from the page"
-toc = true
-+++
+---
+title: Modal
+draft: false
+weight: 150
+date: 2017-04-10T16:42:18+01:00
+description: Clean, functional, and extensible modal window dialogs
+bref: Modal windows are used for various reasons and purposes. Kube makes the way you design and operate modal windows very straightforward. First, you set a <code>div</code> which will represent the content of the modal window, then you set up a way to open and close this window, and finally you add a way to call the modal from the page
+toc: true
+---
 
 <h4 class="demo-head" id="h-calling">Calling</h4>
 <p>Here you add an actual call to the modal window. Clicking the "Open" button below will launch a <var>modal</var> with content of a <var>#my-modal</var> div. You can use buttons or links to open modals in Kube. Clicking anywhere outside of the modal or hitting <kbd>ESC</kbd> will close the window.</p>

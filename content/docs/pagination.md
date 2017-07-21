@@ -1,12 +1,12 @@
-+++
-date = "2017-04-10T16:42:03+01:00"
-draft = false
-weight = 130
-description = "Various flexible pagination options for your site"
-title = "Pagination"
-bref= "Default pagination in Kube is organized using lists, with visual cues for the user what is the current page, and page numbers for easier navigation. Pagination buttons and multiline formats are available out-of-the-box as well"
-toc =true
-+++
+---
+date: 2017-04-10T16:42:03+01:00
+draft: false
+weight: 130
+description: Various flexible pagination options for your site
+title: Pagination
+bref: Default pagination in Kube is organized using lists, with visual cues for the user what is the current page, and page numbers for easier navigation. Pagination buttons and multiline formats are available out-of-the-box as well
+toc: true
+---
 
 <h3 class="section-head" id="h-base"><a href="#h-base">Base</a></h3>
 <div class="example">

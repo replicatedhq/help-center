@@ -1,12 +1,12 @@
-+++
-title = "Toggleme"
-date = "2017-04-10T16:42:59+01:00"
-draft = false
-weight = 190
-description = "Display or hide elements with simple toggle"
-bref= "Toggleme is a great way to add a binary option to either display some content or hide it. It works like a charm for menus, disclaimers and so much more!"
-toc = true
-+++
+---
+title: Toggleme
+date: 2017-04-10T16:42:59+01:00
+draft: false
+weight: 190
+description: Display or hide elements with simple toggle
+bref: Toggleme is a great way to add a binary option to either display some content or hide it. It works like a charm for menus, disclaimers and so much more!
+toc: true
+---
 
 <h3 class="section-head" id="h-demo"><a href="#h-demo">Demo</a></h3>
 <p>Toggleme works on mobile devices as well as on desktops. To see Toggleme in action, just resize this window or open this page on a mobile device.</p>

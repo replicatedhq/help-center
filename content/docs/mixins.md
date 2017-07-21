@@ -1,12 +1,12 @@
-+++
-weight = 230
-description = "Mixins save countless hours and bring results faster"
-date = "2017-04-10T16:43:36+01:00"
-title = "Mixins"
-draft = false
-bref="Mixins are a great way to produce things and effects way faster with Sass then with pure CSS. Kube has a lot to offer in this respect; feel free to use any of these mixins with any Kube components."
-toc = true
-+++
+---
+weight: 230
+description: Mixins save countless hours and bring results faster
+date: 2017-04-10T16:43:36+01:00
+title: Mixins
+draft: false
+bref: Mixins are a great way to produce things and effects way faster with Sass then with pure CSS. Kube has a lot to offer in this respect; feel free to use any of these mixins with any Kube components.
+toc: true
+---
 
 <h3 class="section-head" id="h-get-started"><a href="#h-get-started">Get Started</a></h3>
 <p>Kube has been designed to help you with web development, that's why it's so easy to use Kube when building websites. To move forward quickly and efficiently, just link <code>kube.scss</code> from Kube package: this file contains variables, mixins and everything you need to simplify daily routine tasks.</p>

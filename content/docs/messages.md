@@ -1,12 +1,12 @@
-+++
-date = "2017-04-10T16:41:34+01:00"
-draft = false
-weight = 90
-description = "Versatile and refined messages, ideal for daily use"
-title = "Messages"
-bref = "Messages are an essential part of modern web, and they can provide invaluable feedback to the users. Messages in Kube look nice, they are informative, simple and very easy to set up to whatever requirements you may have, style-wise or otherwise. Take a div, give it an message class, add a color using meaningful classes like error or success and you're practically done!"
-toc = true
-+++
+---
+date: 2017-04-10T16:41:34+01:00
+draft: false
+weight: 90
+description: Versatile and refined messages, ideal for daily use
+title: Messages
+bref: Messages are an essential part of modern web, and they can provide invaluable feedback to the users. Messages in Kube look nice, they are informative, simple and very easy to set up to whatever requirements you may have, style-wise or otherwise. Take a div, give it an message class, add a color using meaningful classes like error or success and you're practically done!
+toc: true
+---
 
 <h3 class="section-head" id="h-usage"><a href="#h-usage">Usage</a></h3>
 <div class="example">

@@ -1,12 +1,12 @@
-+++
-date = "2017-04-02T22:01:15+01:00"
-title = "Prototyping with markdown"
-tags = ["markdown","prototype", "hugo"]
-categories = ["design"]
-description = "An idea to make website protoype with markdown"
-draft = false
-weight = 30
-+++
+---
+date: 2017-04-02T22:01:15+01:00
+title: Prototyping with markdown
+tags: ["markdown","prototype", "hugo"]
+categories: ["design"]
+description: An idea to make website protoype with markdown
+draft: false
+weight: 30
+---
 
 <img data-src="https://cldup.com/3tov0aCFh8.png" class="lazyload">
 

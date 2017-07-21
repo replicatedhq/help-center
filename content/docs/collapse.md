@@ -1,12 +1,12 @@
-+++
-date = "2017-04-10T16:42:50+01:00"
-draft = false
-weight = 180
-description = "Smoothly and reliably collapse elements for extra convenience"
-title = "Collapse"
-bref="Collapsable elements are horizontally aligned tabs, in a way. Jokes aside, collapsable elements are useful and easy to setup, both for direct purpose of switching between content while collapsing everything else, and for navigation use cases"
-toc = true
-+++
+---
+date: 2017-04-10T16:42:50+01:00
+draft: false
+weight: 180
+description: Smoothly and reliably collapse elements for extra convenience
+title: Collapse
+bref: Collapsable elements are horizontally aligned tabs, in a way. Jokes aside, collapsable elements are useful and easy to setup, both for direct purpose of switching between content while collapsing everything else, and for navigation use cases
+toc: true
+---
 
 <h3 class="section-head" id="h-base"><a href="#h-base">Base</a></h3>
 <div class="example">

@@ -1,12 +1,12 @@
-+++
-title = "Tabs"
-date = "2017-04-10T16:41:40+01:00"
-draft = false
-weight = 100
-description = "User-friendly navigation for your content or app"
-bref= "Tabs in Kube are crafted the way one would expect from the world's best CSS framework. With versatile API, wide range of settings an options, with callbacks and live examples. Take a look!"
-toc= true
-+++
+---
+title: Tabs
+date: 2017-04-10T16:41:40+01:00
+draft: false
+weight: 100
+description: User-friendly navigation for your content or app
+bref: Tabs in Kube are crafted the way one would expect from the world's best CSS framework. With versatile API, wide range of settings an options, with callbacks and live examples. Take a look!
+toc: true
+---
 
 <h3 class="section-head" id="h-base"><a href="#h-base">Base</a></h3>
 <p>Here's an example of basic tabs setup. Tabs bar is an unordered list, and each tab in tabs bar is a list item. For each tab there's a corresponding div, which contains the body of the tab (it can be any kind of HTML).</p>

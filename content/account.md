@@ -1,6 +1,6 @@
-+++
-title = "Sign In"
-+++
+---
+title: Sign In
+---
 <form action="" data-component="validate" method="post" class="form form-centered"><input type="hidden" name="authorize-token" value="">
 
     <div class="form-item">
