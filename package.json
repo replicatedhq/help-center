@@ -1,0 +1,19 @@
+{
+  "name": "help-center",
+  "version": "1.0.0",
+  "description": "Replicated knowledge base built with Hugo",
+  "main": "lib/index.js",
+  "repository": "https://github.com/10Dimensional/help-center.git",
+  "author": "Sloane Smith <s10dimensional@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "hugo server",
+    "index-site": "hugo-algolia",
+    "index-and-send": "hugo-algolia -s"
+  },
+  "dependencies": {
+    "algoliasearch": "^3.24.1",
+    "gray-matter": "^3.0.2",
+    "toml": "^2.3.2"
+  }
+}
