@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Pagination</title>
+	
+	<meta name="author" content="newpixcom">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.25.1" />
+</head>
+<body>
+	<header>
+		<a href="/">Kube for Hugo</a>
+		<nav>
+			<ul>
+				
+				<li><a href="/blog/">Blog</a></li>
+				
+				<li><a href="/docs/">Docs</a></li>
+				
+				<li><a href="/faq/">Faq</a></li>
+				
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<h1>Pagination</h1>
+			<time>10.04.2017 16:42</time>
+			<div>
+				<p><h3 class="section-head" id="h-base"><a href="#h-base">Base</a></h3>
+<div class="example">
+  <nav class="pagination">
+    <ul>
+      <li class="prev">
+        <a href="#">←</a>
+      </li>
+      <li>
+        <ul>
+          <li><span>1</span></li>
+          <li>
+            <a href="#">2</a>
+          </li>
+          <li>
+            <a href="#">3</a>
+          </li>
+          <li>
+            <a href="#">4</a>
+          </li>
+          <li>
+            <a href="#">5</a>
+          </li>
+        </ul>
+      </li>
+      <li class="next">
+        <a href="#">→</a>
+      </li>
+    </ul>
+  </nav>
+  <pre class="code skip"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;pagination&rdquo;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;prev&rdquo;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&rdquo;&rdquo;</span>&gt;</span>&amp;larr;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&hellip;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&rdquo;&rdquo;</span>&gt;</span>&hellip;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;next&rdquo;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&rdquo;&rdquo;</span>&gt;</span>&amp;rarr;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+</pre>
+</div>
+<h3 class="section-head" id="h-centered"><a href="#h-centered">Centered</a></h3>
+<div class="example">
+  <nav class="pagination align-center">
+    <ul>
+      <li class="prev">
+        <a href="#">←</a>
+      </li>
+      <li>
+        <ul>
+          <li class="active">
+            <a href="#">1</a>
+          </li>
+          <li>
+            <a href="#">2</a>
+          </li>
+          <li>
+            <a href="#">3</a>
+          </li>
+          <li>
+            <a href="#">4</a>
+          </li>
+          <li>
+            <a href="#">5</a>
+          </li>
+        </ul>
+      </li>
+      <li class="next">
+        <a href="#">→</a>
+      </li>
+    </ul>
+  </nav>
+  <pre class="code skip"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;pagination align-center&rdquo;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;prev&rdquo;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&rdquo;&rdquo;</span>&gt;</span>&amp;larr;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;active&rdquo;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&rdquo;#&rdquo;</span>&gt;</span>&hellip;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&rdquo;&rdquo;</span>&gt;</span>&hellip;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;next&rdquo;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&rdquo;&rdquo;</span>&gt;</span>&amp;rarr;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+</pre>
+</div>
+<h3 class="section-head" id="h-wide"><a href="#h-wide">Wide</a></h3>
+<p>Here you can see an example where previous and next buttons are aligned to the left and to the right, with a link in the center of the page.</p>
+<div class="example">
+  <nav class="pagination align-center upper strong">
+    <ul>
+      <li class="prev">
+        <a href="#">&lt; Prev</a>
+      </li>
+      <li class="w100">
+        <ul>
+          <li>
+            <a href="#">Back to catalog</a>
+          </li>
+        </ul>
+      </li>
+      <li class="next">
+        <a href="#">Next &gt;</a>
+      </li>
+    </ul>
+  </nav>
+  <pre class="code skip"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;pagination align-center upper strong&rdquo;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;prev&rdquo;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&rdquo;&rdquo;</span>&gt;</span>&amp;lt; Prev<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;w100&rdquo;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&rdquo;&rdquo;</span>&gt;</span>&hellip;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;next&rdquo;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&rdquo;&rdquo;</span>&gt;</span>Next &amp;gt;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+</pre>
+</div>
+<h3 class="section-head" id="h-pager"><a href="#h-pager">Pager</a></h3>
+<div class="example">
+  <nav class="pagination pager">
+    <ul>
+      <li class="prev">
+        <a href="#">Previous</a>
+      </li>
+      <li class="next">
+        <a href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+  <pre class="code skip"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;pagination pager&rdquo;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;prev&rdquo;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&rdquo;&rdquo;</span>&gt;</span>Previous<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;next&rdquo;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&rdquo;&rdquo;</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+</pre>
+</div>
+<div class="example">
+  <nav class="pagination pager align-center">
+    <ul>
+      <li class="prev">
+        <a href="#">Previous</a>
+      </li>
+      <li class="next">
+        <a href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+  <pre class="code skip"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;pagination pager align-center&rdquo;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;prev&rdquo;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&rdquo;&rdquo;</span>&gt;</span>Previous<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;next&rdquo;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&rdquo;&rdquo;</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+</pre>
+</div>
+<p>Elements within a single list item can be stacked to create a clean and intuitive pagination elements.</p>
+<div class="example">
+  <nav class="pagination pager flat">
+    <ul>
+      <li class="prev">
+        <span class="label tag">Prev</span> <a href="#">Learn How to Use Images on Your Website</a>
+      </li>
+      <li class="next">
+        <span class="label tag">Next</span> <a href="#">Your Guide to Flat Design</a>
+      </li>
+    </ul>
+  </nav>
+  <pre class="code skip"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;pagination pager flat&rdquo;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;prev&rdquo;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;label tag&rdquo;</span>&gt;</span>Prev<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&rdquo;&rdquo;</span>&gt;</span>&hellip;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;next&rdquo;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;label tag&rdquo;</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&rdquo;&rdquo;</span>&gt;</span>&hellip;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+</pre>
+</div></p>
+
+			</div>
+			<div>
+				<ul id="tags">
+					
+				</ul>
+			</div>
+			<div>
+				
+			</div>
+		</article>
+	</main>
+	<aside>
+		<div>
+			<div>
+				<h3>LATEST POSTS</h3>
+			</div>
+			<div>
+				<ul>
+					
+					<li><a href="/blog/welcome/">Welcome to Kube</a></li>
+					
+					<li><a href="/docs/quick-start/">Quick Start</a></li>
+					
+					<li><a href="/docs/custom-plugins/">Custom Plugins</a></li>
+					
+					<li><a href="/docs/typography/">Typography</a></li>
+					
+					<li><a href="/blog/typography/">Typography with kube</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</aside>
+
+	<footer>
+		<p>&copy; 2017 <a href="/">Kube for Hugo</a></p>
+	</footer>
+</body>
+</html>

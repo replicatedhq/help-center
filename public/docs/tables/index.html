@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tables</title>
+	
+	<meta name="author" content="newpixcom">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.25.1" />
+</head>
+<body>
+	<header>
+		<a href="/">Kube for Hugo</a>
+		<nav>
+			<ul>
+				
+				<li><a href="/blog/">Blog</a></li>
+				
+				<li><a href="/docs/">Docs</a></li>
+				
+				<li><a href="/faq/">Faq</a></li>
+				
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<h1>Tables</h1>
+			<time>10.04.2017 16:40</time>
+			<div>
+				<p><h3 class="section-head" id="h-base"><a href="#h-base">Base</a></h3>
+<div class="example">
+  <table>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Total points</td>
+        <td>223</td>
+      </tr>
+    </tfoot>
+  </table>
+  <pre class="code">&lt;<span class="hljs-keyword">table</span>&gt;&hellip;&lt;/<span class="hljs-keyword">table</span>&gt;</pre>
+</div>
+<h3 class="section-head" id="h-bordered"><a href="#h-bordered">Bordered</a></h3>
+<div class="example">
+  <table class="bordered">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Total points</td>
+        <td>223</td>
+      </tr>
+    </tfoot>
+  </table>
+  <pre class="code">&lt;<span class="hljs-keyword">table</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">&ldquo;bordered&rdquo;</span>&gt;&hellip;&lt;/<span class="hljs-keyword">table</span>&gt;</pre>
+</div>
+<h3 class="section-head" id="h-striped"><a href="#h-striped">Striped</a></h3>
+<div class="example">
+  <table class="striped">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Total points</td>
+        <td>223</td>
+      </tr>
+    </tfoot>
+  </table>
+  <pre class="code">&lt;<span class="hljs-keyword">table</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">&ldquo;striped&rdquo;</span>&gt;&hellip;&lt;/<span class="hljs-keyword">table</span>&gt;</pre>
+</div>
+<h3 class="section-head" id="h-unstyled"><a href="#h-unstyled">Unstyled</a></h3>
+<div class="example">
+  <table class="unstyled">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Total points</td>
+        <td>223</td>
+      </tr>
+    </tfoot>
+  </table>
+  <pre class="code">&lt;<span class="hljs-keyword">table</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">&ldquo;unstyled&rdquo;</span>&gt;&hellip;&lt;/<span class="hljs-keyword">table</span>&gt;</pre>
+</div>
+<h3 class="section-head" id="h-mixed"><a href="#h-mixed">Mixed</a></h3>
+<div class="example">
+  <table class="bordered striped">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Total points</td>
+        <td>223</td>
+      </tr>
+    </tfoot>
+  </table>
+  <pre class="code">&lt;<span class="hljs-keyword">table</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">&ldquo;bordered striped&rdquo;</span>&gt;&hellip;&lt;/<span class="hljs-keyword">table</span>&gt;</pre>
+</div>
+<h3 class="section-head" id="h-width"><a href="#h-width">Width</a></h3>
+<div class="example">
+  <table class="bordered">
+    <thead>
+      <tr>
+        <th class="w40">First Name</th>
+        <th class="w40">Last Name</th>
+        <th class="w20">Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+    </tbody>
+  </table>
+  <pre class="code"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;w40&rdquo;</span>&gt;</span>&hellip;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;w40&rdquo;</span>&gt;</span>&hellip;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&ldquo;w20&rdquo;</span>&gt;</span>&hellip;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></pre>
+</div></p>
+
+			</div>
+			<div>
+				<ul id="tags">
+					
+				</ul>
+			</div>
+			<div>
+				
+			</div>
+		</article>
+	</main>
+	<aside>
+		<div>
+			<div>
+				<h3>LATEST POSTS</h3>
+			</div>
+			<div>
+				<ul>
+					
+					<li><a href="/blog/welcome/">Welcome to Kube</a></li>
+					
+					<li><a href="/docs/quick-start/">Quick Start</a></li>
+					
+					<li><a href="/docs/custom-plugins/">Custom Plugins</a></li>
+					
+					<li><a href="/docs/typography/">Typography</a></li>
+					
+					<li><a href="/blog/typography/">Typography with kube</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</aside>
+
+	<footer>
+		<p>&copy; 2017 <a href="/">Kube for Hugo</a></p>
+	</footer>
+</body>
+</html>

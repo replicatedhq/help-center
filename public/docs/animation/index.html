@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Animation</title>
+	
+	<meta name="author" content="newpixcom">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.25.1" />
+</head>
+<body>
+	<header>
+		<a href="/">Kube for Hugo</a>
+		<nav>
+			<ul>
+				
+				<li><a href="/blog/">Blog</a></li>
+				
+				<li><a href="/docs/">Docs</a></li>
+				
+				<li><a href="/faq/">Faq</a></li>
+				
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<h1>Animation</h1>
+			<time>10.04.2017 16:43</time>
+			<div>
+				<p><h3 class="section-head" id="h-slide"><a href="#h-slide">Slide</a></h3>
+<div class="example">
+  <div class="demo-animation-wrap">
+    <div class="demo-animation-box">
+      <div id="animation-box-slide-up">
+        slideUp
+      </div>
+    </div>
+    <div class="demo-animation-box">
+      <div class="hide" id="animation-box-slide-down">
+        slideDown
+      </div>
+    </div>
+  </div><a class="demo-animation-btn" data-back="slideDown" data-el="#animation-box-slide-up" data-to="slideUp" href="#" id="slide-up-btn">Slide Up</a> <a class="demo-animation-btn" data-back="slideUp" data-el="#animation-box-slide-down" data-to="slideDown" href="#" id="slide-down-btn">Slide Down</a>
+  <pre class="code"><span class="hljs-variable">$(</span><span class="hljs-string">&rsquo;#element&rsquo;</span>).animation(<span class="hljs-string">&lsquo;slideUp&rsquo;</span>);
+<span class="hljs-variable">$(</span><span class="hljs-string">&rsquo;#element&rsquo;</span>).animation(<span class="hljs-string">&lsquo;slideDown&rsquo;</span>);</pre>
+</div>
+<h3 class="section-head" id="h-fade"><a href="#h-fade">Fade</a></h3>
+<div class="example">
+  <div class="demo-animation-wrap">
+    <div class="demo-animation-box">
+      <div class="hide" id="animation-box-fade-in">
+        fadeIn
+      </div>
+    </div>
+    <div class="demo-animation-box">
+      <div id="animation-box-fade-out">
+        fadeOut
+      </div>
+    </div>
+  </div><a class="demo-animation-btn" data-back="fadeOut" data-el="#animation-box-fade-in" data-to="fadeIn" href="#" id="fade-in-btn">Fade In</a> <a class="demo-animation-btn" data-back="fadeIn" data-el="#animation-box-fade-out" data-to="fadeOut" href="#" id="fade-out-btn">Fade Out</a>
+  <pre class="code"><span class="hljs-variable">$(</span><span class="hljs-string">&rsquo;#element&rsquo;</span>).animation(<span class="hljs-string">&lsquo;fadeIn&rsquo;</span>);
+<span class="hljs-variable">$(</span><span class="hljs-string">&rsquo;#element&rsquo;</span>).animation(<span class="hljs-string">&lsquo;fadeOut&rsquo;</span>);</pre>
+</div>
+<h3 class="section-head" id="h-flip"><a href="#h-flip">Flip</a></h3>
+<div class="example">
+  <div class="demo-animation-wrap">
+    <div class="demo-animation-box">
+      <div class="hide" id="animation-box-flip-in">
+        flipIn
+      </div>
+    </div>
+    <div class="demo-animation-box">
+      <div id="animation-box-flip-out">
+        flipOut
+      </div>
+    </div>
+  </div><a class="demo-animation-btn" data-back="flipOut" data-el="#animation-box-flip-in" data-to="flipIn" href="#" id="flip-in-btn">Flip In</a> <a class="demo-animation-btn" data-back="flipIn" data-el="#animation-box-flip-out" data-to="flipOut" href="#" id="flip-out-btn">Flip Out</a>
+  <pre class="code"><span class="hljs-variable">$(</span><span class="hljs-string">&rsquo;#element&rsquo;</span>).animation(<span class="hljs-string">&lsquo;flipIn&rsquo;</span>);
+<span class="hljs-variable">$(</span><span class="hljs-string">&rsquo;#element&rsquo;</span>).animation(<span class="hljs-string">&lsquo;flipOut&rsquo;</span>);</pre>
+</div>
+<h3 class="section-head" id="h-zoom"><a href="#h-zoom">Zoom</a></h3>
+<div class="example">
+  <div class="demo-animation-wrap">
+    <div class="demo-animation-box">
+      <div class="hide" id="animation-box-zoom-in">
+        zoomIn
+      </div>
+    </div>
+    <div class="demo-animation-box">
+      <div id="animation-box-zoom-out">
+        zoomOut
+      </div>
+    </div>
+  </div><a class="demo-animation-btn" data-back="zoomOut" data-el="#animation-box-zoom-in" data-to="zoomIn" href="#" id="zoom-in-btn">Zoom In</a> <a class="demo-animation-btn" data-back="zoomIn" data-el="#animation-box-zoom-out" data-to="zoomOut" href="#" id="zoom-out-btn">Zoom Out</a>
+  <pre class="code"><span class="hljs-variable">$(</span><span class="hljs-string">&rsquo;#element&rsquo;</span>).animation(<span class="hljs-string">&lsquo;zoomIn&rsquo;</span>);
+<span class="hljs-variable">$(</span><span class="hljs-string">&rsquo;#element&rsquo;</span>).animation(<span class="hljs-string">&lsquo;zoomOut&rsquo;</span>);</pre>
+</div>
+<h3 class="section-head" id="h-rotate"><a href="#h-rotate">Rotate</a></h3>
+<div class="example">
+  <div class="demo-animation-wrap">
+    <div class="demo-animation-box">
+      <div id="animation-box-rotate">
+        rotate
+      </div>
+    </div>
+  </div><a class="demo-animation-btn" href="#" id="rotate-btn">Rotate</a>
+  <pre class="code"><span class="hljs-variable">$(</span><span class="hljs-string">&rsquo;#element&rsquo;</span>).animation(<span class="hljs-string">&lsquo;rotate&rsquo;</span>);</pre>
+</div>
+<h3 class="section-head" id="h-shake"><a href="#h-shake">Shake</a></h3>
+<div class="example">
+  <div class="demo-animation-wrap">
+    <div class="demo-animation-box">
+      <div id="animation-box-shake">
+        shake
+      </div>
+    </div>
+  </div><a class="demo-animation-btn" href="#" id="shake-btn">Shake</a>
+  <pre class="code"><span class="hljs-variable">$(</span><span class="hljs-string">&rsquo;#element&rsquo;</span>).animation(<span class="hljs-string">&lsquo;shake&rsquo;</span>);</pre>
+</div>
+<h3 class="section-head" id="h-pulse"><a href="#h-pulse">Pulse</a></h3>
+<div class="example">
+  <div class="demo-animation-wrap">
+    <div class="demo-animation-box">
+      <div id="animation-box-pulse">
+        pulse
+      </div>
+    </div>
+  </div><a class="demo-animation-btn" href="#" id="pulse-btn">Pulse</a>
+  <pre class="code"><span class="hljs-variable">$(</span><span class="hljs-string">&rsquo;#element&rsquo;</span>).animation(<span class="hljs-string">&lsquo;pulse&rsquo;</span>);</pre>
+</div>
+<h3 class="section-head" id="h-slide-in"><a href="#h-slide-in">Slide In</a></h3>
+<div class="example">
+  <div class="demo-animation-wrap">
+    <div class="demo-animation-box">
+      <div class="hide" id="animation-box-slide-in-right">
+        slideInRight
+      </div>
+    </div>
+    <div class="demo-animation-box">
+      <div class="hide" id="animation-box-slide-in-left">
+        slideInLeft
+      </div>
+    </div>
+    <div class="demo-animation-box">
+      <div class="hide" id="animation-box-slide-in-down">
+        slideInDown
+      </div>
+    </div>
+  </div><a class="demo-animation-btn" data-back="slideOutRight" data-el="#animation-box-slide-in-right" data-to="slideInRight" href="#" id="slide-in-right-btn">Slide In Right</a> <a class="demo-animation-btn" data-back="slideOutLeft" data-el="#animation-box-slide-in-left" data-to="slideInLeft" href="#" id="slide-in-left-btn">Slide In Left</a> <a class="demo-animation-btn" data-back="slideOutUp" data-el="#animation-box-slide-in-down" data-to="slideInDown" href="#" id="slide-in-down-btn">Slide In Down</a>
+  <pre class="code"><span class="hljs-variable">$(</span><span class="hljs-string">&rsquo;#element&rsquo;</span>).animation(<span class="hljs-string">&lsquo;slideInRight&rsquo;</span>);
+<span class="hljs-variable">$(</span><span class="hljs-string">&rsquo;#element&rsquo;</span>).animation(<span class="hljs-string">&lsquo;slideInLeft&rsquo;</span>);
+<span class="hljs-variable">$(</span><span class="hljs-string">&rsquo;#element&rsquo;</span>).animation(<span class="hljs-string">&lsquo;slideInDown&rsquo;</span>);</pre>
+</div>
+<h3 class="section-head" id="h-slide-out"><a href="#h-slide-out">Slide Out</a></h3>
+<div class="example">
+  <div class="demo-animation-wrap">
+    <div class="demo-animation-box">
+      <div id="animation-box-slide-out-right">
+        slideOutRight
+      </div>
+    </div>
+    <div class="demo-animation-box">
+      <div id="animation-box-slide-out-left">
+        slideOutLeft
+      </div>
+    </div>
+    <div class="demo-animation-box">
+      <div id="animation-box-slide-out-up">
+        slideOutUp
+      </div>
+    </div>
+  </div><a class="demo-animation-btn" data-back="slideInRight" data-el="#animation-box-slide-out-right" data-to="slideOutRight" href="#" id="slide-out-right-btn">Slide Out Right</a> <a class="demo-animation-btn" data-back="slideInLeft" data-el="#animation-box-slide-out-left" data-to="slideOutLeft" href="#" id="slide-out-left-btn">Slide Out Left</a> <a class="demo-animation-btn" data-back="slideInDown" data-el="#animation-box-slide-out-up" data-to="slideOutUp" href="#" id="slide-out-up-btn">Slide Out Up</a>
+  <pre class="code"><span class="hljs-variable">$(</span><span class="hljs-string">&rsquo;#element&rsquo;</span>).animation(<span class="hljs-string">&lsquo;slideOutRight&rsquo;</span>);
+<span class="hljs-variable">$(</span><span class="hljs-string">&rsquo;#element&rsquo;</span>).animation(<span class="hljs-string">&lsquo;slideOutLeft&rsquo;</span>);
+<span class="hljs-variable">$(</span><span class="hljs-string">&rsquo;#element&rsquo;</span>).animation(<span class="hljs-string">&lsquo;slideOutUp&rsquo;</span>);</pre>
+</div>
+<h3 class="section-head" id="h-callback"><a href="#h-callback">Callback</a></h3>
+<pre class="code">$(<span class="hljs-string">&rsquo;#element&rsquo;</span>).animation(<span class="hljs-string">&lsquo;fadeIn&rsquo;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)
+</span>{
+    <span class="hljs-comment">// code &hellip;</span>
+});</pre></p>
+
+			</div>
+			<div>
+				<ul id="tags">
+					
+				</ul>
+			</div>
+			<div>
+				
+			</div>
+		</article>
+	</main>
+	<aside>
+		<div>
+			<div>
+				<h3>LATEST POSTS</h3>
+			</div>
+			<div>
+				<ul>
+					
+					<li><a href="/blog/welcome/">Welcome to Kube</a></li>
+					
+					<li><a href="/docs/quick-start/">Quick Start</a></li>
+					
+					<li><a href="/docs/custom-plugins/">Custom Plugins</a></li>
+					
+					<li><a href="/docs/typography/">Typography</a></li>
+					
+					<li><a href="/blog/typography/">Typography with kube</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</aside>
+
+	<footer>
+		<p>&copy; 2017 <a href="/">Kube for Hugo</a></p>
+	</footer>
+</body>
+</html>
