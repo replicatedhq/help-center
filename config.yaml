@@ -1,8 +1,8 @@
 ---
 baseURL: "/"
 languageCode: "en-us"
-title: "Kube for Hugo"
-theme: "kube"
+title: "Replicated Help Center"
+theme: "replicated-docs-theme"
 description: "Kube is a professional  and a responsive Hugo theme for developers and designers that offers a documentation section mixed with a landing page and a blog"
 Paginate: 4
 Params:
@@ -19,13 +19,13 @@ algolia:
 
 menu:
   main:
-    - Name: "Docs"
+    - Name: "Guides"
+      Weight: -100
+      URL: "/guides/"
+    - Name: "Documentation"
       Weight: -100
       URL: "/docs/"
-    - Name: "Blog"
+    - Name: "API Reference"
       Weight: -100
-      URL: "/blog/"
-    - Name: "Faq"
-      Weight: -100
-      URL: "/faq/"
+      URL: "/api-reference/"
 ---
