@@ -12,6 +12,9 @@ Params:
   twitter: "" # add your twitter profile
   email: "myemail@myaddress.xxx"
 
+taxonomies:
+  - category: "categories"
+
 algolia:
   index: "help_center"
   key: "0038e146bfecd33072d241b4b7c33279"

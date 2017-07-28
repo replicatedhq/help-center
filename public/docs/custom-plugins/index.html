@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Custom Plugins</title>
+	
+	<meta name="author" content="newpixcom">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.25.1" />
+</head>
+<body>
+	<header>
+		<a href="/">Kube for Hugo</a>
+		<nav>
+			<ul>
+				
+				<li><a href="/blog/">Blog</a></li>
+				
+				<li><a href="/docs/">Docs</a></li>
+				
+				<li><a href="/faq/">Faq</a></li>
+				
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<h1>Custom Plugins</h1>
+			<time>01.01.0001 00:00</time>
+			<div>
+				<p><h3 class="section-head" id="h-plugin"><a href="#h-plugin">Plugin Template</a></h3>
+<p>Here&rsquo;s what a generic plugin looks like. This template gives an overall idea of what you can do with plugins in Kube. Feel free to use this one as a boilerplate for your custom plugins.</p>
+<pre class="code skip">(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">Kube</span>)
+</span>{
+    Kube.Myplugin = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">element, options</span>)
+    </span>{
+        <span class="hljs-keyword">this</span>.namespace = <span class="hljs-string">&lsquo;myplugin&rsquo;</span>;</p>
+
+<pre><code>    &lt;span class=&quot;hljs-comment&quot;&gt;// default settings&lt;/span&gt;
+    &lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.defaults = {
+        mysetting: &lt;span class=&quot;hljs-literal&quot;&gt;true&lt;/span&gt;
+    };
+
+    &lt;span class=&quot;hljs-comment&quot;&gt;// Parent Constructor&lt;/span&gt;
+    Kube.apply(&lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;, &lt;span class=&quot;hljs-built_in&quot;&gt;arguments&lt;/span&gt;);
+
+    &lt;span class=&quot;hljs-comment&quot;&gt;// Initialization&lt;/span&gt;
+    &lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.start();
+};
+
+&lt;span class=&quot;hljs-comment&quot;&gt;// Functionality&lt;/span&gt;
+Kube.Myplugin.prototype = {
+    start: &lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;hljs-params&quot;&gt;&lt;/span&gt;)
+    &lt;/span&gt;{
+        &lt;span class=&quot;hljs-comment&quot;&gt;// plugin element&lt;/span&gt;
+        &lt;span class=&quot;hljs-built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.$element);
+
+        &lt;span class=&quot;hljs-comment&quot;&gt;// call options&lt;/span&gt;
+        &lt;span class=&quot;hljs-built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.opts.mysetting);
+
+        &lt;span class=&quot;hljs-comment&quot;&gt;// call methods&lt;/span&gt;
+        &lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.method();
+    },
+    method: &lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;hljs-params&quot;&gt;&lt;/span&gt;)
+    &lt;/span&gt;{
+        &lt;span class=&quot;hljs-comment&quot;&gt;// do something...&lt;/span&gt;
+
+        &lt;span class=&quot;hljs-comment&quot;&gt;// callback&lt;/span&gt;
+        &lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.callback(&lt;span class=&quot;hljs-string&quot;&gt;'show'&lt;/span&gt;);
+
+        &lt;span class=&quot;hljs-comment&quot;&gt;// callback with arguments&lt;/span&gt;
+        &lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.callback(&lt;span class=&quot;hljs-string&quot;&gt;'show'&lt;/span&gt;, value1, value2);
+    }
+};
+
+&lt;span class=&quot;hljs-comment&quot;&gt;// Inheritance&lt;/span&gt;
+Kube.Myplugin.inherits(Kube);
+
+&lt;span class=&quot;hljs-comment&quot;&gt;// Plugin&lt;/span&gt;
+Kube.Plugin.create(&lt;span class=&quot;hljs-string&quot;&gt;'Myplugin'&lt;/span&gt;);
+Kube.Plugin.autoload(&lt;span class=&quot;hljs-string&quot;&gt;'Myplugin'&lt;/span&gt;);
+</code></pre>
+
+<p>}(Kube));
+</pre>
+<h3 class="section-head" id="h-call"><a href="#h-call">Call</a></h3>
+<p>Calling a plugin is very easy, just add the <code>data-component</code> with the name of your plugin and it will start automatic.</p>
+<pre class="code">&lt;<span class="hljs-keyword">div</span> data-component=<span class="hljs-string">&ldquo;myplugin&rdquo;</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;</pre>
+<p>Or call manually</p>
+<pre class="code skip"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&ldquo;my-element&rdquo;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></p>
+
+<p><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    $(<span class="hljs-string">&rsquo;#my-element&rsquo;</span>).myplugin();
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</pre>
+<h3 class="section-head" id="h-callbacks"><a href="#h-callbacks">Callbacks</a></h3>
+<p>Kube plugins can react on events with callbacks. Whenever you need your plugin to do something in response to an action or an event, just use a callback.</p>
+<pre class="code skip"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&ldquo;myplugin&rdquo;</span> <span class="hljs-attr">data-component</span>=<span class="hljs-string">&ldquo;myplugin&rdquo;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></p>
+
+<p><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+$(<span class="hljs-string">&rsquo;#myplugin&rsquo;</span>).on(<span class="hljs-string">&lsquo;show.myplugin&rsquo;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)
+</span>{
+    <span class="hljs-comment">// do something&hellip;</span>
+});
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</pre>
+<p>All plugin methods and variables are available within the plugin via <var>this</var>:</p>
+<pre class="code skip"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+$(<span class="hljs-string">&rsquo;#myplugin&rsquo;</span>).on(<span class="hljs-string">&lsquo;show.myplugin&rsquo;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)
+</span>{
+    <span class="hljs-comment">// plugin element</span>
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.$element);</p>
+
+<pre><code>&lt;span class=&quot;hljs-comment&quot;&gt;// call plugin method&lt;/span&gt;
+&lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.method();
+</code></pre>
+
+<p>});
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</pre></p>
+
+			</div>
+			<div>
+				<ul id="tags">
+					
+				</ul>
+			</div>
+			<div>
+				
+			</div>
+		</article>
+	</main>
+	<aside>
+		<div>
+			<div>
+				<h3>LATEST POSTS</h3>
+			</div>
+			<div>
+				<ul>
+					
+					<li><a href="/blog/welcome/">Welcome to Kube</a></li>
+					
+					<li><a href="/docs/quick-start/">Quick Start</a></li>
+					
+					<li><a href="/docs/custom-plugins/">Custom Plugins</a></li>
+					
+					<li><a href="/docs/typography/">Typography</a></li>
+					
+					<li><a href="/blog/typography/">Typography with kube</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</aside>
+
+	<footer>
+		<p>&copy; 2017 <a href="/">Kube for Hugo</a></p>
+	</footer>
+</body>
+</html>
