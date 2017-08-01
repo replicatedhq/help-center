@@ -1,7 +1,7 @@
 ---
 baseURL: "/"
 languageCode: "en-us"
-title: "Replicated Documentation"
+title: "Replicated Help Center"
 theme: "replicated-docs-theme"
 metadataformat: "yaml"
 canonifyurls: true
@@ -34,13 +34,13 @@ algolia:
 
 menu:
   main:
-    - Name: "Docs"
+    - Name: "Guides"
+      Weight: -100
+      URL: "/guides/"
+    - Name: "Documentation"
       Weight: -100
       URL: "/docs/"
-    - Name: "Blog"
+    - Name: "API Reference"
       Weight: -100
-      URL: "/blog/"
-    - Name: "Faq"
-      Weight: -100
-      URL: "/faq/"
+      URL: "/api-reference/"
 ---
