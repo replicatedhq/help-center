@@ -23,6 +23,9 @@ Temporary Items
 # Logs
 logs
 *.log
+# Repo Specific
+public
+themes
 # Runtime data
 pids
 *.pid
