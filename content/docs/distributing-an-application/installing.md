@@ -5,6 +5,7 @@ description: "Instructions for installing Replicated via the easy install script
 keywords: "installing, removing, migrating"
 weight: "304"
 categories: [ "Distributing" ]
+index: "docs"
 ---
 
 {{< note title="Replicated 2.0" >}}
