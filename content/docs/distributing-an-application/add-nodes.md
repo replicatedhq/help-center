@@ -4,6 +4,7 @@ title: "Add Nodes"
 description: "When a Replicated-orchestrated application is configured with a clustering strategy, additional nodes can be installed on remote instances to take part in the cluster."
 weight: "307"
 categories: [ "Distributing" ]
+index: "docs"
 ---
 
 The instructions to add additional nodes are different depending the running scheduler.

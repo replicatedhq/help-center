@@ -4,6 +4,7 @@ title: "Maintenance"
 description: "Maintenance processes to use after Replicated is installed"
 weight: "306"
 categories: [ "Distributing" ]
+index: "docs"
 ---
 
 ## Command Line Interface
