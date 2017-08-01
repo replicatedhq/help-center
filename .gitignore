@@ -13,8 +13,9 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
-# Directories potentially created on remote AFP share
+# Directories
 .node_modules/
+.themes/
 .AppleDB
 .AppleDesktop
 Network Trash Folder
