@@ -2,7 +2,8 @@
 
 # Directories
 .node_modules/
-.themes/
+themes
+public
 
 # Logs
 logs
