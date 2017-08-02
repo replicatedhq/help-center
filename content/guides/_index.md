@@ -1,4 +1,3 @@
 ---
-type: "page"
 layout: "guides"
 ---
