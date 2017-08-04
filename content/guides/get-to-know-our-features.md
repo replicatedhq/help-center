@@ -1,0 +1,102 @@
+{
+  "title": "Get to know our features",
+  "description": "You've used Replicated and mastered the basics. You are familiar with all of the core concepts and terminology and have probably shipped at least one application.",
+  "level": "intermediate",
+  "chapters": [
+    {
+      "title": "Admin commands",
+      "description": "Implementation guide for application vendors to provide customers with aliased CLI commands that can be performed in the containers across a cluster.",
+      "slug": "/docs/packaging-an-application/admin-commands"
+    },
+    {
+      "title": "Application properties",
+      "description": "The Replicated YAML section 'properties' allows several high level items to be defined.",
+      "slug": "/docs/packaging-an-application/application-properties"
+    },
+    {
+      "title": "Clustering",
+      "description": "An implementation guide for using the Replicated built in clustering functionality.",
+      "slug": "/docs/packaging-an-application/clustering"
+    },
+    {
+      "title": "Commands",
+      "description": "The 'cmds' section of the Replicated YAML allows you to leverage the power of external commands within your application configuration.",
+      "slug": "/docs/packaging-an-application/commands"
+    },
+    {
+      "title": "Components and containers",
+      "description": "The 'components' section of the Replicated YAML defines how the containers will be created and started.",
+      "slug": "/docs/packaging-an-application/components-and-commands"
+    },
+    {
+      "title": "Config screen",
+      "description": "The 'config' section of the Replicated YAML creates a dynamic settings page that customers can use to configure their instance.",
+      "slug": "/docs/packaging-an-application/config-screen"
+    },
+    {
+      "title": "Custom metrics",
+      "description": "Custom metrics.",
+      "slug": "/docs/packaging-an-application/custom-metrics"
+    },
+    {
+      "title": "Custom preflight checks",
+      "description": "A guide to implementing the Custom Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update.",
+      "slug": "/docs/packaging-an-application/custom-preflight-checks"
+    },
+    {
+      "title": "Docker swarm",
+      "description": "Packaging a Docker Swarm application in Replicated.",
+      "slug": "/docs/packaging-an-application/docker-swarm"
+    },
+    {
+      "title": "Events and orchestration",
+      "description": "The 'events' section of the Replicated YAML allows application vendors to sequence and orchestrate containers based on events from other containers.",
+      "slug": "/docs/packaging-an-application/events-and-orchestration"
+    },
+    {
+      "title": "Kubernetes",
+      "description": "Packaging a Kubernetes application in Replicated.",
+      "slug": "/docs/packaging-an-application/kubernetes"
+    },
+    {
+      "title": "LDAP integration",
+      "description": "Enabling LDAP and AD user auth and sync in an application through Replicated.",
+      "slug": "/docs/packaging-an-application/ldap-integration"
+    },
+    {
+      "title": "Kubernetes preglight checks",
+      "description": "A guide to implementing the Kubernetes Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update.",
+      "slug": "/docs/packaging-an-application/preflight-checks-k8s"
+    },
+    {
+      "title": "Preflight checks",
+      "description": "A guide to implementing the Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update.",
+      "slug": "/docs/packaging-an-application/preflight-checks"
+    },
+    {
+      "title": "Snapshots",
+      "description": "Guide to enabling application snapshots for backup and restore functionality.",
+      "slug": "/docs/packaging-an-application/snapshots"
+    },
+    {
+      "title": "Support bundle",
+      "description": "Installed instances can generate a support bundle with relevant logs and instance information.",
+      "slug": "/docs/packaging-an-application/support-bundle"
+    },
+    {
+      "title": "Template functions",
+      "description": "The dynamic configuration management functionality available throughout the Replicated YAML.",
+      "slug": "/docs/packaging-an-application/template-functions"
+    },
+    {
+      "title": "Test procs",
+      "description": "Test Procs enable customers to easily test the validity of the unsaved configuration parameters they're entering during installation.",
+      "slug": "/docs/packaging-an-application/test-procs"
+    },
+    {
+      "title": "YAML overview",
+      "description": "An overview of the various sections of the Replicated YAML.",
+      "slug": "/docs/packaging-an-application/yaml-overview"
+    }
+  ]
+}
