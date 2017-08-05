@@ -9,7 +9,9 @@
   "scripts": {
     "start": "hugo server",
     "index-site": "hugo-algolia",
-    "index-and-send": "hugo-algolia -s"
+    "index-and-send": "hugo-algolia -s",
+    "index-multInd": "hugo-algolia -m",
+    "index-and-send-multInd": "hugo-algolia -m -s"
   },
   "dependencies": {
     "algoliasearch": "^3.24.1",
