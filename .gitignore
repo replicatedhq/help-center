@@ -1,9 +1,8 @@
 *.DS_Store
 
 # Directories
-.node_modules/
-themes
-public
+node_modules/
+public/
 
 # Logs
 logs
