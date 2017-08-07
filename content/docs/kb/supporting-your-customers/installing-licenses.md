@@ -4,6 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Installing Licenses"
 weight: "999999"
 categories: [ "Knowledgebase", "Supporting Your Customers" ]
+index: "docs"
 ---
 
 It's possible your customers might run into problems while uploading their license after 

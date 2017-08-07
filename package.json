@@ -10,8 +10,9 @@
     "start": "hugo server",
     "index-site": "hugo-algolia",
     "index-and-send": "hugo-algolia -s",
-    "index-multInd": "hugo-algolia -m",
-    "index-and-send-multInd": "hugo-algolia -m -s"
+    "index-multInd": "hugo-algolia -wo -m",
+    "index-and-send-multInd": "hugo-algolia -wo -m -s",
+    "index-partial-docs": "hugo-algolia -m 'categories' -p 'title, uri, categories' -i 'content/docs/**' -o 'data/docs/shallow.json'"
   },
   "dependencies": {
     "algoliasearch": "^3.24.1",

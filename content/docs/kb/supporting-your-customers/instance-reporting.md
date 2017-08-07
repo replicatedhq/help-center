@@ -4,6 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Instance Reporting"
 weight: "999999"
 categories: [ "Knowledgebase", "Supporting Your Customers" ]
+index: "docs"
 ---
 
 Replicated recently introduced a way to track the usage & updates for each customer you issue a

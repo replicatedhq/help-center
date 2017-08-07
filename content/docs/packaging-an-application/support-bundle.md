@@ -4,6 +4,7 @@ title: "Support Bundle"
 description: "Installed instances can generate a support bundle with relevant logs and instance information."
 weight: "212"
 categories: [ "Packaging" ]
+index: "docs"
 ---
 
 A support bundle is an archive that is available for the customer to download via the Support tab of the On-Prem Console.

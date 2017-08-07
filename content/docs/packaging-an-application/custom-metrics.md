@@ -4,6 +4,7 @@ lastmod: "2016-07-02T00:00:00Z"
 title: "Custom Metrics"
 weight: "217"
 categories: [ "Packaging" ]
+index: "docs"
 ---
 
 All Replicated installations come with a StatsD/Graphite/Carbon container that can be used by the application to report data to StatsD. Application YAML can also include optional custom monitors that will be used to display additional charts in Replicated dashboard. Applications can also query Graphite directly.

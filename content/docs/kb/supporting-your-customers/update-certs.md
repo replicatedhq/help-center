@@ -4,6 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Updating SSL/TLS Certificates for On-Prem Admin"
 weight: "999999"
 categories: [ "Knowledgebase", "Supporting Your Customers" ]
+index: "docs"
 ---
 
 Each Replicated installation requires customers to either use a locally generated 

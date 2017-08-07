@@ -4,6 +4,7 @@ title: "Config Screen"
 description: "The `config` section of the Replicated YAML creates a dynamic settings page that customers can use to configure their instance."
 weight: "204"
 categories: [ "Packaging" ]
+index: "docs"
 ---
 
 The admin console settings screen configuration is specified as an array configuration

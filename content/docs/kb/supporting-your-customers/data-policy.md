@@ -4,6 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Replicated Data Policy"
 weight: "999999"
 categories: [ "Knowledgebase", "Supporting Your Customers" ]
+index: "docs"
 ---
 
 A Replicated installation connects to a Replicated-hosted endpoint periodically to 

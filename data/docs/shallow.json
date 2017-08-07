@@ -1,6 +1,5 @@
 {
-    "other": [],
-    "distributing": [
+    "help_center_distributing": [
         {
             "title": "Add Nodes",
             "uri": "docs/distributing-an-application/add-nodes",
@@ -65,7 +64,7 @@
             ]
         }
     ],
-    "examples": [
+    "help_center_examples": [
         {
             "title": "Certificate Chain Example",
             "uri": "docs/examples/certificate-chain",
@@ -109,7 +108,7 @@
             ]
         }
     ],
-    "getting_started": [
+    "help_center_getting_started": [
         {
             "title": "Concepts and Terminology",
             "uri": "docs/getting-started/concepts-and-terms",
@@ -146,7 +145,7 @@
             ]
         }
     ],
-    "knowledgebase": [
+    "help_center_knowledgebase": [
         {
             "title": "Automate Install for Testing",
             "uri": "docs/kb/developer-resources/automate-install",
@@ -596,7 +595,7 @@
             ]
         }
     ],
-    "developer_resources": [
+    "help_center_developer_resources": [
         {
             "title": "Automate Install for Testing",
             "uri": "docs/kb/developer-resources/automate-install",
@@ -846,7 +845,7 @@
             ]
         }
     ],
-    "supporting_your_customers": [
+    "help_center_supporting_your_customers": [
         {
             "title": "Automated Snapshot Configuration",
             "uri": "docs/kb/supporting-your-customers/automated-snapshot-configuration",
@@ -1048,7 +1047,7 @@
             ]
         }
     ],
-    "packaging": [
+    "help_center_packaging": [
         {
             "title": "Admin Commands",
             "uri": "docs/packaging-an-application/admin-commands",

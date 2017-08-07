@@ -4,6 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Sequence Your App Startup and Know When it's Ready"
 weight: "999999"
 categories: [ "Knowledgebase", "Developer Resources" ]
+index: "docs"
 ---
 
 Orchestrating your containers to “turn on” in the correct order is one of the more challenging issues

@@ -4,6 +4,7 @@ title: "Docker Swarm Voting Application"
 description: "The Docker Swarm Voting Application, in a Replicated YAML."
 weight: "406"
 categories: [ "Examples" ]
+index: "docs"
 ---
 
 ## VotingApp

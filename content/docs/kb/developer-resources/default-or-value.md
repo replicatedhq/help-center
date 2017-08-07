@@ -4,6 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Using cmd To Populate Values & Defaults"
 weight: "999999"
 categories: [ "Knowledgebase", "Developer Resources" ]
+index: "docs"
 ---
 
 [Commands](/packaging-an-application/commands/) are an important part of the

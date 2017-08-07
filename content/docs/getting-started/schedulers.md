@@ -4,6 +4,7 @@ title: "Choosing A Scheduler"
 description: "Schedulers"
 weight: "104"
 categories: [ "Getting Started" ]
+index: "docs"
 ---
 
 Your application is deployed in Docker containers, and likely needs a scheduler to orchestrate and manage the runtime of your containers. Replicated offers several options when integrating, and it's important to understand how each scheduler works with Replicated. Simply stated, the scheduler you choose is the technology you'll have to learn to orchestrate and start your containers. But there are some small differences in how each is run in a customer environment.

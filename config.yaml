@@ -27,7 +27,10 @@ taxonomies:
   category: "categories"
   tag: "tags"
 
-
+algolia:
+  index: "help_center"
+  key: "0038e146bfecd33072d241b4b7c33279"
+  appID: "5PHVQPX4AR"
 
 menu:
   main:

@@ -4,6 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Setting Up Two Factor Authentication"
 weight: "999999"
 categories: [ "Knowledgebase", "Supporting Your Customers" ]
+index: "docs"
 ---
 
 With two-factor authentication (2fa) enabled, you'll be asked to provide an authentication code as 

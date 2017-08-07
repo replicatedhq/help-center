@@ -4,6 +4,7 @@ lastmod: "2016-07-07T00:09:10Z"
 title: "Upgrading to Replicated 2.0"
 weight: "999999"
 categories: [ "Knowledgebase", "Supporting Your Customers" ]
+index: "docs"
 ---
 
 {{< warning title="Warning" >}}

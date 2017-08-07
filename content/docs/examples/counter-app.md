@@ -4,6 +4,7 @@ title: "Counter App Example"
 description: "An example of a general-purpose Replicated app definition. This can be used as a starting point as it covers the basic functionality of the Replicated platform."
 weight: "402"
 categories: [ "Examples" ]
+index: "docs"
 ---
 
 ## Counter App

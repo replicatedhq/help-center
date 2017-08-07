@@ -6,6 +6,7 @@ weight: "401"
 type: "section"
 categories: [ "Examples" ]
 hideSection: true
+index: "docs"
 ---
 
 A series of sample Replicated YAML files that display how to leverage various features of Replicated.

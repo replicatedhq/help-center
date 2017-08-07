@@ -4,6 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Local Testing Setup"
 weight: "999999"
 categories: [ "Knowledgebase", "Developer Resources" ]
+index: "docs"
 ---
 
 Once you have written some YAML describing your application, you’ll need to begin actually 
