@@ -1,7 +1,3 @@
-# Help Center
-Replicated help center
-
-
 ## Local development
 
 Before you are able to run this locally you need to have [Hugo installed](https://gohugo.io/getting-started/installing/) on your machine. If you already have Hugo installed, make sure you [have the latest version](https://gohugo.io/getting-started/installing/#upgrade-hugo)
