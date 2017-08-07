@@ -4,6 +4,7 @@ title: "Kubernetes Preflight Checks"
 description: "A guide to implementing the Kubernetes Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
 weight: "213"
 categories: [ "Packaging" ]
+index: "docs"
 ---
 
 Support for Kubernetes preflight checks has been added as of Replicated {{< version version="2.9.0" >}}.

@@ -4,6 +4,7 @@ lastmod: "2016-08-29T00:00:00Z"
 title: "License Controlled Settings"
 weight: "999999"
 categories: [ "Knowledgebase", "Developer Resources" ]
+index: "docs"
 ---
 
 License fields can be used to control the settings page to show or hide advanced settings.  This technique does not need a new release and the settings page can be updated by a simple license sync.

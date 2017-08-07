@@ -4,6 +4,7 @@ lastmod: "2017-06-14T00:00:00Z"
 title: "Replicated CLI Alias"
 weight: "999999"
 categories: [ "Knowledgebase", "Supporting Your Customers" ]
+index: "docs"
 ---
 
 The Replicated [easy install script](/distributing-an-application/installing-via-script/) will automatically set up the [`replicated` CLI](/reference/replicated-cli/) and [`replicatedctl` CLI](/reference/replicatedctl/) aliases. However, if a server is automatically upgraded from a version before 2.9.0, then the `replicatedctl` alias will not be automatically installed. Likewise, if your customer performed a [manual installation](/distributing-an-application/installing-manually/), then neither Replicated CLI versions will be available as an alias.

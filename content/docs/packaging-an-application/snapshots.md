@@ -4,6 +4,7 @@ title: "Snapshots"
 description: "Guide to enabling application snapshots for backup and restore functionality."
 weight: "215"
 categories: [ "Packaging" ]
+index: "docs"
 ---
 
 For detailed information on restoring a snapshot take a look at this [restore guide](/kb/supporting-your-customers/restoring-from-a-snapshot/).

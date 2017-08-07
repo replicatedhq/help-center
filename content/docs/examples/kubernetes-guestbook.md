@@ -4,6 +4,7 @@ title: "Kubernetes Guestbook"
 description: "The Kubernetes Guestbook Application, in a Replicated YAML."
 weight: "405"
 categories: [ "Examples" ]
+index: "docs"
 ---
 
 ## Guestbook

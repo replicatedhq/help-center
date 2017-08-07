@@ -4,6 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Configuration Screen Overview"
 weight: "999999"
 categories: [ "Knowledgebase", "Developer Resources" ]
+index: "docs"
 ---
 
 One of the core features of Replicated is the ability for any application to present users

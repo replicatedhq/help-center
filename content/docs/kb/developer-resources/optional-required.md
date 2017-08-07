@@ -4,6 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Understanding Optional/Required Releases"
 weight: "999999"
 categories: [ "Knowledgebase", "Developer Resources" ]
+index: "docs"
 ---
 
 As continuous integration and continuous deployment (CI/CD) processes have become common

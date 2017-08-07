@@ -7,6 +7,7 @@ categories: [ "Packaging" ]
 aliases: [
     "/kb/developer-resources/kubernetes-prerelease/"
 ]
+index: "docs"
 ---
 
 If your application is defined as a set of Kubernetes resources, and your customer can run a Kubernetes cluster, Replicated can provide the same standard functionality but on top of a Kubernetes cluster. To see a full example, check out the [Guestbook example](/examples/kubernetes-guestbook).

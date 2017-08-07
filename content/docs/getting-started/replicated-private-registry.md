@@ -4,6 +4,7 @@ title: "Replicated Private Registry"
 description: "How to push and access private images in Replicated's hosted private registry."
 weight: "105"
 categories: [ "Getting Started" ]
+index: "docs"
 ---
 
 When building your application, you have the option of hosting your private images on the Replicated private registry or [using external private and public registries](/kb/supporting-your-customers/registries/).

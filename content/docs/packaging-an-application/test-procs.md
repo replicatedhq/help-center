@@ -4,6 +4,7 @@ title: "Test Procs"
 description: "Test Procs enable customers to easily test the validity of the unsaved configuration parameters they're entering during installation."
 weight: "205"
 categories: [ "Packaging" ]
+index: "docs"
 ---
 
 Using the `test_proc` directive in your app definition YAML, you enable your customers to

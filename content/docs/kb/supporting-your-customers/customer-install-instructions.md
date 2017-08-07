@@ -4,6 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Customer Facing Installation Instructions"
 weight: "999999"
 categories: [ "Knowledgebase", "Supporting Your Customers" ]
+index: "docs"
 ---
 
 When you are creating documentation for your customers to install your application via 

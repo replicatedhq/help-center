@@ -4,6 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "One-Click Updates"
 weight: "999999"
 categories: [ "Knowledgebase", "Developer Resources" ]
+index: "docs"
 ---
 
 ## Overview

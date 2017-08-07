@@ -4,6 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "New License UX"
 weight: "999999"
 categories: [ "Knowledgebase", "Supporting Your Customers" ]
+index: "docs"
 ---
 
 The license screen within the Replicated Vendor Portal was recently updated. These changes were designed to make it easier to create and manage your licenses.

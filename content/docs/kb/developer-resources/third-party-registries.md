@@ -4,6 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Third Party Registries"
 weight: "999999"
 categories: [ "Knowledgebase", "Developer Resources" ]
+index: "docs"
 ---
 
 Replicated can integrate with your third party private registry (ie Docker Trusted Registry, Quay.io etc). To connect to these external registries

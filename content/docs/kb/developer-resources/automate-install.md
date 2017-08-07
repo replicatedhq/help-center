@@ -4,6 +4,7 @@ lastmod: "2016-07-03T00:00:00Z"
 title: "Automate Install for Testing"
 weight: "999999"
 categories: [ "Knowledgebase", "Developer Resources" ]
+index: "docs"
 ---
 
 Replicated has support for automated installation and configuration to facilitate integration

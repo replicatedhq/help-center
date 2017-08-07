@@ -24,13 +24,13 @@ Params:
   swarm_docker_version_default: "17.06.0-ce"
 
 taxonomies:
-  - category: "categories"
+  category: "categories"
+  tag: "tags"
 
 algolia:
   index: "help_center"
   key: "0038e146bfecd33072d241b4b7c33279"
   appID: "5PHVQPX4AR"
-  multInd: true
 
 menu:
   main:

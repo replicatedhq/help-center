@@ -4,6 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Updating a Live Release"
 weight: "999999"
 categories: [ "Knowledgebase", "Supporting Your Customers" ]
+index: "docs"
 ---
 
 If you promote a release to a channel but later realize there is a issue you can use the 

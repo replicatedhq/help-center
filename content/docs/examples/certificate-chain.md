@@ -4,6 +4,7 @@ title: "Certificate Chain Example"
 description: "An advanced walk through for using the Replicated cert command in an app's YAML definition to generate new TLS certificates for customer use in an application."
 weight: "403"
 categories: [ "Examples" ]
+index: "docs"
 ---
 
 ## Certificate Chain App

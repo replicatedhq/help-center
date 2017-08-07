@@ -4,6 +4,7 @@ title: "GetELK"
 description: "An advanced example of the ELK Stack deployed through Replicated with a complex and complete configuration section."
 weight: "404"
 categories: [ "Examples" ]
+index: "docs"
 ---
 
 ## GetELK

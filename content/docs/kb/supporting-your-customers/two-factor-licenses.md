@@ -4,6 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Two Factor Activation for Customers"
 weight: "999999"
 categories: [ "Knowledgebase", "Supporting Your Customers" ]
+index: "docs"
 ---
 
 In order to ensure that your application and its images are only being used by the companies

@@ -4,6 +4,7 @@ lastmod: "2016-10-05T00:00:00Z"
 title: "Docker IPTables and the No-Chain Error"
 weight: "999999"
 categories: [ "Knowledgebase", "Developer Resources" ]
+index: "docs"
 ---
 
 When Docker starts it registers a DOCKER chain into iptables to allow communication between ports exposed on the

@@ -4,6 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Integrating GitHub"
 weight: "999999"
 categories: [ "Knowledgebase", "Developer Resources" ]
+index: "docs"
 ---
 
 If your application leverages the GitHub API, each customer instance of your application will require a unique Client Id and Client Secret during setup . Additionally, most enterprises will prefer to hook this into their instance of GitHub Enterprise (you’ll need to allow for the GH endpoint to be determined by the customer as well… sometimes GH:E instances are setup over HTTP instead of HTTPS so you’ll need to know that as well). Below is an example of the on-prem settings screen that a customer would see when configuring their GitHub Integration info (as well as the YAML that drives it & a ‘test’ button).

@@ -4,6 +4,7 @@ lastmod: "2016-10-01T00:00:00Z"
 title: "Docker File Copy"
 weight: "999999"
 categories: [ "Knowledgebase", "Developer Resources" ]
+index: "docs"
 ---
 
 One of the challenges of running containerized application is limited access to host OS information and resources.  This article intends to demonstrate one way to access files on the host OS that are not available to an application running inside of a container.
