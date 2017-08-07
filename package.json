@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "algoliasearch": "^3.24.1",
-    "hugo-algolia": "^1.1.0",
+    "hugo-algolia": "^1.1.1",
     "striptags": "^3.0.1",
     "toml": "^2.3.2"
   }

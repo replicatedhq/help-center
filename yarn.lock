@@ -110,9 +110,9 @@ gray-matter@^3.0.2:
     kind-of "^5.0.0"
     strip-bom-string "^1.0.0"
 
-hugo-algolia@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/hugo-algolia/-/hugo-algolia-1.1.0.tgz#49cbc762d244cbaeabde5fa05de3bd57ea81a2ab"
+hugo-algolia@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/hugo-algolia/-/hugo-algolia-1.1.1.tgz#02851ec15e4bbb22d0e1f1636da9136f7c044e45"
   dependencies:
     algoliasearch "^3.24.1"
     glob "^7.1.2"
