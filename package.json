@@ -12,11 +12,11 @@
     "index-and-send": "hugo-algolia -s",
     "index-multInd": "hugo-algolia -wo -m",
     "index-and-send-multInd": "hugo-algolia -wo -m -s",
-    "index-partial-docs": "hugo-algolia -m 'categories' -p 'title, uri, categories' -i 'content/docs/**' -o 'data/docs/shallow.json'"
+    "index-partial-docs": "hugo-algolia -m 'categories' -p 'title, uri, categories, description' -i 'content/docs/**' -o 'data/docs/shallow.json'"
   },
   "dependencies": {
     "algoliasearch": "^3.24.1",
-    "hugo-algolia": "^1.0.0",
+    "hugo-algolia": "^1.1.0",
     "striptags": "^3.0.1",
     "toml": "^2.3.2"
   }
