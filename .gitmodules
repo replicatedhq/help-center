@@ -1,0 +1,3 @@
+[submodule "themes/replicated-docs-theme"]
+	path = themes/replicated-docs-theme
+	url = git@github.com:replicatedhq/replicated-docs-theme.git

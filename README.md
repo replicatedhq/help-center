@@ -2,12 +2,14 @@
 
 Before you are able to run this locally you need to have [Hugo installed](https://gohugo.io/getting-started/installing/) on your machine. If you already have Hugo installed, make sure you [have the latest version](https://gohugo.io/getting-started/installing/#upgrade-hugo).
 
-1. Install hugo
-   https://gohugo.io/getting-started/installing
+1. Install project dependencies
+   ```bash
+   make install
+   ```
 
 1. Build the project
    ```bash
-   make build
+   make install
    ```
 
 1. Run the project
