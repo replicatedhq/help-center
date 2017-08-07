@@ -5,63 +5,72 @@
             "uri": "docs/distributing-an-application/add-nodes",
             "categories": [
                 "Distributing"
-            ]
+            ],
+            "description": "When a Replicated-orchestrated application is configured with a clustering strategy, additional nodes can be installed on remote instances to take part in the cluster."
         },
         {
             "title": "Airgapped Installations",
             "uri": "docs/distributing-an-application/airgapped-installations",
             "categories": [
                 "Distributing"
-            ]
+            ],
+            "description": "The steps required of the end customer to install a Replicated application into an air gapped environment."
         },
         {
             "title": "Airgapped Installations",
             "uri": "docs/distributing-an-application/create-licenses",
             "categories": [
                 "Distributing"
-            ]
+            ],
+            "description": "The steps required of the end customer to install a Replicated application into an air gapped environment."
         },
         {
             "title": "Distributing an Application",
             "uri": "docs/distributing-an-application/index",
             "categories": [
                 "Distributing"
-            ]
+            ],
+            "description": "This section of the docs explains how to install, upgrade and distribute your application."
         },
         {
             "title": "Installing Replicated",
             "uri": "docs/distributing-an-application/installing",
             "categories": [
                 "Distributing"
-            ]
+            ],
+            "description": "Instructions for installing Replicated via the easy install script, manually or behind a proxy. Also includes instructions for uninstalling Replicated."
         },
         {
             "title": "Maintenance",
             "uri": "docs/distributing-an-application/maintenance",
             "categories": [
                 "Distributing"
-            ]
+            ],
+            "description": "Maintenance processes to use after Replicated is installed"
         },
         {
             "title": "Promote Releases",
             "uri": "docs/distributing-an-application/promote-releases",
             "categories": [
                 "Distributing"
-            ]
+            ],
+            "description": "The process for leveraging Replicated's release channel management functionality to stage versions and deliver updates to customers."
         },
         {
             "title": "Promote Releases",
             "uri": "docs/distributing-an-application/upgrading-1.2",
             "categories": [
                 "Distributing"
-            ]
+            ],
+            "description": "The process for leveraging Replicated's release channel management functionality to stage versions and deliver updates to customers."
         },
         {
             "title": "Upgrading Replicated",
             "uri": "docs/distributing-an-application/upgrading",
             "categories": [
                 "Distributing"
-            ]
+            ],
+            "description": "The process for end customers to update Replicated services to access the latest improvements to the underlying system since their installation."
         }
     ],
     "help_center_examples": [
@@ -70,42 +79,48 @@
             "uri": "docs/examples/certificate-chain",
             "categories": [
                 "Examples"
-            ]
+            ],
+            "description": "An advanced walk through for using the Replicated cert command in an app's YAML definition to generate new TLS certificates for customer use in an application."
         },
         {
             "title": "Counter App Example",
             "uri": "docs/examples/counter-app",
             "categories": [
                 "Examples"
-            ]
+            ],
+            "description": "An example of a general-purpose Replicated app definition. This can be used as a starting point as it covers the basic functionality of the Replicated platform."
         },
         {
             "title": "GetELK",
             "uri": "docs/examples/getelk",
             "categories": [
                 "Examples"
-            ]
+            ],
+            "description": "An advanced example of the ELK Stack deployed through Replicated with a complex and complete configuration section."
         },
         {
             "title": "Replicated Examples",
             "uri": "docs/examples/index",
             "categories": [
                 "Examples"
-            ]
+            ],
+            "description": "A series of sample Replicated YAML files that display how to leverage various features of Replicated."
         },
         {
             "title": "Kubernetes Guestbook",
             "uri": "docs/examples/kubernetes-guestbook",
             "categories": [
                 "Examples"
-            ]
+            ],
+            "description": "The Kubernetes Guestbook Application, in a Replicated YAML."
         },
         {
             "title": "Docker Swarm Voting Application",
             "uri": "docs/examples/swarm-votingapp",
             "categories": [
                 "Examples"
-            ]
+            ],
+            "description": "The Docker Swarm Voting Application, in a Replicated YAML."
         }
     ],
     "help_center_getting_started": [
@@ -114,35 +129,40 @@
             "uri": "docs/getting-started/concepts-and-terms",
             "categories": [
                 "Getting Started"
-            ]
+            ],
+            "description": "The core concepts and terms used in these documents to describe the Replicated functionality."
         },
         {
             "title": "Getting Started",
             "uri": "docs/getting-started/index",
             "categories": [
                 "Getting Started"
-            ]
+            ],
+            "description": "A quick overview of how to get started with the Replicated platform."
         },
         {
             "title": "Create & Manage Releases",
             "uri": "docs/getting-started/manage-releases",
             "categories": [
                 "Getting Started"
-            ]
+            ],
+            "description": "An introduction to the release channel management workflow for development on the Replicated platform."
         },
         {
             "title": "Replicated Private Registry",
             "uri": "docs/getting-started/replicated-private-registry",
             "categories": [
                 "Getting Started"
-            ]
+            ],
+            "description": "How to push and access private images in Replicated's hosted private registry."
         },
         {
             "title": "Choosing A Scheduler",
             "uri": "docs/getting-started/schedulers",
             "categories": [
                 "Getting Started"
-            ]
+            ],
+            "description": "Schedulers"
         }
     ],
     "help_center_knowledgebase": [
@@ -1053,42 +1073,48 @@
             "uri": "docs/packaging-an-application/admin-commands",
             "categories": [
                 "Packaging"
-            ]
+            ],
+            "description": "Implementation guide for application vendors to provide customers with aliased CLI commands that can be performed in the containers across a cluster."
         },
         {
             "title": "Application Properties",
             "uri": "docs/packaging-an-application/application-properties",
             "categories": [
                 "Packaging"
-            ]
+            ],
+            "description": "The Replicated YAML section `properties` allows several high level items to be defined."
         },
         {
             "title": "Clustering",
             "uri": "docs/packaging-an-application/clustering",
             "categories": [
                 "Packaging"
-            ]
+            ],
+            "description": "An implementation guide for using the Replicated built in clustering functionality."
         },
         {
             "title": "Commands",
             "uri": "docs/packaging-an-application/commands",
             "categories": [
                 "Packaging"
-            ]
+            ],
+            "description": "The `cmds` section of the Replicated YAML allows you to leverage the power of external commands within your application configuration."
         },
         {
             "title": "Components And Containers",
             "uri": "docs/packaging-an-application/components-and-containers",
             "categories": [
                 "Packaging"
-            ]
+            ],
+            "description": "The `components` section of the Replicated YAML defines how the containers will be created and started."
         },
         {
             "title": "Config Screen",
             "uri": "docs/packaging-an-application/config-screen",
             "categories": [
                 "Packaging"
-            ]
+            ],
+            "description": "The `config` section of the Replicated YAML creates a dynamic settings page that customers can use to configure their instance."
         },
         {
             "title": "Custom Metrics",
@@ -1102,91 +1128,104 @@
             "uri": "docs/packaging-an-application/custom-preflight-checks",
             "categories": [
                 "Packaging"
-            ]
+            ],
+            "description": "A guide to implementing the Custom Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
         },
         {
             "title": "Docker Swarm",
             "uri": "docs/packaging-an-application/docker-swarm",
             "categories": [
                 "Packaging"
-            ]
+            ],
+            "description": "Packaging a Docker Swarm application in Replicated"
         },
         {
             "title": "Events and Orchestration",
             "uri": "docs/packaging-an-application/events-and-orchestration",
             "categories": [
                 "Packaging"
-            ]
+            ],
+            "description": "The `events` section of the Replicated YAML allows application vendors to sequence and orchestrate containers based on events from other containers."
         },
         {
             "title": "Packaging an Application",
             "uri": "docs/packaging-an-application/index",
             "categories": [
                 "Packaging"
-            ]
+            ],
+            "description": "An overview of the Replicated YAML."
         },
         {
             "title": "Kubernetes",
             "uri": "docs/packaging-an-application/kubernetes",
             "categories": [
                 "Packaging"
-            ]
+            ],
+            "description": "Packaging a Kubernetes application in Replicated"
         },
         {
             "title": "LDAP and Identity Integration",
             "uri": "docs/packaging-an-application/ldap-integration",
             "categories": [
                 "Packaging"
-            ]
+            ],
+            "description": "Enabling LDAP and AD user auth and sync in an application through Replicated."
         },
         {
             "title": "Kubernetes Preflight Checks",
             "uri": "docs/packaging-an-application/preflight-checks-k8s",
             "categories": [
                 "Packaging"
-            ]
+            ],
+            "description": "A guide to implementing the Kubernetes Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
         },
         {
             "title": "Preflight Checks",
             "uri": "docs/packaging-an-application/preflight-checks",
             "categories": [
                 "Packaging"
-            ]
+            ],
+            "description": "A guide to implementing the Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
         },
         {
             "title": "Snapshots",
             "uri": "docs/packaging-an-application/snapshots",
             "categories": [
                 "Packaging"
-            ]
+            ],
+            "description": "Guide to enabling application snapshots for backup and restore functionality."
         },
         {
             "title": "Support Bundle",
             "uri": "docs/packaging-an-application/support-bundle",
             "categories": [
                 "Packaging"
-            ]
+            ],
+            "description": "Installed instances can generate a support bundle with relevant logs and instance information."
         },
         {
             "title": "Template Functions",
             "uri": "docs/packaging-an-application/template-functions",
             "categories": [
                 "Packaging"
-            ]
+            ],
+            "description": "The dynamic configuration management functionality available throughout the Replicated YAML."
         },
         {
             "title": "Test Procs",
             "uri": "docs/packaging-an-application/test-procs",
             "categories": [
                 "Packaging"
-            ]
+            ],
+            "description": "Test Procs enable customers to easily test the validity of the unsaved configuration parameters they're entering during installation."
         },
         {
             "title": "YAML Overview",
             "uri": "docs/packaging-an-application/yaml-overview",
             "categories": [
                 "Packaging"
-            ]
+            ],
+            "description": "An overview of the various sections of the Replicated YAML."
         }
     ]
 }
