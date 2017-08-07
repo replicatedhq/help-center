@@ -1,9 +1,10 @@
 ---
+layout: "single"
 date: "2016-07-03T04:02:20Z"
 title: "Getting Started"
 description: "A quick overview of how to get started with the Replicated platform."
 weight: "101"
-type: "section"
+type: "docs"
 categories: [ "Getting Started" ]
 hideSection: true
 index: "docs"
