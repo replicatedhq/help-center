@@ -13,7 +13,7 @@
       "description": "Instructions for installing additional nodes with a Swarm cluster.",
       "slug": "/docs/distributing-an-application/add-nodes-swarm"
     },
-    {
+    { 
       "title": "Add nodes",
       "description": "When a Replicated-orchestrated application is configured with a clustering strategy, additional nodes can be installed on remote instances to take part in the cluster.",
       "slug": "/docs/distributing-an-application/add-nodes"
