@@ -1,18 +1,18 @@
-<div>
+<ul class="single-cat-docs-list">
     {{ with $param := .Get 0 }}
-        {{ range $index, $element := $.Page.Site.Data.docs.shallow }} 
+        {{ range $index, $element := $.Page.Site.Data.docs.categories }} 
             {{ if eq $index $param }}
                 {{ range $element }}
-                    <div>
-                        <h3>{{ .title }}</h3>
-                        <p>{{ .description }}</p>
-                    </div>
+                    <li>
+                        <a href="/{{ .uri }}">
+                        <p class="u-fontSize--largest u-fontWeight--medium list-title">{{ .title }}</p>
+                        {{ if .description }}
+                            <p class="u-fontSize--large u-color--dustyGray u-marginTop--normal u-lineHeight--normal">{{ .description }}</p>
+                        {{ end }}
+                        </a>
+                    </li>
                 {{ end }}
             {{ end }}
         {{ end }}
     {{ end }}
-</div>
-
-
-
-
+</ul>

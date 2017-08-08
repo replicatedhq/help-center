@@ -9,7 +9,7 @@ index: "docs"
 
 By default Replicated will start one instance per component and container in your application on a single host. With the addition of clustering your application can optionally leverage multiple hosts as well as multiple instances per host.
 
-*See an example of setting up a Cassandra Cluster with Replicated [here](/kb/developer-resources/multi-node-cassandra/)*
+*See an example of setting up a Cassandra Cluster with Replicated [here](/docs/kb/developer-resources/multi-node-cassandra/)*
 
 ## Host Count
 The application can be scaled horizontally at the component level by specifying host counts using the *cluster_host_count* property. The *cluster* property is required to enable this feature. When clustering is enabled, all containers that are members of the respective component will be allocated across the cluster to a minimum of *min* nodes and a maximum of *max* or *0* for unlimited.

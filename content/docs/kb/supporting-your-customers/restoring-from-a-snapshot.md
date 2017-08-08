@@ -11,10 +11,10 @@ index: "docs"
 
 If snapshots are enabled in the application YAML, the user will have the ability
 to perform manual and scheduled snapshots.  More information on configuring snapshots can be
-found in the [Snapshots](/packaging-an-application/snapshots/) section.
+found in the [Snapshots](/docs/packaging-an-application/snapshots/) section.
 
 To restore you need to create a fresh install of replicated which you can find instructions
-for [here](/distributing-an-application/installing-via-script/). Before
+for [here](/docs/distributing-an-application/installing-via-script/). Before
 running the web console at https://<server_address>:8800 place a copy of the full snapshot directory
 on the host. Proceed through the https setup screen and on the upload your license page click the
 "restore from a snapshot" link.

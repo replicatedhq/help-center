@@ -684,4 +684,4 @@ StatsdNetworkName returns the name of the Statsd docker network.
 
 ## Notes
 
-When referencing another container in a template object, you must make sure the referenced container is started first.  Please see the [Events and Orchestration](/packaging-an-application/events-and-orchestration/) section for more information on orchestrating container startup.
+When referencing another container in a template object, you must make sure the referenced container is started first.  Please see the [Events and Orchestration](/docs/packaging-an-application/events-and-orchestration/) section for more information on orchestrating container startup.

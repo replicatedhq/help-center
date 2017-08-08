@@ -22,7 +22,7 @@ properties:
 ## Available Properties
 ### app_url
 The URL of your application. A link to this URL will de displayed to the user on the dashboard of the admin console. This
-field supports [template functions](/packaging-an-application/template-functions/) and often uses one to determine the
+field supports [template functions](/docs/packaging-an-application/template-functions/) and often uses one to determine the
 hostname or IP address to link to.
 
 ### logo_url
@@ -34,7 +34,7 @@ be included on airgapped installations without external access.
 The admin console header title (in the navbar) and HTML page title.
 
 ### shell_alias
-Shell alias that can be used to run admin commands. See [Admin Commands](/packaging-an-application/admin-commands/)
+Shell alias that can be used to run admin commands. See [Admin Commands](/docs/packaging-an-application/admin-commands/)
 for more information.
 
 ### console_support_markdown

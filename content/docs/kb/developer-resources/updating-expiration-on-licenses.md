@@ -14,7 +14,7 @@ An example use case for using the Vendor API is license maintenance. This exampl
 2. The target App ID
 3. The target Channel ID
 
-For details on how to get the App ID and Channel ID, refer to [Finding Your API Token and App ID](/kb/developer-resources/finding-your-api-token-and-app-id). These values will not change and should be supplied as static values to your license updating script.
+For details on how to get the App ID and Channel ID, refer to [Finding Your API Token and App ID](/docs/kb/developer-resources/finding-your-api-token-and-app-id). These values will not change and should be supplied as static values to your license updating script.
 
 ### 1) Get all outstanding licenses
 To start, get all the licenses that have been issued for a specific app:

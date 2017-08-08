@@ -154,7 +154,7 @@ The when value is used to denote conditional inputs that will only be visible (o
 
 The settings UI will update right away when a field used in a when clause is updated (no need to save) and can be used to used to show optional config sections. The equality check should match exactly without quotes.
 
-The when property can be configured in two different formats. The legacy format is in form `config_item_name=value` or `config_item_name!=value`. As of Replicated {{< version version="2.9.0" >}} [template functions](/packaging-an-application/template-functions) that evaluate to a parsable boolean can be used as a value to the when property.
+The when property can be configured in two different formats. The legacy format is in form `config_item_name=value` or `config_item_name!=value`. As of Replicated {{< version version="2.9.0" >}} [template functions](/docs/packaging-an-application/template-functions) that evaluate to a parsable boolean can be used as a value to the when property.
 
 ```yaml
 - name: database_settings_group

@@ -15,7 +15,7 @@ their own SMTP gateway, and use that to deliver emails for on-prem installations
 There are many settings that are needed to completely configure an SMTP connection. To help,
 we've created a config snippet you can copy and paste into your YAML. This YAML snippet is at
 the bottom of this page. We also have created and included in the snippet an
-[SMTP Auth test command](/packaging-an-application/test-procs/#smtp-auth).
+[SMTP Auth test command](/docs/packaging-an-application/test-procs/#smtp-auth).
 This will create a test button next to the settings so that the customer can validate they've
 entered valid information.
 

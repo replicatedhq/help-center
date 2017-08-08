@@ -45,5 +45,5 @@ dpkg --install <package_name>.deb
 Different versions of Docker require different dependencies that may have to be manually downloaded/transferred/installed 
 to the airgapped machine. Your customers will have to follow the same procedure for each one of those dependencies.
 
-Make sure you take a look at our Docs for the rest of the [Airgapped](/distributing-an-application/airgapped-installations/) 
+Make sure you take a look at our Docs for the rest of the [Airgapped](/docs/distributing-an-application/airgapped-installations/) 
 installation instructions.

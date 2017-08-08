@@ -226,7 +226,7 @@ complete and valid, for a detailed implementation reference see our LDAP integra
 Note you have to pass all the arg_fields for the test to validate correctly.
 
 These arguments come from values entered by your customer
-into the config items within this group.  For more details see [LDAP Integration](/packaging-an-application/ldap-integration)
+into the config items within this group.  For more details see [LDAP Integration](/docs/packaging-an-application/ldap-integration)
 
 Required arguments:
 

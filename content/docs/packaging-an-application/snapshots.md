@@ -7,11 +7,11 @@ categories: [ "Packaging" ]
 index: "docs"
 ---
 
-For detailed information on restoring a snapshot take a look at this [restore guide](/kb/supporting-your-customers/restoring-from-a-snapshot/).
+For detailed information on restoring a snapshot take a look at this [restore guide](/docs/kb/supporting-your-customers/restoring-from-a-snapshot/).
 
 Replicated gives customers the ability to take a snapshot of a running app. The customer will have the option to restore this snapshot as an option on the "Upload license" screen when starting the Replicated management container. Snapshots can be taken at an automatic interval and can also be manually triggered via the dashboard of the console.
 
-Snapshots include customer console configuration, data from bind mounted volumes of all containers and if the customer instance is a multi-host instance, docker registry data will be backed up as well. You also have the ability to specify a custom script that will be run at the time of a backup. This script will run on the host that is running the primary Replicated container, not inside any of your containers. If you need this script to execute something within a container, you can call [Admin Commands](/packaging-an-application/admin-commands/).
+Snapshots include customer console configuration, data from bind mounted volumes of all containers and if the customer instance is a multi-host instance, docker registry data will be backed up as well. You also have the ability to specify a custom script that will be run at the time of a backup. This script will run on the host that is running the primary Replicated container, not inside any of your containers. If you need this script to execute something within a container, you can call [Admin Commands](/docs/packaging-an-application/admin-commands/).
 
 ## YAML Properties
 `enabled`: A boolean or template function that evaluates to a boolean and then determines if backups are enabled.
