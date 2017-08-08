@@ -10,7 +10,7 @@ index: "docs"
 ## Installing Multi-Channel License
 When multiple release channels are assigned to a license, the customer will be able to select the channel during installation time.
 
-![License Channels](/static/license-upload-channels.png)
+![License Channels](/images/post-screens/license-upload-channels.png)
 
 * Channel drop-down will show all channels assigned to the license.
 * Channel description, located under the drop-down, can be edited on the Channels screen in the Replicated Vendor Portal.

@@ -12,13 +12,13 @@ dashboard of your on-prem customer experience.
 
 To get started visit the vendor portal [app settings page](https://vendor.replicated.com/settings).
 
-![CSS Buttons](/static/css-buttons.png)
+![CSS Buttons](/images/post-screens/css-buttons.png)
 
 Branding is staged by channel, so that you can test your branding before shipping it to
 customers. If you remove the branding & leave a comment in the CSS
 `/* show minimal */` you’ll get a minimalist version of Replicated UI:
 
-![Minimal CSS](/static/minimal-css.png)
+![Minimal CSS](/images/post-screens/minimal-css.png)
 
 By default, existing vendors will have the traditional purple, organge, teal colors set as
 their default CSS for all channels. Existing client installations will fallback to the
@@ -31,4 +31,4 @@ license sync.
 
 Currently the supported items are labeled below:
 
-![CSS Elements](/static/css-elements.png)
+![CSS Elements](/images/post-screens/css-elements.png)

@@ -31,12 +31,12 @@ which method of authentication is being used. For Replicated DS Auth, you’ll w
 an envar to determine if DS auth is enabled. If it is, you’ll simply collect the username
 & password from the user as normal:
 
-![App Login](/static/app-login.png)
+![App Login](/images/post-screens/app-login.png)
 
 You then post that data to the replicated integration api login endpoint (which we register
 with every container as an environment variable running in a Replicated install).
 
-![Login API](/static/login-api.png)
+![Login API](/images/post-screens/login-api.png)
 
 And we’ll provide you with a success or failure response (`200 OK` or `401 Unauthorized`)
 

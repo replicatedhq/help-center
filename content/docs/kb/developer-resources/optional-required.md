@@ -42,8 +42,8 @@ optional release, when this customer clicks the update button, Replicated will i
 
 ## Specifying "Optional" or "Required" when promoting a release
 
-![Promote Button](/static/promote-button.png)
-![Required Release](/static/required-release.png)
+![Promote Button](/images/post-screens/promote-button.png)
+![Required Release](/images/post-screens/required-release.png)
 
 ## Specifying or changing after a release is promoted
 

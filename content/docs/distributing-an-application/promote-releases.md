@@ -14,7 +14,7 @@ A license only checks it’s own release channel.
 
 To promote a release, you can use the [vendor portal](https://vendor.replicated.com/releases) and click the Promote button:
 
- ![Promote Button](/static/promote-button.png)
+ ![Promote Button](/images/post-screens/promote-button.png)
 
 When a release is promoted it should be given a version label and detailed release notes. The release notes support markdown and will be shown to your customer. Additionally, each promoted release must be given a required status (required or not required).
 

@@ -21,7 +21,7 @@ entered valid information.
 
 Following this example, you'll have a settings section that looks like this:
 
-![SMTP Configuration](/static/smtp.png)
+![SMTP Configuration](/images/post-screens/smtp.png)
 
 The YAML to create this is:
 

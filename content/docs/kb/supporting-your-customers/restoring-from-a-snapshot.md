@@ -19,27 +19,27 @@ running the web console at https://<server_address>:8800 place a copy of the ful
 on the host. Proceed through the https setup screen and on the upload your license page click the
 "restore from a snapshot" link.
 
-![Restore](/static/restore-start.png)
+![Restore](/images/post-screens/restore-start.png)
 
 1. Enter the path on the host where you have copied the snapshots folder,
 1. Click “Browse snapshots”:
 1. Locate the latest version you would like to backup from and click the “Restore” button.
 
-![Restore](/static/restore-location.png)
+![Restore](/images/post-screens/restore-location.png)
 
 You will be given options for restoring, downloading the volumes, or deleting from the prior
 install, in this case we will restore to the local host by clicking the “restore” button.
 
-![Restore Hosts](/static/restore-hosts.png)
+![Restore Hosts](/images/post-screens/restore-hosts.png)
 
 Next you will be prompted to specify which host you would like to restore to (for this example
 I am going to restore to local).
 
-![Restore Local Host](/static/restore-local-host.png)
+![Restore Local Host](/images/post-screens/restore-local-host.png)
 
 The last step is to set the correct interface for the localhost, in this case it is “eth0” and one last time hit the “restore” button.
 
-![Restore Local Host Interface](/static/restore-local-host-interface.png)
+![Restore Local Host Interface](/images/post-screens/restore-local-host-interface.png)
 
 You have now restored your snapshot! Take yourself to the console.
 

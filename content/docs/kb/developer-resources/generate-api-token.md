@@ -19,4 +19,4 @@ curl --header "Authorization: API-TOKEN" https://api.replicated.com/vendor/v2/li
 To create an API token you use your http://vendor.replicated.com/team page.
 
 
-![Generate API Token](/static/generate-token.png)
+![Generate API Token](/images/post-screens/generate-token.png)

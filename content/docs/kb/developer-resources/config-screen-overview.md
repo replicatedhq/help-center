@@ -12,31 +12,31 @@ with a configuration/settings page on which they can input values to be used to 
 their instance. Generally, these settings include things like hostname, SSL certs, SMTP
 settings. [Technical documentation config YAML](/docs/packaging-an-application/config-screen/).
 
-![Configuration Screen](/static/config-screen.png)
+![Configuration Screen](/images/post-screens/config-screen.png)
 
 ## Preview with YAML
 
 This screen can be previewed in the vendor portal while viewing the YAML each release. You
 can also use the [Replicated Atom Preview Plugin](https://atom.io/packages/replicated-preview).
 
-![Config Preview](/static/config-preview.png)
+![Config Preview](/images/post-screens/config-preview.png)
 
 ## Reconfigure anytime.
 
 Saved anytime to restart with new values.
 
-![Restart Needed](/static/restart-needed.png)
+![Restart Needed](/images/post-screens/restart-needed.png)
 
 ## Conditional Inputs
 
 Conditional inputs allow you to determine when an item or group is shown.
 ([technical documentation](/on-prem-config#section-when-conditional-inputs-))
 
-![Conditional Inputs](/static/conditional-inputs.gif)
+![Conditional Inputs](/images/post-screens/conditional-inputs.gif)
 
 ## Test Commands
 
 Users to validate information like SMTP Auth, SSL Certs, Hostname resolution, GitHub Auth Creds,
 and AWS Creds with the use of Replicated [test commands](/docs/packaging-an-application/test-procs/).
 
-![Test Procs](/static/test-procs.gif)
+![Test Procs](/images/post-screens/test-procs.gif)
