@@ -2,6 +2,7 @@
   title: "Become production ready"
   description: "You've mastered Replicated, you probably  have shipped multiple applications and are familiar with some of our more advanced features."
   level: "advanced"
+  index: "guides"
   chapters: 
     - title: "Adding nodes to a Replicated cluster"
       description: "Instructions for installing additional nodes with a Replicated cluster."

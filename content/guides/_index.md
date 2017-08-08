@@ -1,6 +1,5 @@
 ---
 layout: "guides"
-index: "guides"
 guides: 
   - title: "Getting Started"
     description: "Let us be the first to welcome you! We'll start with core concepts and terminology and then get you set up to create and license your first application."

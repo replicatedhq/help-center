@@ -5,6 +5,7 @@ description: "Instructions for installing additional nodes with a Replicated clu
 keywords: "installing, swarm"
 index: "docs"
 tags: ["Replicated Cluster", "Nodes", "Test"]
+categories: [ "Distributing" ]
 ---
 
 When an application is configured by the vendor with a clustering strategy, Replicated makes it possible for the end customer to install additional nodes on remote instances to run a distributed application. Installations of Replicated using the [easy installation script](/docs/distributing-an-application/installing-via-script/) will install an operator on the local node automatically.

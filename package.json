@@ -8,6 +8,8 @@
   "license": "MIT",
   "scripts": {
     "start": "hugo server",
+    "index-all-and-send": "hugo-algolia -wo -m -s & hugo-algolia -m 'categories' -p 'title, uri, categories, description' -i 'content/docs/**' -o 'data/docs/categories.json'",
+    "index-all": "hugo-algolia -wo -m & hugo-algolia -m 'categories' -p 'title, uri, categories, description' -i 'content/docs/**' -o 'data/docs/categories.json'",
     "index-site": "hugo-algolia",
     "index-and-send": "hugo-algolia -s",
     "index-multInd": "hugo-algolia -wo -m",
