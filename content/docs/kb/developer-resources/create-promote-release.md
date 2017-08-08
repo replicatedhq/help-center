@@ -9,7 +9,7 @@ index: "docs"
 
 One common use case of the Vendor API is to connect it into your CI/CD workflow and create new unstable releases
 on Replicated whenever a new build is run. This is especially helpful when you pair it with the ability to
-[script the installation of Replicated](/kb/developer-resources/automate-install/) for automated testing.
+[script the installation of Replicated](/docs/kb/developer-resources/automate-install/) for automated testing.
 This article will show you how to use the Vendor API to automatically create a new release and promote it to
 the unstable channel.
 
@@ -92,5 +92,5 @@ curl -X PUT \
 ## Next Steps
 
 Once you have this integrated into your CI/CD process, the next step is to set up
-[automated installation for testing](/kb/developer-resources/automate-install/) and you will be close to
+[automated installation for testing](/docs/kb/developer-resources/automate-install/) and you will be close to
 a fully automated on-prem deployment process.

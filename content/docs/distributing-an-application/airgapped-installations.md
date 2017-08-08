@@ -16,7 +16,7 @@ The customer will be responsible for delivering a server running a supported ver
 supports Docker from {{< docker_version_minimum >}} to {{< docker_version_default >}}. We recommend that you use the latest version of Docker available in this range for your operating system.
 
 The Replicated airgap installation script does not install docker-engine. We've written a
-guide with some tips that might help get [Docker installed into air gapped machines](/kb/supporting-your-customers/installing-docker-in-airgapped/) with various operating systems.
+guide with some tips that might help get [Docker installed into air gapped machines](/docs/kb/supporting-your-customers/installing-docker-in-airgapped/) with various operating systems.
 
 ## Install Replicated
 Replicated can be installed by downloading the latest release from
@@ -49,7 +49,7 @@ non-airgap licenses cannot be used to install in airgap mode.
 
 ## Install Airgap Package
 Next, navigate to the management console at https://<server_ip>:8800. Accept the self signed certificate, pass
-the preflight checks, and you will see the license upload screen. Upload the [airgap enabled license](/distributing-an-application/create-licenses/#airgap-download-enabled) and then select the airgapped install option.
+the preflight checks, and you will see the license upload screen. Upload the [airgap enabled license](/docs/distributing-an-application/create-licenses/#airgap-download-enabled) and then select the airgapped install option.
 You will have to provide a path to the .airgap file and upload the .rli file here.
 
 Once this screen is completed, Replicated runs as normal. In the :8800/console/settings page, there is a section
@@ -59,4 +59,4 @@ page.
 
 ## Adding Additional Nodes
 
-In order to add additional nodes to your cluster, just navigate to the Cluster page of the Admin Console, click the "Add Node" button, and follow the instructions there. For more detailed instructions see the [add nodes](/distributing-an-application/add-nodes/) page of the docs.
+In order to add additional nodes to your cluster, just navigate to the Cluster page of the Admin Console, click the "Add Node" button, and follow the instructions there. For more detailed instructions see the [add nodes](/docs/distributing-an-application/add-nodes/) page of the docs.

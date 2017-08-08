@@ -1,13 +1,10 @@
 ---
-layout: "special"
 date: "2016-07-03T04:02:20Z"
 title: "Getting Started"
 description: "A quick overview of how to get started with the Replicated platform."
 weight: "101"
-type: "docs"
-hideSection: true
+categories: [ "Getting Started" ]
 index: "docs"
-categories: "Getting Started"
 ---
 
 Replicated is a platform to deploy containerized SaaS applications behind a firewall (ie private cloud, private
@@ -24,8 +21,3 @@ The process to ship your application in Replicated consists of the following ste
 1. Define your components on the Replicated Vendor Portal.
 1. Create a release of your application.
 1. Install your application to test.
-
-<div class="list">
-{{% docs_list_by_category  "help_center_getting_started" %}}
-</div>
-{{% docs_list_by_category "help_center_getting_started" %}}

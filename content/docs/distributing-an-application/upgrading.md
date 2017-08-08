@@ -11,7 +11,7 @@ index: "docs"
 The content in this document is specific to updating an existing easy install script installed
 Replicated instance. If you are looking for the
 Replicated 1.2 version of this document it is available at
-<a href="distributing-an-application/upgrading-1.2/">{{< baseurl >}}distributing-an-application/upgrading-1.2/</a>
+<a href="/docs/distributing-an-application/upgrading-1.2/">{{< baseurl >}}distributing-an-application/upgrading-1.2/</a>
 {{< /note >}}
 
 You can update all Replicated component versions to latest by re-running the installation
