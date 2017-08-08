@@ -6,8 +6,6 @@ description: "A quick overview of how to get started with the Replicated platfor
 weight: "101"
 type: "docs"
 hideSection: true
-index: "docs"
-categories: "Getting Started"
 ---
 
 {{% docs_list_by_category "help_center_getting_started" %}}

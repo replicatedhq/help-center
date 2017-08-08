@@ -1,262 +1,4 @@
 {
-    "help_center_developer_resources": [
-        {
-            "title": "Developer Resources",
-            "uri": "docs/developer-resources/index",
-            "categories": [
-                "Developer resources"
-            ],
-            "description": "Developer resources"
-        },
-        {
-            "title": "Automate Install for Testing",
-            "uri": "docs/kb/developer-resources/automate-install",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Branding Your Configuration Screen",
-            "uri": "docs/kb/developer-resources/branding",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Custom Supplied TLS Certs and Keys",
-            "uri": "docs/kb/developer-resources/certs-and-keys",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Configuration Screen Overview",
-            "uri": "docs/kb/developer-resources/config-screen-overview",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Create and Promote a Release",
-            "uri": "docs/kb/developer-resources/create-promote-release",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Manage Custom License Fields",
-            "uri": "docs/kb/developer-resources/custom-license-fields",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Using cmd To Populate Values & Defaults",
-            "uri": "docs/kb/developer-resources/default-or-value",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Devicemapper Warning",
-            "uri": "docs/kb/developer-resources/devicemapper-warning",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Docker File Copy",
-            "uri": "docs/kb/developer-resources/docker-file-copy",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Docker IPTables and the No-Chain Error",
-            "uri": "docs/kb/developer-resources/docker-iptables",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Docker Links",
-            "uri": "docs/kb/developer-resources/docker-links",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Domains Used by Replicated",
-            "uri": "docs/kb/developer-resources/domains-required-by-replicated",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Migrating Your Application With Ephemeral Containers",
-            "uri": "docs/kb/developer-resources/ephemeral-containers",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Finding Your API Token and App ID",
-            "uri": "docs/kb/developer-resources/finding-your-api-token-and-app-id",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Generate an API Token",
-            "uri": "docs/kb/developer-resources/generate-api-token",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Github Integration For Config File Versioning And Storage",
-            "uri": "docs/kb/developer-resources/github-integration-config-files",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Integrating GitHub",
-            "uri": "docs/kb/developer-resources/github-integration",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Image Tagging Best Practices",
-            "uri": "docs/kb/developer-resources/image-tagging",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "LDAP Integration",
-            "uri": "docs/kb/developer-resources/ldap",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "License Controlled Settings",
-            "uri": "docs/kb/developer-resources/license-controlled-settings",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Speed Up Development By Using Local Images",
-            "uri": "docs/kb/developer-resources/local-images",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Local Testing Setup",
-            "uri": "docs/kb/developer-resources/local-testing",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Creating a Multi-Node Cassandra Cluster",
-            "uri": "docs/kb/developer-resources/multi-node-cassandra",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "One-Click Updates",
-            "uri": "docs/kb/developer-resources/one-click-updates",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Understanding Optional/Required Releases",
-            "uri": "docs/kb/developer-resources/optional-required",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Running Commands on the Host OS",
-            "uri": "docs/kb/developer-resources/running-commands-on-the-host-os",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Sequence Your App Startup and Know When it's Ready",
-            "uri": "docs/kb/developer-resources/sequencing-startup",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Adding SMTP Support On-Premises",
-            "uri": "docs/kb/developer-resources/smtp",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Third Party Registries",
-            "uri": "docs/kb/developer-resources/third-party-registries",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Updating Expiration on Licenses",
-            "uri": "docs/kb/developer-resources/updating-expiration-on-licenses",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        },
-        {
-            "title": "Zero Downtime Backups with Replicated (Redis)",
-            "uri": "docs/kb/developer-resources/zero-downtime-backup",
-            "categories": [
-                "Knowledgebase",
-                "Developer Resources"
-            ]
-        }
-    ],
     "help_center_distributing": [
         {
             "title": "Adding Nodes To A Replicated Cluster",
@@ -297,14 +39,6 @@
                 "Distributing"
             ],
             "description": "The steps required of the end customer to install a Replicated application into an air gapped environment."
-        },
-        {
-            "title": "Distributing an Application",
-            "uri": "docs/distributing-an-application/index",
-            "categories": [
-                "Distributing"
-            ],
-            "description": "This section of the docs explains how to install, upgrade and distribute your application."
         },
         {
             "title": "Installing Replicated 1.2",
@@ -421,14 +155,6 @@
             "description": "An advanced example of the ELK Stack deployed through Replicated with a complex and complete configuration section."
         },
         {
-            "title": "Replicated Examples",
-            "uri": "docs/examples/index",
-            "categories": [
-                "Examples"
-            ],
-            "description": "A series of sample Replicated YAML files that display how to leverage various features of Replicated."
-        },
-        {
             "title": "Kubernetes Guestbook",
             "uri": "docs/examples/kubernetes-guestbook",
             "categories": [
@@ -456,8 +182,10 @@
         },
         {
             "title": "Getting Started",
-            "uri": "docs/getting-started/index",
-            "categories": "Getting Started",
+            "uri": "docs/getting-started/get-started",
+            "categories": [
+                "Getting Started"
+            ],
             "description": "A quick overview of how to get started with the Replicated platform."
         },
         {
@@ -935,6 +663,256 @@
             ]
         }
     ],
+    "help_center_developer_resources": [
+        {
+            "title": "Automate Install for Testing",
+            "uri": "docs/kb/developer-resources/automate-install",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Branding Your Configuration Screen",
+            "uri": "docs/kb/developer-resources/branding",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Custom Supplied TLS Certs and Keys",
+            "uri": "docs/kb/developer-resources/certs-and-keys",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Configuration Screen Overview",
+            "uri": "docs/kb/developer-resources/config-screen-overview",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Create and Promote a Release",
+            "uri": "docs/kb/developer-resources/create-promote-release",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Manage Custom License Fields",
+            "uri": "docs/kb/developer-resources/custom-license-fields",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Using cmd To Populate Values & Defaults",
+            "uri": "docs/kb/developer-resources/default-or-value",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Devicemapper Warning",
+            "uri": "docs/kb/developer-resources/devicemapper-warning",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Docker File Copy",
+            "uri": "docs/kb/developer-resources/docker-file-copy",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Docker IPTables and the No-Chain Error",
+            "uri": "docs/kb/developer-resources/docker-iptables",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Docker Links",
+            "uri": "docs/kb/developer-resources/docker-links",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Domains Used by Replicated",
+            "uri": "docs/kb/developer-resources/domains-required-by-replicated",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Migrating Your Application With Ephemeral Containers",
+            "uri": "docs/kb/developer-resources/ephemeral-containers",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Finding Your API Token and App ID",
+            "uri": "docs/kb/developer-resources/finding-your-api-token-and-app-id",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Generate an API Token",
+            "uri": "docs/kb/developer-resources/generate-api-token",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Github Integration For Config File Versioning And Storage",
+            "uri": "docs/kb/developer-resources/github-integration-config-files",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Integrating GitHub",
+            "uri": "docs/kb/developer-resources/github-integration",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Image Tagging Best Practices",
+            "uri": "docs/kb/developer-resources/image-tagging",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "LDAP Integration",
+            "uri": "docs/kb/developer-resources/ldap",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "License Controlled Settings",
+            "uri": "docs/kb/developer-resources/license-controlled-settings",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Speed Up Development By Using Local Images",
+            "uri": "docs/kb/developer-resources/local-images",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Local Testing Setup",
+            "uri": "docs/kb/developer-resources/local-testing",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Creating a Multi-Node Cassandra Cluster",
+            "uri": "docs/kb/developer-resources/multi-node-cassandra",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "One-Click Updates",
+            "uri": "docs/kb/developer-resources/one-click-updates",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Understanding Optional/Required Releases",
+            "uri": "docs/kb/developer-resources/optional-required",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Running Commands on the Host OS",
+            "uri": "docs/kb/developer-resources/running-commands-on-the-host-os",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Sequence Your App Startup and Know When it's Ready",
+            "uri": "docs/kb/developer-resources/sequencing-startup",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Adding SMTP Support On-Premises",
+            "uri": "docs/kb/developer-resources/smtp",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Third Party Registries",
+            "uri": "docs/kb/developer-resources/third-party-registries",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Updating Expiration on Licenses",
+            "uri": "docs/kb/developer-resources/updating-expiration-on-licenses",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Zero Downtime Backups with Replicated (Redis)",
+            "uri": "docs/kb/developer-resources/zero-downtime-backup",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        }
+    ],
     "help_center_supporting_your_customers": [
         {
             "title": "Automated Snapshot Configuration",
@@ -1218,14 +1196,6 @@
             "description": "The `events` section of the Replicated YAML allows application vendors to sequence and orchestrate containers based on events from other containers."
         },
         {
-            "title": "Packaging an Application",
-            "uri": "docs/packaging-an-application/index",
-            "categories": [
-                "Packaging"
-            ],
-            "description": "An overview of the Replicated YAML."
-        },
-        {
             "title": "Kubernetes",
             "uri": "docs/packaging-an-application/kubernetes",
             "categories": [
@@ -1296,16 +1266,6 @@
                 "Packaging"
             ],
             "description": "An overview of the various sections of the Replicated YAML."
-        }
-    ],
-    "help_center_support": [
-        {
-            "title": "Supporting your customers",
-            "uri": "docs/supporting-your-customers/index",
-            "categories": [
-                "Support"
-            ],
-            "description": "Supporting your customers"
         }
     ]
 }

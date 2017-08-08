@@ -57,7 +57,7 @@ Most networking problems present themselves early during an installation. If you
 containers appear to start and die quickly or Replicated won't successfully start your
 app but instead shows a message like this on the dashboard:
 
-![Port Timeout](/static/port-timeout.png)
+![Port Timeout](/images/post-screens/port-timeout.png)
 
 it's very possibly a networking problem. This is one of the easiest things to troubleshoot
 and resolve, once you have some tools ready.

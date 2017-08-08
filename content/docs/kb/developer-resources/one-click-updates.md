@@ -18,20 +18,20 @@ you'll be prompted to input release notes (supports markdown), a version number 
 specify if the release is required or not (required releases are useful if there are 
 migration scripts that need to be run sequentially).
 
-![Promote Release With Notes](/static/promote-release-with-notes.png)
+![Promote Release With Notes](/images/post-screens/promote-release-with-notes.png)
 
 If your customers do not have automatic updates enabled in their Replicated license, 
 they'll be able to apply the update manually. To do so, your customers will need to 
 check their on-prem admin console (https://server:8800/dashboard) to see the 
 available update.
 
-![Dashboard With Update](/static/dashboard-with-update.png)
+![Dashboard With Update](/images/post-screens/dashboard-with-update.png)
 
 By clicking to view the update button they'll be taken the release history page 
 (https://server:8800/releases) where they'll see the most recent release notes 
 displayed prominently.
 
-![Release History](/static/release-history.png)
+![Release History](/images/post-screens/release-history.png)
 
 By clicking the “Install Update” button, they'll see some quick feedback on the progress 
 of the installation & then the “Status” of the release in the release history table 
@@ -40,18 +40,18 @@ Replicated will step through the installation of all “required” releases seq
 (to ensure that required migrations are carried out). Any release marked as optional 
 (other than the most recent) will not be applied.
 
-![Release History No Updates](/static/release-history-empty.png)
+![Release History No Updates](/images/post-screens/release-history-empty.png)
 
 From this page they'll also be able to view their previous release history & click 
 "read more" to read the release notes in full markdown. Release notes under 100 
 characters is just displayed in-line, in plain text).
 
-![Release Notes](/static/release-notes.png)
+![Release Notes](/images/post-screens/release-notes.png)
 
 If there is no update currently detected, the dashboard provides a button to "Check for 
 Updates" as well as a link to this release history page.
 
-![Dashboard](/static/dashboard-no-updates.png)
+![Dashboard](/images/post-screens/dashboard-no-updates.png)
 
 ## Scheduling Update Checks
 
@@ -59,4 +59,4 @@ Your customers have the ability to change the frequency that Replicated will che
 application updates with either prechosen time increments or a crontab format enabled
 custom field setting.
 
-![Update Scheduler](/static/update-scheduler.png)
+![Update Scheduler](/images/post-screens/update-scheduler.png)

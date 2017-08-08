@@ -29,7 +29,7 @@ components:
 
 - First we create our [tags](/docs/packaging-an-application/clustering/#tags), these will be used in the Replicated on-prem UI to assign this component to the desired hosts. Each host that gets tagged with a cassandra tag will run this component.
 
-![Cassandra Tags](/static/cassandra-tags.png)
+![Cassandra Tags](/images/post-screens/cassandra-tags.png)
 
 - We then set `cluster` to `true` to tell Replicated that we will be running in a clustered fashion and set `min` and `max` nodes.
 

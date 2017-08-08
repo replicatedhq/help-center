@@ -18,14 +18,14 @@ Possible issues would be:
 
 ## Step 1: Click on the Channel of the release that you want to fix.
 
-![Release Channel](/static/release-channel.png)
+![Release Channel](/images/post-screens/release-channel.png)
 
 ## Step 2: Click the link of the release in question.
 
-![Promoted Release](/static/promoted-release.png)
+![Promoted Release](/images/post-screens/promoted-release.png)
 
 ## Step 3: Update the values you would like to change and click “Save Release”
 
-![Optional Release](/static/optional-release.png)
+![Optional Release](/images/post-screens/optional-release.png)
 
 There you have it!

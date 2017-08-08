@@ -18,7 +18,7 @@ for these fields (and ‘test’ buttons for testing
 & [cert verification](/docs/packaging-an-application/test-procs/#certificate-verification)
 is also provided below.
 
-![Config Screen TLS](/static/config-tls.png)
+![Config Screen TLS](/images/post-screens/config-tls.png)
 
 ```yaml
 # The meta-data about your application

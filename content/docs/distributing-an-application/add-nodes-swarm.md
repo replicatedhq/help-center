@@ -15,9 +15,9 @@ On the Cluster page on the Admin Console an "Add Node" button will be visible. T
 ### Scripted Installation
 The scripted install is the recommended means for adding an additional node to the Swarm cluster. The end customer will be prompted for the private and optionally the public address of the server.
 
-![Add Node Script](/static/add-node-swarm-script.png)
+![Add Node Script](/images/post-screens/add-node-swarm-script.png)
 
 ### Docker Installation
 If a scripted install is not possible, additionally a docker CLI command is provided for adding additional nodes.
 
-![Add Node Docker](/static/add-node-swarm-docker.png)
+![Add Node Docker](/images/post-screens/add-node-swarm-docker.png)
