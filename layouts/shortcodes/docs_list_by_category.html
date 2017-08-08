@@ -1,0 +1,18 @@
+<div>
+    {{ with $param := .Get 0 }}
+        {{ range $index, $element := $.Page.Site.Data.docs.shallow }} 
+            {{ if eq $index $param }}
+                {{ range $element }}
+                    <div>
+                        <h3>{{ .title }}</h3>
+                        <p>{{ .description }}</p>
+                    </div>
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</div>
+
+
+
+

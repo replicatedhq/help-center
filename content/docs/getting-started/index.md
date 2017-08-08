@@ -9,6 +9,8 @@ hideSection: true
 index: "docs"
 ---
 
+{{% docs_list_by_category  "help_center_getting_started" %}}
+
 Replicated is a platform to deploy containerized SaaS applications behind a firewall (ie private cloud, private
 data center etc). This guide will walk you through the required steps to start shipping your application using Replicated.
 

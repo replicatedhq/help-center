@@ -1,0 +1,68 @@
+{
+    "help_center_replicated_cluster": [
+        {
+            "title": "Adding Nodes To A Replicated Cluster",
+            "uri": "docs/distributing-an-application/add-nodes-replicated",
+            "tags": [
+                "Replicated Cluster",
+                "Nodes",
+                "Test"
+            ],
+            "description": "Instructions for installing additional nodes with a Replicated cluster"
+        },
+        {
+            "title": "Adding Nodes To A Swarm Cluster",
+            "uri": "docs/distributing-an-application/add-nodes-swarm",
+            "tags": [
+                "Replicated Cluster",
+                "Nodes",
+                "Test"
+            ],
+            "description": "Instructions for installing additional nodes with a Swarm cluster"
+        }
+    ],
+    "help_center_nodes": [
+        {
+            "title": "Adding Nodes To A Replicated Cluster",
+            "uri": "docs/distributing-an-application/add-nodes-replicated",
+            "tags": [
+                "Replicated Cluster",
+                "Nodes",
+                "Test"
+            ],
+            "description": "Instructions for installing additional nodes with a Replicated cluster"
+        },
+        {
+            "title": "Adding Nodes To A Swarm Cluster",
+            "uri": "docs/distributing-an-application/add-nodes-swarm",
+            "tags": [
+                "Replicated Cluster",
+                "Nodes",
+                "Test"
+            ],
+            "description": "Instructions for installing additional nodes with a Swarm cluster"
+        }
+    ],
+    "help_center_test": [
+        {
+            "title": "Adding Nodes To A Replicated Cluster",
+            "uri": "docs/distributing-an-application/add-nodes-replicated",
+            "tags": [
+                "Replicated Cluster",
+                "Nodes",
+                "Test"
+            ],
+            "description": "Instructions for installing additional nodes with a Replicated cluster"
+        },
+        {
+            "title": "Adding Nodes To A Swarm Cluster",
+            "uri": "docs/distributing-an-application/add-nodes-swarm",
+            "tags": [
+                "Replicated Cluster",
+                "Nodes",
+                "Test"
+            ],
+            "description": "Instructions for installing additional nodes with a Swarm cluster"
+        }
+    ]
+}

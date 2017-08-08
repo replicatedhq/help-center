@@ -20,7 +20,10 @@ index-multInd:
 index-and-send-multInd:
 	yarn hugo-algolia -wo -m -s
 
-index-partial-docs:
-	yarn hugo-algolia -m 'categories' -p 'title, uri, categories, description' -i 'content/docs/**' -o 'data/docs/shallow.json'
+index-partial-categories:
+	yarn hugo-algolia -m 'categories' -p 'title, uri, categories, description' -i 'content/docs/**' -o 'data/docs/categories.json'
+
+index-partial-tags:
+	yarn hugo-algolia -m 'categories' -p 'title, uri, tags, description' -i 'content/docs/**' -o 'data/docs/tags.json'
 
 
