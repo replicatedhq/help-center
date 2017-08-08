@@ -7,6 +7,7 @@ aliases: [
     "/distributing-an-application/installing-on-swarm/"
 ]
 index: "docs"
+categories: [ "Distributing" ]
 ---
 
 We distribute an installation script that can be used to install Replicated into a new or existing Swarm cluster. The cluster does not have to be created at this point, the Replicated install script can install Docker Engine and provision a new Swarm cluster.

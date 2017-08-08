@@ -1,6 +1,22 @@
 {
     "help_center_distributing": [
         {
+            "title": "Adding Nodes To A Replicated Cluster",
+            "uri": "docs/distributing-an-application/add-nodes-replicated",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "Instructions for installing additional nodes with a Replicated cluster"
+        },
+        {
+            "title": "Adding Nodes To A Swarm Cluster",
+            "uri": "docs/distributing-an-application/add-nodes-swarm",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "Instructions for installing additional nodes with a Swarm cluster"
+        },
+        {
             "title": "Add Nodes",
             "uri": "docs/distributing-an-application/add-nodes",
             "categories": [
@@ -33,6 +49,46 @@
             "description": "This section of the docs explains how to install, upgrade and distribute your application."
         },
         {
+            "title": "Installing Replicated 1.2",
+            "uri": "docs/distributing-an-application/installing-1.2",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "How to install the legacy version of Replicated 1.2 via Deb and Yum packages."
+        },
+        {
+            "title": "Manually Installing Replicated",
+            "uri": "docs/distributing-an-application/installing-manually",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "Instructions for manually installing Replicated 2"
+        },
+        {
+            "title": "Installing Replicated on Kubernetes",
+            "uri": "docs/distributing-an-application/installing-on-kubernetes",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "Instructions for installing Replicated on a Kubernetes cluster."
+        },
+        {
+            "title": "Installing Replicated with the Easy Install Script",
+            "uri": "docs/distributing-an-application/installing-via-script",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "Instructions for installing Replicated via the easy install script."
+        },
+        {
+            "title": "Installing Replicated with Docker Swarm",
+            "uri": "docs/distributing-an-application/installing-with-swam",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "Instructions for installing Replicated with a Swarm cluster"
+        },
+        {
             "title": "Installing Replicated",
             "uri": "docs/distributing-an-application/installing",
             "categories": [
@@ -55,6 +111,14 @@
                 "Distributing"
             ],
             "description": "The process for leveraging Replicated's release channel management functionality to stage versions and deliver updates to customers."
+        },
+        {
+            "title": "Supported Operating Systems",
+            "uri": "docs/distributing-an-application/support-operating-systems",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "View the supported operating systems"
         },
         {
             "title": "Promote Releases",
@@ -135,9 +199,7 @@
         {
             "title": "Getting Started",
             "uri": "docs/getting-started/index",
-            "categories": [
-                "Getting Started"
-            ],
+            "categories": "Getting Started",
             "description": "A quick overview of how to get started with the Replicated platform."
         },
         {

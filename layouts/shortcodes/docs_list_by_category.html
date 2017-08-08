@@ -1,6 +1,6 @@
 <div>
     {{ with $param := .Get 0 }}
-        {{ range $index, $element := $.Page.Site.Data.docs.shallow }} 
+        {{ range $index, $element := $.Page.Site.Data.docs.categories }} 
             {{ if eq $index $param }}
                 {{ range $element }}
                     <div>
