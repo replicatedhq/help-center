@@ -7,7 +7,7 @@ metadataformat: "yaml"
 canonifyurls: true
 description: "Documentation and knowledgebase for Replicated."
 Params:
-  author: "Replicated" # add your company name
+  author: "Replicated"
   copyright: "Replicated, Inc"
 
   favicon: ""
