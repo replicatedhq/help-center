@@ -7,7 +7,7 @@ categories: [ "Knowledgebase", "Developer Resources" ]
 index: "docs"
 ---
 
-Replicated provides a way to achieve zero downtime backups by combining two of our more powerful replicated features: [Admin Commands](/packaging-an-application/admin-commands/) and [Snapshots](/packaging-an-application/snapshots/).
+Replicated provides a way to achieve zero downtime backups by combining two of our more powerful replicated features: [Admin Commands](/docs/packaging-an-application/admin-commands/) and [Snapshots](/docs/packaging-an-application/snapshots/).
 
 In this example we will demonstrate how to backup redis without having to stop the redis process itself:
 

@@ -15,11 +15,11 @@ your application, get the current status, ask for updates or support bundles and
 ## Reset Console Password
 
 If you need to reset your console password you can do so using the command line interface running as the
-root user.  See our [Reseting the On-Prem Admin Password](/kb/supporting-your-customers/resetting-console-password/)
+root user.  See our [Reseting the On-Prem Admin Password](/docs/kb/supporting-your-customers/resetting-console-password/)
 KB article.
 
 ## Automate Install
 
-Replicated allows for [install automation](/kb/developer-resources/automate-install/),
+Replicated allows for [install automation](/docs/kb/developer-resources/automate-install/),
 allowing you to install TLS certificates and configure hostnames and control your
 application settings, including for LDAP integration.

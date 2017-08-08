@@ -27,7 +27,7 @@ docsList:
     description: The `config` section of the Replicated YAML creates a dynamic settings page that customers can use to configure their instance.
   - title: Custom Metrics
     uri: /docs/packaging-an-application/custom-metrics
-    - title: Custom Preflight Checks
+  - title: Custom Preflight Checks
     uri: /docs/packaging-an-application/custom-preflight-checks
     description: A guide to implementing the Custom Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update.
   - title: Docker Swarm

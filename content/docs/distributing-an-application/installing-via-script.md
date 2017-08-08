@@ -8,7 +8,7 @@ indedx: "docs"
 
 We provide an easy-to-use one-line installation process (via shell script) which will detect your OS, ask a few questions and install both docker-engine and the required Replicated components.
 
-If you want to always release your application with a specific version of Replicated you can read how to [always install a specific version of Replicated](/kb/supporting-your-customers/install-known-versions/).
+If you want to always release your application with a specific version of Replicated you can read how to [always install a specific version of Replicated](/docs/kb/supporting-your-customers/install-known-versions/).
 
 ## Basic Install
 
@@ -68,7 +68,7 @@ curl -x http://<proxy_address>:<proxy_port> https://get.replicated.com/docker | 
 ## Post-Installation Maintenance
 
 ## Upgrade to latest Replicated build.
-If you would like to upgrade Replicated to the latest release simply [rerun the installation script](/distributing-an-application/installing-via-script/) and that will upgrade the Replicated components to the latest build.
+If you would like to upgrade Replicated to the latest release simply [rerun the installation script](/docs/distributing-an-application/installing-via-script/) and that will upgrade the Replicated components to the latest build.
 
 ## Restarting Replicated
 If you installed Replicated using the easy installation script, the script will have created an init service you can use to control Replicated. In this case, restarting replicated varies depending on your host OS.

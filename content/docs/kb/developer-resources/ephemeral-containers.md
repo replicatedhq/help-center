@@ -9,8 +9,8 @@ index: "docs"
 
 Database migrations are an important part of any software upgrade, and having a strategy to manage
 data migrations in enterprise deployments is important. One common pattern to manage database migrations
-is to run an [ephemeral container](/packaging-an-application/components-and-containers/)
-along with [container events](/packaging-an-application/events-and-orchestration/)
+is to run an [ephemeral container](/docs/packaging-an-application/components-and-containers/)
+along with [container events](/docs/packaging-an-application/events-and-orchestration/)
 to run migration tasks.
 
 In this example, I will take a very simply python stack based on the Django framework and postgres, and show how to run database migrations. No knowledge of python is necessary to understand this.
@@ -102,9 +102,9 @@ will start serving the web site.
 ```
 
 If this release contains a **required** migration and the migration is not going to be present in future
-releases, you can [mark this release as required](/kb/developer-resources/optional-required/)
+releases, you can [mark this release as required](/docs/kb/developer-resources/optional-required/)
 when promoting it.
 
-For more on sequencing the startup of your application take a look at [this article](/kb/developer-resources/sequencing-startup/).
+For more on sequencing the startup of your application take a look at [this article](/docs/kb/developer-resources/sequencing-startup/).
 
 [Download entire Replicated YML](https://github.com/replicatedhq/repl-yaml-samples/blob/master/apps/migration_python.yml).

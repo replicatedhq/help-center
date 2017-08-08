@@ -8,7 +8,7 @@ index: "docs"
 {{< warning title="Old Version Warning" >}}
 The content in this document is for a previous version of Replicated. If you are looking
 for the current version, it is available at
-<a href="{{< baseurl >}}distributing-an-application/installing/">{{< baseurl >}}distributing-an-application/installing/</a>
+<a href="{{< baseurl >}}docs/distributing-an-application/installing/">{{< baseurl >}}distributing-an-application/installing/</a>
 {{< /warning >}}
 
 ## Host Setup

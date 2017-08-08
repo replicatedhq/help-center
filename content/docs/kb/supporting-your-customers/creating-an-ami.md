@@ -20,7 +20,7 @@ To get started, launch a base image of Ubuntu 14.04 with an EBS root device.
 
 ### Step 1: Install Replicated
 
-Install Replicated using our [installation script](/distributing-an-application/installing/).
+Install Replicated using our [installation script](/docs/distributing-an-application/installing/).
 
 ```shell
 curl -sSL https://get.replicated.com/docker | sudo bash
