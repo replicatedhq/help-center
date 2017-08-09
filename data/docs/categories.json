@@ -1267,5 +1267,81 @@
             ],
             "description": "An overview of the various sections of the Replicated YAML."
         }
+    ],
+    "help_center_integration_api": [
+        {
+            "title": "Audit API",
+            "uri": "docs/reference/integration-api/audit-api",
+            "categories": [
+                "Integration API"
+            ],
+            "description": "Read and write to audit events to the Replicated audit log."
+        },
+        {
+            "title": "Console API",
+            "uri": "docs/reference/integration-api/console-api",
+            "categories": [
+                "Integration API"
+            ],
+            "description": "API to use the Replicated console settings"
+        },
+        {
+            "title": "Identity API",
+            "uri": "docs/reference/integration-api/identity-api",
+            "categories": [
+                "Integration API"
+            ],
+            "description": "Provides authentication and syncing with LDAP sever"
+        },
+        {
+            "title": "License API",
+            "uri": "docs/reference/integration-api/license-api",
+            "categories": [
+                "Integration API"
+            ],
+            "description": "Provides methods for your application to query properties of the installed license"
+        },
+        {
+            "title": "Provisioning API",
+            "uri": "docs/reference/integration-api/provisioning-api",
+            "categories": [
+                "Integration API"
+            ],
+            "description": "Provides authentication and syncing with LDAP sever"
+        },
+        {
+            "title": "Status API",
+            "uri": "docs/reference/integration-api/status-api",
+            "categories": [
+                "Integration API"
+            ],
+            "description": "Provides endpoints for your application to report various kinds of status information back to the management console"
+        },
+        {
+            "title": "Version API",
+            "uri": "docs/reference/integration-api/version-api",
+            "categories": [
+                "Integration API"
+            ],
+            "description": "Read the current application version, release notes, pending updates and apply updates"
+        }
+    ],
+    "help_center_reference": [
+        {
+            "title": "Replicated CLI Reference",
+            "uri": "docs/reference/replicated-cli",
+            "categories": [
+                "Reference"
+            ],
+            "description": "Generated documentation on the default Replicated CLI commands available for all Replicated installed instances."
+        },
+        {
+            "title": "Replicated YAML Reference",
+            "uri": "docs/reference/yaml",
+            "categories": [
+                "Reference"
+            ],
+            "description": "Generated documentation for the Replicated YAML spec."
+        }
     ]
 }
