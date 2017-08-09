@@ -25,7 +25,7 @@ Before you are able to run this locally you need to have [Hugo installed](https:
 
 5. Run the project
    ```bash
-   make run
+   make serve
    ```
 
 6. In your browser navigate to `localhost:1313` to view the project.
