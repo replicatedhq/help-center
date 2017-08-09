@@ -5,6 +5,7 @@
 node_modules/
 public/
 java/
+content/docs/reference/vendor-api/*.adoc
 
 tmp_swagger.adoc
 swagger2markup-*.jar
