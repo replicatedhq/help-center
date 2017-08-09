@@ -4,6 +4,7 @@
 # Directories
 node_modules/
 public/
+java/
 
 # Logs
 logs
