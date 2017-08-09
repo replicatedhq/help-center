@@ -9,6 +9,4 @@ hideSection: true
 index: "docs"
 ---
 
-A series of sample Replicated YAML files that display how to leverage various features of Replicated.
-
 {{% docs_list_by_category "help_center_examples" %}}
