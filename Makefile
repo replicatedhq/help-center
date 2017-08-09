@@ -30,7 +30,7 @@ index-partial-categories:
 	hugo-algolia -m 'categories' -p 'title, uri, categories, description' -i 'content/docs/**' -o 'data/docs/categories.json'
 
 index-partial-tags:
-	hugo-algolia -m 'categories' -p 'title, uri, tags, description' -i 'content/docs/**' -o 'data/docs/tags.json'
+	hugo-algolia -m 'tags' -p 'title, uri, tags, description' -i 'content/docs/**' -o 'data/docs/tags.json'
 
 vendordocs:
 	rm -f content/docs/reference/vendor-api.adoc

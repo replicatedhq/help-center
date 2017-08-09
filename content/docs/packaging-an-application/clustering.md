@@ -4,6 +4,7 @@ title: "Clustering"
 description: "An implementation guide for using the Replicated built in clustering functionality."
 weight: "208"
 categories: [ "Packaging" ]
+tags: [ "Application YAML", "Clusters" ]
 index: "docs"
 ---
 

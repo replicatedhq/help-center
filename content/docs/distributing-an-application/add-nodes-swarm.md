@@ -4,7 +4,7 @@ title: "Adding Nodes To A Swarm Cluster"
 description: "Instructions for installing additional nodes with a Swarm cluster"
 keywords: "installing, swarm"
 index: "docs"
-tags: ["Replicated Cluster", "Nodes", "Test"]
+tags: ["Nodes", "Cluster"]
 categories: [ "Distributing" ]
 ---
 

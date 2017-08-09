@@ -4,6 +4,7 @@ title: "Docker Swarm"
 description: "Packaging a Docker Swarm application in Replicated"
 weight: "219"
 categories: [ "Packaging" ]
+tags: [ "Docker", "Swarm", "Schedulers" ]
 aliases: [
     "/docs/packaging-an-application/swarm/"
 ]

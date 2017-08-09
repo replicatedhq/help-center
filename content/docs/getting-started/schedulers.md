@@ -4,6 +4,7 @@ title: "Choosing A Scheduler"
 description: "Schedulers"
 weight: "104"
 categories: [ "Getting Started" ]
+tags: [ "Replicated Vendor", "Schedulers" ]
 index: "docs"
 ---
 
