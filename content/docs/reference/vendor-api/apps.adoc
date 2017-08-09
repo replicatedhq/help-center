@@ -1,0 +1,317 @@
+---
+date: "2016-07-03T04:02:20Z"
+title: "Manage Apps"
+type: "swagger"
+description: "Create, update and delete apps."
+keyword: "applications, apps"
+weight: "510"
+index: "docs"
+categories: [ "Vendor API" ]
+---
+= Vendor API V1
+
+
+[[_overview]]
+= Overview
+Apps documentation
+
+
+== Version information
+[%hardbreaks]
+_Version_ : 1.0.0
+
+
+
+
+[[_paths]]
+= Paths
+
+[[_createapp]]
+== Creates an app with the specified parameters.
+....
+POST /app
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Body*|*Body* +
+_optional_|App create parameters.|<<_createapp_body,Body>>|
+|===
+
+[[_createapp_body]]
+*Body*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*name* +
+_required_|Name of the app that is to be created.|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*201*|AppResponse represents an app.|<<_app,App>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* apps
+* team
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_deleteapp]]
+== Deletes an app by ID.
+....
+DELETE /app/{app_id}
+....
+
+
+==== Description
+Requires secondary authentication in request params.
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*app_id* +
+_required_|App identifier|string|
+|*Body*|*Body* +
+_optional_|User authenticate parameters|<<_deleteapp_body,Body>>|
+|===
+
+[[_deleteapp_body]]
+*Body*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*password* +
+_required_|Password of the user|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*204*|On success, no payload returned|No Content
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* apps
+* team
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_listapps]]
+== Lists all apps and their channels.
+....
+GET /apps
+....
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|ListAppsResponse represents a list of apps and the corresponding channels.|< <<_appandchannels,AppAndChannels>> > array
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* apps
+* team
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+
+
+[[_definitions]]
+= Definitions
+
+[[_app]]
+== App
+An app belongs to a team. It contains channels onto which releases can be
+promoted.
+
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*Id* +
+_required_|The ID of the app|string
+|*Name* +
+_required_|The name of the app|string
+|*Slug* +
+_required_|A unique slug for the app|string
+|===
+
+
+[[_appandchannels]]
+== AppAndChannels
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*App* +
+_required_|The app|<<_app,App>>
+|*Channels* +
+_required_|Channels of the app|< <<_appchannel,AppChannel>> > array
+|===
+
+
+[[_appchannel]]
+== AppChannel
+An app channel belongs to an app. It contains references to the top (current)
+release in the channel.
+
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*Adoption* +
+_optional_|Adoption rate of licenses in the channel|<<_channeladoption,ChannelAdoption>>
+|*Description* +
+_required_|Description that will be shown during license installation|string
+|*Id* +
+_required_|The ID of the channel|string
+|*LicenseCounts* +
+_optional_|License counts to show the types of licenses in this channel|<<_licensecounts,LicenseCounts>>
+|*Name* +
+_required_|The name of channel|string
+|*Position* +
+_optional_|The position for which the channel occurs in a list|integer(int64)
+|*ReleaseLabel* +
+_optional_|The label of the current release sequence|string
+|*ReleaseNotes* +
+_optional_|Release notes for the current release sequence|string
+|*ReleaseSequence* +
+_optional_|A reference to the current release sequence|integer(int64)
+|===
+
+
+[[_channeladoption]]
+== ChannelAdoption
+ChannelAdoption represents the versions that licenses are on in the channel
+
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*current_version_count_active* +
+_optional_||< string, integer(int64) > map
+|*current_version_count_all* +
+_optional_||< string, integer(int64) > map
+|*other_version_count_active* +
+_optional_||< string, integer(int64) > map
+|*other_version_count_all* +
+_optional_||< string, integer(int64) > map
+|*previous_version_count_active* +
+_optional_||< string, integer(int64) > map
+|*previous_version_count_all* +
+_optional_||< string, integer(int64) > map
+|===
+
+
+[[_licensecounts]]
+== LicenseCounts
+LicenseCounts is a struct to hold license count information
+
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*active* +
+_optional_||< string, integer(int64) > map
+|*airgap* +
+_optional_||< string, integer(int64) > map
+|*inactive* +
+_optional_||< string, integer(int64) > map
+|*total* +
+_optional_||< string, integer(int64) > map
+|===
+
+
+
+
+

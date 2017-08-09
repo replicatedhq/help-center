@@ -1,0 +1,2185 @@
+---
+date: "2016-07-03T04:02:20Z"
+title: "Manage Licenses"
+type: "swagger"
+description: "Create, update, delete, revoke licenses and download license keys."
+keyword: "license, licenses"
+weight: "515"
+index: "docs"
+categories: [ "Vendor API" ]
+---
+= Vendor API V1
+
+
+[[_overview]]
+= Overview
+Create, update, delete, revoke licenses and download license keys.
+
+
+== Version information
+[%hardbreaks]
+_Version_ : 1.0.0
+
+
+
+
+[[_paths]]
+= Paths
+
+[[_createlicensefield]]
+== Create a license field for a given app.
+....
+POST /app/{app_id}/licensefield
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*app_id* +
+_required_|App identifier|string|
+|*Body*|*Body* +
+_required_||<<_createlicensefield_body,Body>>|
+|===
+
+[[_createlicensefield_body]]
+*Body*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*default* +
+_required_||string
+|*hidden* +
+_required_||boolean
+|*name* +
+_required_||string
+|*required* +
+_required_||boolean
+|*title* +
+_required_||string
+|*type* +
+_required_||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|CreateLicenseFieldResponse contains the response of all license fields|<<_createlicensefield_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_createlicensefield_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*ListAppLicenseFieldsResponse* +
+_optional_||< <<_licensefield,LicenseField>> > array
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* app
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_listlicensefields]]
+== List license fields for a given appId.
+....
+GET /app/{app_id}/licensefield
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*app_id* +
+_required_|App identifier|string|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|ListLicenseFieldsResponse contains the list of license fields|<<_listlicensefields_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_listlicensefields_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*ListAppLicenseFieldsResponse* +
+_optional_||< <<_licensefield,LicenseField>> > array
+|===
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* app
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_editlicensefield]]
+== Update a license field for a given appId and licenseFieldName.
+....
+PUT /app/{app_id}/licensefield/{license_field_name}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*app_id* +
+_required_|App identifier|string|
+|*Path*|*license_field_name* +
+_required_|App identifier|string|
+|*Body*|*Body* +
+_required_||<<_editlicensefield_body,Body>>|
+|===
+
+[[_editlicensefield_body]]
+*Body*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*default* +
+_required_|Optional default value for this licensefield.|string
+|*hidden* +
+_required_|Indicates if this field will be visible from the on-premise license screen.|boolean
+|*title* +
+_required_|Title of custom license field to display.|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|EditLicenseFieldResponse contains the license fields|<<_editlicensefield_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_editlicensefield_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*ListAppLicenseFieldsResponse* +
+_optional_||< <<_licensefield,LicenseField>> > array
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* app
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_deletelicensefield]]
+== Delete a field for a given app and named field.
+....
+DELETE /app/{app_id}/licensefield/{license_field_name}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*app_id* +
+_required_|App identifier|string|
+|*Path*|*license_field_name* +
+_required_|Field name|string|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|DeleteLicenseFieldResponse contains the response from deleting a license field|<<_deletelicensefield_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_deletelicensefield_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*ListAppLicenseFieldsResponse* +
+_optional_||< <<_licensefield,LicenseField>> > array
+|===
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* app
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_listapplicenses]]
+== List all licenses for a given appId.
+....
+GET /app/{app_id}/licenses
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*app_id* +
+_required_|App identifier|string|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|ListAppLicensesResponse contains the list of licenses|<<_listapplicenses_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|===
+
+[[_listapplicenses_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*Licenses* +
+_optional_||< <<_license,License>> > array
+|===
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* app
+* licenses
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_licensessearch]]
+== Search for a given license by appId and licenseField.
+....
+POST /app/{app_id}/licenses/search
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*app_id* +
+_required_|App identifier|string|
+|*Body*|*Body* +
+_required_||<<_licensessearch_body,Body>>|
+|===
+
+[[_licensessearch_body]]
+*Body*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*fields* +
+_required_|An array of fields that have values you are trying to search for|< <<_licensefieldnamevalue,LicenseFieldNameValue>> > array
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|LicensesSearchResponse contains the search response|<<_licensessearch_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|===
+
+[[_licensessearch_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*LicenseIDs* +
+_optional_|List of License IDs|< string > array
+|===
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* licenses
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_createlicense]]
+== Create a license.
+....
+POST /license
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Body*|*Body* +
+_required_||<<_createlicense_body,Body>>|
+|===
+
+[[_createlicense_body]]
+*Body*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*activation_email* +
+_required_|If activation is required this is the email the code will be sent to.|string
+|*airgap_download_enabled* +
+_required_||boolean
+|*app_id* +
+_required_|App Id that this license will be associated with.|string
+|*assignee* +
+_required_|License Label name, ie name of customer who is using license.|string
+|*assisted_setup_enabled* +
+_required_||boolean
+|*channel_id* +
+_required_|Channel id that the license will be associated with.|string
+|*expiration_date* +
+_required_|Date that the license will expire, can be null for no expiration or formatted by year-month-day ex. 2016-02-02.|string
+|*expiration_policy* +
+_required_|Defines expiration policy for this license.
+
+Values:
+ignore: replicated will take no action on a expired license
+noupdate-norestart: application updates will not be downloaded, and once the application is stopped, it will not be started again
+noupdate-stop: application updates will not be downloaded and the application will be stopped|string
+|*field_values* +
+_required_|An array of field values for custom fields of a given app|<<_licensefieldvalues,LicenseFieldValues>>
+|*license_type* +
+_required_|LicenseType can be set to "dev", "trial", or "prod"|string
+|*require_activation* +
+_required_|If this license requires activation set to true, make sure to set activation email as well.|boolean
+|*update_policy* +
+_required_|If set to automatic will auto update remote license installation with every release. If set to manual will update only when on-premise admin clicks the install update button.|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*201*|CreateLicenseResponse contains the created license|<<_createlicense_response_201,Response 201>>
+|*400*|Returned on bad input|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_createlicense_response_201]]
+*Response 201*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*License* +
+_optional_||<<_license,License>>
+|===
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* license
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_getlicense]]
+== Get app license for a given licenseId.
+....
+GET /license/{license_id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*license_id* +
+_required_|License identifier|string|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|GetLicenseResponse contains the returned license|<<_getlicense_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_getlicense_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*License* +
+_required_||<<_license,License>>
+|===
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* license
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_updatelicense]]
+== Update app license for a given licenseId.
+....
+PUT /license/{license_id}
+....
+
+
+==== Description
+Note: that all fields are required to be passed or they will be overwritten to blank or default values.
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*license_id* +
+_required_|License identifier|string|
+|*Body*|*Body* +
+_required_||<<_updatelicense_body,Body>>|
+|===
+
+[[_updatelicense_body]]
+*Body*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*activation_email* +
+_required_|If activation is required this is the email the code will be sent to.|string
+|*airgap_download_enabled* +
+_required_||boolean
+|*assignee* +
+_required_|License Label name, ie name of customer who is using license.|string
+|*assisted_setup_enabled* +
+_required_||boolean
+|*channel_id* +
+_required_|Channel id that the license will be associated with.|string
+|*expiration_date* +
+_required_|Date that the license will expire, can be null for no expiration or formated by year-month-day ex. 2016-02-02.|string
+|*expiration_policy* +
+_required_|Defines expiration policy for this license.
+
+Values:
+ignore: replicated will take no action on a expired license
+noupdate-norestart: application updates will not be downloaded, and once the application is stopped, it will not be started again
+noupdate-stop: application updates will not be downloaded and the application will be stopped|string
+|*field_values* +
+_required_|An array of field values for custom fields of a given app|<<_licensefieldvalues,LicenseFieldValues>>
+|*is_app_version_locked* +
+_optional_|A license can be optionally locked to a specific release|boolean
+|*license_type* +
+_required_|LicenseType can be set to "dev", "trial", or "prod"|string
+|*locked_app_version* +
+_optional_|If app version is locked, this is the version to lock it to (sequence)|integer(int64)
+|*require_activation* +
+_required_|If this license requires activation set to true, make sure to set activation email as well.|boolean
+|*update_policy* +
+_required_|If set to automatic will auto update remote license installation with every release. If set to manual will update only when on-premise admin clicks the install update button.|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|UpdateLicenseResponse contains the license|<<_updatelicense_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_updatelicense_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*License* +
+_required_||<<_license,License>>
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_archivelicense]]
+== Archive a license.
+....
+DELETE /license/{license_id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*license_id* +
+_required_|License identifier|string|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*204*|On success, no payload returned|No Content
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+
+==== Tags
+
+* license
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_postairgappassword]]
+== Update an airgap passsword.
+....
+POST /license/{license_id}/airgap/password
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*license_id* +
+_required_|License identifier|string|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|PostAirgapPasswordResponse contains the returned password|<<_postairgappassword_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_postairgappassword_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*password* +
+_required_||string
+|===
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* airgap
+* license
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_updatelicensebilling]]
+== Update license billing information for a given licenseId.
+....
+PUT /license/{license_id}/billing
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*license_id* +
+_required_|License identifier|string|
+|*Body*|*Body* +
+_required_||<<_updatelicensebilling_body,Body>>|
+|===
+
+[[_updatelicensebilling_body]]
+*Body*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*begin* +
+_required_|Begining date formated by year-month-day ex. 2016-02-02.|string
+|*end* +
+_required_|Ending date formated by year-month-day ex. 2016-02-02.|string
+|*frequency* +
+_required_|Can be set to Monthly, Quarterly, Annually, One Time, or Other to indicate interval that this billing happens.|string
+|*license_type* +
+_required_|LicenseType can be set to "dev", "trial", or "prod"|string
+|*revenue* +
+_required_|Amount of money associated with this billing event.|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|UpdateLicenseBillingResponse contains the license|<<_updatelicensebilling_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_updatelicensebilling_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*License* +
+_optional_||<<_license,License>>
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* license
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_listlicensebillingevents]]
+== List license billing events for a given license_id.
+....
+GET /license/{license_id}/billing-events
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*license_id* +
+_required_|License identifier|string|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|GetLicenseBillingEventsResponse contains the list of license billing events|<<_listlicensebillingevents_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_listlicensebillingevents_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*BillingEvents* +
+_optional_||< <<_licensebillingevent,LicenseBillingEvent>> > array
+|===
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* app
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_createlicensebillingevent]]
+== Create a license billing event.
+....
+POST /license/{license_id}/billing_event
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*license_id* +
+_required_|License identifier|string|
+|*Body*|*Body* +
+_required_||<<_createlicensebillingevent_body,Body>>|
+|===
+
+[[_createlicensebillingevent_body]]
+*Body*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*amount* +
+_required_||integer(int64)
+|*description* +
+_required_||string
+|*vendor_due_from_customer_date* +
+_required_||string
+|*vendor_invoice_to_customer_date* +
+_required_||string
+|*vendor_paid_by_customer_date* +
+_required_||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|CreateLicenseBillingEventResponse contains the license billing event|<<_createlicensebillingevent_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_createlicensebillingevent_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*LicenseBillingEvent* +
+_required_||<<_licensebillingevent,LicenseBillingEvent>>
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* license
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_updatelicensebillingevent]]
+== Update a license billing event.
+....
+PUT /license/{license_id}/billing_event/{id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*id* +
+_required_|Event ID|string|
+|*Path*|*license_id* +
+_required_|License identifier|string|
+|*Body*|*Body* +
+_required_||<<_updatelicensebillingevent_body,Body>>|
+|===
+
+[[_updatelicensebillingevent_body]]
+*Body*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*amount* +
+_required_||integer(int64)
+|*description* +
+_required_||string
+|*vendor_due_from_customer_date* +
+_required_||string
+|*vendor_invoice_to_customer_date* +
+_required_||string
+|*vendor_paid_by_customer_date* +
+_required_||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|UpdateLicenseBillingEventResponse contains the resulting billing event|<<_updatelicensebillingevent_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_updatelicensebillingevent_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*LicenseBillingEvent* +
+_required_||<<_licensebillingevent,LicenseBillingEvent>>
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* license
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_updatelicensechannel]]
+== Update a license channel for a given license.
+....
+PUT /license/{license_id}/channel
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*license_id* +
+_required_|License identifier|string|
+|*Body*|*Body* +
+_required_||<<_updatelicensechannel_body,Body>>|
+|===
+
+[[_updatelicensechannel_body]]
+*Body*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*channel_id* +
+_optional_||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|UpdateLicenseChannelResponse update channel response|<<_updatelicensechannel_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_updatelicensechannel_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*License* +
+_required_||<<_license,License>>
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* channel
+* license
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_updatelicenseexpiration]]
+== PUT /license/{license_id}/expire
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*license_id* +
+_required_|License identifier|string|
+|*Body*|*Body* +
+_required_||<<_updatelicenseexpiration_body,Body>>|
+|===
+
+[[_updatelicenseexpiration_body]]
+*Body*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*expiration_date* +
+_required_||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|UpdateLicenseExpirationResponse contains the returned license|<<_updatelicenseexpiration_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_updatelicenseexpiration_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*License* +
+_optional_||<<_license,License>>
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* license
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_createlicensefieldvalue]]
+== Set the value for a license field.
+....
+PUT /license/{license_id}/field
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*license_id* +
+_required_|License identifier|string|
+|*Body*|*Body* +
+_required_||<<_createlicensefieldvalue_body,Body>>|
+|===
+
+[[_createlicensefieldvalue_body]]
+*Body*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*field* +
+_required_||string
+|*value* +
+_required_||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*204*|On success, no payload returned|No Content
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Tags
+
+* license
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_getlicensefieldvalues]]
+== Get license field values for a given licenseId.
+....
+GET /license/{license_id}/fields
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*license_id* +
+_required_|License identifier|string|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|GetLicenseFieldValuesResponse contains the field values|<<_getlicensefieldvalues_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_getlicensefieldvalues_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*FieldValues* +
+_optional_||<<_licensefieldvalues,LicenseFieldValues>>
+|===
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* license
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_updatelicensefields]]
+== Update license field values for a given licenseId.
+....
+PUT /license/{license_id}/fields
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*license_id* +
+_required_|License identifier|string|
+|*Body*|*Body* +
+_required_||<<_updatelicensefields_body,Body>>|
+|===
+
+[[_updatelicensefields_body]]
+*Body*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*LicenseFieldValues* +
+_required_||< <<_licensefieldvalue,licenseFieldValue>> > array
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|UpdateLicenseFieldsResponse contains the license|<<_updatelicensefields_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_updatelicensefields_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*License* +
+_required_||<<_license,License>>
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* license
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_getlicenseinstance]]
+== Get a license instance.
+....
+GET /license/{license_id}/instance/{instance_id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*instance_id* +
+_required_|Instance identifier|string|
+|*Path*|*license_id* +
+_required_|License identifier|string|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|GetLicenseInstanceResponse contains the license instance|<<_getlicenseinstance_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_getlicenseinstance_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*License* +
+_optional_||<<_licenseinstance,LicenseInstance>>
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* license
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_listlicenseinstances]]
+== Lists all tracked license instances for a given licenseId.
+....
+GET /license/{license_id}/instances
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*license_id* +
+_required_|License identifier|string|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|ListLicenseInstancesResponse contains the response license instances|<<_listlicenseinstances_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_listlicenseinstances_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*ListInstances* +
+_optional_||< <<_licenseinstance,LicenseInstance>> > array
+|===
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* license
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_getlicenseinstanceuntracked]]
+== Lists all untracked license instances for a given licenseId.
+....
+GET /license/{license_id}/instances/untracked
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*license_id* +
+_required_|License identifier|string|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|GetLicenseInstanceUntrackedResponse contains a list of untracked instances|<<_getlicenseinstanceuntracked_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_getlicenseinstanceuntracked_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*License* +
+_optional_||<<_licenseinstanceuntracked,LicenseInstanceUntracked>>
+|===
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* license
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_revokelicense]]
+== Revoke a license for a given licenseId.
+....
+PUT /license/{license_id}/revoke
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*license_id* +
+_required_|License identifier|string|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|RevokeLicenseResponse contains the revoked license|<<_revokelicense_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+[[_revokelicense_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*License* +
+_required_||<<_license,License>>
+|===
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* license
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_unarchivelicense]]
+== Unarchive a license.
+....
+PUT /license/{license_id}/unarchive
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*license_id* +
+_required_|License identifier|string|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*204*|On success, no payload returned|No Content
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* license
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_downloadlicense]]
+== Download app license (base64 deliverable to your end customer) key for a given licenseId.
+....
+GET /licensekey/{license_id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*license_id* +
+_required_|License identifier|string|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|DownloadLicenseResponse contains the licenses response +
+*Headers* :  +
+`ContentDisposition` (string) : Recommended filename
+Required: true
+In: header.|No Content
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|*404*|Returned on resource not found|No Content
+|===
+
+
+==== Tags
+
+* license
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_licenses]]
+== Lists all licenses.
+....
+GET /licenses
+....
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|ListLicensesResponse contains the parameters needed to call list licenses|<<_licenses_response_200,Response 200>>
+|===
+
+[[_licenses_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*Licenses* +
+_optional_||< <<_license,License>> > array
+|===
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* licenses
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+
+
+[[_definitions]]
+= Definitions
+
+[[_installedappversion]]
+== InstalledAppVersion
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*Label* +
+_optional_||string
+|*LastCheck* +
+_optional_||<<_time,Time>>
+|*Sequence* +
+_optional_||integer(int64)
+|*UpdateAvailable* +
+_optional_||boolean
+|===
+
+
+[[_license]]
+== License
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*ActivationEmail* +
+_optional_||string
+|*ActiveInstanceCount* +
+_optional_||integer(int64)
+|*AirgapDownloadEnabled* +
+_optional_||boolean
+|*AirgapDownloadPassword* +
+_optional_||< integer(uint8) > array
+|*Anonymous* +
+_optional_||boolean
+|*AppId* +
+_optional_||string
+|*AppStatus* +
+_optional_||string
+|*Archived* +
+_optional_||boolean
+|*Assignee* +
+_optional_||string
+|*AssistedSetupEnabled* +
+_optional_||boolean
+|*Billing* +
+_optional_||<<_licensebilling,LicenseBilling>>
+|*BillingEvents* +
+_optional_||< <<_licensebillingevent,LicenseBillingEvent>> > array
+|*ChannelId* +
+_optional_||string
+|*ChannelName* +
+_optional_||string
+|*Clouds* +
+_optional_||string
+|*ExpirationPolicy* +
+_optional_||string
+|*ExpireDate* +
+_optional_||<<_time,Time>>
+|*FieldValues* +
+_optional_||< <<_licensefieldvalue,LicenseFieldValue>> > array
+|*GrantDate* +
+_optional_||<<_time,Time>>
+|*Id* +
+_optional_||string
+|*InactiveInstanceCount* +
+_optional_||integer(int64)
+|*IsAppVersionLocked* +
+_optional_||boolean
+|*IsInstanceTracked* +
+_optional_||boolean
+|*LastSync* +
+_optional_||<<_time,Time>>
+|*LicenseType* +
+_optional_||string
+|*LicenseVersions* +
+_optional_|This is unused code. Leaving it in to not break for vendor integrations.|<<_licenseversions,LicenseVersions>>
+|*LockedAppVersion* +
+_optional_||integer(int64)
+|*RequireActivation* +
+_optional_||boolean
+|*RevokationDate* +
+_optional_||<<_time,Time>>
+|*UntrackedInstanceCount* +
+_optional_||integer(int64)
+|*UpdatePolicy* +
+_optional_||string
+|===
+
+
+[[_licensebilling]]
+== LicenseBilling
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*begin* +
+_optional_||<<_time,Time>>
+|*end* +
+_optional_||<<_time,Time>>
+|*frequency* +
+_optional_||string
+|*revenue* +
+_optional_||string
+|===
+
+
+[[_licensebillingevent]]
+== LicenseBillingEvent
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*amount* +
+_optional_||integer(int64)
+|*description* +
+_optional_||string
+|*event_date* +
+_optional_||<<_time,Time>>
+|*id* +
+_optional_||string
+|*vendor_due_from_customer_date* +
+_optional_||<<_time,Time>>
+|*vendor_invoice_to_customer_date* +
+_optional_||<<_time,Time>>
+|*vendor_paid_by_customer_date* +
+_optional_||<<_time,Time>>
+|===
+
+
+[[_licensefield]]
+== LicenseField
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*default* +
+_optional_||string
+|*hidden* +
+_optional_||boolean
+|*name* +
+_optional_||string
+|*required* +
+_optional_||boolean
+|*title* +
+_optional_||string
+|*type* +
+_optional_||string
+|===
+
+
+[[_licensefieldnamevalue]]
+== LicenseFieldNameValue
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*field* +
+_optional_||string
+|*value* +
+_optional_||object
+|===
+
+
+[[_licensefieldvalue]]
+== LicenseFieldValue
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*FieldName* +
+_optional_||string
+|*FieldTitle* +
+_optional_||string
+|*FieldType* +
+_optional_||string
+|*Value* +
+_optional_||string
+|===
+
+
+[[_licensefieldvalues]]
+== LicenseFieldValues
+_Type_ : < <<_licensefieldvalue,LicenseFieldValue>> > array
+
+
+[[_licenseinstance]]
+== LicenseInstance
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*Active* +
+_optional_||boolean
+|*AppStatus* +
+_optional_||string
+|*AssistSessionId* +
+_optional_||string
+|*Cloud* +
+_optional_||string
+|*Created* +
+_optional_||<<_time,Time>>
+|*InstanceId* +
+_optional_||string
+|*LastActive* +
+_optional_||<<_time,Time>>
+|*LicenseId* +
+_optional_||string
+|*ReplicatedAgentVersion* +
+_optional_||string
+|*ReplicatedOperatorVersion* +
+_optional_||string
+|*ReplicatedSyncTime* +
+_optional_||<<_time,Time>>
+|*ReplicatedUiVersion* +
+_optional_||string
+|*ReplicatedUpdaterVersion* +
+_optional_||string
+|*ReplicatedVersion* +
+_optional_||string
+|*VersionHistory* +
+_optional_||< <<_licenseinstanceversionhistory,LicenseInstanceVersionHistory>> > array
+|===
+
+
+[[_licenseinstanceuntracked]]
+== LicenseInstanceUntracked
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*CurrentSequence* +
+_optional_||integer(int64)
+|*CurrentVersion* +
+_optional_||string
+|*LicenseId* +
+_optional_||string
+|*ReplicatedAgentVersion* +
+_optional_||string
+|*ReplicatedOperatorVersion* +
+_optional_||string
+|*ReplicatedSyncTime* +
+_optional_||<<_time,Time>>
+|*ReplicatedUiVersion* +
+_optional_||string
+|*ReplicatedUpdaterVersion* +
+_optional_||string
+|*ReplicatedVersion* +
+_optional_||string
+|*SyncTime* +
+_optional_||<<_time,Time>>
+|===
+
+
+[[_licenseinstanceversionhistory]]
+== LicenseInstanceVersionHistory
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*InstanceId* +
+_optional_||string
+|*Start* +
+_optional_||<<_time,Time>>
+|*Stop* +
+_optional_||<<_time,Time>>
+|*VersionChannel* +
+_optional_||string
+|*VersionLabel* +
+_optional_||string
+|*VersionSequence* +
+_optional_||integer(int64)
+|===
+
+
+[[_licenseversions]]
+== LicenseVersions
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*InstalledAppVersion* +
+_optional_||<<_installedappversion,InstalledAppVersion>>
+|*ReplicatedVersions* +
+_optional_||< string, < string > array > map
+|===
+
+
+[[_time]]
+== Time
+Programs using times should typically store and pass them as values,
+not pointers. That is, time variables and struct fields should be of
+type time.Time, not *time.Time. A Time value can be used by
+multiple goroutines simultaneously.
+
+Time instants can be compared using the Before, After, and Equal methods.
+The Sub method subtracts two instants, producing a Duration.
+The Add method adds a Time and a Duration, producing a Time.
+
+The zero value of type Time is January 1, year 1, 00:00:00.000000000 UTC.
+As this time is unlikely to come up in practice, the IsZero method gives
+a simple way of detecting a time that has not been initialized explicitly.
+
+Each Time has associated with it a Location, consulted when computing the
+presentation form of the time, such as in the Format, Hour, and Year methods.
+The methods Local, UTC, and In return a Time with a specific location.
+Changing the location in this way changes only the presentation; it does not
+change the instant in time being denoted and therefore does not affect the
+computations described in earlier paragraphs.
+
+Note that the Go == operator compares not just the time instant but also the
+Location. Therefore, Time values should not be used as map or database keys
+without first guaranteeing that the identical Location has been set for all
+values, which can be achieved through use of the UTC or Local method.
+
+_Type_ : object
+
+
+[[_licensefieldvalue]]
+== licenseFieldValue
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*field* +
+_required_|The name of the custom field which you want to populate a value.|string
+|*value* +
+_required_|The value that you wish to populate the custom field with.|string
+|===
+
+
+
+
+

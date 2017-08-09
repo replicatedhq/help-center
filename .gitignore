@@ -6,6 +6,9 @@ node_modules/
 public/
 java/
 
+tmp_swagger.adoc
+swagger2markup-*.jar
+
 # Logs
 logs
 *.log

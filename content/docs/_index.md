@@ -28,4 +28,7 @@ docs:
   - title: "Integration API"
     description: "The Integration API is hosted with Replicated's on-prem daemon and allows your services to call and be called by the local Replicated server."
     slug: "integration-api"
+  - title: "Vendor API"
+    description: "The Vendor API is available for integrating Replicated into your workflows, such as automating your CI pipeline or customer license creation."
+    slug: "vendor-api"
 ---

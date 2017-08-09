@@ -1,0 +1,452 @@
+---
+date: "2016-07-03T04:02:20Z"
+title: "Authentication"
+type: "swagger"
+description: "Login, logout and create team members."
+keyword: "authentication"
+weight: "512"
+index: "docs"
+categories: [ "Vendor API" ]
+---
+= Vendor API V1
+
+
+[[_overview]]
+= Overview
+Authentication is achieved via a token that can be generated via the Vendor website. You can create a new token by
+clicking the *New API Token* button in the *API Tokens* table. You must give this token a nickname before saving.
+
+After you have generated your token, you will need to send this token in the _Authorization_ header of your
+requests to the Vendor API.
+
+
+== Version information
+[%hardbreaks]
+_Version_ : 1.0.0
+
+
+
+
+[[_paths]]
+= Paths
+
+[[_teaminvite]]
+== Signup a new team member.
+....
+POST /team/invite/{id}/signup
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Path*|*id* +
+_required_|App identifier|string|
+|*Body*|*Body* +
+_required_|JSON params|<<_teaminvite_body,Body>>|
+|===
+
+[[_teaminvite_body]]
+*Body*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*password* +
+_required_||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*204*|TeamInviteResponse contains the signup parameters|<<_teaminvite_response_204,Response 204>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|===
+
+[[_teaminvite_response_204]]
+*Response 204*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*download_web_host* +
+_required_||string
+|*features* +
+_required_||< <<_feature,Feature>> > array
+|*read_only* +
+_required_||boolean
+|*team* +
+_required_||<<_team,Team>>
+|*token* +
+_required_||string
+|*user* +
+_required_||<<_user,User>>
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* team
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_login]]
+== POST /user/login
+
+==== Description
+On succesful login returns a session
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Body*|*Body* +
+_required_|JSON params|<<_login_body,Body>>|
+|===
+
+[[_login_body]]
+*Body*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*email* +
+_required_||string
+|*password* +
+_required_||string
+|*remember_me* +
+_required_||boolean
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|LoginResponse contains the session data after a user logs in.|<<_sharedloginresponse,SharedLoginResponse>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* auth
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_loginopt]]
+== POST /user/login/otp
+
+==== Description
+Returns a session
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Body*|*Body* +
+_required_|JSON params|<<_loginopt_body,Body>>|
+|===
+
+[[_loginopt_body]]
+*Body*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*code* +
+_required_||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|LoginOptResponse contains the login opt parameters +
+*Headers* :  +
+`ReplicatedNeedsOtp` (string) : Required: true
+In: header.|<<_sharedloginresponse,SharedLoginResponse>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|===
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* auth
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_logout]]
+== Logout from the active session.
+....
+POST /user/logout
+....
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*204*|On success, no payload returned|No Content
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|===
+
+
+==== Tags
+
+* auth
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+[[_signup]]
+== Signup a new user.
+....
+POST /user/signup
+....
+
+
+==== Parameters
+
+[options="header", cols=".^1,.^3,.^10,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Body*|*Body* +
+_required_|JSON params|<<_signup_body,Body>>|
+|===
+
+[[_signup_body]]
+*Body*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*company* +
+_required_||string
+|*email* +
+_required_||string
+|*password* +
+_required_||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^1,.^15,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|SignupResponse contains the session data after a user signs up.|<<_signup_response_200,Response 200>>
+|*400*|Returned on bad input|No Content
+|*401*|Return if the caller is not authorized|No Content
+|*403*|Returned if the caller does not have the needed permission|No Content
+|===
+
+[[_signup_response_200]]
+*Response 200*
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*signup* +
+_required_||<<_signup,Signup>>
+|*token* +
+_required_||string
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* auth
+
+
+==== Security
+
+[options="header", cols=".^3,.^4,.^13"]
+|===
+|Type|Name|Scopes
+|*Unknown*|*<<_api_key,api_key>>*|
+|===
+
+
+
+
+[[_definitions]]
+= Definitions
+
+[[_feature]]
+== Feature
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*Key* +
+_optional_||string
+|*Value* +
+_optional_||string
+|===
+
+
+[[_sharedloginresponse]]
+== SharedLoginResponse
+SharedLoginResponse is a shared structure used for both login and signup responses
+
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*ReplicatedNeedsOtp* +
+_optional_||string
+|*download_web_host* +
+_required_||string
+|*features* +
+_required_||< <<_feature,Feature>> > array
+|*read_only* +
+_required_||boolean
+|*team* +
+_required_||<<_team,Team>>
+|*token* +
+_required_||string
+|*user* +
+_required_||<<_user,User>>
+|===
+
+
+[[_signup]]
+== Signup
+Signup represents a pending signup. This is an unactivated account
+and there can be multiple signups for the same email. The ID is the
+unique key and used as the activation code in the email
+
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*company* +
+_optional_||string
+|*email* +
+_optional_||string
+|*id* +
+_optional_||string
+|===
+
+
+[[_team]]
+== Team
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*id* +
+_optional_||string
+|*name* +
+_optional_||string
+|===
+
+
+[[_user]]
+== User
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*2fa_enabled* +
+_optional_||boolean
+|*email* +
+_optional_||string
+|*id* +
+_optional_||string
+|*read_only* +
+_optional_||boolean
+|===
+
+
+
+
+
