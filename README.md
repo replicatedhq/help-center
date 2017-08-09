@@ -8,15 +8,16 @@ Before you are able to run this locally you need to have [Hugo installed](https:
    ```
 
 2. Install asciidoctor
-  ```bash
-  brew install git ruby
-  sudo gem install asciidoctor
-  ```
+   ```bash
+   brew install git ruby
+   sudo gem install asciidoctor
+   ```
+
 3. Setup API docs
-  ```bash
-  make setup
-  make SOURCE="https://api.staging.replicated.com/vendor" vendordocs
-  ```
+   ```bash
+   make setup
+   make SOURCE="https://api.staging.replicated.com/vendor" vendordocs
+   ```
 
 4. Build the project
    ```bash
