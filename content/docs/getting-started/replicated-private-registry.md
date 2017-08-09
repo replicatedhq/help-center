@@ -4,6 +4,7 @@ title: "Replicated Private Registry"
 description: "How to push and access private images in Replicated's hosted private registry."
 weight: "105"
 categories: [ "Getting Started" ]
+tags: [ "Replicated Vendor" ]
 index: "docs"
 ---
 

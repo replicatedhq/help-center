@@ -4,6 +4,7 @@ title: "Application Properties"
 description: "The Replicated YAML section `properties` allows several high level items to be defined."
 weight: "203"
 categories: [ "Packaging" ]
+tags: [ "Application YAML" ]
 index: "docs"
 ---
 

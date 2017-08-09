@@ -4,6 +4,7 @@ title: "Custom Preflight Checks"
 description: "A guide to implementing the Custom Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
 weight: "214"
 categories: [ "Packaging" ]
+tags: [ "Preflight Checks", "Application YAML" ]
 index: "docs"
 ---
 

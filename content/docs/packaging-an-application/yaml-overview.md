@@ -4,6 +4,7 @@ title: "YAML Overview"
 description: "An overview of the various sections of the Replicated YAML."
 weight: "202"
 categories: [ "Packaging" ]
+tags: [ "Application YAML", Schedulers, "Snapshots", "Preflight Checks" ]
 index: "docs"
 ---
 

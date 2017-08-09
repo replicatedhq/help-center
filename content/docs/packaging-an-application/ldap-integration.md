@@ -4,6 +4,7 @@ title: "LDAP and Identity Integration"
 description: "Enabling LDAP and AD user auth and sync in an application through Replicated."
 weight: "216"
 categories: [ "Packaging" ]
+tags: [ "Application YAML", "LDAP" ]
 index: "docs"
 ---
 

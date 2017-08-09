@@ -4,6 +4,7 @@ title: "Template Functions"
 description: "The dynamic configuration management functionality available throughout the Replicated YAML."
 weight: "210"
 categories: [ "Packaging" ]
+tags: [ "Application YAML" ]
 index: "docs"
 ---
 
