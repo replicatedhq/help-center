@@ -50,7 +50,7 @@ page_metadata() {
     fi
 }
 
-mkdir -p contnet/docs/reference/vendor-api
+mkdir -p content/docs/reference/vendor-api
 
 for name in apps audit auth branding channels license releases ; do
     echo "Downloading ${VENDOR_API}/v1/spec/$name.json"
@@ -59,16 +59,16 @@ for name in apps audit auth branding channels license releases ; do
     page_metadata $name
     OUTPUT_FILE="content/docs/reference/vendor-api/$name.adoc"
     cat <<EOM >$OUTPUT_FILE
----
-date: "2016-07-03T04:02:20Z"
-title: "$CAPS_API"
-type: "swagger"
-description: "$DESCRIPTION"
-keyword: "$KEYWORDS"
-weight: "$WEIGHT"
-index: "docs"
-categories: [ "Vendor API" ]
----
++++
+date = "2016-07-03T04:02:20Z"
+title = "$CAPS_API"
+type = "swagger"
+description = "$DESCRIPTION"
+keyword = "$KEYWORDS"
+weight = "$WEIGHT"
+index = "docs"
+categories = [ "Vendor API" ]
++++
 EOM
     sed -e 's/^== /= /' -e 's/^=== /== /' tmp_swagger.adoc >> $OUTPUT_FILE
     rm -f tmp_swagger.json
