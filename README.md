@@ -7,17 +7,29 @@ Before you are able to run this locally you need to have [Hugo installed](https:
    make install
    ```
 
-1. Build the project
+2. Install asciidoctor
    ```bash
-   make install
+   brew install git ruby
+   sudo gem install asciidoctor
    ```
 
-1. Run the project
+3. Setup API docs
    ```bash
-   make run
+   make setup
+   make SOURCE="https://api.staging.replicated.com/vendor" vendordocs
    ```
 
-1. In your browser navigate to `localhost:1313` to view the project.
+4. Build the project
+   ```bash
+   make build
+   ```
+
+5. Run the project
+   ```bash
+   make serve
+   ```
+
+6. In your browser navigate to `localhost:1313` to view the project.
 
 ### Indexing Content
 

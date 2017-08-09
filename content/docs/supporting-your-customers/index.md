@@ -8,4 +8,4 @@ layout: "special"
 hideSection: true
 ---
 
-{{% docs_list_by_category "help_center_support" %}}
+{{% docs_list_by_category "help_center_supporting_your_customers" %}}
