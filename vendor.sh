@@ -1,6 +1,8 @@
 #!/bin/bash
 ## Build the vendor documentation with swagger
 
+set -e
+
 rm -f app_name
 rm -f tmp_swagger.json
 rm -f tmp_adoc.adoc
