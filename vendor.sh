@@ -50,7 +50,7 @@ page_metadata() {
     fi
 }
 
-mkdir -p contnet/docs/reference/vendor-api
+mkdir -p content/docs/reference/vendor-api
 
 for name in apps audit auth branding channels license releases ; do
     echo "Downloading ${VENDOR_API}/v1/spec/$name.json"
