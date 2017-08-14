@@ -19,7 +19,7 @@ Before you are able to run this locally you need to have [Hugo installed](https:
     make SOURCE="https://api.staging.replicated.com/vendor" vendordocs
     ```
 
-4. Inside of the `themes/replicated-docs-theme` folder, run:
+4. Inside of the `themes/replicated-docs-theme` folder, run
     ```bash
     git init submodule
     ```
@@ -29,12 +29,12 @@ Before you are able to run this locally you need to have [Hugo installed](https:
     git submodule update
     ```
 
-5. Build the project
+5. Back in the root of the project, run
    ```bash
    make build
    ```
 
-6. Run the project
+6. And then run the project
    ```bash
    make serve
    ```
