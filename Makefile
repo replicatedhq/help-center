@@ -4,7 +4,7 @@ install:
 	yarn
 
 build:
-	hugo
+	hugo -v
 
 serve:
 	hugo serve
