@@ -1,3 +1,4 @@
+VENDOR_SWAGGER_SOURCE ?= "https://api.replicated.com/vendor"
 
 install:
 	yarn
@@ -36,9 +37,9 @@ vendordocs:
 	rm -f content/docs/reference/vendor-api.adoc
 	git checkout content/docs/reference/vendor-api/index.md
 	find . -name "*vendor-api*" -ls
-	VENDOR_API="${SOURCE}" ./vendor.sh
+	VENDOR_API="${VENDOR_SWAGGER_SOURCE}" ./vendor.sh
 
 setup:
 	mkdir -p java
-	curl -o java/swagger2markup-cli-1.0.0.jar http://central.maven.org/maven2/io/github/swagger2markup/swagger2markup-cli/1.0.0/swagger2markup-cli-1.0.0.jar
-	curl -o java/swagger2markup-1.0.0.jar http://central.maven.org/maven2/io/github/swagger2markup/swagger2markup/1.0.0/swagger2markup-1.0.0.jar
+	curl -o java/swagger2markup-cli-1.3.1.jar http://central.maven.org/maven2/io/github/swagger2markup/swagger2markup-cli/1.3.1/swagger2markup-cli-1.3.1.jar
+	curl -o java/swagger2markup-1.3.1.jar http://central.maven.org/maven2/io/github/swagger2markup/swagger2markup/1.3.1/swagger2markup-1.3.1.jar

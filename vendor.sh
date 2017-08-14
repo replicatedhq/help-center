@@ -55,7 +55,7 @@ mkdir -p content/docs/reference/vendor-api
 for name in apps audit auth branding channels license releases ; do
     echo "Downloading ${VENDOR_API}/v1/spec/$name.json"
     curl -o tmp_swagger.json ${VENDOR_API}/v1/spec/$name.json
-    java -cp java/swagger2markup-1.0.0.jar -jar java/swagger2markup-cli-1.0.0.jar convert -i tmp_swagger.json -f tmp_swagger
+    java -cp java/swagger2markup-1.3.1.jar -jar java/swagger2markup-cli-1.3.1.jar convert -i tmp_swagger.json -f tmp_swagger
     page_metadata $name
     OUTPUT_FILE="content/docs/reference/vendor-api/$name.adoc"
     cat <<EOM >$OUTPUT_FILE

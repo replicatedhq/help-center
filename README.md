@@ -16,7 +16,7 @@ Before you are able to run this locally you need to have [Hugo installed](https:
 3. Setup API docs
    ```bash
     make setup
-    make SOURCE="https://api.staging.replicated.com/vendor" vendordocs
+    make VENDOR_SWAGGER_SOURCE="https://api.staging.replicated.com/vendor" vendordocs
     ```
 
 4. Inside of the `themes/replicated-docs-theme` folder, run
