@@ -7,50 +7,48 @@ Before you are able to run this locally you need to have [Hugo installed](https:
    make install
    ```
 
-2. Install asciidoctor
-   ```bash
-   brew install git ruby
-   sudo gem install asciidoctor
-   ```
+2. Inside of the `themes/replicated-docs-theme` folder, run:
+    ```bash
+    git init submodule
+    ```
+    and then
 
-3. Setup API docs
-   ```bash
-   make setup
-   make SOURCE="https://api.staging.replicated.com/vendor" vendordocs
-   ```
+    ```bash
+    git submodule update
+    ```
 
-4. Build the project
+3. Back in the root of the project, run:
    ```bash
    make build
    ```
 
-5. Run the project
+4. And then run the project
    ```bash
    make serve
    ```
 
-6. In your browser navigate to `localhost:1313` to view the project.
+4. In your browser navigate to `localhost:1313` to view the project.
 
 ### Indexing Content
 
 Included in this project is the [hugo-algolia](https://github.com/10Dimensional/help-center) package, which crawls the /content folder of the site and indexes all the content. If you want to re-index the site and/or add new docs content, you can use the following commands:
 
 #### Index the site 
-This indexes the whole site and puts content into a single array.
+This command indexes the whole site and puts content into a single array.
 
 ```bash
 make index-site
 ```
 
 #### Index the site and send content to Algolia account
-This indexes the whole site and sends the array to Algolia.
+This command indexes the whole site and sends the array to Algolia.
 
 ```bash
 make index-and-send
 ```
 
 #### Index site w/ multiple indices 
-This command puts a `.md` file in an index depending on the `index` value specified in the front matter. 
+This command puts `.md` file content in an index depending on the `index` value specified in the front matter. 
 ```bash
 make index-multInd
 ```
