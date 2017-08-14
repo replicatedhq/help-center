@@ -7,19 +7,13 @@ Before you are able to run this locally you need to have [Hugo installed](https:
    make install
    ```
 
-2. Install asciidoctor
-    ```bash
-    brew install git ruby
-    sudo gem install asciidoctor
-    ```
-
-3. Setup API docs
+1. Setup API docs
    ```bash
     make setup
     make VENDOR_SWAGGER_SOURCE="https://api.staging.replicated.com/vendor" vendordocs
     ```
 
-4. Inside of the `themes/replicated-docs-theme` folder, run
+1. Inside of the `themes/replicated-docs-theme` folder, run
     ```bash
     git init submodule
     ```
@@ -29,17 +23,17 @@ Before you are able to run this locally you need to have [Hugo installed](https:
     git submodule update
     ```
 
-5. Back in the root of the project, run
+1. Back in the root of the project, run
    ```bash
    make build
    ```
 
-6. And then run the project
+1. And then run the project
    ```bash
    make serve
    ```
 
-7. In your browser navigate to `localhost:1313` to view the project.
+1. In your browser navigate to `localhost:1313` to view the project.
 
 ### Indexing Content
 
