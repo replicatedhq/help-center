@@ -7,27 +7,39 @@ Before you are able to run this locally you need to have [Hugo installed](https:
    make install
    ```
 
-2. Inside of the `themes/replicated-docs-theme` folder, run:
+2. Install asciidoctor
+    ```bash
+    brew install git ruby
+    sudo gem install asciidoctor
+    ```
+
+3. Setup API docs
+   ```bash
+    make setup
+    make SOURCE="https://api.staging.replicated.com/vendor" vendordocs
+    ```
+
+4. Inside of the `themes/replicated-docs-theme` folder, run:
     ```bash
     git init submodule
     ```
-    and then
 
+    and then
     ```bash
     git submodule update
     ```
 
-3. Back in the root of the project, run:
+5. Build the project
    ```bash
    make build
    ```
 
-4. And then run the project
+6. Run the project
    ```bash
    make serve
    ```
 
-4. In your browser navigate to `localhost:1313` to view the project.
+7. In your browser navigate to `localhost:1313` to view the project.
 
 ### Indexing Content
 
