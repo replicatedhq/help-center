@@ -34,7 +34,7 @@ index-partial-tags:
 	hugo-algolia -m 'tags' -p 'title, uri, tags, description' -i 'content/docs/**' -o 'data/docs/tags.json'
 
 vendordocs:
-	rm -f content/docs/reference/vendor-api.adoc
+	rm -f content/docs/reference/vendor-api.md
 	git checkout content/docs/reference/vendor-api/index.md
 	find . -name "*vendor-api*" -ls
 	VENDOR_API="${VENDOR_SWAGGER_SOURCE}" ./vendor.sh

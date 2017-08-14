@@ -3,6 +3,7 @@
 
 set -e
 
+rm -f content/docs/reference/vendor-api.md
 rm -f tmp_swagger.json tmp_swagger.md
 
 page_metadata() {
