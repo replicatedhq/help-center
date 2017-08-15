@@ -10,10 +10,10 @@ serve:
 	hugo serve
 
 index-site:
-	yarn index-multInd
+	yarn index-site
 
 index-and-send:
-	yarn index-and-send-multInd
+	yarn index-and-send
 
 vendordocs:
 	rm -f content/docs/reference/vendor-api.md
