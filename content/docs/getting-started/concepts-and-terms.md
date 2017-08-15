@@ -5,6 +5,7 @@ description: "The core concepts and terms used in these documents to describe th
 weight: "102"
 categories:  [ "Getting Started" ]
 tags: ""
+hideFromList: true
 index: "docs"
 ---
 
