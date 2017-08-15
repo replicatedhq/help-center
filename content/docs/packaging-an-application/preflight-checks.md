@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Preflight Checks"
 description: "A guide to implementing the Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
 weight: "213"
-categories: [ "Packaging" ]
+categories: [ "Packaging an Application" ]
 tags: [ "Application YAML", "Preflight Checks" ]
 index: "docs"
 ---

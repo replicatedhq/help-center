@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Installing Replicated 1.2"
 description: "How to install the legacy version of Replicated 1.2 via Deb and Yum packages."
-categories: [ "Distributing" ]
+categories: [ "Distributing an Application" ]
 index: "docs"
 ---
 

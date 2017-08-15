@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Add Nodes"
 description: "When a Replicated-orchestrated application is configured with a clustering strategy, additional nodes can be installed on remote instances to take part in the cluster."
 weight: "307"
-categories: [ "Distributing" ]
+categories: [ "Distributing an Application" ]
 index: "docs"
 ---
 

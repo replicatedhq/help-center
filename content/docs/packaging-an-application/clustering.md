@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Clustering"
 description: "An implementation guide for using the Replicated built in clustering functionality."
 weight: "208"
-categories: [ "Packaging" ]
+categories: [ "Packaging an Application" ]
 tags: [ "Application YAML", "Clusters" ]
 index: "docs"
 ---

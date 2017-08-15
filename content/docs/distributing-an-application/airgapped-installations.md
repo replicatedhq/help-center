@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Airgapped Installations"
 description: "The steps required of the end customer to install a Replicated application into an air gapped environment."
 index: "docs"
-categories: [ "Distributing" ]
+categories: [ "Distributing an Application" ]
 ---
 
 An "airgapped" environment is a network that has no path to inbound or outbound internet traffic at all.

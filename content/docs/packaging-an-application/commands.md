@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Commands"
 description: "The `cmds` section of the Replicated YAML allows you to leverage the power of external commands within your application configuration."
 weight: "209"
-categories: [ "Packaging" ]
+categories: [ "Packaging an Application" ]
 tags: [ "Application YAML" ]
 index: "docs"
 ---

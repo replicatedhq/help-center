@@ -3,7 +3,7 @@ date: "2017-07-11T00:00:00Z"
 title: "Docker Swarm"
 description: "Packaging a Docker Swarm application in Replicated"
 weight: "219"
-categories: [ "Packaging" ]
+categories: [ "Packaging an Application" ]
 tags: [ "Docker", "Swarm", "Schedulers" ]
 aliases: [
     "/docs/packaging-an-application/swarm/"

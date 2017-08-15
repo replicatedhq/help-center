@@ -4,7 +4,7 @@ title: "Supported Operating Systems"
 description: "View the supported operating systems"
 keywords:  "operating system, os"
 index: "docs"
-categories: [ "Distributing" ]
+categories: [ "Distributing an Application" ]
 ---
 
 Replicated supports Linux-based servers that can run current versions of Docker.  
