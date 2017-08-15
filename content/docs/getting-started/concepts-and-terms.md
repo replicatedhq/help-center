@@ -4,6 +4,7 @@ title: "Concepts and Terminology"
 description: "The core concepts and terms used in these documents to describe the Replicated functionality."
 weight: "102"
 categories:  [ "Getting Started" ]
+similar: ["docs/getting-started/get-started.md"]
 tags: ""
 index: "docs"
 ---
