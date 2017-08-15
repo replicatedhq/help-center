@@ -3,7 +3,7 @@ date: "2016-07-02T00:00:00Z"
 lastmod: "2016-07-02T00:00:00Z"
 title: "Custom Metrics"
 weight: "217"
-categories: [ "Packaging" ]
+categories: [ "Packaging an Application" ]
 tags: [ "Application YAML" ]
 index: "docs"
 ---

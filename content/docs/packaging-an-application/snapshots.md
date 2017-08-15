@@ -3,7 +3,7 @@ date: "2016-07-07T04:02:20Z"
 title: "Snapshots"
 description: "Guide to enabling application snapshots for backup and restore functionality."
 weight: "215"
-categories: [ "Packaging" ]
+categories: [ "Packaging an Application" ]
 tags: [ "Snapshots", "Application YAML" ]
 index: "docs"
 ---

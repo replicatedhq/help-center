@@ -4,7 +4,7 @@ title: "Installing Replicated on Kubernetes"
 description: "Instructions for installing Replicated on a Kubernetes cluster."
 keywords: "installing, kubernetes"
 index: "docs"
-categories: [ "Distributing" ]
+categories: [ "Distributing an Application" ]
 ---
 
 We distribute standard Kubernetes YAML that can be used to install Replicated onto an existing Kubernetes cluster.

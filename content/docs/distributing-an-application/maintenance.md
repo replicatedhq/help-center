@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Maintenance"
 description: "Maintenance processes to use after Replicated is installed"
 weight: "306"
-categories: [ "Distributing" ]
+categories: [ "Distributing an Application" ]
 index: "docs"
 ---
 

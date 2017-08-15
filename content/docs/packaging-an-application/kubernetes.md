@@ -3,7 +3,7 @@ date: "2017-06-16T00:00:00Z"
 title: "Kubernetes"
 description: "Packaging a Kubernetes application in Replicated"
 weight: "218"
-categories: [ "Packaging" ]
+categories: [ "Packaging an Application" ]
 tags: [ "Schedulers", "Kubernetes" ] 
 aliases: [
     "/kb/developer-resources/kubernetes-prerelease/"

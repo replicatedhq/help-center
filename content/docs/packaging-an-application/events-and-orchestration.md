@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Events and Orchestration"
 description: "The `events` section of the Replicated YAML allows application vendors to sequence and orchestrate containers based on events from other containers."
 weight: "207"
-categories: [ "Packaging" ]
+categories: [ "Packaging an Application" ]
 tags: [ "Application YAML" ]
 index: "docs"
 ---
