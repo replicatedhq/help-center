@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "hugo server",
-    "index-site": "hugo-algolia -wo -m",
+    "index-site": "hugo-algolia -m -id 'public/algoliaListola.json'",
     "index-and-send": "hugo-algolia -s -wo -m"
   },
   "dependencies": {
