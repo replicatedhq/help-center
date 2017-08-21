@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Support Bundle"
 description: "Installed instances can generate a support bundle with relevant logs and instance information."
-weight: "212"
+weight: "211"
 categories: [ "Packaging an Application" ]
 tags: [ "Support", "Application YAML" ]
 index: "docs"

@@ -3,7 +3,7 @@ date: "2016-07-01T00:00:00Z"
 lastmod: "2016-07-03T00:00:00Z"
 title: "Automate Install for Testing"
 weight: "999999"
-categories: [ "Knowledgebase", "Developer Resources" ]
+categories: [ "Developer Resources" ]
 index: "docs"
 ---
 

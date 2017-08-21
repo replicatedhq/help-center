@@ -4,6 +4,7 @@ title: "Supported Operating Systems"
 description: "View the supported operating systems"
 keywords:  "operating system, os"
 index: "docs"
+hideFromList: true
 categories: [ "Distributing an Application" ]
 ---
 

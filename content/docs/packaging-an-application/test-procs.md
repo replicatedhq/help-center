@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Test Procs"
 description: "Test Procs enable customers to easily test the validity of the unsaved configuration parameters they're entering during installation."
-weight: "205"
+weight: "204"
 categories: [ "Packaging an Application" ]
 tags: [ "Application YAML" ]
 index: "docs"

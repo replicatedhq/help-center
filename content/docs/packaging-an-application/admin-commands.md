@@ -2,10 +2,10 @@
 date: "2016-07-03T04:02:20Z"
 title: "Admin Commands"
 description: "Implementation guide for application vendors to provide customers with aliased CLI commands that can be performed in the containers across a cluster."
-weight: "211"
 categories: [ "Packaging an Application" ]
 tags: [ "CLI Commands", "Clusters" ]
 index: "docs"
+weight: "210"
 ---
 
 The `admin_commands` section allows you to define ad-hoc commands that can be executed inside a running container from the shell.

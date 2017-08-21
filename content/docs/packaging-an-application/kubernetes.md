@@ -1,6 +1,6 @@
 ---
 date: "2017-06-16T00:00:00Z"
-title: "Kubernetes"
+title: "Replicated on Kubernetes"
 description: "Packaging a Kubernetes application in Replicated"
 weight: "218"
 categories: [ "Packaging an Application" ]

@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Components And Containers"
 description: "The `components` section of the Replicated YAML defines how the containers will be created and started."
-weight: "206"
+weight: "205"
 categories: [ "Packaging an Application" ]
 tags: [ "Application YAML" ]
 index: "docs"

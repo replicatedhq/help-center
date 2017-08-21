@@ -8,13 +8,11 @@
   "license": "MIT",
   "scripts": {
     "start": "hugo server",
-    "index-site": "hugo-algolia -wo -m",
-    "index-and-send": "hugo-algolia -s -wo -m"
+    "index-site": "hugo-algolia -m",
+    "index-and-send": "hugo-algolia -s -m"
   },
   "dependencies": {
     "algoliasearch": "^3.24.1",
-    "hugo-algolia": "^1.1.4",
-    "striptags": "^3.0.1",
-    "toml": "^2.3.2"
+    "hugo-algolia": "^1.2.2"
   }
 }

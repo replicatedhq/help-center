@@ -3,7 +3,7 @@ date: "2016-08-01T00:00:00Z"
 lastmod: "2016-08-01T00:00:00Z"
 title: "Running Commands on the Host OS"
 weight: "999999"
-categories: [ "Knowledgebase", "Developer Resources" ]
+categories: [ "Developer Resources" ]
 index: "docs"
 ---
 
