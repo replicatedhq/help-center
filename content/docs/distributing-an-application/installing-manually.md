@@ -2,6 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Manually Installing Replicated"
 description: "Instructions for manually installing Replicated 2"
+hideFromList: true
 keywords: "installing, removing"
 categories: [ "Distributing an Application" ]
 ---

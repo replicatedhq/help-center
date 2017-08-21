@@ -3,7 +3,7 @@ date: "2016-07-22T00:00:00Z"
 lastmod: "2016-07-22T00:00:00Z"
 title: "Registries"
 weight: "999999"
-categories: [ "Knowledgebase", "Supporting Your Customers" ]
+categories: [ "Supporting Your Customers" ]
 index: "docs"
 ---
 

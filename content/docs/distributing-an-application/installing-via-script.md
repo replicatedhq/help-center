@@ -3,6 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Installing Replicated with the Easy Install Script"
 description: "Instructions for installing Replicated via the easy install script."
 keywords: "installing"
+hideFromList: true
 indedx: "docs"
 categories: [ "Distributing an Application" ]
 ---

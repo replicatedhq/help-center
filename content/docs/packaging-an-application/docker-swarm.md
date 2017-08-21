@@ -1,6 +1,6 @@
 ---
 date: "2017-07-11T00:00:00Z"
-title: "Docker Swarm"
+title: "Replicated with Docker Swarm"
 description: "Packaging a Docker Swarm application in Replicated"
 weight: "219"
 categories: [ "Packaging an Application" ]

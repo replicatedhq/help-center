@@ -3,7 +3,7 @@ date: "2016-10-05T00:00:00Z"
 lastmod: "2016-10-05T00:00:00Z"
 title: "Docker IPTables and the No-Chain Error"
 weight: "999999"
-categories: [ "Knowledgebase", "Developer Resources" ]
+categories: [ "Developer Resources" ]
 index: "docs"
 ---
 

@@ -3,6 +3,7 @@ date: "2017-03-16T00:00:00Z"
 title: "Installing Replicated on Kubernetes"
 description: "Instructions for installing Replicated on a Kubernetes cluster."
 keywords: "installing, kubernetes"
+hideFromList: true
 index: "docs"
 categories: [ "Distributing an Application" ]
 ---

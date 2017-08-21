@@ -1,28 +1,35 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Promote Releases"
-description: "The process for leveraging Replicated's release channel management functionality to stage versions and deliver updates to customers."
-weight: "303"
-categories: [ "Distributing an Application" ]
-index: "docs"
+title: "Upgrading Replicated 1.2"
+description: "A guide to installing the legacy version of Replicated 1.2.x via Deb and Yum packages."
+hideFromList: true
+categories: ["Distributing An Application"]
 ---
 
-Every Replicated license points to a Release Channel. When a license is installed, it will pull down and install the release that is currently at the top of its channel. It’s recommended to create customer licenses on the Stable channel, and only promote releases to Stable that are ready for all customers to install.
+{{< warning title="Old Version Warning" >}}
+The content in this document is for a previous version of Replicated. If you are looking
+for the current version, it is available at
+<a href="{{< baseurl >}}distributing-an-application/upgrading/">{{< baseurl >}}distributing-an-application/upgrading/</a>
+{{< /warning >}}
 
-Once an application is installed, the active instance can be updated by promoting a release to the channel that instance is licensed to (likely Stable).  Each instance will periodically check for new releases. When a new release is found, the Replicated installation will show a button that allows end customers managing the instance to read the release notes and install the update.
-A license only checks it’s own release channel.
+You may need to add the Replicated repository and GPG key to the package manager before
+running commands, see [Manual Installation](/distributing-an-application/installing/#manual-installation)
+for more details.
 
-To promote a release, you can use the [vendor portal](https://vendor.replicated.com/releases) and click the Promote button:
+### Ubuntu/Debian
+```shell
+apt-get update
+apt-get install replicated replicated-ui replicated-agent
+```
 
- ![Promote Button](/images/post-screens/promote-button.png)
+### CentOS/RHEL/Fedora
+```shell
+yum makecache
+yum update replicated replicated-ui replicated-agent
+```
 
-When a release is promoted it should be given a version label and detailed release notes. The release notes support markdown and will be shown to your customer. Additionally, each promoted release must be given a required status (required or not required).
+If you have additional nodes you will independently need to run the following on each of them.
 
-{{% page_notes %}}
-- Before you can create or install a license, a release must be promoted to the channel.
-- Update checking defaults to every 5 hours but can be configured by end customers.
-- It is possible to change a license value to have updates automatically installed when detected by the running instance.
-- License values are synced with the values set in the vendor portal at every update check.
-- Releases will not be editable after being promoted to a channel.
-- Release notes, version numbers, the required status may be edited after promotion by visiting the channel's history.
-{{% /page_notes %}}
+```shell
+curl -sSL https://get.replicated.com/agent | sudo sh
+```

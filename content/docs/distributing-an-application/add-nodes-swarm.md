@@ -4,8 +4,10 @@ title: "Adding Nodes To A Swarm Cluster"
 description: "Instructions for installing additional nodes with a Swarm cluster"
 keywords: "installing, swarm"
 index: "docs"
+hideFromList: true
 tags: ["Nodes", "Cluster"]
 categories: [ "Distributing an Application" ]
+similar: ["docs/distributing-an-application/add-nodes-replicated.md", "docs/distributing-an-application/add-nodes.md"]
 ---
 
 When it is necessary to add additional nodes to satisfy the scheduling requirements of an application, Replicated makes it easy for the end customer to add additional Swarm nodes on remote instances to run a distributed application.

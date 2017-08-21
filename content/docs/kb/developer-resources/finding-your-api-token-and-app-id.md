@@ -3,7 +3,7 @@ date: "2017-03-13T00:00:00Z"
 lastmod: "2017-03-13T00:00:00Z"
 title: "Finding Your API Token and App ID"
 weight: "999999"
-categories: [ "Knowledgebase", "Developer Resources" ]
+categories: [ "Developer Resources" ]
 index: "docs"
 ---
 

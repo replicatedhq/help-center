@@ -3,7 +3,7 @@ date: "2017-03-17T00:00:00Z"
 lastmod: "2017-03-17T00:00:00Z"
 title: "Devicemapper Warning"
 weight: "999999"
-categories: [ "Knowledgebase", "Developer Resources" ]
+categories: [ "Developer Resources" ]
 index: "docs"
 ---
 
