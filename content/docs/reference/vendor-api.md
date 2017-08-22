@@ -1,8 +1,8 @@
 ---
 date: "2016-07-03T04:12:27Z"
-type: "swagger"
-title: "Replicated Vendor API Reference"
-weight: "503"
+title: "Vendor API"
+description: "The Vendor API is available for integrating Replicated into your business workflows, such as automating your continuous integration pipeline or customer license creation."
+weight: "501"
 categories: [ "Reference" ]
+url: "categories/vendor-api"
 ---
-

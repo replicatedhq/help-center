@@ -3,7 +3,7 @@ date: "2016-12-01T00:00:00Z"
 lastmod: "2016-12-01T00:00:00Z"
 title: "Manage Custom License Fields"
 weight: "999999"
-categories: [ "Knowledgebase", "Developer Resources" ]
+categories: [ "Developer Resources" ]
 index: "docs"
 ---
 

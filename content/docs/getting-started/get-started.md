@@ -6,6 +6,7 @@ weight: "101"
 categories: [ "Getting Started" ]
 tags: [ "Replicated Vendor" ]
 index: "docs"
+hideFromList: true
 ---
 
 Replicated is a platform to deploy containerized SaaS applications behind a firewall (ie private cloud, private

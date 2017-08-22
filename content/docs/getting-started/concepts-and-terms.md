@@ -6,7 +6,6 @@ weight: "102"
 categories:  [ "Getting Started" ]
 similar: ["docs/getting-started/get-started.md"]
 tags: ""
-hideFromList: true
 index: "docs"
 ---
 

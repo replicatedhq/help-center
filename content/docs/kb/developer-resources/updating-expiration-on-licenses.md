@@ -3,7 +3,7 @@ date: "2017-03-13T00:00:00Z"
 lastmod: "2017-03-13T00:00:00Z"
 title: "Updating Expiration on Licenses"
 weight: "999999"
-categories: [ "Knowledgebase", "Developer Resources" ]
+categories: [ "Developer Resources" ]
 index: "docs"
 ---
 

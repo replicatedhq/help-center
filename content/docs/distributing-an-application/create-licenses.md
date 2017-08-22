@@ -1,63 +1,43 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Airgapped Installations"
-description: "The steps required of the end customer to install a Replicated application into an air gapped environment."
+title: "Create Customers and Licenses"
+description: "Details on the options available to vendors when creating a license for an end customer's upcoming installation."
+weight: "300"
 categories: [ "Distributing an Application" ]
-index: "docs"
-weight: "302"
 ---
 
-An "airgapped" environment is a network that has no path to inbound or outbound internet traffic at all.
-Some enterprise customers require that you ship a package they can install in their airgapped environment.
+Each customer you deploy to via Replicated will need a separate license file for their installation. This license file identifies the customer & application during the installation and update processes. A customer license is created in the Customers section of the [vendor portal](https://vendor.replicated.com/customers). You can manage the values and properties of that customer and license, including custom license fields, by selecting an individual customer.
 
-Replicated supports this type of installation, using the following steps:
+If you are looking to create or manage custom license fields you can do so in the License Fields section of the [vendor portal](https://vendor.replicated.com/) or via the [Vendor License API](/reference/vendor-api/license/). License values are used by Replicated to enable/disable various functionality, many of the values are also available in the on-prem instance via the [license integration API](https://replicated.readme.io/docs/license-api).
 
-## Prepare the environment
-The customer will be responsible for delivering a server running a supported version of Docker. Replicated
-supports Docker from {{< docker_version_minimum >}} to {{< docker_version_default >}}. We recommend that you use the latest version of Docker available in this range for your operating system.
+## Name (Required)
+The name of the customer to whom this license is assigned.
 
-The Replicated airgap installation script does not install docker-engine. We've written a
-guide with some tips that might help get [Docker installed into air gapped machines](/docs/kb/supporting-your-customers/installing-docker-in-airgapped/) with various operating systems.
+## Channel (Required)
+When you create a license you'll need to assign it to at least one release channel.  Stable channel is intended to be used for production installations.  Unstable and Beta channels are intended for internal testing. [More about release channel management](/getting-started/manage-releases/).
 
-## Install Replicated
-Replicated can be installed by downloading the latest release from
-https://s3.amazonaws.com/replicated-airgap-work/replicated.tar.gz and running the following commands:
+When a license is assigned to multiple channels, the customer will be able to select the channel at install time and later change the release channel in the management console.  For airgapped installs, the channel can be selected at download time only.
 
-```shell
-tar xzvf replicated.tar.gz
-cat ./install.sh | sudo bash -s airgap
-```
+## Expiration Date
+When you create a license you can specify how the license will behave when it expires.  The policy can ignore expiration, allow a running application to continue but prevent updates, or stop the running application and prevent updates.  License expiration to stop running the application is supported in Replicated 2.1.0 or newer.
 
-### Swarm Mode
+## Update Policy
+By default, licenses will be set to manual updates. This means that the end customer will need to read the release notes and [click a button to apply the update](https://blog.replicated.com/2015/12/31/1-click-update-experience/). It is possible to turn on automatic updates, which will apply any update when it is detected.
 
-{{< version version="2.8.0" >}}
-```shell
-tar xzvf replicated.tar.gz
-cat ./swarm-init.sh | sudo bash -s airgap
-```
+## Clustered Installations Enabled
+By default, licenses will be set to disable clustered installations. This will prevent the "[add node](/distributing-an-application/add-nodes/)" button from appearing on the Cluster tab of the on-prem admin console.
 
-## Download & Rename Airgap Package
-On the license properties page in the vendor portal, enable Airgap installations for this license and copy the
-download link. This URL is designed to be delivered to that customer. They will use this link to download
-current airgap packages when you promote a release. When they download new airgap packages to their server,
-it is important that your customer set the `--trust-server-names` and `--content-disposition` flags for `wget`
-or rename the file to something ending with `.airgap`.
+## Airgap Download Enabled
+By default, licenses will be set to disable [airgap installations](https://blog.replicated.com/2016/05/24/airgapped-installation-support/). By enabling this feature, the actual `.rli` file will have license meta data embedded in it and must be redownloaded.
 
-Your customer will need the `.airgap` package and the normal Replicated license (.rli) file. Be sure to download
-the license file *after* enabling the airgap feature on the license. Airgap-enabled licenses have more metadata
-embedded than non-airgap licenses. Airgap enabled licenses can be used to install in non-airgap mode, but
-non-airgap licenses cannot be used to install in airgap mode.
+## Require Activation
+The license file becomes the key to download & install your application. For this reason, it is wise to enable the [license activation feature](/kb/supporting-your-customers/two-factor-licenses) on all licenses. This will add a simple step to your customer's installation experience, where the email you specify will be sent an activation code required to proceed past step 2 in the process.
 
-## Install Airgap Package
-Next, navigate to the management console at https://<server_ip>:8800. Accept the self signed certificate, pass
-the preflight checks, and you will see the license upload screen. Upload the [airgap enabled license](/docs/distributing-an-application/create-licenses/#airgap-download-enabled) and then select the airgapped install option.
-You will have to provide a path to the .airgap file and upload the .rli file here.
+## Enable Console LDAP Authentication
+By default, licenses will be set to enable the admin to setup LDAP/AD as the method of authenticating into the on-prem admin console. By turning this feature off, the end customer will only see the options to keep authentication anonymous or to create a shared password for the admin console.
 
-Once this screen is completed, Replicated runs as normal. In the :8800/console/settings page, there is a section
-to set the Airgap mode settings. You can install updates and sync the license by downloading new versions of these,
-renaming them with the .airgap extension and placing them in the locations specified on the /console/settings
-page.
+## License Type (Required)
+It is important to identify the type of license that is being created, `development`, `trial` or `paid`. Development licenses are designed to be used internally by the development team for testing and integration. Trial licenses should be provided to customers who are on 2-4 week trials of your software. Paid licenses identify the end customer as a paying customer (for which additional information can be provided.)
 
-## Adding Additional Nodes
-
-In order to add additional nodes to your cluster, just navigate to the Cluster page of the Admin Console, click the "Add Node" button, and follow the instructions there. For more detailed instructions see the [add nodes](/docs/distributing-an-application/add-nodes/) page of the docs.
+## Custom License Fields
+[Custom license fields](/kb/developer-resources/custom-license-fields) can be set for all licenses. This is useful if specific customer information might change from customer to customer. These fields can be read from both the [template functions](/packaging-an-application/template-functions) as well as from the [Integetration API](/reference/integration-api). Examples of custom license fields are "seats" to limit the number of active users or "hostname" in order to specify the domain that the application can be run on.

@@ -2,7 +2,7 @@
 date: "2016-07-03T04:12:27Z"
 title: "Replicated CLI Reference"
 description: "Generated documentation on the default Replicated CLI commands available for all Replicated installed instances."
-weight: "592"
+weight: "504"
 categories: [ "Reference" ]
 index: "docs"
 ---

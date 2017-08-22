@@ -3,7 +3,7 @@ date: "2016-07-22T00:00:00Z"
 lastmod: "2016-07-22T00:00:00Z"
 title: "Docker Links"
 weight: "999999"
-categories: [ "Knowledgebase", "Developer Resources" ]
+categories: [ "Developer Resources" ]
 index: "docs"
 ---
 

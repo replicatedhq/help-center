@@ -3,7 +3,7 @@ date: "2016-07-01T00:00:00Z"
 lastmod: "2016-07-01T00:00:00Z"
 title: "Zero Downtime Backups with Replicated (Redis)"
 weight: "999999"
-categories: [ "Knowledgebase", "Developer Resources" ]
+categories: [ "Developer Resources" ]
 index: "docs"
 ---
 

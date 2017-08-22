@@ -3,7 +3,7 @@ date: "2017-06-12T00:00:00Z"
 lastmod: "2017-06-12T00:00:00Z"
 title: "Multi-channel Licenses"
 weight: "999999"
-categories: [ "Knowledgebase", "Supporting Your Customers" ]
+categories: [ "Supporting Your Customers" ]
 index: "docs"
 ---
 

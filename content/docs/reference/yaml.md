@@ -2,7 +2,7 @@
 date: "2016-07-03T04:12:27Z"
 title: "Replicated YAML Reference"
 description: "Generated documentation for the Replicated YAML spec."
-weight: "590"
+weight: "503"
 categories: [ "Reference" ]
 index: "docs"
 ---

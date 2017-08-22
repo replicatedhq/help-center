@@ -3,7 +3,7 @@ date: "2017-06-29T00:00:00Z"
 lastmod: "2017-06-29T00:00:00Z"
 title: "Docker Enterprise Edition and Replicated on RHEL"
 weight: "999999"
-categories: [ "Knowledgebase", "Supporting Your Customers" ]
+categories: [ "Supporting Your Customers" ]
 index: "docs"
 ---
 
