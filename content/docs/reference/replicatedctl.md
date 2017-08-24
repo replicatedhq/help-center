@@ -4,6 +4,6 @@ title: "replicatedctl Reference"
 description: "Documentation for the replicatedctl command line"
 weight: "505"
 categories: [ "Reference" ]
-url: "categories/replicatedctl"
+url: "docs/reference/replicatedctl/"
 ---
 

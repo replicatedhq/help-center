@@ -1,9 +1,6 @@
 ---
 layout: "schedulers"
 title: "Replicated Scheduler Types"
-<<<<<<< HEAD
-uri: "schedulers/"
-=======
 schedulerTypes: 
   - title: "Replicated scheduler"
     type: "replicated"
@@ -48,5 +45,4 @@ featureTableItems:
   - four:
     name: "Airgap support"
     support: ["greenCheck", "grayFail", "greenCheck"]
->>>>>>> c91630ca0126690c41bb2aaad580dacb88f525a3
 ---
