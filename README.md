@@ -39,7 +39,7 @@ Before you are able to run this locally you need to have [Hugo installed](https:
 
 Included in this project is the [hugo-algolia](https://github.com/10Dimensional/hugo-algolia) package, which crawls the /content folder of the site and indexes all the content. If you want to re-index the site and/or send new docs content to Algolia, you can use the following commands:
 
-#### Index the site 
+#### Index the site
 This command indexes the whole site and puts content into a single array.
 
 ```bash
