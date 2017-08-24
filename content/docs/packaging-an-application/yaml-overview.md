@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "YAML Overview"
 description: "An overview of the various sections of the Replicated YAML."
-weight: "200"
+weight: "201"
 categories: [ "Packaging an Application" ]
 tags: [ "Application YAML", Schedulers, "Snapshots", "Preflight Checks" ]
 index: "docs"
