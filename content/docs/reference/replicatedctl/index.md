@@ -4,7 +4,6 @@ title: "replicatedctl"
 description: "This section of the docs explains how to use the replicatedctl"
 weight: "505"
 type: "docs"
-layout: "special"
 hideSection: true
 ---
 
