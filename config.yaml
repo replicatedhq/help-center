@@ -6,6 +6,8 @@ theme: "replicated-docs-theme"
 metadataformat: "yaml"
 canonifyurls: true
 description: "Documentation and knowledgebase for Replicated."
+googleAnalytics: "UA-61084834-1"
+
 Params:
   author: "Replicated"
   copyright: "Replicated, Inc"
