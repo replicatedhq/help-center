@@ -1,6 +1,6 @@
 ---
 date: "2017-04-11T00:00:00Z"
-title: "Choosing A Scheduler"
+title: "Choosing a Scheduler"
 description: "Schedulers"
 weight: "104"
 categories: [ "Getting Started" ]

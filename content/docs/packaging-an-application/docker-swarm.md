@@ -11,7 +11,7 @@ aliases: [
 index: "docs"
 ---
 
-If your application is defined as a Docker Compose version 3 or 3.1 yaml file, Replicated can provide the same standard functionality deploying your application via the [Docker Swarm](https://docs.docker.com/engine/swarm/) scheduler as a [Docker Stack](https://docs.docker.com/docker-cloud/apps/stacks/) as of Replicated {{< version version="2.7.0" >}}. Using the Swarm scheduler, you can use all of the Swarm functionality including overlay networks, DNS service discovery, Docker secrets and more. To see a full example, check out the [Voting App example](/examples/swarm-votingapp).
+If your application is defined as a Docker Compose version 3 or 3.1 yaml file, Replicated can provide the same standard functionality deploying your application via the [Docker Swarm](https://docs.docker.com/engine/swarm/) scheduler as a [Docker Stack](https://docs.docker.com/docker-cloud/apps/stacks/) as of Replicated {{< version version="2.7.0" >}}. Using the Swarm scheduler, you can use all of the Swarm functionality including overlay networks, DNS service discovery, Docker secrets and more. To see a full example, check out the [Voting App example](/docs/examples/swarm-votingapp).
 
 ## Differences from the Replicated scheduler
 
@@ -20,7 +20,7 @@ Like the standard Replicated scheduler, when shipping an application using Swarm
 Some of the standard Replicated features operate differently or are not supported on Swarm:
 
 ### New YAML format
-The Swarm scheduler requires a different YAML format which combines some of the Replicated YAML with your own  Docker Compose V3 YAML. For an example of how this is done see here: [Swarm Voting App](/examples/swarm-votingapp/) which is utilizing the `kind:` tag to designate Replicated and Swarm YAML sections.
+The Swarm scheduler requires a different YAML format which combines some of the Replicated YAML with your own  Docker Compose V3 YAML. For an example of how this is done see here: [Swarm Voting App](/docs/examples/swarm-votingapp/) which is utilizing the `kind:` tag to designate Replicated and Swarm YAML sections.
 ```
 ---
 # kind: scheduler-swarm
@@ -28,10 +28,10 @@ version: "3.1"
 ```
 
 ### External Private Images
-External private images are not supported currently. Replicated hosts a [private registry](/getting-started/replicated-private-registry) that you can use to ship private images. Replicated also supports public (unauthenticated) images in any registry.
+External private images are not supported currently. Replicated hosts a [private registry](/docs/getting-started/replicated-private-registry) that you can use to ship private images. Replicated also supports public (unauthenticated) images in any registry.
 
 ### Online and Airgapped Installations
-Online installs should not use the standard install script, but instead use the [Swarm installation script](/distributing-an-application/installing-with-swarm/). Airgapped installations work as expected when running in swarm mode. All images included in your swarm application must be specified in the new `images` section of your YAML in order to be included in the airgap bundle your customer will download. See below for an example.
+Online installs should not use the standard install script, but instead use the [Swarm installation script](/docs/distributing-an-application/installing-with-swarm/). Airgapped installations work as expected when running in swarm mode. All images included in your swarm application must be specified in the new `images` section of your YAML in order to be included in the airgap bundle your customer will download. See below for an example.
 
 ```yaml
 images:
@@ -69,16 +69,16 @@ admin_commands:
 ```
 
 ### Dashboard Metrics
-When running Replicated in Swarm mode, the standard statsd endpoint is still running. The only difference here is that the standard CPU and Memory usage graphs will not be available and will be included in an upcoming release. You can use the [custom metrics](/packaging-an-application/custom-metrics) feature to define you own application-specific metrics to show on the admin console dashboard.
+When running Replicated in Swarm mode, the standard statsd endpoint is still running. The only difference here is that the standard CPU and Memory usage graphs will not be available and will be included in an upcoming release. You can use the [custom metrics](/docs/packaging-an-application/custom-metrics) feature to define you own application-specific metrics to show on the admin console dashboard.
 
 ### Ready State/Health Checks
 Replicated will consider the application running when all replicas of the Swarm services are running. Ready state functionality is not currently supported when running in Swarm mode. This functionality will be included in an upcoming release.
 
 ### Template Functions
-There are some additional [template functions](/packaging-an-application/template-functions#swarm) available when running in Swarm mode.
+There are some additional [template functions](/docs/packaging-an-application/template-functions#swarm) available when running in Swarm mode.
 
 ### Secrets
-Replicated supports secrets through the use of [template functions](/packaging-an-application/template-functions/). It is possible to request a secret from the user using a combination of config settings and the `ConfigOption` [template function](/packaging-an-application/template-functions/#configoption). For more information on configuring the replicated settings screen see the [docs](/packaging-an-application/config-screen/) on customizing the Admin Console settings page. See below for an example of creating a secret in your application.
+Replicated supports secrets through the use of [template functions](/docs/packaging-an-application/template-functions/). It is possible to request a secret from the user using a combination of config settings and the `ConfigOption` [template function](/docs/packaging-an-application/template-functions/#configoption). For more information on configuring the replicated settings screen see the [docs](/docs/packaging-an-application/config-screen/) on customizing the Admin Console settings page. See below for an example of creating a secret in your application.
 
 ```yaml
 # kind: replicated

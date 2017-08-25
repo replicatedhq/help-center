@@ -7,7 +7,7 @@ categories: [ "Developer Resources" ]
 index: "docs"
 ---
 
-To interact with the [vendor API](/reference/vendor-api/)
+To interact with the [vendor API](https://replicated-vendor-api.readme.io/v1.0/reference)
 (anything that is available in the vendor web portal is available in the API) you’ll need to create API tokens.  API tokens identify your team and depending on your needs the API token can be read or read/write.  Using the API you can automate most of your development and license issuing workflows.
 
 After you have created your API token use it in the `Authorization` header for vendor API calls.

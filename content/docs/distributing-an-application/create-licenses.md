@@ -14,7 +14,7 @@ If you are looking to create or manage custom license fields you can do so in th
 The name of the customer to whom this license is assigned.
 
 ## Channel (Required)
-When you create a license you'll need to assign it to at least one release channel.  Stable channel is intended to be used for production installations.  Unstable and Beta channels are intended for internal testing. [More about release channel management](/getting-started/manage-releases/).
+When you create a license you'll need to assign it to at least one release channel.  Stable channel is intended to be used for production installations.  Unstable and Beta channels are intended for internal testing. [More about release channel management](/docs/getting-started/manage-releases/).
 
 When a license is assigned to multiple channels, the customer will be able to select the channel at install time and later change the release channel in the management console.  For airgapped installs, the channel can be selected at download time only.
 
@@ -25,13 +25,13 @@ When you create a license you can specify how the license will behave when it ex
 By default, licenses will be set to manual updates. This means that the end customer will need to read the release notes and [click a button to apply the update](https://blog.replicated.com/2015/12/31/1-click-update-experience/). It is possible to turn on automatic updates, which will apply any update when it is detected.
 
 ## Clustered Installations Enabled
-By default, licenses will be set to disable clustered installations. This will prevent the "[add node](/distributing-an-application/add-nodes/)" button from appearing on the Cluster tab of the on-prem admin console.
+By default, licenses will be set to disable clustered installations. This will prevent the "[add node](/docs/distributing-an-application/add-nodes/)" button from appearing on the Cluster tab of the on-prem admin console.
 
 ## Airgap Download Enabled
 By default, licenses will be set to disable [airgap installations](https://blog.replicated.com/2016/05/24/airgapped-installation-support/). By enabling this feature, the actual `.rli` file will have license meta data embedded in it and must be redownloaded.
 
 ## Require Activation
-The license file becomes the key to download & install your application. For this reason, it is wise to enable the [license activation feature](/kb/supporting-your-customers/two-factor-licenses) on all licenses. This will add a simple step to your customer's installation experience, where the email you specify will be sent an activation code required to proceed past step 2 in the process.
+The license file becomes the key to download & install your application. For this reason, it is wise to enable the [license activation feature](/docs/kb/supporting-your-customers/two-factor-licenses) on all licenses. This will add a simple step to your customer's installation experience, where the email you specify will be sent an activation code required to proceed past step 2 in the process.
 
 ## Enable Console LDAP Authentication
 By default, licenses will be set to enable the admin to setup LDAP/AD as the method of authenticating into the on-prem admin console. By turning this feature off, the end customer will only see the options to keep authentication anonymous or to create a shared password for the admin console.
@@ -40,4 +40,4 @@ By default, licenses will be set to enable the admin to setup LDAP/AD as the met
 It is important to identify the type of license that is being created, `development`, `trial` or `paid`. Development licenses are designed to be used internally by the development team for testing and integration. Trial licenses should be provided to customers who are on 2-4 week trials of your software. Paid licenses identify the end customer as a paying customer (for which additional information can be provided.)
 
 ## Custom License Fields
-[Custom license fields](/kb/developer-resources/custom-license-fields) can be set for all licenses. This is useful if specific customer information might change from customer to customer. These fields can be read from both the [template functions](/packaging-an-application/template-functions) as well as from the [Integetration API](/reference/integration-api). Examples of custom license fields are "seats" to limit the number of active users or "hostname" in order to specify the domain that the application can be run on.
+[Custom license fields](/docs/kb/developer-resources/custom-license-fields) can be set for all licenses. This is useful if specific customer information might change from customer to customer. These fields can be read from both the [template functions](/docs/packaging-an-application/template-functions) as well as from the [Integetration API](/categories/integration-api). Examples of custom license fields are "seats" to limit the number of active users or "hostname" in order to specify the domain that the application can be run on.
