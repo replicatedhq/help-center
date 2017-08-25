@@ -1,0 +1,14 @@
+machine:
+  environment:
+    PROJECT_NAME: help-center
+    PROJECT_ORG: replicatedhq
+test:
+  override:
+    - deploy/pass.sh
+deployment:
+  docker:
+    branch: master
+    owner: replicatedhq
+    commands:
+      - pip install boto
+      - python deploy/deploy.py
