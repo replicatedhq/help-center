@@ -30,8 +30,8 @@ version: "3.1"
 ### External Private Images
 External private images are not supported currently. Replicated hosts a [private registry](/docs/getting-started/replicated-private-registry) that you can use to ship private images. Replicated also supports public (unauthenticated) images in any registry.
 
-### Airgapped Installations
-Airgapped installations work as expected when running in swarm mode. All images included in your swarm application must be specified in the new `images` section of your YAML in order to be included in the airgap bundle your customer will download. See below for an example.
+### Online and Airgapped Installations
+Online installs should not use the standard install script, but instead use the [Swarm installation script](/docs/distributing-an-application/installing-with-swarm/). Airgapped installations work as expected when running in swarm mode. All images included in your swarm application must be specified in the new `images` section of your YAML in order to be included in the airgap bundle your customer will download. See below for an example.
 
 ```yaml
 images:
@@ -113,3 +113,6 @@ secrets:
   my_secret:
     external: true
 ```
+
+### Notes:
+The `config_files` tag is not supported when running in Swarm mode. Please see the __Secrets__ section for details on how to integrate user-supplied information into your containers via the Docker Secrets feature.

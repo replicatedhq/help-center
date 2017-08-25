@@ -15,7 +15,7 @@ First we must locate and download the desired package of Docker from one of the 
 
 *Note: Some distributions do not support newer versions of Docker, Replicated will continue to support a minimum 
 1.7.1 version of Docker. We recommend that your customers install the latest 
-[Replicated supported](/distributing-an-application/airgapped-installations/#prepare-the-environment) version of 
+[Replicated supported](/docs/distributing-an-application/airgapped-installations/#prepare-the-environment) version of 
 Docker, see the table below.*
 
 | OS | Highest Docker Version Supported in Replicated |

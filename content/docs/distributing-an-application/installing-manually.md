@@ -18,6 +18,7 @@ We recommend Docker version {{< docker_version_default >}}.  Refer to the Docker
 ```shell
 export DOCKER_HOST_IP=172.17.0.1  # Set this appropriately to docker0 address
 export LOCAL_ADDRESS=10.240.0.2  # Set this to the internal address of the server (usually eth0, but not 127.0.0.1)
+export DAEMON_TOKEN="$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)" # Create value for $DAEMON_TOKEN
 
 echo 'alias replicated="sudo docker exec -it replicated replicated"' > /etc/replicated.alias
 
@@ -32,6 +33,7 @@ docker run -d --name=replicated \
         -v /etc:/host/etc:ro \
         -e DOCKER_HOST_IP=$DOCKER_HOST_IP \
         -e LOCAL_ADDRESS=$LOCAL_ADDRESS \
+        -e DAEMON_TOKEN=$DAEMON_TOKEN \ 
         quay.io/replicated/replicated:latest
 
 docker run -d --name=replicated-ui \
@@ -46,7 +48,7 @@ docker run -d --name=replicated-ui \
 
 ### 4. Run Operator Container
 1. Click on the Cluster tab (:8800/cluster)  
-![Cluster](/images/post-screens/manual-install-2.x/click-cluster.png)
+![Cluster](/static/manual-install-2.x/click-cluster.png)
 1. Click the Add Node button  
 1. Select Docker Run option  
 1. Copy the command from the text area below  
@@ -57,7 +59,7 @@ At this point, the new node should show up on the Cluster page.
 ### 4. Start the Application
 1. Click on the Dashboard tab (:8800/dashboard)  
 1. Click the Start Now button  
-![Start Now](/images/post-screens/manual-install-2.x/start-now.png)
+![Start Now](/static/manual-install-2.x/start-now.png)
 
 When first launching there may be no "Start Now" button.  This is because Replicated is still pulling application images. If this is the case, then just wait for the pull to finish.
 

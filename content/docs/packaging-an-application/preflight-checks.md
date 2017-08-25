@@ -36,7 +36,7 @@ host_requirements:
   cpu_cores: 2
   cpu_mhz: 2400
   memory: 8GB
-  disk_space: 8GB
+  disk_space: 80GB
   replicated_version: ">=2.3.0 <2.4.1"
 ```
 
@@ -77,7 +77,7 @@ components:
 Replicated enforces these requirements and will not allow the customer to start the application without either meeting these requirements or
 dismissing the warnings. Upon dismissing preflight warnings, an entry will be recorded in the on-premise audit log.
 
-![Preflight Checks Screenshot](/images/post-screens/preflight-checks.png)
+![Preflight Checks Screenshot](/static/preflight-checks.png)
 
 {{% page_notes %}}
 - `min_disk_space` does not guarantee free space, it refers to the disk size mounted at the specified location.

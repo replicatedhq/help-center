@@ -9,7 +9,7 @@ index: "docs"
 
 When you are creating documentation for your customers to install your application via 
 Replicated, we always recommend starting with our [official installation instructions]
-(/distributing-an-application/installing/). However, it can be helpful to 
+(/docs/distributing-an-application/installing/). However, it can be helpful to 
 see what the installation instructions of other customers look like today:
 
 [GetElk is an example app](/docs/examples/getelk/) that we created with open sourced YAML and components.

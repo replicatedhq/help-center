@@ -10,7 +10,7 @@ index: "docs"
 As continuous integration and continuous deployment (CI/CD) processes have become common
 place, rapidly iterating on your software has become a necessity to enable your development
 team to deliver quickly and reliably. When shipping enterprise versions through Replicated,
-the [Vendor API](https://support.replicated.com/hc/en-us/sections/203731147) provides
+the [Vendor API](https://replicated-vendor-api.readme.io/v1.0/reference) provides
 methods to connect an existing CI/CD workflow to your on-prem installations.
 
 If you plan to ship frequent releases to on-prem installations, you should make sure your

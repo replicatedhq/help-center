@@ -17,7 +17,7 @@ the unstable channel.
 
 You should already have an API Token from the vendor site, and you should know the target App ID and Channel ID.
 For details on how to get the App ID and Channel ID programmatically, check out the
-[Vendor API documentation](/reference/vendor-api/). These values will not change and should be supplied as static
+[Vendor API documentation](https://replicated-vendor-api.readme.io/v1.0/reference). These values will not change and should be supplied as static
 values to your deployment script.
 
 Next, you should have the YML that you want to promote. One common method to generate this is to store the YML with
@@ -26,7 +26,7 @@ generate a new YAML programmatically.
 
 ## Create a new release
 
-First, we will create a [new release](/reference/vendor-api/) with the current YAML. This release will not be
+First, we will create a [new release](https://replicated-vendor-api.readme.io/v1.0/reference#release) with the current YAML. This release will not be
 connected to your Channel ID at all; we are simply creating a release in your app that can be promoted later. T
 his can be done with a single POST:
 
@@ -43,7 +43,7 @@ the unique ID for the release you are creating. It will be required in the next 
 
 ## Update the release
 
-Next, we want to [put our new YML into this release](/reference/vendor-api/). This is accomplished with a single PUT:
+Next, we want to [put our new YML into this release](https://replicated-vendor-api.readme.io/v1.0/reference#release). This is accomplished with a single PUT:
 
 ```bash
 curl -X PUT \
@@ -58,7 +58,7 @@ in the YML, a detailed message will be returned.
 
 ## Promote the release
 
-Finally, we want to [promote this release](/reference/vendor-api/) to the channel. This will make it immediately
+Finally, we want to [promote this release](https://replicated-vendor-api.readme.io/v1.0/reference#promotereleaseproperties-1) to the channel. This will make it immediately
 available to any installation of a license from that channel. We recommend doing this for the Unstable or dev/test
 channels only at this time. Promoting the release is a single POST:
 
