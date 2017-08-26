@@ -40,7 +40,7 @@ recommended version). This also requires a 64-bit distribution with a kernel min
 ## Easy Installation
 We provide an easy-to-use one-line installation process (via shell script) which will
 detect your OS, ask a few questions and install the Replicated components for you
-including docker-engine. More details on the [installation script](http://blog.replicated.com/2015/12/03/enhanced-installation-script/):
+including docker-engine. More details on the [installation script](http://blog.replicated.com/enhanced-installation-script/):
 
 ### With Timeout Prompts
 ```shell

@@ -198,4 +198,4 @@ Setting labels can be customized if needed. However, setting names must remain e
 Note the use of the LdapCopyAuthFrom function. This is optional, but when LDAP is used to secure the Replicated console, settings entered on that screen will be copied as default values.
 
 ## Identity API
-See [Identity API](/reference/integration-api) for information on how to authenticate and sync with LDAP server.
+See [Identity API](/docs/reference/integration-api) for information on how to authenticate and sync with LDAP server.

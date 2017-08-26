@@ -17,7 +17,7 @@ obviously don't want this, but the customer environment is defaulting to deny ev
 
 We want to help you avoid this problem on the next installation by clearly communicating
 this requirement to your customers. Most
-[installation documentation](https://support.replicated.com/hc/en-us/articles/216652467-Customer-Facing-Installation-Instructions)
+[installation documentation](/docs/kb/supporting-your-customers/customer-install-instructions/)
 lists the ports that must be opened between the users and the server network, but not
 internally. A common approach is to list the installation requirements like this:
 
@@ -88,15 +88,15 @@ It's almost always iptables.
 On one recent troubleshooting session, the customer didn't know if iptables might be causing the
 problem. So we decided to test connectivity on docker0. It went something like this:
 
-**Customer**: The app won't start. It says “Error waiting for ports to enter listening state”.  
-**Vendor**: Can you send us a support bundle?  
-*[pause for time to examine support bundle]*  
-**Vendor**: Ok, I see that our rails app can't connect to our MongoDB container. What's the ip address of the docker0 interface on this server?  
-**Customer**: echo $(ip addr | grep docker0 -A5 | grep "inet " | head -n1 | cut -d "" -f3,2 | awk '{ print $2}' | cut -d "/" -f1,1) says it's 172.17.0.5.  
-**Vendor**: Uh, great? Can you try telnet 172.17.0.5 27017?  
-**Customer**: It connects. MongoDB is definitely listening.  
-**Vendor**: Ok, can you try to connect from inside a container too? Run docker run -it ubuntu /bin/bash and you'll get a # prompt. Run the same telnet command in there.  
-**Customer**: It cannot connect from there. Ah. Let me edit my iptables ruleset.  
+**Customer**: The app won't start. It says “Error waiting for ports to enter listening state”.
+**Vendor**: Can you send us a support bundle?
+*[pause for time to examine support bundle]*
+**Vendor**: Ok, I see that our rails app can't connect to our MongoDB container. What's the ip address of the docker0 interface on this server?
+**Customer**: echo $(ip addr | grep docker0 -A5 | grep "inet " | head -n1 | cut -d "" -f3,2 | awk '{ print $2}' | cut -d "/" -f1,1) says it's 172.17.0.5.
+**Vendor**: Uh, great? Can you try telnet 172.17.0.5 27017?
+**Customer**: It connects. MongoDB is definitely listening.
+**Vendor**: Ok, can you try to connect from inside a container too? Run docker run -it ubuntu /bin/bash and you'll get a # prompt. Run the same telnet command in there.
+**Customer**: It cannot connect from there. Ah. Let me edit my iptables ruleset.
 
 Now the customer has a very simple, reproducible environment that doesn't have the complexity of your
 config files and envvars and everything else. They can simply change iptables and run the failing telnet

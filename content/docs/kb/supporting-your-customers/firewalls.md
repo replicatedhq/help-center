@@ -22,11 +22,11 @@ To use the Replicated management console you are required to allow inbound/outbo
 For Replicated communication you must also allow TCP ports `:9870-:9880` to accept both inbound/outbound traffic on the installed subnet. These ports are for internal communication and should not be exposed externally. Please note that if you are running a multi-host setup communication on these ports will be required between hosts as well as on the primary host.
 
 ## Initial Installation of Replicated
-When Replicated is installed, it can be downloaded from the Internet or packaged up and delivered in an airgap pacakge. 
+When Replicated is installed, it can be downloaded from the Internet or packaged up and delivered in an airgap pacakge.
 
 | Host | Online Installation | Airgap Installation | Description |
 |---|---|---|---|
-| get.replicated.com | <i class="fa fa-check" /> Required | <i class="fa fa-times" /> Not Required | This endpoint hosts the install script that used in the Replicated [easy install](/docs/distributing-your-application/installing-via-script) script. |
+| get.replicated.com | <i class="fa fa-check" /> Required | <i class="fa fa-times" /> Not Required | This endpoint hosts the install script that used in the Replicated [easy install](/docs/distributing-an-application/installing-via-script) script. |
 | quay.io | <i class="fa fa-check" /> Required | <i class="fa fa-times" /> Not Required | The current Replicated images are hosted as public images in the Quay.io registry. |
 | Docker Hub | <i class="fa fa-check" /> Required | <i class="fa fa-times" /> Not Required | Some dependencies of Replicated are hosted as public images in Docker Hub.|
 
