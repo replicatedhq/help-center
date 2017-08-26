@@ -3,7 +3,7 @@ title: "Get to know our features"
 description: "You've used Replicated and mastered the basics. You are familiar with all of the core concepts and terminology and have probably shipped at least one application."
 level: "intermediate"
 index: "guides"
-chapters: 
+chapters:
   - title: "Admin commands"
     description: "Implementation guide for application vendors to provide customers with aliased CLI commands that can be performed in the containers across a cluster."
     slug: "/docs/packaging-an-application/admin-commands"
@@ -18,7 +18,7 @@ chapters:
     slug: "/docs/packaging-an-application/commands"
   - title: "Components and containers"
     description: "The 'components' section of the Replicated YAML defines how the containers will be created and started."
-    slug: "/docs/packaging-an-application/components-and-commands"
+    slug: "/docs/packaging-an-application/components-and-containers"
   - title: "Config screen"
     description: "The 'config' section of the Replicated YAML creates a dynamic settings page that customers can use to configure their instance."
     slug: "/docs/packaging-an-application/config-screen"
