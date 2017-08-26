@@ -45,4 +45,28 @@ featureTableItems:
   - four:
     name: "Airgap support"
     support: ["greenCheck", "grayFail", "greenCheck"]
+  - five:
+    name: "Preflight Checks"
+    support: ["greenCheck", "greenCheck", "greenCheck"]
+  - six:
+    name: "Support Bundle Generator"
+    support: ["greenCheck", "greenCheck", "greenCheck"]
+  - seven:
+    name: "Brandable Admin Console"
+    support: ["greenCheck", "greenCheck", "greenCheck"]
+  - eight:
+    name: "Automated App Updates"
+    support: ["greenCheck", "greenCheck", "greenCheck"]
+  - nine:
+    name: "Differential Snapshot & Restore"
+    support: ["greenCheck", "grayFail", "grayFail"]
+  - ten:
+    name: "LDAP/AD Integration"
+    support: ["greenCheck", "greenCheck", "greenCheck"]
+  - eleven:
+    name: "Security Audit Logging Service"
+    support: ["greenCheck", "grayFail", "grayFail"]
+  - twelve:
+    name: "Advanced Reporting Dashboard"
+    support: ["greenCheck", "greenCheck", "greenCheck"]
 ---
