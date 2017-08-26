@@ -9,7 +9,7 @@ index: "docs"
 
 You are (optionally) responsible for implementing a provisioning API to enable full identity sync. Once enabled, Replicated will make calls into this API when changes are detected in the directory service.
 
-When implemented and defined in the [Identity configuration](/packaging-an-application/ldap-integration), this API will receive the list of LDAP users (initially) and updates when users are added, edited, and removed. Should Replicated receive a non 2xx response from your provisioning endpoint it will stop updates and continue with the same request on the next sync.
+When implemented and defined in the [Identity configuration](docs/packaging-an-application/ldap-integration/), this API will receive the list of LDAP users (initially) and updates when users are added, edited, and removed. Should Replicated receive a non 2xx response from your provisioning endpoint it will stop updates and continue with the same request on the next sync.
 
 ### GET /v1/ping
 
@@ -33,7 +33,7 @@ This endpoint is called during the initial sync and when a new user record is be
 | user_id | String | (Optional) User ID if one is defined by the LDAP server. |
 | username | String | (Optional) Username as defined by the ldap_username_field setting. |
 | first_name | String | (Optional) First name |
-| last_name | String | (Optional) Last name | 
+| last_name | String | (Optional) Last name |
 | full_name | String | (Optional) Full name |
 | password_format | String | (Optional) Password (encryption/hashing) format |
 | password | String | (Optional) Password. Note that this maybe clear text password. This will be indicated by the value in password_format |

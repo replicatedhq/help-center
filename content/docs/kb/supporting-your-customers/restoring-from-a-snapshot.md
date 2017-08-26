@@ -44,4 +44,4 @@ The last step is to set the correct interface for the localhost, in this case it
 You have now restored your snapshot! Take yourself to the console.
 
 For example of advanced snapshot setups make sure to check out our
-[Zero Downtime Backups With Replicated](https://support.replicated.com/hc/en-us/articles/216706397-Zero-Downtime-Backups-with-Replicated-Redis-) article.
+[Zero Downtime Backups With Replicated](/docs/kb/developer-resources/zero-downtime-backup/) article.

@@ -8,11 +8,11 @@ hideFromList: true
 categories: [ "Distributing an Application" ]
 ---
 
-Replicated supports Linux-based servers that can run current versions of Docker.  
+Replicated supports Linux-based servers that can run current versions of Docker.
 
-Your machine must support docker-engine {{< docker_version_minimum >}} - {{< docker_version_default >}} 
-(with {{< docker_version_default >}} being the recommended version). This also requires a 64-bit distribution with a 
-kernel minimum of 3.10. 
+Your machine must support docker-engine {{< docker_version_minimum >}} - {{< docker_version_default >}}
+(with {{< docker_version_default >}} being the recommended version). This also requires a 64-bit distribution with a
+kernel minimum of 3.10.
 
 Replicated provides an easy install script to work with the the following list of operating system.
 
@@ -24,9 +24,9 @@ Replicated provides an easy install script to work with the the following list o
 - Amazon AMI 2014.03 / 2014.09 / 2015.03 / 2015.09 / 2016.03 / 2016.09
 - Oracle Linux 6.5+
 
-As new operating systems start to support Docker we extend our install script and QA process to include them.  Operating 
-systems that support Docker but are not yet included in the easy install script can still be used 
-using the [manual install instructions](/docs/distributing-an-application/installing-manual).
+As new operating systems start to support Docker we extend our install script and QA process to include them.  Operating
+systems that support Docker but are not yet included in the easy install script can still be used
+using the [manual install instructions](/docs/distributing-an-application/installing-manually/).
 
 For detailed requirements and installation guides see the docker installation docs.
 

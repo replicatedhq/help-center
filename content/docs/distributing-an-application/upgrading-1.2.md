@@ -9,7 +9,7 @@ categories: ["Distributing An Application"]
 {{< warning title="Old Version Warning" >}}
 The content in this document is for a previous version of Replicated. If you are looking
 for the current version, it is available at
-<a href="{{< baseurl >}}distributing-an-application/upgrading/">{{< baseurl >}}distributing-an-application/upgrading/</a>
+<a href="{{< baseurl >}}/docs/distributing-an-application/upgrading/">{{< baseurl >}}docs/distributing-an-application/upgrading/</a>
 {{< /warning >}}
 
 You may need to add the Replicated repository and GPG key to the package manager before

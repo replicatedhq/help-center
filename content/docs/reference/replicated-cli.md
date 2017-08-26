@@ -7,7 +7,7 @@ categories: [ "Reference" ]
 index: "docs"
 ---
 
-After [installing replicated](/distributing-an-application/installing/#section-easy-installation) onto a remote host a CLI is enabled
+After [installing replicated](/docs/distributing-an-application/installing/#section-easy-installation) onto a remote host a CLI is enabled
 that can be utilized for both management and maintenance. This tool can be especially helpful when debugging issues that can arise if the
 replicated-ui is not fully installed or working properly.
 
@@ -62,7 +62,7 @@ replicated app <appid> status|components|rm|start|stop|pause|unpause|settings
 | start &#124; stop &#124; pause &#124; unpause | Transition app into the specified state |
 | {{< version version="2.1" >}} settings | Export app settings in JSON format |
 
-The settings command is useful for [automating an installation](/kb/developer-resources/automate-install/).
+The settings command is useful for [automating an installation](/docs/kb/developer-resources/automate-install/).
 
 Sometimes app state might be locked for extended periods of time depending on the app
 launch procedure and various timeout settings.  In cases like this, app can be forced
@@ -200,5 +200,5 @@ replicated snapshot restore <location> <snapshot id> --dismiss-prechecks --node-
 
 ## Admin
 Additionally you can define ad-hoc commands that can be executed inside a running container,
-see the dedicated [Admin Commands](/packaging-an-application/admin-commands) section
+see the dedicated [Admin Commands](/docs/packaging-an-application/admin-commands) section
 for more details.

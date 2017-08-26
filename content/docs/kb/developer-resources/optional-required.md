@@ -48,5 +48,5 @@ optional release, when this customer clicks the update button, Replicated will i
 ## Specifying or changing after a release is promoted
 
 It’s also possible to to
-[change an existing release](https://support.replicated.com/hc/en-us/articles/217295427) to
+[change an existing release](/docs/kb/developer-resources/optional-required/) to
 modify whether it's optional or required.

@@ -35,7 +35,7 @@ We provide an easy-to-use one-line installation process (via shell script) which
 ### Manual Install
 We provide a short set of steps to install Replicated manually, for situations where a customer is unable to run the easy install script or you need to install Replicated on an operating system not yet covered by the easy install.  The manual install giving you full control over the install process.
 
-[Continue with a manual install](/docs/distributing-an-application/installing-manually)
+[Continue with a manual install](/docs/distributing-an-application/installing-manually/)
 
 ### Airgapped Install
 Some installations may not have outbound Internet access.  Replicated provides you the option to do airgapped installs to support those customers.  To install, your customer will download Replicated, your license and the airgap installation file containing your application.

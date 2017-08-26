@@ -51,7 +51,7 @@ differently, so if you need something to be there, require it for your integrati
 
 If you manage a user table in your SaaS product you might want to consider going beyond
 simple DS auth and use the Replicated DS Sync functionality
-([see sync developer docs](/reference/integration-api/)). This will
+([see sync developer docs](/docs/reference/integration-api/)). This will
 allow you to access your user table for product features like user profiles, sharing,
 attribution etc. Sync is designed to work in conjunction with auth, so make sure you
 enable Part 1 before moving on to Part 2.
