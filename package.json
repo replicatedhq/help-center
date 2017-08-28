@@ -13,6 +13,6 @@
   },
   "dependencies": {
     "algoliasearch": "^3.24.1",
-    "hugo-algolia": "^1.2.4"
+    "hugo-algolia": "^1.2.6"
   }
 }

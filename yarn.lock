@@ -139,9 +139,9 @@ hugo-algolia@^1.1.4:
     striptags "^3.0.1"
     to-snake-case "^1.0.0"
 
-hugo-algolia@^1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/hugo-algolia/-/hugo-algolia-1.2.4.tgz#fd7e7a4e13e50fd636f312b330ce92b5a1de9cac"
+hugo-algolia@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/hugo-algolia/-/hugo-algolia-1.2.6.tgz#98e6d0ff7e148786c28fbac70d433b8acaed4f8c"
   dependencies:
     algoliasearch "^3.24.1"
     glob "^7.1.2"
