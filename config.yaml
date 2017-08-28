@@ -37,12 +37,12 @@ algolia:
 menu:
   main:
     - Name: "Guides"
-      Weight: -100
+      Weight: 1
       URL: "/guides/"
     - Name: "Documentation"
-      Weight: -100
+      Weight: 2
       URL: "/docs/"
-    - Name: "API Reference"
-      Weight: -100
+    - Name: "API Resources"
+      Weight: 3
       URL: "/categories/reference/"
 ---
