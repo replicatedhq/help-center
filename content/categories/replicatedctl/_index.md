@@ -5,4 +5,5 @@ description: "Documentation for the replicatedctl command line."
 weight: 105
 index: "docs"
 hideFromList: true
+gradient: "purpleToPink"
 ---

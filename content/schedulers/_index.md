@@ -1,6 +1,7 @@
 ---
 layout: "schedulers"
 title: "Replicated Scheduler Types"
+uri: /schedulers/
 schedulerTypes:
   - title: "Replicated + built-in scheduler"
     type: "replicated"
