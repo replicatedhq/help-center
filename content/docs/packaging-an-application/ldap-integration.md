@@ -232,65 +232,79 @@ The following JSON schema defines the advanced LDAP config spec. This is especia
 
 ```json
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "type": "object",
-    "properties": {
-        "ldap_hosts": {
-            "type": "array",
-            "items": {
-                "$ref": "#/definitions/ldap_host"
-            }
-        }
-    },
-    "definitions": {
-        "ldap_host": {
-            "type": "object",
-            "properties": {
-                "ldap_type": {
-                    "type": "string",
-                    "enum": ["ldap_type_openldap", "ldap_type_ad", "ldap_type_other"]
-                },
-                "ldap_hostname": {
-                    "type": "string",
-                    "format": "hostname"
-                },
-                "ldap_encryption": {
-                    "type": "string",
-                    "enum": ["ldap_encryption_plain", "ldap_encryption_starttls", "ldap_encryption_ldaps"]
-                },
-                "ldap_search_user": {
-                    "type": "string"
-                },
-                "ldap_search_password": {
-                    "type": "string"
-                },
-                "ldap_base_dn": {
-                    "type": "string"
-                },
-                "ldap_usersearch_dn": {
-                    "type": "string"
-                },
-                "ldap_restricted_user_group": {
-                    "type": "string"
-                },
-                "ldap_username_field": {
-                    "type": "string"
-                },
-                "ldap_login_username": {
-                    "type": "string"
-                },
-                "ldap_login_password": {
-                    "type": "string"
-                },
-                "ldap_port": {
-                    "type": "integer"
-                }
-            },
-            "required": [
-                "ldap_type", "ldap_hostname", "ldap_encryption", "ldap_search_user", "ldap_search_password",
-                "ldap_base_dn", "ldap_usersearch_dn", "ldap_restricted_user_group", "ldap_username_field", "ldap_port"
-            ]
-        }
-    }
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"ldap_hosts": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/ldap_host"
+			}
+		}
+	},
+	"definitions": {
+		"ldap_host": {
+			"type": "object",
+			"properties": {
+				"ldap_type": {
+					"type": "string",
+					"enum": ["ldap_type_openldap", "ldap_type_ad", "ldap_type_other"]
+				},
+				"ldap_hostname": {
+					"type": "string",
+					"format": "hostname"
+				},
+				"ldap_encryption": {
+					"type": "string",
+					"enum": ["ldap_encryption_plain", "ldap_encryption_starttls", "ldap_encryption_ldaps"]
+				},
+				"ldap_search_user": {
+					"type": "string"
+				},
+				"ldap_search_password": {
+					"type": "string"
+				},
+				"ldap_base_dn": {
+					"type": "string"
+				},
+				"ldap_usersearch_dn": {
+					"type": "string"
+				},
+				"ldap_restricted_user_group": {
+					"type": "string"
+				},
+				"ldap_username_field": {
+					"type": "string"
+				},
+				"ldap_login_username": {
+					"type": "string"
+				},
+				"ldap_login_password": {
+					"type": "string"
+				},
+				"ldap_port": {
+					"type": "integer"
+				},
+				"ldap_advanced_search": {
+					"type": "object",
+					"properties": {
+						"ldap_user_query": {
+							"type": "string"
+						},
+						"ldap_restricted_group_query": {
+							"type": "string"
+						}
+					},
+					"required": ["ldap_user_query", "ldap_restricted_group_query"],
+					"additionalProperties": false
+				}
+			},
+			"required": [
+				"ldap_type", "ldap_hostname", "ldap_encryption", "ldap_search_user", "ldap_search_password",
+				"ldap_base_dn", "ldap_usersearch_dn", "ldap_username_field", "ldap_port"
+			],
+			"additionalProperties": false
+		}
+	}
 }
 ```
