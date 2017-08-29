@@ -207,7 +207,7 @@ Setting labels can be customized if needed. However, setting names must remain e
     # When defined, the Test button will be shown on the LDAP settings section which will allow validating
     # the supplied file.
     display_name: Validate Config
-    command: ldap_auth_advanced
+    command: ldap_config_validate
     run_on_save: true
     arg_fields:
     - ldap_config_file
