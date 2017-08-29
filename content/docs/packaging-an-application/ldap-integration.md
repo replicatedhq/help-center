@@ -288,8 +288,7 @@ The following JSON schema defines the advanced LDAP config spec. This is especia
             },
             "required": [
                 "ldap_type", "ldap_hostname", "ldap_encryption", "ldap_search_user", "ldap_search_password",
-                "ldap_base_dn", "ldap_usersearch_dn", "ldap_restricted_user_group", "ldap_username_field",
-                "ldap_login_username", "ldap_login_password", "ldap_port"
+                "ldap_base_dn", "ldap_usersearch_dn", "ldap_restricted_user_group", "ldap_username_field", "ldap_port"
             ]
         }
     }
