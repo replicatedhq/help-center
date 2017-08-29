@@ -147,7 +147,7 @@ Setting labels can be customized if needed. However, setting names must remain e
   - name: ldap_advanced_search
     # This option must be selected in order to use advanced search features.   Otherwise, it can be omitted.
     title: Show Advanced Search Options
-    description: Enable this option if you need to write a custom LDAP search query.
+    help_text: Enable this option if you need to write a custom LDAP search query.
     type: bool
     value: 0
   - name: ldap_restricted_user_group
