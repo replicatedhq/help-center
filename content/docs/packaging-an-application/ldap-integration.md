@@ -20,7 +20,7 @@ identity:
   provisioner: 'http://{{repl NodePrivateIPAddress "MyContainerName" "Container Image Name"}}:6006'
   sources:
   - source: ldap
-    enabled: '{{repl if ConfigOptionEquals "auth_source" "auth_type_ldap"}}true{{repl else}}false{{repl end}}'
+    enabled: '{{repl if or (ConfigOptionEquals "auth_source" "auth_type_ldap") (ConfigOptionEquals "auth_source" "auth_type_ldap_advanced")}}true{{repl else}}false{{repl end}}'
 ```
 
 | Field |	Description |
@@ -48,6 +48,8 @@ Setting labels can be customized if needed. However, setting names must remain e
       title: Built In
     - name: auth_type_ldap
       title: LDAP
+    - name: auth_type_ldap_advanced
+      title: LDAP Advanced
 - name: ldap_settings
   title: LDAP Server Settings
   when: auth_source=auth_type_ldap
@@ -194,6 +196,28 @@ Setting labels can be customized if needed. However, setting names must remain e
     title: Test password
     type: password
     required: false
+- name: ldap_settings_advanced
+  title: LDAP Advanced Server Settings
+  description: |
+    Upload a file below for advanced integration configuration. This file must conform to the 
+    [Advanced LDAP Configuration Specification](https://www.replicated.com/docs/packaging-an-application/ldap-integration/#advanced-file-specification).
+  when: auth_source=auth_type_ldap_advanced
+  test_proc:
+    # Optional.
+    # When defined, the Test button will be shown on the LDAP settings section which will allow validating
+    # the supplied file.
+    display_name: Validate Config
+    command: ldap_auth_advanced
+    run_on_save: true
+    arg_fields:
+    - ldap_config_file
+  items:
+  - name: ldap_config_file
+    # LDAP server type.  All standard LDAP implementations are supported.
+    # In order to use Provisioning API, the LDAP server (AD being an exception) must support the Content Sync feature.
+    title: LDAP Config File
+    type: file
+    required: true
 ```
 
 Note the use of the LdapCopyAuthFrom function. This is optional, but when LDAP is used to secure the Replicated console, settings entered on that screen will be copied as default values.
@@ -201,3 +225,73 @@ Note the use of the LdapCopyAuthFrom function. This is optional, but when LDAP i
 {{< linked_headline "Identity API" >}}
 
 See [Identity API](/api/integration-api) for information on how to authenticate and sync with LDAP server.
+
+{{< linked_headline "Advanced LDAP Configuration Specification" >}}
+
+The following JSON schema defines the advanced LDAP config spec. This is especially useful if you intend to support identity management via multiple LDAP domains or organizational units.
+
+```json
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "ldap_hosts": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/ldap_host"
+            }
+        }
+    },
+    "definitions": {
+        "ldap_host": {
+            "type": "object",
+            "properties": {
+                "ldap_type": {
+                    "type": "string",
+                    "enum": ["ldap_type_openldap", "ldap_type_ad", "ldap_type_other"]
+                },
+                "ldap_hostname": {
+                    "type": "string",
+                    "format": "hostname"
+                },
+                "ldap_encryption": {
+                    "type": "string",
+                    "enum": ["ldap_encryption_plain", "ldap_encryption_starttls", "ldap_encryption_ldaps"]
+                },
+                "ldap_search_user": {
+                    "type": "string"
+                },
+                "ldap_search_password": {
+                    "type": "string"
+                },
+                "ldap_base_dn": {
+                    "type": "string"
+                },
+                "ldap_usersearch_dn": {
+                    "type": "string"
+                },
+                "ldap_restricted_user_group": {
+                    "type": "string"
+                },
+                "ldap_username_field": {
+                    "type": "string"
+                },
+                "ldap_login_username": {
+                    "type": "string"
+                },
+                "ldap_login_password": {
+                    "type": "string"
+                },
+                "ldap_port": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "ldap_type", "ldap_hostname", "ldap_encryption", "ldap_search_user", "ldap_search_password",
+                "ldap_base_dn", "ldap_usersearch_dn", "ldap_restricted_user_group", "ldap_username_field",
+                "ldap_login_username", "ldap_login_password", "ldap_port"
+            ]
+        }
+    }
+}
+```
