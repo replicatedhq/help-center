@@ -254,6 +254,9 @@ The following JSON schema defines the advanced LDAP config spec. This is especia
 					"type": "string",
 					"format": "hostname"
 				},
+				"ldap_port": {
+					"type": "integer"
+				},
 				"ldap_encryption": {
 					"type": "string",
 					"enum": ["ldap_encryption_plain", "ldap_encryption_starttls", "ldap_encryption_ldaps"]
@@ -281,9 +284,6 @@ The following JSON schema defines the advanced LDAP config spec. This is especia
 				},
 				"ldap_login_password": {
 					"type": "string"
-				},
-				"ldap_port": {
-					"type": "integer"
 				},
 				"ldap_advanced_search": {
 					"type": "boolean"
