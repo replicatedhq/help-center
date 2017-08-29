@@ -286,17 +286,13 @@ The following JSON schema defines the advanced LDAP config spec. This is especia
 					"type": "integer"
 				},
 				"ldap_advanced_search": {
-					"type": "object",
-					"properties": {
-						"ldap_user_query": {
-							"type": "string"
-						},
-						"ldap_restricted_group_query": {
-							"type": "string"
-						}
-					},
-					"required": ["ldap_user_query", "ldap_restricted_group_query"],
-					"additionalProperties": false
+					"type": "boolean"
+				},
+				"ldap_user_query": {
+					"type": "string"
+				},
+				"ldap_restricted_group_query": {
+					"type": "string"
 				}
 			},
 			"required": [
