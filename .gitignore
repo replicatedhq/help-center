@@ -1,7 +1,6 @@
 *.DS_Store
 .vscode/
 
-
 # Directories
 node_modules/
 public/
