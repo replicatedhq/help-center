@@ -5,13 +5,13 @@ uri: /schedulers/
 schedulerTypes:
   - title: "Replicated + built-in scheduler"
     type: "replicated"
-    description: "The Replicated scheduler is a mature container orchestration runtime that supports Docker 1.7.1 and newer. The Replicated scheduler is being used by over (number) enterprises in production systems today. This scheduler is a good choice if you want to maximize compatibility with enterprise systems and want to provide a simple, appliance-like experience."
+    description: "<p>The Replicated scheduler is a mature container orchestration runtime that supports Docker 1.7.1 and newer.</p><p>Used by over 500 enterprises in production systems today. This scheduler is a good choice if you want to maximize compatibility with enterprise systems and want to provide a simple, appliance-like experience.</p>"
     features:
       - title: "One-Line installation"
-        description: "The Replicated scheduler is a built into the platform. Other than Docker, there are no additional dependencies required."
+        description: "Built into the platform, other than Docker, there are no additional dependencies required."
         iconClass: "commandPromptRed"
       - title: "Supports Docker 1.7.1 and later"
-        description: "The Replicated scheduler remains compatible with Docker 1.7.1, making it a good candidate for legacy operating systems such as CentOS 6 and RHEL 6."
+        description: "Compatible with Docker 1.7.1 and above, the Replicated Scheduler is a good solution for customers using legacy operating systems such as CentOS 6 and RHEL 6."
         iconClass: "dockerRed"
       - title: "Easy to run and manage"
         description: "The Replicated scheduler manages Docker containers with no additional command line tools."
