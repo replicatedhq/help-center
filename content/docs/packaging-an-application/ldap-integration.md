@@ -20,7 +20,9 @@ identity:
   provisioner: 'http://{{repl NodePrivateIPAddress "MyContainerName" "Container Image Name"}}:6006'
   sources:
   - source: ldap
-    enabled: '{{repl if or (ConfigOptionEquals "auth_source" "auth_type_ldap") (ConfigOptionEquals "auth_source" "auth_type_ldap_advanced")}}true{{repl else}}false{{repl end}}'
+    enabled: '{{repl if ConfigOptionEquals "auth_source" "auth_type_ldap"}}true{{repl else}}false{{repl end}}'
+  - source: ldap_advanced
+    enabled: '{{repl if ConfigOptionEquals "auth_source" "auth_type_ldap_advanced"}}true{{repl else}}false{{repl end}}'
 ```
 
 | Field |	Description |
