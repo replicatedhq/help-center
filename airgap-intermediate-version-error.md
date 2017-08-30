@@ -6,7 +6,7 @@ weight = "999999"
 categories = [ "Knowledgebase", "Supporting Your Customers" ]
 +++
 
-Below is an example of an Airgap installation failing due to missing intermediate verion(s) in a required build. The best way to resolve this issue would be to create a new license and and Airgap package as outlined in this [documentation](https://help.replicated.com/docs/distributing-an-application/airgapped-installations/)
+Below is an example of an Airgap installation failing due to missing intermediate verion(s) in a required build. The best way to resolve this issue would be to create a new license and and Airgap package as outlined in this [documentation](/docs/distributing-an-application/airgapped-installations/)
 ```shell
 docker logs replicated
 ERROR 2016/08/26 20:55:05 airgap/airgap.go:224 No Major.Minor.Patch elements found
