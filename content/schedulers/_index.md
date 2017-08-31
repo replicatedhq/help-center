@@ -69,13 +69,13 @@ featureTableItems:
     support: ["greenCheck", "greenCheck", "greenCheck"]
   - nine:
     name: "Differential Snapshot & Restore"
-    support: ["greenCheck", "grayFail", "grayFail"]
+    support: ["greenCheck", "greenCheck", "grayFail"]
   - ten:
     name: "LDAP/AD Integration"
     support: ["greenCheck", "greenCheck", "greenCheck"]
   - eleven:
     name: "Security Audit Logging Service"
-    support: ["greenCheck", "grayFail", "grayFail"]
+    support: ["greenCheck", "greenCheck", "grayFail"]
   - twelve:
     name: "Advanced Reporting Dashboard"
     support: ["greenCheck", "greenCheck", "greenCheck"]
