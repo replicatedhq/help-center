@@ -179,8 +179,8 @@ wrapperCSSClass: "scheduler-types-section"
                                 <tr>
                                     <td>Differential Snapshot &amp; Restore</td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                 </tr>
                                 <tr>
                                     <td>LDAP/AD Integration</td>
@@ -191,8 +191,8 @@ wrapperCSSClass: "scheduler-types-section"
                                 <tr>
                                     <td>Security Audit Logging Service</td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                 </tr>
                                 <tr>
                                     <td>Advanced Reporting Dashboard</td>
