@@ -5,22 +5,16 @@ description = "Application Snapshots on Kubernetes"
 weight = "219"
 categories = [ "Packaging" ]
 aliases = []
-
-[menu.main]
-Name       = "Application Snapshots on Kubernetes"
-identifier = "kubernetes-snapshosts"
-parent     = "/packaging-an-application"
-url        = "/docs/packaging-an-application/kubernetes-snapshots"
 +++
 
 Kubernetes Snapshots can be used to configure incremental backups for any Kubernetes resources
 that use a [Persistent Volume Claim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) (PVC)
-for persistent storage. 
+for persistent storage.
 
 ### Configuration
 
 In addition to storing your application data in a PVC, you'll need to whitelist it
-in your Replicated application yaml's `backup` section. For example, to back up a PVC named 
+in your Replicated application yaml's `backup` section. For example, to back up a PVC named
 `redis-data-volume`, use the following `backup` config.
 
 ```yaml
@@ -78,7 +72,7 @@ spec:
       containers:
         - name: redis
           image: redis:3.0
-          command: 
+          command:
             - redis-server
             - --appendonly
             - "yes"
@@ -96,7 +90,7 @@ spec:
 ### Configuring Snapshot Storage
 
 When installing Replicated, application backup archives will be stored on the
-replicated master's PVC by default (`local` mode). This is not recommended for production deployments, and end users of replicated are encouraged to customize the 
+replicated master's PVC by default (`local` mode). This is not recommended for production deployments, and end users of replicated are encouraged to customize the
 backup implementation in the Replicated Admin Console under "Console Settings". Options include using either SFTP or Amazon S3 for snapshot storage.
 
 See the [Snapshots](/docs/packaging-an-application/snapshots/) documentation for more information on configuring snapshot storage.
