@@ -17,7 +17,6 @@ By default, Replicated automatically adds preflight checks for:
 | **Category** | **Check** |
 |--------------|-----------|
 | OS | Linux |
-| Distribution | Supported Linux distributions |
 | Linux Kernel | 3.10 or greater |
 | Memory | 1 GB |
 | Docker Version | {{< docker_version_minimum >}} - {{< docker_version_default >}} |
