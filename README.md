@@ -7,12 +7,6 @@ Before you are able to run this locally you need to have [Hugo installed](https:
    make install
    ```
 
-1. Setup API docs
-   ```bash
-    make setup
-    make VENDOR_SWAGGER_SOURCE="https://api.staging.replicated.com/vendor" vendordocs
-    ```
-
 1. Inside of the `themes/replicated-docs-theme` folder, run
     ```bash
     git submodule init
