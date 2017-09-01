@@ -23,12 +23,9 @@ Snapshots include customer console configuration, data from bind mounted volumes
 
 `script`: A bash script that will run on the server at the time of backup.
 
-`hidden`: Defaults to false (the snapshot tile is visible by default).
-
 ```yaml
 backup:
   enabled: '{{repl ConfigOptionEquals "backup_enabled" "1" }}'
-  hidden: '{{repl ConfigOptionEquals "backup_enabled" "0" }}'
   pause_containers: '{{repl LicenseFieldValue "zero_downtime_backups_enabled" }}'
   script: |
     #!/bin/sh
