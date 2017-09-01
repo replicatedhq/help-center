@@ -7,16 +7,6 @@ Before you are able to run this locally you need to have [Hugo installed](https:
    make install
    ```
 
-1. Inside of the `themes/replicated-docs-theme` folder, run
-    ```bash
-    git submodule init
-    ```
-
-    and then
-    ```bash
-    git submodule update
-    ```
-
 1. Back in the root of the project, run
    ```bash
    make build
