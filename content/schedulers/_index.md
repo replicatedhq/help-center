@@ -55,7 +55,7 @@ wrapperCSSClass: "scheduler-types-section"
                 <div class='flex1 flex-column flex-verticalCenter u-lineHeight--normal right-content'>
                     <span class="logo kubernetesLogo"></span>
                     <h5>Kubernetes + Replicated</h5>
-                    <p>Kubernetes is a powerful and popular container orchestration and scheduler platform. Many organizations are investing in running their hosted product on Kubernetes, and want to leverage this investment for enterprise installations. Replicated minimizes the interactions between your customer and the Kubernetes cluster. The Admin Console provides functionality required to manage your application.</p>
+                    <p>Kubernetes is a powerful and popular container orchestration and scheduler platform. Many organizations are investing in running their hosted product on Kubernetes, and want to leverage this investment for enterprise installations.</p><p>Replicated helps minimize the interactions between your customer and the Kubernetes cluster, with the builtin Admin Console providing the functionality required to manage your application.</p>
                 </div>
                 <div class='flex1 flex-column u-paddingLeft--most flex-verticalCenter left-content'>
                     <ul class="pros-list">
@@ -85,7 +85,7 @@ wrapperCSSClass: "scheduler-types-section"
                 <div class='flex1 flex-column flex-verticalCenter u-lineHeight--normal left-content'>
                     <span class="logo dockerSwarmLogo"></span>
                     <h5>Docker Swarm + Replicated</h5>
-                    <p>Docker Swarm is great if you have existing docker-compose files and want to target servers running Docker 1.13.1 or newer. Replicated supports deploying Swarm services to a swarm cluster. On operating systems supporting Docker 1.13.1 or later, you can provide an appliance-like enterprise experience using the Swarm scheduler, using your existing docker-compose.yml.</p>
+                    <p>Docker Swarm is great if you have existing docker-compose files and want to target servers running Docker 1.13.1 or newer.</p><p>Replicated supports deploying Swarm services to a swarm cluster. On operating systems supporting Docker 1.13.1 or later, you can provide an appliance-like enterprise experience using the Swarm scheduler, using your existing docker-compose.yml.</p>
                 </div>
                 <div class='flex1 flex-column u-paddingLeft--most flex-verticalCenter right-content'>
                     <ul class="pros-list">
