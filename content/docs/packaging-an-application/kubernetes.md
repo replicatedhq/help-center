@@ -28,7 +28,24 @@ External private images are not supported currently. Replicated hosts a [private
 Replicated auto updates work as expected when running in Kubernetes. While the Replicated update is applying, the UI will not be available. Once it finishes, refresh the UI to get the update.
 
 ### Snapshots
-Standard Replicated snapshots are not supported when running in Kubernetes. This functionality will be included in an upcoming release.
+
+Kubernetes Snapshots can be used to back up any kubernetes resources
+that use a [Persistent Volume Claim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) (PVC)
+for persistent storage. In addition to storing your application data in a PVC, you'll need to whitelist it
+in your Replicated application yaml's `backup` section. For example, to back up a PVC named 
+`redis-data-volume`, use the following `backup` config.
+
+```yaml
+backup:
+  enabled: true
+  kubernetes:
+    pvc_names: [ "redis-data-volume" ]
+```
+
+
+Check out the [Kubernetes Snapshots](/docs/packaging-an-application/kubernetes-snapshots/) Doc to see in-depth examples and learn more about how
+Replicated manages your Persistent volumes and stores the backed up data.
+
 
 ### Preflight Checks
 There is limited support for preflight checks as of {{< version version="2.9.0" >}}. See the [Kubernetes Preflight Checks](/docs/packaging-an-application/preflight-checks-k8s) section of the docs for more details. Additional support will be available in a future release.
