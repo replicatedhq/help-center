@@ -1,0 +1,99 @@
+/* Input */
+
+.Input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #C4C8CA;
+  border-radius: 4px;
+  outline: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: normal;
+  color: #323232;
+  padding: 10px 11px 11px;
+  transition: border .2s;
+}
+.Input:active,
+.Input:focus {
+  border-color: #248BBB;
+}
+.Input.has-error,
+.Input.has-error:focus,
+.Input.has-error:active {
+  border-color: #EE5042;
+}
+.Input.is-disabled {
+  user-select: none;
+  cursor: not-allowed;
+  background-color: #F8F8F8;
+  border-color: #DFDFDF;
+  color: #717171;
+}
+.Input.small {
+  font-size: 12px;
+  padding: 4px 12px 5px;
+}
+.hidden-input {
+  position: absolute;
+  left: -1000px;
+  top: -1000px;
+  opacity: 0;
+}
+
+/* Buttons */
+
+.Button {
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px 16px;
+  font-size: 14px;
+  display: inline-block;
+  border: 0;
+  border-radius: 4px;
+  transition: all .2s;
+  outline: none;
+  position: relative;
+}
+.Button.small {
+  font-size: 12px;
+  padding: 6px 12px;
+}
+.Button.primary {
+  background-color: #2A98CB;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #248BBB;
+  color: #ffffff;
+}
+.Button.primary:not(:disabled):hover {
+  background-color: #248BBB;
+}
+.Button.secondary {
+  background-color: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #2A98CB;
+  color: #2A98CB;
+}
+.Button.secondary:not(:disabled):hover {
+  background-color: #248BBB;
+  color: #ffffff;
+}
+.Button.primary.is-disabled,
+.Button.primary.is-disabled:hover,
+.Button.primary:disabled,
+.Button.primary[disabled] {
+  cursor: not-allowed;
+  border-color: #A3D3E9;
+  color: #ffffff;
+  background-color: #A3D3E9;
+}
+.Button.secondary.is-disabled,
+.Button.secondary.is-disabled:hover,
+.Button.secondary:disabled,
+.Button.secondary[disabled] {
+  cursor: not-allowed;  
+  color: #A3D3E9;
+  border-color: #A3D3E9;
+}

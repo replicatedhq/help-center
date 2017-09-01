@@ -1,0 +1,11 @@
+name = "Replicated Docs"
+license = "MIT"
+licenselink = "https://github.com/vimux/blank/blob/master/LICENSE.md"
+description = "Theme for the Replicated docs site."
+homepage = "https://github.com/replicatedhq/blank/"
+tags = []
+features = []
+
+[author]
+  name = "Replicated"
+  homepage = "https://github.com/replicatedhq"

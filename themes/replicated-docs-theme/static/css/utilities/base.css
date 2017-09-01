@@ -1,0 +1,104 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body a {
+  text-decoration: none;
+  outline: none;
+}
+
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  font-family: "Monaco", "Helvetica Neue", "Helvetica", sans-serif;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+pre code {
+  padding: 0;
+}
+.container {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.paddingContainer {
+  padding: 0 20px;
+}
+
+.main-section {
+  padding: 50px 0;
+  position: relative;
+  margin: 0;
+}
+
+.header-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+input:-moz-placeholder,
+textarea:-moz-placeholder,
+input::-moz-placeholder,
+textarea::-moz-placeholder,
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder { color: #9B9B9B; }
+
+/* 
+Apply this class to any icon using main_spritesheet. From there
+all you need to do is supply a `width: [value]` `height: [value]`
+and `background-position: [value]`
+*/
+.icon {
+  background-image: url("../../images/main_spritesheet.svg");
+  background-repeat: no-repeat;
+  background-size: initial;
+  display: inline-block;
+  cursor: default;
+  position: relative;
+}
+.icon.clickable { cursor: pointer; }
+
+/* Media Queries */
+
+/* ≥ 568px */
+@media screen and (min-width: 35.5em) {
+
+}
+
+/* ≥ 768px */
+@media screen and (min-width: 48em) {
+}
+
+/* ≥ 960px */
+@media screen and (min-width: 60em) {
+
+}
+
+/* ≥ 1024px */
+@media screen and (min-width: 64em) {
+  .paddingContainer { padding: 0 30px; }
+  .main-section { padding: 60px 0 70px; }
+}
+
+/* ≥ 1280px */
+@media screen and (min-width: 80em) {
+
+}
+
+@media screen and (max-width: 81.25em) {
+
+}
