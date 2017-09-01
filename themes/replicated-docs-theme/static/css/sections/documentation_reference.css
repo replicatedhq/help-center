@@ -1,0 +1,81 @@
+.main-section.documentation {
+  background-color: #F5F8FC;
+  border-top: 1px solid #DFDFDF;
+  border-bottom: 1px solid #DFDFDF;
+}
+.docs-ref-list .doc-ref-list-item {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+.doc-ref {
+  margin-top: 40px;
+}
+.doc-ref p {
+  line-height: 1;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #C4C7CA;
+}
+.doc-ref li {
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 30px;
+  padding-bottom: 16px;
+  position: relative;
+}
+.doc-ref li::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #2A98CB;
+  left: 10px;
+  top: 6px;
+}
+
+.doc-ref .more-items {
+  display: inline-block;
+  padding: 4px 8px 5px;
+  background: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.doc-ref .more-items:hover {
+  text-decoration: underline;
+}
+
+/* ≥ 568px */
+@media screen and (min-width: 35.5em) {
+  .docs-ref-list .doc-ref-list-item {
+    width: 50%;
+  }
+  .doc-ref {
+    margin-top: 50px;
+    padding-right: 40px; 
+  }
+  .doc-ref-list-item:nth-child(2n) .doc-ref {
+    padding-right: 0;
+  }
+}
+
+/* ≥ 768px */
+@media screen and (min-width: 48em) {
+  .docs-ref-list .doc-ref-list-item {
+    width: 33%;
+  }
+  .doc-ref {
+    padding-right: 40px;
+  }
+  .doc-ref-list-item:nth-child(2n) .doc-ref {
+    padding-right: 40px;
+  }
+  .doc-ref-list-item:nth-child(3n) .doc-ref {
+    padding-right: 0;
+  }
+}

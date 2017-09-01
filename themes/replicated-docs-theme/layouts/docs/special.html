@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+	<main>
+		<article class="single">
+			<div class="u-gradient--turquoiseToGreen main-section flex-column flex1 justifyContent--center">
+				<div class="container u-marginTop--most">
+					<div class="paddingContainer special-header">
+						<h1 class="u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--left">
+							{{ .Title }}
+						</h1>
+					</div>
+				</div>
+			</div>
+			<div class="main-section">
+				<div class="container">
+					<div class="paddingContainer">
+						{{ .Content }}
+					</div>
+				</div>
+			</div>
+		</article>
+	</main>
+{{ partial "footer.html" . }}
+

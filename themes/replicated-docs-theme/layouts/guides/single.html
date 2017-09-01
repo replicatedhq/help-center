@@ -1,0 +1,47 @@
+{{ partial "header.html" . }}
+	<main>
+		<article class="single">
+			<div class="u-gradient--orangeToOrange main-section flex-column flex1 justifyContent--center">
+				<div class="container u-marginTop--most">
+					<div class="flex flex-auto justifyContent--center u-marginTop--more">
+						<div class="flex-auto">
+							<span class="icon u-guidesHeaderIcon u-marginRight--normal"></span>
+						</div>
+						<div class="flex-auto">
+							<h3 class="u-color--white u-fontWeight--bold u-fontSize--header">Guides</h3>
+							<p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--small">Step-by-step guides for all things Replicated.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main-section">
+				<div class="container">
+					<div class="paddingContainer u-flexTabletReflow flex1">
+						<div class="flex1 flex-column left-block">
+							<span class="icon u-{{ .Params.level }}Wings u-marginBottom--most"></span>
+							<p class="u-fontSize--jumbo u-fontWeight--medium u-color--tuna u-lineHeight--default u-marginBottom--normal">{{ .Title }}<p>
+							<p class="u-fontSize--larger u-color--dustyGray u-lineHeight--normal">{{ .Description }}<p>
+						</div>
+						<div class="flex1 right-block">
+							<div class="guide-chapters-wrapper">
+								<ul>
+									{{ range .Params.chapters }}
+										<li>
+											<a href="{{ .slug }}">
+												<p class="chapter-title u-fontSize--larger u-fontWeight--medium u-lineHeight--normal">{{ .title }}</p>
+												<p class="u-fontSize--small u-fontWeight--normal u-color--dustyGray u-lineHeight--normal">{{ .description }}</p>
+											</a>
+										</li>
+									{{ end }}
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				{{ template "_internal/disqus.html" . }}
+			</div>
+		</article>
+	</main>
+{{ partial "footer.html" . }}

@@ -1,0 +1,44 @@
+.quicklinks-wrapper {
+  position: relative;
+  z-index: 1;
+  margin-top: -120px;
+}
+.quicklink-block-wrapper {
+  margin-top: 20px;
+}
+.quicklink-block {
+  background-color: #ffffff;
+  padding: 22px 20px;
+  border-radius: 6px;
+  border: 1px solid #C4C7CA;
+  text-align: center;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  transition: all .2s;
+}
+.quicklink-block:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px rgba(26, 27, 31, .05), 0 5px 24px 0 rgba(0, 0, 0, .09);
+}
+.quicklink-block .icon-wrapper {
+  min-height: 51px;
+  margin-bottom: 14px;
+}
+
+/* ≥ 768px */
+@media screen and (min-width: 48em) {
+  .quicklink-block-wrapper {
+    padding-right: 10px;
+    margin-top: 0;
+  }
+  .quicklink-block-wrapper:last-child {
+    padding-right: 0;
+  }
+}
+
+/* ≥ 960px */
+@media screen and (min-width: 60em) {
+  .quicklink-block-wrapper {
+    padding-right: 20px;
+  }
+}

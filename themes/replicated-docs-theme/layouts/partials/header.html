@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{{ .Title }}</title>
+	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ .Site.BaseURL }}favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ .Site.BaseURL }}favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ .Site.BaseURL }}favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ .Site.BaseURL }}favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ .Site.BaseURL }}favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ .Site.BaseURL }}favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ .Site.BaseURL }}favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ .Site.BaseURL }}favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight/prism.css">
+	{{ if .RSSLink -}}<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }}
+	{{ .Hugo.Generator }}
+	<!-- Autocomplete Library -->
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="container u-position--relative">
+				<span id="toggleNav" class="u-show--mobileTablet icon u-cursor--pointer"></span>
+				<ul class="nav-list paddingContainer u-position--relative">
+					<li>
+						<a class="logo-link" href="{{ .Site.BaseURL }}">
+							<img width="109" src="{{ .Site.BaseURL }}images/logo@2x.png"/>
+						</a>
+					</li>
+					<li>
+						<ul id="headerLinks" class="header-links">
+							{{ range .Site.Menus.main }}
+								<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+							{{ end }}
+							<li class="log-in-link">
+								<a href="https://vendor.replicated.com" target="_blank">Log in</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>

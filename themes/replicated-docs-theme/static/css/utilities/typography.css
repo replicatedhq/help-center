@@ -1,0 +1,39 @@
+/* Font sizes */
+
+.u-fontSize--small   { font-size: 12px; }
+.u-fontSize--normal  { font-size: 14px; }
+.u-fontSize--large   { font-size: 16px; }
+.u-fontSize--larger  { font-size: 18px; }
+.u-fontSize--largest { font-size: 20px; }
+.u-fontSize--jumbo   { font-size: 24px; }
+.u-fontSize--header  { font-size: 32px; }
+
+/* Line height */
+
+.u-lineHeight--default { line-height: 1; }
+.u-lineHeight--normal { line-height: 1.4; }
+.u-lineHeight--more { line-height: 1.7; }
+
+/* Font decoration */
+
+.u-textDecoration--underline { text-decoration: underline; }
+.u-textDecoration--underlineOnHover:hover,
+.u-textDecoration--underlineOnHover:focus {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Alignment classes */
+
+.u-textAlign--center { text-align: center; }
+.u-textAlign--left { text-align: left; }
+.u-textAlign--right { text-align: right; }
+
+/* Font weight classes */
+
+.u-fontWeight--light { font-weight: 300; }
+.u-fontWeight--normal { font-weight: 400; }
+.u-fontWeight--medium { font-weight: 500; }
+.u-fontWeight--bold { font-weight: 600; }
+.u-fontStyle--italic { font-style: italic; }
+.u-textTransform--uppercase { text-transform: uppercase; }

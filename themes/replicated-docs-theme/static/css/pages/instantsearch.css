@@ -1,0 +1,67 @@
+.instant-search .container {
+    max-width: 960px;
+    padding: 40px 15px;
+}
+.instant-search .container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.border {
+    border-bottom: 1px solid rgba(155, 155, 155, .4);
+    padding-bottom: 10px;
+}
+
+.counts h3 {
+    font-size: 18px;
+    color: #9B9B9B;
+    font-weight: 500;
+}
+
+.search-results {
+    margin: 50px 0;
+}
+
+.search-results h2 {
+    border-bottom: 0;
+}
+
+.search-results h2 span {
+    color: #C4C7CA;
+}
+
+.ais-hits--item {
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(155, 155, 155, .4);
+    cursor: pointer;
+}
+
+.ais-hits--item:hover {
+  background: rgba(163, 211, 233, .5);
+}
+
+.ais-hits--item h3 {
+  color: #323232;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.ais-hits--item p {
+  line-height: 22px;
+  font-size: 12px;
+  color: #9B9B9B;
+}
+
+#docs-hits .ais-hits--item {
+  padding-left: 55px;
+  position: relative;
+}
+
+#docs-hits .ais-hits--item .u-documentationIcon {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  transform: scale(0.6);
+}
