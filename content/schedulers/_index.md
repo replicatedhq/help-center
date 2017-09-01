@@ -10,7 +10,7 @@ wrapperCSSClass: "scheduler-types-section"
     <div class="container">
         <div class="paddingContainer">
             <div class="u-marginTop--more u-textAlign--left u-lineHeight--normal">
-                <h6>Replicated + A Container Scheduler</h6>
+                <h6>Which scheduler should I use?</h6>
                 <p>Replicated can work with several container scheduler platforms to deliver the enterprise version of your application. You can use Kubernetes, Docker Swarm, or Replicated's built-in scheduler. Choosing a scheduler to use for your entperise installations is an important first step, and this page will help you understand how Replicated works with each.</p>
             </div>
         </div>
