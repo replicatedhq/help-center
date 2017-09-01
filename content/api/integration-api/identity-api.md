@@ -27,7 +27,16 @@ Request payload
 | username | String | As defined by the ldap_username_field setting |
 | password | String | Cleartext passowrd |
 
-Response Status code
+Query parameters
+
+| Name | Type | Description |
+|---|---|---|
+| hostname * | String | Hostname for the LDAP server |
+| base_dn * | String | Base DN for the LDAP server |
+
+*\* required when identity is configured with multiple providers*
+
+Response
 
 | Status | Description |
 |---|---|
@@ -82,7 +91,18 @@ cURL
 
 Returns properties for the specified user.
 
-| Response | Status code |
+Query parameters
+
+| Name | Type | Description |
+|---|---|---|
+| hostname * | String | Hostname for the LDAP server |
+| base_dn * | String | Base DN for the LDAP server |
+
+*\* required when identity is configured with multiple providers*
+
+Response
+
+| Status | Description |
 |---|---|
 | 200 | User authenticated successfully |
 | 401 | Invalid username or password (for LDAP search user) |
@@ -95,6 +115,17 @@ In case 200 is returned, the body of the response is the same as that of the /id
 Checks if the supplied username exists on the server and returns true or false.
 
 In case 200 is returned, the body of the response will be true if the user exists or false otherwise.
+
+Query parameters
+
+| Name | Type | Description |
+|---|---|---|
+| hostname * | String | Hostname for the LDAP server |
+| base_dn * | String | Base DN for the LDAP server |
+
+*\* required when identity is configured with multiple providers*
+
+Response
 
 | Status | Description |
 |---|---|
