@@ -10,8 +10,8 @@ wrapperCSSClass: "scheduler-types-section"
     <div class="container">
         <div class="paddingContainer">
             <div class="u-marginTop--more u-textAlign--left u-lineHeight--normal">
-                <h6>Scheduler Intro Headline</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <h6>Replicated + A Container Scheduler</h6>
+                <p>Replicated can work with several container scheduler platforms to deliver the enterprise version of your application. You can use Kubernetes, Docker Swarm, or Replicated's built-in scheduler. Choosing a scheduler to use for your entperise installations is an important first step, and this page will help you understand how Replicated works with each.</p>
             </div>
         </div>
     </div>
@@ -132,12 +132,12 @@ wrapperCSSClass: "scheduler-types-section"
                                     <td>One-line installation</td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                     <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>                        
+                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                 </tr>
                                 <tr>
                                     <td>Zero downtime updates</td>
                                     <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>                     
+                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                 </tr>
                                 <tr>
@@ -149,7 +149,7 @@ wrapperCSSClass: "scheduler-types-section"
                                 <tr>
                                     <td>Airgap support</td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>                      
+                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                 </tr>
                                 <tr>
@@ -212,5 +212,5 @@ wrapperCSSClass: "scheduler-types-section"
 
 
 
-        
+
 
