@@ -38,7 +38,8 @@ service start docker
 ```
 
 
-### Error: Missing Intermediate Versions
+### Missing Intermediate Versions
+
 ```bash
 docker logs replicated
 ERROR 2016/08/26 20:55:05 airgap/airgap.go:224 No Major.Minor.Patch elements found
@@ -46,9 +47,9 @@ ERROR 2016/08/26 20:55:05 premkit/log/gin.go:52 [GIN] 500 | 33.939218035s | | PO
 ```
 
 ### Solution: Create a new license and Airgap package 
-See (documentation) [confirm correct link: https://help.staging.replicated.com/docs/distributing-an-application/create-licenses/#airgap-download-enabled)
+See [documentation] (https://help.staging.replicated.com/docs/distributing-an-application/create-licenses/#airgap-download-enabled)
 
-### Error: Internal Server Error/ License not Airgap-enabled
+### Internal Server Error/ License not Airgap-enabled
 ```bash
 docker logs replicated-ui
 WARNING 2016/08/24 19:56:27 airgap/airgap.go:144 Airgap package at /tmp/getelk.airgapllkk does not exist
@@ -62,4 +63,33 @@ docker logs replicated-ui
 WARNING 2016/08/24 19:56:27 airgap/airgap.go:144 Airgap package at /tmp/getelk.airgapllkk does not exist
 ERROR 2016/08/24 19:56:27 premkit/log/gin.go:52 [GIN] 412 | 328.002094ms | | POST /v0.1/license/airgap
 ```
--Airgap Restore errors
+### Restore Errors
+Snapshot does not grab the remote images
+
+### Solution: Manually load these missing images from the airgap file.
+1. Copy the .airgap file to the restore server
+
+2. Untar the contents of the airgap file into a temporary folder
+```bash
+mkdir airgap
+cd airgap
+tar xfzv ../myairgap.airgap
+```
+
+3. Load each of the images into docker
+```bash
+find . -type f -exec docker load -i {} \;
+```
+
+4. Review the image names that were loaded
+```bash
+docker images
+```
+
+5. Re-name any images that are mis-named by re-tagging the image
+```bash
+exit: ⌘ ↩
+docker tag <DOCKER-IMAGE-ID>  <DOCKER-IMAGE-NAME>:<DOCKER-IMAGE-TAG>
+```
+
+
