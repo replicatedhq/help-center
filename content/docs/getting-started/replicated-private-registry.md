@@ -48,7 +48,7 @@ Pushing tag for rev [8e471642d573] on {https://registry.replicated.com/v1/reposi
 ```
 
 For additional information on building, tagging and pushing docker images, please refer to the
-[Docker CLI Documentation](https://docs.docker.com/reference/commandline/cli/).
+[Docker CLI Documentation](https://docs.docker.com/engine/reference/commandline/cli/).
 
 ## Deploying to Kubernetes
 
