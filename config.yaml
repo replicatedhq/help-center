@@ -32,7 +32,6 @@ taxonomies:
 algolia:
   index: "help_center"
   appID: "5PHVQPX4AR"
-  key: "3a625a7b76b1f9eefeeba6fa8b2004df"
 
 menu:
   main:
