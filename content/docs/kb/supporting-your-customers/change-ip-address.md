@@ -6,10 +6,10 @@ weight = "999999"
 categories = [ "Knowledgebase", "Supporting Your Customers" ]
 +++
 
-If host's private IP address is modified, Replicated application will not be able to start and it will require manual reconfiguration.
-Private IP adress is defined in two configuration files: `replicated` and `replicated-operator`
+If host's private IP address is modified, Replicated will be unable to start and will require manual reconfiguration.
+Private IP address is defined in two configuration files: `replicated` and `replicated-operator`
 
-RHEL file location: `/etc/sysconfig` 
+RHEL/CentOS file location: `/etc/sysconfig` 
 
 Ubuntu/Debian file location: `/etc/default/`
 
