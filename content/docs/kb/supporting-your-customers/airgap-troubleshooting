@@ -13,7 +13,7 @@ categories = [ "Knowledgebase", "Supporting Your Customers" ]
 ### An “airgapped” environment is a network that has no path to inbound or outbound internet traffic at all.  As a result, there are a few unique issues sometimes found during installation. 
 ### Below are some common errors and their solutions:
 
-### 1. Internal Server Error/ License not Airgap-enabled
+### 1. Internal Server Error
 ```bash
 docker logs replicated-ui
 WARNING 2016/08/24 19:56:27 airgap/airgap.go:144 Airgap package at /tmp/getelk.airgapllkk does not exist
