@@ -92,3 +92,5 @@ docker images
 ```bash
 docker tag <DOCKER-IMAGE-ID>  <DOCKER-IMAGE-NAME>:<DOCKER-IMAGE-TAG>
 ```
+
+See [airgap documentation](https://help.replicated.com/docs/distributing-an-application/airgapped-installations/) for more information.
