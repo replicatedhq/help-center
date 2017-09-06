@@ -6,10 +6,10 @@ weight = "999999"
 categories = [ "Knowledgebase", "Supporting Your Customers" ]
 +++
 
-## Discription: 
+## Description: 
 Replicated-Operator fails to communicate with Replicated due to a conflict over access to memory, disk storage, or CPU.
 
-Error massage:
+Error message:
 ```Shell
 INFO 2017-08-24T17:31:42+00:00 [replicated-operator] heartbeat.go:46 Operator heartbeat failed: context deadline exceeded
 WARN 2017-08-24T17:31:42+00:00 [replicated-operator] heartbeat.go:50 Operator heartbeat monitor timeout after 2m0s, disconnecting
