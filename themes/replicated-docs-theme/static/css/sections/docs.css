@@ -1,0 +1,73 @@
+.single.docs-page .main-section {
+  background-color: #F7F7F7;
+}
+.docs-categories-list li {
+  display: inline-block;
+  padding-bottom: 40px;
+  vertical-align: top;
+}
+.docs-categories-list li .doc-block {
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.16);
+}
+.view-docs-link::after {
+  content: "";
+  position: absolute;
+  background-image: url("../../images/main_spritesheet.svg");
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: -56px 0;
+  width: 7px;
+  height: 12px;
+  top: 5px;
+  right: -15px;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: transform .2s;
+  -moz-transition: transform .2s;
+  transition: transform .2s;
+}
+.view-docs-link:hover::after {
+  -webkit-transform: translateX(3px);
+  -moz-transform: translateX(3px);
+  transform: translateX(3px);
+}
+
+
+.single-cat-docs-list li a {
+  padding: 20px;
+  border-bottom: 1px solid #C4C7CA;
+  cursor: pointer;
+  display: block;
+}
+.single-cat-docs-list li:last-child a {
+  border-bottom: none;
+}
+.single-cat-docs-list li a .list-title {
+  color: #323232;
+  -webkit-transition: color .2s;
+  -moz-transition: color .2s;
+  transition: color .2s;
+}
+.single-cat-docs-list li a:hover .list-title {
+  color: #2A98CB;
+}
+
+/* ≥ 568px */
+/* @media screen and (min-width: 35.5em) {
+  
+} */
+
+/* ≥ 768px */
+@media screen and (min-width: 48em) {
+  .docs-categories-list li {
+    width: 46%;
+    padding-right: 40px;
+  }
+  .docs-categories-list li:nth-child(2n) {
+    padding-right: 0;
+  }
+}

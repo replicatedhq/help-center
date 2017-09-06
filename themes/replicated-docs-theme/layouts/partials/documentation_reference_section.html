@@ -1,0 +1,116 @@
+  <div class="documentation main-section">
+    <div class="container">
+      <div class="header-wrapper u-textAlign--center">
+        <div class="paddingContainer">
+          <p class="u-color--tuna u-fontWeight--bold u-fontSize--header u-marginBottom--normal">Documentation reference</p>
+          <p class="u-fontSize--large u-fontWeight--medium u-color--dustyGray u-lineHeight--normal">Quickly find docs for whatever you need help with.</p>
+        </div>
+      </div>
+      <div class="docs-ref-wrapper">
+        <div class="docs-ref-list paddingContainer">
+          <div class="doc-ref-list-item">
+            <div class="doc-ref">
+              <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Getting Started</p>
+              <ul>
+                {{ range $index, $element := first 6 (index $.Site.Taxonomies.categories "getting-started").Pages }}
+                  <li>
+                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
+                  </li>
+                {{ end }}
+              </ul>
+              {{ with $list := (index $.Site.Taxonomies.categories "getting-started") }}
+                {{ if gt (len $list) 6 }}
+                  <a href="/categories/getting-started" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ (len $list) sub 6 }} More</a>
+                {{ end }}
+              {{ end }}
+            </div>
+          </div><!--
+          --><div class="doc-ref-list-item">
+            <div class="doc-ref">
+              <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Packaging An Application</p>
+              <ul>
+                {{ range $index, $element := first 6 (index $.Site.Taxonomies.categories "packaging-an-application").Pages }}
+                  <li>
+                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
+                  </li>
+                {{ end }}
+              </ul>
+              {{ with $list := (index $.Site.Taxonomies.categories "packaging-an-application") }}
+                {{ if gt (len $list) 6 }}
+                  <a href="/categories/packaging-an-application" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ (len $list) sub 6 }} More</a>
+                {{ end }}
+              {{ end }}
+            </div>
+          </div><!--
+          --><div class="doc-ref-list-item">
+            <div class="doc-ref">
+              <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Distributing An Application</p>
+              <ul>
+                {{ range $index, $element := first 6 (index $.Site.Taxonomies.categories "distributing-an-application").Pages }}
+                  <li>
+                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
+                  </li>
+                {{ end }}
+              </ul>
+              {{ with $list := (index $.Site.Taxonomies.categories "distributing-an-application") }}
+                {{ if gt (len $list) 6 }}
+                  <a href="/categories/distributing-an-application" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ (len $list) sub 6 }} More</a>
+                {{ end }}
+              {{ end }}
+            </div>
+          </div><!--
+          --><div class="doc-ref-list-item">
+            <div class="doc-ref">
+              <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Examples</p>
+              <ul>
+                {{ range $index, $element := first 6 ($.Site.Taxonomies.categories.examples).Pages }}
+                  <li>
+                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
+                  </li>
+                {{ end }}
+              </ul>
+              {{ with $list := $.Site.Taxonomies.categories.examples }}
+                {{ if gt (len $list) 6 }}
+                  <a href="/docs/examples" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ (len $list) sub 6 }} More</a>
+                {{ end }}
+              {{ end }}
+            </div>
+          </div><!--
+          --><div class="doc-ref-list-item">
+            <div class="doc-ref">
+              <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">API Resources</p>
+              <ul>
+                {{ range $index, $element := ($.Site.Taxonomies.categories.reference).Pages }}
+                  <li>
+                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
+                  </li>
+                {{ end }}
+              </ul>
+              {{ with $list := $.Site.Taxonomies.categories.reference }}
+                {{ if gt (len $list) 6 }}
+                  <a href="" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ (len $list) sub 6 }} More</a>
+                {{ end }}
+              {{ end }}
+            </div>
+          </div><!--
+          --><div class="doc-ref-list-item">
+            <div class="doc-ref">
+              <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Knowledge Base</p>
+              <ul>
+                {{ range $index, $element := first 6 ($.Site.Taxonomies.categories.knowledgebase).Pages }}
+                  <li>
+                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
+                  </li>
+                {{ end }}
+              </ul>
+              {{ with $list := $.Site.Taxonomies.categories.knowledgebase }}
+                {{ if gt (len $list) 6 }}
+                  <a href="/categories/knowledgebase" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ (len $list) sub 6 }} More</a>
+                {{ end }}
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

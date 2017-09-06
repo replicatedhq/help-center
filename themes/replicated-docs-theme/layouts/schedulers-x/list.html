@@ -1,0 +1,85 @@
+{{ partial "header.html" . }}
+<main>
+    <div class="page-header u-gradient--blueToBlue main-section flex-column flex1 justifyContent--center">
+      <div class="container u-marginTop--most">
+        <div class="u-marginTop--more u-textAlign--center u-lineHeight--normal">
+          <h3 class="u-color--white u-fontWeight--bold u-fontSize--header">Choosing the right scheduler</h3>
+          <p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--small">Compare the differences between the orchestration layers Replicated allows you to use.</p>
+        </div>
+      </div>
+    </div>
+    <div class="scheduler-type main-section u-borderBottom--gray">
+      <div class="container">
+        <div class="paddingContainer">
+          <div class="u-marginTop--more u-textAlign--left u-lineHeight--normal">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scheduler-types-section">
+      {{ range .Params.schedulerTypes }}
+        <div class="scheduler-type main-section u-borderBottom--gray">
+          <div class="container">
+            <div class="paddingContainer">
+              <div class='u-flexTabletReflow {{ if eq .type "kubernetes"}} flexDirection--rowReverse {{ end }}'>
+                <div class='flex1 flex-column flex-verticalCenter u-lineHeight--normal {{ if eq .type "kubernetes"}} right-content {{ else }} left-content {{ end }}'>
+                  <span class="logo {{ .type }}Logo"></span>
+                  <h5>{{ .title }}</h5>
+                  <p>{{ .description }}</p>
+                </div>
+                <div class='flex1 flex-column u-paddingLeft--most flex-verticalCenter {{ if eq .type "kubernetes"}} left-content {{ else }} right-content {{ end }}'>
+                  <ul class="pros-list">
+                    {{ range .features }}
+                      <li class="u-{{ .iconClass }}">
+                        <h6>{{ .title }}</h6>
+                        <p>{{ .description }}</p>
+                      </li>
+                    {{ end }}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+
+    <div class="compare-section-wrapper">
+      <div class="compare-section main-section">
+        <div class="container">
+          <div class="paddingContainer">
+            <div class="header-wrapper u-textAlign--center">
+              <p class="u-color--tuna u-fontWeight--bold u-fontSize--header u-marginBottom--normal">So, which one is right for you?</p>
+              <p class="u-fontSize--large u-fontWeight--medium u-color--dustyGray u-lineHeight--normal">Compare all the features side-by-side to help you make your decision.</p>
+            </div>
+            <div class="table-section-wrapper u-marginTop--most">
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th><span class="replicatedLogo"></span></th>
+                      <th><span class="kubernetesLogo"></span></th>
+                      <th><span class="dockerSwarmLogo"></span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{ range .Params.featureTableItems }}
+                      <tr>
+                        <td>{{ .name }}</td>
+                        {{ range .support }}
+                          <td class="icon-cell"><span class="icon u-{{ . }}Circle"></span></td>
+                        {{ end }}
+                      </tr>
+                    {{ end }}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</main>
+{{ partial "footer.html" . }}

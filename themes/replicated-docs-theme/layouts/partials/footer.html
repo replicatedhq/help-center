@@ -1,0 +1,60 @@
+	<footer>
+		<div class="container">
+			<div class="footer-items-wrapper">
+        <div class="footer-list flex1 paddingContainer">
+					{{ partial "footer-items.html" . }}
+        </div>
+			</div>
+		</div>
+	</footer>
+
+	{{ with .Site.GoogleAnalytics }}
+      <script>
+        (function(i,s,o,g,r,a,m){
+          i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||
+          []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+          m.parentNode.insertBefore(a,m)
+        })(window, document,
+          'script', '//www.google-analytics.com/analytics.js', 'ga');
+        /* General initialization */
+        ga('create', '{{ . }}', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+        /* Register handler to log search on blur */
+        var query = document.querySelector('.query');
+        query.addEventListener('blur', function() {
+          if (this.value) {
+            var path = document.location.pathname;
+            ga('send', 'pageview', path + '?q=' + this.value);
+          }
+        });
+      </script>
+    {{ end }}
+
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+	<script src="{{ .Site.BaseURL }}js/autocomplete-search.js"></script>
+	<script src="{{ .Site.BaseURL }}js/prism.js"></script>
+	<script>
+		function toggleMenuClass() {
+			this.classList.toggle("open");
+			document.getElementById("headerLinks").classList.toggle("show");
+		}
+		const toggleMenu = document.getElementById("toggleNav");
+		if (toggleMenu) {
+			toggleMenu.addEventListener("click", toggleMenuClass);
+		};
+	</script>
+</body>
+</html>

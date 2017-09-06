@@ -1,0 +1,47 @@
+.schedulers-wrapper {
+  margin-top: 0;
+}
+.scheduler-wrapper {
+  margin-top: 60px;
+}
+.scheduler .icon-wrapper {
+  min-height: 89px;
+  margin-bottom: 30px;
+}
+.learn-more-link::after {
+  content: "";
+  position: absolute;
+  background-image: url("../../images/main_spritesheet.svg");
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: -56px 0;
+  width: 7px;
+  height: 12px;
+  top: 5px;
+  right: -15px;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: transform .2s;
+  -moz-transition: transform .2s;
+  transition: transform .2s;
+}
+.learn-more-link:hover::after {
+  -webkit-transform: translateX(3px);
+  -moz-transform: translateX(3px);
+  transform: translateX(3px);
+}
+
+/* ≥ 768px */
+@media screen and (min-width: 48em) {
+  .schedulers-wrapper {
+    margin-top: 60px;
+  }
+  .scheduler-wrapper {
+    padding-right: 40px;
+    margin-top: 0;
+  }
+  .scheduler-wrapper:last-child {
+    padding-right: 0;
+  }
+}

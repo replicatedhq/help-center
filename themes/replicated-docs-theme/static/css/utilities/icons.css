@@ -1,0 +1,96 @@
+.icon.u-guidesIcon {
+  background-position: 0 0;
+  width: 46px;
+  height: 43px;
+}
+.icon.u-documentationIcon {
+  background-position: 0 -45px;
+  width: 35px;
+  height: 42px;
+}
+.icon.u-apiReferenceIcon {
+  background-position: 0 -89px;
+  width: 42px;
+  height: 49px;
+}
+.icon.u-contactIcon {
+  background-position: 0 -140px;
+  width: 46px;
+  height: 48px;
+}
+.icon.u-navIcon {
+  background-position: -70px 0;
+  width: 23px;
+  height: 14px;
+}
+.icon.u-closeIconWhite {
+  background-position: -95px 0;
+  width: 14px;
+  height: 14px;
+}
+.icon.u-searchIcon {
+  background-position: -70px -172px;
+  width: 20px;
+  height: 20px;
+}
+
+.icon.u-beginnerWings {
+  background-position: 0 -256px;
+  width: 200px;
+  height: 61px;
+}
+.icon.u-intermediateWings {
+  background-position: 0 -319px;
+  width: 211px;
+  height: 61px;
+}
+.icon.u-advancedWings {
+  background-position: 0 -382px;
+  width: 211px;
+  height: 78px;
+}
+.icon.u-guidesHeaderIcon {
+  background-position: -70px -16px;
+  width: 60px;
+  height: 56px;
+}
+.icon.u-docsHeaderIcon {
+  background-position: -70px -96px;
+  width: 47px;
+  height: 56px;
+}
+.icon.u-greenCheckCircle {
+  background-position: -70px -194px;
+  width: 20px;
+  height: 20px;
+}
+.icon.u-grayFailCircle {
+  background-position: -70px -216px;
+  width: 20px;
+  height: 20px;
+}
+
+.replicatedLogo {
+  background-image: url("../../images/rep_logo@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 140px;
+  height: 33px;
+  display: block;
+}
+.kubernetesLogo {
+  background-image: url("../../images/kubernetes_logo@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 70px;
+  height: 67px;
+  display: block;
+}
+.dockerSwarmLogo {
+  background-image: url("../../images/ds_logo@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 75px;
+  height: 60px;
+  display: block;
+}
