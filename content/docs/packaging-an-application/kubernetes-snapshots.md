@@ -1,11 +1,11 @@
-+++
-date = "2017-08-31T00:00:00Z"
-title = "Kubernetes Snapshots"
-description = "Application Snapshots on Kubernetes"
-weight = "219"
-categories = [ "Packaging" ]
-aliases = []
-+++
+---
+date: "2017-08-31T00:00:00Z"
+title: "Kubernetes Snapshots"
+description: "Application Snapshots on Kubernetes"
+weight: "219"
+categories: [ "Packaging an application" ]
+aliases: []
+---
 
 Kubernetes Snapshots can be used to configure incremental backups for any Kubernetes resources
 that use a [Persistent Volume Claim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) (PVC)
