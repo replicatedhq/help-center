@@ -6,6 +6,7 @@ categories: [ "Packaging an Application" ]
 tags: [ "CLI Commands", "Clusters" ]
 index: "docs"
 weight: "210"
+guide: 1
 ---
 
 The `admin_commands` section allows you to define ad-hoc commands that can be executed inside a running container from the shell.
