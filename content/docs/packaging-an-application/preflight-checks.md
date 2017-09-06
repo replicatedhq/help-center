@@ -76,7 +76,7 @@ components:
 Replicated enforces these requirements and will not allow the customer to start the application without either meeting these requirements or
 dismissing the warnings. Upon dismissing preflight warnings, an entry will be recorded in the on-premise audit log.
 
-![Preflight Checks Screenshot](/static/images/post-screens/preflight-checks.png)
+![Preflight Checks Screenshot](/images/post-screens/preflight-checks.png)
 
 {{% page_notes %}}
 - `min_disk_space` does not guarantee free space, it refers to the disk size mounted at the specified location.
