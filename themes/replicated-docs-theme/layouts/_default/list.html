@@ -1,10 +1,15 @@
 {{ partial "header.html" . }}
 	<main>
-		{{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
-		{{ range $paginator.Pages }}
-			{{ partial "summary.html" . }}
-		{{ end }}
-		{{ partial "pagination.html" . }}
+		<div class="page-header u-gradient--{{.Params.headerGradient}} main-section flex-column flex1 justifyContent--center">
+     		<div class="container u-marginTop--most">
+				<div class="u-marginTop--more u-textAlign--center u-lineHeight--normal">
+				<h3 class="u-color--white u-fontWeight--bold u-fontSize--header">{{ .Title }}</h3>
+				<p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--small">{{ .Description }}</p>
+				</div>
+      		</div>
+    	</div>
+		<div class="{{ .Params.wrapperCSSClass }}">
+      		{{ .Content }}
+    	</div>
 	</main>
-{{ partial "sidebar.html" . }}
 {{ partial "footer.html" . }}
