@@ -70,7 +70,8 @@
   height: 20px;
 }
 
-.replicatedLogo {
+.replicatedLogo,
+.replicatedLogo-main {
   background-image: url("../../images/rep_logo@2x.png");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -92,5 +93,22 @@
   background-size: 100%;
   width: 75px;
   height: 60px;
+  display: block;
+}
+
+.kubernetesLogo-combo {
+  background-image: url("../../images/kub-repl@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 184px;
+  height: 52px;
+  display: block;
+}
+.dockerSwarmLogo-combo {
+  background-image: url("../../images/ds-repl@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 184px;
+  height: 43px;
   display: block;
 }
