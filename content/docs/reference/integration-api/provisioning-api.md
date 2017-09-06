@@ -9,7 +9,7 @@ index: "docs"
 
 You are (optionally) responsible for implementing a provisioning API to enable full identity sync. Once enabled, Replicated will make calls into this API when changes are detected in the directory service.
 
-When implemented and defined in the [Identity configuration](docs/packaging-an-application/ldap-integration/), this API will receive the list of LDAP users (initially) and updates when users are added, edited, and removed. Should Replicated receive a non 2xx response from your provisioning endpoint it will stop updates and continue with the same request on the next sync.
+When implemented and defined in the [Identity configuration](/docs/packaging-an-application/ldap-integration/), this API will receive the list of LDAP users (initially) and updates when users are added, edited, and removed. Should Replicated receive a non 2xx response from your provisioning endpoint it will stop updates and continue with the same request on the next sync.
 
 ### GET /v1/ping
 
