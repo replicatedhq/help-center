@@ -10,11 +10,24 @@ categories = [ "Knowledgebase", "Supporting Your Customers" ]
 
 
 
-### Airgap XXXXX, XXXXX (fill in intro)
+### An “airgapped” environment is a network that has no path to inbound or outbound internet traffic at all.  As a result, there are some unique issues sometimes found during installation. 
+### Below are some commonly-found errors and their solutions:
 
-### Below are some common errors seen with Airgap:
+### 1. Internal Server Error/ License not Airgap-enabled
+```bash
+docker logs replicated-ui
+WARNING 2016/08/24 19:56:27 airgap/airgap.go:144 Airgap package at /tmp/getelk.airgapllkk does not exist
+ERROR 2016/08/24 19:56:27 premkit/log/gin.go:52 [GIN] 412 | 328.002094ms | | POST /v0.1/license/airgap
+```
+#### Solution: Determine whether path or airgap file are incorrect
+To verify license is airgap-enabled:
+```bash
+docker logs replicated-ui
+WARNING 2016/08/24 19:56:27 airgap/airgap.go:144 Airgap package at /tmp/getelk.airgapllkk does not exist
+ERROR 2016/08/24 19:56:27 premkit/log/gin.go:52 [GIN] 412 | 328.002094ms | | POST /v0.1/license/airgap
+```
 
-### 1. No Disk Space
+### 2. No Disk Space
 ```bash
 docker logs replicated
 ERROR 2016/08/24 22:14:45 airgap/airgap.go:166 write /tmp/airgap-package492843268/images/public/elasticsearch:latest: no space left on device
@@ -41,7 +54,7 @@ ln -s /dev/sdb /var/lib/docker/devicemapper/devicemapper/data
 service start docker
 ```
 
-### 2. Missing Intermediate Versions
+### 3. Missing Intermediate Versions
 
 ```bash
 docker logs replicated
@@ -51,20 +64,6 @@ ERROR 2016/08/26 20:55:05 premkit/log/gin.go:52 [GIN] 500 | 33.939218035s | | PO
 #### Solution: Create a new license and Airgap package 
 See [documentation](https://help.staging.replicated.com/docs/distributing-an-application/create-licenses/#airgap-download-enabled)
 
-
-### 3. Internal Server Error/ License not Airgap-enabled
-```bash
-docker logs replicated-ui
-WARNING 2016/08/24 19:56:27 airgap/airgap.go:144 Airgap package at /tmp/getelk.airgapllkk does not exist
-ERROR 2016/08/24 19:56:27 premkit/log/gin.go:52 [GIN] 412 | 328.002094ms | | POST /v0.1/license/airgap
-```
-#### Solution: Determine whether path or airgap file are incorrect
-To verify license is airgap-enabled:
-```bash
-docker logs replicated-ui
-WARNING 2016/08/24 19:56:27 airgap/airgap.go:144 Airgap package at /tmp/getelk.airgapllkk does not exist
-ERROR 2016/08/24 19:56:27 premkit/log/gin.go:52 [GIN] 412 | 328.002094ms | | POST /v0.1/license/airgap
-```
 
 ### 4. Restore Errors
 Snapshot does not grab the remote images
