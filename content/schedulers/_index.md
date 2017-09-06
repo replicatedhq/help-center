@@ -53,7 +53,7 @@ wrapperCSSClass: "scheduler-types-section"
         <div class="paddingContainer">
             <div class='u-flexTabletReflow flexDirection--rowReverse'>
                 <div class='flex1 flex-column flex-verticalCenter u-lineHeight--normal right-content'>
-                    <span class="logo kubernetesLogo"></span>
+                    <span class="logo kubernetesLogo-combo"></span>
                     <h5>Kubernetes + Replicated</h5>
                     <p>Kubernetes is a powerful and popular container orchestration and scheduler platform. Many organizations are investing in running their hosted product on Kubernetes, and want to leverage this investment for enterprise installations.</p><p>Replicated helps minimize the interactions between your customer and the Kubernetes cluster, with the builtin Admin Console providing the functionality required to manage your application.</p>
                 </div>
@@ -83,7 +83,7 @@ wrapperCSSClass: "scheduler-types-section"
         <div class="paddingContainer">
             <div class='u-flexTabletReflow'>
                 <div class='flex1 flex-column flex-verticalCenter u-lineHeight--normal left-content'>
-                    <span class="logo dockerSwarmLogo"></span>
+                    <span class="logo dockerSwarmLogo-combo"></span>
                     <h5>Docker Swarm + Replicated</h5>
                     <p>Docker Swarm is great if you have existing docker-compose files and want to target servers running Docker 1.13.1 or newer.</p><p>Replicated supports deploying Swarm services to a swarm cluster. On operating systems supporting Docker 1.13.1 or later, you can provide an appliance-like enterprise experience using the Swarm scheduler, using your existing docker-compose.yml.</p>
                 </div>

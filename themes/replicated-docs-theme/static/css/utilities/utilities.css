@@ -12,6 +12,7 @@
 .u-minWidth--full { min-width: 100%; }
 .u-height--full { height: 100%; }
 .u-width--full { width: 100%; }
+.u-widthMobile--full { width: 100%; }
 
 /* Spacing utility classes */
 
@@ -85,6 +86,7 @@
 @media screen and (min-width: 48em) {
   .u-show--mobileTablet { display: none !important; }
   .u-hidden--mobileTablet { display: flex !important; }
+  .u-widthMobile--full { width: auto; }
 }
 
 /* ≥ 960px */

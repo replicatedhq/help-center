@@ -72,7 +72,7 @@ nav ul ul.show {
     -moz-transition: color .2s;
     transition: color .2s;
   }
-  nav ul li:hover a {
+  nav li ul li:hover a {
     color: #ffffff;
   }
   nav ul ul.header-links {
