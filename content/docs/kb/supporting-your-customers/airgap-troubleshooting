@@ -10,8 +10,8 @@ categories = [ "Knowledgebase", "Supporting Your Customers" ]
 
 
 
-### An “airgapped” environment is a network that has no path to inbound or outbound internet traffic at all.  As a result, there are some unique issues sometimes found during installation. 
-### Below are some commonly-found errors and their solutions:
+### An “airgapped” environment is a network that has no path to inbound or outbound internet traffic at all.  As a result, there are a few unique issues sometimes found during installation. 
+### Below are some common errors and their solutions:
 
 ### 1. Internal Server Error/ License not Airgap-enabled
 ```bash
