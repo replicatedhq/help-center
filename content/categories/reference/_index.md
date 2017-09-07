@@ -4,4 +4,6 @@ description: "References for writting your application YAML, using the Replicate
 weight: 105
 index: "docs"
 gradient: "purpleToPink"
+aliases:
+    - /api
 ---
