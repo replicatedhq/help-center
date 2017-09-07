@@ -8,9 +8,11 @@
 				<div class="container u-marginTop--most">
 					<div class="paddingContainer">
 						<div class="flex flex-auto justifyContent--center u-marginTop--more">
+							{{ if .Params.api }}
 							<div class="flex-auto u-hidden--mobileTablet">
 								<span class="icon u-apiHeaderIcon u-marginRight--normal"></span>
 							</div>
+							{{ end }}
 							<div class="flex-auto u-width--full">
 								<h3 class="u-color--white u-fontWeight--bold u-fontSize--header">{{ .Title }}</h3>
                                 <p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--normal u-lineHeight--normal">{{ .Description }}</p>
