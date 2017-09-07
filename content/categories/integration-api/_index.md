@@ -4,4 +4,5 @@ description: "The Integration API is hosted with Replicated's on-prem daemon and
 hideFromList: true
 index: "docs"
 gradient: "purpleToPink"
+api: true
 ---

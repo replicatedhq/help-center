@@ -4,6 +4,7 @@ description: "The Vendor API is available for integrating Replicated into your w
 hideFromList: true
 index: "docs"
 gradient: "purpleToPink"
+api: true
 ---
 
 The Replicated Vendor API is available to create and manage applications, release, customers, liceneses and more.
