@@ -6,6 +6,7 @@ weight: "201"
 categories: [ "Packaging an Application" ]
 tags: [ "Application YAML" ]
 index: "docs"
+guide: 1
 ---
 
 The properties section of the YAML allows you to configure properties of the admin console.
