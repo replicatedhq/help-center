@@ -132,6 +132,8 @@ provided as the result of a command (value_cmd or data_cmd) will persist and wil
 change after the first execution of the command. It will appear as the HTML input value
 in the settings section of the On-Prem Console.
 
+[todo: add note here]
+
 ```yaml
 - name: custom_key
   title: Set your secret key for your app
