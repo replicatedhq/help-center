@@ -143,7 +143,7 @@ Setting labels can be customized if needed. However, setting names must remain e
     # User search DN.  Together with Base DN, it should form a valid search DN: <User Search DN>,<Base DN>
     title: User search DN
     type: text
-    value: '{{repl LdapCopyAuthFrom "UserSearchDN"}}'
+    value: '{{repl LdapCopyAuthFrom "UserSearchDNFirst"}}'
     default: ou=users
     required: true
   - name: ldap_advanced_search
@@ -157,7 +157,7 @@ Setting labels can be customized if needed. However, setting names must remain e
     # without an LDAP search query.
     title: Restricted User Group
     type: text
-    value: '{{repl LdapCopyAuthFrom "RestrictedGroupCNs"}}'
+    value: '{{repl LdapCopyAuthFrom "RestrictedGroupCNFirst"}}'
     required: false
     when: ldap_advanced_search=0
   - name: ldap_user_query
