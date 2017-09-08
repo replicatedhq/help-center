@@ -366,6 +366,7 @@ Possible Options:
 | RestrictedGroupCNAll | []string |
 | FieldUsername | string |
 | LoginUsername | string |
+
 ```yaml
 env_vars:
 - name: LDAP_HOSTNAME
