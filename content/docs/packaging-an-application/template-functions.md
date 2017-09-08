@@ -366,6 +366,9 @@ Possible Options:
 | RestrictedGroupCNAll | []string |
 | FieldUsername | string |
 | LoginUsername | string |
+| AdvancedSearchBool | boolean |
+| UserQuery | string |
+| RestrictedGroupQuery | string |
 
 ```yaml
 env_vars:
