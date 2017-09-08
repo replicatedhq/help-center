@@ -349,18 +349,23 @@ For a clustered application this value will be different for each host.
 
 {{< template_function name="LDAPCopyAuthFrom" replicated="true" kubernetes="true" swarm="true" >}}
 ```go
-func LdapCopyAuthFrom(keyName string) string
+func LdapCopyAuthFrom(keyName string) interface{}
 ```
 Possible Options:
-`Hostname`
-`Port`
-`SearchUsername`
-`SearchPassword`
-`BaseDN`
-`UserSearchDN`
-`RestrictedGroupCNs`
-`FieldUsername`
-`LoginUsername`
+
+| Key | Type |
+| --- | ---- |
+| Hostname | string |
+| Port | string |
+| SearchUsername | string |
+| SearchPassword | string |
+| BaseDN | string |
+| UserSearchDNFirst | string |
+| UserSearchDNAll | string |
+| RestrictedGroupCNFirst | []string |
+| RestrictedGroupCNAll | []string |
+| FieldUsername | string |
+| LoginUsername | string |
 ```yaml
 env_vars:
 - name: LDAP_HOSTNAME
