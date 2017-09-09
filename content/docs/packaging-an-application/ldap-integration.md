@@ -280,10 +280,17 @@ The following JSON schema defines the advanced LDAP config spec. This is especia
 					"minItems": 1
 				},
 				"ldap_restricted_user_groups": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"oneOf": [
+						{
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						{
+							"type": "null"
+						}
+					]
 				},
 				"ldap_username_field": {
 					"type": "string"
