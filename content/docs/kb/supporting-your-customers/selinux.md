@@ -28,7 +28,7 @@ These cannot be run under in the unmodified `svirt_sandbox_file_t` domain.
 Fortunately the `spc_t` domain [was designed for this use case](https://developers.redhat.com/blog/2014/11/06/introducing-a-super-privileged-container-concept/).
 Run a container in the `spc_t` domain with the `--security-opt` flag:
 ```
-docker run --security-opt labe=type:spc_t replicated
+docker run --security-opt label=type:spc_t replicated
 ```
 The install scripts configure Replicated to run in this domain.
 
@@ -94,24 +94,7 @@ This single redis container is the sole user of the /data directory, so we can u
 
 After creating a new release with the updated config and upgrading the installed app, the Redis component works as expected.
 
-## Changing the Default Replicated Domain
-Replicated can be installed to run under any domain by passing the `selinux_replicated_domain` flag to the install script.
-```shell
-sudo bash install.sh selinux_replicated_domain=replicated_t
-```
-The specified domain must have installed policy to permit Replicated to manage the host system.
-
-### Kubernetes
-`https://get.replicated.com/kubernetes.yml` returns pod specs with the `spc_t` domain by default.
-Setting the `selinux_replicated_domain` query parameter modifies the returned yml.
-
-```shell
-curl https://get.replicated.com/kubernetes.yml?selinux_replicated_domain=replicated_t
-```
-The returned Replicated pod specs would then include securityContext options with the request type:
-```yaml
-  securityContext:
-    seLinuxOptions:
-      type: replicated_t
-```
-
+## Best Practices
+* Add the `"z"` or `"Z"` option to all volumes mounted in containers.
+* Test applications with SELinux enabled while using the audit log to identify components with incorrect permissions.
+* Consider the `spc_t` for containers designed to manage host systems.
