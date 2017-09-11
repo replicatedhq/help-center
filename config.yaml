@@ -43,5 +43,5 @@ menu:
       URL: "/docs/"
     - Name: "API Resources"
       Weight: 3
-      URL: "/categories/reference/"
+      URL: "/api/"
 ---
