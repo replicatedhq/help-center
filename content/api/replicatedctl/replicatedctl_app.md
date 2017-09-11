@@ -23,9 +23,9 @@ Manage apps
 ```
 
 ### SEE ALSO
-* [replicatedctl](/docs/reference/replicatedctl/)	 - Replicated CLI
-* [replicatedctl app inspect](/docs/reference/replicatedctl/replicatedctl_app_inspect/)	 - Display detailed information on the app
-* [replicatedctl app start](/docs/reference/replicatedctl/replicatedctl_app_start/)	 - Start the app
-* [replicatedctl app status](/docs/reference/replicatedctl/replicatedctl_app_status/)	 - Manage the app status
-* [replicatedctl app stop](/docs/reference/replicatedctl/replicatedctl_app_stop/)	 - Stop the app
+* [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
+* [replicatedctl app inspect](/api/replicatedctl/replicatedctl_app_inspect/)	 - Display detailed information on the app
+* [replicatedctl app start](/api/replicatedctl/replicatedctl_app_start/)	 - Start the app
+* [replicatedctl app status](/api/replicatedctl/replicatedctl_app_status/)	 - Manage the app status
+* [replicatedctl app stop](/api/replicatedctl/replicatedctl_app_stop/)	 - Stop the app
 

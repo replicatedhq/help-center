@@ -23,6 +23,6 @@ Manage the app status
 ```
 
 ### SEE ALSO
-* [replicatedctl app](/docs/reference/replicatedctl/replicatedctl_app/)	 - Manage apps
-* [replicatedctl app status inspect](/docs/reference/replicatedctl/replicatedctl_app_status_inspect/)	 - Display detailed information on the app's status
+* [replicatedctl app](/api/replicatedctl/replicatedctl_app/)	 - Manage apps
+* [replicatedctl app status inspect](/api/replicatedctl/replicatedctl_app_status_inspect/)	 - Display detailed information on the app's status
 

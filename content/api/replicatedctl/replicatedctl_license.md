@@ -23,7 +23,7 @@ Manage the license
 ```
 
 ### SEE ALSO
-* [replicatedctl](/docs/reference/replicatedctl/)	 - Replicated CLI
-* [replicatedctl license activate](/docs/reference/replicatedctl/replicatedctl_license_activate/)	 - Activate the license
-* [replicatedctl license inspect](/docs/reference/replicatedctl/replicatedctl_license_inspect/)	 - Display detailed information on the license
+* [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
+* [replicatedctl license activate](/api/replicatedctl/replicatedctl_license_activate/)	 - Activate the license
+* [replicatedctl license inspect](/api/replicatedctl/replicatedctl_license_inspect/)	 - Display detailed information on the license
 

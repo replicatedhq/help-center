@@ -34,5 +34,5 @@ replicatedctl app-config set NAME
 ```
 
 ### SEE ALSO
-* [replicatedctl app-config](/docs/reference/replicatedctl/replicatedctl_app-config/)	 - Manage app config
+* [replicatedctl app-config](/api/replicatedctl/replicatedctl_app-config/)	 - Manage app config
 

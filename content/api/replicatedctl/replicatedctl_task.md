@@ -23,8 +23,8 @@ Manage tasks
 ```
 
 ### SEE ALSO
-* [replicatedctl](/docs/reference/replicatedctl/)	 - Replicated CLI
-* [replicatedctl task attach](/docs/reference/replicatedctl/replicatedctl_task_attach/)	 - Stream task progress
-* [replicatedctl task inspect](/docs/reference/replicatedctl/replicatedctl_task_inspect/)	 - Display detailed information on one or more tasks
-* [replicatedctl task ls](/docs/reference/replicatedctl/replicatedctl_task_ls/)	 - List tasks
+* [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
+* [replicatedctl task attach](/api/replicatedctl/replicatedctl_task_attach/)	 - Stream task progress
+* [replicatedctl task inspect](/api/replicatedctl/replicatedctl_task_inspect/)	 - Display detailed information on one or more tasks
+* [replicatedctl task ls](/api/replicatedctl/replicatedctl_task_ls/)	 - List tasks
 

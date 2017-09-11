@@ -36,5 +36,5 @@ replicatedctl license-load
 ```
 
 ### SEE ALSO
-* [replicatedctl](/docs/reference/replicatedctl/)	 - Replicated CLI
+* [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
 

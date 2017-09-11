@@ -23,9 +23,9 @@ Manage app config
 ```
 
 ### SEE ALSO
-* [replicatedctl](/docs/reference/replicatedctl/)	 - Replicated CLI
-* [replicatedctl app-config export](/docs/reference/replicatedctl/replicatedctl_app-config_export/)	 - Export app config settings
-* [replicatedctl app-config import](/docs/reference/replicatedctl/replicatedctl_app-config_import/)	 - Import app config settings from stdin
-* [replicatedctl app-config set](/docs/reference/replicatedctl/replicatedctl_app-config_set/)	 - Sets an individual app config value
-* [replicatedctl app-config view](/docs/reference/replicatedctl/replicatedctl_app-config_view/)	 - View app config form
+* [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
+* [replicatedctl app-config export](/api/replicatedctl/replicatedctl_app-config_export/)	 - Export app config settings
+* [replicatedctl app-config import](/api/replicatedctl/replicatedctl_app-config_import/)	 - Import app config settings from stdin
+* [replicatedctl app-config set](/api/replicatedctl/replicatedctl_app-config_set/)	 - Sets an individual app config value
+* [replicatedctl app-config view](/api/replicatedctl/replicatedctl_app-config_view/)	 - View app config form
 

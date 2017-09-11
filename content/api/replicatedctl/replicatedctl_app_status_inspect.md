@@ -33,5 +33,5 @@ replicatedctl app status inspect
 ```
 
 ### SEE ALSO
-* [replicatedctl app status](/docs/reference/replicatedctl/replicatedctl_app_status/)	 - Manage the app status
+* [replicatedctl app status](/api/replicatedctl/replicatedctl_app_status/)	 - Manage the app status
 

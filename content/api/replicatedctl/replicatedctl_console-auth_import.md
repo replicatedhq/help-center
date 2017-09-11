@@ -33,5 +33,5 @@ replicatedctl console-auth import
 ```
 
 ### SEE ALSO
-* [replicatedctl console-auth](/docs/reference/replicatedctl/replicatedctl_console-auth/)	 - Manage UI console authentication settings
+* [replicatedctl console-auth](/api/replicatedctl/replicatedctl_console-auth/)	 - Manage UI console authentication settings
 

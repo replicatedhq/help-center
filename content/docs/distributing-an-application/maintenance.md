@@ -9,7 +9,7 @@ index: "docs"
 
 ## Command Line Interface
 
-You can use the [command line interface](/docs/reference/replicated-cli/) to list the installed app, start and stop
+You can use the [command line interface](/api/replicated-cli/) to list the installed app, start and stop
 your application, get the current status, ask for updates or support bundles and more.
 
 ## Reset Console Password

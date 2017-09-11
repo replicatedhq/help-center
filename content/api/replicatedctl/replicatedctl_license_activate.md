@@ -36,5 +36,5 @@ replicatedctl license activate CODE
 ```
 
 ### SEE ALSO
-* [replicatedctl license](/docs/reference/replicatedctl/replicatedctl_license/)	 - Manage the license
+* [replicatedctl license](/api/replicatedctl/replicatedctl_license/)	 - Manage the license
 
