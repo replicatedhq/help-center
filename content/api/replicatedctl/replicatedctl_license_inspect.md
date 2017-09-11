@@ -35,5 +35,5 @@ replicatedctl license inspect
 ```
 
 ### SEE ALSO
-* [replicatedctl license](/docs/reference/replicatedctl/replicatedctl_license/)	 - Manage the license
+* [replicatedctl license](/api/replicatedctl/replicatedctl_license/)	 - Manage the license
 

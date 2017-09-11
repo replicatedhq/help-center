@@ -27,5 +27,5 @@ replicatedctl params unset KEY
 ```
 
 ### SEE ALSO
-* [replicatedctl params](/docs/reference/replicatedctl/replicatedctl_params/)	 - Manage params
+* [replicatedctl params](/api/replicatedctl/replicatedctl_params/)	 - Manage params
 

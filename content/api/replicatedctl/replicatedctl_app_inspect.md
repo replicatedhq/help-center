@@ -34,5 +34,5 @@ replicatedctl app inspect
 ```
 
 ### SEE ALSO
-* [replicatedctl app](/docs/reference/replicatedctl/replicatedctl_app/)	 - Manage apps
+* [replicatedctl app](/api/replicatedctl/replicatedctl_app/)	 - Manage apps
 

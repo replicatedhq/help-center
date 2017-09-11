@@ -23,9 +23,9 @@ Manage app releases
 ```
 
 ### SEE ALSO
-* [replicatedctl](/docs/reference/replicatedctl/)	 - Replicated CLI
-* [replicatedctl app-release apply](/docs/reference/replicatedctl/replicatedctl_app-release_apply/)	 - Applies pending app releases
-* [replicatedctl app-release inspect](/docs/reference/replicatedctl/replicatedctl_app-release_inspect/)	 - Display detailed information on one or more app releases
-* [replicatedctl app-release ls](/docs/reference/replicatedctl/replicatedctl_app-release_ls/)	 - List app releases
-* [replicatedctl app-release notes](/docs/reference/replicatedctl/replicatedctl_app-release_notes/)	 - Display release notes for an app releases
+* [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
+* [replicatedctl app-release apply](/api/replicatedctl/replicatedctl_app-release_apply/)	 - Applies pending app releases
+* [replicatedctl app-release inspect](/api/replicatedctl/replicatedctl_app-release_inspect/)	 - Display detailed information on one or more app releases
+* [replicatedctl app-release ls](/api/replicatedctl/replicatedctl_app-release_ls/)	 - List app releases
+* [replicatedctl app-release notes](/api/replicatedctl/replicatedctl_app-release_notes/)	 - Display release notes for an app releases
 

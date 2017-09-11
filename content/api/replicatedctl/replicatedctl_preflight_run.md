@@ -35,5 +35,5 @@ replicatedctl preflight run
 ```
 
 ### SEE ALSO
-* [replicatedctl preflight](/docs/reference/replicatedctl/replicatedctl_preflight/)	 - View or manage preflight checks
+* [replicatedctl preflight](/api/replicatedctl/replicatedctl_preflight/)	 - View or manage preflight checks
 

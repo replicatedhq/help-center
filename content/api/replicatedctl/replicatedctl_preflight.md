@@ -23,8 +23,8 @@ View or manage preflight checks
 ```
 
 ### SEE ALSO
-* [replicatedctl](/docs/reference/replicatedctl/)	 - Replicated CLI
-* [replicatedctl preflight dismiss](/docs/reference/replicatedctl/replicatedctl_preflight_dismiss/)	 - Dismiss preflight check warnings
-* [replicatedctl preflight run](/docs/reference/replicatedctl/replicatedctl_preflight_run/)	 - Run the preflight checks
-* [replicatedctl preflight status](/docs/reference/replicatedctl/replicatedctl_preflight_status/)	 - Get preflight status
+* [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
+* [replicatedctl preflight dismiss](/api/replicatedctl/replicatedctl_preflight_dismiss/)	 - Dismiss preflight check warnings
+* [replicatedctl preflight run](/api/replicatedctl/replicatedctl_preflight_run/)	 - Run the preflight checks
+* [replicatedctl preflight status](/api/replicatedctl/replicatedctl_preflight_status/)	 - Get preflight status
 

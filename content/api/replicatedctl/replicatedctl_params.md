@@ -23,9 +23,9 @@ Manage params
 ```
 
 ### SEE ALSO
-* [replicatedctl](/docs/reference/replicatedctl/)	 - Replicated CLI
-* [replicatedctl params export](/docs/reference/replicatedctl/replicatedctl_params_export/)	 - Export params
-* [replicatedctl params import](/docs/reference/replicatedctl/replicatedctl_params_import/)	 - Import params from stdin
-* [replicatedctl params set](/docs/reference/replicatedctl/replicatedctl_params_set/)	 - Sets an individual param value
-* [replicatedctl params unset](/docs/reference/replicatedctl/replicatedctl_params_unset/)	 - Unsets a runtime overridden param value
+* [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
+* [replicatedctl params export](/api/replicatedctl/replicatedctl_params_export/)	 - Export params
+* [replicatedctl params import](/api/replicatedctl/replicatedctl_params_import/)	 - Import params from stdin
+* [replicatedctl params set](/api/replicatedctl/replicatedctl_params_set/)	 - Sets an individual param value
+* [replicatedctl params unset](/api/replicatedctl/replicatedctl_params_unset/)	 - Unsets a runtime overridden param value
 

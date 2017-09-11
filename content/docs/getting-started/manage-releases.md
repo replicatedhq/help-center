@@ -29,4 +29,4 @@ The Beta channel is designed to provide a channel to test the upgrade path. You 
 ### Unstable
 The Unstable channel is designed for you to constantly push releases to, much in the same way that you continuously deploy new versions to your cloud product. This is the channel that your development environment should have a license assigned to. You likely will not deliver any Unstable licenses to your customers.
 
-In addition to creating additional Release Channels in the [Replicated vendor site](https://vendor.replicated.com/channels), you can also use the [Vendor API](/docs/reference/vendor-api/).
+In addition to creating additional Release Channels in the [Replicated vendor site](https://vendor.replicated.com/channels), you can also use the [Vendor API](/api/vendor-api/).

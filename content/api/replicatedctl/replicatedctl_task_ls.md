@@ -36,5 +36,5 @@ replicatedctl task ls
 ```
 
 ### SEE ALSO
-* [replicatedctl task](/docs/reference/replicatedctl/replicatedctl_task/)	 - Manage tasks
+* [replicatedctl task](/api/replicatedctl/replicatedctl_task/)	 - Manage tasks
 

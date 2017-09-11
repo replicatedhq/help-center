@@ -37,5 +37,5 @@ replicatedctl app-release apply
 ```
 
 ### SEE ALSO
-* [replicatedctl app-release](/docs/reference/replicatedctl/replicatedctl_app-release/)	 - Manage app releases
+* [replicatedctl app-release](/api/replicatedctl/replicatedctl_app-release/)	 - Manage app releases
 
