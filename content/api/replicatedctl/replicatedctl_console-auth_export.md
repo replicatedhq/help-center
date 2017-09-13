@@ -5,6 +5,7 @@ description: "Export console auth config for current auth type"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_console-auth_export]
 ---
 
 ## replicatedctl console-auth export

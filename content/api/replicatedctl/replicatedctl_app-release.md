@@ -5,6 +5,7 @@ description: "Manage app releases"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_app-release]
 ---
 
 ## replicatedctl app-release

@@ -5,6 +5,7 @@ description: "Import app config settings from stdin"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_app-config_import]
 ---
 
 ## replicatedctl app-config import

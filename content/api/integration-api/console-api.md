@@ -5,6 +5,7 @@ description: "API to use the Replicated console settings"
 weight: "557"
 categories: [ "Integration API" ]
 index: "docs"
+aliases : [docs/reference/integration-api/console-api]
 ---
 
 Console API provides API functionality against console settings.

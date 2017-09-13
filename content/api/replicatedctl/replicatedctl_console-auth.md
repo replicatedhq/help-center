@@ -5,6 +5,7 @@ description: "Manage UI console authentication settings"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_console-auth]
 ---
 
 ## replicatedctl console-auth

@@ -5,6 +5,7 @@ description: "Dismiss preflight check warnings"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_preflight_dismiss]
 ---
 
 ## replicatedctl preflight dismiss

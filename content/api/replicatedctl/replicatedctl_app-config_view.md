@@ -5,6 +5,7 @@ description: "View app config form"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_app-config_view]
 ---
 
 ## replicatedctl app-config view

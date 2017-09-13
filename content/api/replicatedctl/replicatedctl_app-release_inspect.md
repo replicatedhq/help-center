@@ -5,6 +5,7 @@ description: "Display detailed information on one or more app releases"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_app-release_inspect]
 ---
 
 ## replicatedctl app-release inspect

@@ -5,6 +5,7 @@ description: "Stop the app"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_app_stop]
 ---
 
 ## replicatedctl app stop

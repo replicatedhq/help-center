@@ -5,6 +5,7 @@ description: "List tasks"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_task_ls]
 ---
 
 ## replicatedctl task ls

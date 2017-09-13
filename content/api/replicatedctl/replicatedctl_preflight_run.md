@@ -5,6 +5,7 @@ description: "Run the preflight checks"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_preflight_run]
 ---
 
 ## replicatedctl preflight run

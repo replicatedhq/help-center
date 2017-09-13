@@ -5,6 +5,7 @@ description: "Load the license from stdin"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_license-load]
 ---
 
 ## replicatedctl license-load

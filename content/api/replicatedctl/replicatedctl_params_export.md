@@ -5,6 +5,7 @@ description: "Export params"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_params_export]
 ---
 
 ## replicatedctl params export

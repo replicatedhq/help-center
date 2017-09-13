@@ -5,6 +5,7 @@ description: "Manage params"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_params]
 ---
 
 ## replicatedctl params

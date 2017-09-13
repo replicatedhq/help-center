@@ -5,6 +5,7 @@ description: "Get preflight status"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_preflight_status]
 ---
 
 ## replicatedctl preflight status
