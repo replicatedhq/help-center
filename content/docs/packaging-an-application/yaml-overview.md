@@ -23,7 +23,7 @@ Kubernetes is a popular cluster and orchestration tool when running Docker conta
 
 
 ## Replicated API Version
-At the top of the YAML file, regardless of the scheduler, there must be a Replicated API version. The current API version to use is {{ .Site.Params.replicated_api_version_current }}. Note: The [Changelog](https://release-notes.replicated.com/) tracks the API version.
+At the top of the YAML file, regardless of the scheduler, there must be a Replicated API version. The current API version to use is {{< replicated_api_version_current >}}. Note: The [Changelog](https://release-notes.replicated.com/) tracks the API version.
 
 ```yaml
 replicated_api_version: {{< replicated_api_version_current >}}
