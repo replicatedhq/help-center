@@ -1,7 +1,7 @@
 ---
 date: "2017-09-14T00:00:00Z"
 lastmod: "2017-09-14T00:00:00Z"
-title: "How to Change the Log Level"
+title: "Changing Replicated's Logging Level"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
