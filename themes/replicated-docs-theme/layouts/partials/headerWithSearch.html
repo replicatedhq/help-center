@@ -51,6 +51,12 @@
 							{{ range .Site.Menus.main }}
 								<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
 							{{ end }}
+							<li>
+								<div class="search-form">
+									<input type="text" placeholder="What are you looking for?" id="search-field" style="display: none;" />
+									<span class="search-icon"></span>
+								</div>
+							</li>
 							<li class="log-in-link">
 								<a href="https://vendor.replicated.com" target="_blank">Log in</a>
 							</li>
