@@ -202,7 +202,7 @@ Setting labels can be customized if needed. However, setting names must remain e
   title: LDAP Advanced Server Settings
   description: |
     Upload a file below for advanced integration configuration. This file must conform to the 
-    [Advanced LDAP Configuration Specification](https://www.replicated.com/docs/packaging-an-application/ldap-integration/#advanced-file-specification).
+    [Advanced LDAP Configuration Specification](https://help.replicated.com/docs/packaging-an-application/ldap-integration/#advanced-ldap-configuration-specification).
   when: auth_source=auth_type_ldap_advanced
   test_proc:
     # Optional.
