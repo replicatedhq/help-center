@@ -5,6 +5,7 @@ description: "Display detailed information on one or more tasks"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_task_inspect]
 ---
 
 ## replicatedctl task inspect

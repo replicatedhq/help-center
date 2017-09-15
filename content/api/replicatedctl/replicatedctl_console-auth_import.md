@@ -5,6 +5,7 @@ description: "Import console authentication config from stdin"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_console-auth_import]
 ---
 
 ## replicatedctl console-auth import

@@ -5,6 +5,7 @@ description: "Import params from stdin"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_params_import]
 ---
 
 ## replicatedctl params import

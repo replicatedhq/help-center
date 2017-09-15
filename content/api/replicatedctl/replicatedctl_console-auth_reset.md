@@ -5,6 +5,7 @@ description: "Resets console authentication to type anonymous"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_console-auth_reset]
 ---
 
 ## replicatedctl console-auth reset

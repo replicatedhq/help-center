@@ -7,4 +7,5 @@ categories: [ "Reference" ]
 index: false
 url: "categories/vendor-api"
 api: true
+aliases : [docs/reference/vendor-api]
 ---

@@ -5,6 +5,7 @@ description: "Manage apps"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_app]
 ---
 
 ## replicatedctl app

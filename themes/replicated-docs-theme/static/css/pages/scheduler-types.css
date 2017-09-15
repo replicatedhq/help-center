@@ -48,21 +48,21 @@
 /* icon class names */
 
 .scheduler-type li.u-commandPromptRed::before {
-  background-position: -150px 0;
+  background-position: -152px 0;
   width: 29px;
   height: 23px;
   top: 3px;
   left: 0;
 }
 .scheduler-type li.u-dockerRed::before {
-  background-position: -184px -97px;
+  background-position: -186px -97px;
   width: 34px;
   height: 25px;
   top: 0;
   left: -2px;
 }
 .scheduler-type li.u-containersRed::before {
-  background-position: -150px -97px;
+  background-position: -152px -97px;
   width: 32px;
   height: 21px;
   top: 4px;
@@ -70,21 +70,21 @@
 }
 
 .scheduler-type li.u-ymlBlueDark::before {
-  background-position: -150px -26px;
+  background-position: -152px -26px;
   width: 25px;
   height: 30px;
   top: 0;
   left: 1px;
 }
 .scheduler-type li.u-powerBlue::before {
-  background-position: -150px -57px;
+  background-position: -152px -57px;
   width: 28px;
   height: 38px;
   top: -6px;
   left: 0;
 }
 .scheduler-type li.u-replicatedIconBlue::before {
-  background-position: -150px -124px;
+  background-position: -152px -124px;
   width: 25px;
   height: 30px;
   top: 0;
@@ -92,21 +92,21 @@
 }
 
 .scheduler-type li.u-commandPromptBlue::before {
-  background-position: -184px 0;
+  background-position: -186px 0;
   width: 29px;
   height: 23px;
   top: 3px;
   left: 0;
 }
 .scheduler-type li.u-ymlBlueLight::before {
-  background-position: -184px -25px;
+  background-position: -186px -25px;
   width: 25px;
   height: 30px;
   top: 0;
   left: 1px;
 }
 .scheduler-type li.u-refreshBlue::before {
-  background-position: -184px -57px;
+  background-position: -186px -57px;
   width: 26px;
   height: 26px;
   top: 1px;

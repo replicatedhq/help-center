@@ -5,6 +5,7 @@ description: "Manage app config"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_app-config]
 ---
 
 ## replicatedctl app-config

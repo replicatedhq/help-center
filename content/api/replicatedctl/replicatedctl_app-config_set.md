@@ -5,6 +5,7 @@ description: "Sets an individual app config value"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_app-config_set]
 ---
 
 ## replicatedctl app-config set

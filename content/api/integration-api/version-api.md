@@ -5,6 +5,7 @@ description: "Read the current application version, release notes, pending updat
 weight: "552"
 categories: [ "Integration API" ]
 index: "docs"
+aliases : [docs/reference/integration-api/version-api]
 ---
 
 The Version API provides endpoints for your application to read the current application version, release notes, pending updates and apply updates.

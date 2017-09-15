@@ -5,6 +5,7 @@ description: "Display detailed information on the license"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_license_inspect]
 ---
 
 ## replicatedctl license inspect

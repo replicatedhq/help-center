@@ -1,20 +1,20 @@
 .icon.u-guidesIcon {
-  background-position: 0 0;
+  background-position: -1px 0;
   width: 46px;
   height: 43px;
 }
 .icon.u-documentationIcon {
-  background-position: 0 -45px;
+  background-position: -2px -45px;
   width: 35px;
   height: 42px;
 }
 .icon.u-apiReferenceIcon {
-  background-position: 0 -89px;
+  background-position: -2px -89px;
   width: 42px;
   height: 49px;
 }
 .icon.u-contactIcon {
-  background-position: 0 -140px;
+  background-position: -2px -140px;
   width: 46px;
   height: 48px;
 }
@@ -35,27 +35,27 @@
 }
 
 .icon.u-beginnerWings {
-  background-position: 0 -256px;
+  background-position: -2px -256px;
   width: 200px;
   height: 61px;
 }
 .icon.u-intermediateWings {
-  background-position: 0 -319px;
+  background-position: -2px -319px;
   width: 211px;
   height: 61px;
 }
 .icon.u-advancedWings {
-  background-position: 0 -382px;
+  background-position: -2px -382px;
   width: 211px;
   height: 78px;
 }
 .icon.u-guidesHeaderIcon {
-  background-position: -70px -16px;
+  background-position: -72px -16px;
   width: 60px;
   height: 56px;
 }
 .icon.u-docsHeaderIcon {
-  background-position: -70px -96px;
+  background-position: -72px -96px;
   width: 47px;
   height: 56px;
 }
@@ -65,12 +65,12 @@
   height: 60px;
 }
 .icon.u-greenCheckCircle {
-  background-position: -70px -194px;
+  background-position: -72px -194px;
   width: 20px;
   height: 20px;
 }
 .icon.u-grayFailCircle {
-  background-position: -70px -216px;
+  background-position: -72px -216px;
   width: 20px;
   height: 20px;
 }

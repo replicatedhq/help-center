@@ -5,6 +5,7 @@ description: "Sets an individual param value"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_params_set]
 ---
 
 ## replicatedctl params set

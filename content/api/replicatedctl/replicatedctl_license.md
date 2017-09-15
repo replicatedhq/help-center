@@ -5,6 +5,7 @@ description: "Manage the license"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_license]
 ---
 
 ## replicatedctl license
