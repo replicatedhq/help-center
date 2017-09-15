@@ -19,7 +19,7 @@ SELinux must also be enabled and enforcing on your system for this to take effec
 Run `sestatus` or view the contents of `/etc/selinux/config` to check the status of SELinux.
 
 When started with the `--selinux-enabled` flag, Docker starts containers in the `svirt_lxc_net_t` domain.
-The `svirt_lxc_net_t` domain provides full networking capabilities as well as access to files labeled `svirt_sandbox_file_t`.
+The `svirt_lxc_net_t` domain provides full networking capabilities, read/execute access to /usr,and full access to files labeled `svirt_sandbox_file_t`.
 This type is suitable for most containerized components, such as Redis, MySQL, or Nginx.
 
 ## The spc_t domain
@@ -42,6 +42,7 @@ volumes:
   container_path: /var/lib/mysql
   options: ["Z"]
 ```
+Be careful not to relabel directories containing files required by other processes. Mounting `/etc` or `/var` with the "z" option would break most systems.
 
 The second step is to identify components that cannot run within the `svirt_lxc_net_t` domain and apply a different label to them.
 ```yaml
@@ -51,8 +52,21 @@ The second step is to identify components that cannot run within the `svirt_lxc_
 If using a custom type as in this example, the relevant policy must be installed before starting the application.
 Reusing an existing type such as `spc_t` for these containers will obviate the need to write and distribute policy.
 
-### Debugging the Counter Application
-Let's look at a simple example of packaging an application to run under SELinux. If you create a release from the example [counter app](https://help.replicated.com/docs/examples/counter-app/) and attempt to install it on a server with SELinux enabled, and then list your containers with `docker ps -a`, you'll notice the Redis container is crashing.
+### Debugging an Application
+Let's look at a simple example of packaging an application to run under SELinux.
+If you create a release containing the following Redis component and attempt to install it on a server with SELinux enabled, you'll notice the Redis container is crashing.
+```yaml
+components:
+- name: DB
+  containers:
+  - source: public
+    image_name: redis
+    version: latest
+    cmd: "[\"redis-server\", \"--appendonly\", \"yes\"]"
+    volumes:
+    - host_path: /data
+      container_path: /data
+```
 
 Since the app works without SELinux enabled, the first place to investigate is the SELinux audit log.
 ```
@@ -95,6 +109,6 @@ This single redis container is the sole user of the /data directory, so we can u
 After creating a new release with the updated config and upgrading the installed app, the Redis component works as expected.
 
 ## Best Practices
-* Add the `"z"` or `"Z"` option to all volumes mounted in containers.
+* Add the `"z"` or `"Z"` option to all volumes mounted in containers unless their content needs to be accessible to non-containerized processes.
 * Test applications with SELinux enabled while using the audit log to identify components with incorrect permissions.
 * Consider the `spc_t` for containers designed to manage host systems.

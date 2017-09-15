@@ -51,6 +51,7 @@ components:
     volumes:
     - host_path: /data
       container_path: /data
+      options: ["Z"]
     support_files: []
     restart:
       policy: on-failure
