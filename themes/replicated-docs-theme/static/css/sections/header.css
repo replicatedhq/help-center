@@ -72,7 +72,11 @@ nav ul ul.show {
 .search-form input:-moz-placeholder { /* Firefox 18- */
   color: white;
 }
-.search-form .search-icon {
+.search-form .searchIcon--white {
+  margin-top: 1px;
+  cursor: pointer;
+}
+.searchIcon--white {
   background-image: url(../../images/main_spritesheet.svg);
   background-repeat: no-repeat;
   background-size: initial;
@@ -80,20 +84,21 @@ nav ul ul.show {
   width: 20px;
   height: 20px;
   display: inline-block;
-  margin-top: 1px;
-  cursor: pointer;
 }
-
 .search-form .algolia-autocomplete {
   width: auto;
 }
-
 .search-form .algolia-autocomplete .aa-dropdown-menu {
   width: 675px;
   right: 0 !important;
   left: initial !important;
 }
-
+#mobile-search {
+  position: absolute;
+  right: 60px;
+  top: 9px;
+  z-index: 2;
+}
 /* Hide search form in nav after 880px */
 @media screen and (max-width: 1024px) {
   .search-form input {
@@ -143,5 +148,8 @@ nav ul ul.show {
     border-top: none;
     padding-top: 0;
     margin-top: 0;
+  }
+  #mobile-search {
+    display: none;
   }
 }
