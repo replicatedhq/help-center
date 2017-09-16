@@ -1,4 +1,3 @@
-
 +++
 date = "2017-09-05T00:00:00Z"
 lastmod = "2017-09-05T00:00:00Z"
@@ -6,9 +5,6 @@ title = "Airgap Troubleshooting"
 weight = "999999"
 categories = [ "Knowledgebase", "Supporting Your Customers" ]
 +++
-
-
-
 
 ### An “airgapped” environment is a network that has no path to inbound or outbound internet traffic at all.  As a result, there are a few unique issues sometimes found during installation. 
 ### Below are some common errors and their solutions:
