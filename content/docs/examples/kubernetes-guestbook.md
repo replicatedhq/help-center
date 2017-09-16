@@ -137,6 +137,9 @@ spec:
       - name: data
         persistentVolumeClaim:
           claimName: redis-pvc
+      securityContext:
+        seLinuxOptions:
+          label: s0,c1
 
 ---
 # kind: scheduler-kubernetes

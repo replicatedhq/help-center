@@ -63,6 +63,7 @@ components:
     volumes:
     - host_path: /data
       container_path: /data
+      options: ["Z"]
   - source: public
     image_name: getelk/elasticsearch-head
     version: 0.2.0
