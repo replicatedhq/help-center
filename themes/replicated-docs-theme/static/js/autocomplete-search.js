@@ -11,9 +11,9 @@ autocomplete('#autocompletesearch-box', {
             "<div class='aa-dataset-docs'></div>"
     }
 }, [{
-        source: autocomplete.sources.hits(docsIndex, {
-            hitsPerPage: 5
-        }),
+        source: _.debounce(autocomplete.sources.hits(docsIndex, {
+            hitsPerPage: 2
+        }), 200),
         displayKey: 'title',
         name: 'docs',
         templates: {
@@ -30,9 +30,9 @@ autocomplete('#autocompletesearch-box', {
         empty: "<div class='aa-empty'>No matching files</div>"
     },
     {
-        source: autocomplete.sources.hits(guidesIndex, {
-            hitsPerPage: 5
-        }),
+        source: _.debounce(autocomplete.sources.hits(guidesIndex, {
+            hitsPerPage: 2
+        }), 200),
         displayKey: 'title',
         name: 'guides',
         templates: {
@@ -49,9 +49,9 @@ autocomplete('#autocompletesearch-box', {
         empty: "<div class='aa-empty'>No matching files</div>"
     },
     {
-        source: autocomplete.sources.hits(otherIndex, {
-            hitsPerPage: 5
-        }),
+        source: _.debounce(autocomplete.sources.hits(otherIndex, {
+            hitsPerPage: 2
+        }), 200),
         displayKey: 'title',
         name: 'other',
         templates: {
@@ -79,9 +79,9 @@ autocomplete('#search-field', {
             "<div class='aa-dataset-docs'></div>"
     }
 }, [{
-        source: autocomplete.sources.hits(docsIndex, {
+        source: _.debounce(autocomplete.sources.hits(docsIndex, {
             hitsPerPage: 2
-        }),
+        }), 200),
         displayKey: 'title',
         name: 'docs',
         templates: {
@@ -98,9 +98,9 @@ autocomplete('#search-field', {
         empty: "<div class='aa-empty'>No matching files</div>"
     },
     {
-        source: autocomplete.sources.hits(guidesIndex, {
+        source: _.debounce(autocomplete.sources.hits(guidesIndex, {
             hitsPerPage: 2
-        }),
+        }), 200),
         displayKey: 'title',
         name: 'guides',
         templates: {
@@ -117,9 +117,9 @@ autocomplete('#search-field', {
         empty: "<div class='aa-empty'>No matching files</div>"
     },
     {
-        source: autocomplete.sources.hits(otherIndex, {
-            hitsPerPage: 1
-        }),
+        source: _.debounce(autocomplete.sources.hits(otherIndex, {
+            hitsPerPage: 2
+        }), 200),
         displayKey: 'title',
         name: 'other',
         templates: {
