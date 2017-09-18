@@ -53,7 +53,7 @@ autocomplete('#autocompletesearch-box', {
             hitsPerPage: 2
         }), 200),
         displayKey: 'title',
-        name: 'other',
+        name: 'replicated-other',
         templates: {
             header: '<h2 class="aa-header">Other</h2>',
             suggestion: function(suggestion) {
@@ -77,7 +77,7 @@ autocomplete('#search-field', {
     templates: {
         dropdownMenu: "<div class='aa-dataset-other'></div>" +
             "<div class='aa-dataset-docs'></div>"
-    }
+    },
 }, [{
         source: _.debounce(autocomplete.sources.hits(docsIndex, {
             hitsPerPage: 2
@@ -121,7 +121,7 @@ autocomplete('#search-field', {
             hitsPerPage: 2
         }), 200),
         displayKey: 'title',
-        name: 'other',
+        name: 'replicated-other',
         templates: {
             header: '<h2 class="aa-header">Other</h2>',
             suggestion: function(suggestion) {
