@@ -5,6 +5,7 @@ description: "Documentation for the replicatedctl command line"
 weight: "505"
 categories: [ "Reference" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl]
 ---
 
 ## replicatedctl

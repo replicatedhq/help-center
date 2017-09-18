@@ -5,6 +5,7 @@ description: "Export app config settings"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_app-config_export]
 ---
 
 ## replicatedctl app-config export

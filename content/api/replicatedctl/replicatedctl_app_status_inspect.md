@@ -5,6 +5,7 @@ description: "Display detailed information on the app's status"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_app_status_inspect]
 ---
 ## replicatedctl app status inspect
 

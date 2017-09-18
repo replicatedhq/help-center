@@ -5,6 +5,7 @@ description: "Provides authentication and syncing with LDAP sever"
 weight: "555"
 categories: [ "Integration API" ]
 index: "docs"
+aliases : [docs/reference/integration-api/identity-api]
 ---
 
 Replicated currently supports integration with LDAP. Identity API provides authentication and syncing with LDAP sever.

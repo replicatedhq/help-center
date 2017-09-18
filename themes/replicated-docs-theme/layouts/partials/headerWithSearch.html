@@ -39,6 +39,7 @@
 	<header>
 		<nav>
 			<div class="container u-position--relative">
+				<a href="/search" id="mobile-search" class="searchIcon--white"></a>
 				<span id="toggleNav" class="u-show--mobileTablet icon u-cursor--pointer"></span>
 				<ul class="nav-list paddingContainer u-position--relative">
 					<li>
@@ -51,6 +52,12 @@
 							{{ range .Site.Menus.main }}
 								<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
 							{{ end }}
+							<li>
+								<div class="search-form">
+									<input type="text" placeholder="What are you looking for?" id="search-field" style="display: none;" />
+									<span class="searchIcon--white" id="desktop-search"></span>
+								</div>
+							</li>
 							<li class="log-in-link">
 								<a href="https://vendor.replicated.com" target="_blank">Log in</a>
 							</li>

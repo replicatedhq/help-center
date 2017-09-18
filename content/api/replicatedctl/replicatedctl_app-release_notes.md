@@ -5,6 +5,7 @@ description: "Display release notes for an app releases"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_app-release_notes]
 ---
 
 ## replicatedctl app-release notes

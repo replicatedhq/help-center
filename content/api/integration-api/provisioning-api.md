@@ -5,6 +5,7 @@ description: "Provides authentication and syncing with LDAP sever"
 weight: "556"
 categories: [ "Integration API" ]
 index: "docs"
+aliases : [docs/reference/integration-api/provisioning-api]
 ---
 
 You are (optionally) responsible for implementing a provisioning API to enable full identity sync. Once enabled, Replicated will make calls into this API when changes are detected in the directory service.

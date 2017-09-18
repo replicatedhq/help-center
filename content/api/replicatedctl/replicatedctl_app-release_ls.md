@@ -5,6 +5,7 @@ description: "List app releases"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_app-release_ls]
 ---
 
 ## replicatedctl app-release ls

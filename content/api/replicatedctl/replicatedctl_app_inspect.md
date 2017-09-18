@@ -5,6 +5,7 @@ description: "Display detailed information on the app"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_app_inspect]
 ---
 
 ## replicatedctl app inspect

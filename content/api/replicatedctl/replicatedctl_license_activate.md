@@ -5,6 +5,7 @@ description: "Activate the license"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_license_activate]
 ---
 
 ## replicatedctl license activate

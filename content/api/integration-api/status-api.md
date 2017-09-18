@@ -5,6 +5,7 @@ description: "Provides endpoints for your application to report various kinds of
 weight: "554"
 categories: [ "Integration API" ]
 index: "docs"
+aliases : [docs/reference/integration-api/status-api]
 ---
 
 The Status API provides methods for your application to query properties of the installed license.

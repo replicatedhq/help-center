@@ -5,6 +5,7 @@ description: "Read and write to audit events to the Replicated audit log."
 weight: "551"
 categories: [ "Integration API" ]
 index: "docs"
+aliases : [docs/reference/integration-api/audit-api]
 ---
 
 The Audit API provides endpoints for your application to read and write audit events into the audit log.

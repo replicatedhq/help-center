@@ -5,6 +5,7 @@ description: "Manage the app status"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_app_status]
 ---
 
 ## replicatedctl app status

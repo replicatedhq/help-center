@@ -36,6 +36,7 @@
 
 	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
 	<script src="{{ .Site.BaseURL }}js/autocomplete-search.js"></script>
 	<script src="{{ .Site.BaseURL }}js/prism.js"></script>
 	<script>
@@ -47,6 +48,21 @@
 		if (toggleMenu) {
 			toggleMenu.addEventListener("click", toggleMenuClass);
 		};
+	</script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script>
+		$('#desktop-search').on("click", function () {
+      if(!$('#search-field').is(":visible")) {
+        $('#search-field').show("slide", { direction: "right" }, 300);
+        $('#search-field').focus();
+      }
+		});
+
+    $('#search-field').on("blur", function () {
+      $(this).hide("slide", { direction: "right" }, 300);
+    });
 	</script>
 </body>
 </html>

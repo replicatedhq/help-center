@@ -5,6 +5,7 @@ description: "Unsets a runtime overridden param value"
 weight: "551"
 categories: [ "replicatedctl" ]
 index: "docs"
+aliases : [docs/reference/replicatedctl/replicatedctl_params_unset]
 ---
 
 ## replicatedctl params unset
