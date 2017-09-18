@@ -7,7 +7,7 @@ categories: [ "Supporting Your Customers" ]
 index: "docs"
 ---
 Some customers may wish to install Replicated on a server with SELinux enabled.
-The Replicated native and Kubernetes schedulers are compatible with SELinux.
+The Replicated native and Kubernetes schedulers are compatible with SELinux as of v2.12.0.
 
 ## Docker & SELinux
 SELinux labels processes with domain types that can be given permission to manage system resources such as ports and files.
