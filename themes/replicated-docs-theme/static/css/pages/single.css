@@ -20,7 +20,7 @@
 }
 
 .single .container {
-    max-width: 960px;
+    max-width: 1024px;
     box-sizing: border-box;
 }
 
@@ -37,7 +37,6 @@
 
 .page-content {
     padding: 50px 0;
-    max-width: 720px;
 }
 
 .page-content h2 {
@@ -164,7 +163,23 @@
 .sidebar {
     width: 100%;
     margin-bottom: 20px;
-    padding: 10px 0;
+    padding: 50px 0;
+    display: none;
+}
+
+.sidebar li {
+    font-size: 14px;
+    padding: 9px 0;
+}
+
+.sidebar li a,
+.sidebar li a:visited {
+    color: #000;
+}
+
+.sidebar li.blue a {
+    color: #2A98CB;
+    font-weight: 500;
 }
 
 /* admonition notes */
@@ -214,6 +229,52 @@
     width: 18px;
     height: 17px;
 }
+.mobile {
+    display: block;
+}
+
+.breadcrumbs {
+    padding: 50px 0 20px;
+        border-bottom: 1px solid #DFDFDF;
+}
+
+.breadcrumbs li {
+    display: inline-block;
+    padding: 0 5px;
+    line-height: 24px;
+}
+
+.breadcrumbs li a,
+.breadcrumbs li a:visited {
+    color: black;
+}
+
+.breadcrumbs li:nth-last-child(2) a {
+    color: #2A98CB;
+    font-weight: 500;
+}
+
+.breadcrumbs li:last-child {
+    display: none;
+}
+
+.header .tags {
+    margin-top: 20px;
+}
+
+.header .tags li {
+    background: rgba(255, 255, 255, 0.4);
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 7px 10px;
+    border-radius: 3px;
+    margin: 4px 2px;
+}
+
+.header .tags li a {
+    color: white;
+}
 
 @media screen and (min-width: 48em) {
     .page-content-wrapper {
@@ -226,8 +287,13 @@
     }
     .page-content {
         padding: 50px 0;
+        margin-left: 40px;
     }
     .sidebar {
-        max-width: 180px;
+        max-width: 200px;
+        display: flex;
+    }
+    .mobile {
+        display: none;
     }
 }

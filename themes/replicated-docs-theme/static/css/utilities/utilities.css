@@ -97,7 +97,7 @@
 /* ≥ 1024px */
 @media screen and (min-width: 64em) {
   .paddingContainer { padding: 0 30px; }
-  .main-section { padding: 60px 0 70px; }
+  .main-section { padding: 60px 0; }
 }
 
 /* ≥ 1280px */

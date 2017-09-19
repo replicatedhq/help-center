@@ -1,7 +1,7 @@
 {{ partial "headerWithSearch.html" . }}
 	<main>
 		<article class="single">
-			<div class="u-gradient--redToRed main-section">
+			<div class="u-gradient--redToRed main-section header">
 				<div class="container">
 					<div class="paddingContainer">
 						<h1 class="u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--left">
@@ -10,48 +10,59 @@
 						<p class="u-color--white u-fontSize--large u-lineHeight--normal">
 							{{ .Description }}
 						</p>
+						{{ if .Params.tags }}
+							<div class="tags">
+								<ul>
+									{{ range .Params.tags }}
+										<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
+									{{ end }}
+								</ul>
+							</div>
+						{{ end }}
 					</div>
 				</div>
 			</div>
 			<div class="container">
 				<div class="paddingContainer">
 					<div class="u-flexTabletReflow flex1">
+						<div class="flex-auto sidebar-wrapper">
+							<div class="mobile">
+								{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+								{{ $.Scratch.Add "path" .Site.BaseURL }}
+								<ol class="breadcrumbs">
+								{{ range $index, $element := split $url "/" }}
+									{{ $.Scratch.Add "path" $element }}
+									{{ if ne $element "" }}
+									<li><a href='{{ $.Scratch.Get "path" }}'>{{ . | humanize | title }}</a></li>
+									<li>/</li>
+									{{ $.Scratch.Add "path" "/" }}
+									{{ end }}
+								{{ end }}
+								</ol>
+							</div>
+							<div class="sidebar">
+								<div>
+									{{ if .Params.categories }}
+										<h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">{{ index (.Params.categories) 0 | title}}</h3>
+										<ul>
+										{{ $currentPageTitle := .Title }}
+										{{ with $taxonomy := (index (.Params.categories) 0) | urlize }}
+											{{ range $index, $element := (index $.Site.Taxonomies.categories $taxonomy).Pages.ByWeight }}
+												{{ if eq $currentPageTitle .Title  }}
+													<li class="blue"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+												{{ else }}
+													<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+												{{ end }}
+											{{ end }}
+										{{ end }}
+										</ul>
+									{{ end }}
+								</div>
+							</div>
+						</div>
 						<div class="flex1 page-content-wrapper">
 							<div class="page-content">
 								{{ .Content }}
-							</div>
-						</div>
-						<div class="flex-auto sidebar-wrapper">
-							<div class="sidebar">
-								<div class="u-marginTop--more u-marginBottom--more">
-									{{ if .Params.similar }}
-										<h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Similar guides</h3>
-										<ul>
-											{{ with $similarDocs := .Params.similar }}
-												{{ range $similarDocs }}
-													{{ with ($.Site.GetPage "page" .) }}
-														<li class="u-paddingBottom--normal u-fontSize--normal">
-															<a href="{{ .Permalink }}" class="u-color--curiousBlue u-fontWeight--medium u-textDecoration--underlineOnHover">{{ .Title }}</a>
-														</li>
-													{{ end }}
-												{{ end }}
-											{{ end }}
-										</ul>
-									{{ end }}
-								</div>
-								<div>
-									{{ if .Params.tags }}
-										<h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Tags</h3>
-										<ul id="tags" class="u-marginBottom--more">
-											{{ range .Params.tags }}
-												<li class="u-display--inlineBlock">
-													<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="u-display--inlineBlock">{{ . }}</a>
-												</li>
-											{{ end }}
-										</ul>
-									{{ end }}
-									<span class="u-fontSize--small u-color--silverSand u-fontWeight--medium">Last Updated <br><span class="u-fontWeight--bold u-color--dustyGray">{{ .Date.Format "02 January 2006" }}</span></span>
-								</div>
 							</div>
 						</div>
 					</div>

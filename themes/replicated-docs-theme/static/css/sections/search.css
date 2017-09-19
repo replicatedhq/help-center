@@ -34,9 +34,10 @@
   position: relative;
 }
 
+.aa-dataset-guides,
 .aa-dataset-other,
 .aa-dataset-docs {
-  margin: 30px 0;
+  margin: 20px 0;
 }
 
 .aa-header {
