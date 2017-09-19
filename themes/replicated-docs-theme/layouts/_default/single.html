@@ -1,7 +1,7 @@
 {{ partial "headerWithSearch.html" . }}
 	<main>
 		<article class="single">
-			<div class="u-gradient--redToRed main-section">
+			<div class="u-gradient--redToRed main-section header">
 				<div class="container">
 					<div class="paddingContainer">
 						<h1 class="u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--left">
@@ -10,6 +10,15 @@
 						<p class="u-color--white u-fontSize--large u-lineHeight--normal">
 							{{ .Description }}
 						</p>
+						{{ if .Params.tags }}
+							<div class="tags">
+								<ul>
+									{{ range .Params.tags }}
+										<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
+									{{ end }}
+								</ul>
+							</div>
+						{{ end }}
 					</div>
 				</div>
 			</div>
