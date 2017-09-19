@@ -9,9 +9,17 @@ categories = [ "Knowledgebase", "Supporting Your Customers" ]
 If host's private IP address is modified, Replicated will be unable to start and will require manual reconfiguration.
 Private IP address is defined in two configuration files: `replicated` and `replicated-operator`
 
-RHEL/CentOS file location: `/etc/sysconfig` 
+RHEL/CentOS: 
+```
+/etc/sysconfig/replicated 
+/etc/sysconfig/replicated-operator
+```
 
-Ubuntu/Debian file location: `/etc/default/`
+Ubuntu/Debian:
+```
+/etc/default/replicated
+/etc/default/replicated-operator
+```
 
 ### Changing Private IP:
 
