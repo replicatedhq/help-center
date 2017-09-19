@@ -48,10 +48,12 @@
 										{{ $currentPageTitle := .Title }}
 										{{ with $taxonomy := (index (.Params.categories) 0) | urlize }}
 											{{ range $index, $element := (index $.Site.Taxonomies.categories $taxonomy).Pages.ByWeight }}
-												{{ if eq $currentPageTitle .Title  }}
+												{{ if not .Params.hideFromList }}
+													{{ if eq $currentPageTitle .Title  }}
 													<li class="blue"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-												{{ else }}
+													{{ else }}
 													<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+													{{ end }}
 												{{ end }}
 											{{ end }}
 										{{ end }}
