@@ -18,7 +18,7 @@ Error response from daemon: driver "devicemapper" failed to remove root filesyst
 
 This problem can surface when upgrading a server that has been running Docker 17.06 and for a while and has started and stopped a number of containers.
 
-This problem been identified as a regression in devicemapper and is present in Docker 17.06.0. It will be fixed in a future version of Docker. In the meantime, there are two ways to fix this issue:
+This problem been identified as a regression in devicemapper and is present in Docker 17.06.0. It has been fixed in 17.06.2. There are two work arounds for this issue as well:
 
 ## Restart the Docker Daemon
 
