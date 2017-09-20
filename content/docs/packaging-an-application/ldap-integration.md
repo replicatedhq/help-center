@@ -235,51 +235,49 @@ The following JSON schema defines the advanced LDAP config spec. This is especia
 ```json
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"type": "object",
-	"properties": {
-		"ldap_hosts": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/ldap_host"
-			}
-		}
+	"type": "array",
+	"items": {
+		"$ref": "#/definitions/ldap_host"
 	},
 	"definitions": {
 		"ldap_host": {
 			"type": "object",
 			"properties": {
-				"ldap_type": {
+				"ServerType": {
 					"type": "string",
-					"enum": ["ldap_type_openldap", "ldap_type_ad", "ldap_type_other"]
+					"enum": ["openldap", "ad", "other"]
 				},
-				"ldap_hostname": {
+				"Hostname": {
 					"type": "string",
 					"format": "hostname"
 				},
-				"ldap_port": {
+				"Port": {
 					"type": "integer"
 				},
-				"ldap_encryption": {
+				"Encryption": {
 					"type": "string",
-					"enum": ["ldap_encryption_plain", "ldap_encryption_starttls", "ldap_encryption_ldaps"]
+					"enum": ["plain", "starttls", "ldaps"]
 				},
-				"ldap_search_user": {
+				"BaseDN": {
 					"type": "string"
 				},
-				"ldap_search_password": {
-					"type": "string"
-				},
-				"ldap_base_dn": {
-					"type": "string"
-				},
-				"ldap_usersearch_dns": {
+				"UserSearchDNs": {
 					"type": "array",
 					"items": {
 						"type": "string"
 					},
 					"minItems": 1
 				},
-				"ldap_restricted_user_groups": {
+				"FieldUsername": {
+					"type": "string"
+				},
+				"SearchUsername": {
+					"type": "string"
+				},
+				"SearchPassword": {
+					"type": "string"
+				},
+				"RestrictedGroupCNs": {
 					"oneOf": [
 						{
 							"type": "array",
@@ -292,28 +290,26 @@ The following JSON schema defines the advanced LDAP config spec. This is especia
 						}
 					]
 				},
-				"ldap_username_field": {
+				"LoginUsername": {
 					"type": "string"
 				},
-				"ldap_login_username": {
+				"LoginPassword": {
 					"type": "string"
 				},
-				"ldap_login_password": {
-					"type": "string"
-				},
-				"ldap_advanced_search": {
+				"AdvancedSearch": {
 					"type": "boolean"
 				},
-				"ldap_user_query": {
+				"UserQuery": {
 					"type": "string"
 				},
-				"ldap_restricted_group_query": {
+				"GroupQuery": {
 					"type": "string"
 				}
 			},
 			"required": [
-				"ldap_type", "ldap_hostname", "ldap_encryption", "ldap_search_user", "ldap_search_password",
-				"ldap_base_dn", "ldap_usersearch_dns", "ldap_username_field", "ldap_port"
+				"ServerType", "Hostname", "Port", "Encryption", "BaseDN",
+				"UserSearchDNs", "FieldUsername", "SearchUsername",
+				"SearchPassword"
 			],
 			"additionalProperties": false
 		}
