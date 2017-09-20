@@ -5,6 +5,7 @@ title: "SELinux"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
+tags: ["Docker"]
 ---
 Some customers may wish to install Replicated on a server with SELinux enabled.
 The Replicated native and Kubernetes schedulers are compatible with SELinux as of v2.12.0.

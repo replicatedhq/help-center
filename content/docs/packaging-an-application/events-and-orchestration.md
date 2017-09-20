@@ -17,7 +17,8 @@ several reasons to use events in your application yaml:
 Replicated provides this functionality in a pub/sub style model. Containers can publish events and list the subscriptions.
 When the event is fired, the subscribed event starts.
 
-## Published Events
+{{< linked_headline "Published Events" >}}
+
 Containers can publish a message when specific events occur. These events can be subscribed to by other containers in your
 application and are designed to be used to help manage the state of your application. Some of these events are published
 when a container changes state. These events are published as soon as the Replicated operator reports that
@@ -25,7 +26,8 @@ the container state has changed.
 
 When setting up event orchestration use unique event names. When starting a container with constraints from multiple parents, the first event to fire causes the container to start.
 
-## Container Started Event
+{{< linked_headline "Container Started Event" >}}
+
 A `container-start` event is published as soon as the Docker Engine reports that your container is started. The container
 may still be initializing and loading, but control of the process has been transferred to the `ENTRYPOINT` or `CMD`
 specified in the container. When this event is received, all of the template functions are available for this container.
@@ -45,11 +47,13 @@ containers:
         action: start
 ```
 
-## Container Stopped Event
+{{< linked_headline "Container Stopped Event" >}}
+
 When a `container-stop` event is published, your container has been terminated. It may restart, but the current state is stopped. A
 `container-start` event will be published if the container is ever restarted.
 
-## Container Port Listen Event
+{{< linked_headline "Container Port Listen Event" >}}
+
 When a `port-listen` event is published, your container has started accepting connections on an exposed public port. This can be useful
 in cases where you need to know when a specific service inside your container is actually up and running. The port you're interested in
 is specified in the data field, e.g. `data: "3306"`
@@ -70,7 +74,8 @@ containers:
         action: start
 ```
 
-## Container Exec Event
+{{< linked_headline "Container Exec Event" >}}
+
 The `exec` event type is provided to execute arbitrary scripts in a container. This command is attempted immediately after the
 container starts, and again at an interval of 2 seconds until it returns 0 or 10 minutes has elapsed. If the command succeeds
 with a result code of 0, the event triggers. If not, the command will retry for up to 10 minutes and result in a failure if
@@ -92,12 +97,14 @@ containers:
         action: start
 ```
 
-## Subscribed Events
+{{< linked_headline "Subscribed Events" >}}
+
 Any container can subscribe to events from any other container in your application. A subscribed event must also define an action to
 take upon triggering of the event. The only action which is currently available is the start action, which causes the subscribing
 container to start.
 
-## Timeouts
+{{< linked_headline "Timeouts" >}}
+
 {{< version version="2.3.0" >}} The `timeout` parameter must be an integer and indicates the number of seconds an event has to execute before a timeout is initiated.  
 If the event does not execute before the timeout is reached, then an error will show in the UI and the event sequence will terminate.  
 By default the `timeout` option will be set to 10 minutes.  Setting the `timeout` parameter to -1 will disable the timeout feature.

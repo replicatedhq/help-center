@@ -5,6 +5,7 @@ title: "Adding SMTP Support On-Premises"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
+tags: ["Replicated UI", "Application YAML"]
 ---
 
 Many SaaS applications rely on external email services such as SendGrid or Amazon SES to deliver

@@ -4,6 +4,7 @@ title: "Upgrading Replicated"
 description: "The process for end customers to update Replicated services to access the latest improvements to the underlying system since their installation."
 weight: "303"
 categories: [ "Distributing An Application" ]
+tags: ["Upgrading Replicated", "Airgapped Environment"]
 index: "docs"
 ---
 

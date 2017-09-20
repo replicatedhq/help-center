@@ -13,7 +13,7 @@ The `admin_commands` section allows you to define ad-hoc commands that can be ex
 
 *Note: If you are calling admin commands from a script use the `--no-tty` flag.*
 
-## Executing
+{{< linked_headline "Executing" >}}
 
 ### Replicated
 ```bash
@@ -46,7 +46,7 @@ $ docker exec -it "$(docker inspect --format "{{.Status.ContainerStatus.Containe
 $ kubectl exec -it "$(kubectl get pods -l=app=replicated -l=tier=master -o=jsonpath='{.items..metadata.name}')" -c replicated -- replicated admin <command_alias> <params>
 ```
 
-## Examples
+{{< linked_headline "Examples" >}}
 
 ### `nginx-reload`
 
@@ -104,7 +104,7 @@ admin_commands:
   container: master # optional, will choose first in pod
 ```
 
-## Configuration
+{{< linked_headline "Configuration" >}}
 
 ### shell_alias
 This is the shell alias that will be created during installation when using the Replicated scheduler.  Commands can be invoked using this alias or using the replicated CLI directly. Note that this is defined in Application Properties, not in the admin command. This alias is not available for Kubernetes applications.

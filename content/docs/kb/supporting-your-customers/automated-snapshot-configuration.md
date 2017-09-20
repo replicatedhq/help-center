@@ -5,6 +5,7 @@ title: "Automated Snapshot Configuration"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
+tags: ["Snapshots"]
 ---
 
 In Replicated, snapshots can be run any time by clicking the “Run” button on the dashboard.

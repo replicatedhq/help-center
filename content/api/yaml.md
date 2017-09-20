@@ -6,6 +6,7 @@ weight: "503"
 categories: [ "Reference" ]
 index: "docs"
 aliases : [docs/reference/yaml]
+tags: ["Application YAML"]
 ---
 
 For a full reference to the Replicated YAML options, visit [github.com/replicatedhq/libyaml](https://github.com/replicatedhq/libyaml).

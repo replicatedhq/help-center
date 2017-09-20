@@ -5,6 +5,7 @@ title: "Creating a Multi-Node Cassandra Cluster"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
+tags: ["Nodes", "Clusters"]
 ---
 
 It is critical for some of our vendor's applications to offer a Highly Available (HA) solution to their

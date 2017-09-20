@@ -5,6 +5,7 @@ title: "One-Click Updates"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
+tags: ["Replicated Vendor", "Replicated UI"]
 ---
 
 ## Overview

@@ -5,6 +5,7 @@ title: "Restoring From a Snapshot"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
+tags: ["Snapshots", "Replicated UI"]
 ---
 
 **The snapshots functionality in Replicated is for disaster recovery purposes.**

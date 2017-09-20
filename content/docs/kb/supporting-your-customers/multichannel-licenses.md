@@ -5,6 +5,7 @@ title: "Multi-channel Licenses"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
+tags: ["Replicated UI"]
 ---
 
 ## Installing Multi-Channel License

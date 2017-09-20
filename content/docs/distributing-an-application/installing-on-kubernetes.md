@@ -5,6 +5,7 @@ description: "Instructions for installing Replicated on a Kubernetes cluster."
 keywords: "installing, kubernetes"
 hideFromList: true
 index: "docs"
+tags: ["Installing Replicated", "Kubernetes"]
 categories: [ "Distributing an Application" ]
 ---
 
@@ -25,7 +26,8 @@ Quick install:
 kubectl apply -f https://get.replicated.com/kubernetes.yml
 ```
 
-## Prerequisites
+{{< linked_headline "Prerequisites" >}}
+
 The Kubernetes cluster must already be provisioned.
 
 ### Volumes

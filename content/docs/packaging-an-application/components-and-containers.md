@@ -11,7 +11,8 @@ index: "docs"
 The `components` section of the YAML defines how the containers will be created and started. A component is
 a group of one or more containers that are guaranteed to run on the same node.
 
-## Image Registry Location
+{{< linked_headline "Image Registry Location" >}}
+
 For each container we must supply some basic information. First the source from which we will pull this image. This can be either a third
 party private or public registry (ie Docker Hub Registry, Quay.io, or your own public registry) or Replicated's private vendor registry
 (`replicated`). We must then specify the name of the image (`image_name`) and the tag (`version`).
@@ -36,7 +37,8 @@ When including a public image please use a valid image name. This can be any for
 For Replicated private images (when `source` = `replicated`, do not include the namespace in the `image_name`. The `image_name` field should only
 include the image name, not the hostname or namespace. The `when` option allows container to be started conditionally.
 
-## Privileged
+{{< linked_headline "Privileged" >}}
+
 In some advanced scenarios, we may need to run our container in privileged mode or specify a hostname to be set in the container. This is possible in the YAML by adding a couple of optional tags.
 
 ```yaml
@@ -47,7 +49,8 @@ In some advanced scenarios, we may need to run our container in privileged mode 
     hostname: host01
 ```
 
-## Ephemeral
+{{< linked_headline "Ephemeral" >}}
+
 Sometimes we may want a container that is not meant to continue running for the lifetime of the application. In this case we can mark that container as ephemeral.
 
 ```yaml
@@ -57,7 +60,8 @@ Sometimes we may want a container that is not meant to continue running for the 
     ephemeral: true
 ```
 
-## Container Resource Constraints
+{{< linked_headline "Container Resource Constraints" >}}
+
 Replicated supports the following constraint parameters:
 
 - `cpu_shares` How much CPU time is allotted to the container details.
@@ -75,7 +79,8 @@ Replicated supports the following constraint parameters:
     memory_swap_limit: "1000000000" #1GB
 ```
 
-## CMD
+{{< linked_headline "CMD" >}}
+
 Next we can optionally define a container CMD to execute when running our container.
 
 ```yaml
@@ -85,7 +90,8 @@ Next we can optionally define a container CMD to execute when running our contai
     cmd: '["redis-server", "--appendonly", "yes"]'
 ```
 
-## Config Files
+{{< linked_headline "Config Files" >}}
+
 The next section contains inline configuration files that we can supply to our container. Replicated will create a file within the
 container with the specified path (filename) and contents. You may optionally specify an octal permissions mode as a string (file_mode),
 and/or the numeric uid of a user & group (file_owner) to be applied to the resulting file in the container.
@@ -105,7 +111,8 @@ and/or the numeric uid of a user & group (file_owner) to be applied to the resul
         http.cors.allow-origin: /https?:\/\/{{repl ConfigOption "hostname" }}(:[0-9]+)?/
 ```
 
-## GitHub Reference
+{{< linked_headline "Github Reference" >}}
+
 It is also possible to specify a file as a Github Reference, where the ref is the SHA of the commit. This ref will need to be updated any
 time the file changes (we cache the remote file to remove this external dependency from the install time processes). The repository will
 either need to be public or you will need to connect your Github account via the App Settings link of the Replicated Vendor Portal.
@@ -123,7 +130,8 @@ either need to be public or you will need to connect your Github account via the
       file_owner: "100"
 ```
 
-## Customer Files
+{{< linked_headline "Customer Files" >}}
+
 It can also be helpful to request a customer supplied file. This file can be referenced by the name parameter and will be created within
 the container at the specified path (filename).
 
@@ -139,7 +147,8 @@ the container at the specified path (filename).
       file_owner: "0"
 ```
 
-## Environment Variables
+{{< linked_headline "Environment Variables" >}}
+
 Next we have the option of specifying environment variables. There is also a flag provided to exclude anything secret from the support bundle.
 
 ```yaml
@@ -156,7 +165,8 @@ Next we have the option of specifying environment variables. There is also a fla
 Having environment variables in Support Bundles can be invaluable for troubleshooting.   However, environment variables can contain sensitive data.  Setting `is_excluded_from_support` to `true` will exclude them from Support Bundles.
 {{< /note >}}
 
-## Ports
+{{< linked_headline "Ports" >}}
+
 We can use the ports property to expose a container's port (private_port) and bind it to the host (public_port). The when property allows us to conditionally expose and bind that port when some prior condition is satisfied. Use the interface property to force the public port to be bound on a specific network interface. The public_port property is optional as of {{< version version="2.8.0" >}} allowing a port to be exposed but not bound.
 
 ```yaml
@@ -172,7 +182,8 @@ We can use the ports property to expose a container's port (private_port) and bi
       when: '{{repl ConfigOptionEquals "https_enabled" "1" }}'
 ```
 
-## Volumes
+{{< linked_headline "Volumes" >}}
+
 We can also specify volumes that will be mounted.
 
 Volumes are required for any persistent data created by your application. If you have data in a container that needs to be available to new versions of your app, or data that should be backed up then you will define a volume to store it. Volumes are also useful for services that require a fast filesystem such as database or cache applications.
@@ -231,7 +242,8 @@ Replicated supports volumes_from to attach several mounts from a colocated conta
 
 The container using "volumes_from" must start after any containers it mounts from.  Property "volumes_from" takes an array of strings where each string identifies a named container running on the same server.
 
-## Logs
+{{< linked_headline "Logs" >}}
+
 We can configure logs for containers by specifying the max number of logs files and the max size of the log files. The max size string should include
 the size, k for kilobytes, m for megabytes or g for gigabytes. Log settings at the component level are inherited by the container and will be
 used unless overwritten.
@@ -249,7 +261,8 @@ components:
           max_files: 5
 ```
 
-## Restart Policies
+{{< linked_headline "Restart Policies" >}}
+
 Optionally, containers can be configured to be restarted automatically. Currently supported restart policies match those supported natively by Docker.
 If the policy is not specified, the container will never be restarted. This behavior is equivalent to this setting:
 
@@ -278,19 +291,22 @@ Please refer to our Examples page for additional component configuration example
 
 
 
-## Config Files
+{{< linked_headline "Config Files" >}}
+
 Your application may have config files that require dynamic values. These values may be input by the person installing the software, values
 specific to the environment your application is running in, values created by other containers or read from the embedded license via the
 License API. To accomplish this, Replicated allows templatizing of its config values using the Go template language with a repl escape
 sequence. When your application runs, Replicated will process the templates, and you have full access to the the Replicated template library.
 
-## Customer Files
+{{< linked_headline "Customer Files" >}}
+
 Sometimes it can be helpful to allow a customer to supply a file to your app. A good example of this is when your customer should supply an
 SSL certificate and private key. To add customer supplied files to your container, you must first define the file as a config option, and
 then create a link to it in any container that needs that file. Replicated will prompt for the file to be uploaded and will ensure that the
 file is at the correct location in the container when it is started.
 
-## Environment Variables
+{{< linked_headline "Environment Variables" >}}
+
 The 12-factor app encourages the use of environment variables for configuration, and Replicated supports this design pattern. You can specify
 environment variables, which will be injected into a container when it's created.
 
@@ -298,7 +314,8 @@ Environment variables can be created with static values or customer supplied val
 
 Environment variables support the Replicated template library.
 
-## Exposed Ports
+{{< linked_headline "Exposed Ports" >}}
+
 All ports listed in the Dockerfile with the EXPOSE directive will be automatically exposed when started. The Docker runtime will choose a
 random port, ensuring that there are no conflicts. If you need to specify a specific public (host) port, you can list it here.
 
@@ -307,13 +324,15 @@ of discovering dynamic port mappings.
 
 Port mappings support the Replicated template library.
 
-## Startup
+{{< linked_headline "Startup" >}}
+
 The startup section of a container allows you to specify the CMD value that will be passed to your container when it's started. It's generally
 good to end your Dockerfile with an ENTRYPOINT command. If you specify a value for the CMD, it will be passed as parameters to the your ENTRYPOINT.
 
 As with all inputs to containers, you have full access to the Replicated template library when creating a CMD value.
 
-## Docker Options
+{{< linked_headline "Docker Options" >}}
+
 You may also limit the resources used by your containers with the memory, cpushares and network modes and further secure your containers with security options
 
 ### Memory and Swap Limit

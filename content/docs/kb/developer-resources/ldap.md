@@ -5,6 +5,7 @@ title: "LDAP Integration"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
+tags: ["LDAP"]
 ---
 
 ## INTRODUCING V1 OF REPLICATED DIRECTORY SERVICE SYNC

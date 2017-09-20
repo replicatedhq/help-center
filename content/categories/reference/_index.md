@@ -5,6 +5,7 @@ weight: 105
 index: false
 gradient: "purpleToPink"
 api: true
+hideFromList: true
 aliases:
     - /api
 ---

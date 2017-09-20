@@ -5,6 +5,7 @@ title: "Understanding Optional/Required Releases"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
+tags: ["API", "Replicated Vendor"]
 ---
 
 As continuous integration and continuous deployment (CI/CD) processes have become common

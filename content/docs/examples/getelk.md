@@ -5,6 +5,7 @@ description: "An advanced example of the ELK Stack deployed through Replicated w
 weight: "404"
 categories: [ "Examples" ]
 index: "docs"
+tags: ["Application YAML"]
 ---
 
 ## GetELK

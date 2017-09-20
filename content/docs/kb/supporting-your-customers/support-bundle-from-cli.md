@@ -5,6 +5,7 @@ title: "Generate a Support Bundle from the CLI"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
+tags: ["Support"]
 ---
 
 If your customer cannot access the Replicated UI, you can still have them 

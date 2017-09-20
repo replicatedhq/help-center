@@ -5,6 +5,7 @@ description: "How to re-use a named volume with new data across multiple applica
 weight: "214"
 index: "docs"
 categories: [ "Packaging an Application" ]
+tags: ["Application YAML"]
 ---
 
 There are some use cases where re-using a named volume can be useful. For example, if an application is serving its static content via a load balancer, we may package the static content in our main application and use a standard nginx container to actually serve that content.

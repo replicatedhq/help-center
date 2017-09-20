@@ -11,7 +11,8 @@ index: "docs"
 The admin console settings screen configuration is specified as an array configuration
 groups and items.
 
-## Groups
+{{< linked_headline "Groups" >}}
+
 Groups map to links within the left sidebar navigation. Groups are comprised of a `name`,
 `title`, `description` and an array of items.
 
@@ -22,7 +23,8 @@ config:
   description: Configure application authentication below.
 ```
 
-## Items
+{{< linked_headline "Items" >}}
+
 Items map to input fields and belong to a single group. All items should have `name`, `title`
 and `type` properties. Specific item types can including new types.
 
@@ -37,7 +39,7 @@ and `type` properties. Specific item types can including new types.
 > `textarea`
 > `select`
 
-## Examples
+{{< linked_headline "Examples" >}}
 
 ### `bool`
 The `bool` input type should use a "0" or "1" to set the value
@@ -119,7 +121,7 @@ A `textarea` can specify a `props` that will map into the HTML element directly.
     type: text
 ```
 
-## Properties
+{{< linked_headline "Properties" >}}
 
 ### `default` and `value`
 A default value will be applied to the ConfigOption template function when no value is
@@ -204,7 +206,8 @@ Items can be affixed left or right. These items will appear in the admin console
     affix: left
 ```
 
-## Using CMD (commands) as input to options
+{{< linked_headline "Using CMD (commands) as input to options" >}}
+
 Commands can be used as defaults, values, or data with `default_cmd`, `value_cmd` and
 `data_cmd` respectively. Data is a special property of the file type. The value corresponds
 to the file name while the data corresponds to its contents.

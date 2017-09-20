@@ -5,6 +5,7 @@ title: "Using cmd To Populate Values & Defaults"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
+tags: ["CLI Commands", "Application YAML"]
 ---
 
 [Commands](/docs/packaging-an-application/commands/) are an important part of the

@@ -4,7 +4,7 @@ title: "Commands"
 description: "The `cmds` section of the Replicated YAML allows you to leverage the power of external commands within your application configuration."
 weight: "208"
 categories: [ "Packaging an Application" ]
-tags: [ "Application YAML" ]
+tags: [ "Application YAML", "CLI Commands" ]
 index: "docs"
 ---
 
@@ -66,7 +66,8 @@ config:
 ```
 
 # Available Commands
-## cert
+{{< linked_headline "cert" >}}
+
 Generates a private key and x509 certificate pair. The resulting certificate is signed by the master authority belonging to the local instance of the Replicated management container. The authority certificate is also returned by this command so that clients can verify the full X.509 chain.
 
 *Note 1*: The authority certificate is generated the first time the management container is run on a system.
@@ -94,7 +95,8 @@ cmds:
   - mycounterapp.com
 ```
 
-## publicip
+{{< linked_headline "publicip" >}}
+
 Gets the public IP address of the agent server.
 
 This function reaches out to an external service to acquire the ip and the result can then be written to a config item.
@@ -108,7 +110,8 @@ This function reaches out to an external service to acquire the ip and the resul
   args: []
 ```
 
-## random
+{{< linked_headline "random" >}}
+
 Generates a random string with the default charset [_A-Za-z0-9].
 
 ### Arguments
@@ -126,7 +129,8 @@ Generates a random string with the default charset [_A-Za-z0-9].
   - "[A-Za-z0-9]"
 ```
 
-## echo
+{{< linked_headline "echo" >}}
+
 Echos the first argument.
 
 ### Arguments
@@ -142,7 +146,8 @@ Echos the first argument.
   - Hello World!
 ```
 
-## system
+{{< linked_headline "system" >}}
+
 {{< version version="1.2.x only" >}} Runs command directly on the machine on which Replicated is running. Be careful as Replicated supports many
 linux distributions.
 
@@ -160,7 +165,8 @@ linux distributions.
   - Hello World!
 ```
 
-## raw
+{{< linked_headline "raw" >}}
+
 Runs command from a bash shell inside an "ubuntu:trusty" docker container. The docker image is hosted on dockerhub at https://hub.docker.com/r/freighter/cmd/
 
 ### Arguments

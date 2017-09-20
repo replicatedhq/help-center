@@ -6,6 +6,7 @@ weight: "305"
 categories: [ "Distributing an Application" ]
 index: "docs"
 similar: ["docs/distributing-an-application/add-nodes-replicated.md", "docs/distributing-an-application/add-nodes-swarm.md"]
+tags: ["Schedulers", "Airgapped Environment", "Nodes"]
 ---
 
 The instructions to add additional nodes are different depending the running scheduler.

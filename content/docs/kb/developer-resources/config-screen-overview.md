@@ -5,6 +5,7 @@ title: "Configuration Screen Overview"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
+tags: ["Application YAML", "Replicated UI"]
 ---
 
 One of the core features of Replicated is the ability for any application to present users

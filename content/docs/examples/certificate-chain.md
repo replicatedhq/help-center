@@ -5,6 +5,7 @@ description: "An advanced walk through for using the Replicated cert command in 
 weight: "403"
 categories: [ "Examples" ]
 index: "docs"
+tags: ["Application YAML"]
 ---
 
 ## Certificate Chain App

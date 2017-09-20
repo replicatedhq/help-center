@@ -5,6 +5,7 @@ title: "Instance Reporting"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
+tags: ["Replicated Vendor"]
 ---
 
 Replicated recently introduced a way to track the usage & updates for each customer you issue a

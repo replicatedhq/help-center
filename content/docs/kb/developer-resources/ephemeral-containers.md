@@ -5,6 +5,7 @@ title: "Migrating Your Application With Ephemeral Containers"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
+tags: ["Application YAML"]
 ---
 
 Database migrations are an important part of any software upgrade, and having a strategy to manage

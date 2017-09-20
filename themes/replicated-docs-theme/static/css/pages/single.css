@@ -39,6 +39,12 @@
     padding: 50px 0;
 }
 
+.page-content h1 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 25px 0;
+}
+
 .page-content h2 {
     font-size: 20px;
     font-weight: 500;
@@ -274,6 +280,27 @@
 
 .header .tags li a {
     color: white;
+}
+
+.linked-headline {
+    position: relative;
+}
+
+.linked-headline:hover .anchor {
+    display: inline-block;
+    padding-left: 30px;
+    margin-left: -30px !important;
+}
+
+.linked-headline .anchor {
+    background-image: url("../../images/main_spritesheet.svg");
+    background-position: -98px -198px;
+    position: absolute;
+    height: 16px;
+    width: 19px;
+    top: 4px;
+    left: 0;
+    display: none;
 }
 
 @media screen and (min-width: 48em) {

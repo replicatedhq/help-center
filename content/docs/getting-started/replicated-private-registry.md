@@ -10,7 +10,7 @@ index: "docs"
 
 When building your application, you have the option of hosting your private images on the Replicated private registry or [using external private and public registries](/docs/kb/supporting-your-customers/registries/).
 
-## Tagging Images
+{{< linked_headline "Tagging Images" >}}
 
 The first thing you will need to do is tag your image. Replicated accepts images in the standard Docker format: `registry.replicated.com/<application-slug>/<image-name>:<version>`. You can find your application slug on the Images tab of the [Replicated Vendor Portal](https://vendor.replicated.com/#/images).
 
@@ -20,7 +20,7 @@ An example of tagging an existing image is:
 $ sudo docker tag myapp/worker registry.replicated.com/mycounterapp/worker:1.0.1
 ```
 
-## Logging In
+{{< linked_headline "Logging In" >}}
 
 Next you will need to log into the Replicated private registry with your Vendor account credentials. When prompted, you will use your email address for your username.
 
@@ -31,7 +31,7 @@ Password: <your password>
 Login Succeeded
 ```
 
-## Pushing Images
+{{< linked_headline "Pushing Images" >}}
 
 Finally you can push your image to the Replicated private registry.
 
@@ -50,7 +50,7 @@ Pushing tag for rev [8e471642d573] on {https://registry.replicated.com/v1/reposi
 For additional information on building, tagging and pushing docker images, please refer to the
 [Docker CLI Documentation](https://docs.docker.com/engine/reference/commandline/cli/).
 
-## Deploying to Kubernetes
+{{< linked_headline "Deploying to Kubernetes" >}}
 
 When deploying an application to a [Kubernetes](/docs/packaging-an-application/kubernetes) cluster, Replicated will automatically deploy a secret named `replicatedregistrykey`. This secret can be used as an `imagePullSecret` to gain read-only access to the images from the on-prem environment.
 
@@ -66,7 +66,7 @@ For example:
        - name: replicatedregistrykey
 ```
 
-## Deploying to Swarm
+{{< linked_headline "Deploying to Swarm" >}}
 
 When deploying an application to a [swarm](/docs/packaging-an-application/docker-swarm) cluster, just reference the image in the Replicated registry. Replicated will automatically authenticate with the registry using the customer's license.
 

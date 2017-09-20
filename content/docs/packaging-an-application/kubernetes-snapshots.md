@@ -4,6 +4,7 @@ title: "Kubernetes Snapshots"
 description: "Application Snapshots on Kubernetes"
 weight: "219"
 categories: [ "Packaging an application" ]
+tags: ["Application YAML", "Kubernetes", "Snapshots"]
 aliases: []
 ---
 

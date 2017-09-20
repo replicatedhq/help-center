@@ -5,6 +5,7 @@ description: "The Docker Swarm Voting Application, in a Replicated YAML."
 weight: "406"
 categories: [ "Examples" ]
 index: "docs"
+tags: ["Application YAML", "Docker", "Swarm"]
 ---
 
 ## VotingApp

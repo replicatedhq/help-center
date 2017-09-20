@@ -5,6 +5,7 @@ title: "Automate Install for Testing"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
+tags: ["Installing Replicated", "Application YAML"]
 ---
 
 Replicated has support for automated installation and configuration to facilitate integration

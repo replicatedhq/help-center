@@ -5,6 +5,7 @@ title: "Github Integration For Config File Versioning And Storage"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
+tags: ["Github"]
 ---
 
 You can connect to GitHub to store large template files such as config files. This

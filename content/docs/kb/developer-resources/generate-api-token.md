@@ -5,6 +5,7 @@ title: "Generate an API Token"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
+tags: ["API", "Replicated Vendor"]
 ---
 
 To interact with the [vendor API](https://replicated-vendor-api.readme.io/v1.0/reference)

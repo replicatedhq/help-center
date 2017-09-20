@@ -28,7 +28,7 @@ support:
   timeout: 300
 ```
 
-## Custom Files and Commands
+{{< linked_headline "Custom Files and Commands" >}}
 
 In addition to the [default support files](/docs/packaging-an-application/support-bundle/#default-support-files) included in the support bundle, addtional files can be added via the `support` section of your yaml. Files from within the application’s containers can be included, as well as output of commands executed in the container. Support files and commands are supported by both the native and kubernetes schedulers. For more complex support commands it is possible to create a [config file](/docs/packaging-an-application/components-and-containers/#config-files) and execute that file from a support command. These files will be available withing the */scheduler* directory of the support bundle.
 
@@ -55,7 +55,7 @@ support:
             run: my-nginx
 ```
 
-## Default Support Files
+{{< linked_headline "Default Support Files" >}}
 
 By default the support bundle will include the following files:
 

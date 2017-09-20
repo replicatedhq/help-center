@@ -5,6 +5,7 @@ title: "Docker Enterprise Edition and Replicated on RHEL"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
+tags: ["Docker"]
 ---
 
 This document describes the general process of installing Docker Enterprise Edition (EE) and Replicated onto a RedHat Enterprise Linux (RHEL) server.

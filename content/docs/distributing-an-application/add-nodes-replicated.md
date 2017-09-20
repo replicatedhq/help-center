@@ -5,7 +5,7 @@ description: "Instructions for installing additional nodes with a Replicated clu
 keywords: "installing, swarm"
 index: "docs"
 hideFromList: true
-tags: ["Cluster", "Nodes"]
+tags: ["Clusters", "Nodes"]
 categories: [ "Distributing an Application" ]
 similar: ["docs/distributing-an-application/add-nodes-swarm.md", "docs/distributing-an-application/add-nodes.md"]
 ---
