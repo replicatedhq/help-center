@@ -6,6 +6,7 @@ weight: "503"
 categories: [ "Reference" ]
 index: "docs"
 aliases : [docs/reference/yaml]
+tags: ["Application YAML"]
 ---
 
 # Schema

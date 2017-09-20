@@ -28,7 +28,7 @@ Commands will be run to determine the status of a requirement. They return resul
 status code and an error. Next we will look at examples. For details on the fields please see the
 [resource specification](#resource-specification) section at the bottom of the page.
 
-## Scheduler
+{{< linked_headline "Scheduler" >}}
 
 The scheduler command references a container in the components section of the yaml. Standard out
 and standard error will be captured and returned via the result message. Any exit code as a result
@@ -90,7 +90,7 @@ custom_requirements:
       ports: [] # override scheduler container properties
 ```
 
-## Raw
+{{< linked_headline "Raw" >}}
 
 The raw command is run inside Replicated's [command container](https://hub.docker.com/r/replicated/cmd/).
 The clustering and tags properties will determine where the command is run. If clustering is
@@ -136,7 +136,7 @@ custom_requirements:
         options: ["ro"]
 ```
 
-## Disk Space Available
+{{< linked_headline "Disk Space Available" >}}
 
 The disk space available command will return the disk space available in bytes. Note that the
 result is always a string and must be parsed (e.g. `{{repl .Result | ParseFloat | lt 1e+9 }}` or
@@ -191,7 +191,7 @@ custom_requirements:
       dir: /data/mysql
 ```
 
-## Disk Space Total
+{{< linked_headline "Disk Space Total" >}}
 
 The disk space total command will return the disk space available in bytes. Note that the result is
 always a string and must be parsed (e.g. `{{repl .Result | ParseFloat | lt 1e+9 }}` or
@@ -246,7 +246,7 @@ custom_requirements:
       dir: /data/mysql
 ```
 
-## Port Available
+{{< linked_headline "Port Available" >}}
 
 The port available command will determine whether the port and ip are available for use. Status
 code 98 (address already in use) will be returned when unable to bind to the address. The
@@ -300,7 +300,7 @@ custom_requirements:
       tags: ["lb"]
 ```
 
-## TCP Dial
+{{< linked_headline "TCP Dial" >}}
 
 The tcp dial command will determine whether a connection can be made over tcp to the address
 specified. Status code 111 (connection refused) will be returned when unable to connect to the
@@ -352,7 +352,7 @@ custom_requirements:
 
 Custom requirements are represented with the followings and properties.
 
-## Requirement
+{{< linked_headline "Requirement" >}}
 
 The requirement resource is the primary resource for custom preflight checks. A requirement
 represents a single check that is to be preformed during the installation and upgrade steps of the
@@ -367,7 +367,7 @@ application lifecycle.
 | command | Command | yes | The command that will be run |
 | results | array[Result] | yes | An array of result objects that when evaluated will determine success or failure |
 
-## Command
+{{< linked_headline "Command" >}}
 
 The command resource represents the command that is to be run. The command will return messages, a
 status code and possibly an error. See the [commands section](#commands) for a list of supported
@@ -379,7 +379,7 @@ operations.
 | timeout | int | no | Timeout in seconds, default 15 seconds, -1 denotes no timeout |
 | data | object | no | The command data |
 
-## Result
+{{< linked_headline "Result" >}}
 
 The result resource represents the different possible outcomes of the command. A result contains
 a status, message and condition. Result are evaluated in order and the first matching result will
@@ -392,7 +392,7 @@ evaluate to true. If no results match the requirement will receive status `error
 | message | string or Message | yes | A description of the result |
 | condition | Condition | no | The condition that must be met |
 
-## Condition
+{{< linked_headline "Condition" >}}
 
 All properties of a condition must be met to determine that condition to be true. The `bool_expr`
 property is intended to be evaluated using Replicated templates. This template will receive
@@ -405,7 +405,7 @@ the following variables from the result of the command: `.Results` (array of mes
 | status_code | int | no | The command status code |
 | bool_expr | string | no | An expression that can be evaluated and parsed as a boolean |
 
-## Message
+{{< linked_headline "Message" >}}
 
 A message resource can be localized via the id. It contains a default message that will be
 displayed when no localization is present. Messages have arguments that can be substituted into the
@@ -417,7 +417,7 @@ text via templates.
 | default_message | string | yes | The default message |
 | args | map[string]string | no | Arguments to the message |
 
-## Status Codes
+{{< linked_headline "Status Codes" >}}
 
 | **Code** | **Description** |
 |----------|-----------------|

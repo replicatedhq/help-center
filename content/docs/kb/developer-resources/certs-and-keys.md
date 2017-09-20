@@ -5,6 +5,7 @@ title: "Custom Supplied TLS Certs and Keys"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
+tags: ["Application YAML"]
 ---
 
 Most customers will set up a subdomain & DNS for their instance of your application. During

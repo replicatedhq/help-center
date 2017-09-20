@@ -5,6 +5,7 @@ title: "Manage Custom License Fields"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
+tags: ["Replicated Vendor"]
 ---
 
 Custom license fields are key value pairs that can be created in the vendor portal, securely delivered to each on-prem instance and kept in sync through automated update checks. This is useful if specific application level information might change from customer to customer.

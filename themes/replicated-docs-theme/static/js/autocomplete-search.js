@@ -25,9 +25,9 @@ autocomplete('#autocompletesearch-box', {
                     suggestion._highlightResult.title.value + '</h3>' +
                     '<p class="aa-suggestion-description">' + (hasDescription ? suggestion._highlightResult.description.value : "") + '</p>' +
                     '<span class="icon u-documentationIcon"></span>'
-            }
-        },
-        empty: "<div class='aa-empty'>No matching files</div>"
+            },
+            empty: "<div class='aa-empty'>No matching files</div>"
+        }
     },
     {
         source: _.debounce(autocomplete.sources.hits(guidesIndex, {
@@ -44,9 +44,9 @@ autocomplete('#autocompletesearch-box', {
                     suggestion._highlightResult.title.value + '</h3>' +
                     '<p class="aa-suggestion-description">' + (hasDescription ? suggestion._highlightResult.description.value : "") + '</p>' +
                     '<span class="icon u-guidesIcon"></span>'
-            }
-        },
-        empty: "<div class='aa-empty'>No matching files</div>"
+            },
+            empty: "<div class='aa-empty'>No matching files</div>"
+        }
     },
     {
         source: _.debounce(autocomplete.sources.hits(otherIndex, {
@@ -63,9 +63,9 @@ autocomplete('#autocompletesearch-box', {
                 return '<h3 class="aa-suggestion-header">' +
                     (hasTitle ? suggestion._highlightResult.title.value : "") + '</h3>' +
                     '<p class="aa-suggestion-description">' + (hasDescription ? suggestion._highlightResult.description.value : "") + '</p>'
-            }
-        },
-        empty: "<div class='aa-empty'>No matching files</div>"
+            },
+            empty: "<div class='aa-empty'>No matching files</div>"
+        }
     }
 ]).on('autocomplete:selected', function(e, suggestion, dataset) {
     // Fix for weird bug that places <em> tags in uri
@@ -93,9 +93,9 @@ autocomplete('#search-field', {
                     suggestion._highlightResult.title.value + '</h3>' +
                     '<p class="aa-suggestion-description">' + (hasDescription ? suggestion._highlightResult.description.value : "") + '</p>' +
                     '<span class="icon u-documentationIcon"></span>'
-            }
+            },
+            empty: "<div class='aa-empty'>No results</div>"
         },
-        empty: "<div class='aa-empty'>No matching files</div>"
     },
     {
         source: _.debounce(autocomplete.sources.hits(guidesIndex, {
@@ -112,9 +112,9 @@ autocomplete('#search-field', {
                     suggestion._highlightResult.title.value + '</h3>' +
                     '<p class="aa-suggestion-description">' + (hasDescription ? suggestion._highlightResult.description.value : "") + '</p>' +
                     '<span class="icon u-guidesIcon"></span>'
-            }
-        },
-        empty: "<div class='aa-empty'>No matching files</div>"
+            },
+            empty: "<div class='aa-empty'>No results</div>"
+        }
     },
     {
         source: _.debounce(autocomplete.sources.hits(otherIndex, {
@@ -131,9 +131,9 @@ autocomplete('#search-field', {
                 return '<h3 class="aa-suggestion-header">' +
                     (hasTitle ? suggestion._highlightResult.title.value : "") + '</h3>' +
                     '<p class="aa-suggestion-description">' + (hasDescription ? suggestion._highlightResult.description.value : "") + '</p>'
-            }
-        },
-        empty: "<div class='aa-empty'>No matching files</div>"
+            },
+            empty: "<div class='aa-empty'>No results</div>"
+        }
     }
 ]).on('autocomplete:selected', function(e, suggestion, dataset) {
     // Fix for weird bug that places <em> tags in uri

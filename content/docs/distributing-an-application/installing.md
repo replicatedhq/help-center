@@ -6,6 +6,7 @@ keywords: "installing, removing, migrating"
 weight: "302"
 categories: [ "Distributing an Application" ]
 index: "docs"
+tags: ["Installing Replicated"]
 ---
 
 {{< note title="Replicated 2.0" >}}

@@ -5,6 +5,7 @@ title: "Installing Licenses"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
+tags: ["Replicated UI"]
 ---
 
 It's possible your customers might run into problems while uploading their license after

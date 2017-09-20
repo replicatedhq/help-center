@@ -5,6 +5,7 @@ description: "An example of a general-purpose Replicated app definition. This ca
 weight: "402"
 categories: [ "Examples" ]
 index: "docs"
+tags: ["Application YAML"]
 ---
 
 ## Counter App

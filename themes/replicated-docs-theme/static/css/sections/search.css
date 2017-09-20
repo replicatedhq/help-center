@@ -47,6 +47,12 @@
   margin: 0 0 15px 0;
 }
 
+.aa-empty {
+  font-size: 12px;
+  padding: 10px 15px;
+  color: #9B9B9B;
+}
+
 .aa-suggestion {
   padding: 10px 15px;
   min-height: 45px;

@@ -16,7 +16,8 @@ Replicated gives customers the ability to take a snapshot of a running app. The 
 
 Snapshots include customer console configuration, data from bind mounted volumes of all containers and if the customer instance is a multi-host instance, docker registry data will be backed up as well. You also have the ability to specify a custom script that will be run at the time of a backup. This script will run on the host that is running the primary Replicated container, not inside any of your containers. If you need this script to execute something within a container, you can call [Admin Commands](/docs/packaging-an-application/admin-commands/).
 
-## YAML Properties
+{{< linked_headline "YAML Properties" >}}
+
 `enabled`: A boolean or template function that evaluates to a boolean and then determines if backups are enabled.
 
 `pause_containers`: A string that can equal "true" or "false". If true, Replicated will pause all containers and then resume them upon completion (note your app will potentially have downtime). Take a look at this article for tips on zero downtime backups.
@@ -32,7 +33,8 @@ backup:
     replicated admin --no-tty backup
 ```
 
-## Turn off Snapshotting by Volume
+{{< linked_headline "turn off Snapshotting by Volume" >}}
+
 You can exclude a volume from being snapshotted by using the `is_excluded_from_backup` variable inside your container YAML.
 
 We recommend that you exclude anything that's not necessary to restore the running system.
@@ -50,7 +52,8 @@ We recommend that you exclude anything that's not necessary to restore the runni
       is_excluded_from_backup: true
 ```
 
-## Customer Snapshot Configuration Options  
+{{< linked_headline "Customer Snapshot Configuration Options" >}}
+
 If snapshots are enabled for an application, end customers can configure the destination, retention, timeout and schedule automated snapshots on the Console Settings screen.
 
 ![snapshots](/images/post-screens/snapshot-config.png)

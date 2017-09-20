@@ -5,6 +5,7 @@ title: "Installing Docker in an Airgapped Environment"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
+tags: ["Airgapped Environment", "Docker"]
 ---
 
 Installing a supported version of Docker on a server that does not have any internet access is a simple process, 

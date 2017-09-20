@@ -5,6 +5,7 @@ title: "Image Tagging Best Practices"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
+tags: ["Application YAML"]
 ---
 
 For your Replicated YAML, we highly encourage you to push images with a specific tag & avoid the 

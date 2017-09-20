@@ -5,6 +5,7 @@ title: "Create and Promote a Release"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
+tags: ["Replicated Vendor", "Application YAML", "API"]
 ---
 
 One common use case of the Vendor API is to connect it into your CI/CD workflow and create new unstable releases

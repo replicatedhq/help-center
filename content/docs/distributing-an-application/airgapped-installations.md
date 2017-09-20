@@ -5,6 +5,7 @@ description: "The steps required of the end customer to install a Replicated app
 index: "docs"
 hideFromList: true
 categories: [ "Distributing an Application" ]
+tags: ["Installing Replicated", "Airgapped Environment"]
 ---
 
 An "airgapped" environment is a network that has no path to inbound or outbound internet traffic at all.
@@ -12,14 +13,15 @@ Some enterprise customers require that you ship a package they can install in th
 
 Replicated supports this type of installation, using the following steps:
 
-## Prepare the environment
+{{< linked_headline "Prepare the environment" >}}
+
 The customer will be responsible for delivering a server running a supported version of Docker. Replicated
 supports Docker from {{< docker_version_minimum >}} to {{< docker_version_default >}}. We recommend that you use the latest version of Docker available in this range for your operating system.
 
-The Replicated airgap installation script does not install docker-engine. We've written a
-guide with some tips that might help get [Docker installed into air gapped machines](/docs/kb/supporting-your-customers/installing-docker-in-airgapped/) with various operating systems.
+The Replicated airgap installation script does not install docker-engine. We've written a guide with some tips that might help get [Docker installed into air gapped machines](/docs/kb/supporting-your-customers/installing-docker-in-airgapped/) with various operating systems.
 
-## Install Replicated
+{{< linked_headline "Install Replicated" >}}
+
 Replicated can be installed by downloading the latest release from
 https://s3.amazonaws.com/replicated-airgap-work/replicated.tar.gz and running the following commands:
 
@@ -36,7 +38,8 @@ tar xzvf replicated.tar.gz
 cat ./swarm-init.sh | sudo bash -s airgap
 ```
 
-## Download & Rename Airgap Package
+{{< linked_headline "Download & Rename Airgap Package" >}}
+
 On the license properties page in the vendor portal, enable Airgap installations for this license and copy the
 download link. This URL is designed to be delivered to that customer. They will use this link to download
 current airgap packages when you promote a release. When they download new airgap packages to their server,
@@ -48,7 +51,8 @@ the license file *after* enabling the airgap feature on the license. Airgap-enab
 embedded than non-airgap licenses. Airgap enabled licenses can be used to install in non-airgap mode, but
 non-airgap licenses cannot be used to install in airgap mode.
 
-## Install Airgap Package
+{{< linked_headline "Install Airgap Package" >}}
+
 Next, navigate to the management console at https://<server_ip>:8800. Accept the self signed certificate, pass
 the preflight checks, and you will see the license upload screen. Upload the [airgap enabled license](/docs/distributing-an-application/create-licenses/#airgap-download-enabled) and then select the airgapped install option.
 You will have to provide a path to the .airgap file and upload the .rli file here.
@@ -58,6 +62,6 @@ to set the Airgap mode settings. You can install updates and sync the license by
 renaming them with the .airgap extension and placing them in the locations specified on the /console/settings
 page.
 
-## Adding Additional Nodes
+{{< linked_headline "Adding Additional Nodes" >}}
 
 In order to add additional nodes to your cluster, just navigate to the Cluster page of the Admin Console, click the "Add Node" button, and follow the instructions there. For more detailed instructions see the [add nodes](/docs/distributing-an-application/add-nodes/) page of the docs.

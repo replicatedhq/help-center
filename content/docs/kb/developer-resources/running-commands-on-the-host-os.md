@@ -5,6 +5,7 @@ title: "Running Commands on the Host OS"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
+tags: ["Application YAML"]
 ---
 
 The current version of Replicted is delivered as Docker images and run in containers on every supported operating system. The Replicated containers are built on top of a small Alpine Linux base image. Sometimes, it's desirable to access the host operating system and execute commands or change the environment in some way.

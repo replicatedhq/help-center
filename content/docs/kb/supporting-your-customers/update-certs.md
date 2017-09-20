@@ -5,6 +5,7 @@ title: "Updating SSL/TLS Certificates for On-Prem Admin"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
+tags: ["Replicated UI"]
 ---
 
 Each Replicated installation requires customers to either use a locally generated 

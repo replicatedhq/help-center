@@ -5,6 +5,7 @@ title: "Docker Links"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
+tags: ["Application YAML", "Docker"]
 ---
 
 In the earlier releases of Docker, there was a concept of [container linking](https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/). This has been deprecated in recent versions of Docker, but some Docker Compose YAMLs may still reference them. If you are dependent on the legacy Docker links to deploy your application, it's possible to use the `extra_hosts` option in Replicated to simulate this and deploy your containers without any changes.

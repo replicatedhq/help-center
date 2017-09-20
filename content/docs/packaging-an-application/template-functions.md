@@ -19,7 +19,7 @@ Replicated uses Go's [template engine](http://golang.org/pkg/text/template) to e
 {{repl if pipeline}} T1 {{repl else}} T0 {{repl end}}
 ```
 
-# Replicated Template Functions
+{{< linked_headline "Replicated Template Function" >}}
 
 {{< template_function name="ConfigOption" replicated="true" kubernetes="true" swarm="true" >}}
 ```go

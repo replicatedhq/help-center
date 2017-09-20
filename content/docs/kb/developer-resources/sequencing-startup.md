@@ -5,6 +5,7 @@ title: "Sequence Your App Startup and Know When it's Ready"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
+tags: ["Application YAML"]
 ---
 
 Orchestrating your containers to “turn on” in the correct order is one of the more challenging issues

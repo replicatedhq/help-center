@@ -6,6 +6,7 @@ weight: "504"
 categories: [ "Reference" ]
 index: "docs"
 aliases : [docs/reference/replicated-cli]
+tags: ["CLI Commands"]
 ---
 
 After [installing replicated](/docs/distributing-an-application/installing/#section-easy-installation) onto a remote host a CLI is enabled

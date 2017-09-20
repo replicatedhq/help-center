@@ -5,6 +5,7 @@ title: "Installing Known Versions of Replicated"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
+tags: ["Installing Replicated"]
 ---
 
 We recognize that developers depend on Replicated to provide a known experience each and every installation.

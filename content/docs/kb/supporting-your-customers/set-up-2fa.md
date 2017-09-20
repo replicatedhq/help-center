@@ -5,6 +5,7 @@ title: "Setting Up Two Factor Authentication"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
+tags: ["Security"]
 ---
 
 With two-factor authentication (2fa) enabled, you'll be asked to provide an authentication code as 

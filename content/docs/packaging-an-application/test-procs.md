@@ -4,7 +4,7 @@ title: "Test Procs"
 description: "Test Procs enable customers to easily test the validity of the unsaved configuration parameters they're entering during installation."
 weight: "204"
 categories: [ "Packaging an Application" ]
-tags: [ "Application YAML" ]
+tags: [ "Application YAML", "LDAP" ]
 index: "docs"
 ---
 
@@ -18,7 +18,8 @@ If the `test_proc` fails, a dialog will be displayed.
 Test commands are built directly into the Replicated platform. We currently offer the
 following set of commands:
 
-## Resolve Host
+{{< linked_headline "Resolve Host" >}}
+
 `resolve_host` – Test whether or not a hostname can be resolved. Applies to a single item.
 The item's value will be resolved on the Replicated Management machine. Success or failure
 is reported directly on the configuration screen.
@@ -37,7 +38,8 @@ config:
       - hostname
 ```
 
-## Github App Auth
+{{< linked_headline "Github App Auth" >}}
+
 `github_app_auth` – Test whether or not the supplied GitHub app key and secret are valid.
 Applies to a group of items. Both mainline and private enterprise versions of GitHub are
 supported. This command expects exactly 5 arguments. These arguments come from values
@@ -69,7 +71,8 @@ config:
   - name: github_type
 ```
 
-## AWS Auth
+{{< linked_headline "AWS Auth" >}}
+
 `aws_auth` – Test whether or not the supplied AWS key and secret are valid. Applies to a
 group of items. This command expects 3 arguments. These arguments come from values entered
 by your customer into the config items within this group. The arguments, in expected order:
@@ -95,7 +98,8 @@ config:
   - name: aws_access_key_id
 ```
 
-## Certificate Verification
+{{< linked_headline "Certificate Verification" >}}
+
 `certificate_verify` – Test whether or not the supplied x509 certificate is valid. Optionally
 validate the key pair and hostname. Applies to a group of items. This command expects the
 certificate as the first argument with additional optional arguments private key and hostname.
@@ -123,7 +127,8 @@ config:
   - name: hostname
 ```
 
-## SMTP Auth
+{{< linked_headline "SMTP Auth" >}}
+
 `smtp_auth` – Test whether or not the supplied credentials are valid for the given SMTP
 server. Note that this procedure only tests authentication; it does not test whether or
 not mail is actually deliverable.  
@@ -160,7 +165,8 @@ config:
     type: text
 ```
 
-## File Exists
+{{< linked_headline "File Exists" >}}
+
 `file_exists` - Test if a file exists on the host by giving its expected path. This can be
 applied to a group or an item, if applied to an item they imply the value, if applied to a
 group, then you must specify the item to get the value from. The following arguments are
@@ -187,7 +193,8 @@ config:
       - true
 ```
 
-## Regex Match
+{{< linked_headline "Regex Match" >}}
+
 `regex_match` - Test if a given value matches a a regular expression for validation purposes.
 This can be applied to a group or an item, if applied to an item they imply the value, if
 applied to a group, then you must specify the item to get the value from.
@@ -210,7 +217,8 @@ config:
       - "That doesn't seem to be a phone number!"
 ```
 
-## LDAP Auth
+{{< linked_headline "LDAP Auth" >}}
+
 `ldap_auth` - This test will ensure that the fields that your customer is supplying are
 complete and valid, for a detailed implementation reference see our LDAP integration section.
 Note you have to pass all the arg_fields for the test to validate correctly.
@@ -271,7 +279,7 @@ config:
 
 ```
 
-## JSON Validation
+{{< linked_headline "JSON Validation" >}}
 
 `json_validate` - Tests for valid JSON.  The validate_json test_proc takes a single argument which is the item name that contains the JSON to test.
 

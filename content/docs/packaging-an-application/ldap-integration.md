@@ -10,7 +10,8 @@ index: "docs"
 
 Replicated can be integrated with LDAP servers to provide real time user authentication & sync. A quick overview of this feature is available. Announcement: [DS Auth & Sync Support](https://blog.replicated.com/2015/12/03/ldap-active-directory-sync-support/)
 
-## Configuration
+{{< linked_headline "Configuration" >}}
+
 At the root level, configure the identity object
 
 ```yaml
@@ -197,5 +198,6 @@ Setting labels can be customized if needed. However, setting names must remain e
 
 Note the use of the LdapCopyAuthFrom function. This is optional, but when LDAP is used to secure the Replicated console, settings entered on that screen will be copied as default values.
 
-## Identity API
+{{< linked_headline "Identity API" >}}
+
 See [Identity API](/api/integration-api) for information on how to authenticate and sync with LDAP server.

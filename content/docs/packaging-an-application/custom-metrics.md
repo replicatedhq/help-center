@@ -10,7 +10,7 @@ index: "docs"
 
 All Replicated installations come with a StatsD/Graphite/Carbon container that can be used by the application to report data to StatsD. Application YAML can also include optional custom monitors that will be used to display additional charts in Replicated dashboard. Applications can also query Graphite directly.
 
-## Defining Metrics
+{{< linked_headline "Defining Metrics" >}}
 
 Add `custom_metrics` as a root element to the application YAML. The following elements are supported:
 
@@ -41,7 +41,7 @@ Please note that changing retention and aggregation settings will have no effect
 
 StatsD is configured to use the flush interval of 1 second. Using average aggregators with bucket size greater than 1 second may result in inaccurate data.
 
-## Defining Monitors
+{{< linked_headline "Defining Monitors" >}}
 
 Each custom monitor will be added as a tile to the Replicated dashboard. The following elements are supported
 
@@ -107,7 +107,7 @@ monitors:
       css_class_name: app1-custom-metrics
 ```
 
-## Ports
+{{< linked_headline "Ports" >}}
 
 By default, Replicated will use dynamic ports for Graphite and StatsD.  These can be discovered by examining the
 graphite container. Static ports can be defined using the graphite and the statsd sections of app YAML.
@@ -124,7 +124,7 @@ statsd:
   port: 8899
 ```
 
-## Custom CSS
+{{< linked_headline "Custom CSS" >}}
 
 Custom CSS can be used to define background colors for each metric's tile and chart background. CSS class name must match the name specified in the css_class_name tag.
 
@@ -140,7 +140,7 @@ Custom CSS can be used to define background colors for each metric's tile and ch
 
 The CSS can be added in Vendor Web dashboard in [App Settings](https://vendor.replicated.com/#/settings).
 
-## Integration API
+{{< linked_headline "Integration API" >}}
 
 StatsD host can be discovered via Replicated Console Settings. The following Go function will return the current endpoint. Note that this value can change, and applications should periodically query Integration API to obtain the current endpoint.
 
@@ -179,7 +179,7 @@ func GetStatsdEndpoint() (string, error) {
 }
 ```
 
-## Installed Configuration
+{{< linked_headline "Installed Configuration" >}}
 
 The Graphite/StatsD/Carbon container managed by Replicated has some baked in configurations. These defaults will apply to all data that matches the specified patterns. If application sends data to this container and the application has no matching custom_metrics, these defaults will be applied permanently.
 

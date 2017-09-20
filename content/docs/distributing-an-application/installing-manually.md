@@ -5,6 +5,7 @@ description: "Instructions for manually installing Replicated 2"
 hideFromList: true
 keywords: "installing, removing"
 categories: [ "Distributing an Application" ]
+tags: ["Installing Replicated"]
 ---
 
 If you choose not to run the [installation script](/docs/distributing-an-application/installing-via-script) use this guide; note that the install script also installs Docker, detects network configuration and allows proxy settings and provides support to auto-upgrade Replicated during your application release cycle.

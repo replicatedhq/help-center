@@ -5,6 +5,7 @@ title: "Finding Your API Token and App ID"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
+tags: ["Replicated Vendor", "API"]
 ---
 
 In order to utilize many of the developer API endpoints you will need to know your API Token as well as other items such as your App ID or Channel ID. This document will provide examples of how those values can be located using the cURL utility.
