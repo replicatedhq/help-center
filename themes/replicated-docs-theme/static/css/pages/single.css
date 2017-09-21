@@ -303,6 +303,14 @@
     display: none;
 }
 
+.knowledgebase .sidebar-wrapper {
+    display: none;
+}
+
+.knowledgebase .page-content {
+    margin-left: 0;
+}
+
 @media screen and (min-width: 48em) {
     .page-content-wrapper {
         padding-right: 30px;
