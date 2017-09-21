@@ -6,6 +6,8 @@ weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
 tags: ["Docker"]
+kb-sections: ["Replicated Scheduler"]
+
 ---
 Some customers may wish to install Replicated on a server with SELinux enabled.
 The Replicated native and Kubernetes schedulers are compatible with SELinux as of v2.12.0.

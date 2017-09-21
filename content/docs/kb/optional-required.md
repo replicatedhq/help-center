@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
 tags: ["API", "Replicated Vendor"]
+kb-sections: ["Updates", "CI/CD"]
 ---
 
 As continuous integration and continuous deployment (CI/CD) processes have become common

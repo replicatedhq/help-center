@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
 tags: ["Application YAML"]
+kb-sections: ["Replicated Scheduler", "Examples"]
 ---
 
 The current version of Replicted is delivered as Docker images and run in containers on every supported operating system. The Replicated containers are built on top of a small Alpine Linux base image. Sometimes, it's desirable to access the host operating system and execute commands or change the environment in some way.
@@ -82,7 +83,7 @@ components:
 
   # Connects to host over SSH as root and run a command
   - name: Bootstrap
-    containers:   
+    containers:
       - source: public
         image_name: debian
         version: jessie

@@ -6,7 +6,7 @@ weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
 tags: ["Snapshots"]
-kb-sections: ["Installing Replicated", "Application YAML", "Snapshots", "Other", "Security"]
+kb-sections: ["Automation", "Snapshots"]
 ---
 
 In Replicated, snapshots can be run any time by clicking the “Run” button on the dashboard.
@@ -44,5 +44,5 @@ service replicated restart
 systemctl restart replicated
 ```
 
-Take a look at our [restoring from a snapshot](/docs/kb/supporting-your-customers/restoring-from-a-snapshot/) article 
+Take a look at our [restoring from a snapshot](/docs/kb/supporting-your-customers/restoring-from-a-snapshot/) article
 for more on this subject.

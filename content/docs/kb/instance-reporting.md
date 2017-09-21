@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
 tags: ["Replicated Vendor"]
+kb-sections: ["Licenses"]
 ---
 
 Replicated recently introduced a way to track the usage & updates for each customer you issue a

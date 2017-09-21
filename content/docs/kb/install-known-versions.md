@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
 tags: ["Installing Replicated"]
+kb-sections: ["Delivering Replicated"]
 ---
 
 We recognize that developers depend on Replicated to provide a known experience each and every installation.

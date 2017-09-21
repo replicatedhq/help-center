@@ -6,7 +6,7 @@ weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
 tags: ["Replicated UI", "Branding"]
-kb-sections: ["Installing Replicated", "Application YAML", "Snapshots", "Other", "Security"]
+kb-sections: ["Branding"]
 ---
 
 With the release of Replicated 1.2.73 you can now customize the look & feel of the

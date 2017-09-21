@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
 tags: [""]
+kb-sections: ["Development Process"]
 ---
 
 When your customer is installing or updating your application, Replicated is responsible for pulling all required Docker images into the environment. These images can come from a variety of sources and each customer environment is a little different. Replicated makes use of various methods to securely deliver the Docker images to all of your customer's nodes, and understanding how this works can be useful with troubleshooting.

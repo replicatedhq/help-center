@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
 tags: ["Application YAML", "Replicated Vendor"]
+kb-sections: ["Development Process"]
 ---
 
 Replicated can integrate with your third party private registry (ie Docker Trusted Registry, Quay.io etc). To connect to these external registries

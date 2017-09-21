@@ -5,6 +5,7 @@ title: "Domains Used by Replicated"
 weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
+kb-sections: ["Troubleshooting", "Delivering Replicated"]
 ---
 
 Below is a list of domains that Replicated On-Prem will communicate with in non-airgap mode. All connections are made over TLS.

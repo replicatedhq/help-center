@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
 tags: ["Nodes", "Clusters"]
+kb-sections: ["Examples", "Replicated Scheduler"]
 ---
 
 It is critical for some of our vendor's applications to offer a Highly Available (HA) solution to their
@@ -93,7 +94,7 @@ nodes should be seeds.*
 {{repl end}}'
 ```
 
-**When testing don't forget initialize your Cassandra DB with appropriate keyspace**  
+**When testing don't forget initialize your Cassandra DB with appropriate keyspace**
 We also make sure to set up our [keyspace](https://docs.datastax.com/en/cql/3.0/cql/cql_reference/create_keyspace_r.html) in
 Cassandra correctly to achieve the correct redundancy and replication associated with a 3 node setup. I did
 this by going directly into `cqlsh` shell and creating my keyspace like so:

@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
 tags: ["LDAP"]
+kb-sections: ["Identity Management"]
 ---
 
 ## INTRODUCING V1 OF REPLICATED DIRECTORY SERVICE SYNC

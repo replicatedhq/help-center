@@ -6,19 +6,10 @@ weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
 tags: ["Application YAML"]
-kb-sections: ["Installing Replicated", "Application YAML", "Snapshots", "Other", "Security"]
+kb-sections: ["Config Screen", "Examples"]
 ---
 
-Most customers will set up a subdomain & DNS for their instance of your application. During
-setup you can allow them to identify their hostname and provide custom SSL certs for their
-instance (as shown below). The YAML below will allow the user to determine if they’d like
-to proceed with the SSL certs provided during the initial setup of the management console,
-provide their own, or use self-signed certs that are generated with the cmd in the `cmds`
-section. The YAML also writes the active file to the nginx container as a customer file.
-for these fields (and ‘test’ buttons for testing
-[hostname resolution](/docs/packaging-an-application/test-procs/#resolve-host)
-& [cert verification](/docs/packaging-an-application/test-procs/#certificate-verification)
-is also provided below.
+Most customers will set up a subdomain and DNS for their instance of your application. During setup you can allow them to identify their hostname and provide custom SSL certs for their instance (as shown below). The YAML below will allow the user to determine if they’d like to proceed with the SSL certs provided during the initial setup of the management console, provide their own, or use self-signed certs that are generated with the cmd in the `cmds` section. The YAML also writes the active file to the nginx container as a customer file. for these fields (and ‘test’ buttons for testing [hostname resolution](/docs/packaging-an-application/test-procs/#resolve-host) and [cert verification](/docs/packaging-an-application/test-procs/#certificate-verification) is also provided below.
 
 ![Config Screen TLS](/images/post-screens/config-tls.png)
 

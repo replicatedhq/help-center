@@ -5,9 +5,10 @@ title: "Devicemapper Warning"
 weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
+kb-sections: ["Troubleshooting"]
 ---
 
-Running devicemapper in loopback mode is discouraged for production. It has known performance problems and a different storage driver should be used.  See [devicemapper performance considerations](https://docs.docker.com/engine/userguide/storagedriver/device-mapper-driver/#other-device-mapper-performance-considerations) and [selecting a storage driver](https://docs.docker.com/engine/userguide/storagedriver/selectadriver/) to understand the available storage drivers and limitations. 
+Running devicemapper in loopback mode is discouraged for production. It has known performance problems and a different storage driver should be used.  See [devicemapper performance considerations](https://docs.docker.com/engine/userguide/storagedriver/device-mapper-driver/#other-device-mapper-performance-considerations) and [selecting a storage driver](https://docs.docker.com/engine/userguide/storagedriver/selectadriver/) to understand the available storage drivers and limitations.
 
 | Linux Kernel Version | Docker Version Constraints | Recommended Storage Driver |
 |----------------------|----------------|----------------------------|

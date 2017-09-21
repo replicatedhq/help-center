@@ -5,6 +5,7 @@ title: "Updating Replicated"
 weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
+kb-sections: ["Delivering Replicated", "Troubleshooting"]
 ---
 
 {{< warning title="Old Version Warning" >}}

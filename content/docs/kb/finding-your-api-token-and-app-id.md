@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
 tags: ["Replicated Vendor", "API"]
+kb-sections: ["CI/CD"]
 ---
 
 In order to utilize many of the developer API endpoints you will need to know your API Token as well as other items such as your App ID or Channel ID. This document will provide examples of how those values can be located using the cURL utility.

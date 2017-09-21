@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
 tags: ["Replicated UI"]
+kb-sections: ["Licenses"]
 ---
 
 ## Installing Multi-Channel License

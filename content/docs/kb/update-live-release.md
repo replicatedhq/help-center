@@ -5,10 +5,10 @@ title: "Updating a Live Release"
 weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
+kb-sections: ["Troubleshooting"]
 ---
 
-If you promote a release to a channel but later realize there is a issue you can use the 
-[vendor web](https://vendor.replicated.com/) to fix the problem quickly.
+If you promote a release to a channel but later realize there is a issue you can use the [vendor web](https://vendor.replicated.com/) to fix the problem quickly.
 
 Possible issues would be:
 
