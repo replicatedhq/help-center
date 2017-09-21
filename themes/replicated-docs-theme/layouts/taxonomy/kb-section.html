@@ -1,0 +1,33 @@
+{{ partial "headerWithSearch.html" . }}
+<article class="single">
+			<div class="u-gradient--turquoiseToGreen main-section flex-column flex1 justifyContent--center">
+				<div class="container u-marginTop--most">
+					<div class="paddingContainer">
+						<div class="flex flex-auto justifyContent--center u-marginTop--more">
+							<div class="flex-auto u-hidden--mobileTablet">
+								<span class="icon u-docsHeaderIcon u-marginRight--normal"></span>
+							</div>
+							<div class="flex-auto">
+								<h3 class="u-color--white u-fontWeight--bold u-fontSize--header">Knowledge Base</h3>
+								<p class="u-fontSize--large u-fontWeight--medium u-color--white u-marginTop--small u-lineHeight--normal">{{ .Title }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main-section">
+				<div class="container">
+					<div class="paddingContainer">
+						<ul class="single-cat-docs-list">
+                        {{ range sort .Pages }}
+                            {{ partial "summary.html" . }}
+                        {{ end }}
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div>
+				{{ template "_internal/disqus.html" . }}
+			</div>
+		</article>
+    {{ partial "footer.html" . }}

@@ -27,7 +27,7 @@
 											<p class="u-fontSize--largest u-fontWeight--medium u-color--tuna u-marginBottom--normal">{{ .Title }}</p>
 											<p class="u-fontSize--large u-color--dustyGray u-margin--none u-lineHeight--normal">{{ .Description }}</p>
 											<div class="u-marginTop--more">
-												<a class="u-color--curiousBlue u-fontWeight--medium view-docs-link u-position--relative" href="{{ .Permalink }}">View docs</a>
+												<a class="u-color--curiousBlue u-fontWeight--medium view-docs-link u-position--relative" href='{{ if eq .Title "Knowledge Base" }}/kb-sections{{ else  }}{{ .Permalink }}{{ end }}'>View docs</a>
 											</div>
 										</div>
 									</li>
@@ -38,7 +38,7 @@
 				</div>
 			</div>
 			<div>
-				{{ template "_internal/disqus.html" . }}
+			{{ template "_internal/disqus.html" . }}
 			</div>
 		</article>
 	</main>
