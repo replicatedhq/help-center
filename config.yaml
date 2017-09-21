@@ -28,6 +28,7 @@ Params:
 taxonomies:
   category: "categories"
   tag: "tags"
+  kb-section: "kb-sections" 
 
 algolia:
   index: "help_center"
