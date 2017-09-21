@@ -6,11 +6,10 @@ weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
 tags: ["CLI Commands", "Application YAML"]
+kb-sections: ["Config Screen"]
 ---
 
-[Commands](/docs/packaging-an-application/commands/) are an important part of the
-Replicated ecosystem for bootstrapping a configuration screen to help streamline the
-installation of your application on-premise.
+[Commands](/docs/packaging-an-application/commands/) are an important part of the Replicated ecosystem for bootstrapping a configuration screen to help streamline the installation of your application on-premise.
 
 Important concepts to understand when using `cmds`:
 

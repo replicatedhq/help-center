@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
 tags: ["Testing", "Application YAML"]
+kb-sections: ["Development Process"]
 ---
 
 Once you have written some YAML describing your application, you’ll need to begin actually

@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
 tags: ["Docker"]
+kb-sections: ["Replicated Scheduler"]
 ---
 
 One of the challenges of running containerized application is limited access to host OS information and resources.  This article intends to demonstrate one way to access files on the host OS that are not available to an application running inside of a container.

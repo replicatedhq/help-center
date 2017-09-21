@@ -5,6 +5,7 @@ title: "Updating Replicated"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
+kb-sections: ["Delivering Replicated", "Troubleshooting"]
 ---
 
 {{< warning title="Old Version Warning" >}}

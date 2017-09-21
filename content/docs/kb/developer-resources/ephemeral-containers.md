@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
 tags: ["Application YAML"]
+kb-sections: ["Troubleshooting", "Replicated Scheduler"]
 ---
 
 Database migrations are an important part of any software upgrade, and having a strategy to manage

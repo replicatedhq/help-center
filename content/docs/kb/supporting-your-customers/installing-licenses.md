@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
 tags: ["Replicated UI"]
+kb-sections: ["Delivering Replicated", "Troubleshooting"]
 ---
 
 It's possible your customers might run into problems while uploading their license after

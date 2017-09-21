@@ -5,6 +5,7 @@ title: "Firewalls"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
+kb-sections: ["Delivering Replicated", "Troubleshooting"]
 ---
 
 Often, customers will need to have a complete list of expected internal and outbound network traffic so they can open ports in firewalls and whitelist hosts and IP addresses for outbound connectivity. This document provides the list of all known connections that Replicated requires to run. Any external services required are not listed here.

@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
 tags: ["Application YAML"]
+kb-sections: ["Replicated Scheduler"]
 ---
 
 Orchestrating your containers to “turn on” in the correct order is one of the more challenging issues

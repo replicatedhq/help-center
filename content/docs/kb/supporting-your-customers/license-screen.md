@@ -5,9 +5,8 @@ title: "New License UX"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
+kb-sections: ["Licenses"]
 ---
-
-The license screen within the Replicated Vendor Portal was recently updated. These changes were designed to make it easier to create and manage your licenses.
 
 ![Invalid License](/images/post-screens/license-screen-screenshot/license-screen.png)
 

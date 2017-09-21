@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
 tags: ["Replicated UI", "Application YAML"]
+kb-sections: ["Config Screen"]
 ---
 
 Many SaaS applications rely on external email services such as SendGrid or Amazon SES to deliver

@@ -6,13 +6,14 @@ weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
 tags: ["Support"]
+kb-sections: ["Troubleshooting"]
 ---
 
-If your customer cannot access the Replicated UI, you can still have them 
-download the support bundle from the Replicated CLI by running the following 
+If your customer cannot access the Replicated UI, you can still have them
+download the support bundle from the Replicated CLI by running the following
 commands on the server:
 
-*Note: If your on-premise console has a password you will need to authenticate 
+*Note: If your on-premise console has a password you will need to authenticate
 on the CLI*
 
 ```shell

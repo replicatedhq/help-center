@@ -5,6 +5,7 @@ title: "Networking Setup"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
+kb-sections: ["Troubleshooting"]
 ---
 
 Enterprise customers frequently run iptables on their servers. If you need a quick

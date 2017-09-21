@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
 tags: ["Application YAML", "Replicated Vendor"]
+kb-sections: ["Examples", "Config Screen", "Licenses"]
 ---
 
 License fields can be used to control the settings page to show or hide advanced settings.  This technique does not need a new release and the settings page can be updated by a simple license sync.

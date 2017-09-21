@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
 tags: ["Replicated Vendor", "API"]
+kb-section: ["Licenses"]
 ---
 
 An example use case for using the Vendor API is license maintenance. This example will show how to extend the expiration dates of all licenses in a specific channels.
