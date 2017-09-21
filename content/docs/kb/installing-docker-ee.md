@@ -6,7 +6,7 @@ weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
 tags: ["Docker"]
-kb-sections: ["Delivering Replicated""]
+kb-sections: ["Delivering Replicated"]
 ---
 
 This document describes the general process of installing Docker Enterprise Edition (EE) and Replicated onto a RedHat Enterprise Linux (RHEL) server.
