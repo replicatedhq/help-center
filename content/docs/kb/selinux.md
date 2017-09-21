@@ -27,11 +27,15 @@ This type is suitable for most containerized components, such as Redis, MySQL, o
 
 ## The spc_t domain
 Some applications like Replicated are required to monitor hosts and launch other containers.
-These cannot be run under in the unmodified `svirt_sandbox_file_t` domain.
+These cannot be run in the unmodified `svirt_sandbox_file_t` domain.
 Fortunately the `spc_t` domain [was designed for this use case](https://developers.redhat.com/blog/2014/11/06/introducing-a-super-privileged-container-concept/).
 Run a container in the `spc_t` domain with the `--security-opt` flag:
 ```
+# docker >= 1.11
 docker run --security-opt label=type:spc_t replicated
+
+# docker <= 1.10
+docker run --security-opt lable:type:spc_t replicated
 ```
 The install scripts configure Replicated to run in this domain.
 
