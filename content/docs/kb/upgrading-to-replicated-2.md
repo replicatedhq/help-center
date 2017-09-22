@@ -5,7 +5,7 @@ title: "Upgrading to Replicated 2.0"
 weight: "999999"
 categories: [ "Knowledgebase" ]
 index: "docs"
-kb-sections: ["Delivering Replicated", "Truobleshooting"]
+kb-sections: ["Delivering Replicated", "Troubleshooting"]
 ---
 
 {{< warning title="Warning" >}}
