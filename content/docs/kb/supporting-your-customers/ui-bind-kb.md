@@ -1,15 +1,15 @@
 ---
 date: "2017-08-08T00:09:10Z"
-lastmod: "2017-08-T00:09:10Z"
-title: "Changing ui-bind-port On A Running Container"
+lastmod: "2017-09-22T00:09:10Z"
+title: "Changing The Admin Console Port Number"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
 ---
 
-By defualt, the Replicated install script binds the Replicated UI to port :8800.
+By default, the Replicated install script binds the Admin Console to port :8800.
 
-You can add a flag in the Replicated install script to specify in which port you want the Replicated UI to be bound to.
+You can add a flag in the Replicated install script to specify in which port you want the Admin Console to be bound to.
 
 Example install script with bound port specified:
 
@@ -17,9 +17,9 @@ Example install script with bound port specified:
 curl -sSL https://get.replicated.com/docker | sudo bash -s ui-bind-port=8000
 ```  
 
-It is also possible to change the ui-bind-port on a running application by editing the system service files manually.
+It is also possible to change the Admin Console port after an installation by re-running the Replicated install script with the desired bound port.
 
-Depending on your distro, you can use edit the following files:
+Additionally, you can edit the following files according to your Operating System:
 
 ```shell 
 /etc/systemd/system/replicated-ui.service
@@ -31,18 +31,12 @@ or
 etc/init/replicated-ui.conf
 ``` 
 
-and restart replicated-ui using 
+and restart the Admin Console using 
 
 ```shell 
 sudo service replicated-ui restart
 ```
 
-Additionally, you can run the same install script you used during the initial installation and specify the port
 
-```shell 
-curl -sSL https://get.replicated.com/docker | sudo bash -s ui-bind-port=XXXX
-```
-
-Replace the XXXX with the desired port.
 
 
