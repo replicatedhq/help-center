@@ -4,7 +4,7 @@ lastmod: "2017-06-29T00:00:00Z"
 title: "Docker Enterprise Edition and Replicated on RHEL"
 weight: "999999"
 categories: [ "Knowledgebase" ]
-index: false
+index: "docs"
 tags: ["Docker"]
 kb-sections: ["Delivering Replicated"]
 ---
