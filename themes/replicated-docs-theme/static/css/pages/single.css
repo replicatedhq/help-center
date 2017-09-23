@@ -311,6 +311,41 @@
     margin-left: 0;
 }
 
+.knowledgebase .kb-back-link {
+    margin-bottom: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.knowledgebase .kb-back-link:hover {
+    text-decoration: none;
+}
+
+.knowledgebase .kb-back-link::after {
+    content: "";
+    position: absolute;
+    background-image: url(../../images/main_spritesheet.svg);
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position: -58px 0;
+    width: 7px;
+    height: 12px;
+    top: 3px;
+    left: -15px;
+    -webkit-transform: translateX(0) rotate(180deg);
+    -moz-transform: translateX(0) rotate(180deg);
+    transform: translateX(0) rotate(180deg);
+    -webkit-transition: transform .2s;
+    -moz-transition: transform .2s;
+    transition: transform .2s;
+}
+
+.knowledgebase .kb-back-link:hover::after {
+  -webkit-transform: translateX(-3px) rotate(180deg);
+  -moz-transform: translateX(-3px) rotate(180deg);
+  transform: translateX(-3px) rotate(180deg);
+}
+
 @media screen and (min-width: 48em) {
     .page-content-wrapper {
         padding-right: 30px;
