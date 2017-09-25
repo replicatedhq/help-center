@@ -3,9 +3,10 @@ date: "2017-08-22T00:00:00Z"
 lastmod: "2017-08-22T00:00:00Z"
 title: "Error Message: Can not set cookie: dm_set_cookie failed"
 weight: "999999"
-categories: [ "Supporting Your Customers" ]
+categories: [ "Knowledgebase" ]
 index: "docs"
 tags: ["Docker", "Errors"]
+kb-sections: ["Troubleshooting"]
 ---
 
 When dealing with a large number of containers pulling in parallel, containers may fail with the following error:
@@ -17,7 +18,7 @@ Error response from daemon: driver "devicemapper" failed to remove root filesyst
 
 This problem can surface when upgrading a server that has been running Docker 17.06 and for a while and has started and stopped a number of containers.
 
-This problem been identified as a regression in devicemapper and is present in Docker 17.06.0. It will be fixed in a future version of Docker. In the meantime, there are two ways to fix this issue:
+This problem been identified as a regression in devicemapper and is present in Docker 17.06.0. It has been fixed in 17.06.2. There are two work arounds for this issue as well:
 
 ## Restart the Docker Daemon
 
