@@ -29,7 +29,13 @@ For the installer to use the version of Replicated you specify you should use th
 To install older versions of Replicated after 2.0 we support specifying the version in the install url.
 
 ```shell
-curl -sSL "https://get.replicated.com/docker?replicated_tag=2.3.2&replicated_ui_tag=2.3.2&replicated_operator_tag=2.3.2" | sudo bash
+curl -sSL "https://get.replicated.com/docker?replicated_tag=2.3.2" | sudo bash
+```
+
+On older versions of Replicated it may be necessary to install alternative versions of the Operator and UI containers. You can specify the additional query parameters of `replicated_ui_tag` and `replicated_operator_tag` to pin versions of these products.
+
+```shell
+curl -sSL "https://get.replicated.com/docker?replicated_tag=2.0.1649&replicated_ui_tag=2.0.38&replicated_operator_tag=2.0.36" | sudo bash
 ```
 
 # Best Practices
