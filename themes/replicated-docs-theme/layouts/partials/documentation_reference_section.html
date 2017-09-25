@@ -97,15 +97,15 @@
             <div class="doc-ref">
               <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Knowledge Base</p>
               <ul>
-                {{ range $name, $taxonomy := first 6 ($.Site.GetPage "taxonomyTerm" "kb-sections").Pages.ByWeight }}
+                {{ range $index, $element := first 6 (index $.Site.Taxonomies.categories "knowledgebase").Pages }}
                   <li>
                     <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
                   </li>
                 {{ end }}
               </ul>
-              {{ with $list := ($.Site.GetPage "taxonomyTerm" "kb-sections").Pages }}
+              {{ with $list := (index $.Site.Taxonomies.categories "knowledgebase") }}
                 {{ if gt (len $list) 6 }}
-                  <a href="/kb-sections" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ (len $list) sub 6 }} More</a>
+                  <a href="/knowledgebase" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ (len $list) sub 6 }} More</a>
                 {{ end }}
               {{ end }}
             </div>
