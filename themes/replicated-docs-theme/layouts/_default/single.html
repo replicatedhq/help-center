@@ -10,11 +10,11 @@
 						<p class="u-color--white u-fontSize--large u-lineHeight--normal">
 							{{ .Description }}
 						</p>
-						{{ if $.Param "kb-sections" }}
+						{{ if .Params.tags }}
 							<div class="tags">
 								<ul>
-									{{ range $.Param "kb-sections" }}
-										<li><a href="{{ "/kb-sections/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
+									{{ range .Params.tags }}
+										<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
 									{{ end }}
 								</ul>
 							</div>
@@ -22,7 +22,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="container {{ (index (.Params.categories) 0) | urlize }}">
+			<div class="container">
 				<div class="paddingContainer">
 					<div class="u-flexTabletReflow flex1">
 						<div class="flex-auto sidebar-wrapper">
@@ -64,9 +64,6 @@
 						</div>
 						<div class="flex1 page-content-wrapper">
 							<div class="page-content">
-								{{ if $.Param "kb-sections" }}
-									<a href="/kb-sections" class="kb-back-link u-position--relative">Back to Knowledge Base</a> 
-								{{ end }}
 								{{ .Content }}
 							</div>
 						</div>
