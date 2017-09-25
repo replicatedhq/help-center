@@ -3,7 +3,7 @@ date: "2017-09-05T00:00:00Z"
 lastmod: "2017-09-05T00:00:00Z"
 title: "SELinux"
 weight: "999999"
-categories: [ "Knowledgebase" ]
+categories: [ "Supporting Your Customers" ]
 index: "docs"
 tags: ["Docker"]
 kb-sections: ["Replicated Scheduler"]
