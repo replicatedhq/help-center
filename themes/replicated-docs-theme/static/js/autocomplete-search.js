@@ -6,7 +6,6 @@ const guidesIndex = client.initIndex('help_center_guides');
 // Autocomplete search bar
 autocomplete('#autocompletesearch-box', {
     hint: false,
-    debug: true,
     templates: {
         dropdownMenu: "<div class='aa-dataset-other'></div>" +
             "<div class='aa-dataset-docs'></div>"
