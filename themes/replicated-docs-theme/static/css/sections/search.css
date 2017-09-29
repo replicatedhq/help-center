@@ -59,6 +59,11 @@
   border-bottom: 1px solid rgba(155, 155, 155, .4);
   cursor: pointer;
 }
+
+.aa-suggestion.aa-cursor {
+  background: rgba(163, 211, 233, .5);
+}
+
 .aa-suggestion:last-child {
   border-bottom: none;
 }

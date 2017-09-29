@@ -2,12 +2,14 @@ const otherSearch = instantsearch({
     appId: '5PHVQPX4AR',
     apiKey: '92575152510e5cdaf7a0df17c446d879',
     indexName: 'help_center_other', 
+    urlSync: true
 });
 
 const docsSearch = instantsearch({
     appId: '5PHVQPX4AR',
     apiKey: '92575152510e5cdaf7a0df17c446d879',
     indexName: 'help_center_docs',
+    urlSync: true
 });
 
 const searchBox = instantsearch.widgets.searchBox({
