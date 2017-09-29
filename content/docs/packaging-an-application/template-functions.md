@@ -431,6 +431,16 @@ env_vars:
   static_val: '{{repl Split "A,B,C" "," }}'
 ```
 
+Combining `Split` and `index`:
+Assuming the `github_url` param is set to `https://github.mycorp.internal:3131`, the following would set
+`GITHUB_HOSTNAME` to `github.mycorp.internal`.
+```yaml
+env_vars:
+- name: GITHUB_HOSTNAME
+  static_val: '{{repl index (Split (index (Split (ConfigOption "github_url") "/") 2) ":") 0}}'
+```
+
+
 {{< template_function name="ToLower" replicated="true" kubernetes="true" swarm="true" >}}
 ```go
 func ToLower(stringToAlter string) string
