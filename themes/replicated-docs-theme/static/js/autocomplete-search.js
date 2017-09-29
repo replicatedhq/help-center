@@ -143,7 +143,6 @@ autocomplete('#search-field', {
     }
 ]).on('autocomplete:selected', function(e, suggestion, dataset) {
     // Fix for weird bug that places <em> tags in uri
-    console.log(suggestion);
     window.location.href = window.location.origin + '/' + suggestion._highlightResult.uri.value.replace(/<\/?[^>]+(>|$)/g, "");
 }).on('autocomplete:shown', function(e){
     $(this).keypress(function(e) {
