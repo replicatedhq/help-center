@@ -2,6 +2,7 @@
 title: "Vendor API"
 description: "The Vendor API is available for integrating Replicated into your workflows, such as automating your CI pipeline or customer license creation."
 hideFromList: true
+aliases: ['api/vendor-api']
 index: "docs"
 gradient: "purpleToPink"
 api: true
