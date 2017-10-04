@@ -10,6 +10,8 @@ index: "docs"
 
 All Replicated installations come with a StatsD/Graphite/Carbon container that can be used by the application to report data to StatsD. Application YAML can also include optional custom monitors that will be used to display additional charts in Replicated dashboard. Applications can also query Graphite directly.
 
+Aside from the Replicated Built-In monitors, you can have customized [monitors] (/docs/packaging-an-application/yaml-overview/#monitors) that display metrics from specified containers or private images.
+
 ## Defining Metrics
 
 Add `custom_metrics` as a root element to the application YAML. The following elements are supported:
@@ -41,9 +43,9 @@ Please note that changing retention and aggregation settings will have no effect
 
 StatsD is configured to use the flush interval of 1 second. Using average aggregators with bucket size greater than 1 second may result in inaccurate data.
 
-## Defining Monitors
+## Defining Built-In Monitors
 
-Each custom monitor will be added as a tile to the Replicated dashboard. The following elements are supported
+Each Built-In monitor will be added as a tile to the Replicated dashboard. The following elements are supported
 
 - `name` - String that will appear as the top label for the graph
 - `target` - Deprecated.  Use `targets`.
