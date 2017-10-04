@@ -71,7 +71,7 @@
               </ul>
               {{ with $list := $.Site.Taxonomies.categories.examples }}
                 {{ if gt (len $list) 6 }}
-                  <a href="/docs/examples" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ (len $list) sub 6 }} More</a>
+                  <a href="/categories/examples" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ (len $list) sub 6 }} More</a>
                 {{ end }}
               {{ end }}
             </div>

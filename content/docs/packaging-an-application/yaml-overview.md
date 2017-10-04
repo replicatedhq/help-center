@@ -201,4 +201,4 @@ host_requirements:
   replicated_version: ">=2.3.0 <2.4.1"
 ```
 
-For the full configuration see [Examples](/docs/examples).
+For the full configuration see [Examples](/categories/examples).
