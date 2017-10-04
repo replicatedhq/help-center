@@ -4,5 +4,4 @@ description: "Once your YAML is created, next you need to create licenses and in
 aliases: ['docs/distributing-an-application']
 weight: 103
 index: "docs"
-aliases: ["docs/distributing-an-application"]
 ---
