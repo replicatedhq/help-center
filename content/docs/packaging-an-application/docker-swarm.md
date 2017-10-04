@@ -87,7 +87,7 @@ Replicated will consider the application running when all replicas of the Swarm 
 There are some additional [template functions](/docs/packaging-an-application/template-functions#swarm) available when running in Swarm mode.
 
 ### Secrets and Configs
-Replicated supports secrets and configs through the use of [template functions](/docs/packaging-an-application/template-functions/). It is possible to request a secret from the user using a combination of config settings and the `ConfigOption` [template function](/docs/packaging-an-application/template-functions/#configoption). For more information on configuring the replicated settings screen see the [docs](/docs/packaging-an-application/config-screen/) on customizing the Admin Console settings page. See below for an example of creating a secret in your application.
+Replicated supports secrets and configs through the use of [template functions](/docs/packaging-an-application/template-functions/). It is possible to request data from the user using a combination of config settings and the `ConfigOption` [template function](/docs/packaging-an-application/template-functions/#configoption). For more information on configuring the replicated settings screen see the [docs](/docs/packaging-an-application/config-screen/) on customizing the Admin Console settings page. See below for an example of creating secrets and configs in your application.
 
 ```yaml
 # kind: replicated
