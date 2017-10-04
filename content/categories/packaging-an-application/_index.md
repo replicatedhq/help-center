@@ -4,5 +4,4 @@ description: "The first step to shipping your application is to create a YAML fi
 aliases: [ 'docs/packaging-an-application' ]
 weight: 102
 index: "docs"
-aliases: ["docs/packaging-an-application"]
 ---

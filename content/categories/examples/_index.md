@@ -4,5 +4,4 @@ description: "Get familiar with using Replicated by seeing real life examples of
 aliases: ['docs/examples']
 weight: 104
 index: "docs"
-aliases: [/docs/examples/]
 ---
