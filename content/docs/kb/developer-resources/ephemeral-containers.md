@@ -31,11 +31,11 @@ going to use this event as a trigger to run the migration.
     version: 9.5
     env_vars:
     - name: POSTGRES_DB
-      static_val: pythonapp
+      value: pythonapp
     - name: POSTGRES_USER
-      static_val: 'some_user'
+      value: 'some_user'
     - name: POSTGRES_PASSWORD
-      static_val: 'some_password'
+      value: 'some_password'
     volumes:
     - host_path: /data/postgresql/data
       container_path: /var/lib/postgresql/data
@@ -74,7 +74,7 @@ Finally, we listen for this container to stop, and fire an event to start the ap
     ephemeral: true
     env_vars:
       - name: DB_URL
-        static_val: "postgresql://pythonapp:{{repl ConfigOption \"postgres_pw\"}}@{{repl NodePrivateIPAddress \"db\" \"postgres\" }}:5432/pythonapp"
+        value: "postgresql://pythonapp:{{repl ConfigOption \"postgres_pw\"}}@{{repl NodePrivateIPAddress \"db\" \"postgres\" }}:5432/pythonapp"
     cmd: '["python", "manage.py", "db", "upgrade"]'
     publish_events:
     - name: db migration complete
@@ -99,7 +99,7 @@ will start serving the web site.
     version: 1.4.2
     env_vars:
       - name: DB_URL
-        static_val: "postgresql://pythonapp:{{repl ConfigOption \"postgres_pw\"}}@{{repl NodePrivateIPAddress \"db\" \"postgres\" }}:5432/pythonapp"
+        value: "postgresql://pythonapp:{{repl ConfigOption \"postgres_pw\"}}@{{repl NodePrivateIPAddress \"db\" \"postgres\" }}:5432/pythonapp"
 ```
 
 If this release contains a **required** migration and the migration is not going to be present in future

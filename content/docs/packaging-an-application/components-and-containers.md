@@ -154,10 +154,10 @@ Next we have the option of specifying environment variables. There is also a fla
 ```yaml
   env_vars:
     - name: AWS_ACCESS_KEY_ID
-      static_val: '{{repl ConfigOption "logstash_input_sqs_aws_access_key" }}'
+      value: '{{repl ConfigOption "logstash_input_sqs_aws_access_key" }}'
       is_excluded_from_support: true
     - name: AWS_SECRET_ACCESS_KEY
-      static_val: '{{repl ConfigOption "logstash_input_sqs_aws_secret_key" }}'
+      value: '{{repl ConfigOption "logstash_input_sqs_aws_secret_key" }}'
       is_excluded_from_support: true
 ```
 
