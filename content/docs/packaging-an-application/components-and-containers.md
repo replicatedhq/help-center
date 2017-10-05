@@ -149,7 +149,14 @@ the container at the specified path (filename).
 
 {{< linked_headline "Environment Variables" >}}
 
-Next we have the option of specifying environment variables. There is also a flag provided to exclude anything secret from the support bundle.
+The 12-factor app encourages the use of environment variables for configuration, and Replicated supports this design pattern. You can specify
+environment variables, which will be injected into a container when it's created.
+
+Environment variables can be created with static values or customer supplied values.
+
+Environment variables support the Replicated template library.
+
+There is also a flag provided to exclude anything secret from the support bundle.
 
 ```yaml
   env_vars:
@@ -304,15 +311,6 @@ Sometimes it can be helpful to allow a customer to supply a file to your app. A 
 SSL certificate and private key. To add customer supplied files to your container, you must first define the file as a config option, and
 then create a link to it in any container that needs that file. Replicated will prompt for the file to be uploaded and will ensure that the
 file is at the correct location in the container when it is started.
-
-{{< linked_headline "Environment Variables" >}}
-
-The 12-factor app encourages the use of environment variables for configuration, and Replicated supports this design pattern. You can specify
-environment variables, which will be injected into a container when it's created.
-
-Environment variables can be created with static values or customer supplied values.
-
-Environment variables support the Replicated template library.
 
 {{< linked_headline "Exposed Ports" >}}
 
