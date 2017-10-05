@@ -1,11 +1,31 @@
 machine:
+  node:
+    version: 8.4
   environment:
     PROJECT_NAME: help-center
     PROJECT_ORG: replicatedhq
+
+dependencies:
+  pre:
+    - npm install -g npm@5.3.0
+    - npm install -g yarn@1.0.0
+  cache_directories:
+    - ~/.yarn-cache
+  override:
+    - yarn install
+
 test:
   override:
     - deploy/pass.sh
+
 deployment:
+  index:
+    branch: [release]
+    owner: replicatedhq
+    commands:
+      - mkdir public
+      - make index-and-send
+
   docker:
     branch: [master, release]
     owner: replicatedhq
