@@ -18,9 +18,6 @@ The canonical source for all available Replicated YAML options is available at
 [github.com/replicatedhq/libyaml](https://github.com/replicatedhq/libyaml). This is a great reference
 to look up supported options and learn how different sections fit together.
 
-**Note:** Over time, we expect [github.com/replicatedhq/replicated-lint](https://github.com/replicatedhq/replicated-lint)
-to eventually replace [github.com/replicatedhq/libyaml](https://github.com/replicatedhq/libyaml) as the 
-canonical reference for yaml schema and available options.
 
 # Additional Linter Rules
 
