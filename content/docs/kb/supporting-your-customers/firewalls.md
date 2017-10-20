@@ -27,6 +27,7 @@ When Replicated is installed, it can be downloaded from the Internet or packaged
 | Host | Online Installation | Airgap Installation | Description |
 |---|---|---|---|
 | get.replicated.com | <i class="fa fa-check" /> Required | <i class="fa fa-times" /> Not Required | This endpoint hosts the install script that used in the Replicated [easy install](/docs/distributing-an-application/installing-via-script) script. |
+| registry.replicated.com | <i class="fa fa-check" /> Required | <i class="fa fa-times" /> Not Required | This endpoint services pull requests for the Replicated auditing service, Retraced. |
 | quay.io | <i class="fa fa-check" /> Required | <i class="fa fa-times" /> Not Required | The current Replicated images are hosted as public images in the Quay.io registry. |
 | Docker Hub | <i class="fa fa-check" /> Required | <i class="fa fa-times" /> Not Required | Some dependencies of Replicated are hosted as public images in Docker Hub.|
 
