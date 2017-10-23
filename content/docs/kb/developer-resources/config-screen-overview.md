@@ -15,27 +15,27 @@ settings. [Technical documentation config YAML](/docs/packaging-an-application/c
 
 ![Configuration Screen](/images/post-screens/config-screen.png)
 
-## Preview with YAML
+{{< linked_headline "Preview with YAML" >}}
 
 This screen can be previewed in the vendor portal while viewing the YAML each release. You
 can also use the [Replicated Atom Preview Plugin](https://atom.io/packages/replicated-preview).
 
 ![Config Preview](/images/post-screens/config-preview.png)
 
-## Reconfigure anytime.
+{{< linked_headline "Reconfigure anytime." >}}
 
 Saved anytime to restart with new values.
 
 ![Restart Needed](/images/post-screens/restart-needed.png)
 
-## Conditional Inputs
+{{< linked_headline "Conditional Inputs" >}}
 
 Conditional inputs allow you to determine when an item or group is shown.
 ([technical documentation](/on-prem-config#section-when-conditional-inputs-))
 
 ![Conditional Inputs](/images/post-screens/conditional-inputs.gif)
 
-## Test Commands
+{{< linked_headline "## Test Commands" >}}
 
 Users to validate information like SMTP Auth, SSL Certs, Hostname resolution, GitHub Auth Creds,
 and AWS Creds with the use of Replicated [test commands](/docs/packaging-an-application/test-procs/).
