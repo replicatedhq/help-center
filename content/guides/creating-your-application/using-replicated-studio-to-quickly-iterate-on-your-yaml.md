@@ -74,6 +74,15 @@ The [Replicated Developer Studio](https://github.com/replicatedhq/studio) can pr
    
    *\* [Restarting Replicated](/docs/distributing-an-application/installing-via-script/#restarting-replicated)*
 
+1. Navigate to the on-premesis admin console in the browser and install your license.
+
+## What Studio doesn't do
+
+- The license you use to install the application must still be valid. The Studio service only handles a few endpoints in the Replicated API, and proxies all of the others to the primary API service.
+- The Studio service does respond to requests for custom branding, console logos, and some other metadata. All of these values are static and will not be served from the upstream API. This means that your local developer console will not show your application logo or branding, but this will still work when you promote your build using the primary API service.
+- The Studio service does not enforce licenses to serve YAML. Any request to get YAML will be honored. The Studio service is designed to run on localhost for local development, so no license enforcements or policies were added.
+- If your application YAML includes GitHub references for config files, these will not be functional. If you are using this feature, you will have to include the GitHub file inline for now.
+
 ## Iterating on your YAML
 
 TODO
