@@ -20,7 +20,7 @@ The [Replicated Developer Studio](https://github.com/replicatedhq/studio) can pr
    cd studio
    ```
    
-   *\* Note that `git` must be installed.*
+   *\* Note that `git` must be installed*
 
 1. Create a directory `/replicated` in the root directory of your server
 
@@ -35,7 +35,7 @@ The [Replicated Developer Studio](https://github.com/replicatedhq/studio) can pr
    make build run
    ```
    
-   *\* Note that `make` must be installed.*
+   *\* Note that `make` must be installed*
 
    Studio assumes you have a directory named `/replicated` that is readable by the user running the service. It will look in this directory for files with extension `.yaml` and serve these as releases. It's important that you start with the sequence number that is the latest promoted version for the channel your license is in.
 
@@ -63,12 +63,12 @@ The [Replicated Developer Studio](https://github.com/replicatedhq/studio) can pr
 
    **Ubuntu/Debian**
    ```bash
-   service replicated restart
+   sudo service replicated restart
    ```
    
    **CentOS/RHEL/Fedora**
    ```bash
-   systemctl restart replicated
+   sudo systemctl restart replicated
    ```
    
    *\*[Restarting Replicated](/docs/distributing-an-application/installing-via-script/#restarting-replicated)
