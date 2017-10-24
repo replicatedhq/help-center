@@ -11,18 +11,21 @@ The [Replicated Developer Studio](https://github.com/replicatedhq/studio) can pr
 
 ## Getting started
 
+1. Install [Node.js](https://nodejs.org/en/download/package-manager/) and [yarn](https://yarnpkg.com/lang/en/docs/install/)
+
 1. Clone the [replicatedhq/studio](https://github.com/replicatedhq/studio) project
 
    ```bash
-   git clone git@github.com:replicatedhq/studio.git
+   git clone https://github.com/replicatedhq/studio.git
+   cd studio
    ```
+   
+   *\* Note that `git` must be installed.*
 
-1. Install [Node.js](https://nodejs.org/en/download/) and [yarn](https://yarnpkg.com/lang/en/docs/install/)
-
-1. Create a directory `./replicated` in your current directory
+1. Create a directory `/replicated` in the root directory of your server
 
    ```bash
-   mkdir -p ./replicated
+   mkdir -p /replicated
    ```
 
 1. Build and run the Studio project
@@ -31,14 +34,22 @@ The [Replicated Developer Studio](https://github.com/replicatedhq/studio) can pr
    yarn
    make build run
    ```
+   
+   *\* Note that `make` must be installed.*
 
-   Studio assumes you have a directory named `./replicated` that is readable by the user running the service. It will look in this directory for files with extension `.yaml` and serve these as releases. It's important that you start with the sequence number that is the latest promoted version for the channel your license is in.
+   Studio assumes you have a directory named `/replicated` that is readable by the user running the service. It will look in this directory for files with extension `.yaml` and serve these as releases. It's important that you start with the sequence number that is the latest promoted version for the channel your license is in.
 
 ## Configuring Replicated to use the local Studio API
 
 1. Start with a new installation of Replicated, or remove any previously installed application
 
-1. Configure Replicated by adding a `MARKET_BASE_URL` environment variable that points to the location of the Studio service. The Replicated configuration file is located at either `/etc/default/replicated` or `/etc/sysconfig/replicated` depending on your distribution.
+   ```bash
+   curl -sSL https://get.replicated.com/docker | sudo bash
+   ```
+
+   *\*[Installing via the easy-install script](/docs/distributing-an-application/installing-via-script/#basic-install)*
+
+1. Configure Replicated by adding a `MARKET_BASE_URL` environment variable that points to the location of the Studio service. The Replicated configuration file is located at either `/etc/default/replicated` or `/etc/sysconfig/replicated` for Debian or RHEL based distributions respectively.
 
    **Example configuration file:**
    ```
@@ -50,10 +61,22 @@ The [Replicated Developer Studio](https://github.com/replicatedhq/studio) can pr
    
 1. Restart Replicated
 
+   **Ubuntu/Debian**
+   ```bash
+   service replicated restart
+   ```
+   
+   **CentOS/RHEL/Fedora**
+   ```bash
+   systemctl restart replicated
+   ```
+   
+   *\*[Restarting Replicated](/docs/distributing-an-application/installing-via-script/#restarting-replicated)
+
 ## Iterating on your YAML
 
 TODO
 
-## When it's useful and when it’s not
+## When Studio is useful and when it’s not
 
 TODO
