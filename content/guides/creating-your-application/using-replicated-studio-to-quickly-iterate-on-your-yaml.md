@@ -56,7 +56,8 @@ The [Replicated Developer Studio](https://github.com/replicatedhq/studio) can pr
    RELEASE_CHANNEL=stable
    PRIVATE_ADDRESS=<snip>
    SKIP_OPERATOR_INSTALL=0
-   REPLICATED_OPTS="-e LOG_LEVEL=info -e DAEMON_TOKEN=<snip> -e NODENAME=<snip> -e MARKET_BASE_URL=http://$PRIVATE_ADDRESS:8006"
+   REPLICATED_OPTS=" -e DAEMON_TOKEN=<snip> -e LOG_LEVEL=info -e NODENAME=<snip> -e MARKET_BASE_URL=http://$PRIVATE_ADDRESS:8006"
+   REPLICATED_UI_OPTS=""
    ```
    
 1. Restart Replicated
