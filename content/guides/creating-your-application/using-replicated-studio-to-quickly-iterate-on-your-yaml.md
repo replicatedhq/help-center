@@ -74,7 +74,7 @@ The [Replicated Developer Studio](https://github.com/replicatedhq/studio) can pr
    
    *\* [Restarting Replicated](/docs/distributing-an-application/installing-via-script/#restarting-replicated)*
 
-1. Navigate to the on-premesis admin console in the browser and install your license.
+1. Navigate to the on-premesis admin console at https://<YOUR SERVER ADDRESS>:8080 in the browser and upload your license.
 
 ## What Studio doesn't do
 
