@@ -1,0 +1,26 @@
+---
+  title: "Become production ready"
+  description: "You've mastered Replicated, you probably  have shipped multiple applications and are familiar with some of our more advanced features."
+  level: "advanced"
+  index: "guides"
+  chapters:
+    - title: "Add nodes"
+      description: "When a Replicated-orchestrated application is configured with a clustering strategy, additional nodes can be installed on remote instances to take part in the cluster."
+      slug: "/docs/distributing-an-application/add-nodes"
+    - title: "Create licenses"
+      description: "Create licenses."
+      slug: "/docs/distributing-an-application/create-licenses"
+    - title: "Installing Replicated"
+      description: "Instructions for installing Replicated via the easy install script, manually or behind a proxy. Also includes instructions for uninstalling Replicated."
+      slug: "/docs/distributing-an-application/installing"
+    - title: "Maintenance"
+      description: "Maintenance processes to use after Replicated is installed."
+      slug: "/docs/distributing-an-application/maintenance"
+    - title: "Promote releases"
+      description: "The process for leveraging Replicated's release channel management functionality to stage versions and deliver updates to customers."
+      slug: "/docs/distributing-an-application/promote-releases"
+    - title: "Upgrading Replicated"
+      description: "The process for end customers to update Replicated services to access the latest improvements to the underlying system since their installation."
+      slug: "/docs/distributing-an-application/upgrading"
+---
+
