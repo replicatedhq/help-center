@@ -111,11 +111,11 @@ and/or the numeric uid of a user & group (file_owner) to be applied to the resul
         http.cors.allow-origin: /https?:\/\/{{repl ConfigOption "hostname" }}(:[0-9]+)?/
 ```
 
-{{< linked_headline "Github Reference" >}}
+{{< linked_headline "GitHub Reference" >}}
 
-It is also possible to specify a file as a Github Reference, where the ref is the SHA of the commit. This ref will need to be updated any
+It is also possible to specify a file as a GitHub Reference, where the ref is the SHA of the commit. This ref will need to be updated any
 time the file changes (we cache the remote file to remove this external dependency from the install time processes). The repository will
-either need to be public or you will need to connect your Github account via the App Settings link of the Replicated Vendor Portal.
+either need to be public or you will need to connect your GitHub account via the App Settings link of the Replicated Vendor Portal.
 (Supports config files only)
 
 ```yaml

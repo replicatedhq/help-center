@@ -128,7 +128,7 @@ replicated release update SEQUENCE --yaml "$(< yournewyaml.yaml)"
 # CI Example
 A common use of the replicated command is to create a new release for every tagged build. 
 
-Assume the app's yaml config is checked in at replicated.yaml and you have configured TravisCI or CircleCI with your REPLICATED_APP and REPLICATED_API_TOKEN environment variables.
+Assume the app's yaml config is checked in at replicated.yaml and you have configured Travis CI or CircleCI with your REPLICATED_APP and REPLICATED_API_TOKEN environment variables.
 
 Then, if you add something like this release.sh script to your project:
 ```bash
@@ -162,7 +162,7 @@ sudo bash ./install.sh
 replicated release promote $(new_sequence) $(unstable_channel_id) --version "$VERSION"
 # Channel ee9d99e87b4a5acc2863f68cb2a0c390 successfully promoted to release 15
 ```
-Now you can automate tagged releases in TravisCI or CircleCI:
+Now you can automate tagged releases in Travis CI or CircleCI:
 ```yaml
 # .travis.yml
 sudo: required
@@ -178,4 +178,4 @@ deployment:
     commands:
       - ./release.sh "$CIRCLE_TAG"
 ```
-Now, all tagged releases on CircleCI or TravisCI will be made into a Relicated release and promoted to the Unstable channel.
+Now, all tagged releases on CircleCI or Travis CI will be made into a Relicated release and promoted to the Unstable channel.

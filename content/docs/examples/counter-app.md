@@ -11,7 +11,7 @@ tags: ["Application YAML"]
 ## Counter App
 This is an example of a general-purpose Replicated app definition. You can use this app as a template for your own, as it covers the basic functionality of the Replicated platform.
 
-[View the example-counter project on Github](https://github.com/replicatedcom/example-counter)
+[View the example-counter project on GitHub](https://github.com/replicatedcom/example-counter)
 
 ```yaml
 # My Counter App version 1.0

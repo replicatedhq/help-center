@@ -10,10 +10,10 @@
     - title: "Automate YAML Validation"
       description: "Use Replicated's linting tools to ensure your Application's YAML spec is valid"
       slug: "/docs/kb/developer-resources/validate-your-yaml"
-    - title: "Automate Releases with Github and Travis CI"
+    - title: "Automate Releases with GitHub and Travis CI"
       description: "Use Travis CI to automate your releases"
       slug: "/docs/packaging-an-application/travis-ci-releases"
-    - title: "Automate Releases with Github and Circle CI"
-      description: "Use Circle CI to automate your releases"
+    - title: "Automate Releases with GitHub and CircleCI"
+      description: "Use CircleCI to automate your releases"
       slug: "/docs/packaging-an-application/circle-ci-releases"
 ---
