@@ -21,7 +21,7 @@ The Replicated Vendor UI will automatically validate your yaml as you write it i
 
 Install the CLI executable with
 
-```
+```sh
 npm install -g replicated-lint
 ```
 
@@ -39,7 +39,7 @@ cat my-app.yml | replicated-lint validate -f -
 
 Results that have issues will look something like:
 
-```
+```raw
 { type: 'info',
   rule: 'prop-configitem-testproc-run-on-save',
   message: 'If a config item\'s test_proc.run_on_save is not set to \'true\', test_proc\'s will not be checked automatically. Consider setting your test_proc\'s run_on_save to automatically validate inputs',
@@ -110,7 +110,7 @@ cat my-app.yml | replicated-lint validate -f - --extraRules no-latest.json
 
 `replicated-lint validate` supports the following options:
 
-```
+```raw
 Options:
   --version         Show version number                                [boolean]
   --help            Show help                                          [boolean]
@@ -136,7 +136,7 @@ replicated-lint validate -f my-app.yml --reporter junit --outputDir /ci/test-rep
 
 This will result in the creation of a file at
 
-```
+```raw
 /ci/test-reports/replicated-lint-results.xml
 ```
 
