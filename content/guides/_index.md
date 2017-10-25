@@ -9,7 +9,7 @@ guides:
     level: "beginner"
     slug: "getting-started"
   - title: "Installation and Support"
-    description: "You've packaged your application and are ready to test it out and start delivering your application and supporting customer installations"
+    description: "You've packaged your application and are ready to test it out and start delivering your application and supporting customer installations."
     level: "intermediate"
     slug: "installation-and-support"
   - title: "Automate your workflow"
