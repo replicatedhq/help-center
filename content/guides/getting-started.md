@@ -17,4 +17,7 @@ chapters:
   - title: "Schedulers"
     description: "An introduction to the different schedulers you can use with Replicated."
     slug: /docs/getting-started/schedulers
+  - title: "Get to know our features"
+    description: "An overview of the various sections of the Replicated YAML."
+    slug: "/guides/get-to-know-our-features"
 ---

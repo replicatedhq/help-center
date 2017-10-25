@@ -1,7 +1,7 @@
 ---
-  title: "Become production ready"
-  description: "You've mastered Replicated, you probably  have shipped multiple applications and are familiar with some of our more advanced features."
-  level: "advanced"
+  title: "Installation and Support"
+  description: "You've packaged your application and are ready to test it out and start delivering your application and supporting customer installations"
+  level: "intermediate"
   index: "guides"
   chapters: 
     - title: "Add nodes"
