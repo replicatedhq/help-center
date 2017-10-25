@@ -12,7 +12,7 @@ In order to utilize many of the developer API endpoints you will need to know yo
 
 ## API Token
 
-API tokens can be generated using the [https://vendor.replicated.com/team](https://vendor.replicated.com/team) page. Detailed instructions for generating an API Token can be found
+API tokens can be generated using the https://vendor.replicated.com/team page. Detailed instructions for generating an API Token can be found
 in [Generate an API Token](/docs/kb/developer-resources/generate-api-token).
 
 ## App ID

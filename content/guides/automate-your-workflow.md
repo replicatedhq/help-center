@@ -1,7 +1,7 @@
 ---
   title: "Automate Your Workflow"
-  description: "You've shipped a few releases on Replicated, and are looking to leverage Replicated's automation features to increase velocity and facilitate collaboration"
-  level: "intermediate"
+  description: "You've shipped on Replicated, now it's time to integrate Replicated's tooling to automate application management and facilitate collaboration."
+  level: "advanced"
   index: "guides"
   chapters:
     - title: "Manage Releases and Channels with the Replicated Vendor CLI"
