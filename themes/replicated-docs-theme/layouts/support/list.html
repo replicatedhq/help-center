@@ -1,0 +1,25 @@
+{{ partial "headerWithSearch.html" . }}
+<main>
+    <div class="page-header u-gradient--orangeToOrange main-section flex-column flex1 justifyContent--center">
+          <div class="container u-marginTop--most">
+              <div class="paddingContainer">
+                  <div class="flex flex-auto justifyContent--center u-marginTop--more">
+                      <div class="flex-auto u-hidden--mobileTablet">
+                          <span class="icon u-guidesHeaderIcon u-marginRight--normal"></span>
+                      </div>
+                      <div class="flex-auto u-widthMobile--full">
+                          <h3 class="u-color--white u-fontWeight--bold u-fontSize--header">Support! Bundle!</h3>
+                          <p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--small u-lineHeight--normal">Upload ur gdang support bundle</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="chapter-block-section">
+          <div class="container">
+              <div id="root"></div>
+          </div>
+      </div>
+</main>
+<script src="{{ .Site.BaseURL }}js/supportBundleUpload.min.js"></script>
+{{ partial "footer.html" . }}
