@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "browserify-css": "^0.12.1",
+    "cssify": "^1.0.3"
+  }
+}

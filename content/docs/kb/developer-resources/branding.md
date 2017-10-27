@@ -11,9 +11,9 @@ tags: ["Replicated UI", "Branding"]
 With the release of Replicated 1.2.73 you can now customize the look & feel of the
 dashboard of your on-prem customer experience.
 
-To get started visit the vendor portal [app settings page](https://vendor.replicated.com/settings).
+To get started visit the [vendor portal](https://vendor.replicated.com/), and navigate to the "Channels" page for your application. Then, click "Edit channel info".
 
-![CSS Buttons](/images/post-screens/css-buttons.png)
+![CSS Buttons](/images/post-screens/edit-channel.png)
 
 Branding is staged by channel, so that you can test your branding before shipping it to
 customers. If you remove the branding & leave a comment in the CSS
