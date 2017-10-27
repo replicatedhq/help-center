@@ -54,6 +54,11 @@
   width: 60px;
   height: 56px;
 }
+.icon.u-supportHeaderIcon {
+  background-position: 0 -462px;
+  width: 48px;
+  height: 57px;
+}
 .icon.u-docsHeaderIcon {
   background-position: -72px -96px;
   width: 47px;

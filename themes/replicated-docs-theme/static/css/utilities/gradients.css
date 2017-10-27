@@ -8,6 +8,16 @@
   background: linear-gradient(135deg, rgba(188,0,0,1) 0%, rgba(255,0,0,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc0000', endColorstr='#ff0000', GradientType=1 );
 }
+.u-gradient--redToRed-secondary {
+  background: rgba(159,4,27,1);
+  background: -moz-linear-gradient(-45deg, rgba(159,4,27,1) 0%, rgba(245,81,94,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(159,4,27,1)), color-stop(100%, rgba(245,81,94,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(159,4,27,1) 0%, rgba(245,81,94,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(159,4,27,1) 0%, rgba(245,81,94,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(159,4,27,1) 0%, rgba(245,81,94,1) 100%);
+  background: linear-gradient(135deg, rgba(159,4,27,1) 0%, rgba(245,81,94,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f041b', endColorstr='#f5515e', GradientType=1 );
+}
 .u-gradient--whiteToRed {
   background: rgba(255,255,255,1);
   background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(253,242,242,1) 100%);

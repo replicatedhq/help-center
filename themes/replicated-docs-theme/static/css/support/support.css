@@ -1,2 +1,129 @@
-.CreateTicket-wrapper{background-color:#fff;border:1px solid #dfdfdf;border-radius:4px;padding:0;margin:0}.CreateTicket-wrapper .FormSection-wrapper{padding:18px}.CreateTicket-wrapper .FormSection-wrapper.upload-section{background-color:#f8f8f8}.CreateTicket-wrapper .FormSection-label{font-size:18px;font-weight:500;color:#323232;margin-bottom:12px}.CreateTicket-wrapper .FormSection-subCopy{font-size:12px;font-weight:400;color:#9b9b9b;margin-bottom:0}.Dropzone-wrapper{margin:18px 0}.FileUpload-wrapper .file-info{color:#4a4a4a;font-size:12px;font-weight:500;margin-left:10px}.Radio-wrapper{position:relative}.Radio-wrapper:first-child{margin-bottom:15px}.Radio-wrapper input[type=radio]{position:absolute;top:14px;left:15px;margin:0;cursor:pointer}.Radio-wrapper label{display:block;width:100%;padding:10px 20px 10px 35px;border-radius:5px;border:1px solid #dfdfdf;background-color:#fff;font-size:14px;font-weight:500;color:#4a4a4a;-webkit-transition:all .2s;transition:all .2s}.Radio-wrapper input[type=radio]:hover+label,.Radio-wrapper label:hover{border-color:#9b9b9b;cursor:pointer}.Radio-wrapper input[type=radio]:checked+label{background-color:#eaf1f7;border-color:#337ab7}.SupportApp{padding-top:60px}.SupportApp .page-header{margin-top:0}.SupportApp-content{margin-top:40px}.TicketFilter{position:absolute;margin-top:8px;right:15px}.TicketFilter .btn-group{vertical-align:top}.TicketFilter .btn-group .FilterButton{font-size:12px;color:#337ab7;border-color:#337ab7;min-width:90px;padding:4px 12px;-webkit-transition:all .2s;transition:all .2s}.TicketFilter .btn-group .FilterButton:hover{background-color:#eaf1f7}.TicketFilter .btn-group .FilterButton.active{outline:none;color:#fff;border-color:#337ab7;background-color:#337ab7}.EmptyTickets{padding:20px 0}.EmptyTickets .clap-emoji{font-size:48px}.Ticket-wrapper{padding:15px 20px 10px;border-bottom:1px solid #dfdfdf;background-color:#fff;-webkit-transition:background .2s;transition:background .2s}.Ticket-wrapper:last-child{border-bottom:0}.Ticket-wrapper:hover{cursor:pointer;background-color:#f8f8f8}.TicketLink,.TicketLink:active,.TicketLink:hover{text-decoration:none}
-/*# sourceMappingURL=main.773dd2be.css.map*/
+.CreateTicket-wrapper {
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+  padding: 0;
+  margin: 0
+}
+.CreateTicket-wrapper .FormSection-wrapper {
+  padding: 18px
+}
+.CreateTicket-wrapper .FormSection-wrapper.upload-section {
+  background-color: #f8f8f8
+}
+.CreateTicket-wrapper .FormSection-label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #323232;
+  margin-bottom: 12px
+}
+.CreateTicket-wrapper .FormSection-subCopy {
+  font-size: 12px;
+  font-weight: 400;
+  color: #9b9b9b;
+  margin-bottom: 0
+}
+.Dropzone-wrapper {
+  margin: 18px 0
+}
+.FileUpload-wrapper .file-info {
+  color: #4a4a4a;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 10px
+}
+.Radio-wrapper {
+  position: relative
+}
+.Radio-wrapper:first-child {
+  margin-bottom: 15px
+}
+.Radio-wrapper input[type=radio] {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  margin: 0;
+  cursor: pointer
+}
+.Radio-wrapper label {
+  display: block;
+  width: 100%;
+  padding: 10px 20px 10px 35px;
+  border-radius: 5px;
+  border: 1px solid #dfdfdf;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a4a4a;
+  -webkit-transition: all .2s;
+  transition: all .2s
+}
+.Radio-wrapper input[type=radio]:hover+label,
+.Radio-wrapper label:hover {
+  border-color: #9b9b9b;
+  cursor: pointer
+}
+.Radio-wrapper input[type=radio]:checked+label {
+  background-color: #eaf1f7;
+  border-color: #337ab7
+}
+.SupportApp {
+  padding-top: 60px
+}
+.SupportApp .page-header {
+  margin-top: 0
+}
+.SupportApp-content {
+  margin-top: 40px
+}
+.TicketFilter {
+  position: absolute;
+  margin-top: 8px;
+  right: 15px
+}
+.TicketFilter .btn-group {
+  vertical-align: top
+}
+.TicketFilter .btn-group .FilterButton {
+  font-size: 12px;
+  color: #337ab7;
+  border-color: #337ab7;
+  min-width: 90px;
+  padding: 4px 12px;
+  -webkit-transition: all .2s;
+  transition: all .2s
+}
+.TicketFilter .btn-group .FilterButton:hover {
+  background-color: #eaf1f7
+}
+.TicketFilter .btn-group .FilterButton.active {
+  outline: none;
+  color: #fff;
+  border-color: #337ab7;
+  background-color: #337ab7
+}
+.EmptyTickets {
+  padding: 20px 0
+}
+.EmptyTickets .clap-emoji {
+  font-size: 48px
+}
+.Ticket-wrapper {
+  padding: 15px 20px 10px;
+  border-bottom: 1px solid #dfdfdf;
+  background-color: #fff;
+  -webkit-transition: background .2s;
+  transition: background .2s
+}
+.Ticket-wrapper:last-child {
+  border-bottom: 0
+}
+.Ticket-wrapper:hover {
+  cursor: pointer;
+  background-color: #f8f8f8
+}
+.TicketLink,
+.TicketLink:active,
+.TicketLink:hover {
+  text-decoration: none
+}
