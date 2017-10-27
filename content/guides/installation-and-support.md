@@ -1,9 +1,9 @@
 ---
-  title: "Become production ready"
-  description: "You've mastered Replicated, you probably  have shipped multiple applications and are familiar with some of our more advanced features."
-  level: "advanced"
+  title: "Installation and Support"
+  description: "You've packaged your application and are ready to test it out and start delivering your application and supporting customer installations"
+  level: "intermediate"
   index: "guides"
-  chapters:
+  chapters: 
     - title: "Add nodes"
       description: "When a Replicated-orchestrated application is configured with a clustering strategy, additional nodes can be installed on remote instances to take part in the cluster."
       slug: "/docs/distributing-an-application/add-nodes"
@@ -23,4 +23,3 @@
       description: "The process for end customers to update Replicated services to access the latest improvements to the underlying system since their installation."
       slug: "/docs/distributing-an-application/upgrading"
 ---
-
