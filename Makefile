@@ -4,6 +4,7 @@ install:
 	yarn
 
 build:
+	browserify static/js/supportBundleUpload.js > themes/replicated-docs-theme/static/js/supportBundleUpload.bundled.js
 	hugo -v
 
 serve:
