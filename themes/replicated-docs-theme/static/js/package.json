@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "browserify": "^14.5.0",
     "browserify-css": "^0.12.1",
     "cssify": "^1.0.3"
   }
