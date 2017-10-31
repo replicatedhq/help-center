@@ -23,7 +23,16 @@ Some of the standard Replicated features operate differently or are not supporte
 Images stored in the [Replicated private registry](/docs/getting-started/replicated-private-registry) can be accessed by adding a static `imagePullSecret` to any container definition that references a private image. Replicated will automatically create a secret named `replicatedregistrykey` and deploy it with your application. Refererencing this secret will make your private images available on the target cluster.
 
 ### External Private Images
-External private images are not supported currently. Replicated hosts a [private registry](/docs/getting-started/replicated-private-registry) that you can use to ship private images. Replicated also supports public (unauthenticated) images in any registry.
+External private images are supported as of Replicated 2.13.0. In order to take advantage of this feature, see the guide for [integrating a third party registry](/docs/kb/developer-resources/third-party-registries).
+
+Once the registry is linked, the private image can be added to the global `images` section:
+
+```yaml
+images:
+- source: mythirdpartyprivateregistry
+  name: namespace/imagename
+  version: 2.0.0
+```
 
 ### Replicated Auto Updates
 Replicated auto updates work as expected when running in Kubernetes. While the Replicated update is applying, the UI will not be available. Once it finishes, refresh the UI to get the update.
@@ -33,7 +42,7 @@ Replicated auto updates work as expected when running in Kubernetes. While the R
 Kubernetes Snapshots can be used to back up any kubernetes resources
 that use a [Persistent Volume Claim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) (PVC)
 for persistent storage. In addition to storing your application data in a PVC, you'll need to whitelist it
-in your Replicated application yaml's `backup` section. For example, to back up a PVC named 
+in your Replicated application yaml's `backup` section. For example, to back up a PVC named
 `redis-data-volume`, use the following `backup` config.
 
 ```yaml
