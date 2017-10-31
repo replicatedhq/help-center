@@ -97,3 +97,26 @@
   color: #A3D3E9;
   border-color: #A3D3E9;
 }
+
+nav li ul li .upload-button {
+  color: #ffffff;
+}
+
+/* ≥ 768px */
+@media screen and (min-width: 48em) {
+  nav li ul li .upload-button {
+    padding: 7px 10px 8px;
+    background-color: rgba(255,255,255,.8);
+    transition: all .2s;
+    color: #717171;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 14px;
+    border-radius: 3px;
+    margin-left: 25px;
+  }
+  nav li ul li .upload-button:hover {
+    background-color: rgba(255,255,255,.9);
+    color: #323232;
+  }
+}
