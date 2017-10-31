@@ -14,16 +14,14 @@ algorithm known as the Time-based One-time Password
 ([TOTP](https://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm)) which is specified by 
 the Internet Engineering Task Force (IETF) under [RFC 6238](https://tools.ietf.org/html/rfc6238).
 
-To enable two-factor authentication:
+To enable two-factor authentication :
 
-- Log in to Replicated and visit the [account settings page](https://vendor.replicated.com/account-settings).
-- Click on the “Turn on Two-Factor Auth” button
-- Enter your password to get to the two-factor configuration view.
+- Log in to Replicated and visit the 2fa setup page.
+- Click on the “Set up two-factor authentication” button
+- Enter your password to get to the two-factor configuration screen.
 - Open a supported two-factor authentication app on your device (we suggest Google Authenticator).
 - Scan the QR code or enter the alphanumeric code into the app.
 - Enter the generated code in the form.
-
-![Set Up 2fa](/images/post-screens/account-settings-view.png)
 
 ## Save the recovery codes
 
