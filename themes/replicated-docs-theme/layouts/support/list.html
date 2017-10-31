@@ -1,25 +1,25 @@
 {{ partial "headerWithSearch.html" . }}
 <main>
     <div class="u-gradient--redToRed-secondary main-section flex-column flex1 justifyContent--center">
-          <div class="container u-marginTop--most">
-              <div class="paddingContainer">
-                  <div class="flex flex-auto justifyContent--center u-marginTop--more">
-                      <div class="flex-auto flex-column flex-verticalCenter u-hidden--mobileTablet">
-                          <span class="icon u-supportHeaderIcon u-marginRight--normal"></span>
-                      </div>
-                      <div class="flex-auto u-widthMobile--full">
-                          <h3 class="u-color--white u-fontWeight--bold u-fontSize--header">Support bundle</h3>
-                          <p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--small u-lineHeight--normal">Upload a support bundle and get expert help from our support team</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="chapter-block-section">
-          <div class="container">
-              <div id="root"></div>
-          </div>
-      </div>
+        <div class="container u-marginTop--most">
+            <div class="paddingContainer">
+                <div class="flex flex-auto justifyContent--center u-marginTop--more">
+                    <div class="flex-auto flex-column flex-verticalCenter u-hidden--mobileTablet">
+                        <span class="icon u-supportHeaderIcon u-marginRight--normal"></span>
+                    </div>
+                    <div class="flex-auto u-widthMobile--full">
+                        <h3 class="u-color--white u-fontWeight--bold u-fontSize--header">{{ .Title }}</h3>
+                        <p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--small u-lineHeight--normal">{{ .Description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="support-bundler-container">
+            <div id="root"></div>
+        </div>
+    </div>
 </main>
 <script src="{{ .Site.BaseURL }}js/supportBundleUpload.bundled.js"></script>
 {{ partial "footer.html" . }}
