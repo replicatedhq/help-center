@@ -129,6 +129,9 @@ nav ul ul.show {
     right: 30px;
     top: 3px;
   }
+  .log-in-link a {
+    display: inline-block;
+  }
   nav ul li:last-child {
     margin-right: 0;
   }
@@ -140,7 +143,7 @@ nav ul ul.show {
     -moz-transition: color .2s;
     transition: color .2s;
   }
-  nav li ul li:hover a {
+  nav li ul li a:hover {
     color: #ffffff;
   }
   nav ul ul.header-links {
