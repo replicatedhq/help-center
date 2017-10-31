@@ -79,7 +79,7 @@ Returns Private IP Address of a given Component as a string.
 ```yaml
 env_vars:
 - name: REDIS_HOST_PRIVATE
-  static_val: '{{repl NodePrivateIPAddress "DB" "redis" }}'
+  value: '{{repl NodePrivateIPAddress "DB" "redis" }}'
 ```
 Replaces HostPrivateIpAddress which is deprecated.
 
@@ -106,7 +106,7 @@ Returns Public IP Address of a given Component as a string.
 ```yaml
 env_vars:
 - name: REDIS_HOST_PUBLIC
-  static_val: '{{repl NodePublicIPAddress "DB" "redis" }}'
+  value: '{{repl NodePublicIPAddress "DB" "redis" }}'
 ```
 Replaces HostPublicIpAddress which is deprecated.
 
@@ -134,7 +134,7 @@ Returns the node's public port mapped to the supplied exposed container port as 
 ```yaml
 env_vars:
 - name: REDIS_PORT
-  static_val: '{{repl ContainerExposedPort "DB" "redis" "6379" }}'
+  value: '{{repl ContainerExposedPort "DB" "redis" "6379" }}'
 ```
 
 {{< template_function name="ContainerExposedPortFirst" replicated="true" kubernetes="false" swarm="false" >}}
@@ -146,7 +146,7 @@ Returns the first node's public port mapped to the supplied exposed container po
 ```yaml
 env_vars:
 - name: REDIS_PORT
-  static_val: '{{repl ContainerExposedPortFirst "DB" "redis" "6379" }}'
+  value: '{{repl ContainerExposedPortFirst "DB" "redis" "6379" }}'
 ```
 
 {{< template_function name="ContainerExposedPortAll" replicated="true" kubernetes="false" swarm="false" >}}
@@ -189,7 +189,7 @@ Returns the app id.
 ```yaml
 env_vars:
 - name: APP_ID
-  static_val: '{{repl AppID }}'
+  value: '{{repl AppID }}'
 ```
 
 {{< template_function name="AppVersion" replicated="true" kubernetes="true" swarm="true" >}}
@@ -200,7 +200,7 @@ Returns the app version sequence.
 ```yaml
 env_vars:
 - name: APP_VERSION
-  static_val: '{{repl AppVersion }}'
+  value: '{{repl AppVersion }}'
 ```
 
 {{< template_function name="AppVersionFirst" replicated="true" kubernetes="true" swarm="true" >}}
@@ -211,7 +211,7 @@ Returns the version sequence of the first version installed.
 ```yaml
 env_vars:
 - name: APP_VERSION_FIRST
-  static_val: '{{repl AppVersionFirst }}'
+  value: '{{repl AppVersionFirst }}'
 ```
 
 {{< template_function name="AppVersionCurrent" replicated="true" kubernetes="true" swarm="true" >}}
@@ -222,7 +222,7 @@ Returns the current app version sequence.
 ```yaml
 env_vars:
 - name: APP_VERSION_CURRENT
-  static_val: '{{repl AppVersionCurrent }}'
+  value: '{{repl AppVersionCurrent }}'
 ```
 
 {{< template_function name="RunOffline" replicated="true" kubernetes="true" swarm="true" >}}
@@ -233,7 +233,7 @@ Returns whether or not we are running in airgap mode. This is available in the K
 ```yaml
 env_vars:
 - name: IS_AIRGAP
-  static_val: '{{repl RunOffline }}'
+  value: '{{repl RunOffline }}'
 ```
 
 {{< template_function name="AppSetting" replicated="true" kubernetes="true" swarm="true" >}}
@@ -252,15 +252,15 @@ Possible Options:
 ```yaml
 env_vars:
 - name: VERSION
-  static_val: '{{repl AppSetting "version.label"}}'
+  value: '{{repl AppSetting "version.label"}}'
 - name: RELEASE_NOTES
-  static_val: '{{repl AppSetting "release.notes"}}'
+  value: '{{repl AppSetting "release.notes"}}'
 - name: INSTALL_DATE
-  static_val: '{{repl AppSetting "install.date"}}'
+  value: '{{repl AppSetting "install.date"}}'
 - name: RELEASE_DATE
-  static_val: '{{repl AppSetting "release.date"}}'
+  value: '{{repl AppSetting "release.date"}}'
 - name: RELEASE_CHANNEL
-  static_val: '{{repl AppSetting "release.channel"}}'
+  value: '{{repl AppSetting "release.channel"}}'
 ```
 
 {{< template_function name="ConsoleSetting" replicated="true" kubernetes="true" swarm="true" >}}
@@ -313,7 +313,7 @@ Returns the valid IPv4 address associated with the given network interface of th
 ```yaml
 env_vars:
 - name: CASSANDRA_BROADCAST_ADDRESS_INTERNAL
-  static_val: '{{repl ThisHostInterfaceAddress "docker0" }}'
+  value: '{{repl ThisHostInterfaceAddress "docker0" }}'
 ```
 
 {{< template_function name="ThisNodePublicIPAddress" replicated="true" kubernetes="false" swarm="false" >}}
@@ -324,7 +324,7 @@ Returns the public IP address of the host on which the current container instanc
 ```yaml
 env_vars:
 - name: CASSANDRA_ADDRESS_PUBLIC
-  static_val: '{{repl ThisNodePublicIPAddress }}'
+  value: '{{repl ThisNodePublicIPAddress }}'
 ```
 Replaces ThisHostPublicIpAddress which is deprecated.
 
@@ -336,7 +336,7 @@ Returns the private IP address of the host on which the current container instan
 ```yaml
 env_vars:
 - name: CASSANDRA_BROADCAST_ADDRESS_INTERNAL
-  static_val: '{{repl ThisNodePrivateIPAddress }}'
+  value: '{{repl ThisNodePrivateIPAddress }}'
 ```
 Replaces ThisHostPrivateIpAddress which is depreciated.
 
@@ -373,7 +373,7 @@ Possible Options:
 ```yaml
 env_vars:
 - name: LDAP_HOSTNAME
-  static_val: '{{repl LdapCopyAuthFrom "Hostname"}}'
+  value: '{{repl LdapCopyAuthFrom "Hostname"}}'
 ```
 
 {{< template_function name="Now" replicated="true" kubernetes="true" swarm="true" >}}
@@ -384,7 +384,7 @@ Returns the current timestamp as an RFC3339 formatted string.
 ```yaml
 env_vars:
 - name: START_TIME
-  static_val: '{{repl Now }}'
+  value: '{{repl Now }}'
 ```
 
 {{< template_function name="NowFmt" replicated="true" kubernetes="true" swarm="true" >}}
@@ -395,7 +395,7 @@ Returns the current timestamp as a formatted string. See Golang's time formattin
 ```yaml
 env_vars:
 - name: START_DATE
-  static_val: '{{repl Now "20060102" }}'
+  value: '{{repl Now "20060102" }}'
 ```
 
 {{< template_function name="TrimSpace" replicated="true" kubernetes="true" swarm="true" >}}
@@ -406,7 +406,7 @@ Trim returns a string with all leading and trailing spaces removed.
 ```yaml
 env_vars:
 - name: VALUE
-  static_val: '{{repl ConfigOption "str_value" | Trim }}
+  value: '{{repl ConfigOption "str_value" | Trim }}
 ```
 
 {{< template_function name="Trim" replicated="true" kubernetes="true" swarm="true" >}}
@@ -417,7 +417,7 @@ Trim returns a string with all leading and trailing string contained in the opti
 ```yaml
 env_vars:
 - name: VALUE
-  static_val: '{{repl ConfigOption "str_value" | Trim " " "." }}
+  value: '{{repl ConfigOption "str_value" | Trim " " "." }}
 ```
 
 {{< template_function name="Split" replicated="true" kubernetes="true" swarm="true" >}}
@@ -428,7 +428,7 @@ Split slices s into all substrings separated by sep and returns an array of the 
 ```yaml
 env_vars:
 - name: BROKEN_APART_A_B_C
-  static_val: '{{repl Split "A,B,C" "," }}'
+  value: '{{repl Split "A,B,C" "," }}'
 ```
 
 Combining `Split` and `index`:
@@ -437,7 +437,7 @@ Assuming the `github_url` param is set to `https://github.mycorp.internal:3131`,
 ```yaml
 env_vars:
 - name: GITHUB_HOSTNAME
-  static_val: '{{repl index (Split (index (Split (ConfigOption "github_url") "/") 2) ":") 0}}'
+  value: '{{repl index (Split (index (Split (ConfigOption "github_url") "/") 2) ":") 0}}'
 ```
 
 
@@ -449,7 +449,7 @@ Returns the string, in lowercase.
 ```yaml
 env_vars:
 - name: COMPANY_NAME
-  static_val: '{{repl ConfigOption "company_name" | ToLower }}'
+  value: '{{repl ConfigOption "company_name" | ToLower }}'
 ```
 
 {{< template_function name="ToUpper" replicated="true" kubernetes="true" swarm="true" >}}
@@ -460,7 +460,7 @@ Returns the string, in uppercase.
 ```yaml
 env_vars:
 - name: COMPANY_NAME
-  static_val: '{{repl ConfigOption "company_name" | ToUpper }}'
+  value: '{{repl ConfigOption "company_name" | ToUpper }}'
 ```
 
 {{< template_function name="HumanSize" replicated="true" kubernetes="true" swarm="true" >}}
@@ -471,7 +471,7 @@ HumanSize returns a human-readable approximation of a size in bytes capped at 4 
 ```yaml
 env_vars:
 - name: MIN_SIZE_HUMAN
-  static_val: '{{repl ConfigOption "min_size_bytes" | HumanSize }}
+  value: '{{repl ConfigOption "min_size_bytes" | HumanSize }}
 ```
 
 {{< template_function name="UrlEncode" replicated="true" kubernetes="true" swarm="true" >}}
@@ -482,7 +482,7 @@ Returns the string, url encoded.
 ```yaml
 env_vars:
 - name: SMTP_CONNECTION_URL
-  static_val: '{{repl ConfigOption "smtp_email" | UrlEncode }}:{{repl ConfigOption "smtp_password" | UrlEncode }}@smtp.example.com:587'
+  value: '{{repl ConfigOption "smtp_email" | UrlEncode }}:{{repl ConfigOption "smtp_password" | UrlEncode }}@smtp.example.com:587'
 ```
 
 {{< template_function name="Base64Encode" replicated="true" kubernetes="true" swarm="true" >}}
@@ -493,7 +493,7 @@ Returns a Base64 encoded string.
 ```yaml
 env_vars:
 - name: NAME_64_VALUE
-  static_val: '{{repl ConfigOption "name" | Base64Encode }}'
+  value: '{{repl ConfigOption "name" | Base64Encode }}'
 ```
 
 {{< template_function name="Base64Decode" replicated="true" kubernetes="true" swarm="true" >}}
@@ -504,7 +504,7 @@ Returns decoded string from a Base64 stored value.
 ```yaml
 env_vars:
 - name: NAME_PLAIN_TEXT
-  static_val: '{{repl ConfigOption "base_64_encoded_name" | Base64Decode }}'
+  value: '{{repl ConfigOption "base_64_encoded_name" | Base64Decode }}'
 ```
 
 {{< template_function name="ParseBool" replicated="true" kubernetes="true" swarm="true" >}}
@@ -515,7 +515,7 @@ ParseBool returns the boolean value represented by the string.
 ```yaml
 env_vars:
 - name: VALUE
-  static_val: '{{repl ConfigOption "str_value" | ParseBool }}'
+  value: '{{repl ConfigOption "str_value" | ParseBool }}'
 ```
 
 {{< template_function name="ParseFloat" replicated="true" kubernetes="true" swarm="true" >}}
@@ -526,7 +526,7 @@ ParseFloat returns the float value represented by the string.
 ```yaml
 env_vars:
 - name: VALUE
-  static_val: '{{repl ConfigOption "str_value" | ParseFloat }}'
+  value: '{{repl ConfigOption "str_value" | ParseFloat }}'
 ```
 
 {{< template_function name="ParseInt" replicated="true" kubernetes="true" swarm="true" >}}
@@ -537,7 +537,7 @@ ParseInt returns the integer value represented by the string with optional base 
 ```yaml
 env_vars:
 - name: VALUE
-  static_val: '{{repl ConfigOption "str_value" | ParseInt }}'
+  value: '{{repl ConfigOption "str_value" | ParseInt }}'
 ```
 
 {{< template_function name="ParseUint" replicated="true" kubernetes="true" swarm="true" >}}
@@ -548,7 +548,7 @@ ParseUint returns the unsigned integer value represented by the string with opti
 ```yaml
 env_vars:
 - name: VALUE
-  static_val: '{{repl ConfigOption "str_value" | ParseUint }}'
+  value: '{{repl ConfigOption "str_value" | ParseUint }}'
 ```
 
 {{< template_function name="Add" replicated="true" kubernetes="true" swarm="true" >}}
@@ -563,7 +563,7 @@ If both operands are integers, the result will be an integer.
 ```yaml
 env_vars:
 - name: MAX_USERS_PLUS_ONE
-  static_val: '{{repl Add (LicenseFieldValue "maximum_users") 1}}'
+  value: '{{repl Add (LicenseFieldValue "maximum_users") 1}}'
 ```
 
 {{< template_function name="Sub" replicated="true" kubernetes="true" swarm="true" >}}
@@ -578,7 +578,7 @@ If both operands are integers, the result will be an integer.
 ```yaml
 env_vars:
 - name: MAX_USERS_MINUS_ONE
-  static_val: '{{repl Sub (LicenseFieldValue "maximum_users") 1}}'
+  value: '{{repl Sub (LicenseFieldValue "maximum_users") 1}}'
 ```
 
 {{< template_function name="Mult" replicated="true" kubernetes="true" swarm="true" >}}
@@ -593,7 +593,7 @@ If both operands are integers, the result will be an integer.
 ```yaml
 env_vars:
 - name: DOUBLE_NUM_ADDRESSES
-  static_val: '{{repl Mult (NodePrivateIPAddressAll "DB" "redis" | len) 2}}'
+  value: '{{repl Mult (NodePrivateIPAddressAll "DB" "redis" | len) 2}}'
 ```
 
 {{< template_function name="Div" replicated="true" kubernetes="true" swarm="true" >}}
@@ -608,7 +608,7 @@ If both operands are integers, the result will be an integer and will be rounded
 ```yaml
 env_vars:
 - name: HALF_MAX_USERS
-  static_val: '{{repl Div (LicenseFieldValue "maximum_users") 2.0}}'
+  value: '{{repl Div (LicenseFieldValue "maximum_users") 2.0}}'
 ```
 
 {{< template_function name="Namespace" replicated="false" kubernetes="true" swarm="true" >}}

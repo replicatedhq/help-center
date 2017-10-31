@@ -28,7 +28,16 @@ version: "3.1"
 ```
 
 ### External Private Images
-External private images are not supported currently. Replicated hosts a [private registry](/docs/getting-started/replicated-private-registry) that you can use to ship private images. Replicated also supports public (unauthenticated) images in any registry.
+External private images are supported as of Replicated 2.13.0. In order to take advantage of this feature, see the guide for [integrating a third party registry](/docs/kb/developer-resources/third-party-registries).
+
+Once the registry is linked, the private image can be added to the global `images` section:
+
+```yaml
+images:
+- source: mythirdpartyprivateregistry
+  name: namespace/imagename
+  version: 2.0.0
+```
 
 ### Online and Airgapped Installations
 Online installs should not use the standard install script, but instead use the [Swarm installation script](/docs/distributing-an-application/installing-with-swarm/). Airgapped installations work as expected when running in swarm mode. All images included in your swarm application must be specified in the new `images` section of your YAML in order to be included in the airgap bundle your customer will download. See below for an example.
