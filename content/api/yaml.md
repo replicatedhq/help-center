@@ -191,7 +191,7 @@ admin_commands:
 - alias: aliasecho
   command: [echo]
   selector:
-    - tier: database
+    tier: database
       
 ```
 
@@ -375,15 +375,9 @@ admin_commands:
 
     
 
-<<<<<<< HEAD
 ## `prop-admincommand-old-style-requirements-present`
 
 `image_name` must be present within `admin_commands.image` and `admin_commands.component` must exist if `admin_commands.image` is present
-=======
-## `prop-port-min-api-version`
-
-The minimum Replicated API version to use container.ports.public_port is 2.8.0
->>>>>>> auto-docs
 
 
 
@@ -391,7 +385,6 @@ The minimum Replicated API version to use container.ports.public_port is 2.8.0
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: `image` is present, but not `image.image_name`
 
 ```yaml
@@ -400,43 +393,11 @@ admin_commands:
 - alias: echo
   command: [echo]
   component: alpha
-  image:
-    number: 5
-=======
-*Incorrect*: public_port used and replicated api version set to 2.7.0
-
-```yaml
----
-replicated_api_version: "2.7.0"
-components:
-- name: DB
-  containers:
-    - source: public
-      ports:
-        - public_port: "10000"
-
+  image: {}
       
 ```
 
 
-*Incorrect*: public_port used and replicated api version set to 1.8.5
-
-```yaml
----
-replicated_api_version: "1.8.5"
-components:
-- name: DB
-  containers:
-    - source: public
-      ports:
-        - public_port: "10000"
-
->>>>>>> auto-docs
-      
-```
-
-
-<<<<<<< HEAD
 *Incorrect*: `image` is present, but not `component`
 
 ```yaml
@@ -461,52 +422,15 @@ admin_commands:
   component: DB
   image:
     image_name: redis
-=======
-
-*Correct*: public_port used and replicated api version set to 2.8.0
-
-```yaml
----
-replicated_api_version: "2.8.0"
-components:
-- name: DB
-  containers:
-    - source: public
-      ports:
-        - public_port: "10000"
-
-      
-```
-
-
-*Correct*: public_port used and replicated api version set to 2.8.1
-
-```yaml
----
-replicated_api_version: "2.8.1"
-components:
-- name: DB
-  containers:
-    - source: public
-      ports:
-        - public_port: "10000"
-
->>>>>>> auto-docs
       
 ```
 
 
     
 
-<<<<<<< HEAD
 ## `prop-admincommand-multi-requirements-present`
 
 `container` and `component` must both be present within `admin_commands.replicated` if it is present
-=======
-## `prop-component-container-host-count-min-uint`
-
-Container's cluster_host_count property `min` must be an unsigned integer
->>>>>>> auto-docs
 
 
 
@@ -514,7 +438,6 @@ Container's cluster_host_count property `min` must be an unsigned integer
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: `replicated` is present, but not `replicated.component`
 
 ```yaml
@@ -526,20 +449,10 @@ admin_commands:
     container: redis
   swarm:
     service: myapp
-=======
-*Incorrect*: cluster_host_count.min must be an unsigned integer, and this is a float
-
-```yaml
----
-components:
-- cluster_host_count:
-    min: 3.5
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Incorrect*: `replicated` is present, but not `replicated.container`
 
 ```yaml
@@ -551,20 +464,10 @@ admin_commands:
     component: DB
   swarm:
     service: myapp
-=======
-*Incorrect*: cluster_host_count.min must be an unsigned integer, and this parses as a negative integer
-
-```yaml
----
-components:
-- cluster_host_count:
-    min: "-2"
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 
 *Correct*: Valid admin multi command
 
@@ -578,42 +481,15 @@ admin_commands:
     container: redis
   swarm:
     service: myapp
-=======
-*Incorrect*: cluster_host_count.min must be an unsigned integer, and this is a boolean
-
-```yaml
----
-components:
-- cluster_host_count:
-    min: false
-      
-```
-
-
-
-*Correct*: cluster_host_count.min is an unsigned integer
-
-```yaml
----
-components:
-- cluster_host_count:
-    min: 3
->>>>>>> auto-docs
       
 ```
 
 
     
 
-<<<<<<< HEAD
 ## `prop-admincommand-verbose-requirements-present`
 
 `container` and `component` must both be present within `admin_commands.source.replicated` if it is present
-=======
-## `prop-component-container-host-count-max-uint`
-
-Container's cluster_host_count property `max` must be an unsigned integer
->>>>>>> auto-docs
 
 
 
@@ -621,7 +497,6 @@ Container's cluster_host_count property `max` must be an unsigned integer
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: `source.replicated` is present, but not `source.replicated.component`
 
 ```yaml
@@ -634,22 +509,12 @@ admin_commands:
       container: redis
     swarm:
       service: myapp
-=======
-*Incorrect*: cluster_host_count.max must be an unsigned integer, and this is a negative integer
-
-```yaml
----
-components:
-- cluster_host_count:
-    max: -10
->>>>>>> auto-docs
       
 ```
 
 
 *Incorrect*: `source.replicated` is present, but not `source.replicated.container`
 
-<<<<<<< HEAD
 ```yaml
 ---
 admin_commands:
@@ -678,30 +543,15 @@ admin_commands:
       container: redis
     swarm:
       service: myapp
-=======
-*Correct*: cluster_host_count.max is an unsigned integer
-
-```yaml
----
-components:
-- cluster_host_count:
-    max: 10
->>>>>>> auto-docs
       
 ```
 
 
     
 
-<<<<<<< HEAD
 ## `prop-admincommand-one-present`
 
 Admin command must use one of several methods to identify the relevant container
-=======
-## `prop-component-container-host-count-healthy-uint`
-
-Container's cluster_host_count property `threshold_healthy` must be an unsigned integer
->>>>>>> auto-docs
 
 
 
@@ -709,7 +559,6 @@ Container's cluster_host_count property `threshold_healthy` must be an unsigned 
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: None of the options are present
 
 ```yaml
@@ -717,21 +566,11 @@ Container's cluster_host_count property `threshold_healthy` must be an unsigned 
 admin_commands:
 - alias: echo
   command: [echo]
-=======
-*Incorrect*: cluster_host_count.threshold_healthy must be an unsigned integer, and this is a string
-
-```yaml
----
-components:
-- cluster_host_count:
-    threshold_healthy: "all"
->>>>>>> auto-docs
       
 ```
 
 
 
-<<<<<<< HEAD
 *Correct*: Valid new-style replicated command
 
 ```yaml
@@ -788,30 +627,15 @@ admin_commands:
       container: redis
     swarm:
       service: myapp
-=======
-*Correct*: cluster_host_count.threshold_healthy is an unsigned integer
-
-```yaml
----
-components:
-- cluster_host_count:
-    threshold_healthy: 5
->>>>>>> auto-docs
       
 ```
 
 
     
 
-<<<<<<< HEAD
 ## `prop-component-cluster-count`
 
 If `cluster_host_count.min` and `cluster_host_count.max` are both set to 1, then it will be impossible to run multiple instances of this container anywhere in the cluster.
-=======
-## `prop-component-container-host-count-degraded-uint`
-
-Container's cluster_host_count property `threshold_degraded` must be an unsigned integer
->>>>>>> auto-docs
 
 
 
@@ -819,16 +643,11 @@ Container's cluster_host_count property `threshold_degraded` must be an unsigned
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: `cluster_host_count.min` and `cluster_host_count.max` are both set to 1
-=======
-*Incorrect*: cluster_host_count.threshold_degraded must be an unsigned integer, and this parses as a float
->>>>>>> auto-docs
 
 ```yaml
 ---
 components:
-<<<<<<< HEAD
 - name: DB
   cluster: true
   tags:
@@ -840,25 +659,16 @@ components:
   - source: public
     image_name: redis
     version: latest
-=======
-- cluster_host_count:
-    threshold_degraded: "2.5"
->>>>>>> auto-docs
       
 ```
 
 
 
-<<<<<<< HEAD
 *Correct*: `cluster_host_count.min` and `cluster_host_count.max` is a range
-=======
-*Correct*: cluster_host_count.threshold_degraded is an unsigned integer
->>>>>>> auto-docs
 
 ```yaml
 ---
 components:
-<<<<<<< HEAD
 - name: DB
   cluster: true
   tags:
@@ -870,37 +680,16 @@ components:
   - source: public
     image_name: redis
     version: latest
-=======
-- cluster_host_count:
-    threshold_degraded: 2
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Correct*: `cluster_host_count.min` and `cluster_host_count.max` are unset
-=======
-    
-
-## `prop-cluster-size-public-port`
-
-If using container.ports.public_port, cluster must be disabled or cluster size must be 1
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: public_port used and cluster_instance_count.max is not 1
->>>>>>> auto-docs
 
 ```yaml
 ---
 components:
 - name: DB
-<<<<<<< HEAD
   cluster: true
   tags:
   - db
@@ -908,106 +697,15 @@ components:
   - source: public
     image_name: redis
     version: latest
-=======
-  containers:
-  - cluster_instance_count:
-      max: 2
-    cluster: "true"
-    ports:
-    - public_port: "10000"
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
     
 
 ## `prop-component-cluster-strategy`
 
 A component's cluster `strategy` must be either `random` or `autoscale`
-=======
-*Incorrect*: public_port used and cluster_instance_count.max is not 1
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - cluster_instance_count:
-      max: "0"
-    cluster: true
-    ports:
-    - public_port: "10000"
-      
-```
-
-
-
-*Correct*: public_port used and cluster_instance_count.max is 1
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - cluster_instance_count:
-      max: 1
-    cluster: true
-    ports:
-    - public_port: "10000"
-      
-```
-
-
-*Correct*: public_port used and cluster_instance_count.initial is 1
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - cluster_instance_count:
-      initial: "1"
-    cluster: true
-    ports:
-    - public_port: "10000"
-      
-```
-
-
-*Correct*: public_port used and cluster is set to false
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - cluster: false
-    ports:
-    - public_port: "10000"
-      
-```
-
-
-*Correct*: public_port used and cluster is not set
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - ports:
-    - public_port: "10000"
-      
-```
-
-
-    
-
-## `tmpl-configoption-exists`
-
-Options referenced with `{{repl ConfigOption }}` must be present in the `config` section
 
 
 
@@ -1015,182 +713,6 @@ Options referenced with `{{repl ConfigOption }}` must be present in the `config`
 
 #### Examples:
 
-*Incorrect*: Config Option `not_existent` is not defined in `config` section
-
-```yaml
----
-config:
-- name: settings
-  title: Settings
-  items:
-  - name: hostname
-    title: Hostname
-    type: text
-    default: ""
-
-components:
-- name: App
-  cluster: false
-  containers:
-  - image_name: wlaoh/counter
-    name: '{{repl ConfigOption "not_existent" }}'
-      
-```
-
-
-
-*Correct*: All uses of `repl ConfigOption` reference defined Config Options
-
-```yaml
----
-config:
-- name: hostname
-  title: Hostname
-  description: Ensure this domain name is routable on your network.
-  items:
-  - name: hostname
-    title: Hostname
-    type: text
-    recommended: false
-    default: ""
-    value_cmd:
-      name: host_ip
-      value_at: 0
-    when: ""
-    affix: ""
-    required: false
-    items: []
-  - name: host_count
-    title: Host Count
-    type: select_many
-    items:
-      - name: one_host
-        default: "0"
-      - name: two_hosts
-        default: "0"
-
-components:
-- name: App
-  cluster: false
-  containers:
-  - source: public
-    image_name: wlaoh/counter
-    version: signed
-    cmd: '{{ repl ConfigOption "one_host" }}'
-    name: '{{repl ConfigOption "hostname" }}'
-      
-```
-
-
-    
-
-## `prop-configitem-type-password`
-
-It looks like this Config Option may contain sensitive data -- consider setting `type: password`
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: Config Option with name `database_password` should have `type: password`
-
-```yaml
----
-config:
-- name: database
-  title: Database
-  items:
-  - name: database_password
-    title: Password
-    type: text
-    default: ""
-      
-```
-
-
-
-*Correct*: Config Option with name `database_password` correctly has `type: password`
-
-```yaml
----
-config:
-- name: database
-  title: Database
-  items:
-  - name: database_password
-    title: Password
-    type: password
-    default: ""
-      
-```
->>>>>>> auto-docs
-
-
-
-<<<<<<< HEAD
-=======
-## `tmpl-configoption-not-circular`
-
-A Config Options's fields may not reference the Config Option they describe
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: Config Option `circular` references `{{repl ConfigOption "circular" }}` in it's `when` field
-
-```yaml
----
-config:
-- name: hostname
-  title: Hostname
-  items:
-  - name: circular
-    title: A Circle
-    type: text
-    when: '{{ repl ConfigOptionEquals "circular" "I heard you liked circles" }}'
-      
-```
-
-
-
-*Correct*: No config options reference themselves
-
-```yaml
----
-config:
-- name: hostname
-  title: Hostname
-  items:
-  - name: left
-    title: Left
-    type: text
-    when: '{{ repl ConfigOptionEquals "right" "right option" }}'
-  - name: right
-    title: Right
-    type: text
-    when: '{{ repl ConfigOptionEquals "left" "left option" }}'
-      
-```
-
-
-    
-
-## `prop-configitem-type-valid`
-
-A Config Item must have a valid type
-
-
->>>>>>> auto-docs
-
-
-#### Examples:
-
-<<<<<<< HEAD
 *Incorrect*: strategy is set to `all-on-one-host`, which is not a supported clustering strategy
 
 ```yaml
@@ -1207,1575 +729,10 @@ components:
     image_name: redis
     version: latest
       
-=======
-#### Examples:
-
-*Incorrect*: Config Option type `image_upload` is not valid
-
-```yaml
----
-config:
-- name: images
-  title: Images
-  items:
-  - name: cat_picture
-    title: Cat Picture
-    type: image_upload
-    default: ""
-      
-```
-
-
-
-*Correct*: All config options have valid types
-
-```yaml
----
-config:
-- name: database
-  title: Database
-  items:
-  - name: database_use_ssl
-    title: Use SSL
-    type: bool
-    default: ""
-  - name: database_host
-    title: Host
-    type: text
-    default: ""
-  - name: database_ssl_cert
-    title: SSL Certificate
-    type: textarea
-    default: ""
-      
-```
-
-
-    
-
-## `prop-configitem-when-valid`
-
-A Config Item's when clause must be either empty, a template, a boolean literal, or reference a valid config option with `=` or `!=`
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: Config Option `when` field references non-existent option `ssl_is_good`
-
-```yaml
----
-config:
-- name: database
-  title: Database
-  items:
-  - name: database_use_ssl
-    title: Use SSL
-    type: bool
-    default: ""
-  - name: database_ssl_cert
-    title: SSL Certificate
-    type: textarea
-    default: ""
-    when: ssl_is_good=1
-      
-```
-
-
-*Incorrect*: Config Option `when` field references non-existent option `ssl_is_bad`
-
-```yaml
----
-config:
-- name: database
-  title: Database
-  items:
-  - name: database_use_ssl
-    title: Use SSL
-    type: bool
-    default: ""
-  - name: database_ssl_cert
-    title: SSL Certificate
-    type: textarea
-    default: ""
-    when: ssl_is_bad!=1
-      
-```
-
-
-*Incorrect*: Config Section `when` field references non-existent option `auth`
-
-```yaml
----
-config:
-- name: database
-  title: Database
-  when: auth=config
-  items:
-  - name: database_use_ssl
-    title: Use SSL
-    type: bool
-    default: ""
-      
-```
-
-
-
-*Correct*: All config options have valid `when` clauses
-
-```yaml
----
-config:
-- name: database
-  title: Database
-  items:
-  - name: database_use_ssl
-    title: Use SSL
-    type: bool
-    default: ""
-    when: null
-    
-  - name: database_use_ssl_2
-    title: Use SSL
-    type: bool
-    default: ""
-    when: ""
-    
-  - name: database_use_udp
-    title: Use UDP 
-    type: boolean
-    default: ""
-    when: false
-    
-  - name: database_use_tcp
-    title: Use UDP 
-    type: boolean
-    default: ""
-    when: true
-    
-  - name: database_use_index
-    title: Use Index?  
-    type: boolean
-    default: ""
-    when: "false"
-    
-  - name: database_use_btree
-    title: Use Btree? 
-    type: boolean
-    default: ""
-    when: "true"
-    
-  - name: database_ssl_cert
-    title: SSL Certificate
-    type: textarea
-    default: ""
-    when: '{{repl ConfigOptionEquals "database_use_ssl" "1"}}'
-    
-  - name: database_ssl_key
-    title: SSL Key
-    type: textarea
-    default: ""
-    when: database_use_ssl=1
-    
-  - name: database_strong_password
-    title: Require strong password
-    type: bool
-    default: ""
-    when: database_use_ssl!=1
-    
-      
-```
-
-
-*Correct*: Config option group's `when` clause references a valid multi-select option
-
-```yaml
----
-config:
-- name: ssl
-  title: SSL Configuration
-  description: SSL Options
-  items:
-  - name: ssl_cipher
-    default: ssl_cipher_ecdsa
-    type: select_one
-    items:
-    - name: ssl_cipher_ecdsa
-      title: ECDSA
-    - name: ssl_cipher_rsa
-      title: RSA
-- name: database
-  title: Database
-  when: ssl_cipher=ssl_cipher_ecdsa
-  items:
-  - name: database_use_ssl
-    title: Use SSL
-    type: bool
-      
-```
-
-
-    
-
-## `prop-component-container-names-unique`
-
-Custom requirements must have unique ids
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: duplicated ids
-
-```yaml
----
-custom_requirements:
-- id: alpha
-  message: beta
-- id: alpha
-  message: delta
-    
-```
-
-
-*Incorrect*: separated duplicated ids
-
-```yaml
----
-custom_requirements:
-- id: alpha
-  message: beta
-- id: gamma
-  message: delta
-- id: alpha
-  message: zeta
-    
-```
-
-
-
-*Correct*: no duplicated ids
-
-```yaml
----
-custom_requirements:
-- id: alpha
-  message: beta
-- id: gamma
-  message: delta
-    
-```
-
-
-    
-
-## `prop-component-container-unnamed-when-cluster-true`
-
-With clustering turned on, setting `container.name` will prevent multiple instances of the container from being scheduled on a single node
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: container in component with `cluster_instance_count: 2` should not have a `name` specified
-
-```yaml
----
-components:
-- name: DB
-  cluster: true
-  cluster_host_count:
-    min: 1
-    max: 4
-  containers:
-  - source: public
-    cluster: true
-    cluster_instance_count: 2
-    image_name: redis
-    name: database
-      
-```
-
-
-
-*Correct*: container in component with `cluster_instance_count: 2` does not have a `name` specified
-
-```yaml
----
-components:
-- name: DB
-  tags:
-  - db
-  cluster: true
-  cluster_host_count:
-    min: 1
-    max: 4
-  containers:
-  - source: public
-    cluster_instance_count: 2
-    image_name: redis
-    version: latest
-      
-```
-
-
-    
-
-## `prop-component-container-event-subscription-container-exists`
-
-Container event subscriptions must reference an existing component/conatiner
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: container `redis` has a `publish_event` that references missing container `Pipeline/logstash`
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - source: public
-    image_name: mongo
-  - source: public
-    image_name: redis
-    publish_events:
-      - name: event
-        subscriptions:
-        - component: Pipeline
-          container: logstash
-          action: start
-      
-```
-
-
-*Incorrect*: container `redis` has a `publish_event` that references missing container `Pipeline/logstash`
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - source: public
-    image_name: mongo
-  - source: public
-    image_name: logstash
-  - source: public
-    image_name: redis
-    publish_events:
-      - name: event
-        subscriptions:
-        - component: Pipeline
-          container: logstash
-          action: start
-      
-```
-
-
-
-*Correct*: All containers referenced in `publish_events` have a matching component/container definition
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - source: public
-    image_name: mongo
-  - source: public
-    image_name: redis
-    publish_events:
-      - name: event
-        subscriptions:
-        - component: Pipeline
-          container: logstash
-          action: start
-- name: Pipeline
-  containers:
-  - source: public
-    image_name: logstash
-      
-```
-
-
-    
-
-## `prop-component-container-volume-modes-valid`
-
-Container volume must not specify conflicting options
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: volume options contains conflicting options `rw` and `ro`
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - source: public
-    image_name: mongo
-    volumes:
-      - host_path: /tmp
-        container_path: /tmp
-        options:
-          - rw
-          - ro
-      
-```
-
-
-*Incorrect*: volume options contains conflicting options `z` and `Z`
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - source: public
-    image_name: mongo
-    volumes:
-      - host_path: /tmp
-        container_path: /tmp
-        options:
-          - z
-          - Z
-      
-```
-
-
-*Incorrect*: volume options contains conflicting options `rshared` and `private`
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - source: public
-    image_name: mongo
-    volumes:
-      - host_path: /tmp
-        container_path: /tmp
-        options:
-          - rshared
-          - private
-      
-```
-
-
-*Incorrect*: volume options contains duplicated option `nocopy`
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - source: public
-    image_name: mongo
-    volumes:
-      - host_path: /tmp
-        container_path: /tmp
-        options:
-          - nocopy
-          - nocopy
-      
-```
-
-
-
-*Correct*: no volumes are defined
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - source: public
-    image_name: redis
-      
-```
-
-
-*Correct*: no volume options are defined
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - source: public
-    image_name: redis
-    volumes:
-      - host_path: /tmp
-        container_path: /tmp
-      
-```
-
-
-*Correct*: No conflicting volume options are defined
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - source: public
-    image_name: redis
-    volumes:
-      - host_path: /tmp
-        container_path: /tmp
-        options:
-          - rw
-          - Z
-          - rshared
-          - nocopy
-      
-```
-
-
-    
-
-## `prop-component-container-volume-path-absolute`
-
-Container volume's `container_path` must be absolute
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: container path is not absolue
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - source: public
-    image_name: mongo
-    volumes:
-      - host_path: /tmp
-        container_path: ubuntu/workspace
-      
-```
-
-
-
-*Correct*: container path is absolute
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - source: public
-    image_name: mongo
-    volumes:
-      - host_path: /tmp
-        container_path: /home/ubuntu/workspace
-      
-```
-
-
-*Correct*: container path is a templated field
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - source: public
-    image_name: redis
-    volumes:
-      - host_path: /tmp
-        container_path: '{{repl ConfigOption "mount_path"}}'
-      
-```
-
-
-    
-
-## `prop-component-container-contenttrust-fingerprint-valid`
-
-A container's content_trust.`public_key_fingerprint` must be a valid RFC4716 fingerprint, e.g. `cb:69:19:cd:76:1f:17:54:92:a4:fc:a9:6f:a5:57:72`
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: invalid `public_key_fingerprint`
-
-```yaml
----
-components:
-  - name: DB
-    containers:
-    - source: public
-      name: redis
-      version: 3.2.1
-      content_trust:
-        public_key_fingerprint: flksdjflkds
-    
-```
-
-
-
-*Correct*: valid fingerprint
-
-```yaml
-components:
-  - name: DB
-    containers:
-    - source: public
-      name: redis
-      version: 3.2.1
-      content_trust:
-        public_key_fingerprint: cb:69:19:cd:76:1f:17:54:92:a4:fc:a9:6f:a5:57:72
-    - source: public
-      name: redis
-      version: 3.2.1
-      content_trust:
-        public_key_fingerprint: aa:9c:75:89:de:46:3a:92:08:c7:ba:9a:29:fb:12:cc
-    
-```
-
-
-    
-
-## `prop-component-container-volumesfrom-exists`
-
-A container's `volumes_from` must reference an existing container's `name` field
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: `volumes_from` references own container
-
-```yaml
----
-components:
-  - name: DB
-    containers:
-    - source: public
-      image_name: redis
-      name: redis
-      version: 3.2.1
-      volumes_from:
-        - redis
-    
-```
-
-
-*Incorrect*: `volumes_from` references non-existing container
-
-```yaml
----
-components:
-  - name: DB
-    containers:
-    - source: public
-      image_name: redis
-      name: redis
-      version: 3.2.1
-      volumes_from:
-        - mongo
-    
-```
-
-
-
-*Correct*: valid `volumes_from` reference
-
-```yaml
-components:
-  - name: DB
-    containers:
-    - source: public
-      image_name: redis
-      name: redis
-      version: 3.2.1
-      volumes_from:
-        - mongo
-    - source: public
-      image_name: mongo
-      name: mongo
-      version: 3.2.1
-    
-```
-
-
-    
-
-## `prop-component-container-names-unique`
-
-A component's container's must have unique `name` entries
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: duplicated names in single component
-
-```yaml
----
-components:
-  - name: DB
-    containers:
-    - source: public
-      image_name: redis
-      name: db
-      version: 3.2.1
-    - source: public
-      image_name: mongo
-      name: db
-      version: latest
-    
-```
-
-
-*Incorrect*: duplicated names across components
-
-```yaml
----
-components:
-  - name: DB
-    containers:
-    - source: public
-      image_name: redis
-      name: db
-      version: 3.2.1
-  - name: MoreDB
-    containers:
-    - source: public
-      image_name: mongo
-      name: db
-      version: latest
-    
-```
-
-
-
-*Correct*: no duplicated names
-
-```yaml
-components:
-  - name: UI
-    containers:
-    - source: public
-      image_name: nginx
-      name: ui
-      version: 1.10.2
-  - name: DB
-    containers:
-    - source: public
-      image_name: redis
-      name: redis
-      version: 3.2.1
-    - source: public
-      image_name: mongo
-      name: mongo
-      version: 3.2
-    
-```
-
-
-    
-
-## `prop-component-container-instance-count-initial-uint`
-
-Container's cluster_instance_count property `initial` must be an unsigned integer
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: cluster_instance_count.initial must be an unsigned integer, and this is a float
-
-```yaml
----
-components:
-- containers:
-  - cluster_instance_count:
-      initial: 3.5
-      
-```
-
-
-*Incorrect*: cluster_instance_count.initial must be an unsigned integer, and this parses as a negative integer
-
-```yaml
----
-components:
-- containers:
-  - cluster_instance_count:
-      initial: "-2"
-      
-```
-
-
-
-*Correct*: cluster_instance_count.initial is an unsigned integer
-
-```yaml
----
-components:
-- containers:
-  - cluster_instance_count:
-      initial: 3
-      
-```
-
-
-    
-
-## `prop-component-container-instance-count-max-uint`
-
-Container's cluster_instance_count property `max` must be an unsigned integer
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: cluster_instance_count.max must be an unsigned integer, and this is a negative integer
-
-```yaml
----
-components:
-- containers:
-  - cluster_instance_count:
-      max: -10
-      
-```
-
-
-
-*Correct*: cluster_instance_count.max is an unsigned integer
-
-```yaml
----
-components:
-- containers:
-  - cluster_instance_count:
-      max: 10
-      
-```
-
-
-    
-
-## `prop-component-container-instance-count-degraded-uint`
-
-Container's cluster_instance_count property `threshold_degraded` must be an unsigned integer
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: cluster_instance_count.threshold_degraded must be an unsigned integer, and this parses as a float
-
-```yaml
----
-components:
-- containers:
-  - cluster_instance_count:
-      threshold_degraded: "2.8"
-      
-```
-
-
-
-*Correct*: cluster_instance_count.threshold_degraded is an unsigned integer
-
-```yaml
----
-components:
-- containers:
-  - cluster_instance_count:
-      threshold_degraded: "2"
-      
-```
-
-
-    
-
-## `prop-component-container-instance-count-healthy-uint`
-
-Container's cluster_instance_count property `threshold_healthy` must be an unsigned integer
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: cluster_instance_count.threshold_healthy must be an unsigned integer, and this is a string
-
-```yaml
----
-components:
-- containers:
-  - cluster_instance_count:
-      threshold_healthy: "all"
-      
-```
-
-
-
-*Correct*: cluster_instance_count.threshold_healthy is an unsigned integer
-
-```yaml
----
-components:
-- containers:
-  - cluster_instance_count:
-      threshold_healthy: "5"
-      
-```
-
-
-    
-
-## `prop-component-container-volumesfrom-subscription-exists`
-
-A container's `volumes_from` must reference a container that subscribes to it
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: `volumes_from` references container that does not exist
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - image_name: notalpha
-    publish_events:
-    - subscriptions:
-      - component: DB
-        container: beta
-  - image_name: beta
-    volumes_from:
-    - alpha
-    
-```
-
-
-*Incorrect*: `volumes_from` references container that does not subscribe to it
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - image_name: alpha
-    publish_events:
-    - subscriptions:
-      - component: DB
-        container: notalpine
-  - image_name: alpine
-    volumes_from:
-    - alpha
-    
-```
-
-
-*Incorrect*: `volumes_from` references multiple containers, of which one is not valid
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - image_name: alpha
-    publish_events:
-    - subscriptions:
-      - component: DB
-        container: beta
-  - image_name: beta
-    volumes_from:
-    - alpha
-    - gamma
-    
-```
-
-
-*Incorrect*: `volumes_from` references itself
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - name: alphaname
-    image_name: alpha
-    volumes_from:
-    - alpha
-    publish_events:
-    - subscriptions:
-      - component: DB
-        container: alpha
-    
-```
-
-
-
-*Correct*: valid `volumes_from` reference
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - image_name: alpha
-    publish_events:
-    - subscriptions:
-      - component: DB
-        container: beta
-  - image_name: beta
-    volumes_from:
-    - alpha
-    
-```
-
-
-*Correct*: multiple valid `volumes_from` references
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - image_name: alpha
-    publish_events:
-    - subscriptions:
-      - component: DB
-        container: beta
-      - component: DB
-        container: gamma
-  - image_name: gamma
-    volumes_from:
-    - alpha
-  - image_name: beta
-    volumes_from:
-    - alpha
-    
-```
-
-
-*Correct*: Chained dependency for `volumes_from` across components
-
-```yaml
----
-components:
-- name: DB
-  containers:
-  - image_name: alpha
-    publish_events:
-    - subscriptions:
-      - component: DB2
-        container: gamma
-  - image_name: beta
-    volumes_from:
-    - alpha
-- name: DB2
-  containers:
-  - image_name: gamma
-    publish_events:
-    - subscriptions:
-      - component: DB
-        container: beta
-    
-```
-
-
-    
-
-## `prop-component-container-volume-ephemeral-type-check`
-
-is_ephemeral must be a bool string, boolean literal, or template function
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: `yes` is not a valid value for `is_ephemeral`
-
-```yaml
----
-components:
-- containers:
-  - volumes:
-    - is_ephemeral: "yes"
-      
-```
-
-
-*Incorrect*: `2` is not a valid value for `is_ephemeral`
-
-```yaml
----
-components:
-- containers:
-  - volumes:
-    - is_ephemeral: 2
-      
-```
-
-
-*Incorrect*: `1` is not a valid value for `is_ephemeral`, though `"1"` is
-
-```yaml
----
-components:
-- containers:
-  - volumes:
-    - is_ephemeral: 1
-      
-```
-
-
-
-*Correct*: `"true"`, `true`, `"false"` and `false` are all valid values for `is_ephemeral`
-
-```yaml
----
-components:
-- containers:
-  - volumes:
-    - is_ephemeral: "true"
-    - is_ephemeral: "false"
-    - is_ephemeral: true
-    - is_ephemeral: false
-      
-```
-
-
-*Correct*: `{{repl AppID}}` is a valid template function and is thus a valid if questionable value for `is_ephemeral`
-
-```yaml
----
-components:
-- containers:
-  - volumes:
-    - is_ephemeral: "{{repl AppID}}"
-      
-```
-
-
-    
-
-## `prop-component-container-volume-excluded-type-check`
-
-is_excluded_from_backup must be a bool string, boolean literal, or template function
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: `yes` is not a valid value for `is_excluded_from_backup`
-
-```yaml
----
-components:
-- containers:
-  - volumes:
-    - is_excluded_from_backup: "yes"
-      
-```
-
-
-*Incorrect*: `2` is not a valid value for `is_excluded_from_backup`
-
-```yaml
----
-components:
-- containers:
-  - volumes:
-    - is_excluded_from_backup: 2
-      
-```
-
-
-*Incorrect*: `1` is not a valid value for `is_excluded_from_backup`, though `"1"` is
-
-```yaml
----
-components:
-- containers:
-  - volumes:
-    - is_excluded_from_backup: 1
-      
-```
-
-
-
-*Correct*: `"true"`, `true`, `"false"` and `false` are all valid values for `is_excluded_from_backup`
-
-```yaml
----
-components:
-- containers:
-  - volumes:
-    - is_excluded_from_backup: "true"
-    - is_excluded_from_backup: "false"
-    - is_excluded_from_backup: true
-    - is_excluded_from_backup: false
-      
-```
-
-
-*Correct*: `{{repl AppID}}` is a valid template function and is thus a valid value for `is_excluded_from_backup`
-
-```yaml
----
-components:
-- containers:
-  - volumes:
-    - is_excluded_from_backup: "{{repl AppID}}"
-      
-```
-
-
-    
-
-## `prop-monitors-cpuacct-container-exists`
-
-Entries in `monitors.cpuacct` must have matching component+container
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: `cpuacct` monitor references a component that does not exist
-
-```yaml
----
-components:
-  - name: Kibana
-    containers:
-      - image_name: quay.io/getelk/logstash
-monitors:
-  cpuacct:
-    - Logstash,quay.io/getelk/logstash
-    
-```
-
-
-*Incorrect*: `cpuacct` monitor references a container that does not exist
-
-```yaml
----
-components:
-  - name: Logstash
-    containers:
-      - image_name: quay.io/getelk/elasticsearch
-monitors:
-  cpuacct:
-    - Logstash,quay.io/getelk/logstash
-    
-```
-
-
-
-*Correct*: All `cpuacct` monitors reference existing containers
-
-```yaml
----
-components:
-  - name: Logstash
-    containers:
-      - image_name: quay.io/getelk/logstash
-monitors:
-  cpuacct:
-    - Logstash,quay.io/getelk/logstash
-      
-```
-
-
-*Correct*: No monitors, no containers
-
-```yaml
----
-monitors:
-  cpuacct: []
-      
-```
-
-
-    
-
-## `prop-monitors-memory-container-exists`
-
-Entries in `monitors.memory` must have matching component+container
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: `memacct` monitor references a component that does not exist
-
-```yaml
----
-components:
-  - name: Kibana
-    containers:
-      - image_name: quay.io/getelk/logstash
-monitors:
-  memory:
-    - Logstash,quay.io/getelk/logstash
-    
-```
-
-
-*Incorrect*: `memacct` monitor references a container that does not exist
-
-```yaml
----
-components:
-  - name: Logstash
-    containers:
-      - image_name: quay.io/getelk/elasticsearch
-monitors:
-  memory:
-    - Logstash,quay.io/getelk/logstash
-    
-```
-
-
-
-*Correct*: All `memacct` monitors reference existing containers
-
-```yaml
----
-components:
-  - name: Logstash
-    containers:
-      - image_name: quay.io/getelk/logstash
-monitors:
-  memory:
-    - Logstash,quay.io/getelk/logstash
-      
-```
-
-
-    
-
-## `prop-monitors-custom-has-target`
-
-Entries in `monitors.custom` must have at least one target
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: custom monitor has no targets
-
-```yaml
----
-monitors:
-  custom:
-    - name: whatever
-      targets: []
-    
-```
-
-
-*Incorrect*: single target is empty
-
-```yaml
----
-monitors:
-  custom:
-    - name: whatever
-      target: 
-    
-```
-
-
-*Incorrect*: custom monitor has null targets
-
-```yaml
----
-monitors:
-  custom:
-    - name: whatever
-    
-```
-
-
-
-*Correct*: All custom monitors have at least one target
-
-```yaml
----
-components:
-  - name: Logstash
-    containers:
-      - image_name: quay.io/getelk/logstash
-monitors:
-  custom:
-    - name: whenever
-      target: stats.gauges.myapp100.ping.*
-    - name: whatever
-      targets: 
-        - stats.gauges.myapp100.ping.*
-        - movingAverage(stats.gauges.myapp100.ping.*,60)
-        - movingAverage(stats.gauges.myapp100.ping.*,600)
-      
-```
-
-
-    
-
-## `prop-monitors-custom-has-target`
-
-Entries in `monitors.custom` have valid color specifications
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: custom monitor has invalid `stroke_color`
-
-```yaml
----
-monitors:
-  custom:
-    - name: whatever
-      targets: [stats.mystat.*]
-      display:
-        stroke_color: blue
-    
-```
-
-
-*Incorrect*: custom monitor has invalid `fill_color`
-
-```yaml
----
-monitors:
-  custom:
-    - name: whatever
-      targets: [stats.mystat.*]
-      display:
-        fill_color: blue
-    
-```
-
-
-
-*Correct*: custom monitor has valid color specs
-
-```yaml
----
-components:
-  - name: Logstash
-    containers:
-      - image_name: quay.io/getelk/logstash
-monitors:
-  custom:
-    - name: whenever
-      target: stats.gauges.myapp100.ping.*
-    - name: whatever
-      targets: 
-        - stats.gauges.myapp100.ping.*
-        - movingAverage(stats.gauges.myapp100.ping.*,60)
-        - movingAverage(stats.gauges.myapp100.ping.*,600)
-      display:
-        fill_color: '#44BB66'
-        stroke_color: '#444444'
-      
-```
-
-
-    
-
-## `prop-statsd-port-valid`
-
-If specified, `statsd.port` must be a valid TCP port
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: `statsd.port` is not an integer
-
-```yaml
----
-statsd:
-  port: foo
-    
-```
-
-
-*Incorrect*: `statsd.port` is negative
-
-```yaml
----
-statsd:
-  port: -100
-    
-```
-
-
-*Incorrect*: `statsd.port` is above the maximum tcp port range
-
-```yaml
----
-statsd:
-  port: 100000
-    
->>>>>>> auto-docs
 ```
 
 
 
-<<<<<<< HEAD
 *Correct*: `strategy` is set to `autoscale`, a supported option
 
 ```yaml
@@ -2791,19 +748,10 @@ components:
   - source: public
     image_name: redis
     version: latest
-=======
-*Correct*: statsd port valid
-
-```yaml
----
-statsd:
-  port: 43221
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Correct*: `strategy` is unset
 
 ```yaml
@@ -2818,28 +766,15 @@ components:
   - source: public
     image_name: redis
     version: latest
-=======
-*Correct*: statsd port not specified
-
-```yaml
----
-statsd: {}
->>>>>>> auto-docs
       
 ```
 
 
     
 
-<<<<<<< HEAD
 ## `prop-component-volume-path-absolute`
 
 Component volume's `host_path` must be absolute
-=======
-## `prop-graphite-port-valid`
-
-If specified, `graphite.port` must be a valid TCP port
->>>>>>> auto-docs
 
 
 
@@ -2847,7 +782,6 @@ If specified, `graphite.port` must be a valid TCP port
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: host path is not absolue
 
 ```yaml
@@ -3072,17 +1006,6 @@ Container's cluster_host_count property `min` must be an unsigned integer
 
 #### Examples:
 
-*Incorrect*: cluster_host_count.min must be an unsigned integer, and this is a float
-
-```yaml
----
-components:
-- cluster_host_count:
-    min: 3.5
-      
-```
-
-
 *Incorrect*: cluster_host_count.min must be an unsigned integer, and this parses as a negative integer
 
 ```yaml
@@ -3090,17 +1013,6 @@ components:
 components:
 - cluster_host_count:
     min: "-2"
-      
-```
-
-
-*Incorrect*: cluster_host_count.min must be an unsigned integer, and this is a boolean
-
-```yaml
----
-components:
-- cluster_host_count:
-    min: false
       
 ```
 
@@ -3646,7 +1558,7 @@ config:
     title: Use SSL
     type: bool
     default: ""
-    when: null
+    when: ""
 
   - name: database_use_ssl_2
     title: Use SSL
@@ -3807,7 +1719,8 @@ components:
   containers:
   - source: public
     cluster: true
-    cluster_instance_count: 2
+    cluster_instance_count:
+      initial: 2
     image_name: redis
     name: database
       
@@ -3829,7 +1742,8 @@ components:
     max: 4
   containers:
   - source: public
-    cluster_instance_count: 2
+    cluster_instance_count:
+     initial: 2
     image_name: redis
     version: latest
       
@@ -4306,7 +2220,7 @@ components:
     - source: public
       image_name: mongo
       name: mongo
-      version: 3.2
+      version: "3.2"
     
 ```
 
@@ -4660,52 +2574,7 @@ components:
 ```
 
 
-*Incorrect*: `2` is not a valid value for `is_ephemeral`
 
-```yaml
----
-components:
-- containers:
-  - volumes:
-    - is_ephemeral: 2
-      
-```
-
-
-*Incorrect*: `1` is not a valid value for `is_ephemeral`, though `"1"` is
-
-```yaml
----
-components:
-- containers:
-  - volumes:
-    - is_ephemeral: 1
-      
-=======
-*Incorrect*: `graphite.port` is not an integer
-
-```yaml
----
-graphite:
-  port: foo
-    
-```
-
-
-*Incorrect*: `graphite.port` is negative
-
-```yaml
----
-graphite:
-  port: -100
-    
->>>>>>> auto-docs
-```
-
-
-*Incorrect*: `graphite.port` is above the maximum tcp port range
-
-<<<<<<< HEAD
 *Correct*: `"true"`, `true`, `"false"` and `false` are all valid values for `is_ephemeral`
 
 ```yaml
@@ -4717,28 +2586,10 @@ components:
     - is_ephemeral: "false"
     - is_ephemeral: true
     - is_ephemeral: false
-=======
-```yaml
----
-graphite:
-  port: 100000
-    
-```
-
-
-
-*Correct*: graphite port valid
-
-```yaml
----
-graphite:
-  port: 43221
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Correct*: `{{repl AppID}}` is a valid template function and is thus a valid if questionable value for `is_ephemeral`
 
 ```yaml
@@ -4747,28 +2598,15 @@ components:
 - containers:
   - volumes:
     - is_ephemeral: "{{repl AppID}}"
-=======
-*Correct*: graphite port not specified
-
-```yaml
----
-graphite: {}
->>>>>>> auto-docs
       
 ```
 
 
     
 
-<<<<<<< HEAD
 ## `prop-component-container-volume-excluded-type-check`
 
 is_excluded_from_backup must be a bool string, boolean literal, or template function
-=======
-## `prop-custommetric-retention-valid`
-
-If specified, a custom_metric's `retention` must be in a valid format, e.g.`15s:7d,1m:21d,15m:5y`
->>>>>>> auto-docs
 
 
 
@@ -4776,7 +2614,6 @@ If specified, a custom_metric's `retention` must be in a valid format, e.g.`15s:
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: `yes` is not a valid value for `is_excluded_from_backup`
 
 ```yaml
@@ -4785,81 +2622,10 @@ components:
 - containers:
   - volumes:
     - is_excluded_from_backup: "yes"
-=======
-*Incorrect*: retention invalid
-
-```yaml
----
-custom_metrics:
-  - target: stats.gauges.ping.rtt.*
-    retention: 15 second resolution for  10 days
-    aggregation_method: "average"
-    xfiles_factor: 0.3
-    
-```
-
-
-
-*Correct*: no custom metrics
-
-```yaml
----
-custom_metrics: []
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
-*Incorrect*: `2` is not a valid value for `is_excluded_from_backup`
-
-```yaml
----
-components:
-- containers:
-  - volumes:
-    - is_excluded_from_backup: 2
-=======
-*Correct*: custom retention not specified
-
-```yaml
----
-custom_metrics:
-  - target: stats.gauges.ping.rtt.*
-    aggregation_method: "average"
-    xfiles_factor: 0.3
-
->>>>>>> auto-docs
-      
-```
-
-
-<<<<<<< HEAD
-*Incorrect*: `1` is not a valid value for `is_excluded_from_backup`, though `"1"` is
-
-```yaml
----
-components:
-- containers:
-  - volumes:
-    - is_excluded_from_backup: 1
-=======
-*Correct*: minimal valid retention
-
-```yaml
----
-custom_metrics:
-  - target: stats.gauges.ping.rtt.*
-    retention: 15s:7d
-    aggregation_method: "average"
-    xfiles_factor: 0.3
-
->>>>>>> auto-docs
-      
-```
-
-
-<<<<<<< HEAD
 
 *Correct*: `"true"`, `true`, `"false"` and `false` are all valid values for `is_excluded_from_backup`
 
@@ -4872,23 +2638,10 @@ components:
     - is_excluded_from_backup: "false"
     - is_excluded_from_backup: true
     - is_excluded_from_backup: false
-=======
-*Correct*: valid retention with spaces
-
-```yaml
----
-custom_metrics:
-  - target: stats.gauges.ping.rtt.*
-    retention: 15s:7d, 1m:22d, 15m:2h
-    aggregation_method: "average"
-    xfiles_factor: 0.3
-
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Correct*: `{{repl AppID}}` is a valid template function and is thus a valid value for `is_excluded_from_backup`
 
 ```yaml
@@ -4897,23 +2650,10 @@ components:
 - containers:
   - volumes:
     - is_excluded_from_backup: "{{repl AppID}}"
-=======
-*Correct*: valid retention 1
-
-```yaml
----
-custom_metrics:
-  - target: stats.gauges.ping.rtt.*
-    retention: 15s:7d,1m:21d,15m:5y
-    aggregation_method: "average"
-    xfiles_factor: 0.3
-
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
     
 
 ## `prop-component-container-envvars-staticval-deprecated`
@@ -4935,23 +2675,10 @@ components:
   - env_vars:
     - static_val: blah
       value: blah
-=======
-*Correct*: valid retention 2
-
-```yaml
----
-custom_metrics:
-  - target: stats.gauges.ping.rtt.*
-    retention: "1m:1h,1h:7d,1d:90d"
-    aggregation_method: "average"
-    xfiles_factor: 0.3
-
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Incorrect*: `static_val` deprecated empty
 
 ```yaml
@@ -4961,23 +2688,10 @@ components:
   - env_vars:
     - static_val: ""
       value: blah
-=======
-*Correct*: valid retention 3
-
-```yaml
----
-custom_metrics:
-  - target: stats.gauges.ping.rtt.*
-    retention: "1s:10m,1m:4h,1h:30d"
-    aggregation_method: "average"
-    xfiles_factor: 0.3
-
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 
 *Correct*: `value` preferred over `static_val`
 
@@ -4985,35 +2699,18 @@ custom_metrics:
 ---
 components:
 - containers:
-  - volumes:
+  - name: first
+    env_vars:
     - value: "blah"
-=======
-*Correct*: valid retention 4
-
-```yaml
----
-custom_metrics:
-  - target: stats.gauges.myapp100.ping.*
-    retention: "10s:10m,1m:20m,1h:30d"
-    aggregation_method: "average"
-    xfiles_factor: 0.3
-
->>>>>>> auto-docs
       
 ```
 
 
     
 
-<<<<<<< HEAD
 ## `prop-hostreq-docker-version-valid`
 
 `host_requirements.docker_version` must be a valid docker version specification
-=======
-## `prop-custommetric-aggregation-valid`
-
-If specified, a `custom_metric`'s aggregation must one of `average`, `sum`, `min`, `max`, `last`
->>>>>>> auto-docs
 
 
 
@@ -5021,7 +2718,6 @@ If specified, a `custom_metric`'s aggregation must one of `average`, `sum`, `min
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: Invalid docker version the.good.one, not semver
 
 ```yaml
@@ -5038,75 +2734,30 @@ host_requirements:
 ---
 host_requirements:
   docker_version: 0.1.1
-=======
-*Incorrect*: aggregation invalid
-
-```yaml
----
-custom_metrics:
-  - target: stats.gauges.ping.rtt.*
-    retention: 15s:7d,1m:14d,15m:1y
-    aggregation_method: "middle-out"
-    xfiles_factor: 0.3
-    
-```
-
-
-
-*Correct*: no custom metrics
-
-```yaml
----
-custom_metrics: []
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Incorrect*: Invalid docker version `1.09.1`, no leading zeros
 
 ```yaml
 ---
 host_requirements:
   docker_version: 1.09.1
-=======
-*Correct*: custom aggregation not specified
-
-```yaml
----
-custom_metrics:
-  - target: stats.gauges.ping.rtt.*
-
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Incorrect*: Invalid docker version `1.14.1`, never released
 
 ```yaml
 ---
 host_requirements:
   docker_version: 1.14.1
-=======
-*Correct*: aggregation == `sum`
-
-```yaml
----
-custom_metrics:
-  - target: stats.gauges.ping.rtt.*
-    retention: 15s:7d
-    aggregation_method: "sum"
-    xfiles_factor: 0.3
-
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Incorrect*: Invalid docker version `17.13.1-ce`, 13 is not a valid month
 
 ```yaml
@@ -5115,101 +2766,44 @@ host_requirements:
   docker_version: 17.13.1-ce
       
 ```
-=======
-*Correct*: aggregation == `average`
-
-```yaml
----
-custom_metrics:
-  - target: stats.gauges.ping.rtt.*
-    retention: 15s:7d, 1m:22d, 15m:2h
-    aggregation_method: "average"
-    xfiles_factor: 0.3
->>>>>>> auto-docs
-
-      
-```
 
 
-<<<<<<< HEAD
+
 *Correct*: Valid docker version
 
 ```yaml
 ---
 host_requirements:
   docker_version: 17.09.1-ce
-=======
-*Correct*: aggregation == `max`
-
-```yaml
----
-custom_metrics:
-  - target: stats.gauges.ping.rtt.*
-    retention: 15s:7d,1m:21d,15m:5y
-    aggregation_method: "max"
-    xfiles_factor: 0.3
-
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Correct*: Valid docker version
 
 ```yaml
 ---
 host_requirements:
   docker_version: 17.09.1
-=======
-*Correct*: aggregation == `min`
-
-```yaml
----
-custom_metrics:
-  - target: stats.gauges.ping.rtt.*
-    retention: "1m:1h,1h:7d,1d:90d"
-    aggregation_method: "min"
-    xfiles_factor: 0.3
-
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Correct*: Valid docker version
 
 ```yaml
 ---
 host_requirements:
   docker_version: 1.12.1
-=======
-*Correct*: aggregation == `last`
-
-```yaml
----
-custom_metrics:
-  - target: stats.gauges.ping.rtt.*
-    retention: "1s:10m,1m:4h,1h:30d"
-    aggregation_method: "last"
-    xfiles_factor: 0.3
->>>>>>> auto-docs
       
 ```
 
 
     
 
-<<<<<<< HEAD
 ## `prop-hostreq-replicated-version-semver-valid`
 
 `host_requirements.replicated_version` must be a semver range specification
-=======
-## `prop-monitors-custom-display-labelscale-valid`
-
-If specified, a custom monitor's `display.label_scale` must be one of `metric`, `none` or a parseable `float`
->>>>>>> auto-docs
 
 
 
@@ -5217,7 +2811,6 @@ If specified, a custom monitor's `display.label_scale` must be one of `metric`, 
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: Invalid replicated version `the.good.one`, not semver
 
 ```yaml
@@ -5235,36 +2828,10 @@ host_requirements:
 host_requirements:
   replicated_version: alpha-0.1.1
       
-=======
-*Incorrect*: `label_scale` == `kfbr392`, not a valid float
-
-```yaml
----
-monitors:
-  custom:
-    - target: stats.gauges.kfbr392.*
-      display:
-        label_scale: kfbr392
-    
-```
-
-
-*Incorrect*: `label_scale` == `1.1.02`, not a valid float
-
-```yaml
----
-monitors:
-  custom:
-    - target: stats.gauges.kfbr392.*
-      display:
-        label_scale: 1.1.02
-    
->>>>>>> auto-docs
 ```
 
 
 
-<<<<<<< HEAD
 *Correct*: valid version `2.x`
 
 ```yaml
@@ -5322,97 +2889,14 @@ host_requirements:
 host_requirements:
     replicated_version: '>=1.4 <1.7'
       
-=======
-*Correct*: `label_scale` == `metric`
-
-```yaml
----
-monitors:
-  custom:
-    - target: stats.gauges.kfbr392.*
-      display:
-        label_scale: metric
-    
-```
-
-
-*Correct*: `label_scale` == `none`
-
-```yaml
----
-monitors:
-  custom:
-    - target: stats.gauges.kfbr392.*
-      display:
-        label_scale: none
-    
-```
-
-
-*Correct*: `label_scale` == `1.84`
-
-```yaml
----
-monitors:
-  custom:
-    - target: stats.gauges.kfbr392.*
-      display:
-        label_scale: 1.84
-    
-```
-
-
-*Correct*: `label_scale` == `.1`
-
-```yaml
----
-monitors:
-  custom:
-    - target: stats.gauges.kfbr392.*
-      display:
-        label_scale: .1
-    
-```
-
-
-*Correct*: `label_scale` == `12`
-
-```yaml
----
-monitors:
-  custom:
-    - target: stats.gauges.kfbr392.*
-      display:
-        label_scale: 12
-    
-```
-
-
-*Correct*: `label_scale` == `-12.23131131`
-
-```yaml
----
-monitors:
-  custom:
-    - target: stats.gauges.kfbr392.*
-      display:
-        label_scale: -12.23131131
-    
->>>>>>> auto-docs
 ```
 
 
     
 
-<<<<<<< HEAD
 ## `prop-hostreq-system-ram-specs-valid`
 
 `host_requirements.memory` must be a positive decimal with a unit of measurement like M, MB, G, or GB
-=======
-## `prop-replicated-api-version-present`
-
-`replicated_api_version` must be present and be a valid Semver specification
->>>>>>> auto-docs
 
 
 
@@ -5420,13 +2904,12 @@ monitors:
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: Invalid memory size, not a properly formatted size
 
 ```yaml
 ---
 host_requirements:
-  memory: 128
+  memory: "128"
       
 ```
 
@@ -5438,46 +2921,20 @@ host_requirements:
 host_requirements:
   memory: 0.0625TB
       
-=======
-*Incorrect*: `replicated_api_version` is missing
-
-```yaml
----
-{}
-    
-```
-
-
-*Incorrect*: `replicated_api_version` is not valid semver
-
-```yaml
----
-replicated_api_version: kfbr392
-    
->>>>>>> auto-docs
 ```
 
 
 
-<<<<<<< HEAD
 *Correct*: Valid memory size, 2.0TB
 
 ```yaml
 ---
 host_requirements:
   memory: 2.0TB
-=======
-*Correct*: `replicated_api_version` is valid semver
-
-```yaml
----
-replicated_api_version: 2.9.0
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Correct*: Valid memory size, 128KB
 
 ```yaml
@@ -5485,60 +2942,14 @@ replicated_api_version: 2.9.0
 host_requirements:
   memory: 128KB
       
-=======
-    
-
-## `prop-image-contenttrust-fingerprint-valid`
-
-An image's `content_trust.public_key_fingerprint` must be a valid RFC4716 fingerprint, e.g. `cb:69:19:cd:76:1f:17:54:92:a4:fc:a9:6f:a5:57:72`
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: 
-
-```yaml
----
-images:
-  - source: public
-    name: redis
-    tag: 3.2.1
-    content_trust:
-      public_key_fingerprint: flksdjflkds
-    
-```
-
-
-
-*Correct*: valid fingerprint
-
-```yaml
----
-images:
-  - source: public
-    name: redis
-    tag: 3.2.1
-    content_trust:
-      public_key_fingerprint: cb:69:19:cd:76:1f:17:54:92:a4:fc:a9:6f:a5:57:72
-    
->>>>>>> auto-docs
 ```
 
 
     
 
-<<<<<<< HEAD
 ## `prop-hostreq-system-storage-specs-valid`
 
 `host_requirements.disk_space` be a positive decimal with a unit of measurement like M, MB, G, or GB
-=======
-## `prop-properties-shellalias-valid`
-
-`properties.shell_alias` must be a valid shell alias
->>>>>>> auto-docs
 
 
 
@@ -5546,46 +2957,27 @@ images:
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: Invalid disk size, not a properly formatted size
 
 ```yaml
 ---
 host_requirements:
-  disk_space: 128
-=======
-*Incorrect*: alias contains invalid character `&`
-
-```yaml
----
-properties:
-  shell_alias: exec&echo
->>>>>>> auto-docs
+  disk_space: "128"
       
 ```
 
 
-<<<<<<< HEAD
 *Incorrect*: Invalid disk size, too many digits past the decimal point
 
 ```yaml
 ---
 host_requirements:
   disk_space: 0.0625EB
-=======
-*Incorrect*: admin command contains invalid character `*`
-
-```yaml
----
-properties:
-  shell_alias: exec**echo
->>>>>>> auto-docs
       
 ```
 
 
 
-<<<<<<< HEAD
 *Correct*: Valid disk size, 20.0TB
 
 ```yaml
@@ -5602,29 +2994,15 @@ host_requirements:
 ---
 host_requirements:
   disk_space: 128GB
-=======
-*Correct*: valid alias
-
-```yaml
----
-properties:
-  shell_alias: do_a-replicated_thing---plz
->>>>>>> auto-docs
       
 ```
 
 
     
 
-<<<<<<< HEAD
 ## `prop-kubernetes-requirements-version-valid`
 
 `kubernetes.requirements.server_version` must be a valid semver specification
-=======
-## `prop-properties-logourl-valid`
-
-Logo URL must be a valid http or https URL
->>>>>>> auto-docs
 
 
 
@@ -5632,7 +3010,6 @@ Logo URL must be a valid http or https URL
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: `server_version` is not valid semver
 
 ```yaml
@@ -5640,19 +3017,10 @@ Logo URL must be a valid http or https URL
 kubernetes:
   requirements:
     server_version: 17.01.1-ce
-=======
-*Incorrect*: protocol not in [`http`, `https`]
-
-```yaml
----
-properties:
-  logo_url: yo://mylogo.com/logo.png
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 
 *Correct*: valid version `1.5.3`
 
@@ -5661,19 +3029,10 @@ properties:
 kubernetes:
   requirements:
     server_version: 1.5.3
-=======
-*Incorrect*: invalid url
-
-```yaml
----
-properties:
-  logo_url: kfbr392
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Correct*: valid version `<=1.5.3 >1.5.x`
 
 ```yaml
@@ -5681,14 +3040,6 @@ properties:
 kubernetes:
   requirements:
     server_version: '<=1.5.3 >1.5.x'
-=======
-*Incorrect*: invalid url
-
-```yaml
----
-properties:
-  logo_url: http://i.goo gr.com/rnZ3Ftf.png
->>>>>>> auto-docs
       
 ```
 
@@ -5703,7 +3054,6 @@ kubernetes:
       
 ```
 
-<<<<<<< HEAD
 
 *Correct*: valid version `=1.x`
 
@@ -5723,39 +3073,22 @@ kubernetes:
 kubernetes:
   requirements:
     server_version: '>=1.4 <1.7'
-=======
-*Correct*: valid url
-
-```yaml
----
-properties:
-  logo_url: http://x.y+a.com:3000/b/c
->>>>>>> auto-docs
       
 ```
 
 
     
 
-<<<<<<< HEAD
 ## `prop-kubernetes-total-memory-valid`
 
 `kubernetes.requirements.total_memory` must be expressed as a plain integer, a fixed-point integer, or the power-of-two equivalent (e.g. 128974848, 129e6, 129M, 123Mi)
-=======
-## `prop-configitem-testproc-run-on-save`
-
-If a config item's `test_proc.run_on_save` is not set to `true`, test_proc's will not be checked automatically. Consider setting to `true` to automatically validate inputs
->>>>>>> auto-docs
 
 
 
-#### More Info:
 
-- https://www.replicated.com/docs/packaging-an-application/test-procs/
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: Invalid memory size, too many digits past the decimal point
 
 ```yaml
@@ -5786,73 +3119,10 @@ kubernetes:
 kubernetes:
   requirements:
     total_memory: 128KB
-=======
-*Incorrect*: A config item's `test_proc.run_on_save` set to `false`
-
-```yaml
----
-config:
-- name: configs
-  title: Configuration
-  items:
-  - name: phone_number
-    type: text
-    test_proc:
-      display_name: Is this a Phone Number?
-      command: regex_match
-      run_on_save: false
-      args:
-      - "([0-9]{3})[-]([0-9]{3})[-]([0-9]{4})$"
-      - "That doesn't seem to be a phone number!"
-    
-```
-
-
-*Incorrect*: A config groups's `test_proc.run_on_save` set to `false`
-
-```yaml
----
-config:
-- name: configs
-  title: Configuration
-  test_proc:
-    display_name: Is this a Phone Number?
-    command: regex_match
-    run_on_save: false
-    args:
-    - "([0-9]{3})[-]([0-9]{3})[-]([0-9]{4})$"
-    - "That doesn't seem to be a phone number!"
-  items:
-  - name: phone_number
-    type: text
-    
-```
-
-
-
-*Correct*: All `test_procs` have `run_on_save` == `true`
-
-```yaml
----
-config:
-- name: configs
-  title: Configuration
-  items:
-  - name: phone_number
-    type: text
-    test_proc:
-      display_name: Is this a Phone Number?
-      command: regex_match
-      run_on_save: true
-      args:
-      - "([0-9]{3})[-]([0-9]{3})[-]([0-9]{4})$"
-      - "That doesn't seem to be a phone number!"
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Correct*: Valid kubernetes memory size, 128
 
 ```yaml
@@ -5871,43 +3141,22 @@ kubernetes:
 kubernetes:
   requirements:
     total_memory: "129e6"
-=======
-*Correct*: No config items have test procs
-
-```yaml
----
-config:
-- name: configs
-  title: Configuration
-  items:
-  - name: phone_number
-    type: text
->>>>>>> auto-docs
       
 ```
 
 
     
 
-<<<<<<< HEAD
 ## `prop-kubernetes-persistent-storage-valid`
 
 `kubernetes.persistent_volume_claims.storage` must be expressed as a plain integer, a fixed-point integer, or the power-of-two equivalent (e.g. 128974848, 129e6, 129M, 123Mi)
-=======
-## `prop-configitem-testproc-command-valid`
-
-A `test_proc`'s command entry must be a valid command.
->>>>>>> auto-docs
 
 
 
-#### More Info:
 
-- https://www.replicated.com/docs/packaging-an-application/test-procs/
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: Invalid storage size, too many digits past the decimal point
 
 ```yaml
@@ -5949,85 +3198,10 @@ kubernetes:
 kubernetes:
   persistent_volume_claims:
   - storage: "128"
-=======
-*Incorrect*: config item's `test_proc.command` is set to `json_is_good`, which is not a supported Test Proc command
-
-```yaml
----
-config:
-- name: configs
-  title: Configuration
-  items:
-  - name: phone_number
-    type: text
-    test_proc:
-      display_name: Is the json good?
-      command: json_is_good
-    
-```
-
-
-*Incorrect*: config group's `test_proc.command` is set to `all_the_json_is_good`, which is not a supported Test Proc command
-
-```yaml
----
-config:
-- name: configs
-  title: Configuration
-  test_proc:
-    display_name: Is the json good?
-    command: all_the_json_is_good
-  items:
-  - name: phone_number
-    type: text
-    
-```
-
-
-
-*Correct*: item and group's `test_proc.command`s are set to `resolve_host` and `smtp_auth`, both supported Test Proc commands
-
-```yaml
----
-config:
-- name: configs
-  title: Configuration
-  test_proc:
-    display_name: Is docs.replicated.com reachable?
-    command: smtp_auth
-  items:
-  - name: docs_host
-    type: text
-    test_proc:
-      display_name: Is docs.replicated.com reachable?
-      command: resolve_host
-      args:
-      - docs.replicated.com
-```
-
-
-*Correct*: item's `test_proc.command` is set to `resolve_host`
-
-```yaml
----
-config:
-- name: hostname
-  title: Hostname
-  description: Ensure this domain name is routable on your network.
-  items:
-  - name: hostname
-    title: Hostname
-    value: '{{repl ConsoleSetting "tls.hostname"}}'
-    type: text
-    test_proc:
-      display_name: Check DNS
-      command: resolve_host
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Correct*: Valid kubernetes storage size, 129e6
 
 ```yaml
@@ -6035,37 +3209,19 @@ config:
 kubernetes:
   persistent_volume_claims:
   - storage: "129e6"
-=======
-*Correct*: no test procs specified
-
-```yaml
----
-config:
-- name: configs
-  title: Configuration
-  items:
-  - name: docs_host
-    type: text
->>>>>>> auto-docs
       
 ```
 
 
 *Correct*: No storage size given
 
-<<<<<<< HEAD
 ```yaml
 ---
 kubernetes:
-  persistent_volume_claims:
+  persistent_volume_claims: []
       
 ```
 
-=======
-## `prop-hostreq-docker-version-valid`
-
-`host_requirements.docker_version` must be a valid docker version specification
->>>>>>> auto-docs
 
     
 
@@ -6075,22 +3231,10 @@ Entries in `monitors.cpuacct` must have matching component+container
 
 
 
-<<<<<<< HEAD
 
-=======
-*Incorrect*: Invalid docker version the.good.one, not semver
-
-```yaml
----
-host_requirements:
-  docker_version: the.good.one
-      
-```
->>>>>>> auto-docs
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: `cpuacct` monitor references a component that does not exist
 
 ```yaml
@@ -6133,87 +3277,32 @@ components:
 monitors:
   cpuacct:
     - Logstash,quay.io/getelk/logstash
-=======
-*Incorrect*: Invalid docker version `0.1.1`
-
-```yaml
----
-host_requirements:
-  docker_version: 0.1.1
       
 ```
 
 
-*Incorrect*: Invalid docker version `1.09.1`, no leading zeros
-
-```yaml
----
-host_requirements:
-  docker_version: 1.09.1
-      
-```
-
-
-*Incorrect*: Invalid docker version `1.14.1`, never released
-
-```yaml
----
-host_requirements:
-  docker_version: 1.14.1
->>>>>>> auto-docs
-      
-```
-
-
-<<<<<<< HEAD
 *Correct*: No monitors, no containers
 
 ```yaml
 ---
 monitors:
   cpuacct: []
-=======
-*Incorrect*: Invalid docker version `17.13.1-ce`, 13 is not a valid month
-
-```yaml
----
-host_requirements:
-  docker_version: 17.13.1-ce
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
     
 
 ## `prop-monitors-memory-container-exists`
 
 Entries in `monitors.memory` must have matching component+container
-=======
-
-*Correct*: Valid docker version
->>>>>>> auto-docs
-
-```yaml
----
-host_requirements:
-  docker_version: 17.09.1-ce
-      
-```
 
 
-*Correct*: Valid docker version
-
-```yaml
----
-host_requirements:
-  docker_version: 17.09.1
-      
-```
 
 
-<<<<<<< HEAD
+
+#### Examples:
+
 *Incorrect*: `memacct` monitor references a component that does not exist
 
 ```yaml
@@ -6256,62 +3345,10 @@ components:
 monitors:
   memory:
     - Logstash,quay.io/getelk/logstash
-=======
-*Correct*: Valid docker version
-
-```yaml
----
-host_requirements:
-  docker_version: 1.12.1
       
 ```
 
 
-    
-
-## `prop-hostreq-replicated-version-semver-valid`
-
-`host_requirements.replicated_version` must be a semver range specification
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: Invalid replicated version `the.good.one`, not semver
-
-```yaml
----
-host_requirements:
-  replicated_version: the.good.one
-      
-```
-
-
-*Incorrect*: Invalid replicated version `alpha-0.1.1`
-
-```yaml
----
-host_requirements:
-  replicated_version: alpha-0.1.1
-      
-```
-
-
-
-*Correct*: valid version `2.x`
-
-```yaml
----
-host_requirements:
-    replicated_version: 2.x
->>>>>>> auto-docs
-      
-```
-
-
-<<<<<<< HEAD
     
 
 ## `prop-monitors-custom-has-target`
@@ -6321,30 +3358,9 @@ Entries in `monitors.custom` must have at least one target
 
 
 
-=======
-*Correct*: valid version `2.5.3`
-
-```yaml
----
-host_requirements:
-    replicated_version: 2.5.3
-      
-```
-
-
-*Correct*: valid version `<=2.5.3 >2.5.x`
-
-```yaml
----
-host_requirements:
-    replicated_version: '<=2.5.3 >2.5.x'
-      
-```
->>>>>>> auto-docs
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: custom monitor has no targets
 
 ```yaml
@@ -6364,7 +3380,7 @@ monitors:
 monitors:
   custom:
     - name: whatever
-      target:
+      target: ""
     
 ```
 
@@ -6398,49 +3414,15 @@ monitors:
         - stats.gauges.myapp100.ping.*
         - movingAverage(stats.gauges.myapp100.ping.*,60)
         - movingAverage(stats.gauges.myapp100.ping.*,600)
-=======
-*Correct*: valid version `1.x`
-
-```yaml
----
-host_requirements:
-    replicated_version: '1.x'
-      
-```
-
-
-*Correct*: valid version `=1.x`
-
-```yaml
----
-host_requirements:
-    replicated_version: '=1.x'
-      
-```
-
-
-*Correct*: valid version `>=1.4 <1.7`
-
-```yaml
----
-host_requirements:
-    replicated_version: '>=1.4 <1.7'
->>>>>>> auto-docs
       
 ```
 
 
     
 
-<<<<<<< HEAD
 ## `prop-monitors-custom-has-target`
 
 Entries in `monitors.custom` have valid color specifications
-=======
-## `prop-hostreq-system-ram-specs-valid`
-
-`host_requirements.memory` must be a positive decimal with a unit of measurement like M, MB, G, or GB
->>>>>>> auto-docs
 
 
 
@@ -6448,7 +3430,6 @@ Entries in `monitors.custom` have valid color specifications
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: custom monitor has invalid `stroke_color`
 
 ```yaml
@@ -6474,30 +3455,10 @@ monitors:
       display:
         fill_color: blue
     
-=======
-*Incorrect*: Invalid memory size, not a properly formatted size
-
-```yaml
----
-host_requirements:
-  memory: 128
-      
-```
-
-
-*Incorrect*: Invalid memory size, too many digits past the decimal point
-
-```yaml
----
-host_requirements:
-  memory: 0.0625TB
-      
->>>>>>> auto-docs
 ```
 
 
 
-<<<<<<< HEAD
 *Correct*: custom monitor has valid color specs
 
 ```yaml
@@ -6518,19 +3479,10 @@ monitors:
       display:
         fill_color: '#44BB66'
         stroke_color: '#444444'
-=======
-*Correct*: Valid memory size, 2.0TB
-
-```yaml
----
-host_requirements:
-  memory: 2.0TB
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
     
 
 ## `prop-statsd-port-valid`
@@ -6542,16 +3494,6 @@ If specified, `statsd.port` must be a valid TCP port
 
 
 #### Examples:
-
-*Incorrect*: `statsd.port` is not an integer
-
-```yaml
----
-statsd:
-  port: foo
-    
-```
-
 
 *Incorrect*: `statsd.port` is negative
 
@@ -6570,116 +3512,40 @@ statsd:
 statsd:
   port: 100000
     
-=======
-*Correct*: Valid memory size, 128KB
-
-```yaml
----
-host_requirements:
-  memory: 128KB
-      
-```
-
-
-    
-
-## `prop-hostreq-system-storage-specs-valid`
-
-`host_requirements.disk_space` be a positive decimal with a unit of measurement like M, MB, G, or GB
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: Invalid disk size, not a properly formatted size
-
-```yaml
----
-host_requirements:
-  disk_space: 128
-      
-```
-
-
-*Incorrect*: Invalid disk size, too many digits past the decimal point
-
-```yaml
----
-host_requirements:
-  disk_space: 0.0625EB
-      
->>>>>>> auto-docs
 ```
 
 
 
-<<<<<<< HEAD
 *Correct*: statsd port valid
 
 ```yaml
 ---
 statsd:
   port: 43221
-=======
-*Correct*: Valid disk size, 20.0TB
-
-```yaml
----
-host_requirements:
-  disk_space: 20.0TB
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Correct*: statsd port not specified
 
 ```yaml
 ---
 statsd: {}
-=======
-*Correct*: Valid disk size, 128GB
-
-```yaml
----
-host_requirements:
-  disk_space: 128GB
->>>>>>> auto-docs
       
 ```
 
 
     
 
-<<<<<<< HEAD
 ## `prop-graphite-port-valid`
 
 If specified, `graphite.port` must be a valid TCP port
-=======
-## `prop-kubernetes-requirements-version-valid`
-
-`kubernetes.requirements.server_version` must be a valid semver specification
->>>>>>> auto-docs
 
 
 
 
 
 #### Examples:
-
-<<<<<<< HEAD
-*Incorrect*: `graphite.port` is not an integer
-
-```yaml
----
-graphite:
-  port: foo
-    
-```
-
 
 *Incorrect*: `graphite.port` is negative
 
@@ -6708,73 +3574,19 @@ graphite:
 ---
 graphite:
   port: 43221
-=======
-*Incorrect*: `server_version` is not valid semver
-
-```yaml
----
-kubernetes:
-  requirements:
-    server_version: 17.01.1-ce
       
 ```
 
 
-
-*Correct*: valid version `1.5.3`
-
-```yaml
----
-kubernetes:
-  requirements:
-    server_version: 1.5.3
-      
-```
-
-
-*Correct*: valid version `<=1.5.3 >1.5.x`
-
-```yaml
----
-kubernetes:
-  requirements:
-    server_version: '<=1.5.3 >1.5.x'
-      
-```
-
-
-*Correct*: valid version `1.x`
-
-```yaml
----
-kubernetes:
-  requirements:
-    server_version: '1.x'
->>>>>>> auto-docs
-      
-```
-
-
-<<<<<<< HEAD
 *Correct*: graphite port not specified
 
 ```yaml
 ---
 graphite: {}
-=======
-*Correct*: valid version `=1.x`
-
-```yaml
----
-kubernetes:
-  requirements:
-    server_version: '=1.x'
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
     
 
 ## `prop-custommetric-retention-valid`
@@ -6849,32 +3661,8 @@ custom_metrics:
 
       
 ```
-=======
-*Correct*: valid version `>=1.4 <1.7`
-
-```yaml
----
-kubernetes:
-  requirements:
-    server_version: '>=1.4 <1.7'
-      
-```
 
 
-    
-
-## `prop-kubernetes-total-memory-valid`
-
-`kubernetes.requirements.total_memory` must be expressed as a plain integer, a fixed-point integer, or the power-of-two equivalent (e.g. 128974848, 129e6, 129M, 123Mi)
-
-
-
-
->>>>>>> auto-docs
-
-#### Examples:
-
-<<<<<<< HEAD
 *Correct*: valid retention 1
 
 ```yaml
@@ -6884,23 +3672,11 @@ custom_metrics:
     retention: 15s:7d,1m:21d,15m:5y
     aggregation_method: "average"
     xfiles_factor: 0.3
-=======
-*Incorrect*: Invalid memory size, too many digits past the decimal point
-
-```yaml
----
-kubernetes:
-  requirements:
-    total_memory: 0.0625TB
-      
-```
->>>>>>> auto-docs
 
       
 ```
 
 
-<<<<<<< HEAD
 *Correct*: valid retention 2
 
 ```yaml
@@ -6911,20 +3687,10 @@ custom_metrics:
     aggregation_method: "average"
     xfiles_factor: 0.3
 
-=======
-*Correct*: Valid memory size, 2.0TB
-
-```yaml
----
-kubernetes:
-  requirements:
-    total_memory: 2.0TB
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Correct*: valid retention 3
 
 ```yaml
@@ -6934,24 +3700,11 @@ custom_metrics:
     retention: "1s:10m,1m:4h,1h:30d"
     aggregation_method: "average"
     xfiles_factor: 0.3
-=======
-*Correct*: Valid memory size, 128KB
-
-```yaml
----
-kubernetes:
-  requirements:
-    total_memory: 128KB
-      
-```
->>>>>>> auto-docs
 
       
 ```
 
-*Correct*: Valid kubernetes memory size, 128
 
-<<<<<<< HEAD
 *Correct*: valid retention 4
 
 ```yaml
@@ -6962,39 +3715,15 @@ custom_metrics:
     aggregation_method: "average"
     xfiles_factor: 0.3
 
-=======
-```yaml
----
-kubernetes:
-  requirements:
-    total_memory: "128"
-      
-```
-
-
-*Correct*: Valid kubernetes memory size, 129e6
-
-```yaml
----
-kubernetes:
-  requirements:
-    total_memory: "129e6"
->>>>>>> auto-docs
       
 ```
 
 
     
 
-<<<<<<< HEAD
 ## `prop-custommetric-aggregation-valid`
 
 If specified, a `custom_metric`'s aggregation must one of `average`, `sum`, `min`, `max`, `last`
-=======
-## `prop-kubernetes-persistent-storage-valid`
-
-`kubernetes.persistent_volume_claims.storage` must be expressed as a plain integer, a fixed-point integer, or the power-of-two equivalent (e.g. 128974848, 129e6, 129M, 123Mi)
->>>>>>> auto-docs
 
 
 
@@ -7002,7 +3731,6 @@ If specified, a `custom_metric`'s aggregation must one of `average`, `sum`, `min
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: aggregation invalid
 
 ```yaml
@@ -7013,40 +3741,19 @@ custom_metrics:
     aggregation_method: "middle-out"
     xfiles_factor: 0.3
     
-=======
-*Incorrect*: Invalid storage size, too many digits past the decimal point
-
-```yaml
----
-kubernetes:
-  persistent_volume_claims:
-  - storage: 0.0625TB
-      
->>>>>>> auto-docs
 ```
 
 
 
-<<<<<<< HEAD
 *Correct*: no custom metrics
 
 ```yaml
 ---
 custom_metrics: []
-=======
-*Correct*: Valid storage size, 2.0TB
-
-```yaml
----
-kubernetes:
-  persistent_volume_claims:
-  - storage: 2.0TB
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Correct*: custom aggregation not specified
 
 ```yaml
@@ -7068,20 +3775,10 @@ custom_metrics:
     aggregation_method: "sum"
     xfiles_factor: 0.3
 
-=======
-*Correct*: Valid storage size, 128KB
-
-```yaml
----
-kubernetes:
-  persistent_volume_claims:
-  - storage: 128KB
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Correct*: aggregation == `average`
 
 ```yaml
@@ -7092,20 +3789,10 @@ custom_metrics:
     aggregation_method: "average"
     xfiles_factor: 0.3
 
-=======
-*Correct*: Valid kubernetes storage size, 128
-
-```yaml
----
-kubernetes:
-  persistent_volume_claims:
-  - storage: "128"
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Correct*: aggregation == `max`
 
 ```yaml
@@ -7116,20 +3803,10 @@ custom_metrics:
     aggregation_method: "max"
     xfiles_factor: 0.3
 
-=======
-*Correct*: Valid kubernetes storage size, 129e6
-
-```yaml
----
-kubernetes:
-  persistent_volume_claims:
-  - storage: "129e6"
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Correct*: aggregation == `min`
 
 ```yaml
@@ -7140,21 +3817,12 @@ custom_metrics:
     aggregation_method: "min"
     xfiles_factor: 0.3
 
-=======
-*Correct*: No storage size given
-
-```yaml
----
-kubernetes:
-  persistent_volume_claims:
->>>>>>> auto-docs
       
 ```
 
 
 *Correct*: aggregation == `last`
 
-<<<<<<< HEAD
 ```yaml
 ---
 custom_metrics:
@@ -7165,11 +3833,6 @@ custom_metrics:
       
 ```
 
-=======
-## `prop-admincommand-component-exists`
-
-Admin commands must reference an existing component and container
->>>>>>> auto-docs
 
     
 
@@ -7179,25 +3842,10 @@ If specified, a custom monitor's `display.label_scale` must be one of `metric`, 
 
 
 
-<<<<<<< HEAD
 
-=======
-*Incorrect*: admin command but no containers
-
-```yaml
----
-admin_commands:
-- alias: aliasecho
-  command: [echo]
-  component: DB
-  container: redis
-      
-```
->>>>>>> auto-docs
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: `label_scale` == `kfbr392`, not a valid float
 
 ```yaml
@@ -7262,125 +3910,7 @@ monitors:
         label_scale: 1.84
     
 ```
-=======
-*Incorrect*: Admin command but no matching containers
 
-```yaml
----
-admin_commands:
-- alias: aliasecho
-  command: [echo]
-  component: DB
-  container: redis
-
-components:
-- name: DB
-  containers:
-  - image_name: postgres
-      
-```
-
-
-*Incorrect*: Old style admin command but no matching containers
-
-```yaml
----
-admin_commands:
-- alias: aliasecho
-  command: [echo]
-  component: DB
-  image:
-    image_name: redis
-
-components:
-- name: DB
-  containers:
-  - image_name: postgres
-      
-```
-
-
-*Incorrect*: Admin multi command but no matching containers
-
-```yaml
----
-admin_commands:
-- alias: aliasecho
-  command: [echo]
-  replicated:
-    component: DB
-    container: redis
-  swarm:
-    service: myapp
-  kubernetes:
-    selector:
-      tier: backend
-      app: mine
-    container: node
-
-components:
-- name: DB
-  containers:
-  - image_name: postgres
-      
-```
-
-
-*Incorrect*: Admin source multi command but no matching containers
-
-```yaml
----
-admin_commands:
-- alias: aliasecho
-  command: [echo]
-  source:
-    replicated:
-      component: DB
-      container: redis
-    swarm:
-      service: myapp
-    kubernetes:
-      selector:
-        tier: backend
-        app: mine
-      container: node
-
-components:
-- name: DB
-  containers:
-  - image_name: postgres
-      
-```
-
-
-
-*Correct*: No commands, no containers
-
-```yaml
----
-admin_commands: []
-components: []
-      
-```
-
-
-*Correct*: Admin command with matching container
-
-```yaml
----
-admin_commands:
-- alias: aliasecho
-  command: [echo]
-  component: DB
-  container: redis
->>>>>>> auto-docs
-
-components:
-- name: DB
-  containers:
-  - image_name: redis
-      
-```
 
 *Correct*: `label_scale` == `.1`
 
@@ -7394,7 +3924,6 @@ monitors:
     
 ```
 
-<<<<<<< HEAD
 
 *Correct*: `label_scale` == `12`
 
@@ -7419,89 +3948,21 @@ monitors:
       display:
         label_scale: -12.23131131
     
-=======
-*Correct*: Admin command has `service`, so this is probably a swarm command and thus is not tested here
-
-```yaml
----
-admin_commands:
-- alias: aliasecho
-  command: [echo]
-  service: database
-      
 ```
 
 
-*Correct*: Admin command has `selector`, so this is probably a kubernetes command and thus is not tested here
+    
 
-```yaml
----
-admin_commands:
-- alias: aliasecho
-  command: [echo]
-  selector:
-    - tier: database
-      
->>>>>>> auto-docs
-```
-
-
-*Correct*: Old style admin command with a matching container
-
-<<<<<<< HEAD
 ## `prop-replicated-api-version-present`
 
 `replicated_api_version` must be present and be a valid Semver specification
-=======
-```yaml
----
-admin_commands:
-- alias: aliasecho
-  command: [echo]
-  component: DB
-  image:
-    image_name: redis
-
-components:
-- name: DB
-  containers:
-  - image_name: redis
-      
-```
->>>>>>> auto-docs
 
 
-*Correct*: Admin multi command with matching container
-
-<<<<<<< HEAD
-
-=======
-```yaml
----
-admin_commands:
-- alias: aliasecho
-  command: [echo]
-  replicated:
-    component: DB
-    container: redis
-  swarm:
-    service: myapp
-  kubernetes:
-    selector:
-      tier: backend
-      app: mine
-    container: node
-
-components:
-- name: DB
-  containers:
-  - image_name: redis
-      
-```
->>>>>>> auto-docs
 
 
-<<<<<<< HEAD
+
+#### Examples:
+
 *Incorrect*: `replicated_api_version` is missing
 
 ```yaml
@@ -7509,78 +3970,27 @@ components:
 {}
     
 ```
-=======
-*Correct*: Admin source multi command with matching container
 
-```yaml
----
-admin_commands:
-- alias: aliasecho
-  command: [echo]
-  source:
-    replicated:
-      component: DB
-      container: redis
-    swarm:
-      service: myapp
-    kubernetes:
-      selector:
-        tier: backend
-        app: mine
-      container: node
->>>>>>> auto-docs
 
-components:
-- name: DB
-  containers:
-  - image_name: redis
-      
-```
-
-<<<<<<< HEAD
 *Incorrect*: `replicated_api_version` is not valid semver
 
 ```yaml
 ---
 replicated_api_version: kfbr392
-=======
-
->>>>>>> auto-docs
     
-
-## `prop-admincommand-shellalias-valid`
-
-An admin command's `alias` must be a valid shell alias
+```
 
 
 
-
-<<<<<<< HEAD
 *Correct*: `replicated_api_version` is valid semver
 
 ```yaml
 ---
 replicated_api_version: 2.9.0
-=======
-
-#### Examples:
-
-*Incorrect*: admin command's `alias` contains invalid character `&`
-
-```yaml
----
-admin_commands:
-- alias: exec&echo
-  command: ["echo"]
-  run_type: exec
-  component: DB
-  container: redis
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
     
 
 ## `prop-image-contenttrust-fingerprint-valid`
@@ -7604,24 +4014,10 @@ images:
     content_trust:
       public_key_fingerprint: flksdjflkds
     
-=======
-*Incorrect*: admin command's `alias` contains invalid character `*`
-
-```yaml
----
-admin_commands:
-- alias: exec**echo
-  command: ["echo"]
-  run_type: exec
-  component: DB
-  container: redis
-      
->>>>>>> auto-docs
 ```
 
 
 
-<<<<<<< HEAD
 *Correct*: valid fingerprint
 
 ```yaml
@@ -7633,33 +4029,14 @@ images:
     content_trust:
       public_key_fingerprint: cb:69:19:cd:76:1f:17:54:92:a4:fc:a9:6f:a5:57:72
     
-=======
-*Correct*: valid `alias`
-
-```yaml
----
-admin_commands:
-- alias: redis_echo-command--
-  command: ["echo"]
-  run_type: exec
-  component: DB
-  container: redis
-      
->>>>>>> auto-docs
 ```
 
 
     
 
-<<<<<<< HEAD
 ## `prop-properties-shellalias-valid`
 
 `properties.shell_alias` must be a valid shell alias
-=======
-## `prop-admincommand-requirements-present`
-
-Basic requirements for an admin command must be present - an `alias` and a `command`
->>>>>>> auto-docs
 
 
 
@@ -7667,86 +4044,45 @@ Basic requirements for an admin command must be present - an `alias` and a `comm
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: alias contains invalid character `&`
 
 ```yaml
 ---
 properties:
   shell_alias: exec&echo
-=======
-*Incorrect*: `alias` missing
-
-```yaml
----
-admin_commands:
-- command: [echo]
-  component: DB
-  container: redis
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Incorrect*: admin command contains invalid character `*`
 
 ```yaml
 ---
 properties:
   shell_alias: exec**echo
-=======
-*Incorrect*: `command` missing
-
-```yaml
----
-admin_commands:
-- alias: echo
-  component: DB
-  container: redis
->>>>>>> auto-docs
       
 ```
 
 
 
-<<<<<<< HEAD
 *Correct*: valid alias
 
 ```yaml
 ---
 properties:
   shell_alias: do_a-replicated_thing---plz
-=======
-*Correct*: Valid new-style replicated command
-
-```yaml
----
-admin_commands:
-- alias: echo
-  command: [echo]
-  component: DB
-  container: redis
->>>>>>> auto-docs
       
 ```
 
 
     
-<<<<<<< HEAD
 
 ## `prop-properties-logourl-valid`
 
 Logo URL must be a valid http or https URL
 
-=======
 
-## `prop-admincommand-old-style-requirements-present`
->>>>>>> auto-docs
 
-`image_name` must be present within `admin_commands.image` and `admin_commands.component` must exist if `admin_commands.image` is present
-
-<<<<<<< HEAD
 
 
 #### Examples:
@@ -7767,85 +4103,62 @@ properties:
 ---
 properties:
   logo_url: kfbr392
-=======
-
-
-
-
-#### Examples:
-
-*Incorrect*: `image` is present, but not `image.image_name`
-
-```yaml
----
-admin_commands:
-- alias: echo
-  command: [echo]
-  component: alpha
-  image:
-    number: 5
->>>>>>> auto-docs
       
 ```
 
 
-<<<<<<< HEAD
 *Incorrect*: invalid url
 
 ```yaml
 ---
 properties:
   logo_url: http://i.goo gr.com/rnZ3Ftf.png
-=======
-*Incorrect*: `image` is present, but not `component`
-
-```yaml
----
-admin_commands:
-- alias: echo
-  command: [echo]
-  image:
-    image_name: redis
->>>>>>> auto-docs
       
 ```
 
 
 
-<<<<<<< HEAD
 *Correct*: valid url
 
 ```yaml
 ---
 properties:
   logo_url: http://x.y+a.com:3000/b/c
-=======
-*Correct*: Valid old-style (depreciated) command
-
-```yaml
----
-admin_commands:
-- alias: echo
-  command: [echo]
-  component: DB
-  image:
-    image_name: redis
->>>>>>> auto-docs
       
 ```
 
 
     
 
-<<<<<<< HEAD
-## `prop-swarm-secret-name-value`
+## `mesg-yaml-valid`
 
-Swarm secrets require both a `name` and a `value` to function.
-=======
-## `prop-admincommand-multi-requirements-present`
+Document must be valid YAML. This could occur for many reasons, consult individual error details for more info.
 
-`container` and `component` must both be present within `admin_commands.replicated` if it is present
->>>>>>> auto-docs
+
+
+#### More Info:
+
+- http://yaml.org/spec/
+- http://docs.ansible.com/ansible/latest/YAMLSyntax.html
+
+#### Examples:
+
+*Incorrect*: Document must have valid syntax
+
+```yaml
+---
+}}{{}}{{
+          
+```
+
+
+
+
+    
+
+## `mesg-yaml-not-empty`
+
+Document must not be empty
 
 
 
@@ -7853,7 +4166,154 @@ Swarm secrets require both a `name` and a `value` to function.
 
 #### Examples:
 
-<<<<<<< HEAD
+*Incorrect*: Document may not be empty
+
+```yaml
+---
+          
+```
+
+
+
+
+    
+
+## `prop-schema-valid`
+
+Document must conform to the Replicated YAML document schema
+
+
+
+#### More Info:
+
+- https://help.replicated.com/api/yaml#Schema
+
+#### Examples:
+
+*Incorrect*: Property `deploy_this_great_app` is not present in the schema
+
+```yaml
+---
+deploy_this_great_app: plz&thx
+          
+```
+
+
+*Incorrect*: Property `replicated_api_version` is not of correct type, should be `string`, but `2.11` is parsed as type `float`
+
+```yaml
+---
+replicated_api_version: 2.11
+          
+```
+
+
+*Incorrect*: `2` is not a valid value for `is_ephemeral`
+
+```yaml
+---
+components:
+- containers:
+- volumes:
+  - is_ephemeral: 2
+    
+```
+
+
+*Incorrect*: `1` is not a valid value for `is_ephemeral`, though `"1"` is
+
+```yaml
+---
+components:
+- containers:
+- volumes:
+  - is_ephemeral: 1
+    
+```
+
+
+*Incorrect*: `2` is not a valid value for `is_excluded_from_backup`
+
+```yaml
+---
+components:
+- containers:
+- volumes:
+  - is_excluded_from_backup: 2
+    
+```
+
+
+*Incorrect*: `1` is not a valid value for `is_excluded_from_backup`, though `"1"` is
+
+```yaml
+---
+components:
+- containers:
+- volumes:
+  - is_excluded_from_backup: 1
+    
+```
+
+
+*Incorrect*: `statsd.port` is not an integer
+
+```yaml
+---
+statsd:
+port: foo
+  
+```
+
+
+*Incorrect*: `graphite.port` is not an integer
+
+```yaml
+---
+graphite:
+port: foo
+  
+```
+
+
+*Incorrect*: cluster_host_count.min must be an unsigned integer, and this is a boolean
+
+```yaml
+---
+components:
+- cluster_host_count:
+  min: false
+    
+```
+
+
+
+*Correct*: container.version can be a string or a number
+
+```yaml
+---
+components:
+- containers:
+  - image_name: kfbr
+    version: 392
+  - image_name: redis
+    version: latest
+    
+```
+
+
+    
+
+## `prop-swarm-secret-name-value`
+
+Swarm secrets require both a `name` and a `value` to function.
+
+
+
+
+
+#### Examples:
+
 *Incorrect*: A swarm secret must contain a `name` and a `value`, and this only has a `name`
 
 ```yaml
@@ -7873,7 +4333,7 @@ swarm:
 replicated_api_version: "2.7.0"
 swarm:
   secrets:
-  - name:
+  - name: ""
     value: bar
         
 ```
@@ -7886,7 +4346,7 @@ swarm:
 replicated_api_version: "2.7.0"
 swarm:
   secrets:
-  - name:
+  - name: ""
     value: bar
     labels:
       alpha: beta
@@ -7906,72 +4366,14 @@ swarm:
     value: bar
         
 ```
-=======
-*Incorrect*: `replicated` is present, but not `replicated.component`
-
-```yaml
----
-admin_commands:
-- alias: echo
-  command: [echo]
-  replicated:
-    container: redis
-  swarm:
-    service: myapp
-      
-```
 
 
-*Incorrect*: `replicated` is present, but not `replicated.container`
-
-```yaml
----
-admin_commands:
-- alias: echo
-  command: [echo]
-  replicated:
-    component: DB
-  swarm:
-    service: myapp
-      
-```
-
-
-
-*Correct*: Valid admin multi command
-
-```yaml
----
-admin_commands:
-- alias: echo
-  command: [echo]
-  replicated:
-    component: DB
-    container: redis
-  swarm:
-    service: myapp
-      
-```
-
-
-    
-
-## `prop-admincommand-verbose-requirements-present`
->>>>>>> auto-docs
-
-`container` and `component` must both be present within `admin_commands.source.replicated` if it is present
-
-<<<<<<< HEAD
     
 
 ## `prop-swarm-secret-label-key`
-=======
-
->>>>>>> auto-docs
 
 Labels within a swarm secret must have keys.
 
-<<<<<<< HEAD
 
 
 
@@ -7991,45 +4393,10 @@ swarm:
       alpha: beta
       "": delta
         
-=======
-
-#### Examples:
-
-*Incorrect*: `source.replicated` is present, but not `source.replicated.component`
-
-```yaml
----
-admin_commands:
-- alias: echo
-  command: [echo]
-  source:
-    replicated:
-      container: redis
-    swarm:
-      service: myapp
-      
-```
-
-
-*Incorrect*: `source.replicated` is present, but not `source.replicated.container`
-
-```yaml
----
-admin_commands:
-- alias: echo
-  command: [echo]
-  source:
-    replicated:
-      component: redis
-    swarm:
-      service: myapp
-      
->>>>>>> auto-docs
 ```
 
 
 
-<<<<<<< HEAD
 *Correct*: These swarm secret labels are not the empty string
 
 ```yaml
@@ -8043,36 +4410,14 @@ swarm:
       alpha: beta
       gamma: delta
         
-=======
-*Correct*: Valid verbose admin multi command
-
-```yaml
----
-admin_commands:
-- alias: echo
-  command: [echo]
-  source:
-    replicated:
-      component: DB
-      container: redis
-    swarm:
-      service: myapp
-      
->>>>>>> auto-docs
 ```
 
 
     
 
-<<<<<<< HEAD
 ## `prop-swarm-config-name-value`
 
 Swarm configs require both a `name` and a `value` to function.
-=======
-## `prop-admincommand-one-present`
-
-Admin command must one of several methods to identify the relevant container
->>>>>>> auto-docs
 
 
 
@@ -8080,7 +4425,6 @@ Admin command must one of several methods to identify the relevant container
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: A swarm config must contain a `name` and a `value`, and this only has a `name`
 
 ```yaml
@@ -8100,7 +4444,7 @@ swarm:
 replicated_api_version: "2.7.0"
 swarm:
   configs:
-  - name:
+  - name: ""
     value: bar
         
 ```
@@ -8113,7 +4457,7 @@ swarm:
 replicated_api_version: "2.7.0"
 swarm:
   configs:
-  - name:
+  - name: ""
     value: bar
     labels:
       alpha: beta
@@ -8170,98 +4514,21 @@ swarm:
 ---
 replicated_api_version: "2.7.0"
 swarm:
-configs:
+  configs:
   - name: foo
     value: bar
     labels:
       alpha: beta
       gamma: delta
         
-=======
-*Incorrect*: None of the options are present
-
-```yaml
----
-admin_commands:
-- alias: echo
-  command: [echo]
-      
-```
-
-
-
-*Correct*: Valid new-style replicated command
-
-```yaml
----
-admin_commands:
-- alias: echo
-  command: [echo]
-  component: DB
-  container: redis
-      
-```
-
-
-*Correct*: Valid old-style (depreciated) admin command
-
-```yaml
----
-admin_commands:
-- alias: echo
-  command: [echo]
-  component: DB
-  image:
-    image_name: redis
-      
-```
-
-
-*Correct*: Valid admin multi command
-
-```yaml
----
-admin_commands:
-- alias: echo
-  command: [echo]
-  replicated:
-    component: DB
-    container: redis
-  swarm:
-    service: myapp
-      
-```
-
-
-*Correct*: Valid verbose admin multi command
-
-```yaml
----
-admin_commands:
-- alias: echo
-  command: [echo]
-  source:
-    replicated:
-      component: DB
-      container: redis
-    swarm:
-      service: myapp
-      
->>>>>>> auto-docs
 ```
 
 
     
 
-<<<<<<< HEAD
 ## `prop-configitem-testproc-run-on-save`
 
 If a config item's `test_proc.run_on_save` is not set to `true`, test_proc's will not be checked automatically. Consider setting to `true` to automatically validate inputs
-=======
-## `prop-swarm-secret-name-value`
-
-Swarm secrets require both a `name` and a `value` to function.
->>>>>>> auto-docs
 
 
 
@@ -8271,7 +4538,6 @@ Swarm secrets require both a `name` and a `value` to function.
 
 #### Examples:
 
-<<<<<<< HEAD
 *Incorrect*: A config item's `test_proc.run_on_save` set to `false`
 
 ```yaml
@@ -8357,66 +4623,11 @@ config:
 A `test_proc`'s command entry must be a valid command.
 
 
-=======
-*Incorrect*: A swarm secret must contain a `name` and a `value`, and this only has a `name`
-
-```yaml
----
-replicated_api_version: "2.7.0"
-swarm:
-  secrets:
-  - name: foo
-        
-```
-
-
-*Incorrect*: A swarm secret must contain a `name` and a `value`, and this `name` is empty
-
-```yaml
----
-replicated_api_version: "2.7.0"
-swarm:
-  secrets:
-  - name:
-    value: bar
-        
-```
-
-
-*Incorrect*: A swarm secret must contain a `name` and a `value` even when labels exist
-
-```yaml
----
-replicated_api_version: "2.7.0"
-swarm:
-  secrets:
-  - name:
-    value: bar
-    labels:
-      alpha: beta
-        
-```
-
-
-
-*Correct*: This swarm secret contains a `name` and a `value`
-
-```yaml
----
-replicated_api_version: "2.7.0"
-swarm:
-  secrets:
-  - name: foo
-    value: bar
-        
-```
->>>>>>> auto-docs
 
 #### More Info:
 
 - https://www.replicated.com/docs/packaging-an-application/test-procs/
 
-<<<<<<< HEAD
 #### Examples:
 
 *Incorrect*: config item's `test_proc.command` is set to `json_is_good`, which is not a supported Test Proc command
@@ -8434,11 +4645,6 @@ config:
       command: json_is_good
     
 ```
-=======
-## `prop-swarm-secret-label-key`
-
-Labels within a swarm secret must have keys.
->>>>>>> auto-docs
 
 
 *Incorrect*: config group's `test_proc.command` is set to `all_the_json_is_good`, which is not a supported Test Proc command
@@ -8459,7 +4665,6 @@ config:
 
 
 
-<<<<<<< HEAD
 *Correct*: item and group's `test_proc.command`s are set to `resolve_host` and `smtp_auth`, both supported Test Proc commands
 
 ```yaml
@@ -8512,113 +4717,7 @@ config:
   - name: docs_host
     type: text
       
-=======
-*Incorrect*: Swarm secret labels must not be the empty string
-
-```yaml
----
-replicated_api_version: "2.7.0"
-swarm:
-  secrets:
-  - name: foo
-    value: bar
-    labels:
-      alpha: beta
-      "": delta
-        
 ```
-
-
-
-*Correct*: These swarm secret labels are not the empty string
-
-```yaml
----
-replicated_api_version: "2.7.0"
-swarm:
-  secrets:
-  - name: foo
-    value: bar
-    labels:
-      alpha: beta
-      gamma: delta
-        
->>>>>>> auto-docs
-```
-
-
-    
-
-## `mesg-yaml-valid`
-
-Document must be valid YAML. This could occur for many reasons, consult individual error details for more info.
-
-
-
-#### More Info:
-
-- http://yaml.org/spec/
-- http://docs.ansible.com/ansible/latest/YAMLSyntax.html
-
-
-
-
-
-    
-
-## `mesg-yaml-not-empty`
-
-Document must not be empty
-
-
-
-
-
-#### Examples:
-
-*Incorrect*: Document may not be empty
-
-```yaml
----
-            
-```
-
-
-
-
-    
-
-## `prop-schema-valid`
-
-Document must conform to the Replicated YAML document schema
-
-
-
-#### More Info:
-
-- https://help.replicated.com/api/yaml#Schema
-
-#### Examples:
-
-*Incorrect*: Property `deploy_this_great_app` is not present in the schema
-
-```yaml
----
-replicated_api_version: "2.10.1"
-deploy_this_great_app: plz&thx
-            
-```
-
-
-*Incorrect*: Property `replicated_api_version` is not of correct type, should be `string`, but `2.11` is parsed as type `float`
-
-```yaml
----
-replicated_api_version: 2.11
-            
-```
-
-
 
 
     
@@ -8626,8 +4725,5 @@ replicated_api_version: 2.11
 
 
 Autogenerated reference documentation for [Replicated YAML Linter](https://github.com/replicatedhq/replicated-lint)
-<<<<<<< HEAD
-*Generated at Thu Oct 12 2017 19:13:46 GMT-0700 (PDT)*
-=======
-*Generated at Thu Sep 28 2017 00:27:07 GMT+0000 (UTC)*
->>>>>>> auto-docs
+*Generated at Tue Oct 31 2017 15:19:38 GMT-0700 (PDT)*
+
