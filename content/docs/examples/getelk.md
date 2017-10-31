@@ -93,9 +93,9 @@ components:
       filename: /opt/certs/logstash-forwarder.key
     env_vars:
     - name: AWS_ACCESS_KEY_ID
-      static_val: '{{repl ConfigOption "logstash_input_sqs_aws_access_key" }}'
+      value: '{{repl ConfigOption "logstash_input_sqs_aws_access_key" }}'
     - name: AWS_SECRET_ACCESS_KEY
-      static_val: '{{repl ConfigOption "logstash_input_sqs_aws_secret_key" }}'
+      value: '{{repl ConfigOption "logstash_input_sqs_aws_secret_key" }}'
     ports:
     - private_port: '{{repl ConfigOption "logstash_input_collectd_port" }}'
       public_port: '{{repl ConfigOption "logstash_input_collectd_port" }}'
@@ -203,11 +203,11 @@ components:
       ref: 46658db4b3464d37c1aab5dffe7a1aadc24abe7a
     env_vars:
     - name: REPLICATED_AUTH_PASSWORD
-      static_val: '{{repl ConfigOption "authentication_type_password_password" }}'
+      value: '{{repl ConfigOption "authentication_type_password_password" }}'
     - name: REPLICATED_AUTH_HASHKEY
-      static_val: '{{repl ConfigOption "authentication_type_password_hashkey" }}'
+      value: '{{repl ConfigOption "authentication_type_password_hashkey" }}'
     - name: REPLICATED_AUTH_BLOCKKEY
-      static_val: '{{repl ConfigOption "authentication_type_password_blockkey" }}'
+      value: '{{repl ConfigOption "authentication_type_password_blockkey" }}'
 cmds:
 - name: hashkey
   cmd: random

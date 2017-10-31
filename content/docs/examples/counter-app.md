@@ -107,9 +107,9 @@ components:
     customer_files: []
     env_vars:
     - name: REDIS_HOST
-      static_val: '{{repl NodePrivateIPAddress "DB" "redis" }}'
+      value: '{{repl NodePrivateIPAddress "DB" "redis" }}'
     - name: REDIS_PORT
-      static_val: '{{repl ContainerExposedPort "DB" "redis" "6379" }}'
+      value: '{{repl ContainerExposedPort "DB" "redis" "6379" }}'
     ports: []
     volumes: []
     support_files: []

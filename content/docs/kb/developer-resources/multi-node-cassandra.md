@@ -54,9 +54,9 @@ components:
       container_path: /var/log/cassandra
     env_vars:
     - name: CASSANDRA_BROADCAST_ADDRESS
-      static_val: '{{repl ThisNodePrivateIPAddress }}'
+      value: '{{repl ThisNodePrivateIPAddress }}'
     - name: CASSANDRA_SEEDS
-      static_val: '{{repl range $index, $host := NodePrivateIPAddressAll "Cassandra" "cassandra" }}{{repl if eq $index 1}},{{repl end}}{{repl if lt $index 2}}{{repl $host}}{{repl end}}{{repl end}}'
+      value: '{{repl range $index, $host := NodePrivateIPAddressAll "Cassandra" "cassandra" }}{{repl if eq $index 1}},{{repl end}}{{repl if lt $index 2}}{{repl $host}}{{repl end}}{{repl end}}'
     ports:
     - private_port: "9042"
       public_port: "9042"
