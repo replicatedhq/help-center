@@ -35,6 +35,11 @@ pre code {
 .paddingContainer {
   padding: 0 20px;
 }
+.support-bundler-container {
+  padding: 30px 20px 60px;
+  max-width: 560px;
+  margin: 0 auto;
+}
 
 .main-section {
   padding: 50px 0;
@@ -76,11 +81,14 @@ and `background-position: [value]`
 
 /* ≥ 568px */
 @media screen and (min-width: 35.5em) {
-
+  
 }
 
 /* ≥ 768px */
 @media screen and (min-width: 48em) {
+  .support-bundler-container {
+    padding: 60px 20px;
+  }
 }
 
 /* ≥ 960px */
