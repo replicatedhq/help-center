@@ -25,9 +25,11 @@ deployment:
     commands:
       - mkdir public
       - make index-and-send
+      - pip install boto
+      - python deploy/deploy.py
 
   docker:
-    branch: [master, release]
+    branch: [master]
     owner: replicatedhq
     commands:
       - pip install boto
