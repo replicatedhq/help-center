@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "algoliasearch": "^3.24.1",
-    "hugo-algolia": "^1.2.9"
+    "hugo-algolia": "^1.2.9",
+    "support-bundle-upload": "^1.0.1"
   }
 }
