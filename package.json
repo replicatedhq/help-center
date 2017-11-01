@@ -8,11 +8,18 @@
   "license": "MIT",
   "scripts": {
     "start": "hugo server",
+    "gulp": "gulp",
     "index-site": "hugo-algolia -m --all",
     "index-and-send": "hugo-algolia -s -m --all -c 19kb"
   },
   "dependencies": {
     "algoliasearch": "^3.24.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-hash": "^4.1.1",
+    "gulp-rev": "^8.0.0",
+    "gulp-rev-replace": "^0.4.3",
+    "gulp-useref": "^3.1.2",
     "hugo-algolia": "^1.2.9",
     "support-bundle-upload": "^1.0.1"
   }
