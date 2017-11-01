@@ -86,8 +86,8 @@ Replicated will consider the application running when all replicas of the Swarm 
 ### Template Functions
 There are some additional [template functions](/docs/packaging-an-application/template-functions#swarm) available when running in Swarm mode.
 
-### Secrets
-Replicated supports secrets through the use of [template functions](/docs/packaging-an-application/template-functions/). It is possible to request a secret from the user using a combination of config settings and the `ConfigOption` [template function](/docs/packaging-an-application/template-functions/#configoption). For more information on configuring the replicated settings screen see the [docs](/docs/packaging-an-application/config-screen/) on customizing the Admin Console settings page. See below for an example of creating a secret in your application.
+### Secrets and Configs
+Replicated supports secrets and configs through the use of [template functions](/docs/packaging-an-application/template-functions/). It is possible to request data from the user using a combination of config settings and the `ConfigOption` [template function](/docs/packaging-an-application/template-functions/#configoption). For more information on configuring the Replicated settings screen see the [docs on customizing the Admin Console settings page](/docs/packaging-an-application/config-screen/). See below for an example of creating secrets and configs in your application. [Swarm configs](https://docs.docker.com/compose/compose-file/#configs-configuration-reference) is supported as of Replicated {{< version version="2.13.0" >}}.
 
 ```yaml
 # kind: replicated
@@ -99,6 +99,12 @@ config:
   - name: config_my_secret
     title: My Secret
     type: password
+- name: configs
+  title: Configs
+  items:
+  - name: config_my_config
+    title: My Config
+    type: text
 ...
 swarm:
   secrets:
@@ -107,10 +113,16 @@ swarm:
     labels:
       foo: bar
       baz:
+  configs:
+  - name: my_config
+    value: '{{repl ConfigOption "config_my_config" }}'
+    labels:
+      foo: bar
+      baz:
 
 ---
 # kind: scheduler-swarm
-version: "3.1"
+version: "3.3"
 services:
   redis:
     image: redis:latest
@@ -118,10 +130,19 @@ services:
       replicas: 1
     secrets:
       - my_secret
+    configs:
+      - source: my_config
+        target: /redis_config
+        uid: '103'
+        gid: '103'
+        mode: 0440
 secrets:
   my_secret:
+    external: true
+configs:
+  my_config:
     external: true
 ```
 
 ### Notes:
-The `config_files` tag is not supported when running in Swarm mode. Please see the __Secrets__ section for details on how to integrate user-supplied information into your containers via the Docker Secrets feature.
+The `config_files` tag is not supported when running in Swarm mode. Please see the __Secrets and Configs__ section for details on how to integrate user-supplied information into your containers via the Docker Secrets and Configs features.
