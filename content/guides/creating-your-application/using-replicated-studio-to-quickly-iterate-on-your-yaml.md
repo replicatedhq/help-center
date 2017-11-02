@@ -44,4 +44,4 @@ Iterating on your Replicated [application YAML](https://help.replicated.com/docs
 
 ## Note
 
-Replicated Studio provides only a subset of the Replicated Vendor API. See [this link](https://github.com/replicatedhq/studio#what-it-doesnt-do) for more detail on the functionality that is available in Replicated that is incompatible with Studio.
+When running Replicated with Studio, not all YAML functionality is supported and only a subset of the full Replicated on-premise experience is available. For more information on what Studio doesn't do see [this link](https://github.com/replicatedhq/studio#what-it-doesnt-do).
