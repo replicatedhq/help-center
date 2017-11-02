@@ -9,7 +9,7 @@ categories: [ "Creating your Application" ]
 
 Iterating on your Replicated [application YAML](https://help.replicated.com/docs/packaging-an-application/yaml-overview/) can be quite cumbersom. Often the developer will choose to make changes to the YAML on their local filesystem in their text editor of choice. Once changes have been made, a release must be created and promoted to a channel via the [Replicated Vendor Portal](https://vendor.replicated.com/) or the [Replicated CLI](https://github.com/replicatedhq/replicated), before that release will become available in the Replicated admin console. Likely there will be many more iterations on that release before it is ready to be shipped to the customer. The [Replicated Developer Studio](https://github.com/replicatedhq/studio) has been designed with developers in mind, to streamline the development cycle, by allowing for local YAML changes to reflect almost immediately in the Admin console. This provides a quick way to iterate and test new versions of an application, bypassing Replicated's APIs.
 
-## Getting started
+## Getting Started
 
 1. Follow the [README](https://github.com/replicatedhq/studio) documentation on installing Replicated and Replicated Studio.
 1. In order to use Replicated Studio for development purposes you will need a real Replicated license generated from the [Customers](https://vendor.replicated.com/customers) page of the Replicated Vendor Portal.
@@ -20,8 +20,7 @@ Iterating on your Replicated [application YAML](https://help.replicated.com/docs
 
 1. Shipping a new release to Replicated is as easy as copying the previous YAML release file, incrementing the version by one.
    ```bash
-   $ cp 65.yaml 66.yaml
-   $ vi 66.yaml
+   $ cp ./replicated/65.yaml ./replicated/66.yaml
    ```
 1. Next make changes to your new release. In my case I am adding an admin command.
    ```yaml
@@ -32,10 +31,17 @@ Iterating on your Replicated [application YAML](https://help.replicated.com/docs
      component: DB
      container: redddis
    ```
-1. Finally navigate back to the Admin Console and click the "Check for Updates" button on the dashboard.
-   ![Up-to-Date](using-replicated-studio-to-quickly-iterate-on-your-yaml_up-to-date.png)
-   What happened?
+1. Navigate back to the Admin Console and click the "Check Now" button on the Updates tile on the dashboard.
+   
+   ![Up-to-Date](/images/post-screens/using-replicated-studio-to-quickly-iterate-on-your-yaml/up-to-date.png)
+   
+   What happened? Looking at the output from the Studio process, we can see that there was an error in our admin command YAML.
+   
+   ![YAML Error](/images/post-screens/using-replicated-studio-to-quickly-iterate-on-your-yaml/studio-log.png)
+   
+   Replicated Studio will prevent any invalid releases from being downloaded from its API. Edit the file `./replicated/66.yaml` and make the appropriate fix to the admin command. After clicking the "Check Now" button again, we will now see the pending release on the Releases page of the Admin Console. It is now possible to install the release in Replicated and test our changes.
+1. Remember that Studio does not interact with Replicated's application release APIs. All changes we made only exist on the local filesystem. The release YAML must be copied and saved as a new release in the [Replicated Vendor Portal](https://vendor.replicated.com/) or via the [Replicated Vendor CLI](/api/replicated-vendor-cli/).
 
-## When Studio is useful and when it’s not
+## Note
 
-TODO
+Replicated Studio provides only a subset of the Replicated Vendor API. See [this link](https://github.com/replicatedhq/studio#what-it-doesnt-do) for more detail on the functionality that is available in Replicated that is incompatible with Studio.
