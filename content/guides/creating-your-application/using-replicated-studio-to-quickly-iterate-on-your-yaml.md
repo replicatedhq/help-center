@@ -11,11 +11,30 @@ Iterating on your Replicated [application YAML](https://help.replicated.com/docs
 
 ## Getting started
 
-1. Follow the [README](https://github.com/replicatedhq/studio) and install Replicated and Studio.
+1. Follow the [README](https://github.com/replicatedhq/studio) documentation on installing Replicated and Replicated Studio.
+1. In order to use Replicated Studio for development purposes you will need a real Replicated license generated from the [Customers](https://vendor.replicated.com/customers) page of the Replicated Vendor Portal.
+1. Once you have downloaded the license, copy the YAML from the current release in that license's channel to a file `./replicated/<release-sequence>.yaml`. For example, if you are using the "unstable" channel and the current sequence promoted to that channel is 65, then you would create a file `./replicated/65.yaml`. 
+1. Next navigate to the Admin Console `https://<your server address>:8800` in your browser and upload the license when prompted. Replicated is reading releases from the local Studio API via the `./replicated` directory on the local filesystem.
 
 ## Iterating on your YAML
 
-TODO
+1. Shipping a new release to Replicated is as easy as copying the previous YAML release file, incrementing the version by one.
+   ```bash
+   $ cp 65.yaml 66.yaml
+   $ vi 66.yaml
+   ```
+1. Next make changes to your new release. In my case I am adding an admin command.
+   ```yaml
+   admin_commands:
+   - alias: redis-cli
+     command: ["redis-cli"]
+     run_type: exec
+     component: DB
+     container: redddis
+   ```
+1. Finally navigate back to the Admin Console and click the "Check for Updates" button on the dashboard.
+   ![Up-to-Date](using-replicated-studio-to-quickly-iterate-on-your-yaml_up-to-date.png)
+   What happened?
 
 ## When Studio is useful and when it’s not
 
