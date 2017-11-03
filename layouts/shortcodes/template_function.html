@@ -1,4 +1,9 @@
-<h2 id={{ .Get "name" }}>{{ .Get "name" }}</h2>
+{{ with $name := .Get "name" }}
+<h2 class="linked-headline" id="{{ $name | urlize }}">
+    <a href="{{ $.Page.RelPermalink }}#{{$name | urlize }}" class="anchor" id="#{{ $name | urlize  }}"></a>
+    {{ $name }}
+</h2>
+{{ end}}
 <div style="margin-top: 8px; margin-bottom: 8px;">
   <span class="badge badge-grey">
     {{ if ne "true" (.Get "replicated") }}<i class="icon u-grayFailCircle"></i>{{ else }} <i class="icon u-greenCheckCircle"></i>{{ end }}&nbsp;Replicated
