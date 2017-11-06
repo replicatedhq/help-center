@@ -3697,9 +3697,9 @@ striptags@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/striptags/-/striptags-3.0.1.tgz#48f0d6932549c47bb3582920c87527cf49a160c1"
 
-support-bundle-upload@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/support-bundle-upload/-/support-bundle-upload-1.0.4.tgz#1149b28397ad66692ff37c93593433df547f11bf"
+support-bundle-upload@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/support-bundle-upload/-/support-bundle-upload-1.0.6.tgz#3e58cb863fe2a794569badf56b85bd7a506cd7d8"
   dependencies:
     axios "^0.15.3"
     bootstrap "^3.3.7"
