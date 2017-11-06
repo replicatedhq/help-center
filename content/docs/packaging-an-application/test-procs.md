@@ -38,7 +38,7 @@ config:
       - hostname
 ```
 
-{{< linked_headline "Github App Auth" >}}
+{{< linked_headline "GitHub App Auth" >}}
 
 `github_app_auth` – Test whether or not the supplied GitHub app key and secret are valid.
 Applies to a group of items. Both mainline and private enterprise versions of GitHub are
@@ -55,8 +55,8 @@ expected order:
 ```yaml
 config:
 - name: github
-  title: Github Integration
-  description: Provide the location of your Github account
+  title: GitHub Integration
+  description: Provide the location of your GitHub account
   test_proc:
     display_name: Test GitHub Authentication
     command: github_app_auth
