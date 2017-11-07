@@ -122,8 +122,8 @@ wrapperCSSClass: "scheduler-types-section"
                                 <tr>
                                     <th></th>
                                     <th><span class="replicatedLogo"></span></th>
-                                    <th><span class="kubernetesLogo"></span></th>
-                                    <th><span class="dockerSwarmLogo"></span></th>
+                                    <th><span class="logo kubernetesLogo-combo small"></span></th>
+                                    <th><span class="logo dockerSwarmLogo-combo small"></span></th>
                                 </tr>
                             </thead>
                             <tbody>

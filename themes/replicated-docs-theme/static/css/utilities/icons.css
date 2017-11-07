@@ -109,16 +109,24 @@
 .kubernetesLogo-combo {
   background-image: url("../../images/kub-repl@2x.png");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: 100%;
   width: 184px;
   height: 52px;
   display: block;
 }
+.kubernetesLogo-combo.small {
+  width: 160px;
+}
 .dockerSwarmLogo-combo {
   background-image: url("../../images/ds-repl@2x.png");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: 100%;
   width: 184px;
   height: 43px;
   display: block;
+}
+.dockerSwarmLogo-combo.small {
+  width: 160px;
 }
