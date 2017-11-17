@@ -58,13 +58,73 @@ support:
 {{< linked_headline "Default Support Files" >}}
 
 {{< note title="Legacy Support Bundle" >}}
-The content in this document is specific to the current default Support Bundle in Replicated. If you are looking for the legacy Support Bundle version of this document, it is available at <a href="/docs/packaging-an-application/support-bundle/">{{< baseurl >}}packaging-an-application/support-bundle/</a>
+The content in this document is specific to the current default Support Bundle in Replicated. If you are looking for the legacy Support Bundle version of this document, it is available at <a href="/docs/packaging-an-application/support-bundle-v1/">{{< baseurl >}}packaging-an-application/support-bundle-v1/</a>
 {{< /note >}}
 
 By default the Support Bundle will include the following files:
 
 | File | Description |
 |------|-------------|
+
+/app/containers/\*.json
+/app/custom/<component>/commands/<filename>.stdout
+/app/custom/<component>/commands/<filename>.stderr
+/app/custom/<component>/<filename>
+/app/logs/\*.log
+/default/commands/date
+/default/commands/df
+/default/commands/df_inodes
+/default/commands/dmesg
+/default/commands/free
+/default/commands/hostname
+/default/commands/ip_addr_show
+/default/commands/ip_link_show
+/default/commands/ip_route_show
+/default/commands/ps
+/default/commands/uptime
+/default/docker/docker_images_all.json
+/default/docker/docker_info.json
+/default/docker/docker_ps_all.json
+/default/etc/default/docker
+/default/etc/hostname
+/default/etc/hosts
+/default/etc/os-release
+/default/etc/timezone
+/default/proc/cpuinfo
+/default/proc/meminfo
+/default/proc/mounts
+/default/proc/uptime
+/default/proc/version
+/default/proc/vmstat
+/default/var/log/upstart/docker.log
+/replicated/container-logs/logs/\*.stdout.log.gz
+/replicated/container-logs/logs/\*.stderr.log.gz
+/replicated/containers/\*.json
+/replicated/etc/default/replicated/replicated
+/replicated/etc/default/replicated-operator
+/replicated/internal/auditlog.csv
+/replicated/internal/config-commands.txt
+/replicated/internal/daemon.json
+/replicated/internal/goroutines.txt
+/replicated/internal/host-info.json
+/replicated/internal/ledis-app.dump
+/replicated/internal/ledis-registry.dump
+/replicated/internal/ledis-snapshots.dump
+/replicated/internal/license.txt
+/replicated/internal/params.json
+/replicated/internal/replicated-versions.txt
+/replicated/internal/tasks.txt
+/replicated/logs/\*.log
+/replicated/logs/\*.journald.log
+/replicated/var/lib/replicated-operator/replicated-operator.conf
+/replicated/var/log/upstart/\*.log
+/retraced/containers/\*.json
+/retraced/logs/\*.log
+/VERSION.json
+
+
+
+
 | /daemon/auditlogs/* | Audit log events. |
 | /daemon/commands/date | Result of the command `date`. Print the system date and time. |
 | /daemon/commands/df | Result of the command `df -al`. Report file system disk space usage for the local file systems. |
