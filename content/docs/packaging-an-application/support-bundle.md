@@ -57,7 +57,11 @@ support:
 
 {{< linked_headline "Default Support Files" >}}
 
-By default the support bundle will include the following files:
+{{< note title="Legacy Support Bundle" >}}
+The content in this document is specific to the current default Support Bundle in Replicated. If you are looking for the legacy Support Bundle version of this document, it is available at <a href="/docs/packaging-an-application/support-bundle/">{{< baseurl >}}packaging-an-application/support-bundle/</a>
+{{< /note >}}
+
+By default the Support Bundle will include the following files:
 
 | File | Description |
 |------|-------------|
