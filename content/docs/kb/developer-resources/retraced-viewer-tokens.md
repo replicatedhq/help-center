@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
 tags: ["Audit Log", "Vendor Portal"]
+hideFromList: true
 ---
 
 The Replicated Vendor Portal uses [Retraced](https://preview.retraced.io) to power its embedded audit log, which includes a rich API for querying and exporting audit events. A detailed guide to using the Retraced Viewer's audit log tokens can be found in [The Retraced Documentation](https://preview.retraced.io/documentation/exposing-retraced-data/enterprise-api/).
