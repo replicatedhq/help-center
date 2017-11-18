@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Supporting Your Customers" ]
 index: "docs"
 tags: ["Audit Log", "Replicated UI"]
+hideFromList: true
 ---
 
 The Replicated App Manager uses [Retraced](https://preview.retraced.io) to power its embedded audit log. A detailed guide for using the audit log viewer can be found in [The Retraced Documentation](https://preview.retraced.io/documentation/exposing-retraced-data/viewer/).
