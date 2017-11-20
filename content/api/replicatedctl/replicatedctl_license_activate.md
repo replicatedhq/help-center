@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_license_activate
 categories:
 - replicatedctl
-date: 2017-11-20T23:45:42Z
+date: 2017-11-20T23:51:55Z
 description: Activate the license
 index: docs
 title: replicatedctl license activate

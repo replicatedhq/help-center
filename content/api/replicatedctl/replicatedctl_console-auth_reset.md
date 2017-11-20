@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_console-auth_reset
 categories:
 - replicatedctl
-date: 2017-11-20T23:45:42Z
+date: 2017-11-20T23:51:55Z
 description: Resets console authentication to type anonymous
 index: docs
 title: replicatedctl console-auth reset

@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-release_ls
 categories:
 - replicatedctl
-date: 2017-11-20T23:45:42Z
+date: 2017-11-20T23:51:55Z
 description: List app releases
 index: docs
 title: replicatedctl app-release ls

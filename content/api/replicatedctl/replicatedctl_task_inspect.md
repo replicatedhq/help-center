@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_task_inspect
 categories:
 - replicatedctl
-date: 2017-11-20T23:45:42Z
+date: 2017-11-20T23:51:55Z
 description: Display detailed information on one or more tasks
 index: docs
 title: replicatedctl task inspect

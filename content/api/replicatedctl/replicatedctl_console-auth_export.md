@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_console-auth_export
 categories:
 - replicatedctl
-date: 2017-11-20T23:45:42Z
+date: 2017-11-20T23:51:55Z
 description: Export console auth config for current auth type
 index: docs
 title: replicatedctl console-auth export
