@@ -3,10 +3,10 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_support-bundle
 categories:
 - replicatedctl
-date: 2017-11-20T23:43:22Z
+date: 2017-11-20T23:45:42Z
 description: Generate a support bundle
 index: docs
-title: replicatedctl support bundle
+title: replicatedctl support-bundle
 weight: "551"
 ---
 

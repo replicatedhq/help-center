@@ -3,10 +3,10 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-config_view
 categories:
 - replicatedctl
-date: 2017-11-20T23:43:22Z
+date: 2017-11-20T23:45:42Z
 description: View app config form
 index: docs
-title: replicatedctl app config view
+title: replicatedctl app-config view
 weight: "551"
 ---
 

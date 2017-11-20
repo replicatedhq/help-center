@@ -3,10 +3,10 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_console-auth_import
 categories:
 - replicatedctl
-date: 2017-11-20T23:43:22Z
+date: 2017-11-20T23:45:42Z
 description: Import console authentication config from stdin
 index: docs
-title: replicatedctl console auth import
+title: replicatedctl console-auth import
 weight: "551"
 ---
 

@@ -3,10 +3,10 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_console-auth
 categories:
 - replicatedctl
-date: 2017-11-20T23:43:22Z
+date: 2017-11-20T23:45:42Z
 description: Manage UI console authentication settings
 index: docs
-title: replicatedctl console auth
+title: replicatedctl console-auth
 weight: "551"
 ---
 

@@ -3,10 +3,10 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-config_set
 categories:
 - replicatedctl
-date: 2017-11-20T23:43:22Z
+date: 2017-11-20T23:45:42Z
 description: Sets an individual app config value
 index: docs
-title: replicatedctl app config set
+title: replicatedctl app-config set
 weight: "551"
 ---
 

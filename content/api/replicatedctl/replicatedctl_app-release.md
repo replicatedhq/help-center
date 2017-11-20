@@ -3,10 +3,10 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-release
 categories:
 - replicatedctl
-date: 2017-11-20T23:43:22Z
+date: 2017-11-20T23:45:42Z
 description: Manage app releases
 index: docs
-title: replicatedctl app release
+title: replicatedctl app-release
 weight: "551"
 ---
 

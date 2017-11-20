@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_task_ls
 categories:
 - replicatedctl
-date: 2017-11-20T23:43:22Z
+date: 2017-11-20T23:45:42Z
 description: List tasks
 index: docs
 title: replicatedctl task ls

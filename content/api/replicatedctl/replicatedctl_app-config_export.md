@@ -3,10 +3,10 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-config_export
 categories:
 - replicatedctl
-date: 2017-11-20T23:43:22Z
+date: 2017-11-20T23:45:42Z
 description: Export app config settings
 index: docs
-title: replicatedctl app config export
+title: replicatedctl app-config export
 weight: "551"
 ---
 
