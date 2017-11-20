@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl preflight"
-description: "View or manage preflight checks"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_preflight
+categories:
+- replicatedctl
+date: 2017-11-20T23:43:22Z
+description: View or manage preflight checks
+index: docs
+title: replicatedctl preflight
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_preflight]
 ---
 
 ## replicatedctl preflight

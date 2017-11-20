@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl app status"
-description: "Manage the app status"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_app_status
+categories:
+- replicatedctl
+date: 2017-11-20T23:43:22Z
+description: Manage the app status
+index: docs
+title: replicatedctl app status
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_app_status]
 ---
 
 ## replicatedctl app status

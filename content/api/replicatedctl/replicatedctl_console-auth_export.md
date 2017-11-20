@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl console-auth export"
-description: "Export console auth config for current auth type"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_console-auth_export
+categories:
+- replicatedctl
+date: 2017-11-20T23:43:22Z
+description: Export console auth config for current auth type
+index: docs
+title: replicatedctl console auth export
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_console-auth_export]
 ---
 
 ## replicatedctl console-auth export

@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl app-config"
-description: "Manage app config"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_app-config
+categories:
+- replicatedctl
+date: 2017-11-20T23:43:22Z
+description: Manage app config
+index: docs
+title: replicatedctl app config
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_app-config]
 ---
 
 ## replicatedctl app-config

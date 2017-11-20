@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl app-config view"
-description: "View app config form"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_app-config_view
+categories:
+- replicatedctl
+date: 2017-11-20T23:43:22Z
+description: View app config form
+index: docs
+title: replicatedctl app config view
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_app-config_view]
 ---
 
 ## replicatedctl app-config view

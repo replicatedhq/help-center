@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl console-auth reset"
-description: "Resets console authentication to type anonymous"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_console-auth_reset
+categories:
+- replicatedctl
+date: 2017-11-20T23:43:22Z
+description: Resets console authentication to type anonymous
+index: docs
+title: replicatedctl console auth reset
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_console-auth_reset]
 ---
 
 ## replicatedctl console-auth reset

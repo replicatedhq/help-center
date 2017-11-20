@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl task inspect"
-description: "Display detailed information on one or more tasks"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_task_inspect
+categories:
+- replicatedctl
+date: 2017-11-20T23:43:22Z
+description: Display detailed information on one or more tasks
+index: docs
+title: replicatedctl task inspect
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_task_inspect]
 ---
 
 ## replicatedctl task inspect

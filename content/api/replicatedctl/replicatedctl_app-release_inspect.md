@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl app-release inspect"
-description: "Display detailed information on one or more app releases"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_app-release_inspect
+categories:
+- replicatedctl
+date: 2017-11-20T23:43:22Z
+description: Display detailed information on one or more app releases
+index: docs
+title: replicatedctl app release inspect
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_app-release_inspect]
 ---
 
 ## replicatedctl app-release inspect

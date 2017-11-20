@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl app-release notes"
-description: "Display release notes for an app releases"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_app-release_notes
+categories:
+- replicatedctl
+date: 2017-11-20T23:43:22Z
+description: Display release notes for an app releases
+index: docs
+title: replicatedctl app release notes
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_app-release_notes]
 ---
 
 ## replicatedctl app-release notes

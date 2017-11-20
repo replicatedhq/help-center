@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl app-release ls"
-description: "List app releases"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_app-release_ls
+categories:
+- replicatedctl
+date: 2017-11-20T23:43:22Z
+description: List app releases
+index: docs
+title: replicatedctl app release ls
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_app-release_ls]
 ---
 
 ## replicatedctl app-release ls
