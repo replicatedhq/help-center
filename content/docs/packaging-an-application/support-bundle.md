@@ -8,7 +8,7 @@ tags: [ "Support", "Application YAML" ]
 index: "docs"
 ---
 
-A support bundle is an archive that is available for the customer to download via the Support tab of the On-Prem Console.
+A support bundle is an archive that is available for the customer to download via the Support tab of the On-Prem Console or the [Replicated CLI](/api/replicatedctl/replicatedctl_support-bundle/).
 
 Contents of the support page can be customized by including markdown in the top-level of the YAML.
 
