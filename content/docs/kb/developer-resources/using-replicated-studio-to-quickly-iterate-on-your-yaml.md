@@ -23,30 +23,37 @@ By using the [Replicated Developer Studio](https://github.com/replicatedhq/studi
 
 ## Iterating on your YAML
 
-1. Shipping a new release to Replicated is as easy as copying the previous YAML release file, incrementing the version by one.
-   ```bash
-   $ cp ./replicated/65.yaml ./replicated/66.yaml
-   ```
-1. Next make changes to your new release. In my case I am adding an admin command.
-   ```yaml
-   admin_commands:
-   - alias: redis-cli
-     command: ["redis-cli"]
-     run_type: exec
-     component: DB
-     container: redddis
-   ```
-1. Navigate back to the Admin Console and click the "Check Now" button on the Updates tile on the dashboard.
-   
-   ![Up-to-Date](/images/post-screens/using-replicated-studio-to-quickly-iterate-on-your-yaml/up-to-date.png)
-   
-   What happened? Looking at the output from the Studio process, we can see that there was an error in our admin command YAML.
-   
-   ![YAML Error](/images/post-screens/using-replicated-studio-to-quickly-iterate-on-your-yaml/studio-log.png)
-   
-   Replicated Studio will prevent any invalid releases from being downloaded from its API. Edit the file `./replicated/66.yaml` and make the appropriate fix to the admin command. After clicking the "Check Now" button again, we will now see the pending release on the Releases page of the Admin Console. It is now possible to install the release in Replicated and test our changes.
-1. Remember that Studio does not interact with Replicated's application release APIs. All changes we made only exist on the local filesystem. The release YAML must be copied and saved as a new release in the [Replicated Vendor Portal](https://vendor.replicated.com/) or via the [Replicated Vendor CLI](/api/replicated-vendor-cli/).
+### Step 1
+Shipping a new release to Replicated is as easy as copying the previous YAML release file, incrementing the version by one.
+```bash
+  $ cp ./replicated/65.yaml ./replicated/66.yaml
+```
 
-## Note
+### Step 2
+Next make changes to your new release. In my case I am adding an admin command.
+```yaml
+admin_commands:
+  - alias: redis-cli
+    command: ["redis-cli"]
+    run_type: exec
+    component: DB
+    container: redddis
+```
 
+### Step 3
+Navigate back to the Admin Console and click the "Check Now" button on the Updates tile on the dashboard.
+   
+![Up-to-Date](/images/post-screens/using-replicated-studio-to-quickly-iterate-on-your-yaml/up-to-date.png)
+   
+What happened? Looking at the output from the Studio process, we can see that there was an error in our admin command YAML.
+   
+![YAML Error](/images/post-screens/using-replicated-studio-to-quickly-iterate-on-your-yaml/studio-log.png)
+   
+Replicated Studio will prevent any invalid releases from being downloaded from its API. Edit the file `./replicated/66.yaml` and make the appropriate fix to the admin command. After clicking the "Check Now" button again, we will now see the pending release on the Releases page of the Admin Console. It is now possible to install the release in Replicated and test our changes.
+
+### Step 4
+Remember that Studio does not interact with Replicated's application release APIs. All changes we made only exist on the local filesystem. The release YAML must be copied and saved as a new release in the [Replicated Vendor Portal](https://vendor.replicated.com/) or via the [Replicated Vendor CLI](/api/replicated-vendor-cli/).
+
+{{< note title="A note about YAML in Replicated Studio" >}}
 When running Replicated with Studio, not all YAML functionality is supported and only a subset of the full Replicated on-premise experience is available. For more information on what Studio doesn't do see [this link](https://github.com/replicatedhq/studio#what-it-doesnt-do).
+{{< /note >}}
