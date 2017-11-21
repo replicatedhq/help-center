@@ -4,7 +4,7 @@ install:
 	yarn
 
 build:
-	browserify static/js/supportBundleUpload.js > static/js/supportBundleUpload.bundled.js
+	`npm bin`/browserify static/js/supportBundleUpload.js > static/js/supportBundleUpload.bundled.js
 	yarn gulp
 	hugo -v
 
