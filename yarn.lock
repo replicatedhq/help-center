@@ -1392,11 +1392,12 @@ graceful-fs@~1.2.0:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-1.2.3.tgz#15a4806a57547cb2d2dbf27f42e89a8c3451b364"
 
 gray-matter@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/gray-matter/-/gray-matter-3.0.2.tgz#b7ba93fd78909d875ebeffe289ea7e59c529e19b"
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/gray-matter/-/gray-matter-3.1.1.tgz#101f80d9e69eeca6765cdce437705b18f40876ac"
   dependencies:
-    js-yaml "^3.8.1"
-    kind-of "^5.0.0"
+    extend-shallow "^2.0.1"
+    js-yaml "^3.10.0"
+    kind-of "^5.0.2"
     strip-bom-string "^1.0.0"
 
 gulp-concat@^2.5.2:
@@ -1661,9 +1662,9 @@ https-browserify@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-0.0.1.tgz#3f91365cabe60b77ed0ebba24b454e3e09d95a82"
 
-hugo-algolia@^1.2.9:
-  version "1.2.9"
-  resolved "https://registry.yarnpkg.com/hugo-algolia/-/hugo-algolia-1.2.9.tgz#95c47b19cb80f6469978f48f05ac4e90e03ed13f"
+hugo-algolia@^1.2.10:
+  version "1.2.10"
+  resolved "https://registry.yarnpkg.com/hugo-algolia/-/hugo-algolia-1.2.10.tgz#857c4bcf5990947859b3880baa9af3f486bd0c8f"
   dependencies:
     algoliasearch "^3.24.1"
     bytes "^3.0.0"
@@ -1944,9 +1945,9 @@ js-tokens@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
 
-js-yaml@^3.8.1:
-  version "3.9.1"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.9.1.tgz#08775cebdfdd359209f0d2acd383c8f86a6904a0"
+js-yaml@^3.10.0:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.10.0.tgz#2e78441646bd4682e963f22b6e92823c309c62dc"
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
@@ -2010,9 +2011,9 @@ kind-of@^4.0.0:
   dependencies:
     is-buffer "^1.1.5"
 
-kind-of@^5.0.0:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-5.0.2.tgz#f57bec933d9a2209ffa96c5c08343607b7035fda"
+kind-of@^5.0.2:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-5.1.0.tgz#729c91e2d857b7a419a1f9aa65685c4c33f5845d"
 
 lazy-cache@^1.0.3:
   version "1.0.4"
@@ -3694,8 +3695,8 @@ strip-json-comments@~2.0.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
 striptags@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/striptags/-/striptags-3.0.1.tgz#48f0d6932549c47bb3582920c87527cf49a160c1"
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/striptags/-/striptags-3.1.0.tgz#763e534338d9cf542f004a4b1eb099e32d295e44"
 
 support-bundle-upload@^1.0.6:
   version "1.0.6"
@@ -3849,8 +3850,8 @@ to-space-case@^1.0.0:
     to-no-case "^1.0.0"
 
 toml@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/toml/-/toml-2.3.2.tgz#5eded5ca42887924949fd06eb0e955656001e834"
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/toml/-/toml-2.3.3.tgz#8d683d729577cb286231dfc7a8affe58d31728fb"
 
 tough-cookie@~2.3.0:
   version "2.3.3"
