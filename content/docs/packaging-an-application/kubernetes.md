@@ -31,7 +31,7 @@ Once the registry is linked, the private image can be added to the global `image
 images:
 - source: mythirdpartyprivateregistry
   name: namespace/imagename
-  version: 2.0.0
+  tag: 2.0.0
 ```
 
 ### Replicated Auto Updates
