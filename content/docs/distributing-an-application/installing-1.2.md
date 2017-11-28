@@ -44,7 +44,7 @@ including docker-engine. More details on the [installation script](http://blog.r
 
 ### With Timeout Prompts
 ```shell
-curl -sSL https://get.replicated.com | sudo sh
+curl -sSL https://get.replicated.com | sudo bash
 ```
 
 ### Wait Indefinitely
