@@ -58,6 +58,19 @@ images:
 ### Replicated Auto Updates
 Replicated auto updates work as expected when running in Swarm mode. While the Replicated update is applying, the UI will not be available. Once it finishes, refresh the UI to get the update.
 
+### Ephemeral Containers
+Replicated has the idea of "ephemeral" containers, or containers that are not meant to continue running for the lifetime of the application. Ephemeral containers are often useful for [data migrations](/docs/kb/developer-resources/ephemeral-containers/). Using the swarm scheduler it is possible to achieve this behavior by [labeling the stack service](https://docs.docker.com/compose/compose-file/#labels-1) with `com.replicated.ephemeral=true`.
+
+```yaml
+version: "3"
+services:
+  web:
+    image: web
+    deploy:
+      labels:
+        com.replicated.ephemeral: "true"
+```
+
 ### Snapshots
 Standard Replicated snapshots are not supported when running in Swarm mode. This functionality will be included in an upcoming release.
 
