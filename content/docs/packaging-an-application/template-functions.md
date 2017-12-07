@@ -654,7 +654,7 @@ properties:
   app_url: '{{repl SwarmIngressAddress }}'
 ```
 
-{{< template_function name="PremitAPIAddress" replicated="false" kubernetes="true" swarm="true" >}}
+{{< template_function name="PremkitAPIAddress" replicated="false" kubernetes="true" swarm="true" >}}
 ```go
 PremkitAPIAddress() string
 ```
