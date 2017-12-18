@@ -437,3 +437,11 @@ Learn more about [overriding entrypoints](https://docs.docker.com/engine/referen
 ```yaml
     pid_mode: host
 ```
+
+### Shm-Size
+
+{{< version version="2.15.0" >}} Shm-Size lets you specify the size of `/dev/shm` for your container in bytes. If omitted or 0, the system defaults to 64MB. 
+
+```yaml
+    shm_size: 67108864
+```
