@@ -16,8 +16,10 @@ The Replicated scheduler is a mature container orchestration runtime that suppor
 
 {{< linked_headline "Docker Swarm" >}}
 
-The Docker Swarm scheduler is a great choice if you have existing docker-compose yaml and want to target servers capable of running Docker 1.13.1 or newer. Using the Swarm scheduler, you can use all of the Swarm functionality including overlay networks, DNS service discovery, Docker secrets and more.
+The Docker Swarm scheduler is a great choice if you have existing docker-compose yaml and want to target servers capable of running Docker 1.13.1 or newer. Using the Swarm scheduler, you can use all of the Swarm functionality including overlay networks, DNS service discovery, Docker secrets and more. View the [full Docker Swarm + Replicated details](/docs/packaging-an-application/docker-swarm).
 
 {{< linked_headline "Kubernetes" >}}
 
-Kubernetes is a powerful and popular container orchestration and runtime that's quickly gaining popularity. Replicated supports deploying Kubernetes resources to a Kubernetes cluster, if your customer supplies and manages a cluster. If you have existing Kubernetes specs written and your customer is able to supply a Kubernetes cluster to run your application, this is a good choice to use with Replicated.
+Kubernetes is a powerful and popular container orchestration and runtime that's quickly gaining popularity. Replicated supports deploying Kubernetes resources to a Kubernetes cluster, if your customer supplies and manages a cluster. If you have existing Kubernetes specs written and your customer is able to supply a Kubernetes cluster to run your application, this is a good choice to use with Replicated. View the [full Kubernetes + Replicated details](/docs/packaging-an-application/kubernetes)
+
+A side by side [comparison chart of the core features](/schedulers) is also available.
