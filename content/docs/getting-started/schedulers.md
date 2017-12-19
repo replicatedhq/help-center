@@ -21,3 +21,5 @@ The Docker Swarm scheduler is a great choice if you have existing docker-compose
 {{< linked_headline "Kubernetes" >}}
 
 Kubernetes is a powerful and popular container orchestration and runtime that's quickly gaining popularity. Replicated supports deploying Kubernetes resources to a Kubernetes cluster, if your customer supplies and manages a cluster. If you have existing Kubernetes specs written and your customer is able to supply a Kubernetes cluster to run your application, this is a good choice to use with Replicated. View the [full Kubernetes + Replicated details](/docs/packaging-an-application/kubernetes)
+
+A side by side [comparison chart of the core features](/schedulers) is also available.
