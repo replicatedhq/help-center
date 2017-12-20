@@ -179,7 +179,7 @@ wrapperCSSClass: "scheduler-types-section"
                                     <td>Differential Snapshot &amp; Restore</td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
                                 </tr>
                                 <tr>
                                     <td>LDAP/AD Integration</td>
