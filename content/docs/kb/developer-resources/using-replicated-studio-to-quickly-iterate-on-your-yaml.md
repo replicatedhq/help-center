@@ -8,52 +8,67 @@ index: "docs"
 tags: ["Development", "Studio"]
 ---
 
-The [Replicated Developer Studio](https://github.com/replicatedhq/studio) has been designed with developers in mind, to streamline the development cycle, by allowing for local YAML changes to reflect almost immediately in the Admin console. This provides a quick way to iterate and test new versions of an application, without uploading every change to Replicated.
+![Replicated Studio](/images/post-screens/replicated-studio-header.jpg)
 
-Iterating on your Replicated [application YAML](https://help.replicated.com/docs/packaging-an-application/yaml-overview/) often requires much trial and error before a release is ready to be shipped. Often the developer will choose to make changes to the YAML on their local filesystem in their text editor of choice. Once changes have been made, a release must be created and promoted to a channel via the [Replicated Vendor Portal](https://vendor.replicated.com/) or the [Replicated CLI](https://github.com/replicatedhq/replicated), before that release will become available in the Replicated admin console. Likely there will be many more iterations on that release before it is ready to be shipped to the customer.
+The [Replicated Developer Studio](https://github.com/replicatedhq/studio) has been designed with developers in mind by allowing for [application YAML](https://help.replicated.com/docs/packaging-an-application/yaml-overview/) and Docker image changes to reflect immediately in the on-premises Admin console.
 
-By using the [Replicated Developer Studio](https://github.com/replicatedhq/studio), you can quickly iterate on your Replicated YAML, and reduce the number of releases you and your team create in between releases to your customers.
+This provides a quick way to iterate and test new versions of your application, without uploading every change to Replicated. 
+
+Additionally, Studio gives you and your team individual isolated build environments, so any changes made during your application development won’t affect others until it is time to share them with the team.
+
+With your application development isolated, changes can be tested quicker, and you no longer need to update your shared Replicated account with each change.
+
 
 ## Getting Started
 
-1. Follow the [README](https://github.com/replicatedhq/studio) documentation on installing Replicated and Replicated Studio.
-1. In order to use Replicated Studio for development purposes you will need a real Replicated license generated from the [Customers](https://vendor.replicated.com/customers) page of the Replicated Vendor Portal.
-1. Once you have downloaded the license, copy the YAML from the current release in that license's channel to a file `./replicated/<release-sequence>.yaml`. For example, if you are using the "unstable" channel and the current sequence promoted to that channel is 65, then you would create a file `./replicated/65.yaml`. 
-1. Next navigate to the Admin Console `https://<your server address>:8800` in your browser and upload the license when prompted. Replicated is reading releases from the local Studio API via the `./replicated` directory on the local filesystem.
+### 1. Install
 
-## Iterating on your YAML
+With our simple installation script (on a Linux server in your IaaS of choice, or in a local dev environment in Vagrant/VirtualBox):
 
-### Step 1
-Shipping a new release to Replicated is as easy as copying the previous YAML release file, incrementing the version by one.
-```bash
-  $ cp ./replicated/65.yaml ./replicated/66.yaml
-```
+    ```bash
+    curl -sSL https://get.replicated.com/studio | sudo bash
+    ```
 
-### Step 2
-Next make changes to your new release. In my case I am adding an admin command.
-```yaml
-admin_commands:
-  - alias: redis-cli
-    command: ["redis-cli"]
-    run_type: exec
-    component: DB
-    container: redddis
-```
+You'll have everything you need to get started, including a full Replicated installation (using the native scheduler), all Replicated dependencies, and the Studio development services.
 
-### Step 3
-Navigate back to the Admin Console and click the "Check Now" button on the Updates tile on the dashboard.
-   
-![Up-to-Date](/images/post-screens/using-replicated-studio-to-quickly-iterate-on-your-yaml/up-to-date.png)
-   
-What happened? Looking at the output from the Studio process, we can see that there was an error in our admin command YAML.
-   
-![YAML Error](/images/post-screens/using-replicated-studio-to-quickly-iterate-on-your-yaml/studio-log.png)
-   
-Replicated Studio will prevent any invalid releases from being downloaded from its API. Edit the file `./replicated/66.yaml` and make the appropriate fix to the admin command. After clicking the "Check Now" button again, we will now see the pending release on the Releases page of the Admin Console. It is now possible to install the release in Replicated and test our changes.
 
-### Step 4
-Remember that Studio does not interact with Replicated's application release APIs. All changes we made only exist on the local filesystem. The release YAML must be copied and saved as a new release in the [Replicated Vendor Portal](https://vendor.replicated.com/) or via the [Replicated Vendor CLI](/api/replicated-vendor-cli/).
+### 2. Activate
 
-{{< note title="A note about YAML in Replicated Studio" >}}
-When running Replicated with Studio, not all YAML functionality is supported and only a subset of the full Replicated on-premise experience is available. For more information on what Studio doesn't do see [this link](https://github.com/replicatedhq/studio#what-it-doesnt-do).
-{{< /note >}}
+Once Replicated and Replicated Studio are installed, you now need to upload and activate your [development Customer license](https://help.replicated.com/docs/distributing-an-application/create-licenses/#license-type-required) by navigating to the on-premises admin console at `https://<YOUR SERVER ADDRESS>:8800` in your browser of choice and finishing the setup.
+
+
+### 3a. Iterate (on your application YAML)
+
+During installation, a new directory named `replicated` is created in your home directory. Once your license is activated, Replicated Studio will setup the most recent release and save it to `~/replicated/current.yaml`. Any time this file is updated and saved, Replicated Studio will create a new release using the next available sequence number.
+
+You can also use your favourite editor locally (like Atom, Visual Stuido Code, Vim, or Emacs) and upload your changes once you're ready. Eg. Using SCP:
+
+    ```bash
+    scp current.yaml ubuntu@[my.development.host]:/home/[user]/replicated
+    ```
+
+After you have uploaded your `current.yaml` changes, you can navigate to your on-premises Admin Console (`https://<YOUR SERVER ADDRESS>:8800`) and click the `Check for updates` button to see your new Release.
+
+***Note: In the directory `~/replicated/releases` you can view a copy of each Release Replicated Studio has created along the way.***
+
+
+
+### 3b. Iterate (on your Docker images)
+
+As well as being able to iterate on your application YAML, you can also use Studio to iterate on your Docker images. This simplifies the development workflow when you need to make any changes to your code base to support on-premises deployments.
+
+To do this, rebuild your Docker images on your Studio server reusing the existing tags. Once you restart the application from the on-premises Admin Console (`https://<YOUR SERVER ADDRESS>:8800`) or CLI, your updated images will be used by Replicated.
+
+***Note: When iterating on Docker images in Studio, referencing local Docker images using the `latest` tag is not supported. Replicated will re-pull any images with the `latest` tag, thus overwriting any changes you are making locally.***
+
+
+
+## Additonal features
+
+The logs from Replicated Studio display any Lint or syntax issues detected in your application yaml. You can also view all interactions the on-premises Replicated has with the Studio API.
+
+You can follow these logs in real time using:
+
+    ```bash
+    sudo docker logs -f studio
+    ```
