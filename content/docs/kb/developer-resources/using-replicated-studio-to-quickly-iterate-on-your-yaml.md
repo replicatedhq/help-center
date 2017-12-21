@@ -10,7 +10,7 @@ tags: ["Development", "Studio"]
 
 ![Replicated Studio](/images/post-screens/replicated-studio-header.jpg)
 
-The [Replicated Developer Studio](https://github.com/replicatedhq/studio) has been designed to provide developers a quick way to iterate and test new versions of their application without uploading every change to Replicated, allowing for [application YAML](https://help.replicated.com/docs/packaging-an-application/yaml-overview/) and Docker image changes to reflect immediately in the on-premises Admin console.
+The [Replicated Developer Studio](https://github.com/replicatedhq/studio) has been designed to provide developers a quick way to iterate and test new versions of their application without uploading every change to Replicated, allowing for [application YAML](https://help.replicated.com/docs/packaging-an-application/yaml-overview/) and Docker image changes to reflect immediately in the on-prem Admin console.
 
 Additionally, Studio gives you and your team independent isolated build environments, so any changes made during your application development won’t affect others until it is time to share them with the team.
 
@@ -32,20 +32,20 @@ You'll have everything you need to get started, including a full Replicated inst
 
 ### 2. Activate
 
-Once Replicated and Replicated Studio are installed, you now need to upload and activate your [development customer license](https://help.replicated.com/docs/distributing-an-application/create-licenses/#license-type-required) by navigating to the on-premises admin console at `https://<YOUR SERVER ADDRESS>:8800` in your browser of choice.
+Once Replicated and Replicated Studio are installed, you now need to upload and activate your [development customer license](https://help.replicated.com/docs/distributing-an-application/create-licenses/#license-type-required) by navigating to the on-prem admin console at `https://<YOUR SERVER ADDRESS>:8800` in your browser of choice.
 
 
 ### 3a. Iterate (on your application YAML)
 
 During installation, a new directory named `replicated` is created in your home directory. Once your license is activated, Replicated Studio will setup the most recent release and save it to `~/replicated/current.yaml`. Any time this file is updated and saved, Replicated Studio will create a new release using the next available sequence number.
 
-You can also use your favourite editor locally (like Atom, Visual Stuido Code, Vim, or Emacs) and upload your changes once you're ready. Eg. Using SCP:
+You can also use your favorite editor locally (like Atom, Visual Stuido Code, Vim, or Emacs) and upload your changes once you're ready. Eg. Using SCP:
 
 ```bash
-scp current.yaml ubuntu@[my.development.host]:/home/[user]/replicated
+scp current.yaml [myuser]@[my.development.host]:/home/[myuser]/replicated
 ```
 
-After you have uploaded your `current.yaml` changes, you can navigate to your on-premises Admin Console (`https://<YOUR SERVER ADDRESS>:8800`) and click the `Check for updates` button to see your new release.
+After you have uploaded your `current.yaml` changes, you can navigate to your on-prem Admin Console (`https://<YOUR SERVER ADDRESS>:8800`) and click the `Check for updates` button to see your new release.
 
 ***Note: In the directory `~/replicated/releases` you can view a copy of each release Replicated Studio has created along the way.***
 
@@ -53,9 +53,9 @@ After you have uploaded your `current.yaml` changes, you can navigate to your on
 
 ### 3b. Iterate (on your Docker images)
 
-As well as being able to iterate on your application YAML, you can also use Studio to iterate on your Docker images. This simplifies the development workflow when you need to make changes to your code base to support on-premises deployments.
+As well as being able to iterate on your application YAML, you can also use Studio to iterate on your Docker images. This simplifies the development workflow when you need to make changes to your code base to support on-prem deployments.
 
-To do this, rebuild your Docker images on your Studio server reusing the existing tags. Once you restart the application from the on-premises Admin Console (`https://<YOUR SERVER ADDRESS>:8800`) or CLI, your updated images will be used by Replicated.
+To do this, rebuild your Docker images on your Studio server reusing the existing tags. Once you restart the application from the on-prem Admin Console (`https://<YOUR SERVER ADDRESS>:8800`) or CLI, your updated images will be used by Replicated.
 
 ***Note: When iterating on Docker images in Studio, referencing local Docker images using the `latest` tag is not supported. Replicated will re-pull any images with the `latest` tag, thus overwriting any changes you are making locally.***
 
@@ -63,7 +63,7 @@ To do this, rebuild your Docker images on your Studio server reusing the existin
 
 ## Additonal features
 
-The logs from Replicated Studio display any lint or syntax issues detected in your application yaml. You can also view all interactions the on-premises Replicated has with the Studio API.
+The logs from Replicated Studio display any lint or syntax issues detected in your application yaml. You can also view all interactions the on-prem Replicated has with the Studio API.
 
 You can follow these logs in real time using:
 
