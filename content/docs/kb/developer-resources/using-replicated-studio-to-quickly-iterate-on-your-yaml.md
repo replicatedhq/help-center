@@ -8,6 +8,8 @@ index: "docs"
 tags: ["Development", "Studio"]
 ---
 
+![Replicated Studio](/images/post-screens/replicated-studio-header.jpg)
+
 The [Replicated Developer Studio](https://github.com/replicatedhq/studio) has been designed with developers in mind by allowing for local [application YAML](https://help.replicated.com/docs/packaging-an-application/yaml-overview/) and Docker image changes to reflect immediately in the on-premises Admin console.
 
 This provides a quick way to iterate and test new versions of your application, without uploading every change to Replicated. 
