@@ -10,11 +10,9 @@ tags: ["Development", "Studio"]
 
 ![Replicated Studio](/images/post-screens/replicated-studio-header.jpg)
 
-The [Replicated Developer Studio](https://github.com/replicatedhq/studio) has been designed with developers in mind by allowing for [application YAML](https://help.replicated.com/docs/packaging-an-application/yaml-overview/) and Docker image changes to reflect immediately in the on-premises Admin console.
+The [Replicated Developer Studio](https://github.com/replicatedhq/studio) has been designed to provide developers a quick way to iterate and test new versions of their application without uploading every change to Replicated, allowing for [application YAML](https://help.replicated.com/docs/packaging-an-application/yaml-overview/) and Docker image changes to reflect immediately in the on-premises Admin console.
 
-This provides a quick way to iterate and test new versions of your application, without uploading every change to Replicated. 
-
-Additionally, Studio gives you and your team individual isolated build environments, so any changes made during your application development won’t affect others until it is time to share them with the team.
+Additionally, Studio gives you and your team independent isolated build environments, so any changes made during your application development won’t affect others until it is time to share them with the team.
 
 With your application development isolated, changes can be tested quicker, and you no longer need to update your shared Replicated account with each change.
 
@@ -34,7 +32,7 @@ You'll have everything you need to get started, including a full Replicated inst
 
 ### 2. Activate
 
-Once Replicated and Replicated Studio are installed, you now need to upload and activate your [development Customer license](https://help.replicated.com/docs/distributing-an-application/create-licenses/#license-type-required) by navigating to the on-premises admin console at `https://<YOUR SERVER ADDRESS>:8800` in your browser of choice and finishing the setup.
+Once Replicated and Replicated Studio are installed, you now need to upload and activate your [development Customer license](https://help.replicated.com/docs/distributing-an-application/create-licenses/#license-type-required) by navigating to the on-premises admin console at `https://<YOUR SERVER ADDRESS>:8800` in your browser of choice.
 
 
 ### 3a. Iterate (on your application YAML)
@@ -55,7 +53,7 @@ After you have uploaded your `current.yaml` changes, you can navigate to your on
 
 ### 3b. Iterate (on your Docker images)
 
-As well as being able to iterate on your application YAML, you can also use Studio to iterate on your Docker images. This simplifies the development workflow when you need to make any changes to your code base to support on-premises deployments.
+As well as being able to iterate on your application YAML, you can also use Studio to iterate on your Docker images. This simplifies the development workflow when you need to make changes to your code base to support on-premises deployments.
 
 To do this, rebuild your Docker images on your Studio server reusing the existing tags. Once you restart the application from the on-premises Admin Console (`https://<YOUR SERVER ADDRESS>:8800`) or CLI, your updated images will be used by Replicated.
 
