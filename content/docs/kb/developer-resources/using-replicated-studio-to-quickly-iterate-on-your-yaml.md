@@ -10,19 +10,11 @@ tags: ["Development", "Studio"]
 
 ![Replicated Studio](/images/post-screens/replicated-studio-header.jpg)
 
-The [Replicated Developer Studio](https://github.com/replicatedhq/studio) has been designed with developers in mind by allowing for local [application YAML](https://help.replicated.com/docs/packaging-an-application/yaml-overview/) and Docker image changes to reflect immediately in the on-premises Admin console.
+The [Replicated Developer Studio](https://github.com/replicatedhq/studio) has been designed with developers in mind by allowing for [application YAML](https://help.replicated.com/docs/packaging-an-application/yaml-overview/) and Docker image changes to reflect immediately in the on-premises Admin console.
 
 This provides a quick way to iterate and test new versions of your application, without uploading every change to Replicated. 
 
 Additionally, Studio gives you and your team individual isolated build environments, so any changes made during your application development won’t affect others until it is time to share them with the team.
-
-With Studio, your development workflow now looks like this:
-
-  	(studio workflow)
-
-While your production release workflow looks like:
-
-    (vendor web workflow)
 
 With your application development isolated, changes can be tested quicker, and you no longer need to update your shared Replicated account with each change.
 
