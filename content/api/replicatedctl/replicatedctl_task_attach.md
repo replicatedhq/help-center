@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl task attach"
-description: "Stream task progress"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_task_attach
+categories:
+- replicatedctl
+date: 2017-11-20T23:51:55Z
+description: Stream task progress
+index: docs
+title: replicatedctl task attach
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_task_attach]
 ---
 
 ## replicatedctl task attach

@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl app inspect"
-description: "Display detailed information on the app"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_app_inspect
+categories:
+- replicatedctl
+date: 2017-11-20T23:51:55Z
+description: Display detailed information on the app
+index: docs
+title: replicatedctl app inspect
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_app_inspect]
 ---
 
 ## replicatedctl app inspect

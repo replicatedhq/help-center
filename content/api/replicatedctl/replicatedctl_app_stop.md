@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl app stop"
-description: "Stop the app"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_app_stop
+categories:
+- replicatedctl
+date: 2017-11-20T23:51:55Z
+description: Stop the app
+index: docs
+title: replicatedctl app stop
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_app_stop]
 ---
 
 ## replicatedctl app stop

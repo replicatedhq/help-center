@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl app-config set"
-description: "Sets an individual app config value"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_app-config_set
+categories:
+- replicatedctl
+date: 2017-11-20T23:51:55Z
+description: Sets an individual app config value
+index: docs
+title: replicatedctl app-config set
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_app-config_set]
 ---
 
 ## replicatedctl app-config set

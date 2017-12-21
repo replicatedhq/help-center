@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl task ls"
-description: "List tasks"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_task_ls
+categories:
+- replicatedctl
+date: 2017-11-20T23:51:55Z
+description: List tasks
+index: docs
+title: replicatedctl task ls
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_task_ls]
 ---
 
 ## replicatedctl task ls

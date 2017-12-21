@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl console-auth"
-description: "Manage UI console authentication settings"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_console-auth
+categories:
+- replicatedctl
+date: 2017-11-20T23:51:55Z
+description: Manage UI console authentication settings
+index: docs
+title: replicatedctl console-auth
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_console-auth]
 ---
 
 ## replicatedctl console-auth

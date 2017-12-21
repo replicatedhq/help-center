@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl params"
-description: "Manage params"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_params
+categories:
+- replicatedctl
+date: 2017-11-20T23:51:55Z
+description: Manage params
+index: docs
+title: replicatedctl params
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_params]
 ---
 
 ## replicatedctl params

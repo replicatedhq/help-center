@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl app-config export"
-description: "Export app config settings"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_app-config_export
+categories:
+- replicatedctl
+date: 2017-11-20T23:51:55Z
+description: Export app config settings
+index: docs
+title: replicatedctl app-config export
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_app-config_export]
 ---
 
 ## replicatedctl app-config export

@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl params export"
-description: "Export params"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_params_export
+categories:
+- replicatedctl
+date: 2017-11-20T23:51:55Z
+description: Export params
+index: docs
+title: replicatedctl params export
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_params_export]
 ---
 
 ## replicatedctl params export

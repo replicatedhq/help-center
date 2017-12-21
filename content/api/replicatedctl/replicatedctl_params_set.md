@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl params set"
-description: "Sets an individual param value"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_params_set
+categories:
+- replicatedctl
+date: 2017-11-20T23:51:55Z
+description: Sets an individual param value
+index: docs
+title: replicatedctl params set
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_params_set]
 ---
 
 ## replicatedctl params set

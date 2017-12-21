@@ -1,11 +1,13 @@
 ---
-date: "2016-07-03T04:12:27Z"
-title: "replicatedctl preflight run"
-description: "Run the preflight checks"
+aliases:
+- docs/reference/replicatedctl/replicatedctl_preflight_run
+categories:
+- replicatedctl
+date: 2017-11-20T23:51:55Z
+description: Run the preflight checks
+index: docs
+title: replicatedctl preflight run
 weight: "551"
-categories: [ "replicatedctl" ]
-index: "docs"
-aliases : [docs/reference/replicatedctl/replicatedctl_preflight_run]
 ---
 
 ## replicatedctl preflight run
