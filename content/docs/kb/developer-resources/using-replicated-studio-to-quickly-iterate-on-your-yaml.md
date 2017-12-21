@@ -43,9 +43,9 @@ During installation, a new directory named `replicated` is created in your home 
 
 You can also use your favourite editor locally (like Atom, Visual Stuido Code, Vim, or Emacs) and upload your changes once you're ready. Eg. Using SCP:
 
-    ```bash
-    scp current.yaml ubuntu@[my.development.host]:/home/[user]/replicated
-    ```
+```bash
+scp current.yaml ubuntu@[my.development.host]:/home/[user]/replicated
+```
 
 After you have uploaded your `current.yaml` changes, you can navigate to your on-premises Admin Console (`https://<YOUR SERVER ADDRESS>:8800`) and click the `Check for updates` button to see your new Release.
 
@@ -69,6 +69,6 @@ The logs from Replicated Studio display any Lint or syntax issues detected in yo
 
 You can follow these logs in real time using:
 
-    ```bash
-    sudo docker logs -f studio
-    ```
+```bash
+sudo docker logs -f studio
+```
