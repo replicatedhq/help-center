@@ -25,9 +25,9 @@ With your application development isolated, changes can be tested quicker, and y
 
 With our simple installation script (on a Linux server in your IaaS of choice, or in a local dev environment in Vagrant/VirtualBox):
 
-    ```bash
-    curl -sSL https://get.replicated.com/studio | sudo bash
-    ```
+```bash
+curl -sSL https://get.replicated.com/studio | sudo bash
+```
 
 You'll have everything you need to get started, including a full Replicated installation (using the native scheduler), all Replicated dependencies, and the Studio development services.
 
