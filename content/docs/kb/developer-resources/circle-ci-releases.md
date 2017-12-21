@@ -2,10 +2,12 @@
 date: "2016-07-03T04:02:20Z"
 title: "Automate Releases with CircleCI"
 description: "Use Replicated CLI tools with CircleCI to automate and collaborate on your Replicated releases"
-weight: "301"
-categories: [ "Packaging an Application" ]
+weight: "999999"
+aliases: ['docs/packaging-an-application/circle-ci-releases/']
+categories: [ "Developer Resources" ]
 tags: [ "Application YAML", "Releases", "CLI", "Circle", "CI" ]
 index: "docs"
+hideFromList: true
 ---
 
 ### End-to-end example

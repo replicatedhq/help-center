@@ -1,6 +1,6 @@
 ## Local development
 
-Before you are able to run this locally you need to have [Hugo installed](https://gohugo.io/getting-started/installing/) on your machine. If you already have Hugo installed, make sure you [have the latest version](https://gohugo.io/getting-started/installing/#upgrade-hugo).
+Before you are able to run this locally you need to have [YARN](https://yarnpkg.com/lang/en/docs/install/) and [Hugo installed](https://gohugo.io/getting-started/installing/) on your machine. If you already have Hugo installed, make sure you [have the latest version](https://gohugo.io/getting-started/installing/#upgrade-hugo).
 
 1. Install project dependencies
    ```bash

@@ -2,10 +2,12 @@
 date: "2017-10-25T04:02:20Z"
 title: "Automate Releases with Travis CI"
 description: "Use Replicated CLI tools with Travis CI to automate and collaborate on your Replicated releases"
-weight: "303"
-categories: [ "Packaging an Application" ]
+weight: "999999"
+categories: [ "Developer Resources" ]
+aliases: ['docs/packaging-an-application/travis-ci-releases/']
 tags: [ "Application YAML", "Releases", "CLI", "Travis", "CI" ]
 index: "docs"
+hideFromList: true
 ---
 
 ### End-to-end example
@@ -23,4 +25,3 @@ An example that uses Travis for CI can be found in the  [Replicated CI Demo](htt
 1. [Get your App ID and API Token](/docs/kb/developer-resources/finding-your-api-token-and-app-id).
 1. Configure environments variables `REPLICATED_APP` and `REPLICATED_API_TOKEN` in [Travis CI](https://travis-ci.org/) using `More Options` -> `Settings` -> `Environment Variables`.
 1. Push to your github repository, verify releases are created and promoted on [https://vendor.replicated.com](https://vendor.replicated.com).
-
