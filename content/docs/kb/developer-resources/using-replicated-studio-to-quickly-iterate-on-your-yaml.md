@@ -32,7 +32,7 @@ You'll have everything you need to get started, including a full Replicated inst
 
 ### 2. Activate
 
-Once Replicated and Replicated Studio are installed, you now need to upload and activate your [development Customer license](https://help.replicated.com/docs/distributing-an-application/create-licenses/#license-type-required) by navigating to the on-premises admin console at `https://<YOUR SERVER ADDRESS>:8800` in your browser of choice.
+Once Replicated and Replicated Studio are installed, you now need to upload and activate your [development customer license](https://help.replicated.com/docs/distributing-an-application/create-licenses/#license-type-required) by navigating to the on-premises admin console at `https://<YOUR SERVER ADDRESS>:8800` in your browser of choice.
 
 
 ### 3a. Iterate (on your application YAML)
@@ -45,9 +45,9 @@ You can also use your favourite editor locally (like Atom, Visual Stuido Code, V
 scp current.yaml ubuntu@[my.development.host]:/home/[user]/replicated
 ```
 
-After you have uploaded your `current.yaml` changes, you can navigate to your on-premises Admin Console (`https://<YOUR SERVER ADDRESS>:8800`) and click the `Check for updates` button to see your new Release.
+After you have uploaded your `current.yaml` changes, you can navigate to your on-premises Admin Console (`https://<YOUR SERVER ADDRESS>:8800`) and click the `Check for updates` button to see your new release.
 
-***Note: In the directory `~/replicated/releases` you can view a copy of each Release Replicated Studio has created along the way.***
+***Note: In the directory `~/replicated/releases` you can view a copy of each release Replicated Studio has created along the way.***
 
 
 
@@ -63,7 +63,7 @@ To do this, rebuild your Docker images on your Studio server reusing the existin
 
 ## Additonal features
 
-The logs from Replicated Studio display any Lint or syntax issues detected in your application yaml. You can also view all interactions the on-premises Replicated has with the Studio API.
+The logs from Replicated Studio display any lint or syntax issues detected in your application yaml. You can also view all interactions the on-premises Replicated has with the Studio API.
 
 You can follow these logs in real time using:
 
