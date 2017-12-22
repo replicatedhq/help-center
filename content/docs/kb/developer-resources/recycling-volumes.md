@@ -1,18 +1,21 @@
 ---
 date: "2017-08-23T04:02:20Z"
+lastmod: "2017-12-01T00:00:00Z"
 title: "Recycling Volume Data"
+weight: "999999"
 description: "How to re-use a named volume with new data across multiple application versions"
-weight: "214"
 index: "docs"
-categories: [ "Packaging an Application" ]
+categories: [ "Developer Resources" ]
+aliases: ['docs/packaging-an-application/recycling-volumes/']
 tags: ["Application YAML"]
+hideFromList: true
 ---
 
 There are some use cases where re-using a named volume can be useful. For example, if an application is serving its static content via a load balancer, we may package the static content in our main application and use a standard nginx container to actually serve that content.
 
 However, this can cause problems during updates, because existing data in volumes will take precedence over any new data during an update, causing applications to present stale data. To get around this, we can use an ephemeral content to clean a volume before use.
 
-This example uses a cleaner component that mounts the `app-ui` volume. If it doesn't exist at runtime, it will be created. This same, now empty volume is then used in the nginx container to actually present the data. 
+This example uses a cleaner component that mounts the `app-ui` volume. If it doesn't exist at runtime, it will be created. This same, now empty volume is then used in the nginx container to actually present the data.
 
 ```yml
 components:
