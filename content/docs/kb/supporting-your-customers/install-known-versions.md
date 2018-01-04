@@ -31,6 +31,14 @@ To install older versions of Replicated after 2.0 we support specifying the vers
 curl -sSL "https://get.replicated.com/docker?replicated_tag=2.3.2&replicated_ui_tag=2.3.2&replicated_operator_tag=2.3.2" | sudo bash
 ```
 
+## Installing earlier versions AIRGAP
+
+TODO: we need links...
+
+```shell
+curl "https://s3.amazonaws.com/replicated-airgap-work/stable/replicated-2.11.1%2B2.11.1%2B2.11.1.tar.gz" -O replicated.tar.gz
+```
+
 # Best Practices
 
 Here are some best practices for installing your application with Replicated.
