@@ -146,25 +146,6 @@ Echos the first argument.
   - Hello World!
 ```
 
-{{< linked_headline "system" >}}
-
-{{< version version="1.2.x only" >}} Runs command directly on the machine on which Replicated is running. Be careful as Replicated supports many
-linux distributions.
-
-### Arguments
-- Variable
-
-### Return value
-- 0: String
-
-```yaml
-- name: hello_world
-  cmd: system
-  args:
-  - echo
-  - Hello World!
-```
-
 {{< linked_headline "raw" >}}
 
 Runs command from a bash shell inside an "ubuntu:trusty" docker container. The docker image is hosted on dockerhub at https://hub.docker.com/r/freighter/cmd/
