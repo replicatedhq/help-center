@@ -20,6 +20,48 @@ Returns values corresponding to the given console option name.
 |---|---|---|
 | name | String | Option name |
 
+Defined Option Names
+
+`airgap.install`
+`airgap.license.path`
+`airgap.package.path`
+`app.update.check.schedule`
+`cert.filename`
+`cert.filepath`
+`clock.skew.threshold.milliseconds`
+`hostname`
+`http.proxy`
+`http.proxy.enabled`
+`key.filename`
+`key.filepath`
+`language.source`
+`license.retrieval`
+`license.sync.schedule`
+`security.cert`
+`security.key`
+`snapshot.destination`
+`snapshot.retention`
+`snapshot.schedule`
+`snapshot.schedule.enabled`
+`snapshot.schedule.spec`
+`snapshot.schedule.time.daily`
+`snapshot.schedule.day.weekly`
+`snapshot.schedule.time.weekly`
+`snapshot.schedule.custom.interval`
+`snapshot.timeout`
+`statsd.data.location`
+`statsd.endpoint`
+`scheduler`
+`tls.authority.cert`
+`tls.cert.data`
+`tls.cert.name`
+`tls.config.option`
+`tls.hostname`
+`tls.key.data`
+`tls.key.name`
+`tls.source`
+`update.check.schedule.custom.interval`
+
 #### Response Status
 
 | Status | Description |
@@ -30,6 +72,12 @@ Returns values corresponding to the given console option name.
 #### Response body
 
 Option value (string)
+
+#### Example
+```
+$ curl -k https://localhost:9880/console/v1/option?name=app.update.check.schedule
+# @every 5h
+```
 
 ### POST /console/v1/auth
 
