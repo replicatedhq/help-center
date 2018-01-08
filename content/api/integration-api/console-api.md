@@ -35,7 +35,6 @@ Defined Option Names
 `key.filename`
 `key.filepath`
 `language.source`
-`license.retrieval`
 `license.sync.schedule`
 `security.cert`
 `security.key`
@@ -53,13 +52,7 @@ Defined Option Names
 `statsd.endpoint`
 `scheduler`
 `tls.authority.cert`
-`tls.cert.data`
-`tls.cert.name`
 `tls.config.option`
-`tls.hostname`
-`tls.key.data`
-`tls.key.name`
-`tls.source`
 `update.check.schedule.custom.interval`
 
 #### Response Status
