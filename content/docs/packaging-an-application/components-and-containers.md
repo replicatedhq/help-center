@@ -445,3 +445,11 @@ Learn more about [overriding entrypoints](https://docs.docker.com/engine/referen
 ```yaml
     shm_size: 67108864
 ```
+
+### Dynamic
+
+{{< version version="2.5.0" >}} Dynamic marks that a container's image should always be pulled, whether it is initially used by the application or not. This can be used to prepare images for containers that your application might run dynamically or for containers where running depends on template functions that may change during startup.
+
+```yaml
+    dynamic: true
+```
