@@ -35,7 +35,7 @@ Run a container in the `spc_t` domain with the `--security-opt` flag:
 docker run --security-opt label=type:spc_t replicated
 
 # docker <= 1.10
-docker run --security-opt lable:type:spc_t replicated
+docker run --security-opt label:type:spc_t replicated
 ```
 The install scripts configure Replicated to run in this domain.
 
