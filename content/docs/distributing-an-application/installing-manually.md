@@ -57,7 +57,7 @@ docker run -d --name=replicated-ui \
 
 At this point, the new node should show up on the Cluster page.
 
-### 4. Start the Application
+### 5. Start the Application
 1. Click on the Dashboard tab (:8800/dashboard)  
 1. Click the Start Now button  
 ![Start Now](/images/post-screens/manual-install-2.x/start-now.png)
