@@ -1,7 +1,7 @@
 ---
 date: "2018-01-09T20:02:20Z"
 title: "Known Docker Installation Issues and Workarounds"
-description: "Issues that Replicated has run into with various Docker installations"
+description: "Issues that Replicated has encountered with various Docker installations"
 keywords: "installing, docker"
 weight: "302"
 categories: [ "Distributing an Application", "Knowledgebase" ]
@@ -18,3 +18,10 @@ On CentOS and RHEL, a needed dependency of libseccomp >= 2.2.1 is not enforced. 
 yum install http://mirror.centos.org/centos/7/os/x86_64/Packages/libseccomp-2.3.1-3.el7.x86_64.rpm
 ```
  as per the [GitHub issue](https://github.com/moby/moby/issues/35906).
+
+## Docker 17.06.0-ce requires container-selinux >= 2.9 on RHEL
+Installing the centos container-selinux package and rerunning the Replicated installation script resolves this. The latest version of the package can be found [here](http://mirror.centos.org/centos/7/extras/x86_64/Packages/). At time of writing, this command installed the latest version available:
+```shell
+yum install http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.33-1.git86f33cd.el7.noarch.rpm
+```
+Related [stackoverflow question](https://stackoverflow.com/questions/45272827/docker-ce-on-rhel-requires-container-selinux-2-9)
