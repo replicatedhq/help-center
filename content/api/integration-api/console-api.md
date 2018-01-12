@@ -68,7 +68,7 @@ Option value (string)
 
 #### Example
 ```
-$ curl -k https://localhost:9880/console/v1/option?name=app.update.check.schedule
+$ curl -k $REPLICATED_INTEGRATIONAPI/console/v1/option?name=app.update.check.schedule
 # @every 5h
 ```
 
