@@ -24,4 +24,4 @@ Installing the centos container-selinux package and rerunning the Replicated ins
 ```shell
 yum install http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.33-1.git86f33cd.el7.noarch.rpm
 ```
-Related [stackoverflow question](https://stackoverflow.com/questions/45272827/docker-ce-on-rhel-requires-container-selinux-2-9)
+Related [stackoverflow question](https://stackoverflow.com/questions/45272827/docker-ce-on-rhel-requires-container-selinux-2-9).
