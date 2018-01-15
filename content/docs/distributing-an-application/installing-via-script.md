@@ -45,10 +45,13 @@ The install script takes optional flags to configure Replicated for your environ
 |private-address <IP>|Set the nodes private IP address|
 |public-address <IP>|Set the nodes public IP (service) address|
 |no-auto|Prompts will wait indefinitely instead of 20 second timeouts|
+|fast-timeouts|Prompts with timeouts will wait for 1 second instead of 20 seconds or longer|
 |ui-bind-port <PORT_NUMBER>|Change the default UI port binding from port 8800|
 |docker-version <VERSION>|Install with a specific version of Docker|
 |no-docker|Skip the docker installation|
 |bypass-storagedriver-warnings|For automation bypasses the warning for devicemapper with loopback|
+|log-level|Set the log level for Replicated. Can be `error`, `warn`, `info` or `debug`|
+|no-ce-on-ee|Disable installation of Docker CE onto platforms it does not support - RHEL and Oracle Linux|
 
 Example call with flags:
 
