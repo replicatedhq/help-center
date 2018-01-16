@@ -18,7 +18,7 @@ At the top of the YAML file, regardless of the scheduler, there must be a Replic
 replicated_api_version: {{< replicated_api_version_current >}}
 ```
 
-{{< linked_headline "App Basics" >}}
+{{< linked_headline "Application Basics" >}}
 
 The next section includes some basic information about your application release including the app name.
 
