@@ -49,20 +49,6 @@ console_support_markdown: |
   your instance of My Enterprise Application.
 ```
 
-{{< linked_headline "Snapshots (Backups)" >}}
-
-The snapshots key is available to to enable and configure [Snapshots](/docs/packaging-an-application/snapshots/). The following example will allow your customer to enable snapshots and create a script to run the snapshot.
-
-```yaml
-backup:
-  enabled: '{{repl ConfigOptionEquals "backup_enabled" "1" }}'
-  hidden: '{{repl ConfigOptionEquals "backup_enabled" "0" }}'
-  pause_all: false
-  script: |
-    #!/bin/sh
-    myappcli backup
-```
-
 {{< linked_headline "CMD" >}}
 
 The Replicated platform has some built in [commands](/docs/packaging-an-application/commands/) that make writing your configuration much more powerful. In the cmds section you can write commands which we will use later.  These are useful to generate install-time values such as default certs/keys, randomized passwords, JWT token keys, etc.
