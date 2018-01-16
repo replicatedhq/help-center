@@ -48,21 +48,21 @@
 .page-content h2 {
     font-size: 20px;
     font-weight: 500;
-    margin: 20px 0;
+    margin: 45px 0 15px 0;
 }
 
 .page-content h3 {
     font-size: 16px;
     font-weight: 500;
-    margin: 20px 0;
+    margin: 30px 0 0 0;
 }
 
 .page-content p,
 .category-content p {
     font-size: 14px;
-    color: #9B9B9B;
+    color: #525252;
     line-height: 22px;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .page-content a,
@@ -156,10 +156,15 @@
 
 .page-content ul li ,
 .page-content ol li {
-    padding: 10px 0;
+    padding: 10px 0 0;
     font-size: 14px;
     line-height: 22px;
-    color: #9B9B9B;
+    color: #525252;
+}
+
+.page-content ul li:last-child ,
+.page-content ol li:last-child {
+    padding: 10px 0 10px;
 }
 
 .page-content img {
