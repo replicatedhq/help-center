@@ -28,7 +28,7 @@ name: My Enterprise Application
 
 {{< linked_headline "Application Properties" >}}
 
-The properties section includes definitions of some optional (but recommended) application properties. For a list of available properties see [Application Properties](/docs/packaging-an-application/application-properties). You will notice the `{{repl` escape sequence. This invokes a Replicated [template function](/docs/packaging-an-application/template-functions), which will be discussed in more detail soon.
+The properties section includes definitions of some optional (but recommended) application properties. For a list of available properties see [Application Properties](/docs/swarm/packaging-an-application/application-properties). You will notice the `{{repl` escape sequence. This invokes a Replicated [template function](/docs/swarm/packaging-an-application/template-functions), which will be discussed in more detail soon.
 
 ```yaml
 properties:
@@ -38,7 +38,7 @@ properties:
 
 {{< linked_headline "Support Page" >}}
 
-Replicated supports displaying custom markdown content on the Support page of the admin console. This can be defined in the console_support_markdown key.
+Replicated supports displaying custom markdown content on the Support page of the admin console. This can be defined in the `console_support_markdown` key.
 
 ```yaml
 console_support_markdown: |
@@ -51,7 +51,7 @@ console_support_markdown: |
 
 {{< linked_headline "Commands" >}}
 
-The Replicated platform has some built in [commands](/docs/packaging-an-application/commands/) that make writing your configuration much more powerful. In the cmds section you can write commands which we will use later.  These are useful to generate install-time values such as default certs/keys, randomized passwords, JWT token keys, etc.
+The Replicated platform has some built in [commands](/docs/swarm/packaging-an-application/commands/) that make writing your configuration much more powerful. In the cmds section you can write commands which we will use later.  These are useful to generate install-time values such as default certs/keys, randomized passwords, JWT token keys, etc.
 
 ```yaml
 cmds:
@@ -63,7 +63,7 @@ cmds:
 
 {{< linked_headline "Custom Metrics and Monitors" >}}
 
-Replicated provides a StatsD and Graphite, allowing you to display [custom metrics](/docs/packaging-an-application/custom-metrics-and-monitors/) sent from the running services in the Admin Console. This can be configured by including the stats names in a `custom_metrics` key, as well as the monitors to display using `monitors.custom`.
+Replicated provides a StatsD and Graphite, allowing you to display [custom metrics](/docs/swarm/packaging-an-application/custom-metrics-and-monitors/) sent from the running services in the Admin Console. This can be configured by including the stats names in a `custom_metrics` key, as well as the monitors to display using `monitors.custom`.
 
 ```yaml
 monitors:
@@ -86,7 +86,7 @@ custom_metrics:
 
 {{< linked_headline "Customer Config Section" >}}
 
-This section is where you can configure fields to gather input from the user. This input can be used to further configure your application. The values here can be used as inputs to container environment variables, config files, and more using [template functions](/docs/packaging-an-application/template-functions/) or tested for validity with [test procs](/docs/packaging-an-application/test-procs/). The [config section](/docs/packaging-an-application/config-screen/) is comprised of configuration groups and items. These items will render as a form in the Settings screen of the Replicated admin console.
+This section is where you can configure fields to gather input from the user. This input can be used to further configure your application. The values here can be used as inputs to container environment variables, config files, and more using [template functions](/docs/swarm/packaging-an-application/template-functions/) or tested for validity with [test procs](/docs/swarm/packaging-an-application/test-procs/). The [config section](/docs/swarm/packaging-an-application/config-screen/) is comprised of configuration groups and items. These items will render as a form in the Settings screen of the Replicated admin console.
 
 ```yaml
 config:
@@ -105,7 +105,7 @@ config:
 
 {{< linked_headline "Admin Commands" >}}
 
-Optionally you can expose [admin commands](/docs/packaging-an-application/admin-commands/) in your containers. To configure the commands, add the following section. This example will allow the customer to run the `redis-cli` command with any arbitrary arguments. The command will be executed only in the Docker containers that match image name and version as well as defined in the named component. A command that will work with this configuration is `replicated admin redis-cli info`. Replicated will find the appropriate node to run this command on; the customer can run these on the main admin console.
+Optionally you can expose [admin commands](/docs/swarm/packaging-an-application/admin-commands/) in your containers. To configure the commands, add the following section. This example will allow the customer to run the `redis-cli` command with any arbitrary arguments. The command will be executed only in the Docker containers that match image name and version as well as defined in the named component. A command that will work with this configuration is `replicated admin redis-cli info`. Replicated will find the appropriate node to run this command on; the customer can run these on the main admin console.
 
 ```yaml
 admin_commands:
@@ -118,7 +118,7 @@ admin_commands:
 
 {{< linked_headline " Custom Preflight Checks" >}}
 
-A [preflight check](/docs/packaging-an-application/preflight-checks/) is a test that is run before installing and running an application. The test will analyze the system to determine if the environment meets the minimum requirements and provide feedback during installation if these requirements are not met.
+A [preflight check](/docs/swarm/packaging-an-application/preflight-checks/) is a test that is run before installing and running an application. The test will analyze the system to determine if the environment meets the minimum requirements and provide feedback during installation if these requirements are not met.
 
 ```yaml
 host_requirements:
