@@ -43,6 +43,7 @@ The install script can take flags to help your customers with specialized enterp
 |bypass-storagedriver-warnings|Bypass the storagedriver warning|
 |daemon-token|Authentication token used by operators for automating a cluster installation|
 |docker-version|Install a specific version of docker|
+|exclude-subnet|Prevent docker from creating a network in a subnet. Can be specified multiple times.|
 |http-proxy|If present, then use proxy|
 |log-level|If present, this will be the log level of the Replicated daemon (debug, info, or error).|
 |no-docker|Skip docker installation|
