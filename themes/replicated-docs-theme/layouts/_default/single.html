@@ -43,7 +43,7 @@
 							<div class="sidebar">
 								<div>
 									{{ if .Params.categories }}
-										<h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">{{ index (.Params.categories) 0 | title}}</h3>
+										<h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">{{ replace (index (.Params.categories) 0 | title) "-" " " }}</h3>
 										<ul>
 										{{ $currentPageTitle := .Title }}
 										{{ with $taxonomy := (index (.Params.categories) 0) | urlize }}
