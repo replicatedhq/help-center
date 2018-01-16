@@ -1,7 +1,7 @@
 ---
 date: "2016-07-02T00:00:00Z"
 lastmod: "2016-07-02T00:00:00Z"
-title: "Custom Metrics"
+title: "Custom Metrics and Monitors"
 weight: "206"
 categories: [ "Packaging a Swarm Application" ]
 tags: [ "Application YAML" ]

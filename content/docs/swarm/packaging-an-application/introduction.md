@@ -26,7 +26,7 @@ The next section includes some basic information about your application release 
 name: My Enterprise Application
 ```
 
-{{< linked_headline "Detailed App Properties Description" >}}
+{{< linked_headline "Application Properties" >}}
 
 The properties section includes definitions of some optional (but recommended) application properties. For a list of available properties see [Application Properties](/docs/packaging-an-application/application-properties). You will notice the `{{repl` escape sequence. This invokes a Replicated [template function](/docs/packaging-an-application/template-functions), which will be discussed in more detail soon.
 
@@ -49,7 +49,7 @@ console_support_markdown: |
   your instance of My Enterprise Application.
 ```
 
-{{< linked_headline "CMD" >}}
+{{< linked_headline "Commands" >}}
 
 The Replicated platform has some built in [commands](/docs/packaging-an-application/commands/) that make writing your configuration much more powerful. In the cmds section you can write commands which we will use later.  These are useful to generate install-time values such as default certs/keys, randomized passwords, JWT token keys, etc.
 
@@ -61,25 +61,18 @@ cmds:
   - "64"
 ```
 
-{{< linked_headline "Monitors" >}}
+{{< linked_headline "Custom Metrics and Monitors" >}}
 
-When using the Replicated scheduler, the containers which make up your components can be monitored for resource usage metrics on an individual basis. For each metric, simply specify each component and container image pair. For example, if you want to see CPU and memory usage metrics for some of your Redis container and your private worker image pulled from quay.io (in a Worker component):
+Replicated provides a StatsD and Graphite, allowing you to display [custom metrics](/docs/packaging-an-application/custom-metrics-and-monitors/) sent from the running services in the Admin Console. This can be configured by including the stats names in a `custom_metrics` key, as well as the monitors to display using `monitors.custom`.
 
 ```yaml
 monitors:
-  cpuacct:
-  - Redis,redis
-  - Worker,quay.io/myenterpriseapp/worker
-  memory:
-  - Redis,redis
-  - Worker,quay.io/myenterpriseapp/worker
-```
+  custom:
+  - name: Disk Space
+    targets: [stats.gauges.myapp100.disk.*.*]
+  - name: Ping
+    targets: [stats.gauges.myapp100.ping.*]
 
-{{< linked_headline "Custom Metrics" >}}
-
-Regardless of the scheduler used, Replicated can also display [custom metrics](/docs/packaging-an-application/custom-metrics/) sent from the running instance to the Admin Console by including the stats names in a custom_metrics key.
-
-```yaml
 custom_metrics:
 - target: stats.gauges.myapp100.disk.*.*
   retention: "1s:10m,1m:20m,1h:30d"
@@ -89,29 +82,6 @@ custom_metrics:
   retention: "1s:7d"
   aggregation_method: "last"
   xfiles_factor: 0.6
-```
-
-{{< linked_headline "Ready State" >}}
-
-(Note: The Ready State is only compatible with the Replicated scheduler. To learn how Replicated starts a Kubernetes application, see the detail in the [Kubernetes](/docs/packaging-an-application/kubernetes) document).
-
-You can add a health check that Replicated will poll after your containers have all been started. The purpose of this is to report when your application is fully running and ready to start using. Once your application is running, we stop polling this health check and rely on other methods to monitor the status. The timeout parameter allows you to specify (in seconds) how long to keep retrying the command, if it fails. You can use a timeout value of -1 to indicate infinite polling. A timeout of 0 is not supported and causes the default of 10 minutes to be used.
-
-{{< version version="2.7.0" >}} You can specify an optional third argument to set the HTTP timeout. Replicated will use a default timeout of 5 seconds if not specified.
-
-### Available Commands:
-- `http_status_code`
-- `tcp_port_accept`
-
-```yaml
-state:
-  ready:
-    command: http_status_code
-    args:
-    - 'http://{{repl NodePublicIPAddress "My Component" "my-web-container" }}/ping'
-    - '200'
-    - '5'
-    timeout: 900
 ```
 
 {{< linked_headline "Customer Config Section" >}}
