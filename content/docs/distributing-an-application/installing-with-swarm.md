@@ -53,6 +53,7 @@ The install script can take flags to help your customers with specialized enterp
 |swarm-listen-addr|The swarm listen address|
 |swarm-stack-namespace|The swarm stack namespace to use|
 |ui-bind-port|The port to bind the UI to|
+|no-ce-on-ee|Disable installation of Docker CE onto platforms it does not support - RHEL, SLES and Oracle Linux|
 
 Example quick install with flags:
 ```shell
