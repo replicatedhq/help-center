@@ -50,11 +50,8 @@ func ConfigOptionEquals(optionName string, expectedValue string) bool
 ```
 Returns true if the configuration option value is equal to the supplied value.
 ```yaml
-ports:
-   - private_port: "80"
-     public_port: "80"
-     port_type: tcp
-     when: '{{repl ConfigOptionEquals "http_enabled" "1" }}'
+environment:
+- SMTP_ENABLED={{repl ConfigOptionEquals "smtp_enabled" "1" }}
 ```
 
 {{< template_function name="ConfigOptionNotEquals" replicated="true" kubernetes="true" swarm="true" >}}
@@ -63,11 +60,8 @@ func ConfigOptionNotEquals(optionName string, expectedValue string) bool
 ```
 Returns true if the configuration option value is not equal to the supplied value.
 ```yaml
-ports:
-   - private_port: "443"
-     public_port: "443"
-     port_type: tcp
-     when: '{{repl ConfigOptionNotEquals "http_enabled" "1" }}'
+environment:
+- RETURN_TO_SENDER={{repl ConfigOptionNotEquals "address_unknown" "1" }}
 ```
 
 {{< template_function name="LicenseFieldValue" replicated="true" kubernetes="true" swarm="true" >}}
@@ -77,9 +71,9 @@ func LicenseFieldValue(customLicenseFieldName string) string
 Returns the value for the Custom License Field as a string.
 ```yaml
 config_files:
-  - filename: /opt/app/config.yml
-    contents: |
-      max_users: '{{repl LicenseFieldValue "maximum_users" }}'
+- filename: /opt/app/config.yml
+  contents: |
+    max_users: '{{repl LicenseFieldValue "maximum_users" }}'
 ```
 
 {{< template_function name="LicenseProperty" replicated="true" kubernetes="true" swarm="true" >}}
@@ -89,9 +83,9 @@ func LicenseProperty(propertyName string) string
 Returns a property from the License as a string.  Valid propertyNames are "assignee", "channel.name", "expiration.date", and "expiration.policy".
 ```yaml
 config_files:
-  - filename: /opt/app/config.yml
-    contents: |
-      expiration.date: {{repl LicenseProperty "expiration.date"}}
+- filename: /opt/app/config.yml
+  contents: |
+    expiration.date: {{repl LicenseProperty "expiration.date"}}
 ```
 
 {{< template_function name="AppID" replicated="true" kubernetes="true" swarm="true" >}}
@@ -100,9 +94,8 @@ func AppID() string
 ```
 Returns the app id.
 ```yaml
-env_vars:
-- name: APP_ID
-  value: '{{repl AppID }}'
+environment:
+- APP_ID={{repl AppID }}
 ```
 
 {{< template_function name="AppVersion" replicated="true" kubernetes="true" swarm="true" >}}
@@ -111,9 +104,8 @@ func AppVersion() int
 ```
 Returns the app version sequence.
 ```yaml
-env_vars:
-- name: APP_VERSION
-  value: '{{repl AppVersion }}'
+environment:
+- APP_VERSION={{repl AppVersion }}
 ```
 
 {{< template_function name="AppVersionFirst" replicated="true" kubernetes="true" swarm="true" >}}
@@ -122,9 +114,8 @@ func AppVersionFirst() int
 ```
 Returns the version sequence of the first version installed.
 ```yaml
-env_vars:
-- name: APP_VERSION_FIRST
-  value: '{{repl AppVersionFirst }}'
+environment:
+- APP_VERSION_FIRST={{repl AppVersionFirst }}
 ```
 
 {{< template_function name="AppVersionCurrent" replicated="true" kubernetes="true" swarm="true" >}}
@@ -133,9 +124,8 @@ func AppVersionCurrent() int
 ```
 Returns the current app version sequence.
 ```yaml
-env_vars:
-- name: APP_VERSION_CURRENT
-  value: '{{repl AppVersionCurrent }}'
+environment:
+- APP_VERSION_CURRENT={{repl AppVersionCurrent }}
 ```
 
 {{< template_function name="RunOffline" replicated="true" kubernetes="true" swarm="true" >}}
@@ -144,9 +134,8 @@ func RunOffline() bool
 ```
 Returns whether or not we are running in airgap mode. This is available in the Kubernetes and Swarm implementations, but will always return false.
 ```yaml
-env_vars:
-- name: IS_AIRGAP
-  value: '{{repl RunOffline }}'
+environment:
+- IS_AIRGAP={{repl RunOffline }}
 ```
 
 {{< template_function name="AppSetting" replicated="true" kubernetes="true" swarm="true" >}}
@@ -163,17 +152,12 @@ Possible Options:
 `release.channel`
 
 ```yaml
-env_vars:
-- name: VERSION
-  value: '{{repl AppSetting "version.label"}}'
-- name: RELEASE_NOTES
-  value: '{{repl AppSetting "release.notes"}}'
-- name: INSTALL_DATE
-  value: '{{repl AppSetting "install.date"}}'
-- name: RELEASE_DATE
-  value: '{{repl AppSetting "release.date"}}'
-- name: RELEASE_CHANNEL
-  value: '{{repl AppSetting "release.channel"}}'
+environment:
+- VERSION={{repl AppSetting "version.label"}}
+- RELEASE_NOTES={{repl AppSetting "release.notes"}}
+- INSTALL_DATE={{repl AppSetting "install.date"}}
+- RELEASE_DATE={{repl AppSetting "release.date"}}
+- RELEASE_CHANNEL={{repl AppSetting "release.channel"}}
 ```
 
 {{< template_function name="ConsoleSetting" replicated="true" kubernetes="true" swarm="true" >}}
@@ -241,9 +225,8 @@ Possible Options:
 | RestrictedGroupQuery | string |
 
 ```yaml
-env_vars:
-- name: LDAP_HOSTNAME
-  value: '{{repl LdapCopyAuthFrom "Hostname"}}'
+environment:
+- LDAP_HOSTNAME={{repl LdapCopyAuthFrom "Hostname"}}
 ```
 
 {{< template_function name="Now" replicated="true" kubernetes="true" swarm="true" >}}
@@ -252,9 +235,8 @@ func Now() string
 ```
 Returns the current timestamp as an RFC3339 formatted string.
 ```yaml
-env_vars:
-- name: START_TIME
-  value: '{{repl Now }}'
+environment:
+- START_TIME={{repl Now }}
 ```
 
 {{< template_function name="NowFmt" replicated="true" kubernetes="true" swarm="true" >}}
@@ -263,9 +245,8 @@ func NowFmt(format string) string
 ```
 Returns the current timestamp as a formatted string. See Golang's time formatting guidelines [here](https://golang.org/pkg/time/#pkg-constants.
 ```yaml
-env_vars:
-- name: START_DATE
-  value: '{{repl Now "20060102" }}'
+environment:
+- START_DATE={{repl Now "20060102" }}
 ```
 
 {{< template_function name="TrimSpace" replicated="true" kubernetes="true" swarm="true" >}}
@@ -274,9 +255,8 @@ func TrimSpace(s string) string
 ```
 Trim returns a string with all leading and trailing spaces removed.
 ```yaml
-env_vars:
-- name: VALUE
-  value: '{{repl ConfigOption "str_value" | Trim }}
+environment:
+- VALUE={{repl ConfigOption "str_value" | Trim }}
 ```
 
 {{< template_function name="Trim" replicated="true" kubernetes="true" swarm="true" >}}
@@ -285,9 +265,8 @@ func Trim(s string, args ...string) string
 ```
 Trim returns a string with all leading and trailing string contained in the optional args removed (default space).
 ```yaml
-env_vars:
-- name: VALUE
-  value: '{{repl ConfigOption "str_value" | Trim " " "." }}
+environment:
+- VALUE={{repl ConfigOption "str_value" | Trim " " "." }}
 ```
 
 {{< template_function name="Split" replicated="true" kubernetes="true" swarm="true" >}}
@@ -296,18 +275,16 @@ func Split(s string, sep string) []string
 ```
 Split slices s into all substrings separated by sep and returns an array of the substrings between those separators.
 ```yaml
-env_vars:
-- name: BROKEN_APART_A_B_C
-  value: '{{repl Split "A,B,C" "," }}'
+environment:
+- BROKEN_APART_A_B_C={{repl Split "A,B,C" "," }}
 ```
 
 Combining `Split` and `index`:
 Assuming the `github_url` param is set to `https://github.mycorp.internal:3131`, the following would set
 `GITHUB_HOSTNAME` to `github.mycorp.internal`.
 ```yaml
-env_vars:
-- name: GITHUB_HOSTNAME
-  value: '{{repl index (Split (index (Split (ConfigOption "github_url") "/") 2) ":") 0}}'
+environment:
+- GITHUB_HOSTNAME={{repl index (Split (index (Split (ConfigOption "github_url") "/") 2) ":") 0}}
 ```
 
 
@@ -317,9 +294,8 @@ func ToLower(stringToAlter string) string
 ```
 Returns the string, in lowercase.
 ```yaml
-env_vars:
-- name: COMPANY_NAME
-  value: '{{repl ConfigOption "company_name" | ToLower }}'
+environment:
+- COMPANY_NAME={{repl ConfigOption "company_name" | ToLower }}
 ```
 
 {{< template_function name="ToUpper" replicated="true" kubernetes="true" swarm="true" >}}
@@ -328,9 +304,8 @@ func ToUpper(stringToAlter string) string
 ```
 Returns the string, in uppercase.
 ```yaml
-env_vars:
-- name: COMPANY_NAME
-  value: '{{repl ConfigOption "company_name" | ToUpper }}'
+environment:
+- COMPANY_NAME={{repl ConfigOption "company_name" | ToUpper }}
 ```
 
 {{< template_function name="HumanSize" replicated="true" kubernetes="true" swarm="true" >}}
@@ -339,9 +314,8 @@ func HumanSize(size interface{}) string
 ```
 HumanSize returns a human-readable approximation of a size in bytes capped at 4 valid numbers (eg. "2.746 MB", "796 KB"). The size must be a integer or floating point number.
 ```yaml
-env_vars:
-- name: MIN_SIZE_HUMAN
-  value: '{{repl ConfigOption "min_size_bytes" | HumanSize }}
+environment:
+- MIN_SIZE_HUMAN={{repl ConfigOption "min_size_bytes" | HumanSize }}
 ```
 
 {{< template_function name="UrlEncode" replicated="true" kubernetes="true" swarm="true" >}}
@@ -350,9 +324,8 @@ func UrlEncode(stringToEncode string) string
 ```
 Returns the string, url encoded.
 ```yaml
-env_vars:
-- name: SMTP_CONNECTION_URL
-  value: '{{repl ConfigOption "smtp_email" | UrlEncode }}:{{repl ConfigOption "smtp_password" | UrlEncode }}@smtp.example.com:587'
+environment:
+- SMTP_CONNECTION_URL={{repl ConfigOption "smtp_email" | UrlEncode }}:{{repl ConfigOption "smtp_password" | UrlEncode }}@smtp.example.com:587
 ```
 
 {{< template_function name="Base64Encode" replicated="true" kubernetes="true" swarm="true" >}}
@@ -361,9 +334,8 @@ func Base64Encode(stringToEncode string) string
 ```
 Returns a Base64 encoded string.
 ```yaml
-env_vars:
-- name: NAME_64_VALUE
-  value: '{{repl ConfigOption "name" | Base64Encode }}'
+environment:
+- NAME_64_VALUE={{repl ConfigOption "name" | Base64Encode }}
 ```
 
 {{< template_function name="Base64Decode" replicated="true" kubernetes="true" swarm="true" >}}
@@ -372,9 +344,8 @@ func Base64Decode(stringToDecode string) string
 ```
 Returns decoded string from a Base64 stored value.
 ```yaml
-env_vars:
-- name: NAME_PLAIN_TEXT
-  value: '{{repl ConfigOption "base_64_encoded_name" | Base64Decode }}'
+environment:
+- NAME_PLAIN_TEXT={{repl ConfigOption "base_64_encoded_name" | Base64Decode }}
 ```
 
 {{< template_function name="ParseBool" replicated="true" kubernetes="true" swarm="true" >}}
@@ -383,9 +354,8 @@ func ParseBool(str string) bool
 ```
 ParseBool returns the boolean value represented by the string.
 ```yaml
-env_vars:
-- name: VALUE
-  value: '{{repl ConfigOption "str_value" | ParseBool }}'
+environment:
+- VALUE={{repl ConfigOption "str_value" | ParseBool }}
 ```
 
 {{< template_function name="ParseFloat" replicated="true" kubernetes="true" swarm="true" >}}
@@ -394,9 +364,8 @@ func ParseFloat(str string) float64
 ```
 ParseFloat returns the float value represented by the string.
 ```yaml
-env_vars:
-- name: VALUE
-  value: '{{repl ConfigOption "str_value" | ParseFloat }}'
+environment:
+- VALUE={{repl ConfigOption "str_value" | ParseFloat }}
 ```
 
 {{< template_function name="ParseInt" replicated="true" kubernetes="true" swarm="true" >}}
@@ -405,9 +374,8 @@ func ParseInt(str string, args ...int) int64
 ```
 ParseInt returns the integer value represented by the string with optional base (default 10).
 ```yaml
-env_vars:
-- name: VALUE
-  value: '{{repl ConfigOption "str_value" | ParseInt }}'
+environment:
+- VALUE={{repl ConfigOption "str_value" | ParseInt }}
 ```
 
 {{< template_function name="ParseUint" replicated="true" kubernetes="true" swarm="true" >}}
@@ -416,9 +384,8 @@ func ParseUint(str string, args ...int) uint64
 ```
 ParseUint returns the unsigned integer value represented by the string with optional base (default 10).
 ```yaml
-env_vars:
-- name: VALUE
-  value: '{{repl ConfigOption "str_value" | ParseUint }}'
+environment:
+- VALUE={{repl ConfigOption "str_value" | ParseUint }}
 ```
 
 {{< template_function name="Add" replicated="true" kubernetes="true" swarm="true" >}}
@@ -431,9 +398,8 @@ If at least one of the operands is a floating point number, the result will be a
 
 If both operands are integers, the result will be an integer.
 ```yaml
-env_vars:
-- name: MAX_USERS_PLUS_ONE
-  value: '{{repl Add (LicenseFieldValue "maximum_users") 1}}'
+environment:
+- MAX_USERS_PLUS_ONE={{repl Add (LicenseFieldValue "maximum_users") 1}}
 ```
 
 {{< template_function name="Sub" replicated="true" kubernetes="true" swarm="true" >}}
@@ -446,9 +412,8 @@ If at least one of the operands is a floating point number, the result will be a
 
 If both operands are integers, the result will be an integer.
 ```yaml
-env_vars:
-- name: MAX_USERS_MINUS_ONE
-  value: '{{repl Sub (LicenseFieldValue "maximum_users") 1}}'
+environment:
+- MAX_USERS_MINUS_ONE={{repl Sub (LicenseFieldValue "maximum_users") 1}}
 ```
 
 {{< template_function name="Mult" replicated="true" kubernetes="true" swarm="true" >}}
@@ -461,9 +426,8 @@ If at least one of the operands is a floating point number, the result will be a
 
 If both operands are integers, the result will be an integer.
 ```yaml
-env_vars:
-- name: DOUBLE_NUM_ADDRESSES
-  value: '{{repl Mult (NodePrivateIPAddressAll "DB" "redis" | len) 2}}'
+environment:
+- DOUBLE_NUM_ADDRESSES={{repl Mult (NodePrivateIPAddressAll "DB" "redis" | len) 2}}
 ```
 
 {{< template_function name="Div" replicated="true" kubernetes="true" swarm="true" >}}
@@ -476,9 +440,8 @@ If at least one of the operands is a floating point number, the result will be a
 
 If both operands are integers, the result will be an integer and will be rounded down.
 ```yaml
-env_vars:
-- name: HALF_MAX_USERS
-  value: '{{repl Div (LicenseFieldValue "maximum_users") 2.0}}'
+environment:
+- HALF_MAX_USERS={{repl Div (LicenseFieldValue "maximum_users") 2.0}}
 ```
 
 {{< template_function name="Namespace" replicated="false" kubernetes="true" swarm="true" >}}
@@ -508,13 +471,11 @@ PremkitAPIAddress() string
 PremkitAPIAddress returns the address of the Premkit service in the cluster.
 
 ```yaml
-spec:
-  containers:
-  - name: myservice
-    image: mycompany/myservice:1.0
-    env:
-    - name: REPLICATED_INTEGRATIONAPI
-      value: {{repl PremkitAPIAddress }}
+services:
+  api:
+    image: mycompany/myapp:1.0
+    environment:
+    - REPLICATED_INTEGRATIONAPI={{repl PremkitAPIAddress }}
 ```
 
 {{< template_function name="PremkitNetworkName" replicated="false" kubernetes="false" swarm="true" >}}
@@ -532,13 +493,12 @@ StatsdAddress() string
 StatsdAddress returns the address of the Statsd service in the cluster.
 
 ```yaml
-spec:
-  containers:
-  - name: myservice
-    image: mycompany/myservice:1.0
-    env:
-    - name: REPLICATED_STATSD_ADDRESS
-      value: {{repl StatsdAddress }}
+services:
+  api:
+    image: mycompany/myapp:1.0
+    environment:
+    - STATSD_HOST={{repl (index (Split (StatsdAddress) ":") 0)}}
+    - STATSD_PORT={{repl (index (Split (StatsdAddress) ":") 1)}}
 ```
 
 {{< template_function name="StatsdNetworkName" replicated="false" kubernetes="false" swarm="true" >}}
@@ -547,7 +507,3 @@ StatsdNetworkName() string
 ```
 
 StatsdNetworkName returns the name of the Statsd docker network.
-
-## Notes
-
-When referencing another container in a template object, you must make sure the referenced container is started first.  Please see the [Events and Orchestration](/docs/packaging-an-application/events-and-orchestration/) section for more information on orchestrating container startup.
