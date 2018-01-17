@@ -116,7 +116,7 @@ admin_commands:
   container: redis
 ```
 
-{{< linked_headline " Custom Preflight Checks" >}}
+{{< linked_headline "Custom Preflight Checks" >}}
 
 A [preflight check](/docs/swarm/packaging-an-application/preflight-checks/) is a test that is run before installing and running an application. The test will analyze the system to determine if the environment meets the minimum requirements and provide feedback during installation if these requirements are not met.
 
@@ -130,4 +130,21 @@ host_requirements:
   replicated_version: ">=2.3.0 <2.4.1"
 ```
 
-For the full configuration see [Examples](/categories/examples).
+{{< linked_headline "Container Images" >}}
+
+To use private images from an external registry, you need to add the registry via the Vendor website. The guide for [integrating a third party registry](/docs/kb/developer-resources/third-party-registries) explains this in further detail.
+
+For Airgapped installations, all images included in your Swarm application must be specified in the `images` section of your YAML in order to be included in the airgap bundle your customer will download and install.
+
+```yaml
+images:
+- source: mythirdpartyprivateregistry
+  name: namespace/imagename
+  tag: 2.0.0
+- source: public
+  name: redis
+  tag: 3.2-alpine
+- source: public
+  name: postgres
+  tag: 9.4
+```
