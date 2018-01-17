@@ -79,7 +79,7 @@ by your customer into the config items within this group. The arguments, in expe
 
 1. Access key ID.
 1. Secret access key.
-1. AWS service. Either ec2, s3, or sqs.
+1. AWS service.  Valid values are `ec2`, `s3`, and `sqs`.  Credentials will be validated using `DescribeRegions`, `ListBuckets`, and `ListQueues` operations respectively.  All calls will be made using `us-east-1` region.
 
 ```yaml
 config:
