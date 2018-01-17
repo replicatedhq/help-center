@@ -21,54 +21,69 @@ Replicated uses Go's [template engine](http://golang.org/pkg/text/template) to e
 
 {{< linked_headline "Replicated Template Function" >}}
 
-{{< template_function name="ConfigOption" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "ConfigOption" >}}
 ```go
 func ConfigOption(optionName string) string
 ```
+
 Returns the value of the config option as a string.
+
 ```yaml
 properties:
   app_url: http://{{repl ConfigOption "hostname" }}
 ```
 
-{{< template_function name="ConfigOptionData" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "ConfigOptionData" >}}
 (only supports `type: file`)
 
 ```go
 func ConfigOptionData(fileName string) string
 ```
+
 Returns the contents of the file uploaded for a configuration option as a string.
+
 ```yaml
 config_files:
 - filename: /opt/certs/server.key
   contents: {{repl ConfigOptionData "ssl_key"}}
 ```
 
-{{< template_function name="ConfigOptionEquals" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "ConfigOptionEquals" >}}
 ```go
 func ConfigOptionEquals(optionName string, expectedValue string) bool
 ```
+
 Returns true if the configuration option value is equal to the supplied value.
+
 ```yaml
 environment:
 - SMTP_ENABLED={{repl ConfigOptionEquals "smtp_enabled" "1" }}
 ```
 
-{{< template_function name="ConfigOptionNotEquals" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "ConfigOptionNotEquals" >}}
 ```go
 func ConfigOptionNotEquals(optionName string, expectedValue string) bool
 ```
+
 Returns true if the configuration option value is not equal to the supplied value.
+
 ```yaml
 environment:
 - RETURN_TO_SENDER={{repl ConfigOptionNotEquals "address_unknown" "1" }}
 ```
 
-{{< template_function name="LicenseFieldValue" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "LicenseFieldValue" >}}
 ```go
 func LicenseFieldValue(customLicenseFieldName string) string
 ```
+
 Returns the value for the Custom License Field as a string.
+
 ```yaml
 config_files:
 - filename: /opt/app/config.yml
@@ -76,7 +91,8 @@ config_files:
     max_users: '{{repl LicenseFieldValue "maximum_users" }}'
 ```
 
-{{< template_function name="LicenseProperty" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "LicenseProperty" >}}
 ```go
 func LicenseProperty(propertyName string) string
 ```
@@ -88,7 +104,8 @@ config_files:
     expiration.date: {{repl LicenseProperty "expiration.date"}}
 ```
 
-{{< template_function name="AppID" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "AppID" >}}
 ```go
 func AppID() string
 ```
@@ -98,7 +115,8 @@ environment:
 - APP_ID={{repl AppID }}
 ```
 
-{{< template_function name="AppVersion" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "AppVersion" >}}
 ```go
 func AppVersion() int
 ```
@@ -108,7 +126,8 @@ environment:
 - APP_VERSION={{repl AppVersion }}
 ```
 
-{{< template_function name="AppVersionFirst" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "AppVersionFirst" >}}
 ```go
 func AppVersionFirst() int
 ```
@@ -118,7 +137,8 @@ environment:
 - APP_VERSION_FIRST={{repl AppVersionFirst }}
 ```
 
-{{< template_function name="AppVersionCurrent" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "AppVersionCurrent" >}}
 ```go
 func AppVersionCurrent() int
 ```
@@ -128,7 +148,8 @@ environment:
 - APP_VERSION_CURRENT={{repl AppVersionCurrent }}
 ```
 
-{{< template_function name="RunOffline" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "RunOffline" >}}
 ```go
 func RunOffline() bool
 ```
@@ -138,7 +159,8 @@ environment:
 - IS_AIRGAP={{repl RunOffline }}
 ```
 
-{{< template_function name="AppSetting" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "AppSetting" >}}
 ```go
 func AppSetting(key string) string
 ```
@@ -160,7 +182,8 @@ environment:
 - RELEASE_CHANNEL={{repl AppSetting "release.channel"}}
 ```
 
-{{< template_function name="ConsoleSetting" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "ConsoleSetting" >}}
 ```go
 func ConsoleSetting(consoleSettingName string) string
 ```
@@ -189,19 +212,22 @@ config:
     value: '{{repl ConsoleSetting "tls.key.name"}}'
 ```
 
-{{< template_function name="ConsoleSettingEquals" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "ConsoleSettingEquals" >}}
 ```go
 func ConsoleSettingEquals(name string, value string) bool
 ```
 Returns a bool indicating if the value is the currently applied value for ConsoleSetting with name.
 
-{{< template_function name="ConsoleSettingNotEquals" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "ConsoleSettingNotEquals" >}}
 ```go
 func ConsoleSettingNotEquals(name string, value string) bool
 ```
 Returns a bool indicating if the value is not the currently applied value for ConsoleSetting with name.
 
-{{< template_function name="LDAPCopyAuthFrom" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "LDAPCopyAuthFrom" >}}
 ```go
 func LdapCopyAuthFrom(keyName string) interface{}
 ```
@@ -229,7 +255,8 @@ environment:
 - LDAP_HOSTNAME={{repl LdapCopyAuthFrom "Hostname"}}
 ```
 
-{{< template_function name="Now" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "Now" >}}
 ```go
 func Now() string
 ```
@@ -239,7 +266,8 @@ environment:
 - START_TIME={{repl Now }}
 ```
 
-{{< template_function name="NowFmt" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "NowFmt" >}}
 ```go
 func NowFmt(format string) string
 ```
@@ -249,7 +277,8 @@ environment:
 - START_DATE={{repl Now "20060102" }}
 ```
 
-{{< template_function name="TrimSpace" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "TrimSpace" >}}
 ```go
 func TrimSpace(s string) string
 ```
@@ -259,7 +288,8 @@ environment:
 - VALUE={{repl ConfigOption "str_value" | Trim }}
 ```
 
-{{< template_function name="Trim" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "Trim" >}}
 ```go
 func Trim(s string, args ...string) string
 ```
@@ -269,7 +299,8 @@ environment:
 - VALUE={{repl ConfigOption "str_value" | Trim " " "." }}
 ```
 
-{{< template_function name="Split" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "Split" >}}
 ```go
 func Split(s string, sep string) []string
 ```
@@ -288,7 +319,7 @@ environment:
 ```
 
 
-{{< template_function name="ToLower" replicated="true" kubernetes="true" swarm="true" >}}
+{{< linked_headline "ToLower" >}}
 ```go
 func ToLower(stringToAlter string) string
 ```
@@ -298,7 +329,8 @@ environment:
 - COMPANY_NAME={{repl ConfigOption "company_name" | ToLower }}
 ```
 
-{{< template_function name="ToUpper" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "ToUpper" >}}
 ```go
 func ToUpper(stringToAlter string) string
 ```
@@ -308,7 +340,8 @@ environment:
 - COMPANY_NAME={{repl ConfigOption "company_name" | ToUpper }}
 ```
 
-{{< template_function name="HumanSize" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "HumanSize" >}}
 ```go
 func HumanSize(size interface{}) string
 ```
@@ -318,7 +351,8 @@ environment:
 - MIN_SIZE_HUMAN={{repl ConfigOption "min_size_bytes" | HumanSize }}
 ```
 
-{{< template_function name="UrlEncode" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "UrlEncode" >}}
 ```go
 func UrlEncode(stringToEncode string) string
 ```
@@ -328,7 +362,7 @@ environment:
 - SMTP_CONNECTION_URL={{repl ConfigOption "smtp_email" | UrlEncode }}:{{repl ConfigOption "smtp_password" | UrlEncode }}@smtp.example.com:587
 ```
 
-{{< template_function name="Base64Encode" replicated="true" kubernetes="true" swarm="true" >}}
+{{< linked_headline "Base64Encode" >}}
 ```go
 func Base64Encode(stringToEncode string) string
 ```
@@ -338,7 +372,8 @@ environment:
 - NAME_64_VALUE={{repl ConfigOption "name" | Base64Encode }}
 ```
 
-{{< template_function name="Base64Decode" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "Base64Decode" >}}
 ```go
 func Base64Decode(stringToDecode string) string
 ```
@@ -348,7 +383,8 @@ environment:
 - NAME_PLAIN_TEXT={{repl ConfigOption "base_64_encoded_name" | Base64Decode }}
 ```
 
-{{< template_function name="ParseBool" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "ParseBool" >}}
 ```go
 func ParseBool(str string) bool
 ```
@@ -358,7 +394,8 @@ environment:
 - VALUE={{repl ConfigOption "str_value" | ParseBool }}
 ```
 
-{{< template_function name="ParseFloat" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "ParseFloat" >}}
 ```go
 func ParseFloat(str string) float64
 ```
@@ -368,7 +405,8 @@ environment:
 - VALUE={{repl ConfigOption "str_value" | ParseFloat }}
 ```
 
-{{< template_function name="ParseInt" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "ParseInt" >}}
 ```go
 func ParseInt(str string, args ...int) int64
 ```
@@ -378,7 +416,8 @@ environment:
 - VALUE={{repl ConfigOption "str_value" | ParseInt }}
 ```
 
-{{< template_function name="ParseUint" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "ParseUint" >}}
 ```go
 func ParseUint(str string, args ...int) uint64
 ```
@@ -388,7 +427,8 @@ environment:
 - VALUE={{repl ConfigOption "str_value" | ParseUint }}
 ```
 
-{{< template_function name="Add" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "Add" >}}
 ```go
 func Add(x interface{}, y interface{}) interface{}
 ```
@@ -402,7 +442,8 @@ environment:
 - MAX_USERS_PLUS_ONE={{repl Add (LicenseFieldValue "maximum_users") 1}}
 ```
 
-{{< template_function name="Sub" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "Sub" >}}
 ```go
 func Sub(x interface{}, y interface{}) interface{}
 ```
@@ -416,7 +457,8 @@ environment:
 - MAX_USERS_MINUS_ONE={{repl Sub (LicenseFieldValue "maximum_users") 1}}
 ```
 
-{{< template_function name="Mult" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "Mult" >}}
 ```go
 func Mult(x interface{}, y interface{}) interface{}
 ```
@@ -430,7 +472,8 @@ environment:
 - DOUBLE_NUM_ADDRESSES={{repl Mult (NodePrivateIPAddressAll "DB" "redis" | len) 2}}
 ```
 
-{{< template_function name="Div" replicated="true" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "Div" >}}
 ```go
 func Div(x interface{}, y interface{}) interface{}
 ```
@@ -444,14 +487,16 @@ environment:
 - HALF_MAX_USERS={{repl Div (LicenseFieldValue "maximum_users") 2.0}}
 ```
 
-{{< template_function name="Namespace" replicated="false" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "Namespace" >}}
 ```go
 func Namespace() string
 ```
 
 Namespace returns the value of the namespace the vendor application is installed in.
 
-{{< template_function name="SwarmIngressAddress" replicated="false" kubernetes="false" swarm="true" >}}
+
+{{< linked_headline "SwarmIngressAddress" >}}
 ```go
 SwarmIngressAddress() string
 ```
@@ -463,7 +508,8 @@ properties:
   app_url: '{{repl SwarmIngressAddress }}'
 ```
 
-{{< template_function name="PremkitAPIAddress" replicated="false" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "PremkitAPIAddress" >}}
 ```go
 PremkitAPIAddress() string
 ```
@@ -478,14 +524,16 @@ services:
     - REPLICATED_INTEGRATIONAPI={{repl PremkitAPIAddress }}
 ```
 
-{{< template_function name="PremkitNetworkName" replicated="false" kubernetes="false" swarm="true" >}}
+
+{{< linked_headline "PremkitNetworkName" >}}
 ```go
 PremkitNetworkName() string
 ```
 
 PremkitNetworkName returns the name of the premkit docker network.
 
-{{< template_function name="StatsdAddress" replicated="false" kubernetes="true" swarm="true" >}}
+
+{{< linked_headline "StatsdAddress" >}}
 ```go
 StatsdAddress() string
 ```
@@ -501,7 +549,8 @@ services:
     - STATSD_PORT={{repl (index (Split (StatsdAddress) ":") 1)}}
 ```
 
-{{< template_function name="StatsdNetworkName" replicated="false" kubernetes="false" swarm="true" >}}
+
+{{< linked_headline "StatsdNetworkName" >}}
 ```go
 StatsdNetworkName() string
 ```
