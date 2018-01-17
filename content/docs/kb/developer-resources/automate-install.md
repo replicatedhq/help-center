@@ -29,7 +29,6 @@ or all of the following options:
   "TlsBootstrapCert": "/etc/server.crt",
   "TlsBootstrapKey": "/etc/server.key",
   "LogLevel": "debug",
-  "Channel": "stable",
   "LicenseFileLocation": "/tmp/license.rli",
   "ImportSettingsFrom": "/tmp/settings.conf",
   "BypassPreflightChecks": true
