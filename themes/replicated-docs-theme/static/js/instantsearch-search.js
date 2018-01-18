@@ -72,7 +72,7 @@ const renderHandler = function() {
     }
     
     if(searchBoxValue !== "") {
-        searchMade.innerHTML = "for " + searchBoxValue;
+        searchMade.innerHTML = "for " + autocomplete.escapeHighlightedString(searchBoxValue);
     } else {
         searchMade.innerHTML = "";
     }
