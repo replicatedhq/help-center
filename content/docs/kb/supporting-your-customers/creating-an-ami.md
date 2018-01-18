@@ -32,9 +32,15 @@ shipping this image.
 After installing Replicated, all of the containers should be running. You can verify this by running `docker ps` and 
 there will be several Replicated containers.
 
-### Step 2: Stop and remove the Replicated containers
+### Step 2: Wait for Replicated to initialize
 
-We want to clean the auto-generated and auto-detected data from this server. This way, when a customer turns on a new 
+In the browser, navigate to Replicated dashboard on `https://<serverip>:8800`.  Once the Upload SSL Certs screen is loaded, all images have been pulled.
+
+![Setup Console Certs](/images/post-screens/secure-the-console.png)
+
+### Step 3: Stop and remove the Replicated containers
+
+We want to clean the auto-generated and auto-detected data from this server. This way, when a customer turns on a new
 instance of this server, it will be calculated again.
 
 ```shell
@@ -44,7 +50,7 @@ sudo service replicated-operator stop
 sudo docker rm -f replicated replicated-ui replicated-operator
 ```
 
-### Step 3: Remove config files
+### Step 4: Remove config files
 
 Replicated stores configuration in several locations. Removing all of this will force Replicated to rebuild it the next 
 time it starts.
@@ -57,7 +63,7 @@ sudo rm -rf /var/log/upstart/replicated*
 sudo rm -rf /var/lib/replicated
 ```
 
-### Step 4
+### Step 5
 
 We've just deleted a lot of the work the initial installation script did. We need to create a little helper script that will do 
 the following tasks:
@@ -88,11 +94,11 @@ To learn more about using the `/etc/replicated.conf` file to provide the license
 how you can set your settings during an automated install process, please read 
 [Automate Install for Testing](/docs/kb/developer-resources/automate-install/).
 
-### Step 5
+### Step 6
 
 Do whatever other cleanup you want. Maybe you want to delete the bash history. Or add any other services to this machine. This is your AMI.
 
-### Step 6
+### Step 7
 
 Ship the AMI. Using [Amazon's instructions](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html), you can now create an distribute 
 your own AMI with Replicated installed. When a customer turns it on, port 8800 will be listening and ready to accept a Replicated license file.
