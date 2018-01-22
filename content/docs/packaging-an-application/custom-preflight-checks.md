@@ -5,7 +5,7 @@ description: "A guide to implementing the Custom Preflight Checks feature to ana
 weight: "214"
 categories: [ "Packaging an Application" ]
 tags: [ "Preflight Checks", "Application YAML" ]
-index: "docs"
+index: false
 ---
 
 The host requirements section of the yaml gives Replicated the ability to analyze system
