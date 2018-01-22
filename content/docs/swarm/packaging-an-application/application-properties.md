@@ -5,7 +5,7 @@ description: "The Replicated YAML section `properties` allows several high level
 weight: "201"
 categories: [ "Packaging a Swarm Application" ]
 tags: [ "Application YAML" ]
-index: "docs"
+index: false
 guide: 1
 ---
 

@@ -5,7 +5,7 @@ description: "Enabling LDAP and AD user auth and sync in an application through 
 weight: "212"
 categories: [ "Packaging a Swarm Application" ]
 tags: [ "Application YAML", "LDAP" ]
-index: "docs"
+index: false
 ---
 
 Replicated can be integrated with LDAP servers to provide real time user authentication & sync. A quick overview of this feature is available. Announcement: [DS Auth & Sync Support](https://blog.replicated.com/2015/12/03/ldap-active-directory-sync-support/)

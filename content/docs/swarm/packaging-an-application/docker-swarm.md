@@ -8,7 +8,8 @@ tags: [ "Docker", "Swarm", "Schedulers", "Application YAML", "Airgapped Environm
 aliases: [
     "/docs/packaging-an-application/swarm/"
 ]
-index: "docs"
+index: false
+hideFromList: true
 ---
 
 

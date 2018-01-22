@@ -5,7 +5,7 @@ description: "Test Procs enable customers to easily test the validity of the uns
 weight: "208"
 categories: [ "Packaging a Swarm Application" ]
 tags: [ "Application YAML", "LDAP" ]
-index: "docs"
+index: false
 ---
 
 Using the `test_proc` directive in your app definition YAML, you enable your customers to

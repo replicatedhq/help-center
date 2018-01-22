@@ -5,7 +5,7 @@ description: "The `config` section of the Replicated YAML creates a dynamic sett
 weight: "203"
 categories: [ "Packaging a Swarm Application" ]
 tags: [ "Application YAML" ]
-index: "docs"
+index: false
 ---
 
 The admin console settings screen configuration is specified as an array configuration

@@ -5,7 +5,7 @@ description: "Installed instances can generate a support bundle with relevant lo
 weight: "210"
 categories: [ "Packaging a Swarm Application" ]
 tags: [ "Support", "Application YAML" ]
-index: "docs"
+index: false
 ---
 
 A support bundle is an archive that is available for the customer to download via the Support tab of the On-Prem Console or the [Replicated CLI](/api/replicatedctl/replicatedctl_support-bundle/).

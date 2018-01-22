@@ -5,7 +5,7 @@ description: "The dynamic configuration management functionality available throu
 weight: "207"
 categories: [ "Packaging a Swarm Application" ]
 tags: [ "Application YAML" ]
-index: "docs"
+index: false
 ---
 
 Template functions are marked by the double curly bracket + *"repl"* escape sequence. They allow for user input to be dynamically inserted into application configuration values. The sequence should be `{{repl`, not `{{ repl`.

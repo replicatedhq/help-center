@@ -5,7 +5,7 @@ description: "The `cmds` section of the Replicated YAML allows you to leverage t
 weight: "209"
 categories: [ "Packaging a Swarm Application" ]
 tags: [ "Application YAML", "CLI Commands" ]
-index: "docs"
+index: false
 ---
 
 The `cmds` section of the YAML allows you to leverage the power of external commands within your configuration. The sole

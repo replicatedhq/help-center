@@ -4,7 +4,7 @@ title: "Admin Commands"
 description: "Implementation guide for application vendors to provide customers with aliased CLI commands that can be performed in the containers across a cluster."
 categories: [ "Packaging a Swarm Application" ]
 tags: [ "CLI Commands", "Clusters" ]
-index: "docs"
+index: false
 weight: "213"
 guide: 1
 ---

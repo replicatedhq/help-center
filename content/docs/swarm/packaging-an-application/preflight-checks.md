@@ -5,7 +5,7 @@ description: "A guide to implementing the Preflight Checks feature to analyze cu
 weight: "205"
 categories: [ "Packaging a Swarm Application" ]
 tags: [ "Application YAML", "Preflight Checks" ]
-index: "docs"
+index: false
 ---
 
 A preflight check is a test that is run before installing and running an application.  The test will analyze the system to determine if the environment meets the minimum requirements.
