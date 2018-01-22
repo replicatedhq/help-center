@@ -112,8 +112,7 @@ admin_commands:
 - alias: redis-cli
   command: [redis-cli]
   run_type: exec
-  component: DB
-  container: redis
+  service: redis
 ```
 
 {{< linked_headline "Custom Preflight Checks" >}}
