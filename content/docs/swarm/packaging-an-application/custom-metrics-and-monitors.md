@@ -74,10 +74,6 @@ Colors can be specified using one of the standard web color formats:
 
 ```yaml
 monitors:
-  cpuacct:
-  - DB,redis
-  memory:
-  - DB,redis
   custom:
   - name: Disk Usage (bytes)
     targets:
