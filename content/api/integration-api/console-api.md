@@ -16,8 +16,8 @@ Returns values corresponding to the given console option name.
 
 #### Request parameters
 
-| Name | Type | Description |
-|---|---|---|
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
 | name | String | Option name |
 
 Defined Option Names
@@ -58,15 +58,16 @@ Defined Option Names
 #### Response Status
 
 | Status | Description |
-|---|---|
-| 200 | Success | 
-| 400 | Bad request |
+| ------ | ----------- |
+| 200    | Success     |
+| 400    | Bad request |
 
 #### Response body
 
 Option value (string)
 
 #### Example
+
 ```
 $ curl -k $REPLICATED_INTEGRATIONAPI/console/v1/option?name=app.update.check.schedule
 # @every 5h
@@ -78,18 +79,18 @@ Authenticates against the console authentication settings.
 
 #### Request payload
 
-| Name | Type | Description |
-|---|---|---|
+| Name     | Type   | Description                                           |
+| -------- | ------ | ----------------------------------------------------- |
 | username | String | Username (required only for authentication type LDAP) |
-| password | String | Password |
+| password | String | Password                                              |
 
 #### Response Status
 
-| Status | Description |
-|---|---|
-| 200 | Authentication successful |
-| 400 | Bad request |
-| 401 | Invalid authentication credentials |
+| Status | Description                        |
+| ------ | ---------------------------------- |
+| 200    | Authentication successful          |
+| 400    | Bad request                        |
+| 401    | Invalid authentication credentials |
 
 #### Response body
 
