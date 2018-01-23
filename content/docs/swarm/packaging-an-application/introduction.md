@@ -8,7 +8,26 @@ tags: [ "Application YAML", Schedulers, "Snapshots", "Preflight Checks", "Swarm"
 index: false
 ---
 
-Replicated will deploy an application that is defined in a YAML spec. We currently support deploying an application that uses the Replicated scheduler or deploying a Kubernetes application. Understanding how each of these will be installed and maintained is an important consideration when choosing the scheduler to use to deploy your application.
+Using Replicated with the built-in Docker Swarm support allows you and your team to make use of your `docker-compose.yml` to deploy your application via the Replicated platform.
+
+The release configuration YAML is separated into two sections, the first for settings related to the Replicated platform and specific Replicated features used in the release, and the second for the contents of your `docker-compose.yml` file.
+
+For an example of what a complete release configuration YAML looks like, you can checkout the [Swarm Voting App](/docs/examples/swarm-votingapp/) which is utilizing the `kind:` tag to designate both Replicated and Swarm YAML sections.
+
+```
+---
+# kind: replicated
+
+replicated_api_version: {{< replicated_api_version_current >}}
+name: "My Application"
+
+---
+# kind: scheduler-swarm
+version: "3.3"
+
+services: 
+  ...
+```
 
 {{< linked_headline "Replicated API Version" >}}
 
