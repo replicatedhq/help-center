@@ -8,17 +8,13 @@ tags: [ "Application YAML", "CLI Commands" ]
 index: false
 ---
 
-The `cmds` section of the YAML allows you to leverage the power of external commands within your configuration. The sole
-purpose of these `cmds` is to generate data for input in the configuration screen.
+The `cmds` section of the YAML allows you to leverage the power of external commands within your configuration. The sole purpose of these `cmds` is to generate data for input in the configuration screen.
 
-A command takes a variable number of string arguments and returns an array of strings. We have created an API with some
-useful commands. There is also the option to run the command raw. This command will take any `raw` string input and run
-the command in an [Ubuntu Trusty container](https://hub.docker.com/r/replicated/cmd/).
+A command takes a variable number of string arguments and returns an array of strings. We have created an API with some useful commands. There is also the option to run the command raw. This command will take any `raw` string input and run the command in an [Ubuntu Trusty container](https://hub.docker.com/r/replicated/cmd/).
 
 The command is run at YAML import time only (during app installation & during app updates).
 
-Below is an example of a command that will generate a private key, a x509 certificate, and a random admin password that
-are used as configuration for our app.
+Below is an example of a command that will generate a private key, a x509 certificate, and a random admin password that are used as configuration for our app.
 
 ```yaml
 cmds:
