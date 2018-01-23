@@ -19,7 +19,6 @@ The Swarm scheduler requires a new YAML format as discussed here: [Replicated wi
 
 The basic install will install Docker (as needed) and Replicated. It will save the install script to a file which you can inspect and then run. We recommend reading and understanding the install script prior to running.
 
-
 ```shell
 curl -sSL -o install.sh  https://get.replicated.com/swarm-init
 sudo bash ./install.sh
@@ -37,25 +36,26 @@ curl -sSL https://get.replicated.com/swarm-init | sudo bash
 
 The install script can take flags to help your customers with specialized enterprise setups.
 
-|Flag|Usage|
-|----|-----|
-|airgap|airgap implies "no proxy" and "skip docker"|
-|bypass-storagedriver-warnings|Bypass the storagedriver warning|
-|daemon-token|Authentication token used by operators for automating a cluster installation|
-|docker-version|Install a specific version of docker|
-|exclude-subnet|Prevent docker from creating a network in a subnet. Can be specified multiple times.|
-|http-proxy|If present, then use proxy|
-|log-level|If present, this will be the log level of the Replicated daemon (debug, info, or error).|
-|no-docker|Skip docker installation|
-|no-proxy|If present, do not use a proxy|
-|public-address|The public IP address for stack|
-|swarm-advertise-addr|The swarm advertise address|
-|swarm-listen-addr|The swarm listen address|
-|swarm-stack-namespace|The swarm stack namespace to use|
-|ui-bind-port|The port to bind the UI to|
-|no-ce-on-ee|Disable installation of Docker CE onto platforms it does not support - RHEL, SLES and Oracle Linux|
+| Flag                          | Usage                                                                                              |
+| ----------------------------- | -------------------------------------------------------------------------------------------------- |
+| airgap                        | airgap implies "no proxy" and "skip docker"                                                        |
+| bypass-storagedriver-warnings | Bypass the storagedriver warning                                                                   |
+| daemon-token                  | Authentication token used by operators for automating a cluster installation                       |
+| docker-version                | Install a specific version of docker                                                               |
+| exclude-subnet                | Prevent docker from creating a network in a subnet. Can be specified multiple times.               |
+| http-proxy                    | If present, then use proxy                                                                         |
+| log-level                     | If present, this will be the log level of the Replicated daemon (debug, info, or error).           |
+| no-docker                     | Skip docker installation                                                                           |
+| no-proxy                      | If present, do not use a proxy                                                                     |
+| public-address                | The public IP address for stack                                                                    |
+| swarm-advertise-addr          | The swarm advertise address                                                                        |
+| swarm-listen-addr             | The swarm listen address                                                                           |
+| swarm-stack-namespace         | The swarm stack namespace to use                                                                   |
+| ui-bind-port                  | The port to bind the UI to                                                                         |
+| no-ce-on-ee                   | Disable installation of Docker CE onto platforms it does not support - RHEL, SLES and Oracle Linux |
 
 Example quick install with flags:
+
 ```shell
 curl -sSL https://get.replicated.com/swarm-init | sudo bash -s no-proxy ui-bind-port=8000
 ```
@@ -97,4 +97,5 @@ sleep 5; docker ps -a | grep piper | awk '{print $1}' | xargs docker rm
 sleep 10; docker volume ls | grep replicated | awk '{print $2}' | xargs docker volume rm
 sleep 5; docker images | grep 'replicated\|premkit' | awk '{print $3}' | xargs docker rmi
 sleep 5; docker secret ls | grep 'replicated\daemon_token' | awk '{print $1}' | xargs docker secret rm
+sleep 5; docker stack rm retraced
 ```
