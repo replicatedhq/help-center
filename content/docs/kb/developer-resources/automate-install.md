@@ -1,18 +1,17 @@
 ---
 date: "2016-07-01T00:00:00Z"
 lastmod: "2016-07-03T00:00:00Z"
-title: "Automate Install for Testing"
+title: "Automated Install for Testing"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
-tags: ["Installing Replicated", "Application YAML"]
+tags: ["Installing Replicated", "Automation", "Testing"]
 ---
 
 Replicated has support for automated installation and configuration to facilitate integration
-testing. This feature is built to configure a new installation and prepare it to run a test
-suite and not to managing existing installations.
+testing. Please note that this feature is built for bootstrapping new installations and not for managing existing installations.
 
-These steps must be run before installing Replicated. The Replicated daemon only checks for these
+These steps must be run before installing Replicated. The Replicated daemon will only check for these
 values during startup, and only the first time it is started.
 
 ## Configure Replicated Automatically
@@ -23,13 +22,16 @@ or all of the following options:
 
 ```json
 {
-  "DaemonAuthenticationType": "anonymous",
+  "DaemonAuthenticationType": "password",
+  "DaemonAuthenticationPassword": "this-is-a-secret",
   "TlsBootstrapType": "server-path",
   "TlsBootstrapHostname": "server.company.com",
   "TlsBootstrapCert": "/etc/server.crt",
   "TlsBootstrapKey": "/etc/server.key",
   "LogLevel": "debug",
   "LicenseFileLocation": "/tmp/license.rli",
+  "LicenseBootstrapAirgapPackagePath": "/tmp/airgap.bundle",
+  "LicenseBootstrapChannelID": "4331c5fa27ad4726644993e1bd234ded",
   "ImportSettingsFrom": "/tmp/settings.conf",
   "BypassPreflightChecks": true
 }
@@ -47,10 +49,11 @@ These settings are explained in the following table:
 | TlsBootstrapCert | A file location as a `string` | If TlsBootstrapType is set to server-path, this value should be present and set to the location of a PEM encoded certificate file. |
 | TlsBootstrapKey | A file location as a `string` | If TlsBootstrapType is set to server-path, this value should be present and set to the location of a PEM encoded key file. |
 | LogLevel | `['debug', 'info, 'error']` | If present, this will set the log level of the Replicated daemon. |
-| Channel | `['stable', 'beta']` | The release channel you are using to install Replicated from. This is the Replicated channel, not the app channel. |
 | LicenseFileLocation | A file location as a `string` | This should be set to the location of an installable .rli license file. Note that you should not enable activation on this license. |
+| LicenseBootstrapAirgapPackagePath | A file location as a `string` | This should be set to the location of the airgap bundle path. When set, the automated install will proceed as an [airgapped installation](/docs/distributing-an-application/airgapped-installations/). Note that `LicenseFileLocation` must also be set. |
+| LicenseBootstrapChannelID | A channel ID as a `string` | This property allows specifying the installation channel for [multi-channel licenses](/docs/kb/supporting-your-customers/multichannel-licenses/). |
 | ImportSettingsFrom | A file location as a `string` | If your application has any required config settings, you can supply custom values here. Replicated will read these and set them as if the user manually configured it. (see below) |
-| BypassPreflightChecks	 | Boolean `true` or `false` | Skips preflight checks |
+| BypassPreflightChecks	 | Boolean `true` or `false` | Allows application to start without preflight checks |
 
 ## Configure App Settings Automatically
 
