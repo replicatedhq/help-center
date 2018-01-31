@@ -1,7 +1,11 @@
 {{ partial "headerWithSearch.html" . }}
 	<main>
 		<article class="single">
-			<div class="u-gradient--redToRed main-section header">
+				{{ if .Params.gradient }}
+					<div class="u-gradient--{{ .Params.gradient }} main-section header flex-column flex1 justifyContent--center">
+				{{ else }}
+					<div class="u-gradient--redToRed main-section header flex-column flex1 justifyContent--center">
+				{{ end }}
 				<div class="container">
 					<div class="paddingContainer">
 						<h1 class="u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--left">
