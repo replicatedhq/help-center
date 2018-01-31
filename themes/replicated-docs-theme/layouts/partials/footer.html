@@ -63,6 +63,12 @@
     $('#search-field').on("blur", function () {
       $(this).hide("slide", { direction: "right" }, 300);
     });
+
+    $('.tooltip').tooltip({
+      position: {  my: "center bottom-10", at: "center top"  },
+      show: { effect: "fade", duration: 200 },
+      hide: { effect: "fade", duration: 200 }
+    });
 	</script>
 </body>
 </html>

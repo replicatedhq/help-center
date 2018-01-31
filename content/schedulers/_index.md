@@ -129,7 +129,7 @@ wrapperCSSClass: "scheduler-types-section"
                             <tbody>
                                 <tr>
                                     <td>One-line installation</td>
-                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-yellowCustomCircle tooltip" title="Tooltip"></span></td>
                                     <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                 </tr>

@@ -9,7 +9,7 @@
       slug: "../customers"
     - title: "Create a Support Bundle Spec"
       description: "Define what information you want to collect when diagnosing an issue"
-      slug: "spec"
+      slug: "/guides/support-bundle/generate"
     - title: "Collect a bundle"
       description: "Collect a support bundle from a server where your app is running"
       slug: "generate"

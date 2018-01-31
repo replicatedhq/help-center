@@ -6,6 +6,8 @@ weight: "801"
 categories: [ "Support Bundle" ]
 index: "guides"
 tags: ["Support Bundle"]
+type: "guide"
+gradient: "orangeToOrange"
 ---
 
 Once you've [created a support bundle spec](./spec), you can give a command to your customer to generate a support bundle based on the spec. If you change the spec to include additional collected files, the command your customer will run doesn't change.

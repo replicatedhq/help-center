@@ -1,11 +1,13 @@
 ---
 date: "2018-01-30T04:02:20Z"
-title: "Create a Support Bundle Spec"
+title: "Spec"
 description: "A support bundle spec defines what data to collect and store in a support bundle."
 weight: "801"
 categories: [ "Support Bundle" ]
 index: "guides"
 tags: ["Support Bundle"]
+type: "guide"
+gradient: "orangeToOrange"
 ---
 
 You can define what to include in your support bundle by creating and editing a support bundle spec. This is simply a YAML document that defines what to include in the created bundle, where to store the data inside the bundle, and also defines some control over the lifecycle, messages and prompts that will be displayed to your customer when creating a support bundle.
