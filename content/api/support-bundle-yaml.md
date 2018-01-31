@@ -1,10 +1,8 @@
 ---
-categories:
-- Reference
+categories: [ "Reference" ]
 date: 2018-01-17T23:51:55Z
 description: Documentation for standalone Support Bundle specs
 index: false
-hideFromList: true
 title: Support Bundle YAML Reference
 weight: "12000"
 ---
