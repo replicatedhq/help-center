@@ -66,7 +66,7 @@ sudo docker run --name studio -d \
     replicated/studio:latest
 ```
 
-## Iterate on application YAML
+## Iterate on your application YAML
 
 During installation, a new directory named `replicated` is created in your home directory. Once your license is activated, Replicated Studio will setup the most recent release and save it to `~/replicated/current.yaml`. Any time this file is updated and saved, Replicated Studio will create a new release using the next available sequence number.
 
@@ -80,7 +80,7 @@ After you have uploaded your `current.yaml` changes, you can navigate to your on
 
 **_Note: In the directory `~/replicated/releases` you can view a copy of each release Replicated Studio has created along the way._**
 
-## Iterate on Docker Images
+## Iterate on your Docker Images
 
 As well as being able to iterate on your application YAML, you can also use Studio to iterate on your Docker images. This simplifies the development workflow when you need to make changes to your code base to support on-prem deployments.
 
