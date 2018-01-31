@@ -16,4 +16,8 @@ guides:
     description: "You've shipped on Replicated, now it's time to integrate Replicated's tooling to automate application management and facilitate collaboration."
     level: "advanced"
     slug: "automate-your-workflow"
+  - title: "Support Bundle"
+    description: "Use Replicated's standalone Support Bundle to diagnose problems with any app, deployed any way, anywhere."
+    level: "advanced"
+    slug: "support-bundle"
 ---
