@@ -9,7 +9,7 @@
       slug: "TODO"
     - title: "Create a Support Bundle Spec"
       description: "Define what information you want to collect when diagnosing an issue"
-      slug: "TODO"
+      slug: "/docs/support-bundle/create-a-suppor-bundle-spec"
     - title: "Collect a bundle"
       description: "Collect a support bundle from a server where your app is running"
       slug: "TODO"
