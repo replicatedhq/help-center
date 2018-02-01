@@ -1,0 +1,49 @@
+---
+categories:
+- support-bundle-yaml-specs
+date: 2018-01-17T23:51:55Z
+description: Collect a list of docker swarm services
+index: docs
+title: docker.service-ls
+weight: "100"
+---
+
+## docker.service-ls
+
+Collect a list of docker swarm services
+
+
+```yaml
+specs:
+  - docker.service-ls:
+      output_dir: /swarm/services/list/
+      description: List of all services starting with `cooltool-`
+      Filters:
+        name:
+          - cooltool-
+```
+
+    
+### Optional Parameters
+
+
+- `Filters` - Same as would be passed to `docker service ls`
+
+
+    
+### Outputs
+
+
+- `service_ls.raw` - Raw output
+
+- `service_ls.json` - JSON output
+
+- `service_ls.human` - Human-readable output
+
+    
+<br>
+{{< note title="Shared Parameters" >}}
+This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
+{{< /note >}}
+    
+    
