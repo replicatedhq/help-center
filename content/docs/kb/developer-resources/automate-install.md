@@ -1,15 +1,15 @@
 ---
 date: "2016-07-01T00:00:00Z"
 lastmod: "2016-07-03T00:00:00Z"
-title: "Automated Install for Testing"
+title: "Automated Installs"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
-tags: ["Installing Replicated", "Automation", "Testing"]
+tags: ["Installing Replicated", "Automation"]
 ---
 
-Replicated has support for automated installation and configuration to facilitate integration
-testing. Please note that this feature is built for bootstrapping new installations and not for managing existing installations.
+Replicated has support for automated installation and configuration.
+Please note that this feature is built for bootstrapping new installations and not for managing existing installations.
 
 These steps must be run before installing Replicated. The Replicated daemon will only check for these
 values during startup, and only the first time it is started.
@@ -41,7 +41,7 @@ These settings are explained in the following table:
 
 | Setting | Acceptable Values | Description |
 |---------|-------------------|-------------|
-| DaemonAuthenticationType | `anonymous` or `password` | For test automation Replicated supports anonymous and password protected access. |
+| DaemonAuthenticationType | `anonymous` or `password` | Replicated supports anonymous and password protected access. |
 | DaemonAuthenticationPassword | Any `string` | If DaemonAuthenticationType is set to `password` this value is required to access the Replicated console. |
 | DaemonToken | Any `string` | Authentication token used by operators for automating a cluster installation |
 | TlsBootstrapType | `['server-path', 'self-signed']` | The type of TLS cert the Replicated UI will run with. Use self-signed for a fully automated setup, use server-path to provide a static cert and key to bootstrap the console with. |
