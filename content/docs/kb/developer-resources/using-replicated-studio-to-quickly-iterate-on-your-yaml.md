@@ -16,8 +16,7 @@ Additionally, Studio gives you and your team independent isolated build environm
 
 With your application development isolated, changes can be tested quicker, and you no longer need to update your shared Replicated account with each change.
 
-
-## Getting Started
+## Getting Started on Replicated Scheduler
 
 ### 1. Install
 
@@ -29,13 +28,45 @@ curl -sSL https://get.replicated.com/studio | sudo bash
 
 You'll have everything you need to get started, including a full Replicated installation (using the native scheduler), all Replicated dependencies, and the Studio development services.
 
-
 ### 2. Activate
 
 Once Replicated and Replicated Studio are installed, you now need to upload and activate your [development customer license](https://help.replicated.com/docs/distributing-an-application/create-licenses/#license-type-required) by navigating to the on-prem admin console at `https://<YOUR SERVER ADDRESS>:8800` in your browser of choice.
 
+## Getting Started on Replicated Swarm
 
-### 3a. Iterate (on your application YAML)
+### 1. Install Replicated Swarm
+
+```bash
+curl -sSL https://get.replicated.com/swarm-init | sudo bash
+```
+
+### 2. Update the Replicated Configuration
+
+Find the private IP of the host:
+
+```bash
+sudo docker info --format "{{.Swarm.NodeAddr}}"
+```
+
+Add `MARKET_BASE_URL=http://[private-ip-address]:8006` to `replicated.environment` in `/tmp/replicated-docker-compose.yml`. Save, and deploy the changes to Replicated:
+
+```bash
+sudo docker stack deploy -c /tmp/replicated-docker-compose.yml replicated
+```
+
+### 3. Install Studio
+
+```bash
+mkdir -p $HOME/replicated
+
+sudo docker run --name studio -d \
+    --restart always \
+    -v $HOME/replicated:/replicated \
+    -p 8006:8006 \
+    replicated/studio:latest
+```
+
+## Iterate on your application YAML
 
 During installation, a new directory named `replicated` is created in your home directory. Once your license is activated, Replicated Studio will setup the most recent release and save it to `~/replicated/current.yaml`. Any time this file is updated and saved, Replicated Studio will create a new release using the next available sequence number.
 
@@ -47,19 +78,15 @@ scp current.yaml [myuser]@[my.development.host]:/home/[myuser]/replicated
 
 After you have uploaded your `current.yaml` changes, you can navigate to your on-prem Admin Console (`https://<YOUR SERVER ADDRESS>:8800`) and click the `Check for updates` button to see your new release.
 
-***Note: In the directory `~/replicated/releases` you can view a copy of each release Replicated Studio has created along the way.***
+**_Note: In the directory `~/replicated/releases` you can view a copy of each release Replicated Studio has created along the way._**
 
-
-
-### 3b. Iterate (on your Docker images)
+## Iterate on your Docker Images
 
 As well as being able to iterate on your application YAML, you can also use Studio to iterate on your Docker images. This simplifies the development workflow when you need to make changes to your code base to support on-prem deployments.
 
 To do this, rebuild your Docker images on your Studio server reusing the existing tags. Once you restart the application from the on-prem Admin Console (`https://<YOUR SERVER ADDRESS>:8800`) or CLI, your updated images will be used by Replicated.
 
-***Note: When iterating on Docker images in Studio, referencing local Docker images using the `latest` tag is not supported. Replicated will re-pull any images with the `latest` tag, thus overwriting any changes you are making locally.***
-
-
+**_Note: When iterating on Docker images in Studio, referencing local Docker images using the `latest` tag is not supported. Replicated will re-pull any images with the `latest` tag, thus overwriting any changes you are making locally._**
 
 ## Additonal features
 
