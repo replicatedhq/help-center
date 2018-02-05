@@ -70,7 +70,7 @@ The `lifecycle` message allows you to confiugre messages and prompts, and option
     contents: "Starting support bundle collection..."
   - generate: {}
   - upload:
-    - prompt:
+      prompt:
         message: "Done! Do you want to upload the support bundle for analysis?"
         accept: "Upload complete!"
         decline: "Skipping upload. Please send the support bundle at {{.BundlePath}} to support."
