@@ -10,14 +10,18 @@ type: "guide"
 gradient: "orangeToOrange"
 ---
 
-You can define what to include in your support bundle by creating and editing a support bundle spec. This is simply a YAML document that defines what to include in the created bundle, where to store the data inside the bundle, and also defines some control over the lifecycle, messages and prompts that will be displayed to your customer when creating a support bundle.
+You can define what to include in your support bundle by creating and editing a support bundle spec. This is simply a YAML document that defines 
 
-The support bundle spec is a single YAML document with two top level keys, `specs` and `lifecycle`. The `specs` key defines what to collect and store in the bundle while the `lifecycle` key defines the messaging, prompts and interactions that will be visible to your customer when they run the command.
+- What files and command outputs to include in the bundle
+- How data is stored and organized inside the bundle
+- Lifecycle, messages and prompts that will be displayed to your customer when generating a support bundle
+
+The support bundle spec is a single YAML document with two top level keys, `specs` and `lifecycle`.
 
 ### `specs`
-The `specs` top level YAML key contains as many child keys as you'd like, each defining an option to include in the bundle. We've shipped and included many built-in commands that can be very simple to add.
+The `specs` top level YAML key contains as many items as you'd like, each defining an item to include in the bundle. We've shipped and included many built-in commands that can be very simple to add.
 
-For example, to collect the output of `uptime` and include it in the support bundle, which is useful to know how long it's been since the server was last rebooted, you would include:
+For example, you can include `uptime` in the support bundle to determine how long it's been since the server was last rebooted:
 
 ```yaml
 specs:

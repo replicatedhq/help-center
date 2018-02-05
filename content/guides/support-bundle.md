@@ -4,12 +4,9 @@
   level: "advanced"
   index: false
   chapters:
-    - title: "Manage Customers using the Replicated Console"
-      description: "Use Replicated's Console to manage your customers"
-      slug: "../customers"
     - title: "Create a Support Bundle Spec"
       description: "Define what information you want to collect when diagnosing an issue"
-      slug: "/guides/support-bundle/generate"
+      slug: "/guides/support-bundle/spec"
     - title: "Collect a bundle"
       description: "Collect a support bundle from a server where your app is running"
       slug: "generate"
