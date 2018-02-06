@@ -12,6 +12,7 @@ Below is a list of domains that Replicated On-Prem will communicate with in non-
 - get.replicated.com
 - api.replicated.com
 - registry.replicated.com
+- registry-data.replicated.com
 - quay.io
 - get.docker.com
 - *.docker.io, *.docker.com <sup>[1](#dockerio)</sup>
