@@ -20,6 +20,14 @@ If an application isn't ready to receive requests, by providing anything other t
 
 To use this API, configure the `identity` field when packaging your application, [as documented in the Identity Configuration](/docs/packaging-an-application/ldap-integration/)
 
+### Provisioning API vs. Identity API
+
+The Provisioning API and Identity API achieve the same goal with different authentication strategies.
+
+For applications that can support it, the Provisioning API offers data locality and asynchronous updates, giving applications greater performance and control over their user storage. In instances where the identity server is unavailable, users can still login to the application, but the data may be stale until the next successful sync.
+
+In contrast, the Identity API is synchronous, requiring the identity server to be available to successfully authenticate. Alternate login methods may be provided to get around identity server unavailability. For API-driven applications, allowing users to generate API keys may also allow continued operation until the identity server is back online.
+
 ![Provisioning API initial sync flow](/images/integration/provision-sync.png)
 
 ## API Methods

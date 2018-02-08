@@ -1,16 +1,26 @@
 ---
 date: "2016-07-03T04:12:27Z"
 title: "Identity API"
-description: "Provides authentication and syncing with LDAP sever"
+description: "Provides authentication with identity servers"
 weight: "555"
 categories: [ "Integration API" ]
 index: "docs"
 aliases : [docs/reference/integration-api/identity-api]
 ---
 
-Replicated currently supports integration with LDAP. Identity API provides authentication and syncing with LDAP sever.
+## About the Identity API
 
-## Identity API Endpoint
+The Identity API provides synchronous authentication with an identity server, often a corporate LDAP or Active Directory (AD) service. In this model, login requests are made to the Replicated Integration API, which validates the credentials provided against the identity service. Applications using the Identity API would maintain a separate user table that corresponds with the LDAP service, or rely entirely on the upstream identity provider for local identity.
+
+### Provisioning API vs. Identity API
+
+The Provisioning API and Identity API achieve the same goal with different authentication strategies.
+
+For applications that can support it, the Provisioning API offers data locality and asynchronous updates, giving applications greater performance and control over their user storage. In instances where the identity server is unavailable, users can still login to the application, but the data may be stale until the next successful sync.
+
+In contrast, the Identity API is synchronous, requiring the identity server to be available to successfully authenticate. Alternate login methods may be provided to get around identity server unavailability. For API-driven applications, allowing users to generate API keys may also allow continued operation until the identity server is back online.
+
+## API Methods
 
 The Identity API is part of the Integration API. To discover the Integration API base endpoint, query the REPLICATED_INTEGRATIONAPI environment variable from inside your container.
 
@@ -23,14 +33,15 @@ Lists identity sources.
 Response
 
 | Status | Description |
-|---|---|
-| 200 | Sucess |
+| ------ | ----------- |
+| 200    | Sucess      |
 
 In case 200 is returned, the body of the response will contain a listing of enabled identity sources.
 
 #### Examples
 
 cURL
+
 ```bash
 $ curl -k -i $REPLICATED_INTEGRATIONAPI/identity/v1/sources"
 HTTP/1.1 200 OK
@@ -58,43 +69,44 @@ Authenticates the user and returns the corresponding entry properties.
 
 Request payload
 
-| Name | Type | Description |
-|---|---|---|
+| Name     | Type   | Description                                   |
+| -------- | ------ | --------------------------------------------- |
 | username | String | As defined by the ldap_username_field setting |
-| password | String | Cleartext passowrd |
+| password | String | Cleartext passowrd                            |
 
 Query parameters
 
-| Name | Type | Description |
-|---|---|---|
-| hostname * | String | Hostname for the LDAP server |
-| base_dn * | String | Base DN for the LDAP server |
+| Name        | Type   | Description                  |
+| ----------- | ------ | ---------------------------- |
+| hostname \* | String | Hostname for the LDAP server |
+| base_dn \*  | String | Base DN for the LDAP server  |
 
-*\* required when identity is configured with multiple sources*
+_\* required when identity is configured with multiple sources_
 
 Response
 
-| Status | Description |
-|---|---|
-| 200 | User authenticated successfully |
-| 401 | Invalid username or password |
+| Status | Description                     |
+| ------ | ------------------------------- |
+| 200    | User authenticated successfully |
+| 401    | Invalid username or password    |
 
 In case 200 is returned, the body of the response will contain LDAP properties for the authenticated user entry. The password attribute will be omitted from the result.
 
 Response body
 
-| Name | Type | Description |
-|---|---|---|
-| DN | String | LDAP DN for the user's entry |
-| Username | String | Username |
-| Attributes | Array | An array of available LDAP attributes for the user's entry, including any custom attributes for the user. |
-| Groups | Array | Array of groups that the user belongs to. Each group contains group's DN and a list of its LDAP attributes. |
+| Name       | Type   | Description                                                                                                 |
+| ---------- | ------ | ----------------------------------------------------------------------------------------------------------- |
+| DN         | String | LDAP DN for the user's entry                                                                                |
+| Username   | String | Username                                                                                                    |
+| Attributes | Array  | An array of available LDAP attributes for the user's entry, including any custom attributes for the user.   |
+| Groups     | Array  | Array of groups that the user belongs to. Each group contains group's DN and a list of its LDAP attributes. |
 
 #### Example
 
 Note that the response JSON has been prettified for easier reading.
 
 cURL
+
 ```bash
 {
   "DN": "cn=Test User,ou=users,dc=replicated,dc=com",
@@ -129,20 +141,20 @@ Returns properties for the specified user.
 
 Query parameters
 
-| Name | Type | Description |
-|---|---|---|
-| hostname * | String | Hostname for the LDAP server |
-| base_dn * | String | Base DN for the LDAP server |
+| Name        | Type   | Description                  |
+| ----------- | ------ | ---------------------------- |
+| hostname \* | String | Hostname for the LDAP server |
+| base_dn \*  | String | Base DN for the LDAP server  |
 
-*\* required when identity is configured with multiple sources*
+_\* required when identity is configured with multiple sources_
 
 Response
 
-| Status | Description |
-|---|---|
-| 200 | User authenticated successfully |
-| 401 | Invalid username or password (for LDAP search user) |
-| 404 | Requested user is not found |
+| Status | Description                                         |
+| ------ | --------------------------------------------------- |
+| 200    | User authenticated successfully                     |
+| 401    | Invalid username or password (for LDAP search user) |
+| 404    | Requested user is not found                         |
 
 In case 200 is returned, the body of the response is the same as that of the /identity/v1/login call.
 
@@ -154,23 +166,24 @@ In case 200 is returned, the body of the response will be true if the user exist
 
 Query parameters
 
-| Name | Type | Description |
-|---|---|---|
-| hostname * | String | Hostname for the LDAP server |
-| base_dn * | String | Base DN for the LDAP server |
+| Name        | Type   | Description                  |
+| ----------- | ------ | ---------------------------- |
+| hostname \* | String | Hostname for the LDAP server |
+| base_dn \*  | String | Base DN for the LDAP server  |
 
-*\* required when identity is configured with multiple sources*
+_\* required when identity is configured with multiple sources_
 
 Response
 
-| Status | Description |
-|---|---|
-| 200 | Check completed successfully |
-| 401 | Invalid username or password |
+| Status | Description                  |
+| ------ | ---------------------------- |
+| 200    | Check completed successfully |
+| 401    | Invalid username or password |
 
 #### Examples
 
 cURL
+
 ```bash
 $ curl -k -i $REPLICATED_INTEGRATIONAPI/identity/v1/user/jdoe/exists
 HTTP/1.1 200 OK
@@ -182,6 +195,7 @@ true
 ```
 
 cURL
+
 ```bash
 $ curl -k -i $REPLICATED_INTEGRATIONAPI/identity/v1/user/badusername/exists
 HTTP/1.1 200 OK
