@@ -12,6 +12,8 @@ aliases : [docs/reference/integration-api/identity-api]
 
 The Identity API provides synchronous authentication with an identity server, often a corporate LDAP or Active Directory (AD) service. In this model, login requests are made to the Replicated Integration API, which validates the credentials provided against the identity service. Applications using the Identity API would maintain a separate user table that corresponds with the LDAP service, or rely entirely on the upstream identity provider for local identity.
 
+Replicated does not recommend caching user credentials in your application, instead using the Provisioning API for this purpose. For user profiles, permissions, and other tasks, we recommend creating a virtual user in your application that maps to the SID of the user account from the identity server.
+
 ### Identity API vs. Provisioning API
 
 The Identity API and Provisioning API achieve the same goal with different authentication strategies.
