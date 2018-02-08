@@ -1,16 +1,28 @@
 ---
 date: "2016-07-03T04:12:27Z"
 title: "Provisioning API"
-description: "Provides authentication and syncing with LDAP sever"
+description: "Provides authentication syncing with a customer's identity server"
 weight: "556"
 categories: [ "Integration API" ]
 index: "docs"
 aliases : [docs/reference/integration-api/provisioning-api]
 ---
 
-You are (optionally) responsible for implementing a provisioning API to enable full identity sync. Once enabled, Replicated will make calls into this API when changes are detected in the directory service.
+## About the Provisioning API
 
-When implemented and defined in the [Identity configuration](/docs/packaging-an-application/ldap-integration/), this API will receive the list of LDAP users (initially) and updates when users are added, edited, and removed. Should Replicated receive a non 2xx response from your provisioning endpoint it will stop updates and continue with the same request on the next sync.
+The Provisioning API enables application developers to seamlessly integrate their Identity Service with traditional application flows used in SaaS applications. Instead of implementing full LDAP authentication for their applications, developers can instead expose a set of API endpoints, which Replicated will sync to from the LDAP server.
+
+In this model, applications use the authentication that they already have, and use the API endpoints for managing their user database.
+
+Replicated brokers the interaction between the identity server and your application. Depending on the identity server used and it's configuration, changes are propagated to Replicated via push or periodic polling. Applications do not need to have any knowledge of the LDAP server.
+
+If an application isn't ready to receive requests, by providing anything other than a 2xx response to API calls, the sync will pause and attempt another sync later.
+
+To use this API, configure the `identity` field when packaging your application, [as documented in the Identity Configuration](/docs/packaging-an-application/ldap-integration/)
+
+![Provisioning API initial sync flow](/images/integration/provision-sync.png)
+
+## API Methods
 
 ### GET /v1/ping
 
@@ -24,21 +36,21 @@ All other status codes will be interpreted as errors and sync will not be initia
 
 ### POST /v1/user/create
 
-This endpoint is called during the initial sync and when a new user record is being created in the LDAP server. The implementation needs to handle duplicate create calls for the same entity gracefully.  For example, a record can be updated or the call can be ignored.  Returning an error will result in sync being halted.
+This endpoint is called during the initial sync and when a new user record is being created in the LDAP server. The implementation needs to handle duplicate create calls for the same entity gracefully. For example, a record can be updated or the call can be ignored. Returning an error will result in sync being halted.
 
 #### Request Payload
 
-| Name | Type | Description |
-|---|---|---|
-| uuid | String | (Required) This is the permanent unique user identifier. Note that username can change but still identify the same user. |
-| user_id | String | (Optional) User ID if one is defined by the LDAP server. |
-| username | String | (Optional) Username as defined by the ldap_username_field setting. |
-| first_name | String | (Optional) First name |
-| last_name | String | (Optional) Last name |
-| full_name | String | (Optional) Full name |
-| password_format | String | (Optional) Password (encryption/hashing) format |
-| password | String | (Optional) Password. Note that this maybe clear text password. This will be indicated by the value in password_format |
-| email | String | (Optional) Email |
+| Name            | Type   | Description                                                                                                              |
+| --------------- | ------ | ------------------------------------------------------------------------------------------------------------------------ |
+| uuid            | String | (Required) This is the permanent unique user identifier. Note that username can change but still identify the same user. |
+| user_id         | String | (Optional) User ID if one is defined by the LDAP server.                                                                 |
+| username        | String | (Optional) Username as defined by the ldap_username_field setting.                                                       |
+| first_name      | String | (Optional) First name                                                                                                    |
+| last_name       | String | (Optional) Last name                                                                                                     |
+| full_name       | String | (Optional) Full name                                                                                                     |
+| password_format | String | (Optional) Password (encryption/hashing) format                                                                          |
+| password        | String | (Optional) Password. Note that this maybe clear text password. This will be indicated by the value in password_format    |
+| email           | String | (Optional) Email                                                                                                         |
 
 #### Response
 
@@ -48,7 +60,7 @@ All other status codes will be interpreted as errors and sync will not continue.
 
 ### POST /v1/user/modify
 
-This endpoint is called when an existing record is being updated in the LDAP server. The implementation needs to handle modify calls for users that don't exist gracefully.  For example, a new record maybe created.  However, only uuid is guaranteed to be present in the payload.  Returning an error will result in sync being halted.
+This endpoint is called when an existing record is being updated in the LDAP server. The implementation needs to handle modify calls for users that don't exist gracefully. For example, a new record maybe created. However, only uuid is guaranteed to be present in the payload. Returning an error will result in sync being halted.
 
 #### Request Payload
 
