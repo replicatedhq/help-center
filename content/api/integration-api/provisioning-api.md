@@ -28,9 +28,15 @@ For applications that can support it, the Provisioning API offers data locality 
 
 In contrast, the Identity API is synchronous, requiring the identity server to be available to successfully authenticate. Alternate login methods may be provided to get around identity server unavailability. For API-driven applications, allowing users to generate API keys may also allow continued operation until the identity server is back online.
 
-### API Flow
+## API Flow
+
+When using the Provisioning API, Replicated will bootstrap your user database via an initial sync. After that, it will continue to update your application based on changes. Depending on the identity server used, this can be pull or push on the Replicated side. The Provisioning API will always push user updates to your application.
+
+### Initial Sync
 
 ![Provisioning API initial sync flow](/images/integration/provision-sync.png)
+
+### Update Sync
 
 ## API Methods
 
