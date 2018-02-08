@@ -10,7 +10,7 @@ aliases : [docs/reference/integration-api/audit-api]
 
 The Audit API provides endpoints for your application to read and write audit events into the audit log.
 
-## Audit API Endpoint
+## API Methods
 
 The Audit API is part of the Integration API. To discover the Integration API base endpoint, query the REPLICATED_INTEGRATIONAPI environment variable from inside your container.
 
@@ -18,17 +18,18 @@ The Audit API is part of the Integration API. To discover the Integration API ba
 
 Records audit event information.
 
-| Name | Type | Description |
-|---|---|---|
-| name | String | Name of the event. |
-| title| String | Title of the event |
-| description| String | Human readable description of the event. |
-| ip_address| String | IP Address of the user who took the action. |
-| action | String | Machine readable name of the event. |
+| Name        | Type   | Description                                 |
+| ----------- | ------ | ------------------------------------------- |
+| name        | String | Name of the event.                          |
+| title       | String | Title of the event                          |
+| description | String | Human readable description of the event.    |
+| ip_address  | String | IP Address of the user who took the action. |
+| action      | String | Machine readable name of the event.         |
 
 #### Example request:
 
 cURL
+
 ```shell
 curl -k -X POST $REPLICATED_INTEGRATIONAPI/audit/v1/event \
   -H "Content-Type: application/json" \
@@ -36,19 +37,21 @@ curl -k -X POST $REPLICATED_INTEGRATIONAPI/audit/v1/event \
 ```
 
 JSON
+
 ```json
-{  
-    "name":"user.login",
-    "description":"john@example.com logged in successfully",
-    "title":"User Login Success",
-    "action":"user.login.success",
-    "ip_address":"192.30.252.12"
+{
+  "name": "user.login",
+  "description": "john@example.com logged in successfully",
+  "title": "User Login Success",
+  "action": "user.login.success",
+  "ip_address": "192.30.252.12"
 }
 ```
 
 #### Example response:
 
 HTTP
+
 ```
 HTTP/1.1 201 Created
 Date: Tue, 16 Jun 2015 17:59:25 GMT

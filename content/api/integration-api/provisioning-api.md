@@ -28,6 +28,8 @@ For applications that can support it, the Provisioning API offers data locality 
 
 In contrast, the Identity API is synchronous, requiring the identity server to be available to successfully authenticate. Alternate login methods may be provided to get around identity server unavailability. For API-driven applications, allowing users to generate API keys may also allow continued operation until the identity server is back online.
 
+### API Flow
+
 ![Provisioning API initial sync flow](/images/integration/provision-sync.png)
 
 ## API Methods
