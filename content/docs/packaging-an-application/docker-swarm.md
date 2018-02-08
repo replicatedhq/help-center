@@ -11,7 +11,7 @@ aliases: [
 index: "docs"
 ---
 
-If your application is defined as a Docker Compose version 3 or 3.1 yaml file, Replicated can provide the same standard functionality deploying your application via the [Docker Swarm](https://docs.docker.com/engine/swarm/) scheduler as a [Docker Stack](https://docs.docker.com/docker-cloud/apps/stacks/) as of Replicated {{< version version="2.7.0" >}}. Using the Swarm scheduler, you can use all of the Swarm functionality including overlay networks, DNS service discovery, Docker secrets and more. To see a full example, check out the [Voting App example](/docs/examples/swarm-votingapp).
+If your application is defined as a Docker Compose version 3 or 3.3 yaml file, Replicated can provide the same standard functionality deploying your application via the [Docker Swarm](https://docs.docker.com/engine/swarm/) scheduler as a [Docker Stack](https://docs.docker.com/docker-cloud/apps/stacks/) as of Replicated {{< version version="2.7.0" >}}. Using the Swarm scheduler, you can use all of the Swarm functionality including overlay networks, DNS service discovery, Docker secrets and more. To see a full example, check out the [Voting App example](/docs/examples/swarm-votingapp).
 
 ## Differences from the Replicated scheduler
 
@@ -26,6 +26,16 @@ The Swarm scheduler requires a different YAML format which combines some of the 
 # kind: scheduler-swarm
 version: "3.1"
 ```
+
+### Swarm Networking
+When using overlay network with Swarm in a multi-node environment, ensure that nodes are reachable on the following ports as described in [Docker documentation] (https://docs.docker.com/engine/swarm/swarm-tutorial/#open-protocols-and-ports-between-the-hosts)
+
+| Port | Protocol |
+|---|---|
+| 7946 | TCP/UDP |
+| 4789 | UDP |
+
+If ports are opened after Swarm cluster is initialized, Docker needs to be restarted in order to recreate the overlay network.
 
 ### External Private Images
 External private images are supported as of Replicated 2.13.0. In order to take advantage of this feature, see the guide for [integrating a third party registry](/docs/kb/developer-resources/third-party-registries).
