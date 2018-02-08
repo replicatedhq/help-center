@@ -12,13 +12,13 @@ aliases : [docs/reference/integration-api/identity-api]
 
 The Identity API provides synchronous authentication with an identity server, often a corporate LDAP or Active Directory (AD) service. In this model, login requests are made to the Replicated Integration API, which validates the credentials provided against the identity service. Applications using the Identity API would maintain a separate user table that corresponds with the LDAP service, or rely entirely on the upstream identity provider for local identity.
 
-### Provisioning API vs. Identity API
+### Identity API vs. Provisioning API
 
-The Provisioning API and Identity API achieve the same goal with different authentication strategies.
+The Identity API and Provisioning API achieve the same goal with different authentication strategies.
 
-For applications that can support it, the Provisioning API offers data locality and asynchronous updates, giving applications greater performance and control over their user storage. In instances where the identity server is unavailable, users can still login to the application, but the data may be stale until the next successful sync.
+The Identity API provides synchronous authentication and authorization, requiring the identity server to be available to successfully authenticate. Alternate login methods may be provided to get around identity server unavailability. For API-driven applications, allowing users to generate API keys may also allow continued operation until the identity server is back online.
 
-In contrast, the Identity API is synchronous, requiring the identity server to be available to successfully authenticate. Alternate login methods may be provided to get around identity server unavailability. For API-driven applications, allowing users to generate API keys may also allow continued operation until the identity server is back online.
+In contrast, the Provisioning API offers data locality and asynchronous updates, giving applications greater performance and control over their user storage. In instances where the identity server is unavailable, users can still login to the application, but the data may be stale until the next successful sync.
 
 ## API Methods
 
