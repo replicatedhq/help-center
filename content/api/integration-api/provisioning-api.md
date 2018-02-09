@@ -36,7 +36,11 @@ When using the Provisioning API, Replicated will bootstrap your user database vi
 
 ![Provisioning API initial sync flow](/images/integration/provision-sync.png)
 
+During the initial sync phase, Replicated will retrieve all of the available user identities for a given domain search. This will be converted to JSON and posted to the identity endpoint declared in the release YAML identity configuration.
+
 ### Update Sync
+
+When a user in the identity service is created or changes after the initial sync, Replicated will propgate those changes to the application individually. Applications are responsible for tracking these updates.
 
 ## API Methods
 
