@@ -40,6 +40,8 @@ During the initial sync phase, Replicated will retrieve all of the available use
 
 ### Update Sync
 
+![Provisioning API update sync flow](/images/integration/update-sync.png)
+
 When a user in the identity service is created or changes after the initial sync, Replicated will propgate those changes to the application individually. Applications are responsible for tracking these updates.
 
 ## API Methods
