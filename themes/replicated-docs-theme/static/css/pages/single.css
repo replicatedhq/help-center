@@ -380,7 +380,7 @@
 
 blockquote {
   background-color: #fcebea;
-  border-left: 3px solid red;
+  border-left: 3px solid #bc4752;
   padding-left: 5px;
   font-weight: bold;
 }
