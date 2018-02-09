@@ -44,6 +44,8 @@ During the initial sync phase, Replicated will retrieve all of the available use
 
 When a user in the identity service is created or changes after the initial sync, Replicated will propgate those changes to the application individually. Applications are responsible for tracking these updates.
 
+If an update fails, syncing will be temporarily stopped. This process will be attempted again during the next sync cycle.
+
 ## API Methods
 
 ### GET /v1/ping
