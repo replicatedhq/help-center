@@ -1,48 +1,44 @@
 {{ partial "headerWithSearch.html" . }}
 <article class="single">
-			{{ if .Params.gradient }}
-				<div class="u-gradient--{{ .Params.gradient }} main-section flex-column flex1 justifyContent--center">
-			{{ else }}
-				<div class="u-gradient--turquoiseToGreen main-section flex-column flex1 justifyContent--center">
+	{{ if .Params.gradient }}
+	<div class="u-gradient--{{ .Params.gradient }} main-section flex-column flex1 justifyContent--center">
+		{{ else }}
+		<div class="u-gradient--turquoiseToGreen main-section flex-column flex1 justifyContent--center">
 			{{ end }}
-				<div class="container u-marginTop--most">
-					<div class="paddingContainer">
-						<div class="flex flex-auto justifyContent--center u-marginTop--more">
-							{{ if .Params.api }}
-							<div class="flex-auto u-hidden--mobileTablet">
-								<span class="icon u-apiHeaderIcon u-marginRight--normal"></span>
-							</div>
-							{{ end }}
-							<div class="flex-auto u-width--full">
-								<h3 class="u-color--white u-fontWeight--bold u-fontSize--header">{{ .Title }}</h3>
-                                <p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--normal u-lineHeight--normal">{{ .Description }}</p>
-							</div>
+			<div class="container u-marginTop--most">
+				<div class="paddingContainer">
+					<div class="flex flex-auto justifyContent--center u-marginTop--more">
+						{{ if .Params.api }}
+						<div class="flex-auto u-hidden--mobileTablet">
+							<span class="icon u-apiHeaderIcon u-marginRight--normal"></span>
+						</div>
+						{{ end }}
+						<div class="flex-auto u-width--full">
+							<h3 class="u-color--white u-fontWeight--bold u-fontSize--header">{{ .Title }}</h3>
+							<p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--normal u-lineHeight--normal">{{ .Description }}</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="main-section">
-				<div class="container">
-					{{ with .Content }}
-						<div class="paddingContainer">
-							<div class="u-paddingBottom--more category-content">
-								{{ . }}
-							</div>
-						</div>
-					{{ end }}
-					<div class="paddingContainer">
-						<ul class="single-cat-docs-list">
-                        {{ range sort .Pages.ByWeight }}
-                            {{ if not .Params.hideFromList }}
-                                {{ partial "summary.html" . }}
-                            {{ end }}
-                        {{ end }}
-						</ul>
+		</div>
+		<div class="main-section">
+			<div class="container">
+				{{ with .Content }}
+				<div class="paddingContainer">
+					<div class="u-paddingBottom--more category-content">
+						{{ . }}
 					</div>
 				</div>
+				{{ end }}
+				<div class="paddingContainer">
+					<ul class="single-cat-docs-list">
+						{{ range sort .Pages.ByWeight }} {{ if not .Params.hideFromList }} {{ partial "summary.html" . }} {{ end }} {{ end }}
+					</ul>
+				</div>
 			</div>
-			<div>
-				{{ template "_internal/disqus.html" . }}
-			</div>
-		</article>
-    {{ partial "footer.html" . }}
+		</div>
+		<div>
+			{{ template "_internal/disqus.html" . }}
+		</div>
+</article>
+{{ partial "footer.html" . }}
