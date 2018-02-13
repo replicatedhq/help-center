@@ -25,19 +25,6 @@ By default, the audit log will record all Replicated-specific actions. However, 
 * When recording IP addresses, make sure to check and unwrap the `X-Forwarded-For` header. Otherwise, proxies and load balancers can hide a requester's actual IP address
 * Where possible, use clear identification for user IDs. Enterprise identity provider Object IDs (OIDs) are a good choice when LDAP or Active Directory is enabled. See the [Provisioning API](/api/integration-api/provisioning-api) for more information on enterprise identity sync.
 
-## API Flow
-
-{{< mermaid >}}
-sequenceDiagram
-Enterprise User->>Application: User Login
-Note over Application: Perform Login
-Application->>Enterprise User: Set Session
-Application-->>+Audit API: POST /audit/v1/event
-Note right of Audit API: Record Event
-Audit API-->>-Application: 201 Created
-
-{{< /mermaid >}}
-
 ## API Methods
 
 The Audit API is part of the Integration API. To discover the Integration API base endpoint, query the REPLICATED_INTEGRATIONAPI environment variable from inside your container.
