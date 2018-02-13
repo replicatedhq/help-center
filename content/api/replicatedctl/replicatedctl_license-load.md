@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_license-load
 categories:
 - replicatedctl
-date: 2017-11-20T23:51:55Z
+date: 2018-02-20T00:45:55Z
 description: Load the license from stdin
 index: docs
 title: replicatedctl license-load

@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-config_import
 categories:
 - replicatedctl
-date: 2017-11-20T23:51:55Z
+date: 2018-02-20T00:45:55Z
 description: Import app config settings from stdin
 index: docs
 title: replicatedctl app-config import
