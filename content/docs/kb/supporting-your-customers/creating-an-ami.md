@@ -47,7 +47,8 @@ instance of this server, it will be calculated again.
 sudo service replicated stop
 sudo service replicated-ui stop
 sudo service replicated-operator stop
-sudo docker rm -f replicated replicated-ui replicated-operator
+sudo docker stop replicated-premkit
+sudo docker rm -f replicated replicated-ui replicated-operator replicated-premkit
 ```
 
 ### Step 4: Remove config files
