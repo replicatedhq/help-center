@@ -16,7 +16,7 @@ On earlier versions of Replicated, the audit API references a built-in Replicate
 
 By default, the audit log will record all Replicated-specific actions. However, to meet enterprise compliance requirements, your application may use the Audit API to log your application's user's actions. These can be viewed and searched from the Replicated console. We recommend combining the audit log with the `Identity` and `Provisioning` APIs to map the audit log to an enterprise's identity environment. In this scenario, the user's LDAP or AD GUID can be used as an identitier for audit log actions.
 
-### Best Practices
+## Best Practices
 
 * Make audit API calls asynchronously
 * Use worker queues such as Resque, Celery, Java JQM, and others to log audit calls in the background
