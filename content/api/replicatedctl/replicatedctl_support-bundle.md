@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_support-bundle
 categories:
 - replicatedctl
-date: 2017-11-20T23:51:55Z
+date: 2018-02-20T00:45:55Z
 description: Generate a support bundle
 index: docs
 title: replicatedctl support-bundle
