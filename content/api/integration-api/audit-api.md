@@ -10,6 +10,12 @@ aliases : [docs/reference/integration-api/audit-api]
 
 The Audit API provides endpoints for your application to read and write audit events into the audit log.
 
+{{< callout >}}
+On earlier versions of Replicated, the audit API references a built-in Replicated service. On later, new installs of Replicated, the audit API is backed by a separate service called "Retraced". Retraced can be used the same way via the Integration API.
+{{< /callout >}}
+
+By default, the audit log will record all Replicated-specific actions. However, to meet enterprise compliance requirements, your application may use the Audit API to log your application's user's actions. These can be viewed and searched from the Replicated console. We recommend combining the audit log with the `Identity` and `Provisioning` APIs to map the audit log to an enterprise's identity environment. In this scenario, the user's LDAP or AD GUID can be used as an identitier for audit log actions.
+
 ## API Methods
 
 The Audit API is part of the Integration API. To discover the Integration API base endpoint, query the REPLICATED_INTEGRATIONAPI environment variable from inside your container.

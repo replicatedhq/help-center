@@ -8,7 +8,7 @@ index: "docs"
 aliases : [docs/reference/integration-api/version-api]
 ---
 
-The Version API provides endpoints for your application to read the current application version, release notes, pending updates and apply updates.
+The Version API provides endpoints for your application to read the current application version, release notes, pending updates and apply updates. Applications that use automatic updates can use this to notify users of pending updates and apply them without having to visit the Replicated console.
 
 ## Version API
 
@@ -21,6 +21,7 @@ Returns information describing the current version of the application running.
 #### Example request:
 
 cURL
+
 ```shell
 curl -k $REPLICATED_INTEGRATIONAPI/version/v1/current
 ```
@@ -28,13 +29,14 @@ curl -k $REPLICATED_INTEGRATIONAPI/version/v1/current
 #### Example response:
 
 HTTP
+
 ```json
 {
   "version": "100",
   "release_sequence": 51,
   "release_notes": "The release notes",
-  "release_date":"2015-12-01T00:00:00.0000000Z",
-  "install_date":"2016-01-01T21:00:00.0000000Z"
+  "release_date": "2015-12-01T00:00:00.0000000Z",
+  "install_date": "2016-01-01T21:00:00.0000000Z"
 }
 ```
 
