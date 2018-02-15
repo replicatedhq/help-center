@@ -1,91 +1,60 @@
   <div class="documentation main-section">
     <div class="container">
-      <div class="header-wrapper u-textAlign--center">
-        <div class="paddingContainer">
-          <p class="u-color--tuna u-fontWeight--bold u-fontSize--header u-marginBottom--normal">Documentation reference</p>
-          <p class="u-fontSize--large u-fontWeight--medium u-color--dustyGray u-lineHeight--normal">Quickly find docs for whatever you need help with.</p>
-        </div>
-      </div>
       <div class="docs-ref-wrapper">
         <div class="docs-ref-list paddingContainer">
           <div class="doc-ref-list-item">
             <div class="doc-ref">
-              <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Getting Started</p>
+              <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Ship with Native</p>
               <ul>
-                {{ range $index, $element := first 6 (index $.Site.Taxonomies.categories "getting-started").Pages }}
-                  {{ if not .Params.hideFromList }}
-                    <li>
-                      <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
-                    </li>
-                  {{ end }}
-                {{ end }}
+                <li>
+                  <a href="#" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Get Started</a>
+                </li>
+                <li>
+                  <a href="#" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Package an Application</a>
+                </li>
+                <li>
+                  <a href="#" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Distribute an Application</a>
+                </li>
+                <li>
+                  <a href="#" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Examples</a>
+                </li>
               </ul>
-              {{ with $list := (index $.Site.Taxonomies.categories "getting-started") }}
-                {{ $filteredList := where $list.Pages ".Params.hidefromlist" "!=" true }}
-                {{ if gt (len $filteredList) 6 }}
-                  <a href="/categories/getting-started" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ sub (len $filteredList) 6 }} More</a>
-                {{ end }}
-              {{ end }}
             </div>
           </div><!--
           --><div class="doc-ref-list-item">
             <div class="doc-ref">
-              <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Packaging An Application</p>
+              <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Ship with Swarm</p>
               <ul>
-                {{ range $index, $element := first 6 (index $.Site.Taxonomies.categories "packaging-an-application").Pages }}
-                  {{ if not .Params.hideFromList }}
-                    <li>
-                      <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
-                    </li>
-                  {{ end }}
-                {{ end }}
-              </ul>
-              {{ with $list := (index $.Site.Taxonomies.categories "packaging-an-application") }}
-                {{ $filteredList := where $list.Pages ".Params.hidefromlist" "!=" true }}
-                {{ if gt (len $filteredList) 6 }}
-                  <a href="/categories/packaging-an-application" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ sub (len $filteredList) 6 }} More</a>
-                {{ end }}
-              {{ end }}
+                <li>
+                  <a href="#" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Get Started</a>
+                </li>
+                <li>
+                  <a href="#" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Package an Application</a>
+                </li>
+                <li>
+                  <a href="#" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Distribute an Application</a>
+                </li>
+                <li>
+                  <a href="#" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Examples</a>
+                </li>
             </div>
           </div><!--
           --><div class="doc-ref-list-item">
             <div class="doc-ref">
-              <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Distributing An Application</p>
+              <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Ship with Kubernetes</p>
               <ul>
-                {{ range $index, $element := first 6 (index $.Site.Taxonomies.categories "distributing-an-application").Pages }}
-                  {{ if not .Params.hideFromList }}
-                    <li>
-                      <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
-                    </li>
-                  {{ end }}
-                {{ end }}
-              </ul>
-              {{ with $list := (index $.Site.Taxonomies.categories "distributing-an-application") }}
-                {{ $filteredList := where $list.Pages ".Params.hidefromlist" "!=" true }}
-                {{ if gt (len $filteredList) 6 }}
-                  <a href="/categories/distributing-an-application" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ sub (len $filteredList) 6 }} More</a>
-                {{ end }}
-              {{ end }}
-            </div>
-          </div><!--
-          --><div class="doc-ref-list-item">
-            <div class="doc-ref">
-              <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Examples</p>
-              <ul>
-                {{ range $index, $element := first 6 ($.Site.Taxonomies.categories.examples).Pages }}
-                  {{ if not .Params.hideFromList }}
-                    <li>
-                      <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
-                    </li>
-                  {{ end }}
-                {{ end }}
-              </ul>
-              {{ with $list := $.Site.Taxonomies.categories.examples }}
-                {{ $filteredList := where $list.Pages ".Params.hidefromlist" "!=" true }}
-                {{ if gt (len $filteredList) 6 }}
-                  <a href="/categories/examples" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ sub (len $filteredList) 6 }} More</a>
-                {{ end }}
-              {{ end }}
+                <li>
+                  <a href="#" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Get Started</a>
+                </li> 
+                <li>
+                  <a href="#" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Package an Application</a>
+                </li>
+                <li>
+                  <a href="#" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Distribute an Application</a>
+                </li>
+                <li>
+                  <a href="#" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Examples</a>
+                </li>
             </div>
           </div><!--
           --><div class="doc-ref-list-item">
