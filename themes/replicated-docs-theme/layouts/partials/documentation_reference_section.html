@@ -13,14 +13,17 @@
               <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Getting Started</p>
               <ul>
                 {{ range $index, $element := first 6 (index $.Site.Taxonomies.categories "getting-started").Pages }}
-                  <li>
-                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
-                  </li>
+                  {{ if not .Params.hideFromList }}
+                    <li>
+                      <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
+                    </li>
+                  {{ end }}
                 {{ end }}
               </ul>
               {{ with $list := (index $.Site.Taxonomies.categories "getting-started") }}
-                {{ if gt (len $list) 6 }}
-                  <a href="/categories/getting-started" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ (len $list) sub 6 }} More</a>
+                {{ $filteredList := where $list.Pages ".Params.hidefromlist" "!=" true }}
+                {{ if gt (len $filteredList) 6 }}
+                  <a href="/categories/getting-started" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ sub (len $filteredList) 6 }} More</a>
                 {{ end }}
               {{ end }}
             </div>
@@ -30,14 +33,17 @@
               <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Packaging An Application</p>
               <ul>
                 {{ range $index, $element := first 6 (index $.Site.Taxonomies.categories "packaging-an-application").Pages }}
-                  <li>
-                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
-                  </li>
+                  {{ if not .Params.hideFromList }}
+                    <li>
+                      <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
+                    </li>
+                  {{ end }}
                 {{ end }}
               </ul>
               {{ with $list := (index $.Site.Taxonomies.categories "packaging-an-application") }}
-                {{ if gt (len $list) 6 }}
-                  <a href="/categories/packaging-an-application" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ (len $list) sub 6 }} More</a>
+                {{ $filteredList := where $list.Pages ".Params.hidefromlist" "!=" true }}
+                {{ if gt (len $filteredList) 6 }}
+                  <a href="/categories/packaging-an-application" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ sub (len $filteredList) 6 }} More</a>
                 {{ end }}
               {{ end }}
             </div>
@@ -47,14 +53,17 @@
               <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Distributing An Application</p>
               <ul>
                 {{ range $index, $element := first 6 (index $.Site.Taxonomies.categories "distributing-an-application").Pages }}
-                  <li>
-                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
-                  </li>
+                  {{ if not .Params.hideFromList }}
+                    <li>
+                      <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
+                    </li>
+                  {{ end }}
                 {{ end }}
               </ul>
               {{ with $list := (index $.Site.Taxonomies.categories "distributing-an-application") }}
-                {{ if gt (len $list) 6 }}
-                  <a href="/categories/distributing-an-application" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ (len $list) sub 6 }} More</a>
+                {{ $filteredList := where $list.Pages ".Params.hidefromlist" "!=" true }}
+                {{ if gt (len $filteredList) 6 }}
+                  <a href="/categories/distributing-an-application" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ sub (len $filteredList) 6 }} More</a>
                 {{ end }}
               {{ end }}
             </div>
@@ -64,14 +73,17 @@
               <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Examples</p>
               <ul>
                 {{ range $index, $element := first 6 ($.Site.Taxonomies.categories.examples).Pages }}
-                  <li>
-                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
-                  </li>
+                  {{ if not .Params.hideFromList }}
+                    <li>
+                      <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
+                    </li>
+                  {{ end }}
                 {{ end }}
               </ul>
               {{ with $list := $.Site.Taxonomies.categories.examples }}
-                {{ if gt (len $list) 6 }}
-                  <a href="/categories/examples" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ (len $list) sub 6 }} More</a>
+                {{ $filteredList := where $list.Pages ".Params.hidefromlist" "!=" true }}
+                {{ if gt (len $filteredList) 6 }}
+                  <a href="/categories/examples" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ sub (len $filteredList) 6 }} More</a>
                 {{ end }}
               {{ end }}
             </div>
@@ -81,14 +93,17 @@
               <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">API Resources</p>
               <ul>
                 {{ range $index, $element := ($.Site.Taxonomies.categories.reference).Pages }}
-                  <li>
-                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
-                  </li>
+                  {{ if not .Params.hideFromList }}
+                    <li>
+                      <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
+                    </li>
+                  {{ end }}
                 {{ end }}
               </ul>
               {{ with $list := $.Site.Taxonomies.categories.reference }}
-                {{ if gt (len $list) 6 }}
-                  <a href="" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ (len $list) sub 6 }} More</a>
+                {{ $filteredList := where $list "Params.hideFromList" "true" }}
+                {{ if gt (len $filteredList) 6 }}
+                  <a href="/api" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ sub (len $filteredList) 6 }} More</a>
                 {{ end }}
               {{ end }}
             </div>
@@ -98,14 +113,17 @@
               <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Knowledge Base</p>
               <ul>
                 {{ range $index, $element := first 6 (index $.Site.Taxonomies.categories "knowledgebase").Pages }}
-                  <li>
-                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
-                  </li>
+                  {{ if not .Params.hideFromList }}
+                    <li>
+                      <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
+                    </li>
+                  {{ end }}
                 {{ end }}
               </ul>
               {{ with $list := (index $.Site.Taxonomies.categories "knowledgebase") }}
-                {{ if gt (len $list) 6 }}
-                  <a href="/knowledgebase" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ (len $list) sub 6 }} More</a>
+                {{ $filteredList := where $list "Params.hideFromList" "true" }}
+                {{ if gt (len $filteredList) 6 }}
+                  <a href="/knowledgebase" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ sub (len $filteredList) 6 }} More</a>
                 {{ end }}
               {{ end }}
             </div>
