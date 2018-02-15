@@ -2,8 +2,8 @@
 date: "2017-01-26T00:00:00Z"
 title: "Custom Preflight Checks"
 description: "A guide to implementing the Custom Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
-weight: "214"
-categories: [ "Packaging an Application" ]
+weight: "206"
+categories: [ "Packaging a Swarm Application" ]
 tags: [ "Preflight Checks", "Application YAML" ]
 index: false
 ---

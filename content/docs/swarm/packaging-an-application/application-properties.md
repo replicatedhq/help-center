@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Application Properties"
 description: "The Replicated YAML section `properties` allows several high level items to be defined."
 weight: "201"
-categories: [ "Packaging an Application" ]
+categories: [ "Packaging a Swarm Application" ]
 tags: [ "Application YAML" ]
 index: false
 guide: 1

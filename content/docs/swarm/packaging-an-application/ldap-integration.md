@@ -2,8 +2,8 @@
 date: "2016-07-07T04:02:20Z"
 title: "LDAP and Identity Integration"
 description: "Enabling LDAP and AD user auth and sync in an application through Replicated."
-weight: "216"
-categories: [ "Packaging an Application" ]
+weight: "212"
+categories: [ "Packaging a Swarm Application" ]
 tags: [ "Application YAML", "LDAP" ]
 index: false
 ---

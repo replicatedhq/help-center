@@ -1,16 +1,36 @@
 ---
 date: "2016-07-02T00:00:00Z"
 lastmod: "2016-07-02T00:00:00Z"
-title: "Custom Metrics"
-weight: "217"
-categories: [ "Packaging an Application" ]
-tags: [ "Application YAML" ]
+title: "Metrics and Monitors"
+weight: "206"
+categories: [ "Packaging a Swarm Application" ]
+tags: [ "Application YAML", "StatsD" ]
 index: false
 ---
 
-All Replicated installations come with a StatsD/Graphite/Carbon container that can be used by the application to report data to StatsD. Application YAML can also include optional custom monitors that will be used to display additional charts in Replicated dashboard. Applications can also query Graphite directly.
+All Replicated installations come with a StatsD/Graphite/Carbon container that can be used by your application containers to report data. Optional custom monitors can be configured to display additional charts in the Replicated dashboard. Additionally, your own applications can query Graphite directly.
 
-{{< linked_headline "Defining Metrics" >}}
+{{< linked_headline "Configuring your services to use StatsD" >}}
+
+
+
+```yaml
+services:
+  api:
+    image: quay.io/mycompany/myapp:1.0
+    deploy:
+      replicas: 2
+      restart_policy:
+        delay: 1s
+        condition: on-failure
+    ports:
+      - "5000:3000"
+    environment:
+      - STATSD_HOST={{repl (index (Split (StatsdAddress) ":") 0)}}
+      - STATSD_PORT={{repl (index (Split (StatsdAddress) ":") 1)}}
+```
+
+{{< linked_headline "Defining metrics" >}}
 
 Add `custom_metrics` as a root element to the application YAML. The following elements are supported:
 
@@ -74,10 +94,6 @@ Colors can be specified using one of the standard web color formats:
 
 ```yaml
 monitors:
-  cpuacct:
-  - DB,redis
-  memory:
-  - DB,redis
   custom:
   - name: Disk Usage (bytes)
     targets:

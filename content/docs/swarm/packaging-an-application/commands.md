@@ -2,8 +2,8 @@
 date: "2016-07-03T04:02:20Z"
 title: "Commands"
 description: "The `cmds` section of the Replicated YAML allows you to leverage the power of external commands within your application configuration."
-weight: "208"
-categories: [ "Packaging an Application" ]
+weight: "209"
+categories: [ "Packaging a Swarm Application" ]
 tags: [ "Application YAML", "CLI Commands" ]
 index: false
 ---
