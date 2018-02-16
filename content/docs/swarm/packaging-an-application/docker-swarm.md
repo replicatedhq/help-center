@@ -41,6 +41,12 @@ images:
 
 After declaring these images, they will be available across the entire Swarm cluster.
 
+### Services
+
+Components and containers in Swarm are defined in terms of services, part of the Docker Compose format. Each service is created by the Replicated scheduler and provides cluster-wide load balancing and failure tolerance for failed containers. In a multi-node environment, there are no restrictions on node placement unless node tags are applied.
+
+NOTE: Insert a summary of the Compose format services here and how to use them.
+
 ### Online and Airgapped Installations
 
 Online installs should not use the standard install script, but instead use the [Swarm installation script](/docs/distributing-an-application/installing-with-swarm/). Airgapped installations work as expected when running in swarm mode. All images included in your swarm application must be specified in the new `images` section of your YAML in order to be included in the airgap bundle your customer will download. See below for an example.
