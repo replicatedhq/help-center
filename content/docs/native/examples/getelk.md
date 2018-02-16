@@ -2,10 +2,9 @@
 date: "2016-07-03T04:02:20Z"
 title: "GetELK"
 description: "An advanced example of the ELK Stack deployed through Replicated with a complex and complete configuration section."
-weight: "404"
-categories: [ "Examples" ]
-index: "docs"
-tags: ["Application YAML"]
+weight: "406"
+categories: [ "Replicated Scheduler Examples" ]
+index: "docs/native"
 ---
 
 ## GetELK

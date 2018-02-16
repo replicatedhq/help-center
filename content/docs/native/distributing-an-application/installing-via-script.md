@@ -3,10 +3,9 @@ date: "2016-07-03T04:02:20Z"
 title: "Installing Replicated with the Easy Install Script"
 description: "Instructions for installing Replicated via the easy install script."
 keywords: "installing"
-hideFromList: true
-indedx: "docs"
-categories: [ "Distributing an Application" ]
-tags: ["Installing Replicated"]
+weight: "305"
+categories: [ "Distributing a Native Application" ]
+index: "docs/native"
 ---
 
 We provide an easy-to-use one-line installation process (via shell script) which will detect your OS, ask a few questions and install both docker-engine and the required Replicated components.

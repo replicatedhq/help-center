@@ -2,10 +2,9 @@
 date: "2016-07-03T04:02:20Z"
 title: "Promote Releases"
 description: "The process for leveraging Replicated's release channel management functionality to stage versions and deliver updates to customers."
-weight: "301"
-categories: [ "Distributing an Application" ]
-index: "docs"
-tags: ["Replicated Vendor"]
+weight: "306"
+categories: [ "Distributing a Native Application" ]
+index: "docs/native"
 ---
 
 Every Replicated license points to a Release Channel. When a license is installed, it will pull down and install the release that is currently at the top of its channel. It’s recommended to create customer licenses on the Stable channel, and only promote releases to Stable that are ready for all customers to install.

@@ -2,10 +2,9 @@
 date: "2016-07-07T04:02:20Z"
 title: "LDAP and Identity Integration"
 description: "Enabling LDAP and AD user auth and sync in an application through Replicated."
-weight: "216"
-categories: [ "Packaging an Application" ]
-tags: [ "Application YAML", "LDAP" ]
-index: false
+weight: "220"
+categories: [ "Packaging a Native Application" ]
+index: "docs/native"
 ---
 
 Replicated can be integrated with LDAP servers to provide real time user authentication & sync. A quick overview of this feature is available. Announcement: [DS Auth & Sync Support](https://blog.replicated.com/2015/12/03/ldap-active-directory-sync-support/)
@@ -201,7 +200,7 @@ Setting labels can be customized if needed. However, setting names must remain e
 - name: ldap_settings_advanced
   title: LDAP Advanced Server Settings
   description: |
-    Upload a file below for advanced integration configuration. This file must conform to the 
+    Upload a file below for advanced integration configuration. This file must conform to the
     [Advanced LDAP Configuration Specification](https://help.replicated.com/docs/packaging-an-application/ldap-integration/#advanced-ldap-configuration-specification).
   when: auth_source=auth_type_ldap_advanced
   test_proc:

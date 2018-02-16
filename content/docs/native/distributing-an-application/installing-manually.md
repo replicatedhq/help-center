@@ -2,10 +2,10 @@
 date: "2016-07-03T04:02:20Z"
 title: "Manually Installing Replicated"
 description: "Instructions for manually installing Replicated 2"
-hideFromList: true
+weight: "306"
 keywords: "installing, removing"
-categories: [ "Distributing an Application" ]
-tags: ["Installing Replicated"]
+categories: [ "Distributing a Native Application" ]
+index: "docs/native"
 ---
 
 If you choose not to run the [installation script](/docs/distributing-an-application/installing-via-script) use this guide; note that the install script also installs Docker, detects network configuration and allows proxy settings and provides support to auto-upgrade Replicated during your application release cycle.
@@ -34,7 +34,7 @@ docker run -d --name=replicated \
         -v /etc:/host/etc:ro \
         -e DOCKER_HOST_IP=$DOCKER_HOST_IP \
         -e LOCAL_ADDRESS=$LOCAL_ADDRESS \
-        -e DAEMON_TOKEN=$DAEMON_TOKEN \ 
+        -e DAEMON_TOKEN=$DAEMON_TOKEN \
         quay.io/replicated/replicated:latest
 
 docker run -d --name=replicated-ui \
@@ -48,18 +48,18 @@ docker run -d --name=replicated-ui \
 1. Follow the prompts to configure certificates, upload license, and run the preflight checks.
 
 ### 4. Run Operator Container
-1. Click on the Cluster tab (:8800/cluster)  
+1. Click on the Cluster tab (:8800/cluster)
 ![Cluster](/images/post-screens/manual-install-2.x/click-cluster.png)
-1. Click the Add Node button  
-1. Select Docker Run option  
-1. Copy the command from the text area below  
-1. Paste and run the command in the terminal window  
+1. Click the Add Node button
+1. Select Docker Run option
+1. Copy the command from the text area below
+1. Paste and run the command in the terminal window
 
 At this point, the new node should show up on the Cluster page.
 
 ### 5. Start the Application
-1. Click on the Dashboard tab (:8800/dashboard)  
-1. Click the Start Now button  
+1. Click on the Dashboard tab (:8800/dashboard)
+1. Click the Start Now button
 ![Start Now](/images/post-screens/manual-install-2.x/start-now.png)
 
 When first launching there may be no "Start Now" button.  This is because Replicated is still pulling application images. If this is the case, then just wait for the pull to finish.

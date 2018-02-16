@@ -1,11 +1,10 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Events and Orchestration"
-description: "The `events` section of the Replicated YAML allows application vendors to sequence and orchestrate containers based on events from other containers."
-weight: "206"
-categories: [ "Packaging an Application" ]
-tags: [ "Application YAML" ]
-index: "docs"
+description: "The events section of the Replicated YAML allows application vendors to sequence and orchestrate containers based on events from other containers."
+weight: "211"
+categories: [ "Packaging a Native Application" ]
+index: "docs/native"
 ---
 
 Events are provided to help with the startup, orchestration and service discovery between your containers. There are
@@ -105,8 +104,8 @@ container to start.
 
 {{< linked_headline "Timeouts" >}}
 
-{{< version version="2.3.0" >}} The `timeout` parameter must be an integer and indicates the number of seconds an event has to execute before a timeout is initiated.  
-If the event does not execute before the timeout is reached, then an error will show in the UI and the event sequence will terminate.  
+{{< version version="2.3.0" >}} The `timeout` parameter must be an integer and indicates the number of seconds an event has to execute before a timeout is initiated.
+If the event does not execute before the timeout is reached, then an error will show in the UI and the event sequence will terminate.
 By default the `timeout` option will be set to 10 minutes.  Setting the `timeout` parameter to -1 will disable the timeout feature.
 
 ```yaml

@@ -2,10 +2,9 @@
 date: "2016-07-03T04:02:20Z"
 title: "YAML Overview"
 description: "An overview of the various sections of the Replicated YAML."
-weight: "201"
-categories: [ "Packaging an Application" ]
-tags: [ "Application YAML", Schedulers, "Snapshots", "Preflight Checks", "Swarm", "Kubernetes" ]
-index: "docs"
+weight: "204"
+categories: [ "Packaging a Native Application" ]
+index: "docs/native"
 ---
 
 Replicated will deploy an application that is defined in a YAML spec. We currently support deploying an application that uses the Replicated scheduler or deploying a Kubernetes application. Understanding how each of these will be installed and maintained is an important consideration when choosing the scheduler to use to deploy your application.

@@ -2,10 +2,9 @@
 date: "2018-01-06T01:19:20Z"
 title: "Load Balancer Example"
 description: "An example of load-balancing a clustered app."
-weight: "407"
-categories: [ "Examples" ]
-index: "docs"
-tags: ["Application YAML", "Load Balancer"]
+weight: "401"
+categories: [ "Replicated Scheduler Examples" ]
+index: "docs/native sd"
 ---
 
 ## Load-Balanced Counter App
