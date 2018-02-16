@@ -2,10 +2,9 @@
 date: "2016-07-03T04:02:20Z"
 title: "Components And Containers"
 description: "The `components` section of the Replicated YAML defines how the containers will be created and started."
-weight: "205"
-categories: [ "Packaging an Application" ]
-tags: [ "Application YAML" ]
-index: "docs"
+weight: "202"
+categories: [ "Packaging a Native Application" ]
+index: "docs/native"
 ---
 
 The `components` section of the YAML defines how the containers will be created and started. A component is
@@ -438,7 +437,7 @@ Learn more about [overriding entrypoints](https://docs.docker.com/engine/referen
 
 ### Shm-Size
 
-{{< version version="2.15.0" >}} Shm-Size lets you specify the size of `/dev/shm` for your container in bytes. If omitted or 0, the system defaults to 64MB. 
+{{< version version="2.15.0" >}} Shm-Size lets you specify the size of `/dev/shm` for your container in bytes. If omitted or 0, the system defaults to 64MB.
 
 ```yaml
     shm_size: 67108864

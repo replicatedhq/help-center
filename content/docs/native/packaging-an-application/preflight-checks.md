@@ -2,10 +2,9 @@
 date: "2016-07-03T04:02:20Z"
 title: "Preflight Checks"
 description: "A guide to implementing the Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
-weight: "212"
-categories: [ "Packaging an Application" ]
-tags: [ "Application YAML", "Preflight Checks" ]
-index: false
+weight: "208"
+categories: [ "Packaging a Native Application" ]
+index: "docs/native"
 ---
 
 A preflight check is a test that is run before installing and running an application.  The test will analyze the system to determine if the environment meets the minimum requirements.

@@ -4,9 +4,8 @@ title: "Installing Replicated"
 description: "Instructions for installing Replicated via the easy install script, manually or behind a proxy. Also includes instructions for uninstalling Replicated."
 keywords: "installing, removing, migrating"
 weight: "302"
-categories: [ "Distributing an Application" ]
-index: "docs"
-tags: ["Installing Replicated"]
+categories: [ "Distributing a Native Application" ]
+index: "docs/native"
 ---
 
 {{< note title="Replicated 2.0" >}}

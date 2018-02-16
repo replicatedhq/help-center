@@ -2,10 +2,9 @@
 date: "2016-07-03T04:02:20Z"
 title: "Test Procs"
 description: "Test Procs enable customers to easily test the validity of the unsaved configuration parameters they're entering during installation."
-weight: "204"
-categories: [ "Packaging an Application" ]
-tags: [ "Application YAML", "LDAP" ]
-index: false
+weight: "207"
+categories: [ "Packaging a Native Application" ]
+index: "docs/native"
 ---
 
 Using the `test_proc` directive in your app definition YAML, you enable your customers to
@@ -131,7 +130,7 @@ config:
 
 `smtp_auth` – Test whether or not the supplied credentials are valid for the given SMTP
 server. Note that this procedure only tests authentication; it does not test whether or
-not mail is actually deliverable.  
+not mail is actually deliverable.
 
 The command expects 5 arguments. These arguments come from values entered by your customer
 into the config items within this group. The arguments, in expected order:
@@ -224,7 +223,7 @@ complete and valid, for a detailed implementation reference see our LDAP integra
 Note you have to pass all the arg_fields for the test to validate correctly.
 
 These arguments come from values entered by your customer
-into the config items within this group.  
+into the config items within this group.
 
 Required arguments:
 

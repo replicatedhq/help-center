@@ -3,10 +3,8 @@ date: "2016-07-03T04:02:20Z"
 title: "Concepts and Terminology"
 description: "The core concepts and terms used in these documents to describe the Replicated functionality."
 weight: "102"
-categories:  [ "Getting Started" ]
-similar: ["docs/getting-started/get-started.md"]
-tags: ""
-index: "docs"
+categories:  [ "Replicated Scheduler" ]
+index: "docs/native"
 ---
 
 Before shipping your application, there are a few terms to learn, as they are used throughout this guide.
@@ -20,8 +18,5 @@ Channels are used to stage out releases for customers or customer segments. By d
 ### Release
 A release is a shipped version of the application, complete with release notes & version number.
 
-### Image
-An image is a Docker image that will be used to create a container at runtime.
-
-### Container
-A container is a running instance of an image.
+### Admin Console
+The Admin Console is the on-prem UI that is used to install, license, configure and update an application delivered by Replicated.

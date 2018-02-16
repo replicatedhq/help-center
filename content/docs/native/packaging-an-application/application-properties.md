@@ -2,11 +2,9 @@
 date: "2016-07-03T04:02:20Z"
 title: "Application Properties"
 description: "The Replicated YAML section `properties` allows several high level items to be defined."
-weight: "201"
-categories: [ "Packaging an Application" ]
-tags: [ "Application YAML" ]
-index: false
-guide: 1
+weight: "203"
+categories: [ "Packaging a Native Application" ]
+index: "docs/native"
 ---
 
 The properties section of the YAML allows you to configure properties of the admin console.

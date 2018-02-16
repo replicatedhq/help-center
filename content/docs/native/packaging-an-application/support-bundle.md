@@ -2,10 +2,9 @@
 date: "2016-07-03T04:02:20Z"
 title: "Support Bundle"
 description: "Installed instances can generate a support bundle with relevant logs and instance information."
-weight: "211"
-categories: [ "Packaging an Application" ]
-tags: [ "Support", "Application YAML" ]
-index: "docs"
+weight: "213"
+categories: [ "Packaging a Native Application" ]
+index: "docs/native"
 ---
 
 A support bundle is an archive that is available for the customer to download via the Support tab of the On-Prem Console or the [Replicated CLI](/api/replicatedctl/replicatedctl_support-bundle/).
