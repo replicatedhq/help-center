@@ -24,7 +24,7 @@ In most cases, Replicated recommends using the Docker Swarm scheduler. Compared 
 
 There are a few cases where using other schedulers, such as the Replicated Native scheduler or Kubernetes scheduler, provide a better experience.
 
-* Some enterprises require the use of Long Term Support Operating Systems in the 2.x kernel series such as Red Hat Enterprise Linux 6. Replicated supports Docker Swarm to version 1.9.x, whereas RHEL6 only supports Docker 1.7.1. Enterprise software can still be delivered via the [/native/getting-started](Replicated Native Scheduler).
+* Some enterprises require the use of Long Term Support Operating Systems in the 2.x kernel series such as Red Hat Enterprise Linux 6. Replicated supports Docker Swarm to version 1.9.x, whereas RHEL6 only supports Docker 1.7.1. Enterprise software can still be delivered via the [Replicated Native Scheduler](/native/getting-started).
 * Docker Swarm does not provide cron job or task-based workloads without the use of other workloads. For applications built in software like Rails, tools like Resque and Sidekiq sidestep this need, while others can benefit from using the [#](Kubernetes Scheduler).
 
 ## Shipping on Docker Swarm
@@ -40,4 +40,4 @@ The process to ship your application in Replicated consists of the following ste
 1. Create a release of your application.
 1. Install your application to test.
 
-The [/docs/swarm/packaging-an-applicaiton/docker-swarm/](Packaging an Application) section describes the release YAML format for Docker Swarm in more detail.
+The [Packaging an Application](/docs/swarm/packaging-an-applicaiton/docker-swarm/) section describes the release YAML format for Docker Swarm in more detail.
