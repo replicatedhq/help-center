@@ -13,7 +13,37 @@ Template functions are marked by the double curly bracket + *"repl"* escape sequ
 Template functions that refer to your containers are always addressed in pairs with "component name" and "image name".  You should use the full image name as it appears in your container definition.
 
 ### Go Templates
-Replicated uses Go's [template engine](http://golang.org/pkg/text/template) to execute the following functions.  In addition to the functions listed here, all of the Go template runtime is available.  Please note that Go template functions must still be escaped with "repl" escape sequence as demonstrated below.
+Replicated uses Go's [template package](http://golang.org/pkg/text/template) to execute the following functions.  In addition to the functions listed here, all functions from the Go `text/template` package are available.  Please note that Go template functions must still be escaped with "repl" escape sequence as demonstrated below. This is to ensure other template engines, such as Handlebars or Mustache, or Go templating used in application configuration files, work as expected.
+
+### Conditionals
+
+Parts of the release YAML can be applied conditionally using Go's templating. This can be used with Docker Swarm to conditionally insert environment variables in situations where empty environment variables can't be used. For example:
+
+```yaml
+services:
+  app-app:
+    image: myapp
+    ports:
+      - 5000:80
+    networks:
+      - myapp
+    depends_on:
+      - redis
+    environment:
+{{repl if eq (ConsoleSetting "airgap.install") true}}
+      AIRGAP="true"
+{{repl end}}
+    deploy:
+      mode: replicated
+      replicas: 2
+      labels: [APP=VOTING]
+      placement:
+        constraints: [node.role == worker]
+```
+
+In this instance, the `AIRGAP` environment variable will be inserted into the compose YAML if this release is run on an airgapped installation.
+
+### Replicated Template Functions
 
 ```go
 {{repl if pipeline}} T1 {{repl else}} T0 {{repl end}}
@@ -153,7 +183,7 @@ environment:
 ```go
 func RunOffline() bool
 ```
-Returns whether or not we are running in airgap mode. This is available in the Kubernetes and Swarm implementations, but will always return false.
+Returns whether or not we are running in airgap mode. In Swarm, this function returns false.
 ```yaml
 environment:
 - IS_AIRGAP={{repl RunOffline }}
