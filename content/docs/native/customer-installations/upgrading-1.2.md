@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Upgrading Replicated 1.2"
 description: "A guide to installing the legacy version of Replicated 1.2.x via Deb and Yum packages."
 hideFromList: true
-categories: ["Distributing A Native Application"]
+categories: ["Managing Customer Installation"]
 ---
 
 {{< warning title="Old Version Warning" >}}

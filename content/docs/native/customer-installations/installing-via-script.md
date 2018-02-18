@@ -4,7 +4,7 @@ title: "Installing Replicated with the Easy Install Script"
 description: "Instructions for installing Replicated via the easy install script."
 keywords: "installing"
 weight: "304"
-categories: [ "Distributing a Native Application" ]
+categories: [ "Managing Customer Installation" ]
 index: "docs/native"
 ---
 

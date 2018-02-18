@@ -4,7 +4,7 @@ title: "Manually Installing Replicated"
 description: "Instructions for manually installing Replicated 2"
 weight: "305"
 keywords: "installing, removing"
-categories: [ "Distributing a Native Application" ]
+categories: [ "Managing Customer Installations" ]
 index: "docs/native"
 ---
 

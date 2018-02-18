@@ -1,12 +1,12 @@
 ---
-date: "2016-07-01T00:00:00Z"
-lastmod: "2016-07-01T00:00:00Z"
-title: "LDAP Integration"
-weight: "999999"
-categories: [ "Developer Resources" ]
-index: "docs"
-tags: ["LDAP"]
+date: "2016-07-07T04:02:20Z"
+title: "LDAP and Identity Integration"
+description: "Enabling LDAP and AD user auth and sync in an application through Replicated."
+weight: "502"
+categories: [ "LDAP And Identity Integration" ]
+index: "docs/ldap"
 ---
+
 
 ## INTRODUCING V1 OF REPLICATED DIRECTORY SERVICE SYNC
 You can now offer your Replicated deployed enterprise customers user management through

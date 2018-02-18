@@ -4,7 +4,7 @@ title: "Supported Operating Systems"
 description: "View the supported operating systems"
 keywords:  "operating system, os"
 weight: "303"
-categories: [ "Distributing a Native Application" ]
+categories: [ "Managing Customer Installation" ]
 index: "docs/native"
 ---
 

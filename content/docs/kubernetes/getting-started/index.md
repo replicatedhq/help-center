@@ -11,6 +11,8 @@ hideFromList: true
 Replicated is a platform to deploy containerized SaaS applications behind a firewall (ie private cloud, private
 data center etc). This guide will walk you through the required steps to start shipping your application using Replicated.
 
+When running Replicated and Kubernetes together, you can reuse most of your existing Kubernetes specs, and Replicated will install and maintain a Kubernetes cluster and your application for your enteprise customer.
+
 ## Overview
 The process to ship your application in Replicated consists of the following steps:
 

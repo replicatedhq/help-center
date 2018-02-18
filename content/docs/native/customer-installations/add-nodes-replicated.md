@@ -3,7 +3,7 @@ date: "2017-04-11T00:00:00Z"
 title: "Adding Nodes To A Replicated Cluster"
 description: "Instructions for installing additional nodes with a Replicated cluster"
 weight: "308"
-categories: [ "Distributing a Native Application" ]
+categories: [ "Managing Customer Installation" ]
 index: "docs/native"
 ---
 

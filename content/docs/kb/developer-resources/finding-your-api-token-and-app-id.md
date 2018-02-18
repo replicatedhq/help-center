@@ -5,7 +5,6 @@ title: "Finding Your API Token and App ID"
 weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
-tags: ["Replicated Vendor", "API"]
 ---
 
 In order to utilize many of the developer API endpoints you will need to know your API Token as well as other items such as your App ID or Channel ID. This document will provide examples of how those values can be located using the cURL utility.
@@ -19,9 +18,9 @@ in [Generate an API Token](/docs/kb/developer-resources/generate-api-token).
 
 - **Using the Vendor UI**
 
-Your application ID is avaiable on the https://vendor.replicated.com/settings page for your application.
+Your application ID is available on the https://vendor.replicated.com/settings page for your application.
 
-- **Using cUrl**
+- **Using cURL**
 
 ```shell
 curl -X GET \
