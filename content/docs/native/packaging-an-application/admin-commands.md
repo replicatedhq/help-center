@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Admin Commands"
 description: "Implementation guide for application vendors to provide customers with aliased CLI commands that can be performed in the containers across a cluster."
 categories: [ "Packaging a Native Application" ]
-weight: "209"
+weight: "216"
 index: "docs/native"
 ---
 
@@ -12,8 +12,6 @@ The `admin_commands` section allows you to define ad-hoc commands that can be ex
 _Note: If you are calling admin commands from a script use the `--no-tty` flag._
 
 {{< linked_headline "Executing" >}}
-
-### Replicated
 
 ```bash
 $ <shell_alias> <command_alias> <params>
@@ -29,30 +27,6 @@ or
 
 ```bash
 $ docker exec -it replicated replicated admin <command_alias> <params>
-```
-
-### Swarm
-
-```bash
-$ <shell_alias> <command_alias> <params>
-```
-
-or
-
-```bash
-$ replicated admin <command_alias> <params>
-```
-
-or
-
-```bash
-$ docker exec -it "$(docker inspect --format "{{.Status.ContainerStatus.ContainerID}}" "$(docker service ps "$(docker service inspect --format "{{.ID}}" replicated_replicated | awk "NR==1")" -q)")" replicated admin <command_alias> <params>
-```
-
-### Kubernetes
-
-```bash
-$ kubectl exec -it "$(kubectl get pods -l=app=replicated -l=tier=master -o=jsonpath='{.items..metadata.name}')" -c replicated -- replicated admin <command_alias> <params>
 ```
 
 {{< linked_headline "Examples" >}}
@@ -87,32 +61,6 @@ admin_commands:
   container: redis
 ```
 
-### Swarm
-
-```yaml
-properties:
-  shell_alias: mycli
-admin_commands:
-- alias: redis-sadd
-  command: [redis-cli, sadd]
-  run_type: exec
-  service: redis
-```
-
-### Kubernetes
-
-```yaml
-admin_commands:
-- alias: redis-sadd
-  command: [redis-cli, sadd]
-  run_type: exec
-  selector:
-    app: redis
-    tier: backend
-    role: master
-  container: master # optional, will choose first in pod
-```
-
 {{< linked_headline "Configuration" >}}
 
 ### shell_alias
@@ -133,24 +81,8 @@ Specify `exec` to execute the command in the currently running container. This i
 
 ### component
 
-* Replicated (required): This identifies the component under which to run the command.
-* Swarm: unavailable
-* Kubernetes: unavailable
-
-### service
-
-* Replicated: unavailable
-* Swarm (required): This identifies the service under which to run the command. A container will be chosen at random to run the command in.
-* Kubernetes: unavailable
-
-### selector
-
-* Replicated: unavailable
-* Swarm: unavailable
-* Kubernetes (required): This is a Kubernetes map of selectors to identify the pod that the admin command should be run in.
+This identifies the component under which to run the command.
 
 ### container
 
-* Replicated (required): This specifies the container in which to run the admin command.
-* Swarm: unavailable
-* Kubernetes (optional): This specifies the container in the pod in which to run the admin command. If not supplied the first container will be chosen.
+This specifies the container in which to run the admin command.

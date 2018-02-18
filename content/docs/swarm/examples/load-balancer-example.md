@@ -3,8 +3,8 @@ date: "2018-01-06T01:19:20Z"
 title: "Load Balancer Example"
 description: "An example of load-balancing a clustered app."
 weight: "401"
-categories: [ "Replicated Scheduler Examples" ]
-index: "docs/native sd"
+categories: [ "Replicated + Swarm Examples" ]
+index: "docs/swarm"
 ---
 
 ## Load-Balanced Counter App

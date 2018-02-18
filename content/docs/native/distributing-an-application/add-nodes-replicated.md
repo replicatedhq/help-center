@@ -2,12 +2,12 @@
 date: "2017-04-11T00:00:00Z"
 title: "Adding Nodes To A Replicated Cluster"
 description: "Instructions for installing additional nodes with a Replicated cluster"
-keywords: "installing"
+weight: "308"
 categories: [ "Distributing a Native Application" ]
 index: "docs/native"
 ---
 
-When an application is configured by the vendor with a clustering strategy, Replicated makes it possible for the end customer to install additional nodes on remote instances to run a distributed application. Installations of Replicated using the [easy installation script](/docs/distributing-an-application/installing-via-script/) will install an operator on the local node automatically.
+When an application is configured by the vendor with a clustering strategy, Replicated makes it possible for the end customer to install additional nodes on remote instances to run a distributed application. Installations of Replicated using the [easy installation script](/docs/native/distributing-an-application/installing-via-script/) will install an operator on the local node automatically.
 
 On the Cluster page on the On-Prem Console an "Add Node" button will be visible. This will prompt the end customer with two simple options for adding a node.
 

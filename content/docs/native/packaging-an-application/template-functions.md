@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Template Functions"
 description: "The dynamic configuration management functionality available throughout the Replicated YAML."
-weight: "205"
+weight: "211"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
 ---
@@ -18,9 +18,7 @@ Replicated uses Go's [template engine](http://golang.org/pkg/text/template) to e
 {{repl if pipeline}} T1 {{repl else}} T0 {{repl end}}
 ```
 
-{{< linked_headline "Replicated Template Function" >}}
-
-{{< template_function name="ConfigOption" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="ConfigOption" >}}
 ```go
 func ConfigOption(optionName string) string
 ```
@@ -30,7 +28,7 @@ properties:
   app_url: http://{{repl ConfigOption "hostname" }}
 ```
 
-{{< template_function name="ConfigOptionData" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="ConfigOptionData" >}}
 (only supports `type: file`)
 
 ```go
@@ -43,7 +41,7 @@ config_files:
   contents: {{repl ConfigOptionData "ssl_key"}}
 ```
 
-{{< template_function name="ConfigOptionEquals" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="ConfigOptionEquals" >}}
 ```go
 func ConfigOptionEquals(optionName string, expectedValue string) bool
 ```
@@ -56,7 +54,7 @@ ports:
      when: '{{repl ConfigOptionEquals "http_enabled" "1" }}'
 ```
 
-{{< template_function name="ConfigOptionNotEquals" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="ConfigOptionNotEquals" >}}
 ```go
 func ConfigOptionNotEquals(optionName string, expectedValue string) bool
 ```
@@ -69,7 +67,7 @@ ports:
      when: '{{repl ConfigOptionNotEquals "http_enabled" "1" }}'
 ```
 
-{{< template_function name="NodePrivateIPAddress" replicated="true" kubernetes="false" swarm="false" >}}
+{{< template_function name="NodePrivateIPAddress" >}}
 ```go
 func NodePrivateIPAddress(componentName string, imageName string) string
 ```
@@ -82,13 +80,13 @@ env_vars:
 ```
 Replaces HostPrivateIpAddress which is deprecated.
 
-{{< template_function name="NodePrivateIPAddressFirst" replicated="true" kubernetes="false" swarm="false" >}}
+{{< template_function name="NodePrivateIPAddressFirst" >}}
 ```go
 func NodePrivateIPAddressFirst(componentName string, imageName string) string
 ```
 Returns the first node's Private IP Address of a given Component as a string.
 
-{{< template_function name="NodePrivateIPAddressAll" replicated="true" kubernetes="false" swarm="false" >}}
+{{< template_function name="NodePrivateIPAddressAll" >}}
 ```go
 func NodePrivateIPAddressAll(componentName string, imageName string) []string
 ```
@@ -97,7 +95,7 @@ Replaces HostPrivateIpAddressAll which is deprecated.
 
 Note: `ContainerExposedPortAll`, `NodePrivateIPAddressAll`, `NodePublicIPAddressAll` are guaranteed to return in the same order
 
-{{< template_function name="NodePublicIPAddress" replicated="true" kubernetes="false" swarm="false" >}}
+{{< template_function name="NodePublicIPAddress" >}}
 ```go
 func NodePublicIPAddress(componentName string, imageName string) string
 ```
@@ -109,13 +107,13 @@ env_vars:
 ```
 Replaces HostPublicIpAddress which is deprecated.
 
-{{< template_function name="NodePublicIPAddressFirst" replicated="true" kubernetes="false" swarm="false" >}}
+{{< template_function name="NodePublicIPAddressFirst" >}}
 ```go
 func NodePublicIPAddressFirst(componentName string, imageName string) string
 ```
 Returns first node's public IP addresses for a given Component as a string.
 
-{{< template_function name="NodePublicIPAddressAll" replicated="true" kubernetes="false" swarm="false" >}}
+{{< template_function name="NodePublicIPAddressAll" >}}
 ```go
 func NodePublicIPAddressAll(componentName string, imageName string) []string
 ```
@@ -124,7 +122,7 @@ Replaces HostPublicIpAddressAll which is deprecated.
 
 Note: `ContainerExposedPortAll`, `NodePrivateIPAddressAll`, `Node PublicIPAddressAll` are guaranteed to return in the same order
 
-{{< template_function name="ContainerExposedPort" replicated="true" kubernetes="false" swarm="false" >}}
+{{< template_function name="ContainerExposedPort" >}}
 ```go
 func ContainerExposedPort(componentName string, imageName string, internalPort string) string
 ```
@@ -136,7 +134,7 @@ env_vars:
   value: '{{repl ContainerExposedPort "DB" "redis" "6379" }}'
 ```
 
-{{< template_function name="ContainerExposedPortFirst" replicated="true" kubernetes="false" swarm="false" >}}
+{{< template_function name="ContainerExposedPortFirst" >}}
 ```go
 func ContainerExposedPortFirst(componentName string, imageName string, internalPort string) string
 ```
@@ -148,7 +146,7 @@ env_vars:
   value: '{{repl ContainerExposedPortFirst "DB" "redis" "6379" }}'
 ```
 
-{{< template_function name="ContainerExposedPortAll" replicated="true" kubernetes="false" swarm="false" >}}
+{{< template_function name="ContainerExposedPortAll" >}}
 ```go
 func ContainerExposedPortAll(componentName string, imageName string, internalPort string) string
 ```
@@ -156,7 +154,7 @@ Returns the node public port mapped to the supplied exposed container port for a
 
 Note: `ContainerExposedPortAll`, `NodePrivateIPAddressAll`, `NodePublicIPAddressAll` are guaranteed to return in the same order
 
-{{< template_function name="LicenseFieldValue" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="LicenseFieldValue" >}}
 ```go
 func LicenseFieldValue(customLicenseFieldName string) string
 ```
@@ -168,7 +166,7 @@ config_files:
       max_users: '{{repl LicenseFieldValue "maximum_users" }}'
 ```
 
-{{< template_function name="LicenseProperty" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="LicenseProperty" >}}
 ```go
 func LicenseProperty(propertyName string) string
 ```
@@ -180,7 +178,7 @@ config_files:
       expiration.date: {{repl LicenseProperty "expiration.date"}}
 ```
 
-{{< template_function name="AppID" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="AppID" >}}
 ```go
 func AppID() string
 ```
@@ -191,7 +189,7 @@ env_vars:
   value: '{{repl AppID }}'
 ```
 
-{{< template_function name="AppVersion" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="AppVersion" >}}
 ```go
 func AppVersion() int
 ```
@@ -202,7 +200,7 @@ env_vars:
   value: '{{repl AppVersion }}'
 ```
 
-{{< template_function name="AppVersionFirst" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="AppVersionFirst" >}}
 ```go
 func AppVersionFirst() int
 ```
@@ -213,7 +211,7 @@ env_vars:
   value: '{{repl AppVersionFirst }}'
 ```
 
-{{< template_function name="AppVersionCurrent" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="AppVersionCurrent" >}}
 ```go
 func AppVersionCurrent() int
 ```
@@ -224,7 +222,7 @@ env_vars:
   value: '{{repl AppVersionCurrent }}'
 ```
 
-{{< template_function name="RunOffline" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="RunOffline" >}}
 ```go
 func RunOffline() bool
 ```
@@ -235,7 +233,7 @@ env_vars:
   value: '{{repl RunOffline }}'
 ```
 
-{{< template_function name="AppSetting" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="AppSetting" >}}
 ```go
 func AppSetting(key string) string
 ```
@@ -262,7 +260,7 @@ env_vars:
   value: '{{repl AppSetting "release.channel"}}'
 ```
 
-{{< template_function name="ConsoleSetting" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="ConsoleSetting" >}}
 ```go
 func ConsoleSetting(consoleSettingName string) string
 ```
@@ -291,19 +289,19 @@ config:
     value: '{{repl ConsoleSetting "tls.key.name"}}'
 ```
 
-{{< template_function name="ConsoleSettingEquals" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="ConsoleSettingEquals" >}}
 ```go
 func ConsoleSettingEquals(name string, value string) bool
 ```
 Returns a bool indicating if the value is the currently applied value for ConsoleSetting with name.
 
-{{< template_function name="ConsoleSettingNotEquals" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="ConsoleSettingNotEquals" >}}
 ```go
 func ConsoleSettingNotEquals(name string, value string) bool
 ```
 Returns a bool indicating if the value is not the currently applied value for ConsoleSetting with name.
 
-{{< template_function name="ThisHostInterfaceAddress" replicated="true" kubernetes="false" swarm="false" >}}
+{{< template_function name="ThisHostInterfaceAddress" >}}
 Deprecated, please use ThisNodePublicIPAddress, ThisNodePrivateIPAddress or ThisNodeDockerAddress instead.
 ```go
 func ThisHostInterfaceAddress(interfaceName string) string
@@ -315,7 +313,7 @@ env_vars:
   value: '{{repl ThisHostInterfaceAddress "docker0" }}'
 ```
 
-{{< template_function name="ThisNodePublicIPAddress" replicated="true" kubernetes="false" swarm="false" >}}
+{{< template_function name="ThisNodePublicIPAddress" >}}
 ```go
 func ThisNodePublicIPAddress() string
 ```
@@ -327,7 +325,7 @@ env_vars:
 ```
 Replaces ThisHostPublicIpAddress which is deprecated.
 
-{{< template_function name="ThisNodePrivateIPAddress" replicated="true" kubernetes="false" swarm="false" >}}
+{{< template_function name="ThisNodePrivateIPAddress" >}}
 ```go
 func ThisNodePrivateIPAddress() string
 ```
@@ -339,14 +337,14 @@ env_vars:
 ```
 Replaces ThisHostPrivateIpAddress which is depreciated.
 
-{{< template_function name="ThisNodeDockerAddress" replicated="true" kubernetes="false" swarm="false" >}}
+{{< template_function name="ThisNodeDockerAddress" >}}
 ```go
 func ThisNodeDockerAddress() string
 ```
 Returns the docker0 address on the host on which the current container instance is deployed.
 For a clustered application this value will be different for each host.
 
-{{< template_function name="LDAPCopyAuthFrom" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="LDAPCopyAuthFrom" >}}
 ```go
 func LdapCopyAuthFrom(keyName string) interface{}
 ```
@@ -375,7 +373,7 @@ env_vars:
   value: '{{repl LdapCopyAuthFrom "Hostname"}}'
 ```
 
-{{< template_function name="Now" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="Now" >}}
 ```go
 func Now() string
 ```
@@ -386,7 +384,7 @@ env_vars:
   value: '{{repl Now }}'
 ```
 
-{{< template_function name="NowFmt" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="NowFmt" >}}
 ```go
 func NowFmt(format string) string
 ```
@@ -397,7 +395,7 @@ env_vars:
   value: '{{repl Now "20060102" }}'
 ```
 
-{{< template_function name="TrimSpace" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="TrimSpace" >}}
 ```go
 func TrimSpace(s string) string
 ```
@@ -408,7 +406,7 @@ env_vars:
   value: '{{repl ConfigOption "str_value" | Trim }}
 ```
 
-{{< template_function name="Trim" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="Trim" >}}
 ```go
 func Trim(s string, args ...string) string
 ```
@@ -419,7 +417,7 @@ env_vars:
   value: '{{repl ConfigOption "str_value" | Trim " " "." }}
 ```
 
-{{< template_function name="Split" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="Split" >}}
 ```go
 func Split(s string, sep string) []string
 ```
@@ -440,7 +438,7 @@ env_vars:
 ```
 
 
-{{< template_function name="ToLower" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="ToLower" >}}
 ```go
 func ToLower(stringToAlter string) string
 ```
@@ -451,7 +449,7 @@ env_vars:
   value: '{{repl ConfigOption "company_name" | ToLower }}'
 ```
 
-{{< template_function name="ToUpper" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="ToUpper" >}}
 ```go
 func ToUpper(stringToAlter string) string
 ```
@@ -462,7 +460,7 @@ env_vars:
   value: '{{repl ConfigOption "company_name" | ToUpper }}'
 ```
 
-{{< template_function name="HumanSize" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="HumanSize" >}}
 ```go
 func HumanSize(size interface{}) string
 ```
@@ -473,7 +471,7 @@ env_vars:
   value: '{{repl ConfigOption "min_size_bytes" | HumanSize }}
 ```
 
-{{< template_function name="UrlEncode" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="UrlEncode" >}}
 ```go
 func UrlEncode(stringToEncode string) string
 ```
@@ -484,7 +482,7 @@ env_vars:
   value: '{{repl ConfigOption "smtp_email" | UrlEncode }}:{{repl ConfigOption "smtp_password" | UrlEncode }}@smtp.example.com:587'
 ```
 
-{{< template_function name="Base64Encode" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="Base64Encode" >}}
 ```go
 func Base64Encode(stringToEncode string) string
 ```
@@ -495,7 +493,7 @@ env_vars:
   value: '{{repl ConfigOption "name" | Base64Encode }}'
 ```
 
-{{< template_function name="Base64Decode" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="Base64Decode" >}}
 ```go
 func Base64Decode(stringToDecode string) string
 ```
@@ -506,7 +504,7 @@ env_vars:
   value: '{{repl ConfigOption "base_64_encoded_name" | Base64Decode }}'
 ```
 
-{{< template_function name="ParseBool" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="ParseBool" >}}
 ```go
 func ParseBool(str string) bool
 ```
@@ -517,7 +515,7 @@ env_vars:
   value: '{{repl ConfigOption "str_value" | ParseBool }}'
 ```
 
-{{< template_function name="ParseFloat" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="ParseFloat" >}}
 ```go
 func ParseFloat(str string) float64
 ```
@@ -528,7 +526,7 @@ env_vars:
   value: '{{repl ConfigOption "str_value" | ParseFloat }}'
 ```
 
-{{< template_function name="ParseInt" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="ParseInt" >}}
 ```go
 func ParseInt(str string, args ...int) int64
 ```
@@ -539,7 +537,7 @@ env_vars:
   value: '{{repl ConfigOption "str_value" | ParseInt }}'
 ```
 
-{{< template_function name="ParseUint" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="ParseUint" >}}
 ```go
 func ParseUint(str string, args ...int) uint64
 ```
@@ -550,7 +548,7 @@ env_vars:
   value: '{{repl ConfigOption "str_value" | ParseUint }}'
 ```
 
-{{< template_function name="Add" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="Add" >}}
 ```go
 func Add(x interface{}, y interface{}) interface{}
 ```
@@ -565,7 +563,7 @@ env_vars:
   value: '{{repl Add (LicenseFieldValue "maximum_users") 1}}'
 ```
 
-{{< template_function name="Sub" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="Sub" >}}
 ```go
 func Sub(x interface{}, y interface{}) interface{}
 ```
@@ -580,7 +578,7 @@ env_vars:
   value: '{{repl Sub (LicenseFieldValue "maximum_users") 1}}'
 ```
 
-{{< template_function name="Mult" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="Mult" >}}
 ```go
 func Mult(x interface{}, y interface{}) interface{}
 ```
@@ -595,7 +593,7 @@ env_vars:
   value: '{{repl Mult (NodePrivateIPAddressAll "DB" "redis" | len) 2}}'
 ```
 
-{{< template_function name="Div" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="Div" >}}
 ```go
 func Div(x interface{}, y interface{}) interface{}
 ```
@@ -610,97 +608,7 @@ env_vars:
   value: '{{repl Div (LicenseFieldValue "maximum_users") 2.0}}'
 ```
 
-{{< template_function name="Namespace" replicated="false" kubernetes="true" swarm="true" >}}
-```go
-func Namespace() string
-```
-
-Namespace returns the value of the namespace the vendor application is installed in.
-
-{{< template_function name="ServiceAddress" replicated="false" kubernetes="true" swarm="false" >}}
-```go
-ServiceAddress(name string, port int32) string
-```
-
-ServiceAddress returns the address of the ingress.
-
-```yaml
-properties:
-  app_url: '{{repl ServiceAddress "frontend" 80 }}'
-```
-
-{{< template_function name="IngressAddress" replicated="false" kubernetes="true" swarm="false" >}}
-```go
-IngressAddress(name string, port int32) string
-```
-
-IngressAddress returns the address of the ingress.
-
-```yaml
-properties:
-  app_url: '{{repl IngressAddress "frontend" 80 }}'
-```
-
-{{< template_function name="SwarmIngressAddress" replicated="false" kubernetes="false" swarm="true" >}}
-```go
-SwarmIngressAddress() string
-```
-
-SwarmIngressAddress returns the ingress address of the swarm cluster.
-
-```yaml
-properties:
-  app_url: '{{repl SwarmIngressAddress }}'
-```
-
-{{< template_function name="PremkitAPIAddress" replicated="false" kubernetes="true" swarm="true" >}}
-```go
-PremkitAPIAddress() string
-```
-
-PremkitAPIAddress returns the address of the Premkit service in the cluster.
-
-```yaml
-spec:
-  containers:
-  - name: myservice
-    image: mycompany/myservice:1.0
-    env:
-    - name: REPLICATED_INTEGRATIONAPI
-      value: {{repl PremkitAPIAddress }}
-```
-
-{{< template_function name="PremkitNetworkName" replicated="false" kubernetes="false" swarm="true" >}}
-```go
-PremkitNetworkName() string
-```
-
-PremkitNetworkName returns the name of the premkit docker network.
-
-{{< template_function name="StatsdAddress" replicated="false" kubernetes="true" swarm="true" >}}
-```go
-StatsdAddress() string
-```
-
-StatsdAddress returns the address of the Statsd service in the cluster.
-
-```yaml
-spec:
-  containers:
-  - name: myservice
-    image: mycompany/myservice:1.0
-    env:
-    - name: REPLICATED_STATSD_ADDRESS
-      value: {{repl StatsdAddress }}
-```
-
-{{< template_function name="StatsdNetworkName" replicated="false" kubernetes="false" swarm="true" >}}
-```go
-StatsdNetworkName() string
-```
-
-StatsdNetworkName returns the name of the Statsd docker network.
 
 ## Notes
 
-When referencing another container in a template object, you must make sure the referenced container is started first.  Please see the [Events and Orchestration](/docs/packaging-an-application/events-and-orchestration/) section for more information on orchestrating container startup.
+When referencing another container in a template object, you must make sure the referenced container is started first.  Please see the [Events and Orchestration](/docs/native/packaging-an-application/events-and-orchestration/) section for more information on orchestrating container startup.

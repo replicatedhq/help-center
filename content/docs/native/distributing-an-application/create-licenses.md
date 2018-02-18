@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Create Customers and Licenses"
 description: "Details on the options available to vendors when creating a license for an end customer's upcoming installation."
-weight: "311"
+weight: "310"
 categories: [ "Distributing a Native Application" ]
 index: "docs/native"
 ---

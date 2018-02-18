@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Clustering"
 description: "An implementation guide for using the Replicated built in clustering functionality."
-weight: "216"
+weight: "210"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
 ---

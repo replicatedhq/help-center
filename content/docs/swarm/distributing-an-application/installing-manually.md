@@ -3,9 +3,8 @@ date: "2016-07-03T04:02:20Z"
 title: "Manually Installing Replicated"
 description: "Instructions for manually installing Replicated 2"
 weight: "306"
-keywords: "installing, removing"
-categories: [ "Distributing a Native Application" ]
-index: "docs/native"
+categories: [ "Distributing a Swarm Application" ]
+index: "docs/swarm"
 ---
 
 If you choose not to run the [installation script](/docs/distributing-an-application/installing-via-script) use this guide; note that the install script also installs Docker, detects network configuration and allows proxy settings and provides support to auto-upgrade Replicated during your application release cycle.

@@ -2,8 +2,8 @@
 date: "2016-07-03T04:02:20Z"
 title: "Airgapped Installations"
 description: "The steps required of the end customer to install a Replicated application into an airgapped environment."
-weight: "312"
-categories: [ "Distributing an Application" ]
+weight: "306"
+categories: [ "Distributing a Native Application" ]
 index: "docs/native"
 ---
 

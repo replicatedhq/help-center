@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Installing Replicated with the Easy Install Script"
 description: "Instructions for installing Replicated via the easy install script."
 keywords: "installing"
-weight: "305"
+weight: "304"
 categories: [ "Distributing a Native Application" ]
 index: "docs/native"
 ---
@@ -29,7 +29,7 @@ curl -sSL https://get.replicated.com/docker | sudo bash
 
 {{< linked_headline "Release Channel Install Scripts" >}}
 
-Every release channel for your application has a custom install link. Using the channel install link allows the Replicated installer will optimize the install process. Based on your app YAML the installer will choose the highest allowed version of Replicated using your configured [replicated_version](/docs/packaging-an-application/preflight-checks/) range.
+Every release channel for your application has a custom install link. Using the channel install link allows the Replicated installer will optimize the install process. Based on your app YAML the installer will choose the highest allowed version of Replicated using your configured [replicated_version](/docs/native/packaging-an-application/preflight-checks/) range.
 
 To find the install link, login to your [vendor.replicated.com](https://vendor.replicated.com/) account, select your app and click "build history" for your channel and click "Copy install script url".
 
@@ -75,7 +75,7 @@ curl -x http://<proxy_address>:<proxy_port> https://get.replicated.com/docker | 
 
 {{< linked_headline "Upgrade to latest Replicated build" >}}
 
-If you would like to upgrade Replicated to the latest release simply [rerun the installation script](/docs/distributing-an-application/installing-via-script/) and that will upgrade the Replicated components to the latest build.
+If you would like to upgrade Replicated to the latest release simply [rerun the installation script](/docs/native/distributing-an-application/installing-via-script/) and that will upgrade the Replicated components to the latest build.
 
 {{< linked_headline "Restarting Replicated" >}}
 

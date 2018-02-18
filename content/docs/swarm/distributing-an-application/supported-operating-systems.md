@@ -4,8 +4,8 @@ title: "Supported Operating Systems"
 description: "View the supported operating systems"
 keywords:  "operating system, os"
 weight: "310"
-categories: [ "Distributing a Native Application" ]
-index: "docs/native"
+categories: [ "Distributing a Swarm Application" ]
+index: "docs/swarm"
 ---
 
 Replicated supports Linux-based servers that can run current versions of Docker.

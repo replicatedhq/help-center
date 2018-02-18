@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Manually Installing Replicated"
 description: "Instructions for manually installing Replicated 2"
-weight: "306"
+weight: "305"
 keywords: "installing, removing"
 categories: [ "Distributing a Native Application" ]
 index: "docs/native"
@@ -60,7 +60,6 @@ At this point, the new node should show up on the Cluster page.
 ### 5. Start the Application
 1. Click on the Dashboard tab (:8800/dashboard)
 1. Click the Start Now button
-![Start Now](/images/post-screens/manual-install-2.x/start-now.png)
 
 When first launching there may be no "Start Now" button.  This is because Replicated is still pulling application images. If this is the case, then just wait for the pull to finish.
 

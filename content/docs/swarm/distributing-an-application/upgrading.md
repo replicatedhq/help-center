@@ -3,8 +3,8 @@ date: "2016-07-03T04:02:20Z"
 title: "Upgrading Replicated"
 description: "The process for end customers to update Replicated services to access the latest improvements to the underlying system since their installation."
 weight: "303"
-categories: [ "Distributing A Native Application" ]
-=index: "docs/native"
+categories: [ "Distributing A Swarm Application" ]
+=index: "docs/swarm"
 ---
 
 {{< note title="Replicated 2.0" >}}
