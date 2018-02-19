@@ -2,7 +2,7 @@
 date: "2016-07-02T00:00:00Z"
 lastmod: "2016-07-02T00:00:00Z"
 title: "Custom Metrics"
-weight: "217"
+weight: "215"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
 ---

@@ -1,6 +1,6 @@
 ---
 date: 2017-10-23T10:36:16-07:00
-title: "Replicated Vendor CLI Reference"
+title: "Vendor CLI Reference"
 description: "Documentation for the Replicated Vendor command line interface"
 weight: "506"
 categories: [ "Reference" ]
@@ -8,7 +8,7 @@ index: "docs"
 aliases : [docs/reference/replicated-vendor-cli]
 ---
 
-The [Replicated Vendor CLI](https://github.com/replicatedhq/replicated) provides a CLI for interacting with the Replicated Vendor API. 
+The [Replicated Vendor CLI](https://github.com/replicatedhq/replicated) provides a CLI for interacting with the Replicated Vendor API.
 
 # CLI Installation
 
@@ -126,7 +126,7 @@ replicated release update SEQUENCE --yaml "$(< yournewyaml.yaml)"
 ```
 
 # CI Example
-A common use of the replicated command is to create a new release for every tagged build. 
+A common use of the replicated command is to create a new release for every tagged build.
 
 Assume the app's yaml config is checked in at replicated.yaml and you have configured Travis CI or CircleCI with your REPLICATED_APP and REPLICATED_API_TOKEN environment variables.
 

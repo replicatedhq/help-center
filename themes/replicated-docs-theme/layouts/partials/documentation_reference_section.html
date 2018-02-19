@@ -13,7 +13,10 @@
                   <a href="/docs/native/packaging-an-application" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Packaging an Application</a>
                 </li>
                 <li>
-                  <a href="/docs/native/distributing-an-application" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Distributing an Application</a>
+                  <a href="/docs/config-screen" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">The Config Screen</a>
+                </li>
+                <li>
+                  <a href="/docs/native/customer-installations" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Managing Customer Installations</a>
                 </li>
                 <li>
                   <a href="/docs/native/examples" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Examples</a>
@@ -29,13 +32,16 @@
                   <a href="/docs/swarm/getting-started" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Get Started</a>
                 </li>
                 <li>
-                  <a href="/docs/swarm/packaging-an-application/introduction/" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Package an Application</a>
+                  <a href="/docs/swarm/packaging-an-application/" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Creating the YAML</a>
                 </li>
                 <li>
-                  <a href="/docs/swarm/distributing-an-application/" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Distribute an Application</a>
+                  <a href="/docs/config-screen" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">The Config Screen</a>
                 </li>
                 <li>
-                  <a href="/docs/swarm/examples/" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Examples</a>
+                  <a href="/docs/swarm/customer-installations" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Managing Customer Installations</a>
+                </li>
+                <li>
+                  <a href="/docs/swarm/examples" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Examples</a>
                 </li>
             </div>
           </div><!--
@@ -44,22 +50,55 @@
               <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Ship with Kubernetes</p>
               <ul>
                 <li>
-                  <a href="#" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Get Started</a>
+                  <a href="/docs/kubernetes/getting-started" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Get Started</a>
                 </li>
                 <li>
-                  <a href="#" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Package an Application</a>
+                  <a href="/docs/kubernetes/packaging-an-application" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Package an Application</a>
                 </li>
                 <li>
-                  <a href="#" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Distribute an Application</a>
+                  <a href="/docs/kubernetes/distributing-an-application" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Distribute an Application</a>
                 </li>
                 <li>
-                  <a href="#" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Examples</a>
+                  <a href="/docs/kubernetes/examples" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Examples</a>
                 </li>
             </div>
           </div><!--
+
           --><div class="doc-ref-list-item">
             <div class="doc-ref">
-              <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">API Resources</p>
+              <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Snapshots</p>
+              <ul>
+                <li>
+                  <a href="/docs/snapshots/" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Overview</a>
+                </li>
+                <li>
+                  <a href="/docs/snapshots/custom-scripts/" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Custom Backup Scripts</a>
+                </li>
+                <li>
+                  <a href="/docs/snapshots/customer-snapshot-configuration" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Customer Configuration</a>
+                </li>
+            </div>
+          </div><!--
+
+          --><div class="doc-ref-list-item">
+            <div class="doc-ref">
+              <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">LDAP and Identity</p>
+              <ul>
+                <li>
+                  <a href="/docs/ldap-and-identity/" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Overview</a>
+                </li>
+                <li>
+                  <a href="/docs/ldap-and-identity/authentication/" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Authenticating with LDAP</a>
+                </li>
+                <li>
+                  <a href="/docs/ldap-and-identity/ldap-sync/" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">Directory Sync</a>
+                </li>
+            </div>
+          </div><!--
+
+          --><div class="doc-ref-list-item">
+            <div class="doc-ref">
+              <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">API Reference</p>
               <ul>
                 {{ range $index, $element := ($.Site.Taxonomies.categories.reference).Pages }}
                   {{ if not .Params.hideFromList }}

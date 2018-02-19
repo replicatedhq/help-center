@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Certificate Chain Example"
 description: "An advanced walk through for using the Replicated cert command in an app's YAML definition to generate new TLS certificates for customer use in an application."
-weight: "404"
+weight: "406"
 categories: [ "Replicated Scheduler Examples" ]
 index: "docs/native"
 ---

@@ -2,9 +2,9 @@
 date: "2017-11-17T00:00:00Z"
 title: "Support Bundle (Older Instances)"
 description: "Installed instances can generate a support bundle with relevant logs and instance information."
-weight: "214"
 categories: [ "Packaging a Native Application" ]
 index: "docs/Native"
+hideFromList: true
 ---
 
 {{< linked_headline "Default Support Files" >}}

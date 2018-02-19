@@ -2,15 +2,14 @@
 date: "2016-07-03T04:02:20Z"
 title: "Preflight Checks"
 description: "A guide to implementing the Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
-weight: "205"
+weight: "1205"
 categories: [ "Packaging a Swarm Application" ]
-tags: [ "Application YAML", "Preflight Checks" ]
-index: false
+index: "docs/swarm"
 ---
 
 A preflight check is a test that is run before installing and running an application.  The test will analyze the system to determine if the environment meets the minimum requirements.
 
-The preflight check may be manually run for an existing installation by visiting: 
+The preflight check may be manually run for an existing installation by visiting:
 
 - `https://[your server address]:8800/run-checks`
 

@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Support Bundle"
 description: "Installed instances can generate a support bundle with relevant logs and instance information."
-weight: "213"
+weight: "212"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
 ---
@@ -29,7 +29,7 @@ support:
 
 {{< linked_headline "Custom Files and Commands" >}}
 
-In addition to the [default support files](/docs/packaging-an-application/support-bundle/#default-support-files) included in the support bundle, addtional files can be added via the `support` section of your yaml. Files from within the application’s containers can be included, as well as output of commands executed in the container. Support files and commands are supported by both the native and kubernetes schedulers. For more complex support commands it is possible to create a [config file](/docs/packaging-an-application/components-and-containers/#config-files) and execute that file from a support command. These files will be available withing the _/scheduler_ directory of the support bundle.
+In addition to the [default support files](/docs/native/packaging-an-application/support-bundle/#default-support-files) included in the support bundle, addtional files can be added via the `support` section of your yaml. Files from within the application’s containers can be included, as well as output of commands executed in the container. Support files and commands are supported by both the native and kubernetes schedulers. For more complex support commands it is possible to create a [config file](/docs/native/packaging-an-application/config-files) and execute that file from a support command. These files will be available withing the _/scheduler_ directory of the support bundle.
 
 ```yaml
 support:
@@ -56,8 +56,8 @@ support:
 
 {{< linked_headline "Default Support Files" >}}
 
-{{< note title="Legacy Support Bundle" >}}
-The content in this document is specific to the current default Support Bundle in Replicated. If you are looking for the legacy Support Bundle version of this document, it is available at <a href="/docs/packaging-an-application/support-bundle-v1/">{{< baseurl >}}packaging-an-application/support-bundle-v1/</a>
+{{< note title="Older Replicated Instances" >}}
+The content in this document is specific to the current default Support Bundle in Replicated. If you are looking for the list of files included in previous releases of Replciated, it is available at <a href="/docs/native/packaging-an-application/support-bundle-v1/">{{< baseurl >}}native/packaging-an-application/support-bundle-v1/</a>
 {{< /note >}}
 
 By default the Support Bundle will include the following files:
@@ -67,9 +67,9 @@ By default the Support Bundle will include the following files:
 | /app/container-logs/logs/\*.stdout.log.gz                        | Vendor application archival container stdout logs                                                                                               |
 | /app/container-logs/logs/\*.stderr.log.gz                        | Vendor application archival container stderr logs                                                                                               |
 | /app/containers/\*.json                                          | Vendor application low-level container information. Result of the command `docker inspect <container>`                                          |
-| /app/custom/:component/commands/:filename.stdout                 | [Custom support commands](/docs/packaging-an-application/support-bundle/#custom-files-and-commands) stdout as defined by the vendor application |
-| /app/custom/:component/commands/:filename.stderr                 | [Custom support commands](/docs/packaging-an-application/support-bundle/#custom-files-and-commands) stderr as defined by the vendor application |
-| /app/custom/:component/:filename                                 | [Custom support files](/docs/packaging-an-application/support-bundle/#custom-files-and-commands) as defined by the vendor application           |
+| /app/custom/:component/commands/:filename.stdout                 | [Custom support commands](/docs/native/packaging-an-application/support-bundle/#custom-files-and-commands) stdout as defined by the vendor application |
+| /app/custom/:component/commands/:filename.stderr                 | [Custom support commands](/docs/native/packaging-an-application/support-bundle/#custom-files-and-commands) stderr as defined by the vendor application |
+| /app/custom/:component/:filename                                 | [Custom support files](/docs/native/packaging-an-application/support-bundle/#custom-files-and-commands) as defined by the vendor application           |
 | /app/logs/\*.log                                                 | Vendor application container logs. Result of the command `docker logs <container>`                                                              |
 | /default/commands/date                                           | Print the system date and time. Result of the command `date`                                                                                    |
 | /default/commands/df                                             | Report file system disk space usage for the local file systems. Result of the command `df -al`                                                  |

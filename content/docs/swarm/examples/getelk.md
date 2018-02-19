@@ -3,8 +3,8 @@ date: "2016-07-03T04:02:20Z"
 title: "GetELK"
 description: "An advanced example of the ELK Stack deployed through Replicated with a complex and complete configuration section."
 weight: "406"
-categories: [ "Replicated Scheduler Examples" ]
-index: "docs/native"
+categories: [ "Replicated + Swarm Examples" ]
+index: "docs/swarm"
 ---
 
 ## GetELK

@@ -9,27 +9,21 @@ index: "docs/native"
 
 {{< linked_headline "Create Releases" >}}
 
-The [Replicated vendor portal](https://vendor.replicated.com) provides you with a location to create and release versions of your application to various release channels.
-
-{{< linked_headline "Editing Releases" >}}
-
-Once you have created a release you can use the built-in YAML editor to define the release contents. The editor provides various keyboard shortcuts as [defined here](https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts).
+The [Replicated vendor portal](https://vendor.replicated.com) provides you with a location to create and release versions of your application to various release channels. The vendor portal hosts a built-in YAML editor and linter to help you write and validate YAML for the Replicated Native Scheduler.
 
 {{< linked_headline "Promoting Releases" >}}
 
-In order to deploy a release you will need to promote the release to the proper channel(s). More details can be found in our [Promote Releases](/docs/distributing-an-application/promote-releases/) documentation.
+Once a release is ready to be installed, the release can be promoted to one or more release channels. More details can be found in our [Promote Releases](/docs/native/distributing-an-application/promote-releases/) documentation.
 
-{{< linked_headline "Manage Releases & Channel" >}}
+{{< linked_headline "Manage Release Channels" >}}
 
-By default, there are 3 release channels: Stable, Beta and Unstable. When you first log in to Replicated and select the Channels tab, you'll see these default release channels created:
+By default, there are 3 release channels: Stable, Beta and Unstable. When you first log in to Replicated and select the Channels tab, you'll see these default release channels created. You can delete, edit or create new channels at any time. The channels we create by default are commonly used:
+
+### Unstable
+The Unstable channel is designed for you to constantly push releases to, much in the same way that you continuously deploy new versions to your cloud product. This is the channel that your development environment should have a license assigned to. This channel is designed to be internal and for testing, not for your customers to be licensed against.
+
+### Beta
+The Beta channel is created for release candidates and early adopting customers. We recommend you promote a release to the Beta channel once it's passed automated testing in the Unstable channel. You can also choose to license some early-adopting customers against this channel.
 
 ### Stable
 For most of your customers, you will create a license that assigns them to the Stable channel. By doing so, they'll only receive updates when you push a new version to this channel.
-
-### Beta
-The Beta channel is designed to provide a channel to test the upgrade path. You can also choose to license some early-adopting customers against this channel.
-
-### Unstable
-The Unstable channel is designed for you to constantly push releases to, much in the same way that you continuously deploy new versions to your cloud product. This is the channel that your development environment should have a license assigned to. You likely will not deliver any Unstable licenses to your customers.
-
-In addition to creating additional Release Channels in the [Replicated vendor site](https://vendor.replicated.com/channels), you can also use the [Vendor API](/api/vendor-api/).

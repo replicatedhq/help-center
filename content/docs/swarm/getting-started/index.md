@@ -1,12 +1,10 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Getting Started With Docker Swarm"
+title: "Replicated and Docker Swarm"
 description: "A quick overview of how to get started with the Replicated Docker Swarm scheduler."
-weight: "101"
-categories: [ "Docker Swarm" ]
-tags: [ "Replicated Vendor" ]
-index: "docs/native"
-hideFromList: true
+weight: "1100"
+categories: [ "Shipping With Docker Swarm" ]
+index: "docs/swarm"
 ---
 
 The Replicated platform can be used in conjunction with Docker Swarm to deploy containerized SaaS applications behind a firewall. Replicated provides developers with the ability to support their applications, allow users to configure it for their enterprise environment, and offer their SaaS application as an appliance. Using the Docker Swarm scheduler offers application developers fault tolerance, distribution, secrets management, and more.
@@ -24,7 +22,7 @@ In most cases, Replicated recommends using the Docker Swarm scheduler. Compared 
 
 There are a few cases where using other schedulers, such as the Replicated Native scheduler or Kubernetes scheduler, provide a better experience.
 
-* Some enterprises require the use of Long Term Support Operating Systems in the 2.x kernel series such as Red Hat Enterprise Linux 6. Replicated supports Docker Swarm to version 1.9.x, whereas RHEL6 only supports Docker 1.7.1. Enterprise software can still be delivered via the [Replicated Native Scheduler](/native/getting-started).
+* Some enterprises require the use of Long Term Support Operating Systems in the 2.x kernel series such as RedHat Enterprise Linux 6. Replicated supports Docker Swarm to version 1.9.x, whereas RHEL6 only supports Docker 1.7.1. Enterprise software can still be delivered via the [Replicated Native Scheduler](/native/getting-started).
 * Docker Swarm does not provide cron job or task-based workloads without the use of other workloads. For applications built in software like Rails, tools like Resque and Sidekiq sidestep this need, while others can benefit from using the [#](Kubernetes Scheduler).
 
 ## Shipping on Docker Swarm
