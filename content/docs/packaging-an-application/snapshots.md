@@ -20,7 +20,7 @@ Snapshots include customer console configuration, data from bind mounted volumes
 
 `enabled`: A boolean or template function that evaluates to a boolean and then determines if backups are enabled.
 
-`pause_containers`: A string that can equal "true" or "false". If true, Replicated will pause all containers and then resume them upon completion (note your app will potentially have downtime). Take a look at this article for tips on zero downtime backups.
+`pause_containers`: A string that can equal "true" or "false". If true, Replicated will pause all containers and then resume them upon completion (note your app will potentially have downtime). Take a look at [this article](/docs/kb/developer-resources/zero-downtime-backup/) for tips on zero downtime backups.
 
 `script`: A bash script that will run on the server at the time of backup.
 
