@@ -7,31 +7,6 @@ categories: [ "Distributing a Swarm Application" ]
 index: "docs/swarm"
 ---
 
-An "airgapped" environment is a network that has no path to inbound or outbound internet traffic at all.
-Some enterprise customers require that you ship a package they can install in their airgapped environment.
-
-Replicated supports this type of installation, using the following steps:
-
-{{< linked_headline "Prepare the environment" >}}
-
-The customer will be responsible for delivering a server running a supported version of Docker. Replicated
-supports Docker from {{< docker_version_minimum >}} to {{< docker_version_default >}}. We recommend that you use the latest version of Docker available in this range for your operating system.
-
-The Replicated airgap installation script does not install docker-engine. We've written a guide with some tips that might help get [Docker installed into air gapped machines](/docs/kb/supporting-your-customers/installing-docker-in-airgapped/) with various operating systems.
-
-{{< linked_headline "Install Replicated" >}}
-
-Replicated can be installed by downloading the latest release from
-https://s3.amazonaws.com/replicated-airgap-work/replicated.tar.gz and running the following commands:
-
-```shell
-tar xzvf replicated.tar.gz
-cat ./install.sh | sudo bash -s airgap
-```
-
-### Swarm Mode
-
-{{< version version="2.8.0" >}}
 ```shell
 tar xzvf replicated.tar.gz
 cat ./swarm-init.sh | sudo bash -s airgap

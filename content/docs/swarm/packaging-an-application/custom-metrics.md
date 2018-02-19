@@ -1,17 +1,15 @@
 ---
 date: "2016-07-02T00:00:00Z"
 lastmod: "2016-07-02T00:00:00Z"
-title: "Metrics and Monitors"
-weight: "206"
+title: "Custom Metrics"
+weight: "1206"
 categories: [ "Packaging a Swarm Application" ]
-tags: [ "Application YAML", "StatsD" ]
-index: false
+index: "docs/swarm"
 ---
 
 All Replicated installations come with a StatsD/Graphite/Carbon container that can be used by your application containers to report data. Optional custom monitors can be configured to display additional charts in the Replicated dashboard. Additionally, your own applications can query Graphite directly.
 
 {{< linked_headline "Configuring your services to use StatsD" >}}
-
 
 
 ```yaml

@@ -1,18 +1,16 @@
 ---
-date: "2016-07-01T00:00:00Z"
-lastmod: "2016-07-03T00:00:00Z"
-title: "Automated Installs"
-weight: "999999"
-categories: [ "Developer Resources" ]
-index: "docs"
-tags: ["Installing Replicated", "Automation"]
+date: "2016-07-03T04:02:20Z"
+title: "Automated Installations"
+description: "How to automate installation of Replicated and an application"
+weight: "307"
+categories: [ "Managing Customer Installation" ]
+index: "docs/native"
 ---
 
-Replicated has support for automated installation and configuration.
-Please note that this feature is built for bootstrapping new installations and not for managing existing installations.
+Replicated has support for automated installation and configuration. This feature is built for bootstrapping new installations and not for managing existing installations.
 
-These steps must be run before installing Replicated. The Replicated daemon will only check for these
-values during startup, and only the first time it is started.
+These steps must be run before installing Replicated. Replicated will only check for these
+values during initial installation.
 
 ## Configure Replicated Automatically
 

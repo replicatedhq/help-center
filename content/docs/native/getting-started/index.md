@@ -1,20 +1,19 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Getting Started With The Replicated Scheduler"
+title: "Replicated Native Scheduler"
 description: "A quick overview of how to get started with the Replicated native scheduler."
 weight: "101"
 categories: [ "Replicated Scheduler" ]
-tags: [ "Replicated Vendor" ]
 index: "docs/native"
-hideFromList: true
 ---
 
 Replicated is a platform to package and distribute an application for private installations. These docs will walk you through the required steps to package, distribute and support your application on the Replicated Native Scheduler.
 
 ## When to use the Replicated Native Scheduler
+
 The Replicated Native scheduler is a good container orchestration choice for enterprise installations when you need to support older, legacy operating systems. This scheduler supports Docker 1.7.1, which is the latest version of Docker supported on RedHat Enterprise Linux 6, CentOS 6 and other Linux distributions still using the 2.x kernel.
 
-The Replicated scheduler is a propietary, mature container scheduler that supports the features required by enterprise customers. It was designed and built to enable your customer to install a complex application on one or a cluster of servers, without having to install anything else. A customer can bring Linux servers that are compatible with Docker 1.7.1 or newer, and can deploy and manage your application on their servers. This scheduler supports [airgap installations](/docs/native/distributing-an-application/airgapped-installations) and many other features that enterprise users need.
+The Replicated scheduler is a propietary, mature container scheduler that supports the features required by enterprise customers. It was designed and built to enable your customer to install a complex application on one or a cluster of servers, without having to install anything else. A customer can bring Linux servers that are compatible with Docker 1.7.1 or newer, and can deploy and manage your application on their servers. Along with the other supported schedulers, the Replicated Native Scheduler supports [airgap installations](/docs/native/distributing-an-application/airgapped-installations) and many other features that enterprise users need.
 
 ## When to use other schedulers
 

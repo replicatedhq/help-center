@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Next Steps"
 description: "Next Steps"
-weight: "105"
+weight: "106"
 categories: [ "Replicated Scheduler" ]
 index: "docs/native"
 ---

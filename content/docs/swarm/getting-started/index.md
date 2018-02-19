@@ -1,11 +1,10 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Getting Started With Docker Swarm"
+title: "Replicated and Docker Swarm"
 description: "A quick overview of how to get started with the Replicated Docker Swarm scheduler."
-weight: "101"
+weight: "1100"
 categories: [ "Shipping With Docker Swarm" ]
 index: "docs/swarm"
-hideFromList: true
 ---
 
 The Replicated platform can be used in conjunction with Docker Swarm to deploy containerized SaaS applications behind a firewall. Replicated provides developers with the ability to support their applications, allow users to configure it for their enterprise environment, and offer their SaaS application as an appliance. Using the Docker Swarm scheduler offers application developers fault tolerance, distribution, secrets management, and more.

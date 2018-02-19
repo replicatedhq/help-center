@@ -10,16 +10,12 @@ index: "docs/native"
 
 {{< linked_headline "CMD" >}}
 
-Next we can optionally define a container CMD to execute when running our container.
+It's possible to override the `CMD` and/or `ENTRYPOINT` in a container, when using the Replicated Native Scheduler:
 
 ```yaml
   - source: public
     image_name: redis
     ...
-    cmd: '["redis-server", "--appendonly", "yes"]'
+    entrypoint: '["redis-server"]'
+    cmd: '["--appendonly", "yes"]'
 ```
-
-
-{{< note title="Sensitive data" >}}
-Having environment variables in Support Bundles can be invaluable for troubleshooting.   However, environment variables can contain sensitive data.  Setting `is_excluded_from_support` to `true` will exclude them from Support Bundles.
-{{< /note >}}

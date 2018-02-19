@@ -2,9 +2,8 @@
 date: "2016-07-03T04:02:20Z"
 title: "Ephemeral Containers"
 description: "Running database migrations or one-off jobs with Replicated and Docker Swarm."
-weight: "211"
+weight: "1202"
 categories: [ "Packaging a Swarm Application" ]
-tags: [ "Application YAML", "Data Migrations", "One Off Jobs", "Swarm" ]
 index: false
 ---
 
@@ -69,7 +68,7 @@ services:
 
 {{< linked_headline "Additional Uses" >}}
 
-Ephemeral containers can also be used for one-off jobs via the Docker API. This allows your application to talk directly to Docker by mounting the socket and scheduling one-off jobs as required by your application. 
+Ephemeral containers can also be used for one-off jobs via the Docker API. This allows your application to talk directly to Docker by mounting the socket and scheduling one-off jobs as required by your application.
 
 ```yaml
 services:

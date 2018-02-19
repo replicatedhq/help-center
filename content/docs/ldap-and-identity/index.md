@@ -2,12 +2,42 @@
 date: "2016-07-07T04:02:20Z"
 title: "LDAP and Identity Integration"
 description: "Enabling LDAP and AD user auth and sync in an application through Replicated."
-weight: "501"
+weight: "2300"
 categories: [ "LDAP And Identity Integration" ]
 index: "docs/ldap"
 ---
 
-Replicated can be integrated with LDAP servers to provide real time user authentication & sync. A quick overview of this feature is available. Announcement: [DS Auth & Sync Support](https://blog.replicated.com/2015/12/03/ldap-active-directory-sync-support/)
+Replicated can be integrated with LDAP servers to sync users and/or authenticate users between the directory and your application.
+
+{{< linked_headline "Configuration" >}}
+
+To enable the identity services in your application, a top level key in your release yaml must be present:
+
+```yaml
+
+identity:
+  enabled: true
+  provisioner: 'https://localhost/ldap/auth'
+  sources:
+    - source: ldap
+      enabled: true
+```
+
+| Field |	Description |
+|-------|-------------|
+| enabled | Boolean indicating if LDAP authentication is enabled on this installation. |
+| provisioner | (Optional) Host that provides provisioning API for synchronization with LDAP. This is required if using directory sync, and can be omiitted if only using LDAP authentication. |
+| sources | Only `ldap` source is supported at this time. |
+
+
+Additionally, before your application containers can use the Replicated LDAP integration, you'll need to collect some LDAP settings from your enterprise customer. We recommend you include our suggested configuration items in your application yaml to start.
+
+{{< linked_headline "Authentication" >}}
+
+Replicated provides a simple API to your containers that can be used to authenticate with a directory.
+
+{{< linked_headline "Directory Sync" >}}
+
 
 {{< linked_headline "Configuration" >}}
 
@@ -24,17 +54,6 @@ identity:
     enabled: '{{repl if ConfigOptionEquals "auth_source" "auth_type_ldap_advanced"}}true{{repl else}}false{{repl end}}'
 ```
 
-| Field |	Description |
-|-------|-------------|
-| enabled | This should be copied as shown in the example. The value will depend on the settings provided below. |
-| provisioner | (Optional) Host that provides provisioning API for synchronization with LDAP. This field can be omitted if synchronization is not needed. |
-| sources | Only `ldap` source is supported at this time. Leave this setting as shown in the example. |
-
-In the config section, add LDAP server configuration
-
-{{< note title="Setting names" >}}
-Setting labels can be customized if needed. However, setting names must remain exactly as shown in this example.
-{{< /note>}}
 
 ```yaml
 - name: auth

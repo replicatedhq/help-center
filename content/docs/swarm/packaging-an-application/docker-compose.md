@@ -1,27 +1,20 @@
 ---
-date: "2017-07-11T00:00:00Z"
-title: "Replicated with Docker Swarm"
-description: "Packaging a Docker Swarm application in Replicated"
-weight: "219"
+date: "2016-07-03T04:02:20Z"
+title: "Supported Properties"
+description: "Supported Features of a Swarm Application"
+weight: "1201"
 categories: [ "Packaging a Swarm Application" ]
-tags: [ "Docker", "Swarm", "Schedulers", "Application YAML", "Airgapped Environment" ]
-aliases: [
-    "/docs/packaging-an-application/swarm/"
-]
-index: false
-hideFromList: true
 ---
+
 
 ### YAML format
 
 The Swarm scheduler is based on the Docker Compose V3 YAML format, with additions that enable Replicated specific features such as application configuration, snapshots, and custom commands for administrator commands and support bundle generation. For a comprehensive example of this format, see Replicated's [Swarm Voting App](/docs/examples/swarm-votingapp) and the [Docker Compose V3](https://docs.docker.com/compose/compose-file/) specification.
 
-{{ <callout> }}
 The Compose `version` should be the minimum version for the features your application requires. This will enable greater Docker engine version compatibility, which can be required for enterprise environments maintaining their own Docker distribution or operating system versions.
-{{ </callout> }}
 
+```yaml
 ---
-
 # kind: scheduler-swarm
 
 version: "3.3"
@@ -177,4 +170,4 @@ configs:
 
 ### Notes:
 
-The `config_files` tag is not supported when running in Swarm mode. Please see the **Secrets and Configs** section for details on how to integrate user-supplied information into your containers via the Docker Secrets and Configs features.
+Please see the **Secrets and Configs** section for details on how to integrate user-supplied information into your containers via the Docker Secrets and Configs features.

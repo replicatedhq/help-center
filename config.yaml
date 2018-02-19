@@ -28,7 +28,7 @@ Params:
 taxonomies:
   category: "categories"
   tag: "tags"
-  kb-section: "kb-sections" 
+  kb-section: "kb-sections"
 
 algolia:
   index: "help_center"
@@ -42,7 +42,7 @@ menu:
     - Name: "Documentation"
       Weight: 2
       URL: "/docs/"
-    - Name: "API Resources"
+    - Name: "API Reference"
       Weight: 3
       URL: "/api/"
 ---

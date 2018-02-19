@@ -1,14 +1,11 @@
 ---
 date: "2016-07-07T04:02:20Z"
-title: "LDAP and Identity Integration"
+title: "Config Items"
 description: "Enabling LDAP and AD user auth and sync in an application through Replicated."
-weight: "212"
-categories: [ "Packaging a Swarm Application" ]
-tags: [ "Application YAML", "LDAP" ]
-index: false
+weight: "2302"
+categories: [ "LDAP And Identity Integration" ]
+index: "docs/ldap"
 ---
-
-Replicated can be integrated with LDAP servers to provide real time user authentication & sync. A quick overview of this feature is available. Announcement: [DS Auth & Sync Support](https://blog.replicated.com/2015/12/03/ldap-active-directory-sync-support/)
 
 {{< linked_headline "Configuration" >}}
 
@@ -25,19 +22,9 @@ identity:
     enabled: '{{repl if ConfigOptionEquals "auth_source" "auth_type_ldap_advanced"}}true{{repl else}}false{{repl end}}'
 ```
 
-| Field |	Description |
-|-------|-------------|
-| enabled | This should be copied as shown in the example. The value will depend on the settings provided below. |
-| provisioner | (Optional) Host that provides provisioning API for synchronization with LDAP. This field can be omitted if synchronization is not needed. |
-| sources | Only `ldap` source is supported at this time. Leave this setting as shown in the example. |
-
-In the config section, add LDAP server configuration
-
-{{< note title="Setting names" >}}
-Setting labels can be customized if needed. However, setting names must remain exactly as shown in this example.
-{{< /note>}}
 
 ```yaml
+config:
 - name: auth
   title: Authentication
   description: Where will user accounts be provisioned
@@ -201,7 +188,7 @@ Setting labels can be customized if needed. However, setting names must remain e
 - name: ldap_settings_advanced
   title: LDAP Advanced Server Settings
   description: |
-    Upload a file below for advanced integration configuration. This file must conform to the 
+    Upload a file below for advanced integration configuration. This file must conform to the
     [Advanced LDAP Configuration Specification](https://help.replicated.com/docs/packaging-an-application/ldap-integration/#advanced-ldap-configuration-specification).
   when: auth_source=auth_type_ldap_advanced
   test_proc:
@@ -228,91 +215,3 @@ Note the use of the LdapCopyAuthFrom function. This is optional, but when LDAP i
 
 See [Identity API](/api/integration-api) for information on how to authenticate and sync with LDAP server.
 
-{{< linked_headline "Advanced LDAP Configuration Specification" >}}
-
-The following JSON schema defines the advanced LDAP config spec. This is especially useful if you intend to support identity management via multiple LDAP domains or organizational units.
-
-```json
-{
-	"$schema": "http://json-schema.org/draft-04/schema#",
-	"type": "array",
-	"items": {
-		"$ref": "#/definitions/ldap_host"
-	},
-	"definitions": {
-		"ldap_host": {
-			"type": "object",
-			"properties": {
-				"ServerType": {
-					"type": "string",
-					"enum": ["openldap", "ad", "other"]
-				},
-				"Hostname": {
-					"type": "string",
-					"format": "hostname"
-				},
-				"Port": {
-					"type": "integer"
-				},
-				"Encryption": {
-					"type": "string",
-					"enum": ["plain", "starttls", "ldaps"]
-				},
-				"BaseDN": {
-					"type": "string"
-				},
-				"UserSearchDNs": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					},
-					"minItems": 1
-				},
-				"FieldUsername": {
-					"type": "string"
-				},
-				"SearchUsername": {
-					"type": "string"
-				},
-				"SearchPassword": {
-					"type": "string"
-				},
-				"RestrictedGroupCNs": {
-					"oneOf": [
-						{
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
-						},
-						{
-							"type": "null"
-						}
-					]
-				},
-				"LoginUsername": {
-					"type": "string"
-				},
-				"LoginPassword": {
-					"type": "string"
-				},
-				"AdvancedSearch": {
-					"type": "boolean"
-				},
-				"UserQuery": {
-					"type": "string"
-				},
-				"GroupQuery": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"ServerType", "Hostname", "Port", "Encryption", "BaseDN",
-				"UserSearchDNs", "FieldUsername", "SearchUsername",
-				"SearchPassword"
-			],
-			"additionalProperties": false
-		}
-	}
-}
-```
