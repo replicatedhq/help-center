@@ -1,16 +1,16 @@
 ---
-  title: "Ship With Docker Swarm"
-  description: "A step-by-step guide to shipping your application on Replicated using Docker Swarm."
+  title: "Ship With Kubernetes"
+  description: "A step-by-step guide to shipping your application on Replicated using Kubernetes."
   level: "advanced"
   index: false
   chapters:
-    - title: "Getting Started With Replicated and Swarm"
-      description: "A quick overview of what to expect when building on Replicated and Docker Swarm"
-      slug: "getting-started"
-    - title: "Create the YAML"
-      description: "A walkthrough of creating a Docker Swarm and Replicated YAML release"
-      slug: "creating-yaml"
-    - title: "Managing Customer Installations"
-      description: "A guide to installing Replicated with Docker Swarm for your customers"
-      slug: "installing"
+    - title: "Why Replicated and Kubernetes?"
+      description: "An overview of why it makes sense to ship Replicated with your Kubernetes application"
+      slug: "why-replicated-and-kubernetes"
+    - title: "The Replicated Kubernetes Appliance"
+      description: "Understanding what's installed in the Replicated Kubernetes Appliance and how to use it"
+      slug: "the-appliance-environment"
+    - title: "Comparing Replicated Kubernetes Appliances with GKE"
+      description: "A comparison of a Replicated Kubernetes Appliance with a cluster provisioned in Google Kubernetes Engine"
+      slug: "comparing-gke"
 ---
