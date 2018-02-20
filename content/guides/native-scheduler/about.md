@@ -12,7 +12,7 @@ aliases: [/guides/getting-started]
 
 {{< linked_headline "About the Replicated Native Scheduler" >}}
 
-The Replicated Native Scheduler it a mature, propietary runtime that's being used to manage single and multi-node clusters in many Replicated installations today.
+The Replicated Native Scheduler is a mature, propietary runtime that's being used to manage single and multi-node clusters in many Replicated installations today.
 
 {{< linked_headline "Strengths of the Replicated Native Scheduler" >}}
 
