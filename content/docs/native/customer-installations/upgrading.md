@@ -4,7 +4,8 @@ title: "Upgrading Replicated"
 description: "The process for end customers to update Replicated services to access the latest improvements to the underlying system since their installation."
 weight: "303"
 categories: [ "Managing Customer Installation" ]
-=index: "docs/native"
+index: "docs/native"
+aliases: [docs/distributing-an-application/upgrading]
 ---
 
 You can update all Replicated component versions to latest by re-running the installation

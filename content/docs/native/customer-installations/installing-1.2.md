@@ -5,6 +5,7 @@ description: "How to install the legacy version of Replicated 1.2 via Deb and Yu
 hideFromList: true
 categories: [ "Managing Customer Installation" ]
 index: "docs"
+aliases: [docs/distributing-an-application/installing-1.2]
 ---
 
 {{< warning title="Old Version Warning" >}}

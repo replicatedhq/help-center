@@ -4,7 +4,7 @@ title: "Commands"
 description: "The config section of the Replicated YAML creates a dynamic settings page that customers can use to configure their instance."
 weight: "303"
 categories: [ "Replicated Config Screen" ]
-index: "docs/native"
+index: "docs/config"
 ---
 
 The `cmds` section of the YAML allows you to leverage the power of external commands within your configuration. The sole purpose of these `cmds` is to generate data for input in the configuration screen.

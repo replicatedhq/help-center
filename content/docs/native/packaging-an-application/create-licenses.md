@@ -5,6 +5,7 @@ description: "Details on the options available to vendors when creating a licens
 weight: "219"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
+aliases: [docs/distributing-an-application/create-licenses]
 ---
 
 Each customer you deploy to via Replicated will need a separate license file for their installation. This license file identifies the customer & application during the installation and update processes. A customer license is created in the Customers section of the [vendor portal](https://vendor.replicated.com/customers). You can manage the values and properties of that customer and license, including custom license fields, by selecting an individual customer.

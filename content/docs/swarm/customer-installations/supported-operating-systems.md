@@ -26,7 +26,11 @@ Replicated provides an easy install script for Swarm that works with the the fol
 
 As new operating systems start to support Docker we extend our install script and QA process to include them.  Operating
 systems that support Docker but are not yet included in the easy install script can still be used
-using the [manual install instructions](/docs/distributing-an-application/installing-manually/).
+using the [manual install instructions](/docs/swarm/customer-installations/installing-manually/).
 
 For detailed requirements and installation guides see the docker installation docs.
+
+{{< linked_headline "Swarm and RHEL 6.x / CentOS 6.x" >}}
+
+Replicated on Swarm is unsupported on operating systems that depend on Linux 2.x series kernels, such as Red Hat Enterprise Linux 6.5 or CentOS 6.5. To use these operating systems, consider using the [Replicated Scheduler](/guides/native-scheduler), which has a wider range of Docker version and operating system support.
 

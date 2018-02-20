@@ -116,26 +116,7 @@
               {{ end }}
             </div>
           </div><!--
-          --><div class="doc-ref-list-item">
-            <div class="doc-ref">
-              <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna">Knowledge Base</p>
-              <ul>
-                {{ range $index, $element := first 6 (index $.Site.Taxonomies.categories "knowledgebase").Pages }}
-                  {{ if not .Params.hideFromList }}
-                    <li>
-                      <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
-                    </li>
-                  {{ end }}
-                {{ end }}
-              </ul>
-              {{ with $list := (index $.Site.Taxonomies.categories "knowledgebase") }}
-                {{ $filteredList := where $list "Params.hideFromList" "true" }}
-                {{ if gt (len $filteredList) 6 }}
-                  <a href="/knowledgebase" class="more-items u-borderAll--gray u-fontSize--small u-color--curiousBlue">+ {{ sub (len $filteredList) 6 }} More</a>
-                {{ end }}
-              {{ end }}
-            </div>
-          </div>
+          -->
         </div>
       </div>
     </div>

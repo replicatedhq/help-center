@@ -5,6 +5,7 @@ description: "Instructions for installing additional nodes with a Replicated clu
 weight: "308"
 categories: [ "Managing Customer Installation" ]
 index: "docs/native"
+aliases: [docs/distributing-an-application/add-nodes-replicated]
 ---
 
 When an application is configured by the vendor with a clustering strategy, Replicated makes it possible for the end customer to install additional nodes on remote instances to run a distributed application. Installations of Replicated using the [easy installation script](/docs/native/distributing-an-application/installing-via-script/) will install an operator on the local node automatically.
