@@ -4,7 +4,7 @@ title: "Github"
 description: "A support bundle spec defines what data to collect and store in a support bundle."
 weight: "801"
 categories: [ "Support Bundle" ]
-index: "guides"
+index: false
 tags: ["Support Bundle"]
 type: "guide"
 gradient: "orangeToOrange"
