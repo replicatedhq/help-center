@@ -27,7 +27,7 @@ The Replicated Native Scheduler focuses on the broadest possible support for end
 
 {{< linked_headline "Tradeoffs with the Replicated Native Scheduler" >}}
 
-The Replicated Native Scheduler does not support DNS based service discovery and overlay networks. All container communication can occur over the host networking stack for multi-node clusters, or over the docker0 interface for single node clusters.
+The Replicated Native Scheduler does not support DNS based service discovery and overlay networks. All container communication can occur over the host networking stack for multi-node clusters, or over the docker0 network for single node clusters.
 
 The Replicated Native Scheduler does not support zero downtime updates. When an update is available, the containers are stopped and restarted to apply the update. Many enterprise customers will schedule a maintenance window to update on-prem applications.
 
