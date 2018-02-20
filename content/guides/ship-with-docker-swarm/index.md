@@ -4,9 +4,9 @@
   level: "advanced"
   index: false
   chapters:
-    - title: "Getting Started With Replicated and Swarm"
-      description: "A quick overview of what to expect when building on Replicated and Docker Swarm"
-      slug: "getting-started"
+    - title: "Why Replicated and Docker Swarm?"
+      description: "Why it makes sense to ship Replicated with your Docker Swarm application"
+      slug: "why-replicated-and-swarm"
     - title: "Create the YAML"
       description: "A walkthrough of creating a Docker Swarm and Replicated YAML release"
       slug: "creating-yaml"
