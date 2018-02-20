@@ -6,6 +6,7 @@ keywords: "installing, removing, migrating"
 weight: "302"
 categories: [ "Distributing a Swarm Application" ]
 index: "docs/swarm"
+aliases: [docs/distributing-an-application/installing-with-swarm]
 ---
 
 We distribute an installation script that can be used to install Replicated into a new or existing Swarm cluster. The cluster does not have to be created at this point, the Replicated install script can install Docker Engine and provision a new Swarm cluster.
@@ -94,3 +95,13 @@ sleep 5; docker images | grep 'replicated\|premkit' | awk '{print $3}' | xargs d
 sleep 5; docker secret ls | grep 'replicated\daemon_token' | awk '{print $1}' | xargs docker secret rm
 sleep 5; docker stack rm retraced
 ```
+
+{{ <callout> }}
+To ensure that overlay networking is available in Docker Swarm, make sure the following ports are open between all nodes that act as Swarm nodes:
+
+* TCP port 2377 for cluster management
+* TCP and UDP port 7946 for general communication
+* UDP port 4789 for overlay network traffic
+
+For more information about overlay networking in Docker Swarm, see the [Docker Swarm overlay networking documentation](https://docs.docker.com/network/overlay/).
+{{ </callout> }}

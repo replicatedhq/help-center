@@ -4,6 +4,7 @@ title: "Upgrading Replicated 1.2"
 description: "A guide to installing the legacy version of Replicated 1.2.x via Deb and Yum packages."
 hideFromList: true
 categories: ["Managing Customer Installation"]
+aliases: [docs/distributing-an-application/upgrading-1.2]
 ---
 
 {{< warning title="Old Version Warning" >}}

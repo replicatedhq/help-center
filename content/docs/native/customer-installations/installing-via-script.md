@@ -6,6 +6,7 @@ keywords: "installing"
 weight: "304"
 categories: [ "Managing Customer Installation" ]
 index: "docs/native"
+aliases: [docs/distributing-an-application/installing-via-script]
 ---
 
 We provide an easy-to-use one-line installation process (via shell script) which will detect your OS, ask a few questions and install both docker-engine and the required Replicated components.

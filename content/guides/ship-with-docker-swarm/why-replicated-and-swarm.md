@@ -9,3 +9,6 @@ type: "guide"
 gradient: "orangeToOrange"
 ---
 
+{{< linked_headline "Why Replicated With Docker Swarm" >}}
+
+Docker Swarm is a great tool to ship a reusable manifest to orchestrate and schedule an application across a cluster. Replicated provides functionality on top of this, to complement Docker Swarm.

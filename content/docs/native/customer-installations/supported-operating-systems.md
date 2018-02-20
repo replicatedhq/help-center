@@ -6,6 +6,7 @@ keywords:  "operating system, os"
 weight: "303"
 categories: [ "Managing Customer Installation" ]
 index: "docs/native"
+aliases: [docs/distributing-an-application/supported-operating-systems]
 ---
 
 Replicated supports Linux-based servers that can run current versions of Docker.

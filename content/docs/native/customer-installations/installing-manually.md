@@ -6,6 +6,7 @@ weight: "305"
 keywords: "installing, removing"
 categories: [ "Managing Customer Installations" ]
 index: "docs/native"
+aliases: [docs/distributing-an-application/installing-manually]
 ---
 
 If you choose not to run the [installation script](/docs/distributing-an-application/installing-via-script) use this guide; note that the install script also installs Docker, detects network configuration and allows proxy settings and provides support to auto-upgrade Replicated during your application release cycle.
@@ -13,7 +14,7 @@ If you choose not to run the [installation script](/docs/distributing-an-applica
 To manually install start by checking you are running on a support operating system and follow the 4 steps.
 
 ### 1. Install Docker
-We recommend Docker version {{< docker_version_default >}}.  Refer to the Docker Installation Guide for [Debian](https://docs.docker.com/engine/installation/linux/debian/), [Ubuntu](https://docs.docker.com/engine/installation/linux/ubuntulinux/), [CentOS](https://docs.docker.com/engine/installation/linux/centos/), [Fedora](https://docs.docker.com/engine/installation/linux/fedora/), or [RHEL](https://docs.docker.com/engine/installation/linux/rhel/). Some environments may require [additional configuration](/docs/distributing-an-application/known-docker-workarounds/) to install Docker with a production-ready and stable configuration.
+We recommend Docker version {{< docker_version_default >}}.  Refer to the Docker Installation Guide for [Debian](https://docs.docker.com/engine/installation/linux/debian/), [Ubuntu](https://docs.docker.com/engine/installation/linux/ubuntulinux/), [CentOS](https://docs.docker.com/engine/installation/linux/centos/), [Fedora](https://docs.docker.com/engine/installation/linux/fedora/), or [RHEL](https://docs.docker.com/engine/installation/linux/rhel/). Some environments may require [additional configuration](/docs/kb/supporting-your-customers/known-docker-workarounds/) to install Docker with a production-ready and stable configuration.
 
 ### 2. Run Replicated & UI Containers
 ```shell

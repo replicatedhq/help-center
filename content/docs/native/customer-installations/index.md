@@ -5,6 +5,7 @@ description: "Documentation for installing and supporting your customers."
 weight: "301"
 categories: [ "Managing Customer Installation" ]
 index: "docs/native"
+aliases: [docs/distributing-an-application/maintenance]
 ---
 
 Once your application is ready to

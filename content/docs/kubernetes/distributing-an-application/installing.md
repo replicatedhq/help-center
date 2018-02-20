@@ -6,6 +6,7 @@ keywords: "installing, removing, migrating"
 weight: "402"
 categories: [ "Distributing a Kubernetes Application" ]
 index: "docs/kubernetes"
+aliases: [docs/distributing-an-application/installing-on-kubernetes]
 ---
 
 {{< note title="Replicated 2.0" >}}
