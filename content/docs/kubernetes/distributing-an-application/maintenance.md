@@ -5,6 +5,7 @@ description: "Maintenance processes to use after Replicated is installed"
 weight: "404"
 categories: [ "Distributing a Kubernetes Application" ]
 index: "docs/kubernetes"
+gradient: "kubernetes"
 ---
 
 ## Command Line Interface

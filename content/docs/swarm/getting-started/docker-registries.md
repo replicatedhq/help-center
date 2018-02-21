@@ -5,6 +5,7 @@ description: "How to push and access private images in Replicated's hosted priva
 weight: "1105"
 categories: [ "Shipping With Docker Swarm" ]
 index: "docs/swarm"
+gradient: "swarm"
 ---
 
 When building your application, you have the option to use the Replicated private registry, or any supported external private or public registry.

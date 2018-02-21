@@ -6,6 +6,7 @@ keywords: "installing, removing, migrating"
 weight: "303"
 categories: [ "Distributing a Swarm Application" ]
 index: "docs/swarm"
+gradient: "swarm"
 ---
 
 The advanced Swarm install requires the host is running Docker with a version between {{< swarm_docker_version_minimum >}} - {{< swarm_docker_version_default >}}.

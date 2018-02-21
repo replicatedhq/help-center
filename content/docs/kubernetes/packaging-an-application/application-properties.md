@@ -5,6 +5,7 @@ description: "The Replicated YAML section `properties` allows several high level
 weight: "303"
 categories: [ "Packaging a Kubernetes Application" ]
 index: "docs/kubernetes"
+gradient: "kubernetes"
 ---
 
 The properties section of the YAML allows you to configure properties of the admin console.

@@ -5,6 +5,7 @@ description: "A guide to implementing the Custom Preflight Checks feature to ana
 weight: "1206"
 categories: [ "Packaging a Swarm Application" ]
 index: "docs/swarm"
+gradient: "swarm"
 ---
 
 The host requirements section of the yaml gives Replicated the ability to analyze system

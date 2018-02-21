@@ -7,6 +7,7 @@ weight: "402"
 categories: [ "Distributing a Kubernetes Application" ]
 index: "docs/kubernetes"
 aliases: [docs/distributing-an-application/installing-on-kubernetes]
+gradient: "kubernetes"
 ---
 
 {{< note title="Replicated 2.0" >}}

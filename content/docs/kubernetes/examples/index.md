@@ -5,6 +5,7 @@ description: "The components section of the Replicated YAML defines how the cont
 weight: "401"
 categories: [ "Replicated + Kubernetes Examples" ]
 index: "docs/kubernetes"
+gradient: "kubernetes"
 ---
 
 Examples usign the Replicated Scheduler

@@ -5,6 +5,7 @@ description: "The dynamic configuration management functionality available throu
 weight: "305"
 categories: [ "Packaging a Kubernetes Application" ]
 index: "docs/kubernetes"
+gradient: "kubernetes"
 ---
 
 Template functions are marked by the double curly bracket + *"repl"* escape sequence. They allow for user input to be dynamically inserted into application configuration values. The sequence should be `{{repl`, not `{{ repl`.

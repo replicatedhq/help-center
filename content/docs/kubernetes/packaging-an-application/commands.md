@@ -5,6 +5,7 @@ description: "The cmds section of the Replicated YAML allows you to leverage the
 weight: "310"
 categories: [ "Packaging a Kubernetes Application" ]
 index: "docs/kubernetes"
+gradient: "kubernetes"
 ---
 
 The `cmds` section of the YAML allows you to leverage the power of external commands within your configuration. The sole purpose of these `cmds` is to generate data for input in the configuration screen.

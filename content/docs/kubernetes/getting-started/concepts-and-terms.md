@@ -5,6 +5,7 @@ description: "The core concepts and terms used in these documents to describe th
 weight: "305"
 categories:  [ "Shipping With Kubernetes" ]
 index: "docs/kubernetes"
+gradient: "kubernetes"
 ---
 
 Before shipping your application, there are a few terms to learn, as they are used throughout this guide.

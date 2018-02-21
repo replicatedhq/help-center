@@ -6,5 +6,5 @@ weight: "502"
 index: false
 categories: [ "Reference" ]
 url: "categories/integration-api"
-aliases : [docs/reference/integration-api]
+aliases: [docs/reference/integration-api]
 ---

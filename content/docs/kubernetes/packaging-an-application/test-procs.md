@@ -5,6 +5,7 @@ description: "Test Procs enable customers to easily test the validity of the uns
 weight: "307"
 categories: [ "Packaging a Kubernetes Application" ]
 index: "docs/kubernetes"
+gradient: "kubernetes"
 ---
 
 Using the `test_proc` directive in your app definition YAML, you enable your customers to

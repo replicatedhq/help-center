@@ -5,6 +5,7 @@ description: "The components section of the Replicated YAML defines how the cont
 weight: "401"
 categories: [ "Replicated + Swarm Examples" ]
 index: "docs/swarm"
+gradient: "swarm"
 ---
 
 Examples usign the Replicated Scheduler

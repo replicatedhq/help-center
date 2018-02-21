@@ -5,6 +5,7 @@ description: "An advanced walk through for using the Replicated cert command in 
 weight: "404"
 categories: [ "Replicated + Swarm Examples" ]
 index: "docs/swarm"
+gradient: "swarm"
 ---
 
 ## Certificate Chain App

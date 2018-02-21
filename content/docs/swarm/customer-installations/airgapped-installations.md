@@ -5,6 +5,7 @@ description: "The steps required of the end customer to install a Replicated app
 weight: "312"
 categories: [ "Distributing a Swarm Application" ]
 index: "docs/swarm"
+gradient: "swarm"
 ---
 
 ```shell

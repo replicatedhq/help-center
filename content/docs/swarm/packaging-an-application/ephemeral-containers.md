@@ -5,6 +5,7 @@ description: "Running database migrations or one-off jobs with Replicated and Do
 weight: "1202"
 categories: [ "Packaging a Swarm Application" ]
 index: false
+gradient: "swarm"
 ---
 
 Database migrations are an important part of any software upgrade, and having a strategy to manage data migrations in enterprise deployments is important. One common pattern to manage database migrations is to run an ephemeral container along with container events to run migration tasks.

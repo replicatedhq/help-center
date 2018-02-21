@@ -5,6 +5,7 @@ description: "Ship it to your customer"
 weight: "301"
 categories: [ "Distributing a Swarm Application" ]
 index: "docs/swarm"
+gradient: "swarm"
 ---
 
 

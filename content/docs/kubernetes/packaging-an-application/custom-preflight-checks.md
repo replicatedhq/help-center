@@ -5,6 +5,7 @@ description: "A guide to implementing the Custom Preflight Checks feature to ana
 weight: "318"
 categories: [ "Packaging a Kubernetes Application" ]
 index: "docs/kubernetes"
+gradient: "kubernetes"
 ---
 
 The host requirements section of the yaml gives Replicated the ability to analyze system
