@@ -3,8 +3,7 @@ date: "2018-01-30T04:02:20Z"
 title: "About the Replicated Scheduler"
 description: "Discover the basics of the Replicated Native Scheduler"
 weight: "9001"
-categories: [ "Replicated Scheduler Guide" ]
-index: "guides/native"
+index: false
 type: "guide"
 gradient: "redToRed"
 aliases: [/guides/getting-started]
