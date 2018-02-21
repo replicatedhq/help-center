@@ -49,7 +49,9 @@ specs:
 ### Outputs
 
 
-- `{{.Name}}.raw` - The raw output of the logs call. Will generate this file for each matched service
+- `{{.Name}}.stdout` - The stdout output of the logs call. Will generate this file for each matched service
+
+- `{{.Name}}.stderr` - The stderr output of the logs call. Will generate this file for each matched service
 
     
 <br>
