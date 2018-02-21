@@ -3,8 +3,7 @@ date: "2018-01-30T04:02:20Z"
 title: "Service Discovery"
 description: "Learn about available service discovery mechanisms in the Replicated Native Scheduler"
 weight: "9003"
-categories: [ "Replicated Scheduler Guide" ]
-index: "guides/native"
+index: false
 type: "guide"
 gradient: "redToRed"
 ---
