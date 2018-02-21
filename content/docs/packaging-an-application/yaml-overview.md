@@ -116,6 +116,16 @@ monitors:
   - Worker,quay.io/myenterpriseapp/worker
 ```
 
+When using the swarm scheduler, services can be monitored for resource usage metrics. For each metric, specify the service name.
+
+```yaml
+monitors:
+  cpuacct:
+  - redis-service
+  memory:
+  - redis-service
+```
+
 {{< linked_headline "Custom Metrics" >}}
 
 Regardless of the scheduler used, Replicated can also display [custom metrics](/docs/packaging-an-application/custom-metrics/) sent from the running instance to the Admin Console by including the stats names in a custom_metrics key.
