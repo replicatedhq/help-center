@@ -6,6 +6,7 @@ keywords:  "operating system, os"
 weight: "410"
 categories: [ "Distributing a Kubernetes Application" ]
 index: "docs/kubernetes"
+gradient: "kubernetes"
 ---
 
 Replicated supports Linux-based servers that can run current versions of Docker.

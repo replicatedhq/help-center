@@ -5,6 +5,7 @@ description: "Implementation guide for application vendors to provide customers 
 categories: [ "Packaging a Swarm Application" ]
 weight: "1207"
 index: "docs/swarm"
+gradient: "swarm"
 ---
 
 The `admin_commands` section allows you to define ad-hoc commands that can be executed inside a running container from the shell.

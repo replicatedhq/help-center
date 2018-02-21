@@ -5,6 +5,7 @@ description: "How to push and access private images in Replicated's hosted priva
 weight: "303"
 categories: [ "Shipping With Kubernetes" ]
 index: "docs/kubernetes"
+gradient: "kubernetes"
 ---
 
 When building your application, you have the option of hosting your private images on the Replicated private registry or [using external private and public registries](/docs/kb/supporting-your-customers/registries/).

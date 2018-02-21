@@ -5,6 +5,7 @@ description: "Ship it to your customer."
 weight: "401"
 categories: [ "Distributing a Kubernetes Application" ]
 index: "docs/kubernetes"
+gradient: "kubernetes"
 ---
 
 Distributing an application

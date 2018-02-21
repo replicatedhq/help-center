@@ -6,7 +6,7 @@ weight: "8002"
 categories: [ "Docker Swarm Guide" ]
 index: "guides/swarm"
 type: "guide"
-gradient: "orangeToOrange"
+gradient: "swarm"
 ---
 
 {{< linked_headline "Starting With A Development docker-compose.yml" >}}

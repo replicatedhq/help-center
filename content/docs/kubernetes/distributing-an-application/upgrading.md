@@ -5,6 +5,7 @@ description: "The process for end customers to update Replicated services to acc
 weight: "403"
 categories: [ "Distributing A Kubernetes Application" ]
 =index: "docs/kubernetes"
+gradient: "kubernetes"
 ---
 
 {{< note title="Replicated 2.0" >}}

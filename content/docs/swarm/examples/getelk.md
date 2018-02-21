@@ -5,6 +5,7 @@ description: "An advanced example of the ELK Stack deployed through Replicated w
 weight: "406"
 categories: [ "Replicated + Swarm Examples" ]
 index: "docs/swarm"
+gradient: "swarm"
 ---
 
 ## GetELK

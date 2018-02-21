@@ -4,6 +4,7 @@ title: "Supported Properties"
 description: "Supported Features of a Swarm Application"
 weight: "1201"
 categories: [ "Packaging a Swarm Application" ]
+gradient: "swarm"
 ---
 
 

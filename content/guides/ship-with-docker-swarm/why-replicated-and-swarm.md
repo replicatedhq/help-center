@@ -6,7 +6,7 @@ weight: "8001"
 categories: [ "Docker Swarm Guide" ]
 index: "guides/swarm"
 type: "guide"
-gradient: "orangeToOrange"
+gradient: "swarm"
 ---
 
 {{< linked_headline "Why Replicated With Docker Swarm" >}}

@@ -5,6 +5,7 @@ description: "An example of load-balancing a clustered app."
 weight: "401"
 categories: [ "Replicated + Kubernetes Examples" ]
 index: "docs/kubernetes"
+gradient: "kubernetes"
 ---
 
 ## Load-Balanced Counter App
