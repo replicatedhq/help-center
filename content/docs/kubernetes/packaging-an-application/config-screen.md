@@ -5,6 +5,7 @@ description: "The `config` section of the Replicated YAML creates a dynamic sett
 weight: "306"
 categories: [ "Packaging a Kubernetes Application" ]
 index: "docs/kubernetes"
+gradient: "kubernetes"
 ---
 
 The admin console settings screen configuration is specified as an array configuration

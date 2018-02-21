@@ -6,6 +6,7 @@ keywords:  "operating system, os"
 weight: "310"
 categories: [ "Distributing a Swarm Application" ]
 index: "docs/swarm"
+gradient: "swarm"
 ---
 
 Replicated supports Linux-based servers that can run current versions of Docker.

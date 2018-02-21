@@ -5,6 +5,7 @@ description: "An example of load-balancing a clustered app."
 weight: "401"
 categories: [ "Replicated + Swarm Examples" ]
 index: "docs/swarm"
+gradient: "swarm"
 ---
 
 ## Load-Balanced Counter App

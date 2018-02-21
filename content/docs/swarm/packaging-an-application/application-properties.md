@@ -5,6 +5,7 @@ description: "The Replicated YAML section properties allows several high level i
 weight: "1208"
 categories: [ "Packaging a Swarm Application" ]
 index: "docs/swarm"
+gradient: "swarm"
 ---
 
 The properties section of the YAML allows you to configure properties of the admin console.

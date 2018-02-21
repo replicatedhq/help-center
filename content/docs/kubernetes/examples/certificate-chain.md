@@ -5,6 +5,7 @@ description: "An advanced walk through for using the Replicated cert command in 
 weight: "404"
 categories: [ "Replicated + Kuberbnetes Examples" ]
 index: "docs/kubernetes"
+gradient: "kubernetes"
 ---
 
 ## Certificate Chain App

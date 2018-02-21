@@ -5,6 +5,7 @@ description: "An example of a general-purpose Replicated app definition. This ca
 weight: "403"
 categories: [ "Replicated + Swarm Examples" ]
 index: "docs/swarm"
+gradient: "swarm"
 ---
 
 ## Counter App

@@ -6,6 +6,7 @@ weight: "312"
 categories: [ "Distributing a Swarm Application" ]
 index: "docs/swarm"
 aliases: [docs/distributing-an-application/add-nodes-swarm]
+gradient: "swarm"
 ---
 
 When it is necessary to add additional nodes to satisfy the scheduling requirements of an application, Replicated makes it easy for the end customer to add additional Swarm nodes on remote instances to run a distributed application.

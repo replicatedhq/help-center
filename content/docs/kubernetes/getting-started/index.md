@@ -6,6 +6,7 @@ weight: "301"
 categories: [ "Shipping With Kubernetes" ]
 index: "docs/kubernetes"
 hideFromList: true
+gradient: "kubernetes"
 ---
 
 Replicated is a platform to deploy containerized SaaS applications behind a firewall (ie private cloud, private

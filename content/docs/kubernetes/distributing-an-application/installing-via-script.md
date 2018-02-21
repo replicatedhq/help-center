@@ -6,6 +6,7 @@ keywords: "installing"
 weight: "405"
 categories: [ "Distributing a Kubernetes Application" ]
 index: "docs/kubernetes"
+gradient: "kubernetes"
 ---
 
 We provide an easy-to-use one-line installation process (via shell script) which will detect your OS, ask a few questions and install both docker-engine and the required Replicated components.

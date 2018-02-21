@@ -6,6 +6,6 @@ weight: "8003"
 categories: [ "Docker Swarm Guide" ]
 index: "guides/swarm"
 type: "guide"
-gradient: "orangeToOrange"
+gradient: "swarm"
 ---
 

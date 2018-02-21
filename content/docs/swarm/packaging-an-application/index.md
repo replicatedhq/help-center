@@ -4,6 +4,7 @@ title: "Packaging A Swarm Application"
 description: "An overview of the shipping a Docker Swarm application in Replicated"
 weight: "1200"
 categories: [ "Packaging a Swarm Application" ]
+gradient: "swarm"
 ---
 
 Using Replicated with the built-in Docker Swarm support allows you to use your existing `docker-compose.yml` and Swarm Services to deploy your application using the Replicated platform.

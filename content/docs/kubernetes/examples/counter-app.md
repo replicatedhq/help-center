@@ -5,6 +5,7 @@ description: "An example of a general-purpose Replicated app definition. This ca
 weight: "403"
 categories: [ "Replicated + Kubernetes Examples" ]
 index: "docs/kubernetes"
+gradient: "kubernetes"
 ---
 
 ## Counter App

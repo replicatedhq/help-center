@@ -5,6 +5,7 @@ description: "Guide to enabling application snapshots for backup and restore fun
 weight: "312"
 categories: [ "Packaging a Kubernetes Application" ]
 index: "docs/kubernetes"
+gradient: "kubernetes"
 ---
 
 {{< note title="Kubernetes" >}}

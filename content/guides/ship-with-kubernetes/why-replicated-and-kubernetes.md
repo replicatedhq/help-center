@@ -6,6 +6,6 @@ weight: "11001"
 categories: [ "Kubernetes Guide" ]
 index: "guides/kubernetes"
 type: "guide"
-gradient: "blueToBlue"
+gradient: "kubernetes"
 ---
 

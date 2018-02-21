@@ -5,6 +5,7 @@ description: "The components section of the Replicated YAML defines how the cont
 weight: "201"
 categories: [ "Packaging a Kubernetes Application" ]
 index: "docs/kubernetes"
+gradient: "kubernetes"
 ---
 
 Packaging an application
