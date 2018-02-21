@@ -42,7 +42,9 @@ specs:
 ### Outputs
 
 
-- `{{.Name}}.raw` - The stdout/stderr multiplexed logs. Will generate this file for each matched container
+- `{{.Name}}.stdout` - The stdout logs. Will generate this file for each matched container
+
+- `{{.Name}}.stderr` - The stderr logs. Will generate this file for each matched container
 
     
 <br>

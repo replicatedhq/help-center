@@ -42,7 +42,9 @@ specs:
 ### Outputs
 
 
-- `{{.StackName}}_{{.ServiceName}}.raw` - The raw output. Will generate this file for each matched service
+- `{{.StackName}}_{{.ServiceName}}.stdout` - The stdout output. Will generate this file for each matched service
+
+- `{{.StackName}}_{{.ServiceName}}.stderr` - The stderr output. Will generate this file for each matched service
 
     
 <br>
