@@ -12,7 +12,7 @@ aliases: [/guides/getting-started]
 
 {{< linked_headline "About the Replicated Native Scheduler" >}}
 
-The Replicated Native Scheduler it a mature, propietary runtime that's being used to manage single and multi-node clusters in many Replicated installations today.
+The Replicated Native Scheduler is a mature, propietary runtime that's being used to manage single and multi-node clusters in many Replicated installations today.
 
 {{< linked_headline "Strengths of the Replicated Native Scheduler" >}}
 
@@ -27,7 +27,7 @@ The Replicated Native Scheduler focuses on the broadest possible support for end
 
 {{< linked_headline "Tradeoffs with the Replicated Native Scheduler" >}}
 
-The Replicated Native Scheduler does not support DNS based service discovery and overlay networks. All container communication can occur over the host networking stack for multi-node clusters, or over the docker0 interface for single node clusters.
+The Replicated Native Scheduler does not support DNS based service discovery and overlay networks. All container communication can occur over the host networking stack for multi-node clusters, or over the docker0 network for single node clusters.
 
 The Replicated Native Scheduler does not support zero downtime updates. When an update is available, the containers are stopped and restarted to apply the update. Many enterprise customers will schedule a maintenance window to update on-prem applications.
 
