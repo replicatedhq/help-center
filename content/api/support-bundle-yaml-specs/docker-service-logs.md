@@ -6,6 +6,7 @@ description: Collect logs from a docker swarm service. One of `service` or `serv
 index: docs
 title: docker.service-logs
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## docker.service-logs

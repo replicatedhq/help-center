@@ -8,6 +8,7 @@ description: Manage apps
 index: docs
 title: replicatedctl app
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app

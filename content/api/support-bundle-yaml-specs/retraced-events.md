@@ -6,6 +6,7 @@ description: Collect Audit Log events from a running Retraced instance
 index: docs
 title: retraced.events
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## retraced.events

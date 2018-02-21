@@ -6,6 +6,7 @@ description: Reference Documentation for customizing your end customer's Support
 index: docs
 title: Support Bundle Lifecycle 
 weight: "1"
+gradient: "purpleToPink"
 ---
 
 The Support Bundle spec allows for customizing the lifecycle of your bundle,

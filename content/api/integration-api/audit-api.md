@@ -5,6 +5,7 @@ description: "Read and write to audit events to the Replicated audit log."
 weight: "551"
 categories: [ "Integration API" ]
 index: "docs"
+gradient: "purpleToPink"
 aliases : [docs/reference/integration-api/audit-api]
 ---
 

@@ -8,6 +8,7 @@ description: List tasks
 index: docs
 title: replicatedctl task ls
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl task ls

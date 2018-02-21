@@ -6,6 +6,7 @@ description: Collect logs from one or more services in a stack
 index: docs
 title: docker.stack-service-logs
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## docker.stack-service-logs

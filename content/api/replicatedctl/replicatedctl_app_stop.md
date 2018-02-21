@@ -8,6 +8,7 @@ description: Stop the app
 index: docs
 title: replicatedctl app stop
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app stop

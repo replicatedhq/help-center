@@ -6,6 +6,7 @@ weight: "506"
 categories: [ "Reference" ]
 index: "docs"
 aliases : [docs/reference/replicated-vendor-cli]
+gradient: "purpleToPink"
 ---
 
 The [Replicated Vendor CLI](https://github.com/replicatedhq/replicated) provides a CLI for interacting with the Replicated Vendor API.

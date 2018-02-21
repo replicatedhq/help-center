@@ -4,10 +4,10 @@ title: "Github"
 description: "A support bundle spec defines what data to collect and store in a support bundle."
 weight: "801"
 categories: [ "Support Bundle" ]
-index: false
-tags: ["Support Bundle"]
+index: "guides"
 type: "guide"
 gradient: "orangeToOrange"
+icon: "troubleshoot"
 ---
 
 Once you've [created a support bundle spec](./spec) and have [collected a few bundles from your customers](./generate), it's a good idea to check your spec into source control and treat it the same way you'd treat other code. Having a process around code reviews and being able to accept pull requests to update the spec is useful and supported by Repicated.

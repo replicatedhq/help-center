@@ -4,10 +4,10 @@ title: "Spec"
 description: "A support bundle spec defines what data to collect and store in a support bundle."
 weight: "801"
 categories: [ "Support Bundle" ]
-index: false
-tags: ["Support Bundle"]
+index: "guides"
 type: "guide"
 gradient: "orangeToOrange"
+icon: "troubleshoot"
 ---
 
 You can define what to include in your support bundle by creating and editing a support bundle spec. This is simply a YAML document that defines 

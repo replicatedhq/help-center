@@ -8,6 +8,7 @@ description: Display release notes for an app releases
 index: docs
 title: replicatedctl app-release notes
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app-release notes

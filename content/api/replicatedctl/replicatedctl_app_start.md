@@ -8,6 +8,7 @@ description: Start the app
 index: docs
 title: replicatedctl app start
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app start

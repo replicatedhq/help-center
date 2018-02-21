@@ -5,6 +5,7 @@ description: "Read the current application version, release notes, pending updat
 weight: "552"
 categories: [ "Integration API" ]
 index: "docs"
+gradient: "purpleToPink"
 aliases : [docs/reference/integration-api/version-api]
 ---
 

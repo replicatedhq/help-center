@@ -8,6 +8,7 @@ description: View app config form
 index: docs
 title: replicatedctl app-config view
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app-config view

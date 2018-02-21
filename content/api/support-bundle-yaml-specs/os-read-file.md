@@ -6,6 +6,7 @@ description: Read a file from the filesystem
 index: docs
 title: os.read-file
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## os.read-file

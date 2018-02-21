@@ -5,6 +5,7 @@ description: "Provides methods for your application to query properties of the i
 weight: "553"
 categories: [ "Integration API" ]
 index: "docs"
+gradient: "purpleToPink"
 aliases : [docs/reference/integration-api/license-api]
 ---
 

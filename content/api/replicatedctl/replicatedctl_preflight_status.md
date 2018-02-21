@@ -8,6 +8,7 @@ description: Get preflight status
 index: docs
 title: replicatedctl preflight status
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl preflight status

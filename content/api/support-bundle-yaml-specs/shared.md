@@ -6,6 +6,7 @@ description: Reference Documentation for defining your Support Bundle collection
 index: docs
 title: Support Bundle YAML Specs
 weight: "1"
+gradient: "purpleToPink"
 ---
 
 ## Support Bundle Collection Specs

@@ -7,5 +7,6 @@ categories: [ "Docker Swarm Guide" ]
 index: "guides/swarm"
 type: "guide"
 gradient: "swarm"
+icon: "replicatedDockerSwarm"
 ---
 

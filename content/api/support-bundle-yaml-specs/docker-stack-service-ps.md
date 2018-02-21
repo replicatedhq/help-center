@@ -6,6 +6,7 @@ description: Collect information about the tasks running in a service
 index: docs
 title: docker.stack-service-ps
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## docker.stack-service-ps

@@ -6,6 +6,7 @@ description: List docker swarm tasks
 index: docs
 title: docker.task-ls
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## docker.task-ls

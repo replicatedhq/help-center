@@ -8,6 +8,7 @@ description: Manage app releases
 index: docs
 title: replicatedctl app-release
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app-release

@@ -6,6 +6,7 @@ description: Collect logs from journald
 index: docs
 title: journald.logs
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## journald.logs

@@ -6,6 +6,7 @@ description: Collect a list of docker swarm services
 index: docs
 title: docker.service-ls
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## docker.service-ls

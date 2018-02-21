@@ -6,6 +6,7 @@ description: Collect a list of docker images present on the server
 index: docs
 title: docker.images
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## docker.images

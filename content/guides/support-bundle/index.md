@@ -1,7 +1,7 @@
 ---
   title: "Support Bundle"
   description: "Use Replicated's standalone Support Bundle to diagnose problems with any app, deployed any way, anywhere."
-  level: "advanced"
+  level: "troubleshoot"
   index: false
   chapters:
     - title: "Create a Support Bundle Spec"

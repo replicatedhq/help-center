@@ -6,6 +6,7 @@ weight: "9003"
 index: false
 type: "guide"
 gradient: "redToRed"
+icon: "replicatedCircle"
 ---
 
 {{< linked_headline "Service Discovery Mechanisms in the Replicated Native Scheduler" >}}

@@ -5,6 +5,7 @@ description: "Provides authentication syncing with a customer's identity server"
 weight: "556"
 categories: [ "Integration API" ]
 index: "docs"
+gradient: "purpleToPink"
 aliases : [docs/reference/integration-api/provisioning-api]
 ---
 

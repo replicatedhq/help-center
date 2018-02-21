@@ -8,6 +8,7 @@ description: Import app config settings from stdin
 index: docs
 title: replicatedctl app-config import
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app-config import

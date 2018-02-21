@@ -5,6 +5,7 @@ description: "Provides endpoints for your application to report various kinds of
 weight: "554"
 categories: [ "Integration API" ]
 index: "docs"
+gradient: "purpleToPink"
 aliases : [docs/reference/integration-api/status-api]
 ---
 

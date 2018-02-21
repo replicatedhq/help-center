@@ -8,6 +8,7 @@ description: Stream task progress
 index: docs
 title: replicatedctl task attach
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl task attach

@@ -6,6 +6,7 @@ description: Collect information about one or more containers
 index: docs
 title: docker.container-ls
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## docker.container-ls

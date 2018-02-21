@@ -8,6 +8,7 @@ description: Manage params
 index: docs
 title: replicatedctl params
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl params

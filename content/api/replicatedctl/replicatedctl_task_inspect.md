@@ -8,6 +8,7 @@ description: Display detailed information on one or more tasks
 index: docs
 title: replicatedctl task inspect
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl task inspect

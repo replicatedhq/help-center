@@ -6,6 +6,7 @@ description: Collect information about the response from making an HTTP request
 index: docs
 title: os.http-request
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## os.http-request

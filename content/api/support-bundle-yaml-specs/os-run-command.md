@@ -6,6 +6,7 @@ description: Run a command. Will be run in the support bundle container if `dock
 index: docs
 title: os.run-command
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## os.run-command

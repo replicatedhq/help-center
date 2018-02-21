@@ -8,6 +8,7 @@ description: Activate the license
 index: docs
 title: replicatedctl license activate
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl license activate

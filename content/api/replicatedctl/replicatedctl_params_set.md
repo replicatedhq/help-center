@@ -8,6 +8,7 @@ description: Sets an individual param value
 index: docs
 title: replicatedctl params set
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl params set

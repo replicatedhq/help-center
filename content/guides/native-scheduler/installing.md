@@ -6,5 +6,6 @@ weight: "9005"
 index: false
 type: "guide"
 gradient: "redToRed"
+icon: "replicatedCircle"
 ---
 

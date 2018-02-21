@@ -6,6 +6,7 @@ description: Collect info about the Docker daemon
 index: docs
 title: docker.info
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## docker.info
