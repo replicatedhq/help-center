@@ -63,7 +63,7 @@
 														{{ if eq $currentPageTitle .Title  }}
 														<li class="blue"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 														{{ else }}
-														<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+														<li><a href="{{ .RelPermalink }}" class="u-color--curiousBlue">{{ .Title }}</a></li>
 														{{ end }}
 													{{ end }}
 												{{ end }}
