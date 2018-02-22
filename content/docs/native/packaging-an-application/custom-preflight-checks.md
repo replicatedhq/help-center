@@ -5,6 +5,7 @@ description: "A guide to implementing the Custom Preflight Checks feature to ana
 weight: "214"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 The host requirements section of the yaml gives Replicated the ability to analyze system

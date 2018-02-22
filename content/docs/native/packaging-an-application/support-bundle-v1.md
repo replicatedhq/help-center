@@ -5,6 +5,7 @@ description: "Installed instances can generate a support bundle with relevant lo
 categories: [ "Packaging a Native Application" ]
 index: "docs/Native"
 hideFromList: true
+icon: "replicatedCircle"
 ---
 
 {{< linked_headline "Default Support Files" >}}

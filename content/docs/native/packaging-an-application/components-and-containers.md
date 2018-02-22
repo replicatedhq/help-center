@@ -5,6 +5,7 @@ description: "The components section of the Replicated YAML defines how the cont
 weight: "202"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 The `components` section of the YAML defines how the containers will be created and started. A component is

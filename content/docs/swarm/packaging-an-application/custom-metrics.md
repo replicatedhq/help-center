@@ -2,10 +2,11 @@
 date: "2016-07-02T00:00:00Z"
 lastmod: "2016-07-02T00:00:00Z"
 title: "Custom Metrics"
-weight: "1206"
+weight: "606"
 categories: [ "Packaging a Swarm Application" ]
 index: "docs/swarm"
 gradient: "swarm"
+icon: "replicatedDockerSwarm"
 ---
 
 All Replicated installations come with a StatsD/Graphite/Carbon container that can be used by your application containers to report data. Optional custom monitors can be configured to display additional charts in the Replicated dashboard. Additionally, your own applications can query Graphite directly.

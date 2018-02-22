@@ -6,6 +6,7 @@ hideFromList: true
 categories: [ "Managing Customer Installation" ]
 index: "docs"
 aliases: [docs/distributing-an-application/installing-1.2]
+icon: "replicatedCircle"
 ---
 
 {{< warning title="Old Version Warning" >}}

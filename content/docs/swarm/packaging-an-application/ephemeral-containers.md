@@ -2,10 +2,11 @@
 date: "2016-07-03T04:02:20Z"
 title: "Ephemeral Containers"
 description: "Running database migrations or one-off jobs with Replicated and Docker Swarm."
-weight: "1202"
+weight: "602"
 categories: [ "Packaging a Swarm Application" ]
 index: false
 gradient: "swarm"
+icon: "replicatedDockerSwarm"
 ---
 
 Database migrations are an important part of any software upgrade, and having a strategy to manage data migrations in enterprise deployments is important. One common pattern to manage database migrations is to run an ephemeral container along with container events to run migration tasks.

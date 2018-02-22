@@ -6,6 +6,7 @@ weight: "306"
 categories: [ "Managing Customer Installation" ]
 index: "docs/native"
 aliases: [docs/distributing-an-application/airgapped-installations]
+icon: "replicatedCircle"
 ---
 
 An "airgapped" environment is a network that has no path to inbound or outbound internet traffic at all. Some enterprise customers require that you ship a package they can install in their airgapped environment.

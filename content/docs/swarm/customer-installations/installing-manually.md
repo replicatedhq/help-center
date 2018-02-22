@@ -3,10 +3,11 @@ date: "2016-07-03T04:02:20Z"
 title: "Installing to an Existing Cluster"
 description: "Instructions for installing Replicated to an existing Docker Swarm cluster"
 keywords: "installing, removing, migrating"
-weight: "303"
+weight: "703"
 categories: [ "Distributing a Swarm Application" ]
 index: "docs/swarm"
 gradient: "swarm"
+icon: "replicatedDockerSwarm"
 ---
 
 The advanced Swarm install requires the host is running Docker with a version between {{< swarm_docker_version_minimum >}} - {{< swarm_docker_version_default >}}.

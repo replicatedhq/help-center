@@ -2,10 +2,11 @@
 date: "2016-07-03T04:02:20Z"
 title: "Test Procs"
 description: "Test Procs enable customers to easily test the validity of the unsaved configuration parameters they're entering during installation."
-weight: "307"
+weight: "207"
 categories: [ "Packaging a Kubernetes Application" ]
 index: "docs/kubernetes"
 gradient: "kubernetes"
+icon: "replicatedKubernetes"
 ---
 
 Using the `test_proc` directive in your app definition YAML, you enable your customers to

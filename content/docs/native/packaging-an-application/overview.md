@@ -1,30 +1,60 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Packaging A Swarm Application"
-description: "An overview of the shipping a Docker Swarm application in Replicated"
-weight: "1200"
-categories: [ "Packaging a Swarm Application" ]
-gradient: "swarm"
+title: "Packaging An Application"
+description: "The components section of the Replicated YAML defines how the containers will be created and started."
+weight: "200"
+categories: [ "Packaging a Native Application" ]
+aliases: [docs/native/packaging-an-application/]
+index: "docs/native"
+icon: "replicatedCircle"
+hideFromList: true
 ---
 
-Using Replicated with the built-in Docker Swarm support allows you to use your existing `docker-compose.yml` and Swarm Services to deploy your application using the Replicated platform.
+This section will walk you through creating the first release, and will document all available options you can use when writing an application for the Replicated Native Scheduler.
 
-Shipping a Swarm application with Replicated involves creating a single YAML file that contains your Docker Swarm services and additional Replicated configuratino data. This is packaged as a multi-document YAML file, with a special comment at the top of each included documented to describe it's structure.
+Replicated will deploy an application that is defined in a YAML manifest. There are several top level keys (sections) of a Replicated YAML. The YAML spec is defined at [https://github.com/replicatedhq/libyaml/](https://github.com/replicatedhq/libyaml/).
 
-A typical Docker Swarm release in Replicated will contain two documents, and will have the following structure:
+An example, short and valid YAML file for the Replicated Native Scheduler is below. These keys are explained below this YAML.
 
 ```yaml
----
-# kind: replicated
 replicated_api_version: {{< replicated_api_version_current >}}
-config:
-  ...
+name: My Enterprise Application
+properties:
+  app_url: http://{{repl ThisNodePrivateIPAddress }}
+  console_title: My Enterprise Application
+backup:
+  enabled: true
 
----
-# kind: scheduler-swarm
-version: "3.3"
-services:
-  ...
+/* Create a random string to persist over the lifetime of
+   this installation */
+cmds:
+  - name: jwt_hmac_secret
+    cmd: random
+    args:
+      - "128"
+
+/* Include a single redi container */
+components:
+  - name: Redis
+    containers:
+      - source: public
+        image_name: redis
+        version: 3.2.11
+
+/* Define CPU and memory graphs to show in the Admin Console */
+monitors:
+  cpuacct:
+    - Redis,redis
+  memory:
+    - Redis,redis
+
+/* Define the config screen to show in the Admin Console */
+config:
+  - name: hostname
+    title: Hostname
+    description: Ensure this domain name is routable on your network.
+    type: text
+    required: true
 ```
 
 {{< linked_headline "Replicated API Version" >}}
@@ -74,6 +104,19 @@ cmds:
       - "128"
 ```
 
+{{< linked_headline "Components" >}}
+
+The [components section](/docs/native/packaging-an-application/components-and-containers/) defines the container runtime environment for your containers when using the Replicated Native Scheduler. This includes everything, including the container image, environment variables, [startup events](/docs/native/packaging-an-application/events-and-orchestration/), [config files](/docs/native/packaging-an-application/config-files/) and [clustering](/docs/packaging-an-application/clustering/).
+
+```yaml
+components:
+ - name: Redis
+    containers:
+      - source: public
+        image_name: redis
+        version: 3.2.11
+```
+
 {{< linked_headline "Monitors" >}}
 
 The Replicated Native Scheduler can include [CPU and memory monitors](/docs/native/packaging-an-application/default-monitors/) for any container without any code. The following YAML will show a CPU and a memory graph of the `redis` container on the Admin Console dashboard page.
@@ -99,25 +142,5 @@ config:
     required: true
     ...
 ```
-
-{{< linked_headline "Container Images" >}}
-
-To use private images from an external registry, you need to add the registry via the Vendor website. The guide for [integrating a third party registry](/docs/kb/developer-resources/third-party-registries) explains this in further detail.
-
-For Airgapped installations, all images included in your Swarm application must be specified in the `images` section of your YAML in order to be included in the airgap bundle your customer will download and install.
-
-```yaml
-images:
-- source: mythirdpartyprivateregistry
-  name: namespace/imagename
-  tag: 2.0.0
-- source: public
-  name: redis
-  tag: 3.2-alpine
-- source: public
-  name: postgres
-  tag: 9.4
-```
-
 
 There are other keys, not listed here, that are required to enable advanced functionality. To see more, [continue reading](/docs/native/packaging-an-application/components-and-containers) or head to the [examples of the Replicated Native Scheduler](/docs/native/examples/).

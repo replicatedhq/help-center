@@ -5,6 +5,7 @@ description: "Implementation guide for application vendors to provide customers 
 categories: [ "Packaging a Native Application" ]
 weight: "216"
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 The `admin_commands` section allows you to define ad-hoc commands that can be executed inside a running container from the shell.

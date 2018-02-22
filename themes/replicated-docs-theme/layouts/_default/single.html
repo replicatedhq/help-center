@@ -9,7 +9,7 @@
 				<div class="container">
 					<div class="paddingContainer">
 						<div class="flex flex-auto u-width--full justifyContent--spaceBetween alignItems--center u-marginTop--more">
-							<div class="u-width--full">
+							<div class="u-width--full u-marginRight--more">
 								<h1 class="u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--left">{{ .Title }}</h1>
 								<p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--normal u-lineHeight--normal">{{ .Description }}</p>
 							</div>
@@ -47,27 +47,32 @@
 								{{ end }}
 								</ol>
 							</div>
-							<div class="sidebar">
-								<div>
-									{{ if .Params.categories }}
-										<h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">{{ replace (index (.Params.categories) 0 | title) "-" " " }}</h3>
-										<ul>
-										{{ $currentPageTitle := .Title }}
-										{{ with $taxonomy := (index (.Params.categories) 0) | urlize }}
-											{{ range $index, $element := (index $.Site.Taxonomies.categories $taxonomy).Pages.ByWeight }}
-												{{ if not .Params.hideFromList }}
-													{{ if eq $currentPageTitle .Title  }}
-													<li class="blue"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-													{{ else }}
-													<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+							<p></p>
+							{{ if eq .Section "docs" }}
+								{{ partial "section_folder_navigation.html" . }}
+							{{ else }}
+								<div class="sidebar">
+									<div>
+										{{ if .Params.categories }}
+											<h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">{{ replace (index (.Params.categories) 0 | title) "-" " " }}</h3>
+											<ul>
+											{{ $currentPageTitle := .Title }}
+											{{ with $taxonomy := (index (.Params.categories) 0) | urlize }}
+												{{ range $index, $element := (index $.Site.Taxonomies.categories $taxonomy).Pages.ByWeight }}
+													{{ if not .Params.hideFromList }}
+														{{ if eq $currentPageTitle .Title  }}
+														<li class="blue"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+														{{ else }}
+														<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+														{{ end }}
 													{{ end }}
 												{{ end }}
 											{{ end }}
+											</ul>
 										{{ end }}
-										</ul>
-									{{ end }}
+									</div>
 								</div>
-							</div>
+							{{ end }}
 						</div>
 						<div class="flex1 page-content-wrapper">
 							<div class="page-content">

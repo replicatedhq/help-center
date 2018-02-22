@@ -2,9 +2,10 @@
 date: "2016-07-03T04:02:20Z"
 title: "Preflight Checks"
 description: "A guide to implementing the Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
-weight: "1205"
+weight: "605"
 categories: [ "Packaging a Swarm Application" ]
 index: "docs/swarm"
+icon: "replicatedDockerSwarm"
 gradient: "swarm"
 ---
 

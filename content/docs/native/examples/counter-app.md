@@ -5,6 +5,7 @@ description: "An example of a general-purpose Replicated app definition. This ca
 weight: "405"
 categories: [ "Replicated Scheduler Examples" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 ## Counter App

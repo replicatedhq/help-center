@@ -2,10 +2,11 @@
 date: "2016-07-03T04:02:20Z"
 title: "Application Properties"
 description: "The Replicated YAML section properties allows several high level items to be defined."
-weight: "1208"
+weight: "608"
 categories: [ "Packaging a Swarm Application" ]
 index: "docs/swarm"
 gradient: "swarm"
+icon: "replicatedDockerSwarm"
 ---
 
 The properties section of the YAML allows you to configure properties of the admin console.

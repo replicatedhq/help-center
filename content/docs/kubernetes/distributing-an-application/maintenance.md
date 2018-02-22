@@ -2,10 +2,11 @@
 date: "2016-07-03T04:02:20Z"
 title: "Maintenance"
 description: "Maintenance processes to use after Replicated is installed"
-weight: "404"
+weight: "304"
 categories: [ "Distributing a Kubernetes Application" ]
 index: "docs/kubernetes"
 gradient: "kubernetes"
+icon: "replicatedKubernetes"
 ---
 
 ## Command Line Interface

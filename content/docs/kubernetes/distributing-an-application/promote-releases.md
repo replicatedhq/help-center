@@ -2,10 +2,11 @@
 date: "2016-07-03T04:02:20Z"
 title: "Promote Releases"
 description: "The process for leveraging Replicated's release channel management functionality to stage versions and deliver updates to customers."
-weight: "406"
+weight: "306"
 categories: [ "Distributing a Kubernetes Application" ]
 index: "docs/kubernetes"
 gradient: "kubernetes"
+icon: "replicatedKubernetes"
 ---
 
 Every Replicated license points to a Release Channel. When a license is installed, it will pull down and install the release that is currently at the top of its channel. It’s recommended to create customer licenses on the Stable channel, and only promote releases to Stable that are ready for all customers to install.

@@ -2,10 +2,11 @@
 date: "2016-07-03T04:02:20Z"
 title: "Developer Environment"
 description: "How to set up an environment to ship with Replicated and Docker Swarm"
-weight: "1104"
+weight: "504"
 categories: [ "Shipping with Docker Swarm" ]
 index: "docs/swarm"
 gradient: "swarm"
+icon: "replicatedDockerSwarm"
 ---
 
 Once your application is working in Docker, you'll want to set up a simple environment to iterate on your Replicated YAML. Our Replicated Studio is designed to let shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.

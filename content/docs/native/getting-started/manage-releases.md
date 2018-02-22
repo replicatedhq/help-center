@@ -5,6 +5,7 @@ description: "An introduction to the release channel management workflow for dev
 weight: "103"
 categories: [ "Replicated Scheduler" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 {{< linked_headline "Create Releases" >}}

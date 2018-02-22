@@ -2,10 +2,11 @@
 date: "2016-07-03T04:02:20Z"
 title: "Airgapped Installations"
 description: "The steps required of the end customer to install a Replicated application into an airgapped environment."
-weight: "412"
+weight: "312"
 categories: [ "Distributing a Kubernetes Application" ]
 index: "docs/kubernetes"
 gradient: "kubernetes"
+icon: "replicatedKubernetes"
 ---
 
 An "airgapped" environment is a network that has no path to inbound or outbound internet traffic at all.

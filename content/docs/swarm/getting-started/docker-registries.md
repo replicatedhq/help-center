@@ -2,10 +2,11 @@
 date: "2016-07-03T04:02:20Z"
 title: "Docker Registries"
 description: "How to push and access private images in Replicated's hosted private registry."
-weight: "1105"
+weight: "505"
 categories: [ "Shipping With Docker Swarm" ]
 index: "docs/swarm"
 gradient: "swarm"
+icon: "replicatedDockerSwarm"
 ---
 
 When building your application, you have the option to use the Replicated private registry, or any supported external private or public registry.

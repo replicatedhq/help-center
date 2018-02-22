@@ -2,9 +2,12 @@
 date: "2016-07-03T04:02:20Z"
 title: "Replicated Native Scheduler"
 description: "A quick overview of how to get started with the Replicated native scheduler."
-weight: "101"
+weight: "100"
 categories: [ "Replicated Scheduler" ]
 index: "docs/native"
+aliases: [/docs/native/getting-started]
+hideFromList: true
+icon: "replicatedCircle"
 ---
 
 Replicated is a platform to package and distribute an application for private installations. These docs will walk you through the required steps to package, distribute and support your application on the Replicated Native Scheduler.

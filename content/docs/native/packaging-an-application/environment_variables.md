@@ -5,6 +5,7 @@ description: "Defining container environment variables and setting values dynami
 weight: "204"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 {{< linked_headline "Container Environment Variables" >}}

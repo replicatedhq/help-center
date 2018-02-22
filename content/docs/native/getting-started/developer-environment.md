@@ -5,6 +5,7 @@ description: "How to set up an environment to ship a Replicated application"
 weight: "104"
 categories: [ "Replicated Scheduler" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 Once your application is working in Docker, you'll want to set up a simple environment to iterate on your Replicated YAML. Our Replicated Studio is designed to let shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.

@@ -5,6 +5,7 @@ description: "A an example YAML with every possible options."
 weight: "404"
 categories: [ "Replicated Scheduler Examples" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 ```yaml

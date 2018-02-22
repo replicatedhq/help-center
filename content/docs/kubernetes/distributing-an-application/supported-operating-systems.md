@@ -3,10 +3,11 @@ date: "2016-07-03T04:02:20Z"
 title: "Supported Operating Systems"
 description: "View the supported operating systems"
 keywords:  "operating system, os"
-weight: "410"
+weight: "310"
 categories: [ "Distributing a Kubernetes Application" ]
 index: "docs/kubernetes"
 gradient: "kubernetes"
+icon: "replicatedKubernetes"
 ---
 
 Replicated supports Linux-based servers that can run current versions of Docker.

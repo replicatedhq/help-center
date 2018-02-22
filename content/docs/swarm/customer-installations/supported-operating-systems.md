@@ -3,9 +3,10 @@ date: "2016-07-03T04:02:20Z"
 title: "Supported Operating Systems"
 description: "View the supported operating systems"
 keywords:  "operating system, os"
-weight: "310"
+weight: "710"
 categories: [ "Distributing a Swarm Application" ]
 index: "docs/swarm"
+icon: "replicatedDockerSwarm"
 gradient: "swarm"
 ---
 
