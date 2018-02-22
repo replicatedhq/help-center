@@ -2,6 +2,8 @@
   title: "Using the Replicated Vendor Portal"
   description: "An overview of the Replicated Vendor Portal site"
   level: "vendorPortal"
+  gradient: "turquoiseToGreen"
+  icon: "vendorPortal"
   index: false
   chapters:
     - title: "Managing Releases"

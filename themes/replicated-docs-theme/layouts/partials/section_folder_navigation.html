@@ -2,8 +2,8 @@
 {{ $currentSection := .CurrentSection }}
 <div class="sidebar">
         <div class="u-marginBottom--most">
-            <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Kubernetes</h3>
-            {{ with .Site.GetPage "section" "docs" "kubernetes" }}
+            <h3 class="u-fontWeight--bold u-fontSize--large u-lineHeight--normal u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Replicated Native Scheduler</h3>
+            {{ with .Site.GetPage "section" "docs" "native" }}
                 {{ range .Pages }}
                     <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
                         <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
@@ -64,8 +64,8 @@
             {{ end }}
         </div>
         <div class="u-marginBottom--most">
-            <h3 class="u-fontWeight--bold u-fontSize--large u-lineHeight--normal u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Replicated Native Scheduler</h3>
-            {{ with .Site.GetPage "section" "docs" "native" }}
+            <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Kubernetes</h3>
+            {{ with .Site.GetPage "section" "docs" "kubernetes" }}
                 {{ range .Pages }}
                     <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
                         <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">

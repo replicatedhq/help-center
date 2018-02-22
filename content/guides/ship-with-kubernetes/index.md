@@ -2,6 +2,8 @@
   title: "Ship With Kubernetes"
   description: "A step-by-step guide to shipping your application on Replicated using Kubernetes."
   level: "replicatedKubernetes"
+  gradient: "kubernetes"
+  icon: "replicatedKubernetes"
   index: false
   chapters:
     - title: "Why Replicated and Kubernetes?"
