@@ -8,6 +8,7 @@ description: Display detailed information on the app's status
 index: docs
 title: replicatedctl app status inspect
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app status inspect

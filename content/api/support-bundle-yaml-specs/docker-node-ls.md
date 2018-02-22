@@ -6,6 +6,7 @@ description: Collect information about the nodes in a Docker Swarm installation
 index: docs
 title: docker.node-ls
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## docker.node-ls

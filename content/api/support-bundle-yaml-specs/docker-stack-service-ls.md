@@ -6,6 +6,7 @@ description: Collect information about services in a swarm stack
 index: docs
 title: docker.stack-service-ls
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## docker.stack-service-ls

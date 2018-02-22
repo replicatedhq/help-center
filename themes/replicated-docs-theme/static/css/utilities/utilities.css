@@ -75,6 +75,7 @@
 @media screen and (min-width: 12.5em) {
   .u-show--mobileTablet { display: block !important; }
   .u-hidden--mobileTablet { display: none !important; }
+  .main-section { padding: 85px 0 40px; }
 }
 
 /* ≥ 568px */
@@ -97,7 +98,8 @@
 /* ≥ 1024px */
 @media screen and (min-width: 64em) {
   .paddingContainer { padding: 0 30px; }
-  .main-section { padding: 60px 0; }
+  .main-section { padding: 85px 0 40px; }
+  .content.main-section { padding: 60px 0 75px; }
 }
 
 /* ≥ 1280px */

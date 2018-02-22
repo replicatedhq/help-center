@@ -8,6 +8,7 @@ description: Manage UI console authentication settings
 index: docs
 title: replicatedctl console-auth
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl console-auth

@@ -8,6 +8,7 @@ description: Documentation for the replicatedctl command line
 index: docs
 title: replicatedctl Reference
 weight: "505"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl

@@ -8,6 +8,7 @@ description: Display detailed information on one or more app releases
 index: docs
 title: replicatedctl app-release inspect
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app-release inspect

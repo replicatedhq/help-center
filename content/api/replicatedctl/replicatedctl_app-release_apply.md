@@ -8,6 +8,7 @@ description: Applies pending app releases
 index: docs
 title: replicatedctl app-release apply
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app-release apply

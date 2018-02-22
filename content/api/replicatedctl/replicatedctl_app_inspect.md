@@ -8,6 +8,7 @@ description: Display detailed information on the app
 index: docs
 title: replicatedctl app inspect
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app inspect

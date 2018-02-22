@@ -8,6 +8,7 @@ description: Import params from stdin
 index: docs
 title: replicatedctl params import
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl params import

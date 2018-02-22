@@ -1,20 +1,20 @@
 .icon.u-guidesIcon {
-  background-position: -2px 0;
+  background-position: -2px -4px;
   width: 46px;
   height: 43px;
 }
 .icon.u-documentationIcon {
-  background-position: -2px -45px;
+  background-position: -2px -49px;
   width: 35px;
   height: 42px;
 }
 .icon.u-apiReferenceIcon {
-  background-position: -2px -89px;
+  background-position: -2px -93px;
   width: 42px;
   height: 49px;
 }
 .icon.u-contactIcon {
-  background-position: -2px -140px;
+  background-position: -2px -144px;
   width: 46px;
   height: 48px;
 }
@@ -33,7 +33,31 @@
   width: 20px;
   height: 20px;
 }
-
+.icon.u-replicatedKubernetes {
+  background-position: -224px -3px;
+  width: 117px;
+  height: 119px;
+}
+.icon.u-replicatedDockerSwarm {
+  background-position: -224px -128px;
+  width: 117px;
+  height: 119px;
+}
+.icon.u-replicatedCircle {
+  background-position: -224px -252px;
+  width: 117px;
+  height: 119px;
+}
+.icon.u-troubleshoot {
+  background-position: -347px -130px;
+  width: 118px;
+  height: 120px;
+}
+.icon.u-vendorPortal {
+  background-position: -224px -375px;
+  width: 118px;
+  height: 120px;
+}
 .icon.u-beginnerWings {
   background-position: -2px -256px;
   width: 200px;
@@ -50,7 +74,7 @@
   height: 78px;
 }
 .icon.u-guidesHeaderIcon {
-  background-position: -72px -16px;
+  background-position: -72px -20px;
   width: 60px;
   height: 56px;
 }
@@ -60,12 +84,12 @@
   height: 57px;
 }
 .icon.u-docsHeaderIcon {
-  background-position: -72px -96px;
+  background-position: -72px -100px;
   width: 47px;
   height: 56px;
 }
 .icon.u-apiHeaderIcon {
-  background-position: -150px -155px;
+  background-position: -150px -159px;
   width: 60px;
   height: 60px;
 }

@@ -6,6 +6,7 @@ description: Collect information about containers
 index: docs
 title: docker.ps
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## docker.ps

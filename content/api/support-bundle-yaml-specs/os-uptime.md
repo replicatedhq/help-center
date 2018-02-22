@@ -6,6 +6,7 @@ description: Collect information about the system's uptime
 index: docs
 title: os.uptime
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## os.uptime

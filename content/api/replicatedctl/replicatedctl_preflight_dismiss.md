@@ -8,6 +8,7 @@ description: Dismiss preflight check warnings
 index: docs
 title: replicatedctl preflight dismiss
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl preflight dismiss

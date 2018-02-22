@@ -6,6 +6,7 @@ description: Collect logs from a docker swarm task
 index: docs
 title: docker.task-logs
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## docker.task-logs

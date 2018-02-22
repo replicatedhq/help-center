@@ -8,6 +8,7 @@ description: Unsets a runtime overridden param value
 index: docs
 title: replicatedctl params unset
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl params unset

@@ -5,6 +5,7 @@ description: "Generated documentation for the Replicated YAML spec."
 weight: "503"
 categories: [ "Reference" ]
 index: "docs"
+gradient: "purpleToPink"
 aliases : [docs/reference/yaml]
 ---
 

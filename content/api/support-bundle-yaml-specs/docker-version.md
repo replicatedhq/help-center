@@ -6,6 +6,7 @@ description: Get the version of the docker server
 index: docs
 title: docker.version
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## docker.version

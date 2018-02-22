@@ -8,12 +8,15 @@
 				{{ end }}
 				<div class="container">
 					<div class="paddingContainer">
-						<h1 class="u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--left">
-							{{ .Title }}
-						</h1>
-						<p class="u-color--white u-fontSize--large u-lineHeight--normal">
-							{{ .Description }}
-						</p>
+						<div class="flex flex-auto u-width--full justifyContent--spaceBetween alignItems--center u-marginTop--more">
+							<div class="u-width--full">
+								<h1 class="u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--left">{{ .Title }}</h1>
+								<p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--normal u-lineHeight--normal">{{ .Description }}</p>
+							</div>
+							<div class="flex-auto u-hidden--mobileTablet">
+								<span class="icon u-{{ .Params.icon }} u-marginRight--normal"></span>
+							</div>
+						</div>
 						{{ if .Params.tags }}
 							<div class="tags">
 								<ul>

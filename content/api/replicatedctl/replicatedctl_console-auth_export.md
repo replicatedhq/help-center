@@ -8,6 +8,7 @@ description: Export console auth config for current auth type
 index: docs
 title: replicatedctl console-auth export
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl console-auth export

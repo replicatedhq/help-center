@@ -1,7 +1,7 @@
 ---
   title: "Using the Replicated Native Scheduler"
-  description: "A quick start guide to walk you through shipping a sample application with the Replicated Native Scheduler"
-  level: "beginner"
+  description: "A step-by-step guide to shipping your application with the Replicated Native Scheduler."
+  level: "replicatedCircle"
   index: false
   chapters:
     - title: "Create And Ship A Release"

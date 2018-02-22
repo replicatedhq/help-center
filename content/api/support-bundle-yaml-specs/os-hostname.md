@@ -6,6 +6,7 @@ description: Get the hostname
 index: docs
 title: os.hostname
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## os.hostname

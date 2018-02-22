@@ -5,6 +5,7 @@ description: "Provides authentication with identity servers"
 weight: "555"
 categories: [ "Integration API" ]
 index: "docs"
+gradient: "purpleToPink"
 aliases : [docs/reference/integration-api/identity-api]
 ---
 

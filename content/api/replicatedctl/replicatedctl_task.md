@@ -8,6 +8,7 @@ description: Manage tasks
 index: docs
 title: replicatedctl task
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl task

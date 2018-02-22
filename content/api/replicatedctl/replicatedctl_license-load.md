@@ -8,6 +8,7 @@ description: Load the license from stdin
 index: docs
 title: replicatedctl license-load
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl license-load

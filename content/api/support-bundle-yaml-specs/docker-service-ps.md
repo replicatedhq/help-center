@@ -6,6 +6,7 @@ description: Collect information about the tasks run by one or more services
 index: docs
 title: docker.service-ps
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## docker.service-ps

@@ -6,6 +6,7 @@ description: Collect the stdout/stderr of executing a command in an already runn
 index: docs
 title: docker.exec
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## docker.exec

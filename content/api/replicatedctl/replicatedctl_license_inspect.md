@@ -8,6 +8,7 @@ description: Display detailed information on the license
 index: docs
 title: replicatedctl license inspect
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl license inspect

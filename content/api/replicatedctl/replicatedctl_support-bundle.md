@@ -8,6 +8,7 @@ description: Generate a support bundle
 index: docs
 title: replicatedctl support-bundle
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl support-bundle

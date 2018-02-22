@@ -8,6 +8,7 @@ description: Get the Replicated CLI version information
 index: docs
 title: replicatedctl version
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl version

@@ -8,6 +8,7 @@ description: Export params
 index: docs
 title: replicatedctl params export
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl params export

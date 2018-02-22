@@ -8,6 +8,7 @@ description: View or manage preflight checks
 index: docs
 title: replicatedctl preflight
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl preflight

@@ -8,6 +8,7 @@ description: Run the preflight checks
 index: docs
 title: replicatedctl preflight run
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl preflight run

@@ -8,6 +8,7 @@ description: Resets console authentication to type anonymous
 index: docs
 title: replicatedctl console-auth reset
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl console-auth reset

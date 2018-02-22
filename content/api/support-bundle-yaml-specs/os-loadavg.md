@@ -6,6 +6,7 @@ description: Collect information about CPU load
 index: docs
 title: os.loadavg
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## os.loadavg

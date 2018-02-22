@@ -6,6 +6,7 @@ description: Collect a file by copying from a running docker container
 index: docs
 title: docker.container-cp
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## docker.container-cp

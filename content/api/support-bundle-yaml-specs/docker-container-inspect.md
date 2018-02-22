@@ -6,6 +6,7 @@ description: Collect the `docker inspect` output for one or more running or stop
 index: docs
 title: docker.container-inspect
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## docker.container-inspect

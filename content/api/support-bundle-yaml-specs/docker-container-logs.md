@@ -6,6 +6,7 @@ description: Collect the stdout/stderr logs from one or more docker containers. 
 index: docs
 title: docker.container-logs
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## docker.container-logs

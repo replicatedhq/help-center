@@ -6,6 +6,7 @@ description: Collect the stderr/stdout of running a single docker container
 index: docs
 title: docker.container-run
 weight: "100"
+gradient: "purpleToPink"
 ---
 
 ## docker.container-run

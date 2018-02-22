@@ -8,6 +8,7 @@ description: Manage the app status
 index: docs
 title: replicatedctl app status
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app status

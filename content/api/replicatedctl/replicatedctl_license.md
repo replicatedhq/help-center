@@ -8,6 +8,7 @@ description: Manage the license
 index: docs
 title: replicatedctl license
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl license

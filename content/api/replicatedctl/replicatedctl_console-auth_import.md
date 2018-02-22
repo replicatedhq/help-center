@@ -8,6 +8,7 @@ description: Import console authentication config from stdin
 index: docs
 title: replicatedctl console-auth import
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl console-auth import

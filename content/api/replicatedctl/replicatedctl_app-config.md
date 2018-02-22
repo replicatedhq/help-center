@@ -8,6 +8,7 @@ description: Manage app config
 index: docs
 title: replicatedctl app-config
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app-config

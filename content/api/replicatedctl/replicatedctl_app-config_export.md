@@ -8,6 +8,7 @@ description: Export app config settings
 index: docs
 title: replicatedctl app-config export
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app-config export
