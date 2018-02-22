@@ -411,6 +411,9 @@ config:
     when: logstash_output_rollbar_enabled=1
     type: text
     required: true
+swarm:
+  configs:
+
 
 ---
 
@@ -500,4 +503,26 @@ services:
       REPLICATED_AUTH_PASSWORD: '{{repl ConfigOption "authentication_type_password_password" }}'
       REPLICATED_AUTH_HASHKEY: '{{repl ConfigOption "authentication_type_password_hashkey" }}'
       REPLICATED_AUTH_BLOCKKEY: '{{repl ConfigOption "authentication_type_password_blockkey" }}'
+
+configs:
+  auth_config:
+    external: true
+  nginx_config:
+    external: true
+  eshead_config:
+    external: true
+  replicated_cert_file:
+    external: true
+  replicated_cert_key:
+    external: true
+  kibana_config:
+    external: true
+  logstash_config:
+    external: true
+  logstash_input_lumberjack_cert_file:
+    external: true
+  logstash_input_lumberjack_key_file:
+    external: true
+  elasticsearch_config:
+    external: true
 ```
