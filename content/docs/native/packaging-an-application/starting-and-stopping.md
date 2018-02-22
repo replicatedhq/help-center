@@ -5,6 +5,7 @@ description: "Controlling the startup process of an individual a container"
 weight: "208"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 

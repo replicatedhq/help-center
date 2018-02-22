@@ -5,6 +5,7 @@ description: "An implementation guide for using the Replicated built in clusteri
 weight: "210"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 By default Replicated will start one instance per component and container in your application on a single host. With the addition of clustering your application can optionally leverage multiple hosts as well as multiple instances per host.

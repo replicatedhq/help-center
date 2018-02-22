@@ -2,9 +2,10 @@
 date: "2016-07-03T04:02:20Z"
 title: "Support Bundle"
 description: "Installed instances can generate a support bundle with relevant logs and instance information."
-weight: "1204"
+weight: "604"
 categories: [ "Packaging a Swarm Application" ]
 index: "docs/swarm"
+icon: "replicatedDockerSwarm"
 gradient: "swarm"
 ---
 

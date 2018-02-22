@@ -7,6 +7,7 @@ weight: "302"
 categories: [ "Managing Customer Installation" ]
 index: "docs/native"
 aliases: [docs/distributing-an-application/installing]
+icon: "replicatedCircle"
 ---
 
 ## Prerequisites

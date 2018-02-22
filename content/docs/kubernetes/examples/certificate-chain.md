@@ -6,6 +6,7 @@ weight: "404"
 categories: [ "Replicated + Kuberbnetes Examples" ]
 index: "docs/kubernetes"
 gradient: "kubernetes"
+icon: "replicatedKubernetes"
 ---
 
 ## Certificate Chain App

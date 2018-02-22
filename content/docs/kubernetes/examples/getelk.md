@@ -6,6 +6,7 @@ weight: "406"
 categories: [ "Replicated + Kubernetes Examples" ]
 index: "docs/kubernetes"
 gradient: "kubernetes"
+icon: "replicatedKubernetes"
 ---
 
 ## GetELK

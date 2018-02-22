@@ -5,6 +5,7 @@ description: "An example of load-balancing a clustered app."
 weight: "403"
 categories: [ "Replicated Scheduler Examples" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 ## Load-Balanced Counter App

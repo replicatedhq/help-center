@@ -182,11 +182,6 @@
   padding: 9px 0;
 }
 
-.sidebar li a,
-.sidebar li a:visited {
-  color: #000;
-}
-
 .sidebar li.blue a {
   color: #2a98cb;
   font-weight: 500;
@@ -371,6 +366,7 @@
   .sidebar {
     max-width: 200px;
     display: flex;
+    flex-direction: column;
   }
   .mobile {
     display: none;

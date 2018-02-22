@@ -5,6 +5,7 @@ description: "Defining and controlling container volumes"
 weight: "203"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 {{< linked_headline "Container Volumes" >}}

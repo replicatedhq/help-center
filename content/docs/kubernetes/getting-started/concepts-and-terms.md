@@ -2,10 +2,11 @@
 date: "2016-07-03T04:02:20Z"
 title: "Concepts and Terminology"
 description: "The core concepts and terms used in these documents to describe the Replicated functionality."
-weight: "305"
+weight: "105"
 categories:  [ "Shipping With Kubernetes" ]
 index: "docs/kubernetes"
 gradient: "kubernetes"
+icon: "replicatedKubernetes"
 ---
 
 Before shipping your application, there are a few terms to learn, as they are used throughout this guide.

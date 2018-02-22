@@ -2,10 +2,11 @@
 date: "2016-07-03T04:02:20Z"
 title: "Replicated Private Registry"
 description: "How to push and access private images in Replicated's hosted private registry."
-weight: "303"
+weight: "103"
 categories: [ "Shipping With Kubernetes" ]
 index: "docs/kubernetes"
 gradient: "kubernetes"
+icon: "replicatedKubernetes"
 ---
 
 When building your application, you have the option of hosting your private images on the Replicated private registry or [using external private and public registries](/docs/kb/supporting-your-customers/registries/).

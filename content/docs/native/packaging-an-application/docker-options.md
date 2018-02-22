@@ -5,6 +5,7 @@ description: "Advanced Docker Options in the Replicated Native Scheduler"
 weight: "206"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 {{< linked_headline "Docker Options" >}}

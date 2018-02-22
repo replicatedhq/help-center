@@ -2,9 +2,10 @@
 date: "2016-07-03T04:02:20Z"
 title: "Supported Properties"
 description: "Supported Features of a Swarm Application"
-weight: "1201"
+weight: "601"
 categories: [ "Packaging a Swarm Application" ]
 gradient: "swarm"
+icon: "replicatedDockerSwarm"
 ---
 
 

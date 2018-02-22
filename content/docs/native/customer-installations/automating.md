@@ -5,6 +5,7 @@ description: "How to automate installation of Replicated and an application"
 weight: "307"
 categories: [ "Managing Customer Installation" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 Replicated has support for automated installation and configuration. This feature is built for bootstrapping new installations and not for managing existing installations.

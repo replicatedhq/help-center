@@ -2,10 +2,11 @@
 date: "2016-07-07T04:02:20Z"
 title: "LDAP and Identity Integration"
 description: "Enabling LDAP and AD user auth and sync in an application through Replicated."
-weight: "320"
+weight: "220"
 categories: [ "Packaging a Kubernetes Application" ]
 index: "docs/kubernetes"
 gradient: "kubernetes"
+icon: "replicatedKubernetes"
 ---
 
 Replicated can be integrated with LDAP servers to provide real time user authentication & sync. A quick overview of this feature is available. Announcement: [DS Auth & Sync Support](https://blog.replicated.com/2015/12/03/ldap-active-directory-sync-support/)

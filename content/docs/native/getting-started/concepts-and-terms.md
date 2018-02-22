@@ -5,6 +5,7 @@ description: "The core concepts and terms used in these documents to describe th
 weight: "102"
 categories:  [ "Replicated Scheduler" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 Before shipping your application, there are a few terms to learn, as they are used throughout this guide.

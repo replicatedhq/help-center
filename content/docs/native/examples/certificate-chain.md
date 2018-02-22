@@ -5,6 +5,7 @@ description: "An advanced walk through for using the Replicated cert command in 
 weight: "406"
 categories: [ "Replicated Scheduler Examples" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 ## Certificate Chain App

@@ -5,6 +5,7 @@ description: "The Replicated YAML section properties allows several high level i
 weight: "217"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 The properties section of the YAML allows you to configure properties of the admin console.

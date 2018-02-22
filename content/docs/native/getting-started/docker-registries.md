@@ -5,6 +5,7 @@ description: "How to push and access private images in Replicated's hosted priva
 weight: "105"
 categories: [ "Replicated Scheduler" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 When building your application, you have the option to use the Replicated private registry, or any supported external private or public registry.

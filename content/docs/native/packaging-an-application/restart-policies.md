@@ -5,6 +5,7 @@ description: "Controlling Container Restart Events"
 weight: "207"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 {{< linked_headline "Restart Policies" >}}

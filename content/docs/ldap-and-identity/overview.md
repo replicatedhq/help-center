@@ -1,9 +1,10 @@
 ---
 date: "2016-07-07T04:02:20Z"
-title: "LDAP and Identity Integration"
+title: "LDAP & Identity Integration Overview"
 description: "Enabling LDAP and AD user auth and sync in an application through Replicated."
 weight: "2300"
 categories: [ "LDAP And Identity Integration" ]
+aliases : [docs/ldap-and-identity/]
 index: "docs/ldap"
 ---
 

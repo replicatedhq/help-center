@@ -6,6 +6,7 @@ weight: "303"
 categories: [ "Managing Customer Installation" ]
 index: "docs/native"
 aliases: [docs/distributing-an-application/upgrading]
+icon: "replicatedCircle"
 ---
 
 You can update all Replicated component versions to latest by re-running the installation

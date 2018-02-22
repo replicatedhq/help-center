@@ -5,6 +5,7 @@ description: "The events section of the Replicated YAML allows application vendo
 weight: "209"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 Events are provided to help with the startup, orchestration and service discovery between your containers. There are

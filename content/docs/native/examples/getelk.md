@@ -5,6 +5,7 @@ description: "An advanced example of the ELK Stack deployed through Replicated w
 weight: "402"
 categories: [ "Replicated Scheduler Examples" ]
 index: "docs/native"
+icon: "replicatedCircle"
 ---
 
 ## GetELK

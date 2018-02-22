@@ -2,10 +2,11 @@
 date: "2018-01-06T01:19:20Z"
 title: "Load Balancer Example"
 description: "An example of load-balancing a clustered app."
-weight: "401"
+weight: "501"
 categories: [ "Replicated + Swarm Examples" ]
 index: "docs/swarm"
 gradient: "swarm"
+icon: "replicatedDockerSwarm"
 ---
 
 ## Load-Balanced Counter App

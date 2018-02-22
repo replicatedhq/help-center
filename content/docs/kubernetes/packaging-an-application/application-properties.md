@@ -2,10 +2,11 @@
 date: "2016-07-03T04:02:20Z"
 title: "Application Properties"
 description: "The Replicated YAML section `properties` allows several high level items to be defined."
-weight: "303"
+weight: "203"
 categories: [ "Packaging a Kubernetes Application" ]
 index: "docs/kubernetes"
 gradient: "kubernetes"
+icon: "replicatedKubernetes"
 ---
 
 The properties section of the YAML allows you to configure properties of the admin console.

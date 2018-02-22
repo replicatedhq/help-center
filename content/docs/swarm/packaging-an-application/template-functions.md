@@ -2,10 +2,11 @@
 date: "2016-07-03T04:02:20Z"
 title: "Template Functions"
 description: "The dynamic configuration management functionality available throughout the Replicated YAML."
-weight: "1202"
+weight: "602"
 categories: [ "Packaging a Swarm Application" ]
 tags: [ "Application YAML" ]
 index: false
+icon: "replicatedDockerSwarm"
 gradient: "swarm"
 ---
 

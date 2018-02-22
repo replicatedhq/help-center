@@ -3,11 +3,12 @@ date: "2016-07-03T04:02:20Z"
 title: "Installing Replicated"
 description: "Instructions for installing Replicated via the easy install script, manually or behind a proxy. Also includes instructions for uninstalling Replicated."
 keywords: "installing, removing, migrating"
-weight: "402"
+weight: "302"
 categories: [ "Distributing a Kubernetes Application" ]
 index: "docs/kubernetes"
 aliases: [docs/distributing-an-application/installing-on-kubernetes]
 gradient: "kubernetes"
+icon: "replicatedKubernetes"
 ---
 
 {{< note title="Replicated 2.0" >}}

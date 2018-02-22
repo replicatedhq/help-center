@@ -2,10 +2,11 @@
 date: "2016-07-03T04:02:20Z"
 title: "Airgapped Installations"
 description: "The steps required of the end customer to install a Replicated application into an airgapped environment."
-weight: "312"
+weight: "712"
 categories: [ "Distributing a Swarm Application" ]
 index: "docs/swarm"
 gradient: "swarm"
+icon: "replicatedDockerSwarm"
 ---
 
 ```shell

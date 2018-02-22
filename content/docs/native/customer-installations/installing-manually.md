@@ -7,6 +7,7 @@ keywords: "installing, removing"
 categories: [ "Managing Customer Installations" ]
 index: "docs/native"
 aliases: [docs/distributing-an-application/installing-manually]
+icon: "replicatedCircle"
 ---
 
 If you choose not to run the [installation script](/docs/distributing-an-application/installing-via-script) use this guide; note that the install script also installs Docker, detects network configuration and allows proxy settings and provides support to auto-upgrade Replicated during your application release cycle.
