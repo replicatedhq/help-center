@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "GetELK"
 description: "An advanced example of the ELK Stack deployed through Replicated with a complex and complete configuration section."
 weight: "406"
-categories: [ "Replicated + Swarm Examples" ]
+categories: [ Swarm Examples" ]
 index: "docs/swarm"
 gradient: "swarm"
 ---
@@ -13,6 +13,7 @@ We've wrapped the ELK stack (Elasticsearch, Logstash and Kibana) in Replicated t
 
 
 ```yaml
+# kind: replicated
 replicated_api_version: "2.3.5"
 name: ELK
 console_support_markdown: |
@@ -34,63 +35,50 @@ monitors:
   - Elasticsearch,getelk/elasticsearch
   memory:
   - Elasticsearch,getelk/elasticsearch
-components:
-- name: Elasticsearch
-  containers:
-  - source: public
-    image_name: getelk/elasticsearch
-    version: 1.5.0-3
-    publish_events:
-    - name: Container getelk/elasticsearch started
-      trigger: container-start
-      subscriptions:
-      - component: Logstash & Kibana
-        container: getelk/logstash
-        action: start
-      - component: Logstash & Kibana
-        container: getelk/kibana
-        action: start
-    config_files:
-    - filename: /elasticsearch/config/elasticsearch.yml
-      source: github
-      owner: getelk
-      repo: elasticsearch
-      path: files/elasticsearch.yml
-      ref: 97c7227ea98c3447540e3462b96da95152d3347d
+# kind: scheduler-swarm
+services:
+  elasticsearch:
+    image: getelk/elasticsearch:1.5.0-3
+    configs:
+    - source: elasticsearch_config
+      target: /elasticsearch/config/elasticsearch.yml
     ports:
-    - private_port: "9200"
-      public_port: "9200"
-      port_type: tcp
+      - 9200:9200
     volumes:
-    - host_path: /data
-      container_path: /data
-      options: ["Z"]
-  - source: public
-    image_name: getelk/elasticsearch-head
-    version: 0.2.0
-    publish_events:
-    - name: Container elasticsearch-head started
-      trigger: container-start
-- name: Logstash & Kibana
-  containers:
-  - source: public
-    image_name: getelk/logstash
-    version: 1.4.2-7
-    publish_events:
-    - name: Container getelk/logstash started
-      trigger: container-start
-    config_files:
-    - filename: /opt/conf/logstash.conf
-      source: github
-      owner: getelk
-      repo: logstash
-      path: files/logstash.conf
-      ref: 1679872e02b828f2cac666b36af1738f1a0b2221
-    customer_files:
-    - name: logstash_input_lumberjack_cert_file
-      filename: /opt/certs/logstash-forwarder.crt
-    - name: logstash_input_lumberjack_key_file
-      filename: /opt/certs/logstash-forwarder.key
+      - elasticsearch-data:/data
+  es-head:
+    image: getelk/elasticsearch-head:0.2.0
+  logstash:
+    image: getelk/logstash:1.4.2-7
+    depends_on: elasticsearch
+    configs:
+    - source: logstash_config
+      target: /opt/conf/logstash.conf
+    - source: logstash_input_lumberjack_cert_file
+      target: /opts/cert/logstash-forwarder.crt
+    - source: lgostash_input_lumberjack_key_file
+      target: /opts/cert/logstash-forwarder.key
+    environment:
+      AWS_ACCESS_KEY_ID: '{{repl ConfigOption "logstash_input_sqs_aws_access_key}}'
+      AWS_SECRET_ACCESS_KEY: '{{repl ConfigOption "logstash_input_sqs_aws_secret_key}}'
+    ports:
+    {{repl if ConfigOptionEquals "logstash_input_collectd_enabled" "1" }}
+    - '{{repl ConfigOption "logstash_input_collectd_port" }}:{{repl ConfigOption "logstash_input_collectd_port" }}'
+    {{repl end }}
+    {{repl if ConfigOptionEquals "logstash_input_tcp_enabled" "1" }}
+    - '{{repl ConfigOption "logstash_input_collectd_port" }}:{{repl ConfigOption "logstash_input_collectd_port" }}'
+    {{repl end }}
+    {{repl if ConfigOptionEquals "logstash_input_collectd_enabled" "1" }}
+    - '{{repl ConfigOption "logstash_input_collectd_port" }}:{{repl ConfigOption "logstash_input_collectd_port" }}'
+    {{repl end }}
+    {{repl if ConfigOptionEquals "logstash_input_collectd_enabled" "1" }}
+    - '{{repl ConfigOption "logstash_input_collectd_port" }}:{{repl ConfigOption "logstash_input_collectd_port" }}'
+    {{repl end }}
+  kibana:
+    depends_on: elasticsearch
+  auth:
+    depeds_on: elasticsearch
+
     env_vars:
     - name: AWS_ACCESS_KEY_ID
       value: '{{repl ConfigOption "logstash_input_sqs_aws_access_key" }}'
