@@ -13,6 +13,11 @@
   width: 42px;
   height: 49px;
 }
+.icon.u-chevronIcon {
+  background-position: -58px -4px;
+  width: 7px;
+  height: 12px;
+}
 .icon.u-contactIcon {
   background-position: -2px -144px;
   width: 46px;

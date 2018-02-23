@@ -7,6 +7,7 @@ categories: [ "Packaging a Swarm Application" ]
 aliases: [docs/swarm/packaging-an-application/]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
+index: "docs/swarm"
 hideFromList: true
 ---
 

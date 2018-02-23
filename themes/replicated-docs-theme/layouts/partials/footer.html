@@ -65,6 +65,17 @@
       $(this).hide("slide", { direction: "right" }, 300);
     });
 
+    $('#dropdown-link').on('click', function() {
+      $('#scheduler-dropdown-menu').toggle();
+    });
+
+    $(document).on('click', function(e) {
+      var target = e.target;
+      if(target.id !== "dropdown-link") {
+        $('#scheduler-dropdown-menu').hide();
+      }
+    });
+
     $('.tooltip').tooltip({
       position: {  my: "center bottom-10", at: "center top"  },
       show: { effect: "fade", duration: 200 },
