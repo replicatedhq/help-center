@@ -14,3 +14,4 @@ icon: "replicatedDockerSwarm"
 
 Many development teams have a `docker-compose.yml` to create a development environment. This often isn't far off from what a Swarm Services stack looks like, and can be easily modified to take advantage of the existing manifests.
 
+## Extending Docker Compose with Replicated
