@@ -5,5 +5,6 @@ description: "An overview of the shipping a Docker Swarm application in Replicat
 weight: "201"
 categories: [ "Packaging a Swarm Application" ]
 gradient: "swarm"
+index: "docs/swarm"
 ---
 

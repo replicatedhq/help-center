@@ -187,6 +187,42 @@
   font-weight: 500;
 }
 
+.sidebar .dropdown {
+  position: relative;
+}
+
+.sidebar #dropdown-link {
+  padding: 8px;
+  border: solid lightgray 1px;
+  border-radius: 3px;
+}
+
+.sidebar #scheduler-dropdown-menu {
+  padding: 10px;
+  border: 1px solid lightgray;
+  position: absolute;
+  width: 100%;
+  bottom: -148px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.sidebar #scheduler-dropdown-menu p {
+  padding: 8px;
+}
+
+.sidebar #dropdown-link span {
+  pointer-events: none;
+}
+
+.sidebar .scheduler-menu-item a:hover {
+  color: #2A98CB;
+}
+
+.sidebar #dropdown-link .icon {
+  transform: rotate(90deg);
+}
+
 /* admonition notes */
 
 .page-content .admonition {
