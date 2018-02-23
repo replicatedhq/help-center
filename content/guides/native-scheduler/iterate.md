@@ -7,5 +7,6 @@ categories: [ "Replicated Scheduler Guide" ]
 index: "guides/native"
 type: "guide"
 gradient: "redToRed"
+icon: "replicatedCircle"
 aliases: [/guides/getting-started]
 ---

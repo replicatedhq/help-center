@@ -8,7 +8,9 @@
                 {{ if or (eq $scope "ldap") (eq $scope "snapshots") }}
                     <span>Overview</span>
                 {{ else }}
-                    <span>{{ $scope | title }}</span>
+                    {{ if $scope }}
+                        <span>{{ $scope | title }}</span>
+                    {{ end }}
                 {{ end }}   
                 <span class="icon u-chevronIcon u-margingRight--small"></span>
             </p>
