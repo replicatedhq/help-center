@@ -13,11 +13,13 @@ Template functions are marked by the double curly bracket + *"repl"* escape sequ
 Template functions that refer to your containers are always addressed in pairs with "component name" and "image name".  You should use the full image name as it appears in your container definition.
 
 ### Go Templates
-Replicated uses Go's [template engine](http://golang.org/pkg/text/template) to execute the following functions.  In addition to the functions listed here, all of the Go template runtime is available.  Please note that Go template functions must still be escaped with "repl" escape sequence as demonstrated below.
+Replicated uses Go's [template engine](http://golang.org/pkg/text/template) to execute the following functions.  In addition to the functions listed here, all of the Go template runtime is available. Note that Go template functions must still be escaped with "repl" escape sequence as demonstrated below.
 
 ```go
 {{repl if pipeline}} T1 {{repl else}} T0 {{repl end}}
 ```
+
+{{< linked_headline "List Of Template Functions For The Native Scheduler" >}}
 
 {{< template_function name="ConfigOption" >}}
 ```go

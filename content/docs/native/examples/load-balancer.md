@@ -1,6 +1,6 @@
 ---
 date: "2018-01-06T01:19:20Z"
-title: "Load Balancer Example"
+title: "Load Balancer"
 description: "An example of load-balancing a clustered app."
 weight: "403"
 categories: [ "Replicated Scheduler Examples" ]

@@ -10,3 +10,5 @@ gradient: "redToRed"
 icon: "replicatedCircle"
 aliases: [/guides/getting-started]
 ---
+
+# Next Steps

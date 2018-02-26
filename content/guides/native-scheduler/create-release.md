@@ -11,7 +11,7 @@ icon: "replicatedCircle"
 aliases: [/guides/getting-started]
 ---
 
-{{< linked_headline "Create And Ship A Release" >}}
+# Create And Ship A Release
 
 When starting out with Replicated, the [Vendor Portal](https://vendor.replicated.com) will be the place you spend most of your time. Going through this guide will help you become familiar with the concepts and ideas that are important to be successful shipping on Replicated using the Vendor Portal. If you get stuck or need help with any of these steps, head to our [community](https://help.replicated.com/community) or send us an email to [contact@replicated.com](mailto:contact@replicated.com) and we'll be happy to help.
 

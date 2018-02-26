@@ -98,7 +98,8 @@ sleep 5; docker secret ls | grep 'replicated\daemon_token' | awk '{print $1}' | 
 sleep 5; docker stack rm retraced
 ```
 
-{{ <callout> }}
+{{< linked_headline "Security Groups and Firewalls" >}}
+
 To ensure that overlay networking is available in Docker Swarm, make sure the following ports are open between all nodes that act as Swarm nodes:
 
 * TCP port 2377 for cluster management
@@ -106,4 +107,3 @@ To ensure that overlay networking is available in Docker Swarm, make sure the fo
 * UDP port 4789 for overlay network traffic
 
 For more information about overlay networking in Docker Swarm, see the [Docker Swarm overlay networking documentation](https://docs.docker.com/network/overlay/).
-{{ </callout> }}

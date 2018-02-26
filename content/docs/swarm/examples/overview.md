@@ -11,4 +11,4 @@ icon: "replicatedDockerSwarm"
 hideFromList: true
 ---
 
-Examples using the Replicated Scheduler
+This section contains some examples of shipping an application in Replicated with Docker Swarm.

@@ -18,7 +18,7 @@ Common examples of when it is necessary to list an exposed port are for web serv
 
 Port mappings support the Replicated template library.
 
-We can use the ports property to expose a container's port (private_port) and bind it to the host (public_port). The when property allows us to conditionally expose and bind that port when some prior condition is satisfied. Use the interface property to force the public port to be bound on a specific network interface. The public_port property is optional as of {{< version version="2.8.0" >}} allowing a port to be exposed but not bound.
+We can use the ports property to expose a container's port (private_port) and bind it to the host (public_port). The when property allows us to conditionally expose and bind that port when some prior condition is satisfied. Use the interface property to force the public port to be bound on a specific network interface. The public_port property is optional, allowing a port to be bound to a dynamic port on the host.
 
 ```yaml
     ports:

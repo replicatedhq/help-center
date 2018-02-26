@@ -4,7 +4,7 @@ title: "Ephemeral Containers"
 description: "Running database migrations or one-off jobs with Replicated and Docker Swarm."
 weight: "602"
 categories: [ "Packaging a Swarm Application" ]
-index: false
+index: "docs/swarm"
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---

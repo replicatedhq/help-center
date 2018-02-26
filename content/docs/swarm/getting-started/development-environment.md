@@ -1,6 +1,6 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Developer Environment"
+title: "Development Environment"
 description: "How to set up an environment to ship with Replicated and Docker Swarm"
 weight: "504"
 categories: [ "Shipping with Docker Swarm" ]
@@ -48,7 +48,7 @@ sudo docker run --name studio -d \
 
 During installation, a new directory named `replicated` is created in your home directory. Once your license is activated, Replicated Studio will setup the most recent release and save it to `~/replicated/current.yaml`. Any time this file is updated and saved, Replicated Studio will create a new release using the next available sequence number.
 
-You can also use your favorite editor locally (like Atom, Visual Stuido Code, Vim, or Emacs) and upload your changes once you're ready. Eg. Using SCP:
+You can also use your favorite editor locally (like Atom, Visual Stuido Code, Vim, or Emacs) and upload your changes once you're ready. For example, to copy your YAML using `scp`:
 
 ```bash
 scp current.yaml [myuser]@[my.development.host]:/home/[myuser]/replicated
