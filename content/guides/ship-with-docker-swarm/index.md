@@ -15,4 +15,7 @@
     - title: "Managing Customer Installations"
       description: "A guide to installing Replicated with Docker Swarm for your customers"
       slug: "installing"
+    - title: "Iterating on Releases"
+      description: "Iterate on applications by deploying releases with new features"
+      slug: "iterating"
 ---
