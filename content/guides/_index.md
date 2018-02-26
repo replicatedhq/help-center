@@ -3,6 +3,7 @@ layout: "guides"
 title: "Guides"
 description: "Guides for all things Replicated for beginners and experienced users alike."
 index: "guides"
+aliases: [docs/]
 guides:
   - title: "Ship with Docker Swarm"
     description: "If you have a Docker Compose file and want to create a scalable, enterprise-installable appliance experience, this is the place to start."
