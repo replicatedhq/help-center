@@ -10,7 +10,7 @@ gradient: "redToRed"
 aliases: [/guides/getting-started]
 ---
 
-{{< linked_headline "Installing and Testing A Release" >}}
+# Installing and Testing A Release
 
 This guide will walk you through installing the "Learning Replicated" application create and promoted in the previous guide. If you haven't yet created this release, head back to the [Create And Ship A Release](../create-release) guide and complete that first.
 

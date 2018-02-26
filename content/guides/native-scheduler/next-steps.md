@@ -9,3 +9,5 @@ type: "guide"
 gradient: "redToRed"
 aliases: [/guides/getting-started]
 ---
+
+# Next Steps
