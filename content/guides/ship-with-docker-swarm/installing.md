@@ -10,98 +10,79 @@ gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---
 
+{{< linked_headline "Installing a Release" >}}
 
-{{< linked_headline "Installing and Testing A Release" >}}
+In this guide, we will take the application we created in our [last guide](../create-release) and install it onto a test customer server. If you do not currently have an application with a release promoted to the Unstable channel, go back to [Create and Ship a Release](../create-release) to setup a Replicated account and create this application.
 
-This guide will walk you through installing the "Learning Replicated" application create and promoted in the previous guide. If you haven't yet created this release, head back to the [Create And Ship A Release](../create-release) guide and complete that first.
+Start by navigating to the Replicated [Vendor Portal](https://vendor.replicated.com)
 
-Now that we've created a release and promoted it to the Unstable channel, the next step is to create a customer license, and use this license to install the application on a test server.
+{{< linked_headline "Prerequisites" >}}
 
-{{< linked_headline "Create License" >}}
+To successfully complete the guide, you will need the following:
 
-A customer license (`.rli` file) is required to install any Replicated application. To create a customer license, log in to the [Vendor Portal](https://vendor.replicated.com) and select the Customers link on the left. You will see a screen that says you haven't created any customers. Click the "Create a customer" button to continue.
+* An activated Replicated account, on the Vendor Portal
+* A Replicated on Swarm application with a release on the Unstable channel
+* SSH access to a new server running a standard distribution of Linux. For this guide, we recommend the latest version of Ubuntu, Debian, CentOS, or Red Hat Enterprise Linux.
+* HTTP and HTTPS access to the server to access the Replicated Dashboard and application components
 
-![Customers](/images/guides/native/customers.png)
+{{< linked_headline "Customers and Licenses" >}}
 
-On the Create a new customer page, fill in your name for the Customer name field, and click Create customer. The defaults in all other fields will be fine -- the license will be assigned to the Unstable channel because that's the only channel with a release in it.
+Replicated's licensing is based on Customers, which encapsulate all of the information and settings needed to successfully run software. In some cases, customers will only differ by name and license expiration date. In other cases, Replicated supports custom annotations on licenses to allow you to support multiple plan structures.
 
-![Create Customer](/images/guides/native/create-customer.png)
+Licenses are issued on a per-customer basis, and in on-line installs are represented as a `.rli` file that is uploaded to the Replicated console. To download a license, we first need to create a customer. Navigate to the Customers dashboard from the left navigation. The first time you enter this section, it will be empty.
 
-After creating the customer, click the "Download license" link in the upper right corner. This will download file file with your customer name and a `.rli` extension. This is the license file you would deliver to your customer, if this was a real customer.
+Click the "Create a Customer" button to begin creating a customer. For this simple application, we only need to name our customer. Typically, this will be an end company that you are delivering your software to, but you can use any naming scheme that makes sense for your organization. By default, this customer will be assigned to the Unstable channel, but more options are provided when multiple channels exist.
 
-{{< linked_headline "Create Test Server and Install Replicated" >}}
+For now, enter a name and click "Create customer" to create your first customer. Now that our customer has been created, we can download our license. On the top right of our customer page, click the "Download License" link. This will download our `.rli` file for this customer. Note that licenses are customer specific and contain information such as expiration dates and other private annotations, and it is important to issue the right license to the right customer.
 
-To test this installation, we need a server. Using [Vagrant](https://www.vagrantup.com) and [VirtualBox](https://www.virtualbox.org/), creating a server is easy. Once installed, create a directory for your Vagrant file, and initialize an Ubuntu server:
+In the next section, we will use this license to install Replicated and start our application.
 
-```shell
-$ mkdir ~/dev/learning-replicated
-$ vagrant init ubuntu/trusty64
-```
+{{< linked_headline "Install Replicated on a Server" >}}
 
-Add a private network to your Vagrantfile. For an example Vagrantfile, see [this gist](https://gist.github.com/gerred/624a7a0e56537580e06ac23fe299766f).
+Installing Replicated in Swarm mode requires a Linux server that supports Docker 1.9.1 and above. As mentioned in the pre-requisites, having SSH access to a new server running the latest version of Debian, Ubuntu, CentOS, or Red Hat Enterprise Linux is enough to get started. The Replicated installer will manage the details of installing Docker, enabling Swarm mode, and installing Replicated.
 
-Once our VM is configured, it's time to start it up:
+Once your server is provisioned, SSH into it, and run the following command:
 
-```shell
-$ vagrant up
-```
+`curl https://get.replicated.com/swarm | sudo bash`
 
-Next, ssh into the server we just created, and run the install script:
+This command will perform the following actions:
 
-```shell
-$ vagrant ssh
-$ curl -sSL https://get.replicated.com/swarm | sudo bash
-```
+* Check that the system's configuration can successfully run Replicated
+* Verify network settings
+* Install Docker
+* Enable Docker Swarm
+* Create the Replicated Docker Swarm Stacks
 
-{{ <callout> }}
+When this command finishes, you will get a prompt with a URL to continue the Replicated installation. Navigate to this URL via your server's public IP.
 
-Installing in Swarm mode will install a single-node Swarm cluster and deploy Replicated as Swarm Stacks onto it. These stacks are load balanced across all nodes in a cluster.
+{{< linked_headline "Configure Replicated" >}}
 
-{{ </callout> }}
-
-You should be able to select the defaults for any prompts that are presented.
-
-Once the installation script is completed, it will show the URL you can connect to in order to continue the installation.
-
-```shell
-
-Operator installation successful
-
-To continue the installation, visit the following URL in your browser:
-
-  https://192.168.100.102:8800
-```
-
-You can exit the ssh session at this point, the rest of the setup will be completed in the browser.
+Before installing a license, Replicated's dashboard will walk you through the steps of securing the dashboard with a TLS certificate. For now, click the Self-Signed Certificate option and click "Continue". In production environments, you will want to use your organization's PKI infrastructure to issue a certificate specific to Replicated. 
 
 {{< linked_headline "Install License" >}}
 
-To complete the installation, visit the URL that the installation script displayed when completed. Replicated automatically provisions a self-signed certificate on every installation, so you'll have to accept this cert to continue. We recommend that every installation change this to a trusted cert, and that can be completed in the browser, at the next step.
+With Replicated securely configured, the next step is to upload our license. Click the Choose License button and select the `.rli` file you generated in the previous section to continue.
 
-{{< linked_headline "Install the License" >}}
+{{< linked_headline "Securing the Dashboard" >}}
 
-On the next screen, you have the option of uploading a trusted cert and key. For this demo, let's continue with the Replicated-generated self-signed cert. Click the orange button to continue, and then Proceed Anyway in the popup.
+Next, you will be presented with the option to set a password for the Replcated dashboard. Replicated supports anonymous, password, and LDAP based authentication. Anonymous is useful for private testing instances, but since this is a public instance, we will want to set a password. Choose password authentication, set a password, and hit Continue.
 
-![Console TLS](/images/guides/native/admin-console-tls.png)
+{{< linked_headline "Preflight Checks" >}}
 
-Now we are on the screen that expected a license file. Until this point, this server is the same as any Replicated server. Once we put a license file on it, the server will become our test application (redis). Click the Choose License button and select your `.rli` file to continue.
+Preflight Checks are a Replicated feature used to ensure that your customers' servers meet the minimum requirements for both Replicated's core components and your applications. The defaults are the minimal set required to run Replicated itself, but you will want to build upon these to ensure that users' machines meet all of the necessary requirements for your application to successfully run in their environment.
 
-![Upload License](/images/guides/native/upload-license.png)
+The Replicated checks include some basics such as Docker version, network settings, and disk space. On top of this, you can add multiple built-in checks such as checking for open ports, or set minimum CPU and memory requirements. For now, click "Continue".
 
-Because this server is on the public Internet, we should put a password on the admin console. This will prevent unauthorized changes from being applied to our test application. Go ahead and enter any password you'd like, confirm it and click Continue.
+{{< linked_headline "Replicated Dashboard" >}}
 
-![Secure The Console](/images/guides/native/secure-console.png)
+When first installing a license, the first page you are taken to is the Application Configuration page. This gives users the opportunity to set any required configuration settings for our application to successfully start. Nothing is required here, but this will change on future updates to application.
 
-Preflight checks are designed to ensure this server has the minimum requirements and environment to run the application. We didn't choose any additional requirements when shipping Redis, so this is the default Replicated requirements. Everything should pass, so click Continue to proceed.
+Navigate to the Dashboard page from the link on the top. Because no settings were required, our application will automatically start, and should be running now. To see the components that are running, navigate to the "Cluster" page, which will show our running Redis container.
 
-![Preflight Checks](/images/guides/native/preflight.png)
+If you are still connected to the server over SSH, `docker ps` will show our running container. Because we are running on Docker Swarm, it will have a random name that reflects our Swarm service.
 
-Finally, the settings page is here with default configuration items. These can all be changed when we ship updates, but nothing is required.
+{{< linked_headline "Next Steps" >}}
 
-![Settings Page](/images/guides/native/settings.png)
+Congratulations! You have successfully created a Docker Swarm app, converted it into a Replicated on Swarm application, and deployed it to a running server running Swarm.
 
-Click the Dashboard link on the top to see the default, most basic Replicated installation possible running. If you are still connected to this server over ssh, `docker ps` will show a few containers, one of them is the redis container we just deployed. To see the services that were installed, use `docker service ls`
-
-![Dashboard](/images/guides/native/dashboard.png)
-
-In the [next guide](../iterate), we'll walk through creating and shipping an update to the application we just installed.
+You're ready to begin customizing this application to meet your needs, or create a new one from scratch. As always, we are here to help you succeed on building your application in Replicated. For more help, check our [community](https://help.replicated.com/community) or our [Swarm documentation](https://help.replicated.com/docs/swarm).
