@@ -188,16 +188,9 @@ workflows:
           filters:
             branches:
               only: release
-      - hold:
-          type: approval
-          requires:
-            - deploy_production
-          filters:
-            branches:
-              only: release
       - build_index:
           requires:
-            - hold
+            - deploy_production
           filters:
             branches:
               only: release
