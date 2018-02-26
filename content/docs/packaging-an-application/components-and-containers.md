@@ -174,7 +174,7 @@ Having environment variables in Support Bundles can be invaluable for troublesho
 
 {{< linked_headline "Ports" >}}
 
-We can use the ports property to expose a container's port (private_port) and bind it to the host (public_port). The when property allows us to conditionally expose and bind that port when some prior condition is satisfied. Use the interface property to force the public port to be bound on a specific network interface. The public_port property is optional as of {{< version version="2.8.0" >}} allowing a port to be exposed but not bound.
+We can use the ports property to expose a container's port (private_port) and bind it to the host (public_port). The when property allows us to conditionally expose and bind that port when some prior condition is satisfied. Use the interface property to force the public port to be bound on a specific network interface. The public_port property is optional as of {{< version version="2.8.0" >}}. When public_port is not set, Replicated will use Docker's dynamic port bindings to expose it to the host.
 
 ```yaml
     ports:
