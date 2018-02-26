@@ -2,7 +2,7 @@
 date: "2018-01-30T04:02:20Z"
 title: "Iterating on Releases"
 description: "Iterate on Applications by Deploying New Features"
-weight: "8004"
+weight: "80004"
 categories: [ "Docker Swarm Guide" ]
 index: "guides/swarm"
 type: "guide"
