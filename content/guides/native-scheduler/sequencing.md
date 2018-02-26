@@ -7,5 +7,6 @@ index: false
 type: "guide"
 gradient: "redToRed"
 icon: "replicatedCircle"
+icon: "replicatedCircle"
 ---
 

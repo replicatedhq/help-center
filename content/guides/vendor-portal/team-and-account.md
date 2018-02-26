@@ -6,7 +6,7 @@ weight: "8003"
 categories: [ "Vendor Portal Guide" ]
 index: "guides/vendor"
 type: "guide"
-gradient: "orangeToOrange"
+gradient: "turquoiseToGreen"
 icon: "vendorPortal"
 ---
 
