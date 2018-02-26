@@ -77,7 +77,7 @@ The first step in porting our software to a Replicated release is to create a ne
 
 Creating a Replicated application redirects you to a specific dashboard for this application. This dashboard is the main location for managing releases, customer licenses, and channels  releases to customer licenses. The default page for applications is the "Channels" page. In Replicated, a channel represents a stage for your application and is assigned to a release, or version of your application. Through this, your application can map to your organization's release strategy by concurrently providing stable, alpha, beta, and other channels for deployment. These channels, when assigned to your customers, can then update to the latest release for a given channel. To let customers switch on demand, assign them to multiple channels.
 
-New applications have an "Unstable" default channel that we can use to start creating releases. Click the "Releases" item on the left menu to navigate to the release history. When  Click the "Create a release" button to start the process of creating our first release.
+New applications have "Stable", "Beta", and "Unstable" channels that we can use to start creating releases. Click the "Releases" item on the left menu to navigate to the release history. When  Click the "Create a release" button to start the process of creating our first release.
 
 {{< linked_headline "Create a Release" >}}
 
@@ -94,6 +94,6 @@ services:
     image: redis:3.2-alpine
 ```
 
-Save the release to return to the Releases page with our new release listed. Next, let's make it available for installation. Click the "Promote" button on the right side of the release, check the Unstable channel, and click Promote again. Our release is now ready to install for Unstable users of our application.
+Save the release to return to the Releases page with our new release listed. Next, let's make it available for installation. Click the "Promote" button on the right side of the release, check the "Unstable" channel, and click Promote again. Our release is now ready to install for "Unstable" users of our application.
 
 In the [next guide](../install), we'll walk through creating a customer, issuing a license, and installing this application on a test server.

@@ -80,9 +80,3 @@ When first installing a license, the first page you are taken to is the Applicat
 Navigate to the Dashboard page from the link on the top. Because no settings were required, our application will automatically start, and should be running now. To see the components that are running, navigate to the "Cluster" page, which will show our running Redis container.
 
 If you are still connected to the server over SSH, `docker ps` will show our running container. Because we are running on Docker Swarm, it will have a random name that reflects our Swarm service.
-
-{{< linked_headline "Next Steps" >}}
-
-Congratulations! You have successfully created a Docker Swarm app, converted it into a Replicated on Swarm application, and deployed it to a running server running Swarm.
-
-You're ready to begin customizing this application to meet your needs, or create a new one from scratch. As always, we are here to help you succeed on building your application in Replicated. For more help, check our [community](https://help.replicated.com/community) or our [Swarm documentation](https://help.replicated.com/docs/swarm).
