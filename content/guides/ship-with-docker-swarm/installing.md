@@ -2,7 +2,7 @@
 date: "2018-01-30T04:02:20Z"
 title: "Installing Replicated"
 description: "Introduction to installing Replicated and Docker Swarm for your customers"
-weight: "8003"
+weight: "80003"
 categories: [ "Docker Swarm Guide" ]
 index: "guides/swarm"
 type: "guide"
@@ -12,7 +12,7 @@ icon: "replicatedDockerSwarm"
 
 {{< linked_headline "Installing a Release" >}}
 
-In this guide, we will take the application we created in our [last guide](../create-release) and install it onto a test customer server. If you do not currently have an application with a release promoted to the Unstable channel, go back to [Create and Ship a Release](../create-release) to setup a Replicated account and create this application.
+In this guide, we will take the application we created in our [last guide](../create-swarm-app) and install it onto a test customer server. If you do not currently have an application with a release promoted to the Unstable channel, go back to [Create and Ship a Release](../create-swarm-app) to setup a Replicated account and create this application.
 
 Start by navigating to the Replicated [Vendor Portal](https://vendor.replicated.com)
 
@@ -65,7 +65,7 @@ With Replicated securely configured, the next step is to upload our license. Cli
 
 {{< linked_headline "Securing the Dashboard" >}}
 
-Next, you will be presented with the option to set a password for the Replcated dashboard. Replicated supports anonymous, password, and LDAP based authentication. Anonymous is useful for private testing instances, but since this is a public instance, we will want to set a password. Choose password authentication, set a password, and hit Continue.
+Next, you will be presented with the option to set a password for the Replicated dashboard. Replicated supports anonymous, password, and LDAP based authentication. Anonymous is useful for private testing instances, but since this is a public instance, we will want to set a password. Choose password authentication, set a password, and hit Continue.
 
 {{< linked_headline "Preflight Checks" >}}
 
