@@ -172,7 +172,30 @@
   border: solid 1px #C4C7CA;
   border-radius: 0.3em;
 }
-
+.prev-next-arrows .next .u-chevronIcon {
+  transform: rotate(180deg);
+  transition: all .2s ease;
+  position: relative;
+  left: -3px;
+  top: 1px;
+}
+.prev-next-arrows a {
+  text-decoration: none !important;
+}
+.prev-next-arrows .next:hover .u-chevronIcon {
+  transition: all .2s ease;
+  left: -8px;
+}
+.prev-next-arrows .previous:hover .u-chevronIcon {
+  transition: all .2s ease;
+  right: -8px;
+}
+.prev-next-arrows .previous .u-chevronIcon {
+  position: relative;
+  transition: all .2s ease;
+  right: -4px;
+  top: 1px;
+}
 .sidebar {
   width: 100%;
   margin-bottom: 20px;
