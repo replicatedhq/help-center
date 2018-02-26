@@ -12,14 +12,14 @@ icon: "replicatedDockerSwarm"
 
 In this section, we will start by creating a Docker Compose application that can run on any Docker Swarm cluster, and end by turning it into a fully functional Replicated release.
 
-{{ < linked_headline "Prerequisites" >}}
+{{< linked_headline "Prerequisites" >}}
 
 To successfully complete this section, you will need the following:
 
 * A machine with Docker (minimum version 1.9.1) installed
 * A Replicated account (sign up at [https://vendor.replicated.com/](https://vendor.replicated.com/))
 
-{{ < linked_headline "Create a Docker Compose Application" >}}
+{{< linked_headline "Create a Docker Compose Application" >}}
 
 Docker Swarm services and stacks are based on Docker Compose, a tool for shipping a suite of services and containers as a single stack. In this example, we will deploy a simple Redis application, but the specification can large scale, enterprise application stacks.
 
