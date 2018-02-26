@@ -72,5 +72,5 @@ This is the actual command that will be executed inside the container when the a
 Specify `exec` to execute the command in the currently running container. This is currently the only option.
 
 ### service
-* (required): This identifies the service under which to run the command. A container will be chosen at random to run the command in.
+This identifies the service under which to run the command. A container will be chosen at random to run the command in.
 

@@ -1,6 +1,6 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Counter App Example"
+title: "Counter App"
 description: "An example of a general-purpose Replicated app definition. This can be used as a starting point as it covers the basic functionality of the Replicated platform."
 weight: "405"
 categories: [ "Replicated Scheduler Examples" ]

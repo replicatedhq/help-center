@@ -4,6 +4,7 @@ title: "Supported Properties"
 description: "Supported Features of a Swarm Application"
 weight: "601"
 categories: [ "Packaging a Swarm Application" ]
+index: "docs/swarm"
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---
@@ -21,7 +22,8 @@ The Compose `version` should be the minimum version for the features your applic
 
 version: "3.3"
 
-````
+```
+
 ### External Private Images
 External private images are supported as of Replicated 2.13.0. In order to take advantage of this feature, see the guide for [integrating a third party registry](/docs/kb/developer-resources/third-party-registries).
 
@@ -32,11 +34,11 @@ images:
 - source: mythirdpartyprivateregistry
   name: namespace/imagename
   tag: 2.0.0
-````
+```
 
 After declaring these images, they will be available across the entire Swarm cluster.
 
-### Services
+{{< linked_headline "Services" >}}
 
 Components and containers in Swarm are defined in terms of services, part of the Docker Compose format. Each service is created by the Replicated scheduler and provides cluster-wide load balancing and failure tolerance for failed containers. In a multi-node environment, there are no restrictions on node placement unless node tags are applied.
 

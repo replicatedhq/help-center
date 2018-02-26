@@ -6,18 +6,15 @@
             <p class="u-fontWeight--bold u-fontSize--largest u-color--tuna u-paddingBottom--normal">Documentation</p>
             <p class="u-fontSize--large u-fontWeight--medium u-cursor--pointer flex justifyContent--spaceBetween alignItems--center" id="dropdown-link">
                 {{ if or (eq $scope "ldap") (eq $scope "snapshots") }}
-                    <span>Overview</span>
+                    <span>Replicated Features</span>
                 {{ else }}
                     {{ if $scope }}
                         <span>{{ $scope | title }}</span>
                     {{ end }}
-                {{ end }}   
+                {{ end }}
                 <span class="icon u-chevronIcon u-margingRight--small"></span>
             </p>
             <div class="menu" id="scheduler-dropdown-menu" style="display: none">
-                <p class="scheduler-menu-item" class="u-lineHeight--normal">
-                    <a href="/docs/overview/welcome" class="u-fontWeight--medium u-color--tuna u-fontSize--normal">Replicated Overview</a>
-                </p>
                 <p class="scheduler-menu-item" class="u-lineHeight--normal">
                         <a href="/docs/native/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--normal">Native Scheduler</a>
                     </p>
@@ -26,6 +23,9 @@
                 </p>
                 <p class="scheduler-menu-item" class="u-lineHeight--normal">
                     <a href="/docs/swarm/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--normal">Docker Swarm</a>
+                </p>
+                <p class="scheduler-menu-item" class="u-lineHeight--normal">
+                  <a href="/docs/snapshots/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--normal">Replicated Features</a>
                 </p>
             </div>
         </div>
@@ -129,37 +129,6 @@
         </div>
         {{ end }}
         {{ if or (eq $scope "snapshots") (eq $scope "ldap") (eq $scope "overview") }}
-        <div class="u-marginBottom--most">
-                <h3 class="u-fontWeight--bold u-fontSize--large u-lineHeight--normal u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Replicated Overview</h3>
-                {{ with .Site.GetPage "section" "docs" "overview" }}
-                    {{ range .Pages }}
-                        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                            <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                {{ .Title }}
-                            </a>
-                        </p>
-                    {{ end }}
-                    {{ range .Sections }}
-                        {{ $firstPage := index (first 1 .Pages) 0 }}
-                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
-                            <a href="{{ $firstPage.Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}">{{ .Title }}</a>
-                        </h3>
-                        {{ if .InSection $currentPage }}
-                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
-                                {{ range .Pages }}
-                                    {{ if not .Params.hideFromList }}
-                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                                        <a href="{{ .Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                            {{ .Title }}
-                                        </a>
-                                    </p>
-                                    {{ end }}
-                                {{ end }}
-                            </div>
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
-        </div>
         <div class="u-marginBottom--most">
             <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Snapshots</h3>
             {{ with .Site.GetPage "section" "docs" "snapshots" }}

@@ -2,20 +2,21 @@
 date: "2016-07-03T04:02:20Z"
 title: "Template Functions"
 description: "The dynamic configuration management functionality available throughout the Replicated YAML."
-weight: "602"
+weight: "1203"
 categories: [ "Packaging a Swarm Application" ]
-tags: [ "Application YAML" ]
-index: false
-icon: "replicatedDockerSwarm"
+index: "docs/swarm"
 gradient: "swarm"
+icon: "replicatedDockerSwarm"
 ---
 
 Template functions are marked by the double curly bracket + *"repl"* escape sequence. They allow for user input to be dynamically inserted into application configuration values. The sequence should be `{{repl`, not `{{ repl`.
 
-Template functions that refer to your containers are always addressed in pairs with "component name" and "image name".  You should use the full image name as it appears in your container definition.
-
 ### Go Templates
-Replicated uses Go's [template package](http://golang.org/pkg/text/template) to execute the following functions.  In addition to the functions listed here, all functions from the Go `text/template` package are available.  Please note that Go template functions must still be escaped with "repl" escape sequence as demonstrated below. This is to ensure other template engines, such as Handlebars or Mustache, or Go templating used in application configuration files, work as expected.
+Replicated uses Go's [template package](http://golang.org/pkg/text/template) to execute the following functions.  In addition to the functions listed here, all functions from the Go `text/template` package are available.  Please note that Go template functions must still be escaped with "repl" escape sequence as demonstrated below. This is to ensure other template engines, such as Handlebars or Mustache, or Go templating used in application configuration files will work as expected.
+
+```go
+{{repl if pipeline}} T1 {{repl else}} T0 {{repl end}}
+```
 
 ### Conditionals
 
@@ -45,14 +46,7 @@ services:
 
 In this instance, the `AIRGAP` environment variable will be inserted into the compose YAML if this release is run on an airgapped installation.
 
-### Replicated Template Functions
-
-```go
-{{repl if pipeline}} T1 {{repl else}} T0 {{repl end}}
-```
-
-{{< linked_headline "Replicated Template Function" >}}
-
+{{< linked_headline "List Of Template Functions In Docker Swarm" >}}
 
 {{< linked_headline "ConfigOption" >}}
 ```go

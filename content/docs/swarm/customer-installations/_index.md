@@ -1,6 +1,6 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Distributing An Application"
+title: "Managing Customer Installations"
 description: "Ship it to your customer"
 weight: "301"
 categories: [ "Distributing a Swarm Application" ]
