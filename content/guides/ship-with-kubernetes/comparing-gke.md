@@ -5,7 +5,7 @@ description: "A comparison of a Replicated Kubernetes Appliance with a cluster p
 weight: "11003"
 categories: [ "Kubernetes Guide" ]
 index: "guides/kubernetes"
-type: "guide"
+type: "chapter"
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---

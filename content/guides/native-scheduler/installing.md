@@ -4,7 +4,7 @@ title: "Installing Replicated"
 description: "Introduction to installing Replicated for your customers"
 weight: "9005"
 index: false
-type: "guide"
+type: "chapter"
 gradient: "redToRed"
 icon: "replicatedCircle"
 ---

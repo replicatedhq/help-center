@@ -5,7 +5,7 @@ description: "A guide to walk you through creating and shipping a release in Rep
 weight: "9001"
 categories: [ "Replicated Scheduler Guide" ]
 index: "guides/native"
-type: "guide"
+type: "chapter"
 gradient: "redToRed"
 icon: "replicatedCircle"
 aliases: [/guides/getting-started]

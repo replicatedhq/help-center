@@ -5,7 +5,7 @@ description: "An overview of managing application releases in the Replicated Ven
 weight: "8001"
 categories: [ "Vendor Portal Guide" ]
 index: "guides/vendor"
-type: "guide"
+type: "chapter"
 gradient: "turquoiseToGreen"
 icon: "vendorPortal"
 ---

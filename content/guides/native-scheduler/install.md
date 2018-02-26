@@ -5,7 +5,7 @@ description: "A guide to installing and testing a release created in the Replica
 weight: "9002"
 categories: [ "Replicated Scheduler Guide" ]
 index: "guides/native"
-type: "guide"
+type: "chapter"
 gradient: "redToRed"
 icon: "replicatedCircle"
 aliases: [/guides/getting-started]

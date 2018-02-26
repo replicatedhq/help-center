@@ -5,7 +5,7 @@ description: "An overview of why it makes sense to ship Replicated with your Doc
 weight: "80001"
 categories: [ "Docker Swarm Guide" ]
 index: "guides/swarm"
-type: "guide"
+type: "chapter"
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---

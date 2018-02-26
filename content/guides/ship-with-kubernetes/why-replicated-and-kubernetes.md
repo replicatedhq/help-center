@@ -5,7 +5,7 @@ description: "An overview of why it makes sense to ship Replicated with your Kub
 weight: "11001"
 categories: [ "Kubernetes Guide" ]
 index: "guides/kubernetes"
-type: "guide"
+type: "chapter"
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
