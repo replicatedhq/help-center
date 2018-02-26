@@ -168,6 +168,9 @@
 
 .page-content img {
   max-width: 100%;
+  margin: 20px 0;
+  border: solid 1px #C4C7CA;
+  border-radius: 0.3em;
 }
 
 .sidebar {
@@ -264,7 +267,6 @@
   left: 0;
   top: 4px;
 }
-
 .page-content .admonition.warning p.admonition-title::before {
   background-position: -70px -154px;
   width: 18px;
@@ -329,7 +331,7 @@
 
 .linked-headline .anchor {
   background-image: url("../../images/main_spritesheet.svg");
-  background-position: -98px -198px;
+  background-position: -98px -202px;
   position: absolute;
   height: 16px;
   width: 19px;
