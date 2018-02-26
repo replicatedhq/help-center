@@ -5,7 +5,7 @@ description: "A support bundle spec defines what data to collect and store in a 
 weight: "801"
 categories: [ "Support Bundle" ]
 index: "guides"
-type: "guide"
+type: "chapter"
 gradient: "orangeToOrange"
 icon: "troubleshoot"
 ---

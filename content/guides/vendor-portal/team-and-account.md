@@ -5,7 +5,7 @@ description: "Managing your team and account in the Replicated Vendor Portal"
 weight: "8003"
 categories: [ "Vendor Portal Guide" ]
 index: "guides/vendor"
-type: "guide"
+type: "chapter"
 gradient: "turquoiseToGreen"
 icon: "vendorPortal"
 ---

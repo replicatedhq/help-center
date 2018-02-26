@@ -5,7 +5,7 @@ description: "After the basics, learn the recommended next steps to become an ex
 weight: "9004"
 categories: [ "Replicated Scheduler Guide" ]
 index: "guides/native"
-type: "guide"
+type: "chapter"
 gradient: "redToRed"
 icon: "replicatedCircle"
 aliases: [/guides/getting-started]

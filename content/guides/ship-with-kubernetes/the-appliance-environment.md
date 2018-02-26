@@ -5,7 +5,7 @@ description: "Understanding what's installed in the Replicated Kubernetes Applia
 weight: "11002"
 categories: [ "Kubernetes Guide" ]
 index: "guides/kubernetes"
-type: "guide"
+type: "chapter"
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---

@@ -4,7 +4,7 @@ title: "Service Discovery"
 description: "Learn about available service discovery mechanisms in the Replicated Native Scheduler"
 weight: "9003"
 index: false
-type: "guide"
+type: "chapter"
 gradient: "redToRed"
 icon: "replicatedCircle"
 ---

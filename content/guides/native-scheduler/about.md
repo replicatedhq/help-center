@@ -4,7 +4,7 @@ title: "About the Replicated Scheduler"
 description: "Discover the basics of the Replicated Native Scheduler"
 weight: "9001"
 index: false
-type: "guide"
+type: "chapter"
 icon: "replicatedCircle"
 gradient: "redToRed"
 aliases: [/guides/getting-started]

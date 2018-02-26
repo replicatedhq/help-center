@@ -48,31 +48,7 @@
 								</ol>
 							</div>
 							<p></p>
-							{{ if eq .Section "docs" }}
-								{{ partial "section_folder_navigation.html" . }}
-							{{ else }}
-								<div class="sidebar">
-									<div>
-										{{ if .Params.categories }}
-											<h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">{{ replace (index (.Params.categories) 0 | title) "-" " " }}</h3>
-											<ul>
-											{{ $currentPageTitle := .Title }}
-											{{ with $taxonomy := (index (.Params.categories) 0) | urlize }}
-												{{ range $index, $element := (index $.Site.Taxonomies.categories $taxonomy).Pages.ByWeight }}
-													{{ if not .Params.hideFromList }}
-														{{ if eq $currentPageTitle .Title  }}
-														<li class="blue"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-														{{ else }}
-														<li><a href="{{ .RelPermalink }}" class="u-color--curiousBlue">{{ .Title }}</a></li>
-														{{ end }}
-													{{ end }}
-												{{ end }}
-											{{ end }}
-											</ul>
-										{{ end }}
-									</div>
-								</div>
-							{{ end }}
+							{{ partial "section_folder_navigation.html" . }}
 						</div>
 						<div class="flex1 page-content-wrapper">
 							<div class="page-content">

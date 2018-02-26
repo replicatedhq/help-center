@@ -5,7 +5,7 @@ description: "An overview of managing customers nad licenses in the Replicated V
 weight: "8002"
 categories: [ "Vendor Portal Guide" ]
 index: "guides/vendor"
-type: "guide"
+type: "chapter"
 gradient: "turquoiseToGreen"
 icon: "vendorPortal"
 ---
