@@ -168,8 +168,34 @@
 
 .page-content img {
   max-width: 100%;
+  margin: 1em 0;
+  border: solid 1px #C4C7CA;
+  border-radius: 0.3em;
 }
-
+.prev-next-arrows .next .u-chevronIcon {
+  transform: rotate(180deg);
+  transition: all .2s ease;
+  position: relative;
+  left: -3px;
+  top: 1px;
+}
+.prev-next-arrows a {
+  text-decoration: none !important;
+}
+.prev-next-arrows .next:hover .u-chevronIcon {
+  transition: all .2s ease;
+  left: -8px;
+}
+.prev-next-arrows .previous:hover .u-chevronIcon {
+  transition: all .2s ease;
+  right: -8px;
+}
+.prev-next-arrows .previous .u-chevronIcon {
+  position: relative;
+  transition: all .2s ease;
+  right: -4px;
+  top: 1px;
+}
 .sidebar {
   width: 100%;
   margin-bottom: 20px;
@@ -264,7 +290,6 @@
   left: 0;
   top: 4px;
 }
-
 .page-content .admonition.warning p.admonition-title::before {
   background-position: -70px -154px;
   width: 18px;
@@ -329,7 +354,7 @@
 
 .linked-headline .anchor {
   background-image: url("../../images/main_spritesheet.svg");
-  background-position: -98px -198px;
+  background-position: -98px -202px;
   position: absolute;
   height: 16px;
   width: 19px;
