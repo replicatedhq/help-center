@@ -59,23 +59,34 @@ This command will perform the following actions:
 * Enable Docker Swarm
 * Create the Replicated Docker Swarm Stacks
 
+![](/images/guides/swarm/install-finished.png)
+
 When this command finishes, you will get a prompt with a URL to continue the Replicated installation. Navigate to this URL via your server's public IP.
 
 {{< linked_headline "Configure Replicated" >}}
+
+![](/images/guides/swarm/configure_https.png)
 
 Before installing a license, Replicated's dashboard will walk you through the steps of securing the dashboard with a TLS certificate. For now, click the Self-Signed Certificate option and click "Continue". In production environments, you will want to use your organization's PKI infrastructure to issue a certificate specific to Replicated. 
 
 {{< linked_headline "Install License" >}}
 
+![](/images/guides/swarm/upload-license.png)
+
 With Replicated securely configured, the next step is to upload our license. Click the Choose License button and select the `.rli` file you generated in the previous section to continue.
 
 {{< linked_headline "Securing the Dashboard" >}}
+
+![](/images/guides/swarm/secure-console.png)
 
 Next, you will be presented with the option to set a password for the Replicated dashboard. Replicated supports anonymous, password, and LDAP based authentication. Anonymous is useful for private testing instances, but since this is a public instance, we will want to set a password. Choose password authentication, set a password, and hit Continue.
 
 {{< linked_headline "Preflight Checks" >}}
 
+
 Preflight Checks are a Replicated feature used to ensure that your customers' servers meet the minimum requirements for both Replicated's core components and your applications. The defaults are the minimal set required to run Replicated itself, but you will want to build upon these to ensure that users' machines meet all of the necessary requirements for your application to successfully run in their environment.
+
+![](/images/guides/swarm/preflight-checks.png)
 
 The Replicated checks include some basics such as Docker version, network settings, and disk space. On top of this, you can add multiple built-in checks such as checking for open ports, or set minimum CPU and memory requirements. For now, click "Continue".
 
