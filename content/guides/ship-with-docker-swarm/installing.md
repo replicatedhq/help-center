@@ -27,13 +27,19 @@ To successfully complete the guide, you will need the following:
 
 {{< linked_headline "Customers and Licenses" >}}
 
-Replicated's licensing is based on Customers, which encapsulate all of the information and settings needed to successfully run software. In some cases, customers will only differ by name and license expiration date. In other cases, Replicated supports custom annotations on licenses to allow you to support multiple plan structures.
+To distribute our application onto an on-premise environment, we need to create a license. To create a license, we first need to create a customer. Navigate to the Customers dashboard from the left navigation. The first time you enter this section, it will be empty.
 
-Licenses are issued on a per-customer basis, and in on-line installs are represented as a `.rli` file that is uploaded to the Replicated console. To download a license, we first need to create a customer. Navigate to the Customers dashboard from the left navigation. The first time you enter this section, it will be empty.
+![](/images/guides/swarm/create-customer.png)
 
-Click the "Create a Customer" button to begin creating a customer. For this simple application, we only need to name our customer. Typically, this will be an end company that you are delivering your software to, but you can use any naming scheme that makes sense for your organization. By default, this customer will be assigned to the Unstable channel, but more options are provided when multiple channels exist.
+Click the "Create a Customer" button to begin creating a customer.
 
-For now, enter a name and click "Create customer" to create your first customer. Now that our customer has been created, we can download our license. On the top right of our customer page, click the "Download License" link. This will download our `.rli` file for this customer. Note that licenses are customer specific and contain information such as expiration dates and other private annotations, and it is important to issue the right license to the right customer.
+![](/images/guides/swarm/name-customer.png)
+
+For this simple application, we only need to name our customer. Enter a name and click "Create customer" to create your first customer.
+
+![](/images/guides/swarm/download-license.png)
+
+Now that our customer has been created, we can download our license. On the top right of our customer page, click the "Download License" link. This will download our `.rli` file for this customer.
 
 In the next section, we will use this license to install Replicated and start our application.
 
