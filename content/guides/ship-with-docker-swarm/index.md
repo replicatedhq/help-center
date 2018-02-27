@@ -6,9 +6,6 @@
   icon: "replicatedDockerSwarm"
   index: false
   chapters:
-    - title: "Why Replicated and Docker Swarm?"
-      description: "Why it makes sense to ship Replicated with your Docker Swarm application"
-      slug: "why-replicated-and-swarm"
     - title: "Creating a Replicated Swarm Application"
       description: "Package your Docker Compose application as a Replicated application"
       slug: "create-swarm-app"

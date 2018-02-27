@@ -15,7 +15,4 @@
     - title: "Iterate and Ship Updates"
       description: "Learn how to iterate on the release to ship updates"
       slug: "iterate"
-    - title: "Next Steps"
-      description: "Where to go from here"
-      slug: "next-steps"
 ---

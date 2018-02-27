@@ -9,15 +9,34 @@ gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---
 
-Database migrations are an important part of any software upgrade, and having a strategy to manage data migrations in enterprise deployments is important. One common pattern to manage database migrations is to run an ephemeral container along with container events to run migration tasks.
+Replicated monitors the status of the Docker Swarm services deployed in an application, and if any stop, the Admin Console will report the application as stopped. Sometimes, it's desirable to have a container stop after it runs. One common scenario where this is required is running database migrations at startup. In Replicated, an ephemeral container is one that Replicated will start, but not monitor the lifecycle of.
 
-Using the swarm scheduler it is possible to achieve this behavior by [labeling the stack service](https://docs.docker.com/compose/compose-file/#labels-1) with `com.replicated.ephemeral=true`.
+When shipping a Docker Swarm application, to set a service as ephemeral in Replicated, you can [label the stack service](https://docs.docker.com/compose/compose-file/#labels-1) with `com.replicated.ephemeral=true`.
 
-{{< linked_headline "Database Migrations Example" >}}
+{{< linked_headline "Example" >}}
 
-In the example below we show a simple python stack based on the Django framework and Postgres, and how to run database migrations. (No knowledge of python is necessary to understand this.)
+The following example shows an ephemeral database migration container. This container is expected to exit and Replicated will continue to show the application as started, assuming the container exits with status code 0.
 
-You will notice there are three services defined in this `docker-compose.yml` extract, `postgres`, `migrate-pg`, and `app`.
+```yaml
+services:
+  migrate-pg:
+    image: replicated/pythonapp:1.4.2
+    command: ["python", "manage.py", "db", "upgrade"]
+    deploy:
+      labels:
+        com.replicated.ephemeral: "true"
+      restart_policy:
+        delay: 3s
+        condition: on-failure
+    environment:
+      - DB_URL="postgresql://pythonapp:password@postgres:5432/pythonapp"
+```
+
+{{< linked_headline "Full Example" >}}
+
+In the example below we show a simple python stack based on the Django framework and Postgres, and how to run database migrations.
+
+You will notice there are three services defined in this example: `postgres`, `migrate-pg`, and `app`.
 
 The `postgres` service is using the default Postgres image you can find on Docker Hub. The environment variables are used to configure Postgres as it starts up.
 
@@ -76,8 +95,11 @@ Ephemeral containers can also be used for one-off jobs via the Docker API. This 
 services:
   job-scheduler:
     image: myapp/jobscheduler:1.0.0
+    deploy:
+      labels:
+        com.replicated.ephemeral: "true"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 ```
 
-For more information on this topic, check out [One-shot containers on Docker Swarm](https://blog.alexellis.io/containers-on-swarm/).
+For more information on this topic, read [One-shot containers on Docker Swarm](https://blog.alexellis.io/containers-on-swarm/).

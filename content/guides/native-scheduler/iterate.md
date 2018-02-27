@@ -44,9 +44,9 @@ To install and test this new release, we need to connect to the Admin Console da
 
 Click on the Check Now button. A popup should appear stating that there's an update available with a single button titled "View Update".
 
-!
+![View Update](/images/guides/native/view-update.png)
 
 Click the View Update button and the Admin Console will show the release history of your application, including the new release we just promoted. Clicking the Install Update button on this still will pull the nginx container, and restart the application to include nginx. When it's finished, navigate back to the dashboard and you should see that the application is up to date again.
 
-In the [final guide](../next-steps) in this series, we'll offer suggestions about where to go next, what to add and how to prepare your application to ship on Replicated with the Replicated Native Scheduler.
+Next, head to the [native scheduler documentation](/docs/native/getting-started) to learn how to prepare your application to ship on Replicated with the Replicated Native Scheduler.
 
