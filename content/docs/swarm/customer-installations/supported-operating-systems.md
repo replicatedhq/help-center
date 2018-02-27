@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Supported Operating Systems"
 description: "View the supported operating systems"
 keywords:  "operating system, os"
-weight: "710"
+weight: "703"
 categories: [ "Distributing a Swarm Application" ]
 index: "docs/swarm"
 icon: "replicatedDockerSwarm"
@@ -12,9 +12,8 @@ gradient: "swarm"
 
 Replicated supports Linux-based servers that can run current versions of Docker.
 
-Your machine must support docker-engine {{< docker_version_minimum >}} - {{< docker_version_default >}}
-(with {{< docker_version_default >}} being the recommended version). This also requires a 64-bit distribution with a
-kernel minimum of 3.10.
+Your machine must support docker-engine {{< swarm_docker_version_minimum >}} - {{< swarm_docker_version_default >}}
+(with {{< swarm_docker_version_default >}} being the recommended version). This also requires a 64-bit distribution with a kernel minimum of 3.10.
 
 Replicated provides an easy install script for Swarm that works with the the following list of operating systems:
 
@@ -29,8 +28,6 @@ Replicated provides an easy install script for Swarm that works with the the fol
 As new operating systems start to support Docker we extend our install script and QA process to include them.  Operating
 systems that support Docker but are not yet included in the easy install script can still be used
 using the [manual install instructions](/docs/swarm/customer-installations/installing-manually/).
-
-For detailed requirements and installation guides see the docker installation docs.
 
 {{< linked_headline "Swarm and RHEL 6.x / CentOS 6.x" >}}
 

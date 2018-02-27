@@ -131,7 +131,7 @@ monitors:
 
 {{< linked_headline "Customer Config Section" >}}
 
-This section is where you can [configure fields to gather input from the user](/docs/native/packagine-an-application/config-screen/). This input can be used to further configure your application. The values here can be used as inputs to environment variables and config files by using the [template functions](/docs/native/packaging-an-application/template-functions/). They can also be tested for validity with [test procs](/docs/native/packaging-an-application/test-procs/). These items will render as a form in the Settings screen of the Replicated admin console.
+This section is where you can [configure fields to gather input from the user](/docs/native/packaging-an-application/config-screen/). This input can be used to further configure your application. The values here can be used as inputs to environment variables and config files by using the [template functions](/docs/native/packaging-an-application/template-functions/). They can also be tested for validity with [test procs](/docs/native/packaging-an-application/test-procs/). These items will render as a form in the Settings screen of the Replicated admin console.
 
 ```yaml
 config:

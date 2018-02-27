@@ -1,8 +1,8 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Template Functions"
-description: "The dynamic configuration management functionality available throughout the Replicated YAML."
-weight: "1203"
+description: "Using template functions to make your Swarm YAML dynamic"
+weight: "606"
 categories: [ "Packaging a Swarm Application" ]
 index: "docs/swarm"
 gradient: "swarm"

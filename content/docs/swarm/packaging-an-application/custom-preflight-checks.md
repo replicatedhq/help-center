@@ -2,7 +2,7 @@
 date: "2017-01-26T00:00:00Z"
 title: "Custom Preflight Checks"
 description: "A guide to implementing the Custom Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
-weight: "607"
+weight: "609"
 categories: [ "Packaging a Swarm Application" ]
 index: "docs/swarm"
 gradient: "swarm"
