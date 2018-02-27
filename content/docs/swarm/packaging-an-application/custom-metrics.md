@@ -2,7 +2,8 @@
 date: "2016-07-02T00:00:00Z"
 lastmod: "2016-07-02T00:00:00Z"
 title: "Custom Metrics"
-weight: "606"
+description: "Adding custom metrics to the Admin Console dashboard in a Docker Swarm application"
+weight: "611"
 categories: [ "Packaging a Swarm Application" ]
 index: "docs/swarm"
 gradient: "swarm"

@@ -1,9 +1,9 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Admin Commands"
-description: "Implementation guide for application vendors to provide customers with aliased CLI commands that can be performed in the containers across a cluster."
+description: "Implementation guide for application vendors to provide customers with aliased CLI commands that can be performed in the services across a cluster"
 categories: [ "Packaging a Swarm Application" ]
-weight: "607"
+weight: "612"
 index: "docs/swarm"
 gradient: "swarm"
 icon: "replicatedDockerSwarm"

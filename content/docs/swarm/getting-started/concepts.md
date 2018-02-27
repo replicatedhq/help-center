@@ -2,10 +2,11 @@
 date: "2016-07-03T04:02:20Z"
 title: "Core Concepts"
 description: "The core concepts requried to ship an application on Replicated using Docker Swarm."
-weight: "102"
+weight: "502"
 categories:  [ "Shipping With Docker Swarm" ]
 index: "docs/swarm"
 icon: "replicatedDockerSwarm"
+gradient: "swarm"
 ---
 
 Before shipping your application, there are a few terms to learn, as they are used throughout this guide.
