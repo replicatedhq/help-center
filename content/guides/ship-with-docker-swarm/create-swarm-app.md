@@ -98,6 +98,15 @@ services:
     image: redis:3.2-alpine
 ```
 
-Save the release to return to the Releases page with our new release listed. Next, let's make it available for installation. Click the "Promote" button on the right side of the release, check the "Unstable" channel, and click Promote again. Our release is now ready to install for "Unstable" users of our application.
+Save the release to return to the Releases page with our new release listed. 
+
+![](/images/guides/swarm/release-list.png)
+
+
+Next, let's make it available for installation. Click the "Promote" button on the right side of the release, check the "Unstable" channel, and click Promote again.
+
+![](/images/guides/swarm/promote-release.png)
+
+Our release is now ready to install for "Unstable" users of our application.
 
 In the [next guide](../installing), we'll walk through creating a customer, issuing a license, and installing this application on a test server.
