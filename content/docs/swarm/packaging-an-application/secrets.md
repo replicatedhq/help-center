@@ -32,7 +32,7 @@ services:
     secrets:
       - pg_password
     environment:
-      POSTGRES_PASSOWRD_FILE: /run/secrets/pg_password
+      POSTGRES_PASSWORD_FILE: /run/secrets/pg_password
 secrets:
   pg_password:
     external: true
@@ -67,7 +67,6 @@ Wrapping this up into a single example, the following YAML would generate a rand
 
 ```yaml
 # kind: replicated
-...
 cmds:
   - name: pg_password_generate
     cmd: random
@@ -95,14 +94,14 @@ swarm:
 # kind: scheduler-swarm
 version: "3.3"
 services:
-  redis:
+  postgres:
     image: postgres:10.2
     deploy:
       replicas: 1
     secrets:
-      - pg_password
+      - pg_password_secret
     environment:
-      POSTGRES_PASSOWRD_FILE: /run/secrets/pg_password
+      POSTGRES_PASSWORD_FILE: /run/secrets/pg_password_secret
 secrets:
   pg_password:
     external: true
