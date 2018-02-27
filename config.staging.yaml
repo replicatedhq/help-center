@@ -1,0 +1,49 @@
+---
+baseURL: "/"
+languageCode: "en-us"
+title: "Replicated Help Center"
+theme: "replicated-docs-theme"
+metadataformat: "yaml"
+canonifyurls: true
+description: "Documentation and knowledgebase for Replicated."
+googleAnalytics: "UA-61084834-1"
+
+Params:
+  author: "Replicated"
+  copyright: "Replicated, Inc"
+  search_env: "staging"
+
+  favicon: ""
+  pagetitle: "Replicated"
+  permalink: "#"
+
+  docker_version_default: "17.06.2-ce"
+  docker_version_minimum: "1.7.1"
+  replicated_api_version_current: "2.16.1"
+  replicated_latest_version: "2.16.1"
+  replicated_latest_release_date: "February 1, 2018"
+
+  swarm_docker_version_minimum: "1.13.1"
+  swarm_docker_version_default: "17.06.2-ce"
+
+taxonomies:
+  category: "categories"
+  tag: "tags"
+  kb-section: "kb-sections"
+
+algolia:
+  index: "help_center_staging"
+  appID: "5PHVQPX4AR"
+
+menu:
+  main:
+    - Name: "Guides"
+      Weight: 1
+      URL: "/guides/"
+    - Name: "Documentation"
+      Weight: 2
+      URL: "/docs/overview/welcome/"
+    - Name: "API Reference"
+      Weight: 3
+      URL: "/api/"
+---
