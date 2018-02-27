@@ -67,7 +67,6 @@ Wrapping this up into a single example, the following YAML would generate a rand
 
 ```yaml
 # kind: replicated
-...
 cmds:
   - name: pg_password_generate
     cmd: random
