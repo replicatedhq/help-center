@@ -5,7 +5,7 @@ description: "Guide to creating a Replicated + Docker Swarm Release"
 weight: "80002"
 categories: [ "Docker Swarm Guide" ]
 index: "guides/swarm"
-type: "guide"
+type: "chapter"
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---

@@ -5,7 +5,7 @@ description: "How to get a support bundle from a customer"
 weight: "801"
 categories: [ "Support Bundle" ]
 index: "guides"
-type: "guide"
+type: "chapter"
 gradient: "orangeToOrange"
 icon: "troubleshoot"
 ---

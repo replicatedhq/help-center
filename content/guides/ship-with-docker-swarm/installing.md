@@ -5,7 +5,7 @@ description: "Introduction to installing Replicated and Docker Swarm for your cu
 weight: "80003"
 categories: [ "Docker Swarm Guide" ]
 index: "guides/swarm"
-type: "guide"
+type: "chapter"
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---

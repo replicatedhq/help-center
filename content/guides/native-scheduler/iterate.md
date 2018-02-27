@@ -5,7 +5,7 @@ description: "A guide to walk you through iterating and updating a release in Re
 weight: "9003"
 categories: [ "Replicated Scheduler Guide" ]
 index: "guides/native"
-type: "guide"
+type: "chapter"
 gradient: "redToRed"
 icon: "replicatedCircle"
 aliases: [/guides/getting-started]
