@@ -1853,9 +1853,9 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
 
-hugo-algolia@^1.2.10:
-  version "1.2.10"
-  resolved "https://registry.yarnpkg.com/hugo-algolia/-/hugo-algolia-1.2.10.tgz#857c4bcf5990947859b3880baa9af3f486bd0c8f"
+hugo-algolia@^1.2.13:
+  version "1.2.13"
+  resolved "https://registry.yarnpkg.com/hugo-algolia/-/hugo-algolia-1.2.13.tgz#27e5875d0fc4630e27ecc7a8a553c89f722d509e"
   dependencies:
     algoliasearch "^3.24.1"
     bytes "^3.0.0"

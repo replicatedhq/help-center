@@ -8,14 +8,25 @@ build:
 	yarn gulp
 	hugo -v
 
+build_staging:
+	`npm bin`/browserify static/js/supportBundleUpload.js > static/js/supportBundleUpload.bundled.js
+	yarn gulp
+	hugo -v --config config.staging.yaml
+
 serve:
 	hugo serve
+
+serve_staging:
+	hugo serve --config config.staging.yaml
 
 index-site:
 	yarn index-site
 
 index-and-send:
 	yarn index-and-send
+
+index-and-send-staging:
+	yarn index-and-send-staging
 
 vendordocs:
 	rm -f content/docs/reference/vendor-api.md

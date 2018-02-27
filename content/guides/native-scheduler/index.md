@@ -3,7 +3,6 @@
   description: "A step-by-step guide to shipping your application with the Replicated Native Scheduler."
   level: "replicatedCircle"
   gradient: "redToRed"
-  icon: "replicatedCircle"
   index: false
   chapters:
     - title: "Create And Ship A Release"
