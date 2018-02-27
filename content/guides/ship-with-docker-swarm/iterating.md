@@ -1,5 +1,5 @@
 ---
-date: "2018-01-30T04:023:20Z"
+date: "2018-01-30T04:03:20Z"
 title: "Iterating on Releases"
 description: "Iterate on Applications by Deploying New Features"
 weight: "800004"
