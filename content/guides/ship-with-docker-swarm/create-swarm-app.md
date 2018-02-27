@@ -23,7 +23,7 @@ To finish this section, you will need:
 
 Docker Compose is a tool for shipping a suite of services and containers as a single stack. Docker Swarm uses stacks and services defined as Docker Compose specs to deploy to a clustered environment. In this example, we will deploy a simple Redis service, but the specification can large scale, enterprise stacks.
 
-Create a file called `compose.yaml` and add a basic Redis stack:
+Create a file called `docker-compose.yaml` and add a basic Redis stack:
 
 ```yaml
 version: '3'
@@ -32,7 +32,7 @@ services:
     image: redis:3.2-alpine
 ```
 
-This is a minimal example that will create a Redis service with the `redis:3.2-alpine` image. On a computer with Docker running, we can start this by running: `docker-compose -f compose.yaml up`. 
+This is a minimal example that will create a Redis service with the `redis:3.2-alpine` image. On a computer with Docker running, we can start this by running: `docker-compose up`. 
 
 After running this, you'll have a Redis service running in the foreground. Type `ctrl-C` into the terminal to exit. This is a great example, but runs locally in Docker (as opposed to Docker Swarm), and is a single instance in the foreground. To move this into something ready for production, let's launch it as a Docker Swarm Service.
 
