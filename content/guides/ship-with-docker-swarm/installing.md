@@ -92,6 +92,8 @@ The Replicated checks include some basics such as Docker version, network settin
 
 {{< linked_headline "Replicated Dashboard" >}}
 
+![](/images/guides/swarm/dashboard.png)
+
 When first installing a license, the first page you are taken to is the Application Configuration page. This gives users the opportunity to set any required configuration settings for our application to successfully start. Nothing is required here, but this will change on future updates to application.
 
 Navigate to the Dashboard page from the link on the top. Because no settings were required, our application will automatically start, and should be running now. To see the components that are running, navigate to the "Cluster" page, which will show our running Redis container.
