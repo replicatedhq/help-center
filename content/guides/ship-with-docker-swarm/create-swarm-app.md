@@ -69,15 +69,23 @@ If you require help at any time with these steps, help is available through the 
 
 {{< linked_headline "Create a New Application" >}}
 
-The first step in porting our software to a Replicated release is to create a new application in the [Vendor Portal](https://vendor.replicated.com). Sign up and activate your account to access the primary dashboard, which prompts you to create a new application.
+The first step in porting our software to a Replicated release is to create a new application in the [Vendor Portal](https://vendor.replicated.com). Sign up and activate your account to access the primary dashboard, which prompts you to create a new application. Fill in an application name, select the `Docker Swarm + Replicated` option, and click "Create application" to continue.
 
-Creating a Replicated application redirects you to a specific dashboard for this application. This dashboard is the main location for managing releases, customer licenses, and channels  releases to customer licenses. The default page for applications is the "Channels" page. In Replicated, a channel represents a stage for your application and is assigned to a release, or version of your application. Through this, your application can map to your organization's release strategy by concurrently providing stable, alpha, beta, and other channels for deployment. These channels, when assigned to your customers, can then update to the latest release for a given channel. To let customers switch on demand, assign them to multiple channels.
+![](/images/guides/swarm/create-app.png)
 
-New applications have "Stable", "Beta", and "Unstable" channels that we can use to start creating releases. Click the "Releases" item on the left menu to navigate to the release history. When  Click the "Create a release" button to start the process of creating our first release.
+Creating a Replicated application redirects you to a specific dashboard for this application. This dashboard is the main location for managing releases, customer licenses, and channels  releases to customer licenses. The default page for applications is the "Channels" page.
+
+![](/images/guides/swarm/default-screen.png)
+
+New applications have "Stable", "Beta", and "Unstable" channels that we can use to start creating releases. Click the "Releases" item on the left menu to navigate to the release history. Click the "Create a release" button to start the process of creating our first release.
+
+![](/images/guides/swarm/create-release.png)
 
 {{< linked_headline "Create a Release" >}}
 
 YAML is the language we use to define a Replicated application. Front and center is a YAML editor where you define the containers and configuration that comprises your application and how Replicated extends it to your customer's environment. To the right of the YAML editor is a preview of the configuration items as defined by your Replicated YAML. The default document stubs in a hostname field, but you will want to use config items to let end users customize your application to fit natively to their enterprise environments.
+
+![](/images/guides/swarm/default-yaml.png)
 
 In this editor, there will be two YAML documents separated by a page separator: `---`. The first document, annotated with `# kind: replicated`, represents all of the Replicated-specific functionality available to you such as configuration, snapshots, and configuration files. The second document, annotated with `# kind: scheduler-swarm` represents our Docker Compose file defining all of the Swarm services and their configuration.
 
