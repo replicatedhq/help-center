@@ -9,37 +9,29 @@ gradient: "purpleToPink"
 aliases : [docs/reference/integration-api/provisioning-api]
 ---
 
-## About the Provisioning API
+{{< linked_headline "About the Provisioning API" >}}
 
-The Provisioning API enables application developers to seamlessly integrate their Identity Service with traditional application flows used in SaaS applications. Instead of implementing full LDAP authentication for their applications, developers can instead expose a set of API endpoints, which Replicated will sync to from the LDAP server.
+The Provisioning API enables application developers to expose a set of API endpoints, which Replicated will sync to from the LDAP server.
 
-In this model, applications use the authentication that they already have, and use the API endpoints for managing their user database.
+In this model, applications will have a list of all user accounts, without the passwords. Use the [Identity API](api/integration-api/identity-api/) to authenticate a user in the application.
 
-Replicated brokers the interaction between the identity server and your application. Depending on the identity server used and it's configuration, changes are propagated to Replicated via push or periodic polling. Applications do not need to have any knowledge of the LDAP server.
+Replicated brokers the interaction between the identity server and your application. Depending on the identity server used and it's configuration, changes are propagated to Replicated via push or periodic polling. Applications do not need to have any knowledge of the LDAP server or the LDAP protocol.
 
-If an application isn't ready to receive requests, by providing anything other than a 2xx response to API calls, the sync will pause and attempt another sync later.
+If an application identicated it isn't ready to receive requests by providing anything other than a 2xx response to API calls, the sync will pause and attempt another sync later. Replicated manages a cookie internally to ensure that all messages are delivered.
 
-To use this API, configure the `identity` field when packaging your application, [as documented in the Identity Configuration](/docs/packaging-an-application/ldap-integration/)
+To use this API, configure the `identity` field when packaging your application, [as documented in the Identity Configuration](/docs/ldap-and-identity/overview/).
 
-### Provisioning API vs. Identity API
-
-The Provisioning API and Identity API achieve the same goal with different authentication strategies.
-
-For applications that can support it, the Provisioning API offers data locality and asynchronous updates, giving applications greater performance and control over their user storage. In instances where the identity server is unavailable, users can still login to the application, but the data may be stale until the next successful sync.
-
-In contrast, the Identity API is synchronous, requiring the identity server to be available to successfully authenticate. Alternate login methods may be provided to get around identity server unavailability. For API-driven applications, allowing users to generate API keys may also allow continued operation until the identity server is back online.
-
-## API Flow
+{{< linked_headline "API Flow" >}}
 
 When using the Provisioning API, Replicated will bootstrap your user database via an initial sync. After that, it will continue to update your application based on changes. Depending on the identity server used, this can be pull or push on the Replicated side. The Provisioning API will always push user updates to your application.
 
-### Initial Sync
+{{< linked_headline "Initial Sync" >}}
 
 {{< enlarge_image_link image="/images/integration/provision-sync.png" title="Provisioning API initial sync flow" >}}
 
 During the initial sync phase, Replicated will retrieve all of the available user identities for a given domain search. This will be converted to JSON and posted to the identity endpoint declared in the release YAML identity configuration.
 
-### Update Sync
+{{< linked_headline "Update Sync" >}}
 
 {{< enlarge_image_link image="/images/integration/update-sync.png" title="Provisioning API update sync flow" >}}
 
@@ -47,7 +39,7 @@ When a user in the identity service is created or changes after the initial sync
 
 If an update fails, syncing will be temporarily stopped. This process will be attempted again during the next sync cycle.
 
-## API Methods
+{{< linked_headline "API Methods" >}}
 
 ### GET /v1/ping
 

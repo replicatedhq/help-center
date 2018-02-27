@@ -9,25 +9,15 @@ gradient: "purpleToPink"
 aliases : [docs/reference/integration-api/identity-api]
 ---
 
-## About the Identity API
+{{< linked_headline "About the Identity API" >}}
 
-The Identity API provides synchronous authentication with an identity server, often a corporate LDAP or Active Directory (AD) service. In this model, login requests are made to the Replicated Integration API, which validates the credentials provided against the identity service. Applications using the Identity API would maintain a separate user table that corresponds with the LDAP service, or rely entirely on the upstream identity provider for local identity.
+The Identity API provides synchronous authentication with an identity server, often a corporate LDAP or Active Directory (AD) service. In this model, login requests are made to the Replicated Integration API, which validates the credentials provided against the identity service. Applications using the Identity API rely on the upstream identity provider for local identity.
 
-Replicated does not recommend caching user credentials in your application, instead using the Provisioning API for this purpose. For user profiles, permissions, and other tasks, we recommend creating a virtual user in your application that maps to the SID of the user account from the identity server.
+{{< linked_headline "API Methods" >}}
 
-### Identity API vs. Provisioning API
+The Identity API is part of the Integration API. To discover the Integration API base endpoint, query the `REPLICATED_INTEGRATIONAPI` environment variable from inside your container.
 
-The Identity API and Provisioning API achieve the same goal with different authentication strategies.
-
-The Identity API provides synchronous authentication and authorization, requiring the identity server to be available to successfully authenticate. Alternate login methods may be provided to get around identity server unavailability. For API-driven applications, allowing users to generate API keys may also allow continued operation until the identity server is back online.
-
-In contrast, the Provisioning API offers data locality and asynchronous updates, giving applications greater performance and control over their user storage. In instances where the identity server is unavailable, users can still login to the application, but the data may be stale until the next successful sync.
-
-## API Methods
-
-The Identity API is part of the Integration API. To discover the Integration API base endpoint, query the REPLICATED_INTEGRATIONAPI environment variable from inside your container.
-
-## LDAP Authentication
+{{< linked_headline "LDAP Authentication" >}}
 
 ### GET /identity/v1/sources
 
@@ -75,7 +65,7 @@ Request payload
 | Name     | Type   | Description                                   |
 | -------- | ------ | --------------------------------------------- |
 | username | String | As defined by the ldap_username_field setting |
-| password | String | Cleartext passowrd                            |
+| password | String | Cleartext password                            |
 
 Query parameters
 
