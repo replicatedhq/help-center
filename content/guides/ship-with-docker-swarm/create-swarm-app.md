@@ -2,7 +2,7 @@
 date: "2018-01-30T04:02:20Z"
 title: "Creating a Replicated + Swarm Release"
 description: "Guide to creating a Replicated + Docker Swarm Release"
-weight: "80002"
+weight: "800002"
 categories: [ "Docker Swarm Guide" ]
 index: "guides/swarm"
 type: "chapter"
@@ -16,7 +16,7 @@ In this section, we will start by building a Redis service that can run on any D
 
 To finish this section, you will need:
 
-* A machine with Docker (version 1.9.1 and above) installed
+* A machine with Docker (version 1.13.1 and above) installed
 * A Replicated account (sign up at [https://vendor.replicated.com/](https://vendor.replicated.com/))
 
 {{< linked_headline "Create a Docker Compose App" >}}
@@ -58,10 +58,6 @@ $ docker stack deploy -c compose.yml my-redis
 Creating network my-redis_default
 Creating service my-redis_redis
 ```
-
-That's it! We can now look at our service in Swarm via `docker service ls` and interact with it. For many Software as a Service (SaaS) deployments, Swarm is a fully featured platform for deployment, distribution, and scaling. SaaS deployments typically can run in one well-defined environment, but enterprise environments are diverse and expand on the features needed to successfully release to these environments.
-
-In these environments, there is no one-size-fits-all approach to deployment. Replicated extends Swarm by providing developers and end users the ability to configure software for diverse environments, integrate with enterprise identity services (such as LDAP or Active Directory), snapshot and restore data services, audit user actions, and more. Software released with Replicated on Swarm deploys these features in normal, internet-facing environments as well as sensitive airgapped environments where access is tightly controlled.
 
 In the next part of this guide, we will create a Replicated release with our Docker Compose specification. After this, we will license and ship an on-premise version of our software to end customers.
 

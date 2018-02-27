@@ -2,7 +2,7 @@
 date: "2018-01-30T04:02:20Z"
 title: "Installing Replicated"
 description: "Introduction to installing Replicated and Docker Swarm for your customers"
-weight: "80003"
+weight: "800003"
 categories: [ "Docker Swarm Guide" ]
 index: "guides/swarm"
 type: "chapter"
@@ -39,11 +39,11 @@ In the next section, we will use this license to install Replicated and start ou
 
 {{< linked_headline "Install Replicated on a Server" >}}
 
-Installing Replicated in Swarm mode requires a Linux server that supports Docker 1.9.1 and above. As mentioned in the pre-requisites, having SSH access to a new server running the latest version of Debian, Ubuntu, CentOS, or Red Hat Enterprise Linux is enough to get started. The Replicated installer will manage the details of installing Docker, enabling Swarm mode, and installing Replicated.
+Installing Replicated in Swarm mode requires a Linux server that supports Docker 1.13.1 and above. As mentioned in the pre-requisites, having SSH access to a new server running the latest version of Debian, Ubuntu, CentOS, or Red Hat Enterprise Linux is enough to get started. The Replicated installer will manage the details of installing Docker, enabling Swarm mode, and installing Replicated.
 
 Once your server is provisioned, SSH into it, and run the following command:
 
-`curl https://get.replicated.com/swarm | sudo bash`
+`curl https://get.replicated.com/swarm-init | sudo bash`
 
 This command will perform the following actions:
 

@@ -1,11 +1,11 @@
 ---
-date: "2018-01-30T04:02:20Z"
+date: "2018-01-30T04:023:20Z"
 title: "Iterating on Releases"
 description: "Iterate on Applications by Deploying New Features"
-weight: "80004"
+weight: "800004"
 categories: [ "Docker Swarm Guide" ]
 index: "guides/swarm"
-type: "guide"
+type: "chapter"
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---
@@ -170,6 +170,6 @@ Replicated stores configuration via `docker config`. There are also Docker Secre
 
 {{< linked_headline "Next Steps" >}}
 
-Congratulations! You have successfully created a Docker Swarm app, converted it into a Replicated on Swarm application, and deployed it to a running server running Swarm. From there, you created a new release to make it configurable for your end users.
+You have successfully created a Docker Swarm app, converted it into a Replicated on Swarm application, and deployed it to a running server running Swarm. From there, you created a new release to make it configurable for your end users.
 
 You're ready to begin customizing this application to meet your needs, or create a new one from scratch. As always, we are here to help you succeed on building your application in Replicated. For more help, check our [community](https://help.replicated.com/community) or our [Swarm documentation](https://help.replicated.com/docs/swarm).
