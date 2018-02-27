@@ -20,7 +20,6 @@ To use a Swarm secret in Replicated, the secret should be defined as `external` 
 For example, to set a secret on a Postgres container, the following YAML would be expected in Replicated:
 
 ```yaml
-
 ---
 # kind: scheduler-swarm
 version: "3.3"
@@ -45,8 +44,8 @@ For the above YAML to run, the secret must exist. Replicated provides a top leve
 ```yaml
 swarm:
   secrets:
-  - name: pg_password
-    value: "abcdef"
+    - name: pg_password
+      value: "abcdef"
 ```
 
 {{< linked_headline "Dynamic Values" >}}

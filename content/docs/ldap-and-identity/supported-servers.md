@@ -1,6 +1,6 @@
 ---
 date: "2016-07-07T04:02:20Z"
-title: "Supported LDAP Serrvers"
+title: "Supported LDAP Servers"
 description: "A guide to supported features in various LDAP servers and Replicated"
 weight: "2301"
 categories: [ "LDAP And Identity Integration" ]
