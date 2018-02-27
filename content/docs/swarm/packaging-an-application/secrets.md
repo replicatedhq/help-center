@@ -32,7 +32,7 @@ services:
     secrets:
       - pg_password
     environment:
-      POSTGRES_PASSOWRD_FILE: /run/secrets/pg_password
+      POSTGRES_PASSWORD_FILE: /run/secrets/pg_password
 secrets:
   pg_password:
     external: true
@@ -95,14 +95,14 @@ swarm:
 # kind: scheduler-swarm
 version: "3.3"
 services:
-  redis:
+  postgres:
     image: postgres:10.2
     deploy:
       replicas: 1
     secrets:
-      - pg_password
+      - pg_password_secret
     environment:
-      POSTGRES_PASSOWRD_FILE: /run/secrets/pg_password
+      POSTGRES_PASSWORD_FILE: /run/secrets/pg_password_secret
 secrets:
   pg_password:
     external: true
