@@ -8,8 +8,8 @@ index: "docs"
 tags: ["Application YAML", "Replicated Vendor"]
 ---
 
-Replicated can integrate with your third party private registry (ie Docker Trusted Registry, Quay.io etc). To connect to these external registries
-you'll need to connect your vendor account to these accounts on the [app settings page](https://vendor.replicated.com/#/settings).
+Replicated can integrate with third party private registries [Quay.io](https://quay.io/) and [Docker Trusted Registry](https://docs.docker.com/datacenter/dtr/2.4/guides/).
+To connect to these external registries you'll need to connect your vendor account to these accounts on the [app settings page](https://vendor.replicated.com/#/settings).
 
 You'll need to provide us with a reference name, endpoint, username, password and email address (we recommend creating a specific account for
 Replicated with read-only access to use).
