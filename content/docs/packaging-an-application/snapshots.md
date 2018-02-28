@@ -8,8 +8,8 @@ tags: [ "Snapshots", "Application YAML" ]
 index: "docs"
 ---
 
-{{< note title="Kubernetes" >}}
-For the Kubernetes implementation of snapshots, please see the [Kubernetes snapshot documentation](/docs/packaging-an-application/kubernetes-snapshots/).
+{{< note title="Swarm & Kubernetes" >}}
+For the Swarm and Kubernetes implementations of snapshots, please see the [Swarm snapshots documentation](/docs/packaging-an-application/swarm-snapshots/) and the [Kubernetes snapshots documentation](/docs/packaging-an-application/kubernetes-snapshots/).
 {{< /note >}}
 
 Replicated gives customers the ability to take a snapshot of a running app. The customer will have the option to restore this snapshot as an option on the "Upload license" screen when starting the Replicated management container. Snapshots can be taken at an automatic interval and can also be manually triggered via the dashboard of the console.

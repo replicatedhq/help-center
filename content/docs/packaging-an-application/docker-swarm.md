@@ -82,7 +82,7 @@ services:
 ```
 
 ### Snapshots
-Standard Replicated snapshots are not supported when running in Swarm mode. This functionality will be included in an upcoming release.
+[Swarm snapshots](/docs/packaging-an-application/swarm-snapshots/) are supported as of Replicated 2.17.0.
 
 ### Custom Preflight Checks
 Custom preflight checks are not currently supported when running in Swarm mode. These will be available in a future release.
