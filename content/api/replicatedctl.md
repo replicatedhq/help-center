@@ -3,8 +3,8 @@ aliases:
 - docs/reference/replicatedctl
 categories:
 - Reference
-date: 2017-11-20T23:51:55Z
 description: Documentation for the replicatedctl command line
+date: 2018-02-13T18:09:21Z
 index: docs
 title: replicatedctl Reference
 weight: "505"
@@ -38,6 +38,7 @@ replicatedctl
 * [replicatedctl license-load](/api/replicatedctl/replicatedctl_license-load/)	 - Load the license from stdin
 * [replicatedctl params](/api/replicatedctl/replicatedctl_params/)	 - Manage params
 * [replicatedctl preflight](/api/replicatedctl/replicatedctl_preflight/)	 - View or manage preflight checks
+* [replicatedctl snapshot](/api/replicatedctl/replicatedctl_snapshot/)	 - Manage snapshots
 * [replicatedctl support-bundle](/api/replicatedctl/replicatedctl_support-bundle/)	 - Generate a support bundle
 * [replicatedctl task](/api/replicatedctl/replicatedctl_task/)	 - Manage tasks
 * [replicatedctl version](/api/replicatedctl/replicatedctl_version/)	 - Get the Replicated CLI version information
