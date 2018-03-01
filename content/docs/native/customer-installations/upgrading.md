@@ -30,6 +30,12 @@ tar xzvf replicated.tar.gz
 cat ./install.sh | sudo bash -s airgap
 ```
 
+Update additional nodes in your cluster by downloading the same release and re-running the operator install script.
+
+```shell
+tar xzvf replicated.tar.gz
+cat ./operator-install.sh | sudo bash -s airgap
+```
 
 ## Migrating from Replicated v1 to v2
 Replicated provides a one line migration script to upgrade your v1 installation to v2. The script will first stop your app
