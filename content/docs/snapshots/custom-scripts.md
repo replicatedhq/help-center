@@ -4,7 +4,7 @@ title: "Custom Backup Commands"
 description: "Configure custom commands to run during a snapshot"
 weight: "2201"
 categories: [ "Snapshots" ]
-index: "docs/snapshots"
+index: "other"
 ---
 
 {{< linked_headline "Custom Backup Commands" >}}

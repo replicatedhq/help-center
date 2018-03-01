@@ -9,6 +9,7 @@ type: "chapter"
 gradient: "redToRed"
 icon: "replicatedCircle"
 aliases: [/guides/getting-started]
+nextPage: "native/getting-started/overview.md"
 ---
 
 # Iterate and Ship Updates

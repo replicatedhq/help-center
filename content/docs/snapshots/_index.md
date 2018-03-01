@@ -5,5 +5,5 @@ description: "Guide to enabling application snapshots for backup and restore fun
 weight: "2200"
 categories: [ "Snapshots" ]
 aliases: [docs/snapshots/]
-index: "docs/snapshots"
+index: "other"
 ---

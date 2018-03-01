@@ -4,9 +4,9 @@ title: "Upgrading Replicated"
 description: "The process for end customers to update Replicated services to access the latest improvements to the underlying system since their installation."
 weight: "303"
 categories: [ "Distributing A Kubernetes Application" ]
-=index: "docs/kubernetes"
+index: "docs/kubernetes"
 gradient: "kubernetes"
-icon: "replicatedKubernetes"
+icon: "kubernetes"
 ---
 
 {{< note title="Replicated 2.0" >}}
