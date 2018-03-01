@@ -2,10 +2,11 @@
 date: "2017-02-19T00:00:00Z"
 title: "Swarm Snapshots"
 description: "Application Snapshots on Swarm"
-weight: "219"
-categories: [ "Packaging an application" ]
-tags: ["Application YAML", "Swarm", "Snapshots"]
-aliases: []
+categories: [ "Packaging a Swarm Application" ]
+weight: "614"
+index: "docs/swarm"
+gradient: "swarm"
+icon: "replicatedDockerSwarm"
 ---
 
 Swarm snapshots can be used to backup installed apps along with their named volumes as of Replicated 2.17.0.
