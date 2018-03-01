@@ -19,7 +19,9 @@ In this guide, we will extend on the Redis service we released in earlier guides
 
 Now that our Redis service is running on a Replicated on Swarm install, it is time to start iterating on and deploying releases for our application. While Software as a Service deployment environments are often static to your environment, enterprise environments are diverse and require the ability to adapt your service to their environments.
 
-Replicated adapts your application to enterprise environments with user-defined configuration, identity provider integration, audit logging, snapshots, and more. In this guide, we will add a configuration value to set the Redis timeout, create a Redis configuration file, and template this Redis configuration to match this configured timeout. When the configuration is changed, a new configuration value will be written and used by our application.
+In this guide, we will add a configuration value to set the Redis timeout, create a Redis configuration file, and template this Redis configuration to match this configured timeout. When the configuration is changed, a new configuration value will be written and used by our application.
+
+![](/images/guides/swarm/iterating/1-releases.png)
 
 To start iterating on our application, navigate to the Releases dashboard from the Replicated Vendor Portal. On this dashboard, you will see the first release that we created. At the top, click the "Create release" button. Once again, we are on the Create a Release page with the YAML editor that we used in [Creating a Swarm App](../create-swarm-app). This time the content reflects the last release we created, and includes our Redis service.
 
@@ -40,6 +42,8 @@ config:
 ```
 
 This YAML defines a configuration option named `redis.timeout` that is required. On the right, our preview has updated to match this new config option.
+
+![](/images/guides/swarm/iterating/2-config-preview.png)
 
 Next, we will template this field into a redis configuration file and expose that file to our Redis service.
 
@@ -97,16 +101,6 @@ name: "myredisapp"
 properties:
   console_title: "myredisapp"
 
-#
-# https://help.replicated.com/docs/kb/supporting-your-customers/install-known-versions/
-#
-host_requirements:
-  replicated_version: ">=2.9.2"
-
-#
-# Settings screen
-# https://help.replicated.com/docs/packaging-an-application/config-screen/
-#
 config:
 - name: redis
   title: Redis Configuration
@@ -147,27 +141,28 @@ We can now promote this release and update the instance we created in the [Insta
 
 {{< linked_headline "Promote Release" >}}
 
+![](/images/guides/swarm/iterating/4-promote-release.png)
+
 The Release Dashboard shows 2 releases now. We can see that release sequence 1 is pinned to Unstable. Before updates are propagated to channels, we must update the channel to the release we want. Click "Promote" next to release sequence 2, check the "Unstable" channel, and promote the release.
 
 Our release is now the current version for the "Unstable" channel. It's now time to update our application.
 
 {{< linked_headline "Update Application" >}}
 
+![](/images/guides/swarm/iterating/5-dashboard.png)
+
 The [Installing](../installing) section required us to install Replicated and a license onto a new server. Return to that server's dashboard with our running application. The base dashboard has a "Check Now" button that we can use to discover and update to our new release. Click it, and we will be prompted to install the new release.
+
+![](/images/guides/swarm/iterating/6-update-available.png)
+
+Click "View Update" to go to the updates page. This page lists the release history for this application. Install the update by clicking the "Install Update" button.
+
+![](/images/guides/swarm/iterating/7-install-update.png)
 
 After the release is installed, we need to re-configure our application to start it. Go to the "Settings" page where our new timeout value is available. Enter a number like `0` to disable it and return to the Dashboard to start our application.
 
-Once the application is started, we can SSH into the server. Find the container running our Redis instance via `sudo docker ps` and exec into a shell on it with something like:
+![](/images/guides/swarm/iterating/8-settings.png)
 
-```shell
-$ sudo docker exec -ti replf3627c40_redis.1.hafqm00l1skzkqk0y41gzzr5a /bin/sh
-```
-
-We're now in the running environment of our Redis service. If you execute `cat /usr/local/etc/redis/redis.conf`, you will see the output printed out that matches the configuration we supplied in the release, and our timeout value templated in.
-
-{{< linked_headline "Where are my configs?" >}}
-
-Replicated stores configuration via `docker config`. There are also Docker Secrets, accessed via `docker secret`. When starting an application, Replicated updates the values in configs and secrets, and references them from Swarm applications that are using them. These secrets are managed by Docker and are not stored on the filesystem outside of your services.
 
 {{< linked_headline "Next Steps" >}}
 
