@@ -34,7 +34,7 @@ Update additional nodes in your cluster by downloading the same release and re-r
 
 ```shell
 tar xzvf replicated.tar.gz
-cat ./operator-install.sh | sudo bash -s airgap
+cat ./operator_install.sh | sudo bash -s airgap
 ```
 
 ## Migrating from Replicated v1 to v2
