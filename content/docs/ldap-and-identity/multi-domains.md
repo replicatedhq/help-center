@@ -4,7 +4,7 @@ title: "Multiple LDAP Domains"
 description: "Configuring Replicated to authenticate against mulitple LDAP/AD domains"
 weight: "2306"
 categories: [ "LDAP And Identity Integration" ]
-index: "docs/ldap"
+index: "other"
 ---
 
 {{< linked_headline "Advanced LDAP Configuration Specification" >}}

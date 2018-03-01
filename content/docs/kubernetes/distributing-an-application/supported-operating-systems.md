@@ -5,7 +5,7 @@ description: "View the supported operating systems"
 keywords:  "operating system, os"
 weight: "310"
 categories: [ "Distributing a Kubernetes Application" ]
-index: "docs/kubernetes"
+index: "kubernetes"
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---

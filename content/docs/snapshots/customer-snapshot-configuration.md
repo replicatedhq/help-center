@@ -4,7 +4,7 @@ title: "Customer Configutation Options"
 description: "Customer configuration options for snapshots"
 weight: "2202"
 categories: [ "Snapshots" ]
-index: "docs/snapshots"
+index: "other"
 ---
 
 {{< linked_headline "Customer Snapshot Configuration Options" >}}

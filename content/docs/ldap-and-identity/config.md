@@ -4,7 +4,7 @@ title: "Config Items"
 description: "Enabling LDAP and AD user auth and sync in an application through Replicated."
 weight: "2302"
 categories: [ "LDAP And Identity Integration" ]
-index: "docs/ldap"
+index: "other"
 ---
 
 {{< linked_headline "Configuration" >}}

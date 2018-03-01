@@ -8,6 +8,7 @@ index: "guides/swarm"
 type: "chapter"
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
+nextPage: "swarm/getting-started/overview.md"
 ---
 
 {{< linked_headline "Iterating on Releases" >}}
