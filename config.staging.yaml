@@ -36,7 +36,7 @@ taxonomies:
   kb-section: "kb-sections"
 
 algolia:
-  index: "help_center"
+  index: "help_center_staging"
   appID: "5PHVQPX4AR"
 
 menu:
