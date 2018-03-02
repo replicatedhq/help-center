@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Preflight Checks"
 description: "A guide to implementing the Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
-weight: "208"
+weight: "2608"
 categories: [ "Packaging a Kubernetes Application" ]
 index: "docs/kubernetes"
 gradient: "kubernetes"

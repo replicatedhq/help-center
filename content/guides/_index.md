@@ -17,12 +17,4 @@ guides:
     description: "You are shipping to Kubernetes in the cloud and want to keep the same deployments for your enterprise customers, start here."
     level: "replicatedKubernetes"
     slug: "ship-with-kubernetes"
-  - title: "Vendor Portal"
-    description: "Learn how to use the Replicated Vendor Portal to manage customers, licenses, release and your account."
-    level: "vendorPortal"
-    slug: "vendor-portal"
-  - title: "Troubleshoot"
-    description: "Have an installation that isn't managed by Replicated? Get started with our Troubleshoot product to help support those installations!"
-    level: "troubleshoot"
-    slug: "support-bundle"
 ---

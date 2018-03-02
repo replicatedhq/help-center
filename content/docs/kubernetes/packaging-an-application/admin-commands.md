@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Admin Commands"
 description: "Implementation guide for application vendors to provide customers with aliased CLI commands that can be performed in the containers across a cluster."
 categories: [ "Packaging a Kubernetes Application" ]
-weight: "209"
+weight: "2612"
 index: "docs/kubernetes"
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
