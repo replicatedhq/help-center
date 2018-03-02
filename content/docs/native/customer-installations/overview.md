@@ -5,7 +5,7 @@ description: "Documentation for installing and supporting your customers."
 weight: "300"
 categories: [ "Managing Customer Installation" ]
 index: "docs/native"
-aliases: [docs/native/distributing-an-application/]
+aliases: [docs/native/customer-installations/]
 icon: "replicatedCircle"
 hideFromList: true
 ---
