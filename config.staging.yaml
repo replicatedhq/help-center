@@ -11,7 +11,7 @@ googleAnalytics: "UA-61084834-1"
 Params:
   author: "Replicated"
   copyright: "Replicated, Inc"
-  searchE: "staging"
+  search_env: "staging"
 
   favicon: ""
   pagetitle: "Replicated"
@@ -36,9 +36,8 @@ taxonomies:
   kb-section: "kb-sections"
 
 algolia:
-  index: "help_center_staging"
+  index: "help_center"
   appID: "5PHVQPX4AR"
-  key: "5b85668fa951d036dd47817202dc4d18"
 
 menu:
   main:
@@ -47,7 +46,7 @@ menu:
       URL: "/guides/"
     - Name: "Documentation"
       Weight: 2
-      URL: "/docs/native/getting-started/overview/""
+      URL: "/docs/native/getting-started/overview/"
     - Name: "API Reference"
       Weight: 3
       URL: "/api/"
