@@ -80,7 +80,7 @@ Proxy support for Swarm will be included in a future release of Replicated.
 
 Replicated requires four overlay networks in addition to any overlay networks required by your app.
 By default swarm assigns a /24 subnet from the 10.0.0.0/8 global subnet to each overlay network.
-This may interfere's with a customer's existing networks.
+This may interfere with a customer's existing networks.
 Use the `exclude-subnet` param to exclude multiple /16 subnets from the 10.0.0.0/8 default subnet.
 
 Customers that need to exclude the entire 10.0.0.0/8 will need to create all networks in advance with assigned subnets.
