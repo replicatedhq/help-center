@@ -25,6 +25,10 @@ Params:
   swarm_docker_version_minimum: "1.13.1"
   swarm_docker_version_default: "17.06.2-ce"
 
+  kubernetes_docker_version_minimum: "1.12.3"
+  kubernetes_docker_version_default: "1.12.3"
+  kubernetes_version: "1.9.3"
+
 taxonomies:
   category: "categories"
   tag: "tags"

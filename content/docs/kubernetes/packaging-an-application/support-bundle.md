@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Support Bundle"
 description: "Installed instances can generate a support bundle with relevant logs and instance information."
-weight: "213"
+weight: "2607"
 categories: [ "Packaging a Kubernetes Application" ]
 index: "docs/kubernetes"
 gradient: "kubernetes"

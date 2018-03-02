@@ -1,8 +1,8 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Create & Manage Releases"
-description: "How to push and access private images in Replicated's hosted private registry"
-weight: "2506"
+title: "Docker Registries"
+description: "How to push and access private images in Replicated's hosted private registry."
+weight: "2505"
 categories: [ "Shipping With Kubernetes" ]
 index: "docs/kubernetes"
 gradient: "kubernetes"
@@ -63,13 +63,7 @@ Additionally, Replicated supports private images hosted in other registries incl
 
 To use private images from an external registry, you need to add the registry via the Vendor website. The guide for [integrating a third party registry](/docs/kb/developer-resources/third-party-registries) explains this in further detail.
 
-{{< linked_headline "Referencing Images from the Replicated Registry" >}}
-
-Images stored in the Replicated private registry can be accessed by adding a static `imagePullSecret` to any container definition that references a private image. Replicated will automatically create a secret named `replicatedregistrykey` and deploy it with your application. Refererencing this secret will make your private images available on the target cluster.
-
-{{< linked_headline "Referencing External Images" >}}
-
-All external (to Replicated) images included in your Kubernetes application must be specified in the `images` section of your YAML in order to be included in the airgap bundle your customer will download and install.
+All images included in your Swarm application must be specified in the `images` section of your YAML in order to be included in the airgap bundle your customer will download and install.
 
 ```yaml
 images:

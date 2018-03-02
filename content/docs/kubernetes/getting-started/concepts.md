@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Concepts and Terminology"
 description: "The core concepts and terms used in these documents to describe the Replicated functionality."
-weight: "105"
+weight: "2502"
 categories:  [ "Shipping With Kubernetes" ]
 index: "docs/kubernetes"
 gradient: "kubernetes"

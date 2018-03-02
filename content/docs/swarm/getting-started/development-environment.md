@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Development Environment"
 description: "How to set up an environment to ship with Replicated and Docker Swarm"
-weight: "504"
+weight: "502"
 categories: [ "Shipping with Docker Swarm" ]
 index: "docs/swarm"
 gradient: "swarm"
