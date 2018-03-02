@@ -5,7 +5,7 @@ description: "Enabling LDAP and AD user auth and sync in an application through 
 weight: "2300"
 categories: [ "LDAP And Identity Integration" ]
 aliases : [docs/ldap-and-identity/]
-index: "docs/ldap"
+index: "other"
 ---
 
 Replicated can be integrated with LDAP servers to sync users and/or authenticate users between the directory and your application.

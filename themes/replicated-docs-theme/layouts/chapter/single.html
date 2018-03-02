@@ -75,20 +75,38 @@
                             {{ .Content }}
                             <div class="prev-next-arrows justifyContent--spaceBetween flex u-marginTop--most">
                                 <div class="next flex1 u-textAlign--left">
+                                {{ if .Params.previousPage }}
+                                    {{ with .Site.GetPage "page" "docs" .Params.previousPage }}
+                                    <a href="{{ .Permalink }}">
+                                        <span class="icon u-chevronIcon"></span>
+                                        {{ .Title }}
+                                    </a>
+                                    {{ end }}
+                                {{ else }}
                                     {{ with .NextInSection }}
                                         <a href="{{ .Permalink }}">
                                             <span class="icon u-chevronIcon"></span>
                                             {{ .Title }}
                                         </a>
                                     {{ end }}
+                                {{ end }}
                                 </div>
                                 <div class="previous flex1 u-textAlign--right">
+                                {{ if .Params.nextPage }}
+                                    {{ with .Site.GetPage "page" "docs" .Params.nextPage }}
+                                    <a href="{{ .Permalink }}">
+                                        {{ .Title }}
+                                        <span class="icon u-chevronIcon"></span>
+                                    </a>
+                                    {{ end }}
+                                {{ else }}
                                     {{ with .PrevInSection }}
                                         <a href="{{ .Permalink }}">
                                             {{ .Title }}
                                             <span class="icon u-chevronIcon"></span>
                                         </a>
                                     {{ end }}
+                                {{ end }}
                                 </div>
                             </div>
                         </div>
