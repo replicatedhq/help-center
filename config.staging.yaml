@@ -47,7 +47,7 @@ menu:
       URL: "/guides/"
     - Name: "Documentation"
       Weight: 2
-      URL: "/docs/overview/welcome/"
+      URL: "/docs/native/getting-started/overview/""
     - Name: "API Reference"
       Weight: 3
       URL: "/api/"

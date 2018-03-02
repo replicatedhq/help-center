@@ -1,11 +1,12 @@
 {{ $currentPage := . }}
 {{ $currentSection := .CurrentSection }}
 {{ $scope := index (split .Params.index "/") 1 }}
+{{ $category := index (split .Params.index "/") 0 }}
 <div class="sidebar">
         <div class="dropdown u-marginBottom--most">
             <p class="u-fontWeight--bold u-fontSize--largest u-color--tuna u-paddingBottom--normal">Documentation</p>
             <p class="u-fontSize--large u-fontWeight--medium u-cursor--pointer flex justifyContent--spaceBetween alignItems--center" id="dropdown-link">
-                {{ if or (eq $scope "ldap") (eq $scope "snapshots") }}
+                {{ if eq $category "other" }}
                     <span>Replicated Features</span>
                 {{ else }}
                     {{ if $scope }}
@@ -128,7 +129,7 @@
             {{ end }}
         </div>
         {{ end }}
-        {{ if or (eq $scope "snapshots") (eq $scope "ldap") (eq $scope "overview") }}
+        {{ if eq $category "other" }}
         <div class="u-marginBottom--most">
             <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Snapshots</h3>
             {{ with .Site.GetPage "section" "docs" "snapshots" }}

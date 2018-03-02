@@ -2,7 +2,7 @@
 date: "2016-07-07T04:02:20Z"
 title: "Custom Backup Commands"
 description: "Configure custom commands to run during a snapshot"
-weight: "2201"
+weight: "2202"
 categories: [ "Snapshots" ]
 index: "other"
 ---
