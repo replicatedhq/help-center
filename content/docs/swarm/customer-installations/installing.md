@@ -76,6 +76,80 @@ docker stack deploy -c docker-compose.yml replicated
 
 Proxy support for Swarm will be included in a future release of Replicated.
 
+{{< linked_headline "Customizing Overlay Networks" >}}
+
+Replicated requires four overlay networks in addition to any overlay networks required by your app.
+By default Swarm assigns a /24 subnet from the 10.0.0.0/8 global subnet to each overlay network.
+This may interfere with a customer's existing networks.
+Use the `exclude-subnet` param to exclude multiple /16 subnets from the 10.0.0.0/8 default subnet.
+
+Customers that need to exclude the entire 10.0.0.0/8 will need to create all networks in advance with assigned subnets.
+Create the following networks before installing Replicated, modifying the subnets for the host:
+
+```shell
+SUBNET_1=172.20.0.0/16
+SUBNET_2=172.21.0.0/16
+SUBNET_3=172.22.0.0/16
+SUBNET_4=172.23.0.0/16
+
+docker network create --driver=overlay --subnet=$SUBNET_1 --label=com.docker.stack.namespace=replicated replicated_default
+docker network create --driver=overlay --subnet=$SUBNET_2 --label=com.docker.stack.namespace=retraced retraced_default
+docker network create --driver=overlay --subnet=$SUBNET_3 --label=PremkitReplicatedNamespace=replicated premkit_replicated
+docker network create --driver=overlay --subnet=$SUBNET_4 --label=StatsdReplicatedNamespace=replicated statsd_replicated
+```
+
+Then install Replicated and your app. Swarm will create the network(s) for your app in the 10.0.0.0/8 subnet.
+Run `docker stack ls` to find your application namespace, which will vary for every install.
+In the following results `repl5397a011` is the application namespace.
+
+```shell
+NAME                SERVICES
+repl5397a011        8
+replicated          3
+retraced            8
+```
+
+Run `docker network ls` to find networks in the application namespace.
+In the following results `repl5397a011_voteapp` is an application network.
+
+```shell
+NETWORK ID          NAME                   DRIVER              SCOPE
+ea5f9efd3242        bridge                 bridge              local
+3972c6a9cb30        docker_gwbridge        bridge              local
+fcc8f63af47a        host                   host                local
+k1m7wagciv3h        ingress                overlay             swarm
+eeee239be18e        none                   null                local
+se30g4p6s8oc        premkit_replicated     overlay             swarm
+obu0vkl7u54k        repl5397a011_voteapp   overlay             swarm
+2enrenhp40cu        replicated_default     overlay             swarm
+dvj7lqoj6j2r        retraced_default       overlay             swarm
+spajlqj8i144        statsd_replicated      overlay             swarm
+```
+
+Run `docker network inspect <network>` for each application network and note the Labels:
+
+```shell
+docker network inspect repl5397a011_voteapp
+...
+	"Labels": {
+		"com.docker.stack.namespace": "repl5397a011"
+	},
+...
+```
+
+Stop the app in the Replicated UI or with the Replicated CLI.
+Then run `docker stack rm repl5397a011` to remove your app if the namespace is `repl5397a011'.
+
+Manually create all the required application networks following the pattern above:
+
+```shell
+SUBNET_5=172.24.0.0/16
+
+docker network create --driver=overlay --subnet=$SUBNET_5 --label=com.docker.stack.namespace=repl5397a011 repl5397a011_voteapp
+```
+
+Finally, restart your app with the Replicated UI or CLI.
+
 {{< linked_headline "Uninstall Entire Swarm Stack" >}}
 
 To remove the entire Swarm stack run the following script.
