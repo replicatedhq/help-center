@@ -27,7 +27,7 @@ When Replicated is installed, it can be downloaded from the Internet or packaged
 | Host | Online Installation | Airgap Installation | Description |
 |---|---|---|---|
 | get.replicated.com | <i class="fa fa-check" /> Required | <i class="fa fa-times" /> Not Required | This endpoint hosts the install script that used in the Replicated [easy install](/docs/distributing-an-application/installing-via-script) script. |
-| registry.replicated.com<br>registry-data.replicated.com | <i class="fa fa-check" /> Required | <i class="fa fa-times" /> Not Required | This domain name will be used to download images hosted in private Replicated registry.. |
+| registry.replicated.com<br>registry-data.replicated.com | <i class="fa fa-check" /> Required | <i class="fa fa-times" /> Not Required | This domain name will be used to download images hosted in the private Replicated registry. |
 | quay.io | <i class="fa fa-check" /> Required | <i class="fa fa-times" /> Not Required | The current Replicated images are hosted as public images in the Quay.io registry. |
 | Docker Hub | <i class="fa fa-check" /> Required | <i class="fa fa-times" /> Not Required | Some dependencies of Replicated are hosted as public images in Docker Hub.|
 
@@ -39,7 +39,7 @@ To install your application and perform updates, some external connections are r
 | Host | Online Installation | Airgap Installation | Description |
 |---|---|---|---|
 | api.replicated.com | <i class="fa fa-check" /> Required | <i class="fa fa-times" /> Not Required | This endpoint services the license sync check and used to pull down yaml for app upgrades. |
-| registry.replicated.com | <i class="fa fa-check" /> Required | <i class="fa fa-times" /> Not Required | This endpoint services pull requests for all private images. |
+| registry.replicated.com<br>registry-data.replicated.com | <i class="fa fa-check" /> Required | <i class="fa fa-times" /> Not Required | This domain name will be used to download images hosted in the private Replicated registry. |
 | quay.io | <i class="fa fa-check" /> Required | <i class="fa fa-times" /> Not Required | The current Replicated images are hosted as public images in the Quay.io registry and may be upgraded during app upgrade time. |
 | Docker Hub | <i class="fa fa-check" /> Required | <i class="fa fa-times" /> Not Required | Some dependencies of Replicated are hosted as public images in Docker Hub.|
 | Third Party Registries | <i class="fa fa-check" /> Required | <i class="fa fa-times" /> Not Required | Replicated will pull public images hosted on third party registries directly so those should be identified and white listed. |
