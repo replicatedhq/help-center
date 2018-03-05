@@ -15,7 +15,7 @@ The [Replicated vendor portal](https://vendor.replicated.com) provides you with 
 
 {{< linked_headline "Promoting Releases" >}}
 
-Once a release is ready to be installed, the release can be promoted to one or more release channels. More details can be found in our [Promote Releases](/docs/native/distributing-an-application/promote-releases/) documentation.
+Once a release is ready to be installed, the release can be promoted to one or more release channels. More details can be found in our [Promote Releases](/docs/native/packaging-an-application/promote-releases/) documentation.
 
 {{< linked_headline "Manage Release Channels" >}}
 

@@ -77,7 +77,7 @@ curl -x http://<proxy_address>:<proxy_port> https://get.replicated.com/docker | 
 
 {{< linked_headline "Upgrade to latest Replicated build" >}}
 
-If you would like to upgrade Replicated to the latest release simply [rerun the installation script](/docs/native/distributing-an-application/installing-via-script/) and that will upgrade the Replicated components to the latest build.
+If you would like to upgrade Replicated to the latest release simply [rerun the installation script](/docs/native/packaging-an-application/installing-via-script/) and that will upgrade the Replicated components to the latest build.
 
 {{< linked_headline "Restarting Replicated" >}}
 

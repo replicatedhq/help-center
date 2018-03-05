@@ -37,10 +37,10 @@ Your customer will need the `.airgap` package and the normal Replicated license 
 
 {{< linked_headline "Install Airgap Package" >}}
 
-Next, navigate to the Admin Console at https://\<server_ip\>:8800. Accept the self signed certificate, pass the preflight checks, and you will see the license upload screen. Upload the [airgap enabled license](/docs/native/distributing-an-application/create-licenses/#airgap-download-enabled) and then select the airgapped install option. You will have to provide a path to the .airgap file and upload the .rli file here.
+Next, navigate to the Admin Console at https://\<server_ip\>:8800. Accept the self signed certificate, pass the preflight checks, and you will see the license upload screen. Upload the [airgap enabled license](/docs/native/packaging-an-application/create-licenses/#airgap-download-enabled) and then select the airgapped install option. You will have to provide a path to the .airgap file and upload the .rli file here.
 
 Once this screen is completed, Replicated runs as normal. In the Admin Console Settings page (/console/settings), there is a section to set the Airgap properties. You can install updates and sync the license by downloading new versions of these, renaming them with the .airgap extension and placing them in the locations specified on the /console/settings page.
 
 {{< linked_headline "Adding Additional Nodes" >}}
 
-In order to add additional nodes to your cluster, just navigate to the Cluster page of the Admin Console, click the "Add Node" button, and follow the instructions there. For more detailed instructions see the [add nodes](/docs/native/distributing-an-application/add-nodes/) page of the docs.
+In order to add additional nodes to your cluster, just navigate to the Cluster page of the Admin Console, click the "Add Node" button, and follow the instructions there. For more detailed instructions see the [add nodes](/docs/native/packaging-an-application/add-nodes/) page of the docs.
