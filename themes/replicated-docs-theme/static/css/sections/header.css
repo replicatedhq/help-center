@@ -35,12 +35,12 @@ nav ul ul.show {
   right: 20px;
   top: 13px;
   z-index: 210;
-  background-position: -70px 0;
+  background-position: -70px -4px;
   width: 23px;
   height: 14px;
 }
 #toggleNav.open {
-  background-position: -95px 0;
+  background-position: -97px -4px;
   width: 14px;
 }
 .search-form {

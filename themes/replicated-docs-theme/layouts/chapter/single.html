@@ -33,21 +33,6 @@
             <div class="paddingContainer">
                 <div class="u-flexTabletReflow flex1">
                     <div class="flex-auto sidebar-wrapper">
-                        <div class="mobile">
-                            {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
-                            {{ $.Scratch.Add "path" .Site.BaseURL }}
-                            <ol class="breadcrumbs">
-                            {{ range $index, $element := split $url "/" }}
-                                {{ $.Scratch.Add "path" $element }}
-                                {{ if ne $element "" }}
-                                <li><a href='{{ $.Scratch.Get "path" }}'>{{ . | humanize | title }}</a></li>
-                                <li>/</li>
-                                {{ $.Scratch.Add "path" "/" }}
-                                {{ end }}
-                            {{ end }}
-                            </ol>
-                        </div>
-                        <p></p>
                         <div class="sidebar">
                             <div>
                                 {{ if .Params.categories }}
@@ -74,7 +59,7 @@
                         <div class="page-content">
                             {{ .Content }}
                             <div class="prev-next-arrows justifyContent--spaceBetween flex u-marginTop--most">
-                                <div class="next flex1 u-textAlign--left">
+                                <div class="next flex u-textAlign--left">
                                 {{ if .Params.previousPage }}
                                     {{ with .Site.GetPage "page" "docs" .Params.previousPage }}
                                     <a href="{{ .Permalink }}">
@@ -91,7 +76,7 @@
                                     {{ end }}
                                 {{ end }}
                                 </div>
-                                <div class="previous flex1 u-textAlign--right">
+                                <div class="previous flex u-textAlign--right">
                                 {{ if .Params.nextPage }}
                                     {{ with .Site.GetPage "page" "docs" .Params.nextPage }}
                                     <a href="{{ .Permalink }}">

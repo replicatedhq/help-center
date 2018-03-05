@@ -6,6 +6,7 @@ weight: "2205"
 categories: [ "Snapshots" ]
 index: "other"
 aliases: [/docs/packaging-an-application/swarm-snapshots/]
+nextPage: "ldap-and-identity/overview.md"
 ---
 
 {{< linked_headline "Snapshots with Docker Swarm" >}}
