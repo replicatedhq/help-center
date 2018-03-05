@@ -5,7 +5,7 @@ description: "Instructions for installing Replicated via the easy install script
 keywords: "installing, removing, migrating"
 weight: "2702"
 categories: [ "Manage Customer Installations" ]
-index: "docs/kubernetes"
+index: ["docs/kubernetes", "docs"]
 aliases: [docs/distributing-an-application/installing-on-kubernetes]
 gradient: "kubernetes"
 icon: "replicatedKubernetes"

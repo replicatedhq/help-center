@@ -4,7 +4,7 @@ lastmod: "2017-06-29T00:00:00Z"
 title: "Known Docker Workarounds"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
-index: "docs"
+index: "other"
 tags: ["Docker"]
 aliases: [docs/distributing-an-application/known-docker-workarounds]
 ---

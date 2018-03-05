@@ -4,7 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Using cmd To Populate Values & Defaults"
 weight: "999999"
 categories: [ "Developer Resources" ]
-index: "docs"
+index: "other"
 tags: ["CLI Commands", "Application YAML"]
 ---
 

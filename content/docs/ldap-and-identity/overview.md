@@ -5,7 +5,7 @@ description: "Enabling LDAP and AD user auth and sync in an application through 
 weight: "2300"
 categories: [ "LDAP And Identity Integration" ]
 aliases : [docs/ldap-and-identity/]
-previousPage: "snapshots/swarm.md"
+previousPage: "snapshots/kubernetes.md"
 index: "other"
 ---
 

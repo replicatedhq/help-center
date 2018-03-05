@@ -4,7 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Updating Replicated"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
-index: "docs"
+index: "other"
 ---
 
 {{< warning title="Old Version Warning" >}}

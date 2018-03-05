@@ -4,7 +4,7 @@ title: "Application Properties"
 description: "The Replicated YAML section properties allows several high level items to be defined."
 weight: "613"
 categories: [ "Packaging a Swarm Application" ]
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---

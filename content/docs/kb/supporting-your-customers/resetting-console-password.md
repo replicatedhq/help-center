@@ -4,7 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Resetting the Console Password"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
-index: "docs"
+index: "other"
 ---
 
 If the customer chooses to secure their on-premise Replicated admin console with a 

@@ -4,7 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Creating An AMI"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
-index: "docs"
+index: "other"
 ---
 
 At times, it can be desirable to ship an Amazon Machine Image (AMI) to allow customers a familiar installation path. 

@@ -4,7 +4,7 @@ title: "Admin Commands"
 description: "Implementation guide for application vendors to provide customers with aliased CLI commands that can be performed in the services across a cluster"
 categories: [ "Packaging a Swarm Application" ]
 weight: "612"
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---

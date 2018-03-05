@@ -4,7 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Generate a Support Bundle from the CLI"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
-index: "docs"
+index: "other"
 tags: ["Support"]
 ---
 

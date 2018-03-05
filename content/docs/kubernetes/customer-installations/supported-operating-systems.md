@@ -5,7 +5,7 @@ description: "View the supported operating systems"
 keywords:  "operating system, os"
 weight: "2703"
 categories: [ "Manage Customer Installations" ]
-index: "docs/kubernetes"
+index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---

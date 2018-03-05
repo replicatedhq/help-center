@@ -5,7 +5,7 @@ description: "View the supported operating systems"
 keywords:  "operating system, os"
 weight: "703"
 categories: [ "Distributing a Swarm Application" ]
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 icon: "replicatedDockerSwarm"
 gradient: "swarm"
 ---

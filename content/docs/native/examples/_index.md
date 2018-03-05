@@ -4,7 +4,7 @@ title: "List Of Examples"
 description: "The components section of the Replicated YAML defines how the containers will be created and started."
 weight: "401"
 categories: [ "Replicated Scheduler Examples" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 hideFromList: true
 aliases: [/docs/examples/getelk/]

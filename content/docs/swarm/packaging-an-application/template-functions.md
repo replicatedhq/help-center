@@ -4,7 +4,7 @@ title: "Template Functions"
 description: "Using template functions to make your Swarm YAML dynamic"
 weight: "606"
 categories: [ "Packaging a Swarm Application" ]
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---

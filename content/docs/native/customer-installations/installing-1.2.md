@@ -4,7 +4,7 @@ title: "Installing Replicated 1.2"
 description: "How to install the legacy version of Replicated 1.2 via Deb and Yum packages."
 hideFromList: true
 categories: [ "Managing Customer Installation" ]
-index: "docs"
+index: ["docs/native", "docs"]
 aliases: [docs/distributing-an-application/installing-1.2]
 icon: "replicatedCircle"
 ---

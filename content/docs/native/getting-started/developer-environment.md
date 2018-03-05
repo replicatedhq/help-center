@@ -4,7 +4,7 @@ title: "Developer Environment"
 description: "How to set up an environment to ship a Replicated application"
 weight: "104"
 categories: [ "Replicated Scheduler" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 aliases: [/tags/studio/, /docs/kb/developer-resources/using-replicated-studio-to-quickly-iterate-on-your-yaml/]
 ---

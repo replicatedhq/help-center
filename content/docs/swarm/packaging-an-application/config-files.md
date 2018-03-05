@@ -4,7 +4,7 @@ title: "Config Files"
 description: "Creating dynamic, custom configuration files in a Docker Swarm application"
 categories: [ "Packaging a Swarm Application" ]
 weight: "603"
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---

@@ -4,7 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Updating SSL/TLS Certificates for On-Prem Admin"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
-index: "docs"
+index: "other"
 tags: ["Replicated UI"]
 ---
 

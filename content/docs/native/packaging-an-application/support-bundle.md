@@ -4,7 +4,7 @@ title: "Support Bundle"
 description: "Installed instances can generate a support bundle with relevant logs and instance information."
 weight: "212"
 categories: [ "Packaging a Native Application" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/support-bundle/,/tags/support-bundle/]
 ---

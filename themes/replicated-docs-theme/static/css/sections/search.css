@@ -81,6 +81,14 @@
   transform: scale(0.6);
 }
 
+.aa-suggestion .u-replicatedKubernetes,
+.aa-suggestion .u-replicatedCircle,
+.aa-suggestion .u-replicatedDockerSwarm {
+  transform: scale(0.3);
+  left: -30px;
+  top: -26px;
+}
+
 .aa-suggestion:hover {
   background: rgba(163, 211, 233, .5);
 }

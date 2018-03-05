@@ -4,7 +4,7 @@ lastmod: "2018-01-04T00:00:00Z"
 title: "HTTP Proxies"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
-index: "docs"
+index: "other"
 tags: ["HTTP Proxy", "HTTP_PROXY", "No Proxy", "NO_PROXY"]
 aliases: [/tags/http-proxy,/tags/http_proxy,/tags/no-proxy,/tags/no_proxy]
 ---

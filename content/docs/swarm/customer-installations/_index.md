@@ -4,7 +4,7 @@ title: "Managing Customer Installations"
 description: "Ship it to your customer"
 weight: "700"
 categories: [ "Distributing a Swarm Application" ]
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 gradient: "swarm"
 ---
 

@@ -4,7 +4,7 @@ title: "Docker Registries"
 description: "How to push and access private images in Replicated's hosted private registry."
 weight: "2505"
 categories: [ "Shipping With Kubernetes" ]
-index: "docs/kubernetes"
+index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---

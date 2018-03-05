@@ -4,7 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Searching the Admin Console Audit Log"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
-index: "docs"
+index: "other"
 tags: ["Audit Log", "Replicated UI"]
 hideFromList: true
 ---

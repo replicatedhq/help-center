@@ -1,7 +1,7 @@
 {{ $currentPage := . }}
 {{ $currentSection := .CurrentSection }}
-{{ $scope := index (split .Params.index "/") 1 }}
-{{ $category := index (split .Params.index "/") 0 }}
+{{ $scope :=  .CurrentSection.Parent.Title }}
+{{ $category := .CurrentSection.Title }}
 <div class="sidebar">
         <div class="dropdown u-marginBottom--most">
             <p class="u-fontWeight--bold u-fontSize--largest u-color--tuna u-paddingBottom--normal">Documentation</p>
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="desktop-only">
-            {{ if eq $scope "native" }}
+            {{ if eq $scope "Native Scheduler" }}
             <div class="u-marginBottom--most">
                 <h3 class="u-fontWeight--bold u-fontSize--large u-lineHeight--normal u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Replicated Native Scheduler</h3>
                 {{ with .Site.GetPage "section" "docs" "native" }}
@@ -64,7 +64,7 @@
                 {{ end }}
             </div>
             {{ end }}
-            {{ if eq $scope "swarm" }}
+            {{ if eq $scope "Docker Swarm" }}
             <div class="u-marginBottom--most">
                 <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Swarm</h3>
                 {{ with .Site.GetPage "section" "docs" "swarm" }}
@@ -97,7 +97,7 @@
                 {{ end }}
             </div>
             {{ end }}
-            {{ if eq $scope "kubernetes" }}
+            {{ if eq $scope "Kubernetes" }}
             <div class="u-marginBottom--most">
                 <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Kubernetes</h3>
                 {{ with .Site.GetPage "section" "docs" "kubernetes" }}
@@ -130,7 +130,7 @@
                 {{ end }}
             </div>
             {{ end }}
-            {{ if eq $category "other" }}
+            {{ if or (eq $category "Snapshots") (eq $category "LDAP and Identity Integration") (eq $category "Config Screen") (eq $category "Knowledge Base") }}
             <div class="u-marginBottom--most">
                 <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Snapshots</h3>
                 {{ with .Site.GetPage "section" "docs" "snapshots" }}

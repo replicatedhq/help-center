@@ -6,7 +6,7 @@ weight: "999999"
 aliases: ['docs/packaging-an-application/circle-ci-releases/']
 categories: [ "Developer Resources" ]
 tags: [ "Application YAML", "Releases", "CLI", "Circle", "CI" ]
-index: "docs"
+index: "other"
 hideFromList: true
 ---
 

@@ -4,7 +4,7 @@ title: "Create & Manage Releases"
 description: "An introduction to the release channel management workflow for development on the Replicated platform."
 weight: "103"
 categories: [ "Replicated Scheduler" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 aliases: [/docs/getting-started/manage-releases/]
 ---

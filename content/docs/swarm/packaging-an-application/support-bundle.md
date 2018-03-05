@@ -4,7 +4,7 @@ title: "Support Bundle"
 description: "Configurating and using a support bundle from a Docker Swarm installation"
 weight: "607"
 categories: [ "Packaging a Swarm Application" ]
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 icon: "replicatedDockerSwarm"
 gradient: "swarm"
 ---

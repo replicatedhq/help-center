@@ -4,7 +4,7 @@ title: "Upgrading Replicated"
 description: "The process for end customers to update Replicated services to access the latest improvements to the underlying system since their installation."
 weight: "303"
 categories: [ "Managing Customer Installation" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 aliases: [docs/distributing-an-application/upgrading,/tags/upgrading-replicated/]
 icon: "replicatedCircle"
 ---

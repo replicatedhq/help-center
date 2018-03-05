@@ -4,7 +4,7 @@ title: "Config Files"
 description: "Creating and mounting dynamic files into a container"
 weight: "205"
 categories: [ "Packaging a Native Application" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 ---
 

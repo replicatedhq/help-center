@@ -4,7 +4,7 @@ title: "Docker Secrets"
 description: "Creating and managing secrets in a Docker Swarm application"
 categories: [ "Packaging a Swarm Application" ]
 weight: "604"
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---

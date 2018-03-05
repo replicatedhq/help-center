@@ -4,7 +4,7 @@ lastmod: "2016-10-01T00:00:00Z"
 title: "Docker File Copy"
 weight: "999999"
 categories: [ "Developer Resources" ]
-index: "docs"
+index: "other"
 tags: ["Docker"]
 ---
 

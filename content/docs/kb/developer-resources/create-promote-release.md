@@ -4,7 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Create and Promote a Release"
 weight: "999999"
 categories: [ "Developer Resources" ]
-index: "docs"
+index: "other"
 tags: ["Replicated Vendor", "Application YAML", "API"]
 ---
 

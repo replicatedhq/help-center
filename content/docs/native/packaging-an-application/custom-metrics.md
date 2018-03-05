@@ -4,7 +4,7 @@ lastmod: "2016-07-02T00:00:00Z"
 title: "Custom Metrics"
 weight: "215"
 categories: [ "Packaging a Native Application" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/custom-metrics/]
 ---

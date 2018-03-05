@@ -4,7 +4,7 @@ title: "Add Nodes"
 description: "Adding nodes to a Swarm cluster that was deployed with Replicated"
 weight: "706"
 categories: [ "Distributing a Swarm Application" ]
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 aliases: [docs/distributing-an-application/add-nodes-swarm]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"

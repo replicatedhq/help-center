@@ -4,7 +4,7 @@ title: "Replicated and Docker Swarm"
 description: "A quick overview of how to get started with the Replicated Docker Swarm scheduler."
 weight: "500"
 categories: [ "Shipping With Docker Swarm" ]
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 aliases: [docs/swarm/getting-started/]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"

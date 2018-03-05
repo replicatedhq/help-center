@@ -4,7 +4,7 @@ title: "Load Balancer"
 description: "An example of load-balancing a clustered app."
 weight: "403"
 categories: [ "Replicated Scheduler Examples" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 aliases: [/docs/examples/load-balancer-example/,/tags/load-balancer/]
 ---

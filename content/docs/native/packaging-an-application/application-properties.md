@@ -4,7 +4,7 @@ title: "Application Properties"
 description: "The Replicated YAML section properties allows several high level items to be defined."
 weight: "217"
 categories: [ "Packaging a Native Application" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/application-properties/]
 ---

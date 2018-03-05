@@ -4,7 +4,7 @@ lastmod: "2016-12-01T00:00:00Z"
 title: "Manage Custom License Fields"
 weight: "999999"
 categories: [ "Developer Resources" ]
-index: "docs"
+index: "other"
 tags: ["Replicated Vendor"]
 ---
 

@@ -4,7 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "One-Click Updates"
 weight: "999999"
 categories: [ "Developer Resources" ]
-index: "docs"
+index: "other"
 tags: ["Replicated Vendor", "Replicated UI"]
 aliases: [/docs/kb/developer-resources/optional-required/]
 ---

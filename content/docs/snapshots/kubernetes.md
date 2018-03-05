@@ -6,6 +6,7 @@ weight: "2208"
 categories: [ "Snapshots" ]
 index: "other"
 aliases: [/docs/packaging-an-application/kubernetes-snapshots/]
+nextPage: "ldap-and-identity/overview.md"
 ---
 
 Kubernetes Snapshots can be used to configure incremental backups for any Kubernetes resources

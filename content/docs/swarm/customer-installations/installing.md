@@ -5,7 +5,7 @@ description: "Instructions for installing Replicated via the easy install script
 keywords: "installing, removing, migrating"
 weight: "702"
 categories: [ "Distributing a Swarm Application" ]
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 aliases: [docs/distributing-an-application/installing-with-swarm]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"

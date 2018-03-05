@@ -5,7 +5,7 @@ description: "View the supported operating systems"
 keywords:  "operating system, os"
 weight: "303"
 categories: [ "Managing Customer Installation" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 aliases: [docs/distributing-an-application/supported-operating-systems]
 icon: "replicatedCircle"
 ---

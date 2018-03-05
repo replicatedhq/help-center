@@ -5,7 +5,7 @@ description: "Instructions for installing Replicated via the easy install script
 keywords: "installing, removing, migrating"
 weight: "302"
 categories: [ "Managing Customer Installation" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 aliases: [docs/distributing-an-application/installing]
 icon: "replicatedCircle"
 ---

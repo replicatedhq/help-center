@@ -4,7 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Speed Up Development By Using Local Images"
 weight: "999999"
 categories: [ "Developer Resources" ]
-index: "docs"
+index: "other"
 ---
 
 Shorten the development workflow of iterating on your container images. Here's how:

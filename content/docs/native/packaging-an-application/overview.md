@@ -5,7 +5,7 @@ description: "The components section of the Replicated YAML defines how the cont
 weight: "200"
 categories: [ "Packaging a Native Application" ]
 aliases: [docs/native/packaging-an-application/,/categories/packaging-an-application/,/docs/packaging-an-application/yaml-overview/,/tags/development/,/guides/get-to-know-our-features/]
-index: "docs/native"
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 hideFromList: true
 ---
