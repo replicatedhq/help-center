@@ -6,6 +6,7 @@ weight: "202"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
 icon: "replicatedCircle"
+aliases: [/docs/packaging-an-application/components-and-containers/]
 ---
 
 The `components` section of the YAML defines how the containers will be created and started. A component is

@@ -5,6 +5,7 @@ description: "The config section of the Replicated YAML creates a dynamic settin
 weight: "304"
 categories: [ "Replicated Config Screen" ]
 index: "docs/config"
+aliases: [/docs/packaging-an-application/test-procs/]
 ---
 
 Using the `test_proc` directive in your app definition YAML, you enable your customers to

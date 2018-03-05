@@ -6,6 +6,7 @@ weight: "999999"
 categories: [ "Developer Resources" ]
 index: "docs"
 tags: ["Replicated Vendor", "Replicated UI"]
+aliases: [/docs/kb/developer-resources/optional-required/]
 ---
 
 ## Overview

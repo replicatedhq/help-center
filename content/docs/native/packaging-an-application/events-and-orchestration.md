@@ -6,6 +6,7 @@ weight: "209"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
 icon: "replicatedCircle"
+aliases: [/docs/packaging-an-application/events-and-orchestration/]
 ---
 
 Events are provided to help with the startup, orchestration and service discovery between your containers. There are

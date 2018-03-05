@@ -6,6 +6,7 @@ weight: "2600"
 categories: [ "Packaging a Kubernetes Application" ]
 index: "docs/kubernetes"
 gradient: "kubernetes"
+aliases: [/docs/packaging-an-application/kubernetes/]
 ---
 
 Once you have your application packaged and running in Kubernetes,...

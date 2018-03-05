@@ -6,6 +6,7 @@ weight: "405"
 categories: [ "Replicated Scheduler Examples" ]
 index: "docs/native"
 icon: "replicatedCircle"
+aliases: [/docs/examples/counter-app/]
 ---
 
 ## Counter App

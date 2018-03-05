@@ -6,6 +6,7 @@ weight: "212"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
 icon: "replicatedCircle"
+aliases: [/docs/packaging-an-application/support-bundle/]
 ---
 
 A support bundle is an archive that is available for the customer to download via the Support tab of the On-Prem Console or the [Replicated CLI](/api/replicatedctl/replicatedctl_support-bundle/).
@@ -30,7 +31,7 @@ support:
 
 {{< linked_headline "Custom Files and Commands" >}}
 
-In addition to the [default support files](/docs/native/packaging-an-application/support-bundle/#default-support-files) included in the support bundle, addtional files can be added via the `support` section of your yaml. Files from within the application’s containers can be included, as well as output of commands executed in the container. Support files and commands are supported by both the native and kubernetes schedulers. For more complex support commands it is possible to create a [config file](/docs/native/packaging-an-application/config-files) and execute that file from a support command. These files will be available withing the _/scheduler_ directory of the support bundle.
+In addition to the [default support files](/docs/native/packaging-an-application/support-bundle/#default-support-files) included in the support bundle, additional files can be added via the `support` section of your yaml. Files from within the application’s containers can be included, as well as output of commands executed in the container. Support files and commands are supported by both the native and kubernetes schedulers. For more complex support commands it is possible to create a [config file](/docs/native/packaging-an-application/config-files) and execute that file from a support command. These files will be available within the _/scheduler_ directory of the support bundle.
 
 ```yaml
 support:
@@ -58,7 +59,7 @@ support:
 {{< linked_headline "Default Support Files" >}}
 
 {{< note title="Older Replicated Instances" >}}
-The content in this document is specific to the current default Support Bundle in Replicated. If you are looking for the list of files included in previous releases of Replciated, it is available at <a href="/docs/native/packaging-an-application/support-bundle-v1/">{{< baseurl >}}native/packaging-an-application/support-bundle-v1/</a>
+The content in this document is specific to the current default Support Bundle in Replicated. If you are looking for the list of files included in previous releases of Replicated, it is available at <a href="/docs/native/packaging-an-application/support-bundle-v1/">{{< baseurl >}}native/packaging-an-application/support-bundle-v1/</a>
 {{< /note >}}
 
 By default the Support Bundle will include the following files:

@@ -6,4 +6,5 @@ weight: "801"
 categories: [ "Replicated + Swarm Examples" ]
 index: "docs/swarm"
 gradient: "swarm"
+aliases: [/docs/examples/swarm-votingapp/]
 ---

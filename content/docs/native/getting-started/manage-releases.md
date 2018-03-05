@@ -6,6 +6,7 @@ weight: "103"
 categories: [ "Replicated Scheduler" ]
 index: "docs/native"
 icon: "replicatedCircle"
+aliases: [/docs/getting-started/manage-releases/]
 ---
 
 {{< linked_headline "Create Releases" >}}

@@ -6,6 +6,7 @@ weight: "105"
 categories: [ "Replicated Scheduler" ]
 index: "docs/native"
 icon: "replicatedCircle"
+aliases: [/docs/getting-started/replicated-private-registry/,/docs/kb/supporting-your-customers/registries/]
 ---
 
 When building your application, you have the option to use the Replicated private registry, or any supported external private or public registry.

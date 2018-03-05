@@ -11,7 +11,7 @@ icon: "replicatedCircle"
 {{< linked_headline "Config Files" >}}
 
 
-Your application may have config files that require dynamic values. These values may be input by the person installing the software, values specific to the environment your application is running in, values created by other containers or read from the embedded license via the License API. To accomplish this, Replicated allows templatizing of its config values using the Go template language with a repl escape sequence. When your application runs, Replicated will process the templates, and you have full access to the the Replicated template library.
+Your application may have config files that require dynamic values. These values may be input by the person installing the software, values specific to the environment your application is running in, values created by other containers or read from the embedded license via the License API. To accomplish this, Replicated allows templating of its config values using the Go template language with a repl escape sequence. When your application runs, Replicated will process the templates, and you have full access to the the Replicated template library.
 
 The next section contains inline configuration files that we can supply to our container. Replicated will create a file within the container with the specified path (filename) and contents. You may optionally specify an octal permissions mode as a string (file_mode), and/or the numeric uid of a user & group (file_owner) to be applied to the resulting file in the container.
 

@@ -6,6 +6,7 @@ categories: [ "Packaging a Native Application" ]
 weight: "216"
 index: "docs/native"
 icon: "replicatedCircle"
+aliases: [/docs/packaging-an-application/admin-commands/]
 ---
 
 The `admin_commands` section allows you to define ad-hoc commands that can be executed inside a running container from the shell.

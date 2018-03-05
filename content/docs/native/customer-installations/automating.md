@@ -6,6 +6,7 @@ weight: "307"
 categories: [ "Managing Customer Installation" ]
 index: "docs/native"
 icon: "replicatedCircle"
+aliases: [/docs/kb/developer-resources/automate-install/]
 ---
 
 Replicated has support for automated installation and configuration. This feature is built for bootstrapping new installations and not for managing existing installations.

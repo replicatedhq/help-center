@@ -5,7 +5,7 @@ description: "How to install Replicated into an airgapped environment."
 weight: "306"
 categories: [ "Managing Customer Installation" ]
 index: "docs/native"
-aliases: [docs/distributing-an-application/airgapped-installations]
+aliases: [docs/distributing-an-application/airgapped-installations,/docs/kb/supporting-your-customers/installing-docker-in-airgapped/]
 icon: "replicatedCircle"
 ---
 

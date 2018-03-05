@@ -4,7 +4,7 @@ title: "Packaging A Swarm Application"
 description: "An overview of the shipping a Docker Swarm application in Replicated"
 weight: "601"
 categories: [ "Packaging a Swarm Application" ]
-aliases: [docs/swarm/packaging-an-application/]
+aliases: [docs/swarm/packaging-an-application/,/docs/packaging-an-application/docker-swarm/]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
 index: "docs/swarm"

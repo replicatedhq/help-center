@@ -6,6 +6,7 @@ categories: [ "Packaging a Native Application" ]
 index: "docs/Native"
 hideFromList: true
 icon: "replicatedCircle"
+aliases: [/docs/packaging-an-application/support-bundle-v1/]
 ---
 
 {{< linked_headline "Default Support Files" >}}

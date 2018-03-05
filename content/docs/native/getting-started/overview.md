@@ -5,14 +5,14 @@ description: "A quick overview of how to get started with the Replicated native 
 weight: "100"
 categories: [ "Replicated Scheduler" ]
 index: "docs/native"
-aliases: [/docs/native/getting-started]
+aliases: [/docs, /docs/native/getting-started, /docs/getting-started/get-started/]
 hideFromList: true
 icon: "replicatedCircle"
 ---
 
 {{< linked_headline "About the Replicated Native Scheduler" >}}
 
-The Replicated Native Scheduler is a mature, propietary runtime that's being used to manage single and multi-node clusters in many Replicated installations today.
+The Replicated Native Scheduler is a mature, proprietary runtime that's being used to manage single and multi-node clusters in many Replicated installations today.
 
 {{< linked_headline "Strengths of the Replicated Native Scheduler" >}}
 

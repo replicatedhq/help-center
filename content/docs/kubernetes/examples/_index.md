@@ -6,6 +6,7 @@ weight: "2800"
 categories: [ "Replicated + Kubernetes Examples" ]
 index: "docs/kubernetes"
 gradient: "kubernetes"
+aliases: [/docs/examples/kubernetes-guestbook/]
 ---
 
 Examples using the Kubernetes Scheduler

@@ -7,6 +7,7 @@ categories: [ "Packaging a Kubernetes Application" ]
 index: "docs/kubernetes"
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
+aliases: [/docs/packaging-an-application/preflight-checks-k8s/]
 ---
 
 A preflight check is a test that is run before installing and running an application.  The test will analyze the system to determine if the environment meets the minimum requirements.

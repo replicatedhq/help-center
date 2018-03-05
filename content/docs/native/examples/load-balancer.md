@@ -6,6 +6,7 @@ weight: "403"
 categories: [ "Replicated Scheduler Examples" ]
 index: "docs/native"
 icon: "replicatedCircle"
+aliases: [/docs/examples/load-balancer-example/]
 ---
 
 ## Load-Balanced Counter App

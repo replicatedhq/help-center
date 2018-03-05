@@ -5,7 +5,7 @@ description: "The components section of the Replicated YAML defines how the cont
 weight: "401"
 categories: [ "Replicated Scheduler Examples" ]
 index: "docs/native"
-aliases: [docs/native/examples/]
+aliases: [docs/native/examples/,/categories/examples/]
 icon: "replicatedCircle"
 hideFromList: true
 ---

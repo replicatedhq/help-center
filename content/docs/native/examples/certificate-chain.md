@@ -6,6 +6,7 @@ weight: "406"
 categories: [ "Replicated Scheduler Examples" ]
 index: "docs/native"
 icon: "replicatedCircle"
+aliases: [/docs/examples/certificate-chain/]
 ---
 
 ## Certificate Chain App

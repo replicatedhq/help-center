@@ -6,6 +6,7 @@ weight: "214"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
 icon: "replicatedCircle"
+aliases: [/docs/packaging-an-application/custom-preflight-checks/]
 ---
 
 The host requirements section of the yaml gives Replicated the ability to analyze system
@@ -160,7 +161,7 @@ cluster.
 ```yaml
 custom_requirements:
 - id: disk-space-available-mysql
-  message: Mysql data directory has sufficient disk space
+  message: MySQL data directory has sufficient disk space
   details: The /data/mysql directory must have at least 8GB of disk space available.
   when: '{{repl eq AppVersion AppVersionFirst }}' # initial install only
   results:

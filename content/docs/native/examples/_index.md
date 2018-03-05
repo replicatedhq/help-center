@@ -7,4 +7,5 @@ categories: [ "Replicated Scheduler Examples" ]
 index: "docs/native"
 icon: "replicatedCircle"
 hideFromList: true
+aliases: [/docs/examples/getelk/]
 ---

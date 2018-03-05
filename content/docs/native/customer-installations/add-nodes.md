@@ -5,7 +5,7 @@ description: "Instructions for installing additional nodes with a Replicated clu
 weight: "308"
 categories: [ "Managing Customer Installation" ]
 index: "docs/native"
-aliases: [docs/distributing-an-application/add-nodes-replicated]
+aliases: [docs/distributing-an-application/add-nodes-replicated,/docs/distributing-an-application/add-nodes/]
 icon: "replicatedCircle"
 ---
 

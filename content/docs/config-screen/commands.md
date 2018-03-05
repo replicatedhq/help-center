@@ -5,6 +5,7 @@ description: "The config section of the Replicated YAML creates a dynamic settin
 weight: "303"
 categories: [ "Replicated Config Screen" ]
 index: "docs/config"
+aliases: [/docs/packaging-an-application/commands/]
 ---
 
 The `cmds` section of the YAML allows you to leverage the power of external commands within your configuration. The sole purpose of these `cmds` is to generate data for input in the configuration screen.

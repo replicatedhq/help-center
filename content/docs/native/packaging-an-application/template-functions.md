@@ -6,6 +6,7 @@ weight: "211"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
 icon: "replicatedCircle"
+aliases: [/docs/packaging-an-application/template-functions/]
 ---
 
 Template functions are marked by the double curly bracket + *"repl"* escape sequence. They allow for user input to be dynamically inserted into application configuration values. The sequence should be `{{repl`, not `{{ repl`.
