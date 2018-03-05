@@ -14,12 +14,12 @@ is to run an [ephemeral container](/docs/packaging-an-application/components-and
 along with [container events](/docs/packaging-an-application/events-and-orchestration/)
 to run migration tasks.
 
-In this example, I will take a very simply python stack based on the Django framework and postgres, and show how to run database migrations. No knowledge of python is necessary to understand this.
+In this example, I will take a very simply python stack based on the Django framework and Postgres, and show how to run database migrations. No knowledge of python is necessary to understand this.
 
 ## Database Component
 
-Let's begin by creating a container in the Replicated based on the public postgres Docker image from
-Dockerhub. This snippet will expose Postgre on port 5432 on the host, and define an event that
+Let's begin by creating a container in the Replicated based on the public Postgres Docker image from
+Dockerhub. This snippet will expose Postgres on port 5432 on the host, and define an event that
 instructs Replicated to poll port 5432 on the host until a connection can be established. We are
 going to use this event as a trigger to run the migration.
 

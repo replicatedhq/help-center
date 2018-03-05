@@ -47,7 +47,7 @@ Do you want to proceed anyway? (y/N)
 If the server is in EC2 or GCE with common configuration settings, no prompts will be visible. The Cloud Provider 
 Metadata API will provide the private/public interfaces and the installation will continue.
 
-If the server has `eth0` and only `eth0` (ipv4 assignment, excluding `docker0` and `lo` interfaces), it will be 
+If the server has `eth0` and only `eth0` (IPv4 assignment, excluding `docker0` and `lo` interfaces), it will be 
 assumed and the installation will continue.
 
 If the server has no eth0 or multiple valid interfaces found, a prompt similar to the following will be presented:

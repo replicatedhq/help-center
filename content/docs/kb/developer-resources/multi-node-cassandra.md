@@ -28,7 +28,7 @@ components:
     max: 3
 ```
 
-- First we create our [tags](/docs/packaging-an-application/clustering/#tags), these will be used in the Replicated on-prem UI to assign this component to the desired hosts. Each host that gets tagged with a cassandra tag will run this component.
+- First we create our [tags](/docs/packaging-an-application/clustering/#tags), these will be used in the Replicated on-prem UI to assign this component to the desired hosts. Each host that gets tagged with a Cassandra tag will run this component.
 
 ![Cassandra Tags](/images/post-screens/cassandra-tags.png)
 
@@ -81,8 +81,8 @@ join the cluster. Seed Nodes also act as gossip hot spots and have the most curr
 on them. All nodes in a cluster should have the same list of seed nodes in a cluster but not all
 nodes should be seeds.*
 
-- We set the env_var `CASSANDRA_BROADCAST_ADDRESS` using the [`ThisNodePrivateIPAddress`](/docs/packaging-an-application/template-functions/#thisnodeprivateipaddress) template function to get the unique private IP of the containers host. This tells the local cassandra instance its own ip.
-- Lastly we generate a list of seed nodes using a little Replicated magic to set the env_var `CASSANDRA_SEEDS` using [Go Templates](/docs/packaging-an-application/template-functions/) and [`NodePrivateIPAddressAll`](/docs/packaging-an-application/template-functions/#NodePrivateIPAddressAll). I only want to have 2 cassandra seed nodes but you can implement it however you like by slightly altering the template below:
+- We set the env_var `CASSANDRA_BROADCAST_ADDRESS` using the [`ThisNodePrivateIPAddress`](/docs/packaging-an-application/template-functions/#thisnodeprivateipaddress) template function to get the unique private IP of the containers host. This tells the local Cassandra instance its own ip.
+- Lastly we generate a list of seed nodes using a little Replicated magic to set the env_var `CASSANDRA_SEEDS` using [Go Templates](/docs/packaging-an-application/template-functions/) and [`NodePrivateIPAddressAll`](/docs/packaging-an-application/template-functions/#NodePrivateIPAddressAll). I only want to have 2 Cassandra seed nodes but you can implement it however you like by slightly altering the template below:
 
 ```go
 //Loop through all Hosts that have a cassandra container on it

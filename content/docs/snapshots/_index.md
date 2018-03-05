@@ -4,6 +4,5 @@ title: "Snapshots"
 description: "Guide to enabling application snapshots for backup and restore functionality."
 weight: "2200"
 categories: [ "Snapshots" ]
-aliases: [docs/snapshots/]
 index: "other"
 ---

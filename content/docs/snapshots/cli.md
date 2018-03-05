@@ -11,6 +11,7 @@ index: "other"
 
 The Replicated CLI can be used to examine and restore snapshots. There are two ways to configure snapshots backend without accessing the UI. Configuration options can be added to the /etc/replicated.conf file or specified on the command line.
 
+```json
 {
   "SnapshotsStore": "s3",
   "SnapshotsPath": "/data",
@@ -22,6 +23,9 @@ The Replicated CLI can be used to examine and restore snapshots. There are two w
   "SnapshotsSFTPUsername": "jondoe",
   "SnapshotsSFTPPrivateKeyPEM": "pem data"
 }
+```
+
+```
 replicatedctl snapshot ls \
  --backend-options SnapshotsStore=s3 \
  --backend-options SnapshotsS3Bucket=snapshots \
@@ -31,6 +35,7 @@ replicatedctl snapshot ls \
  --backend-options SnapshotsSFTPPrivateKeyPEM=YmFzZTY0IGVuY29kZWQgcGVtIGRhdGE=
 Snapshot backend options
 SnapshotsStore: Snapshot backend type. Valid values are s3, sftp, and local.
+```
 
 SnapshotsPath: Snapshot location path. The value should be an absolute path. This option is not used with s3 backend. When used with sftp option, the path has to exist, and the SFTP user needs to have write access to it.
 
