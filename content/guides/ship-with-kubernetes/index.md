@@ -6,13 +6,13 @@
   icon: "replicatedKubernetes"
   index: false
   chapters:
-    - title: "Why Replicated and Kubernetes?"
-      description: "An overview of why it makes sense to ship Replicated with your Kubernetes application"
-      slug: "why-replicated-and-kubernetes"
-    - title: "The Replicated Kubernetes Appliance"
-      description: "Understanding what's installed in the Replicated Kubernetes Appliance and how to use it"
-      slug: "the-appliance-environment"
-    - title: "Comparing Replicated Kubernetes Appliances with GKE"
-      description: "A comparison of a Replicated Kubernetes Appliance with a cluster provisioned in Google Kubernetes Engine"
-      slug: "comparing-gke"
+    - title: "Creating And Ship A release"
+      description: "Using Replicated to create and promote your first Kubernetes release "
+      slug: "create-release"
+    - title: "Install And Test"
+      description: "Walk through the customer experience installing your application and Kubernetes"
+      slug: "install"
+    - title: "Iterate and Ship Updates"
+      description: "Learn how to iterate and ship updates once you've deployed"
+      slug: "iterate"
 ---
