@@ -1,6 +1,6 @@
 ---
 date: "2016-07-07T04:02:20Z"
-title: "Customer Configutation Options"
+title: "Customer Configuration Options"
 description: "Customer configuration options for snapshots"
 weight: "2202"
 categories: [ "Snapshots" ]
