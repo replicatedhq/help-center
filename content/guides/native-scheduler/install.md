@@ -58,8 +58,6 @@ You can exit the ssh session at this point, the rest of the setup will be comple
 
 To complete the installation, visit the URL that the installation script displayed when completed. Replicated automatically provisions a self-signed certificate on every installation, so you'll have to accept this cert to continue. We recommend that every installation change this to a trusted cert, and that can be completed in the browser, at the next step.
 
-{{< linked_headline "Install the License" >}}
-
 On the next screen, you have the option of uploading a trusted cert and key. For this demo, let's continue with the Replicated-generated self-signed cert. Click the orange button to continue, and then Proceed Anyway in the popup.
 
 ![Console TLS](/images/guides/native/admin-console-tls.png)
