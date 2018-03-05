@@ -782,7 +782,7 @@ Component volume's `host_path` must be absolute
 
 #### Examples:
 
-*Incorrect*: host path is not absolue
+*Incorrect*: host path is not absolute
 
 ```yaml
 ---
@@ -1754,7 +1754,7 @@ components:
 
 ## `prop-component-container-event-subscription-container-exists`
 
-Container event subscriptions must reference an existing component/conatiner
+Container event subscriptions must reference an existing component/container
 
 
 
@@ -1983,7 +1983,7 @@ Container volume's `container_path` must be absolute
 
 #### Examples:
 
-*Incorrect*: container path is not absolue
+*Incorrect*: container path is not absolute
 
 ```yaml
 ---

@@ -21,12 +21,12 @@ customers. If you remove the branding & leave a comment in the CSS
 
 ![Minimal CSS](/images/post-screens/minimal-css.png)
 
-By default, existing vendors will have the traditional purple, organge, teal colors set as
+By default, existing vendors will have the traditional purple, orange, teal colors set as
 their default CSS for all channels. Existing client installations will fallback to the
 traditional colors if no CSS is available.
 
 Updates to the CSS are applied at installation (new install), when a customer updates to a
-Replicated brandable version (1.2.73 or newer) and then anytime an app update is applied.
+Replicated brand-able version (1.2.73 or newer) and then anytime an app update is applied.
 CSS updates are not applied during a standard Replicated daemon update or during a
 license sync.
 

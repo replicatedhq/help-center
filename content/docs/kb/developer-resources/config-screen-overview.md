@@ -37,7 +37,7 @@ Conditional inputs allow you to determine when an item or group is shown.
 
 {{< linked_headline "## Test Commands" >}}
 
-Users to validate information like SMTP Auth, SSL Certs, Hostname resolution, GitHub Auth Creds,
-and AWS Creds with the use of Replicated [test commands](/docs/packaging-an-application/test-procs/).
+Users to validate information like SMTP Auth, SSL Certs, Hostname resolution, GitHub Auth Credentials,
+and AWS Credentials with the use of Replicated [test commands](/docs/packaging-an-application/test-procs/).
 
 ![Test Procs](/images/post-screens/test-procs.gif)

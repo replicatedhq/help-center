@@ -54,9 +54,9 @@ specs:
 ### Outputs
 
 
-- `stderr` - The standard error of the comand
+- `stderr` - The standard error of the command
 
-- `stdout` - The standard output of the comand
+- `stdout` - The standard output of the command
 
     
 <br>

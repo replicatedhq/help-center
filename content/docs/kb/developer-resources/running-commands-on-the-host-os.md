@@ -8,7 +8,7 @@ index: "docs"
 tags: ["Application YAML"]
 ---
 
-The current version of Replicted is delivered as Docker images and run in containers on every supported operating system. The Replicated containers are built on top of a small Alpine Linux base image. Sometimes, it's desirable to access the host operating system and execute commands or change the environment in some way.
+The current version of Replicated is delivered as Docker images and run in containers on every supported operating system. The Replicated containers are built on top of a small Alpine Linux base image. Sometimes, it's desirable to access the host operating system and execute commands or change the environment in some way.
 
 {{< warning title="Warning" >}}
 Remember that Replicated supports many different operating systems that will be running a variety of kernels, package managers and more. Any script you choose to run on the host OS should be portable and run across any supported system.

@@ -58,7 +58,7 @@ Updates" as well as a link to this release history page.
 ## Scheduling Update Checks
 
 Your customers have the ability to change the frequency that Replicated will check for
-application updates with either prechosen time increments or a crontab format enabled
+application updates with built-in time increments or a crontab format enabled
 custom field setting.
 
 ![Update Scheduler](/images/post-screens/update-scheduler.png)

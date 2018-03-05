@@ -22,7 +22,7 @@ Important concepts to understand when using `cmds`:
   - `default_cmd`
   - `data_cmd`
 - If called via `value_cmd` or `data_cmd` the initial value/data will persist through updates, restarts etc (just as it would be if the customer input that value into the settings screen themselves).
-- If called from `default_cmd` this value will be recalculated everytime the app is updated or installed.
+- If called from `default_cmd` this value will be recalculated every time the app is updated or installed.
 
 # Example App:
 
@@ -42,7 +42,7 @@ cmds:
   - "32"
 ```
 
-## Step 2: Call my cmds from config section.
+## Step 2: Call my commands from config section.
 
 ```yaml
 config:

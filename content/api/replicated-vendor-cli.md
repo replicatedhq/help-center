@@ -179,4 +179,4 @@ deployment:
     commands:
       - ./release.sh "$CIRCLE_TAG"
 ```
-Now, all tagged releases on CircleCI or Travis CI will be made into a Relicated release and promoted to the Unstable channel.
+Now, all tagged releases on CircleCI or Travis CI will be made into a Replicated release and promoted to the Unstable channel.

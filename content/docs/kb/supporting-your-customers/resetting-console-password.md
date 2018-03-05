@@ -7,7 +7,7 @@ categories: [ "Supporting Your Customers" ]
 index: "docs"
 ---
 
-If the customer chooses to secure their on-prem Replicated admin console with a 
+If the customer chooses to secure their on-premise Replicated admin console with a 
 password they can reset that password (or switch the authentication type to 
 LDAP/unsecured) by visiting https://`<server>`/create-password.
 

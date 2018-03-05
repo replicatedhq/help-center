@@ -144,7 +144,7 @@ into the config items within this group. The arguments, in expected order:
 
 **Note that the address of the SMTP server must contain the correct port number ie
 smtp.gmail.com:587 for the test proc to validate correctly. A type of "None" will only
-ensure the socket is evailable.**
+ensure the socket is available.**
 
 ```yaml
 config:

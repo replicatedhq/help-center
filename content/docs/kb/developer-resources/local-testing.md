@@ -9,8 +9,8 @@ tags: ["Testing", "Application YAML"]
 ---
 
 Once you have written some YAML describing your application, you’ll need to begin actually
-testing the application on a test server. You can do so by setting up a vagrant machine
-or by starting a virtual machine in your favorite IaaS (recommended).
+testing the application on a test server. You can do so by setting up a Vagrant machine
+or by starting a virtual machine in your preferred cloud provider.
 
 The process for testing a Replicated application requires a bit of iteration. The key
 components are:
@@ -42,7 +42,7 @@ rm -rf /var/lib/replicated
 curl -sSL https://get.replicated.com/ | sudo sh
 ```
 
-For this reason we often recommend working with IaaS machines that are disposable during
+For this reason we often recommend working with Infrastructure as a Service machines that are disposable during
 the early development/testing phase.
 
 If you need to make changes to your application, you can simply create a new release on

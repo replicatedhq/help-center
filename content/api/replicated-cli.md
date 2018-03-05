@@ -127,7 +127,7 @@ replicated app <appid> run-checks dismiss
 replicated support-bundle <app-id>
 ```
 
-## Reset your On-Prem UI password
+## Reset your On-Premise UI password
 Your console password can be reset by issuing the following command from the host machine where Replicated
 has been installed. (then visit https://`<server>`:8800/create-password and set a new password)
 
