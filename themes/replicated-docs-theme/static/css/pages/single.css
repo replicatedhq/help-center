@@ -35,7 +35,7 @@
 }
 
 .page-content {
-  padding: 50px 0;
+  padding: 0 0 40px;
 }
 
 .page-content h1 {
@@ -176,30 +176,42 @@
   transform: rotate(180deg);
   transition: all .2s ease;
   position: relative;
-  left: -3px;
+  left: -8px;
   top: 1px;
 }
 .prev-next-arrows a {
   text-decoration: none !important;
+  display: flex;
+  align-items: center;
 }
+
+.prev-next-arrows .next {
+  margin-left: 8px;
+}
+.prev-next-arrows .previous {
+  margin-right: 8px;
+}
+
 .prev-next-arrows .next:hover .u-chevronIcon {
   transition: all .2s ease;
-  left: -8px;
+  left: -12px;
 }
 .prev-next-arrows .previous:hover .u-chevronIcon {
   transition: all .2s ease;
-  right: -8px;
+  right: -12px;
 }
 .prev-next-arrows .previous .u-chevronIcon {
   position: relative;
   transition: all .2s ease;
-  right: -4px;
+  right: -8px;
   top: 1px;
 }
 .sidebar {
   width: 100%;
-  margin-bottom: 20px;
-  padding: 50px 0;
+  padding: 50px 0 0;
+}
+
+.sidebar .desktop-only {
   display: none;
 }
 
@@ -231,6 +243,7 @@
   bottom: -148px;
   background: #fff;
   box-sizing: border-box;
+  z-index: 2;
 }
 
 .sidebar #scheduler-dropdown-menu p {
@@ -421,13 +434,17 @@
     margin-top: 20px;
   }
   .page-content {
-    padding: 50px 0;
+    padding: 50px 0 50px;
     margin-left: 40px;
   }
   .sidebar {
     max-width: 200px;
     display: flex;
     flex-direction: column;
+    padding: 50px 0;
+  }
+  .sidebar .desktop-only {
+    display: block;
   }
   .mobile {
     display: none;

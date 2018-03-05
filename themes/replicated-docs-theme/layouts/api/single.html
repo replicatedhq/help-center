@@ -33,20 +33,6 @@
             <div class="paddingContainer">
                 <div class="u-flexTabletReflow flex1">
                     <div class="flex-auto sidebar-wrapper">
-                        <div class="mobile">
-                            {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
-                            {{ $.Scratch.Add "path" .Site.BaseURL }}
-                            <ol class="breadcrumbs">
-                            {{ range $index, $element := split $url "/" }}
-                                {{ $.Scratch.Add "path" $element }}
-                                {{ if ne $element "" }}
-                                <li><a href='{{ $.Scratch.Get "path" }}'>{{ . | humanize | title }}</a></li>
-                                <li>/</li>
-                                {{ $.Scratch.Add "path" "/" }}
-                                {{ end }}
-                            {{ end }}
-                            </ol>
-                        </div>
                         <div class="sidebar">
                             <div>
                                 {{ if .Params.categories }}
