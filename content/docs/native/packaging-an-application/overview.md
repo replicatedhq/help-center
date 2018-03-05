@@ -85,7 +85,7 @@ properties:
 
 {{< linked_headline "Snapshots (Backups)" >}}
 
-The snapshots key is available to to enable and configure [Snapshots](/docs/native/packaging-an-application/snapshots/). The following example will enable snapshots from the Admin Console, using the default behavior.
+The snapshots key is available to to enable and configure [Snapshots](/docs/snapshots/). The following example will enable snapshots from the Admin Console, using the default behavior.
 
 ```yaml
 backup:
@@ -94,7 +94,7 @@ backup:
 
 {{< linked_headline "CMD" >}}
 
-The Replicated platform has some built in [commands](/docs/native/packaging-an-application/commands/) that make writing your configuration much more powerful. In the `cmds` section you can write commands which you can use later.  These are useful to generate install-time values such as default TLS certs/keys, randomized passwords, other other values.
+The Replicated platform has some built in [commands](/docs/config-screen/commands) that make writing your configuration much more powerful. In the `cmds` section you can write commands which you can use later.  These are useful to generate install-time values such as default TLS certs/keys, randomized passwords, other other values.
 
 ```yaml
 cmds:

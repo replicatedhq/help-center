@@ -168,4 +168,4 @@ After the release is installed, we need to re-configure our application to start
 
 You have successfully created a Docker Swarm app, converted it into a Replicated on Swarm application, and deployed it to a running server running Swarm. From there, you created a new release to make it configurable for your end users.
 
-You're ready to begin customizing this application to meet your needs, or create a new one from scratch. As always, we are here to help you succeed on building your application in Replicated. For more help, check our [community](https://help.replicated.com/community) or our [Swarm documentation](https://help.replicated.com/docs/swarm).
+You're ready to begin customizing this application to meet your needs, or create a new one from scratch. As always, we are here to help you succeed on building your application in Replicated. For more help, check our [community](https://help.replicated.com/community) or our [Swarm documentation](/docs/swarm/getting-started/overview/).
