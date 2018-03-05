@@ -13,11 +13,11 @@ aliases : [docs/reference/integration-api/provisioning-api]
 
 The Provisioning API enables application developers to expose a set of API endpoints, which Replicated will sync to from the LDAP server.
 
-In this model, applications will have a list of all user accounts, without the passwords. Use the [Identity API](api/integration-api/identity-api/) to authenticate a user in the application.
+In this model, applications will have a list of all user accounts, without the passwords. Use the [Identity API](/api/integration-api/identity-api/) to authenticate a user in the application.
 
 Replicated brokers the interaction between the identity server and your application. Depending on the identity server used and it's configuration, changes are propagated to Replicated via push or periodic polling. Applications do not need to have any knowledge of the LDAP server or the LDAP protocol.
 
-If an application identicated it isn't ready to receive requests by providing anything other than a 2xx response to API calls, the sync will pause and attempt another sync later. Replicated manages a cookie internally to ensure that all messages are delivered.
+If an application indicates it isn't ready to receive requests by providing anything other than a 2xx response to API calls, the sync will pause and attempt another sync later. Replicated manages a cookie internally to ensure that all messages are delivered.
 
 To use this API, configure the `identity` field when packaging your application, [as documented in the Identity Configuration](/docs/ldap-and-identity/overview/).
 
