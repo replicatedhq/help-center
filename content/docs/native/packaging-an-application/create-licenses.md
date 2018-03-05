@@ -4,7 +4,7 @@ title: "Create Customers and Licenses"
 description: "Details on the options available to vendors when creating a license for an end customer's upcoming installation."
 weight: "219"
 categories: [ "Packaging a Native Application" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 aliases: [docs/distributing-an-application/create-licenses]
 icon: "replicatedCircle"
 ---

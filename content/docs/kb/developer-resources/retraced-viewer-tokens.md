@@ -4,7 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Audit Log API Tokens"
 weight: "999999"
 categories: [ "Developer Resources" ]
-index: "docs"
+index: "other"
 tags: ["Audit Log", "Vendor Portal"]
 hideFromList: true
 ---

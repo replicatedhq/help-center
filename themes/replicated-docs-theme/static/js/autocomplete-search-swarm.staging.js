@@ -12,7 +12,7 @@ autocomplete('#autocompletesearch-box', {
     }
 }, [{
         source: _.debounce(autocomplete.sources.hits(docsIndex, {
-            hitsPerPage: 2
+            hitsPerPage: 3
         }), 200),
         displayKey: 'title',
         name: 'docs',
@@ -86,7 +86,7 @@ autocomplete('#search-field', {
     },
 }, [{
         source: _.debounce(autocomplete.sources.hits(docsIndex, {
-            hitsPerPage: 2
+            hitsPerPage: 3
         }), 200),
         displayKey: 'title',
         name: 'docs',
@@ -98,7 +98,7 @@ autocomplete('#search-field', {
                 return '<h3 class="aa-suggestion-header">' +
                     suggestion._highlightResult.title.value + '</h3>' +
                     '<p class="aa-suggestion-description">' + (hasDescription ? suggestion._highlightResult.description.value : "") + '</p>' +
-                    '<span class="icon u-documentationIcon"></span>'
+                    `<span class="icon small u-${suggestion.icon ? suggestion.icon : "documentationIcon"}"></span>`
             },
             empty: "<div class='aa-empty'>No results</div>"
         },

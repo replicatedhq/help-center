@@ -6,7 +6,7 @@ weight: "999999"
 categories: [ "Developer Resources" ]
 aliases: ['docs/packaging-an-application/travis-ci-releases/']
 tags: [ "Application YAML", "Releases", "CLI", "Travis", "CI" ]
-index: "docs"
+index: "other"
 hideFromList: true
 ---
 

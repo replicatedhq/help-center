@@ -4,7 +4,7 @@ title: "Environment Variables"
 description: "Defining container environment variables and setting values dynamically"
 weight: "204"
 categories: [ "Packaging a Native Application" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 ---
 

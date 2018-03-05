@@ -30,7 +30,7 @@ docsSearch.addWidget(
 
                 return '<div class="wrapper" data-href="' + suggestion._highlightResult.uri.value + '" >' + '<h3>' +  suggestion._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "") + '</h3>' + 
                 '<p>'+ (hasDescription ? suggestion._highlightResult.description.value : "") + '</p>' +
-                 '<span class="icon u-documentationIcon"></span>' + '</div>' 
+                `<span class="icon small u-${suggestion.icon ? suggestion.icon : "documentationIcon"}"></span>`
             }
         }
     })

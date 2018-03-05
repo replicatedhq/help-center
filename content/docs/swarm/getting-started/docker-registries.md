@@ -4,7 +4,7 @@ title: "Docker Registries"
 description: "How to push and access private images in Replicated's hosted private registry."
 weight: "505"
 categories: [ "Shipping With Docker Swarm" ]
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---

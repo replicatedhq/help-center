@@ -67,3 +67,12 @@
   top: 10px;
   transform: scale(0.6);
 }
+
+#docs-hits .ais-hits--item .u-replicatedKubernetes,
+#docs-hits .ais-hits--item .u-replicatedCircle,
+#docs-hits .ais-hits--item .u-replicatedDockerSwarm {
+  position: absolute;
+  transform: scale(0.3);
+  left: -30px;
+  top: -26px;
+}

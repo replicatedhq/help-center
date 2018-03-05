@@ -4,7 +4,7 @@ title: "Support Bundle"
 description: "Installed instances can generate a support bundle with relevant logs and instance information."
 weight: "2607"
 categories: [ "Packaging a Kubernetes Application" ]
-index: "docs/kubernetes"
+index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---

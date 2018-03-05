@@ -4,7 +4,7 @@ title: "Core Concepts"
 description: "The core concepts requried to ship an application on Replicated using Docker Swarm."
 weight: "501"
 categories:  [ "Shipping With Docker Swarm" ]
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 icon: "replicatedDockerSwarm"
 gradient: "swarm"
 ---

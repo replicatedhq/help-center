@@ -4,7 +4,7 @@ title: "Docker Registries"
 description: "How to push and access private images in Replicated's hosted private registry."
 weight: "105"
 categories: [ "Replicated Scheduler" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 aliases: [/docs/getting-started/replicated-private-registry/,/docs/kb/supporting-your-customers/registries/]
 ---

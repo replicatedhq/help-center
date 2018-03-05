@@ -4,7 +4,7 @@ title: "Secrets"
 description: "An overview of the various sections of the Replicated YAML."
 weight: "2604"
 categories: [ "Packaging a Kubernetes Application" ]
-index: "docs/kubernetes"
+index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---

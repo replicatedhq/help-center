@@ -5,7 +5,7 @@ title: "Zero Downtime Backups with Replicated (Redis)"
 weight: "999999"
 categories: [ "Developer Resources" ]
 tags: ["Application YAML"]
-index: "docs"
+index: "other"
 ---
 
 Replicated provides a way to achieve zero downtime backups by combining two of our more powerful replicated features: [Admin Commands](/docs/packaging-an-application/admin-commands/) and [Snapshots](/docs/packaging-an-application/snapshots/).

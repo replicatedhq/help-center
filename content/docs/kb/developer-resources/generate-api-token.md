@@ -4,7 +4,7 @@ lastmod: "2017-10-25T00:00:00Z"
 title: "Generate an API Token"
 weight: "999999"
 categories: [ "Developer Resources" ]
-index: "docs"
+index: "other"
 tags: ["API", "Replicated Vendor"]
 ---
 

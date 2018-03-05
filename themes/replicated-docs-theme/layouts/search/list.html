@@ -24,5 +24,9 @@
 	</main>
 
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js"></script>
-<script src="{{ .Site.BaseURL }}js/instantsearch-search.js"></script>
+{{ if eq .Site.Params.search_env "staging" }}
+	<script src="{{ .Site.BaseURL }}js/instantsearch-search.staging.js"></script>
+{{ else }}
+	<script src="{{ .Site.BaseURL }}js/instantsearch-search.js"></script>
+{{ end }}
 {{ partial "footer.html" . }}

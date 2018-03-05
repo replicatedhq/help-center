@@ -4,7 +4,7 @@ title: "Components And Containers"
 description: "The components section of the Replicated YAML defines how the containers will be created and started."
 weight: "202"
 categories: [ "Packaging a Native Application" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/components-and-containers/]
 ---

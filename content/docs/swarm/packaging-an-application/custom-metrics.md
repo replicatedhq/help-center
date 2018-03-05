@@ -5,7 +5,7 @@ title: "Custom Metrics"
 description: "Adding custom metrics to the Admin Console dashboard in a Docker Swarm application"
 weight: "611"
 categories: [ "Packaging a Swarm Application" ]
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---

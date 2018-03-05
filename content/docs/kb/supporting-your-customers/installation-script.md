@@ -4,7 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Installation Script"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
-index: "docs"
+index: "other"
 ---
 
 Today we released an enhanced installation script to allow your customers to more easily configure 

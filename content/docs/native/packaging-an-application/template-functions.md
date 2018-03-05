@@ -4,7 +4,7 @@ title: "Template Functions"
 description: "The dynamic configuration management functionality available throughout the Replicated YAML."
 weight: "211"
 categories: [ "Packaging a Native Application" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/template-functions/]
 ---

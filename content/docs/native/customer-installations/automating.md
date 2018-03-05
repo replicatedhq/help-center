@@ -4,7 +4,7 @@ title: "Automated Installations"
 description: "How to automate installation of Replicated and an application"
 weight: "307"
 categories: [ "Managing Customer Installation" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 aliases: [/docs/kb/developer-resources/automate-install/,/guides/automate-your-workflow/,/tags/automation/]
 ---

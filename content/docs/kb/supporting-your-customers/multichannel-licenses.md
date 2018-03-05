@@ -4,7 +4,7 @@ lastmod: "2017-06-12T00:00:00Z"
 title: "Multi-channel Licenses"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
-index: "docs"
+index: "other"
 tags: ["Replicated UI"]
 ---
 

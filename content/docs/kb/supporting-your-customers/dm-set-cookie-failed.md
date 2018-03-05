@@ -4,7 +4,7 @@ lastmod: "2017-08-22T00:00:00Z"
 title: "Error Message: Can not set cookie: dm_set_cookie failed"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
-index: "docs"
+index: "other"
 tags: ["Docker", "Errors"]
 kb-sections: ["Troubleshooting"]
 ---

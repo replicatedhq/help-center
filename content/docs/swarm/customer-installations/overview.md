@@ -4,7 +4,7 @@ title: "Managing Swarm Installations"
 description: "Ship it to your customer"
 weight: "701"
 categories: [ "Distributing a Swarm Application" ]
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 aliases: [docs/swarm/distributing-an-application/]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"

@@ -5,7 +5,7 @@ title: "Default Metrics"
 description: "Enabling CPU and Memory metrics in a Docker Swarm application"
 weight: "610"
 categories: [ "Packaging a Swarm Application" ]
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---

@@ -4,7 +4,7 @@ lastmod: "2016-07-02T00:00:00Z"
 title: "Custom Metrics"
 weight: "2611"
 categories: [ "Packaging a Kubernetes Application" ]
-index: "docs/kubernetes"
+index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---

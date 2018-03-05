@@ -4,7 +4,7 @@ title: "Template Functions"
 description: "The dynamic configuration management functionality available throughout the Replicated YAML."
 weight: "2606"
 categories: [ "Packaging a Kubernetes Application" ]
-index: "docs/kubernetes"
+index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---

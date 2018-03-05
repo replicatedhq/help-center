@@ -5,6 +5,7 @@ description: "A guide to installing the legacy version of Replicated 1.2.x via D
 hideFromList: true
 categories: ["Managing Customer Installation"]
 aliases: [docs/distributing-an-application/upgrading-1.2]
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 ---
 

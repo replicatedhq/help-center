@@ -4,7 +4,7 @@ title: "Airgapped Installations"
 description: "The steps required of the end customer to install a Replicated application into an airgapped environment."
 weight: "2704"
 categories: [ "Manage Customer Installations" ]
-index: "docs/kubernetes"
+index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---

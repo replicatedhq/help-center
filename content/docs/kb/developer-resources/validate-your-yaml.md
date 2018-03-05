@@ -4,7 +4,7 @@ lastmod: "2017-10-25T00:00:00Z"
 title: "Validate Your Yaml"
 weight: "999999"
 categories: [ "Developer Resources" ]
-index: "docs"
+index: "other"
 tags: ["Replicated Vendor", "API", "YAML", "Lint"]
 ---
 

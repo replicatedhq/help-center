@@ -39,14 +39,26 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
 
   {{ if eq .Site.Params.search_env "staging" }}
-    {{ $category := index (split .Params.index "/") 1 }}
+  
+    {{ with .CurrentSection }}
 
-      {{ if or (eq $category "swarm") (eq $category "native") (eq $category "kubernetes") }}
-        <script src="{{ .Site.BaseURL }}js/autocomplete-search-{{$category}}.staging.js"></script>
+      {{ if .Parent }}
+        {{ if eq .Parent.Title "Docker Swarm" }}
+          <script src="{{ .Site.BaseURL }}js/autocomplete-search-swarm.staging.js"></script>
+        {{ else if eq .Parent.Title "Native Scheduler" }}
+          <script src="{{ .Site.BaseURL }}js/autocomplete-search-native.staging.js"></script>
+        {{ else if eq .Parent.Title "Kubernetes" }}
+          <script src="{{ .Site.BaseURL }}js/autocomplete-search-kubernetes.staging.js"></script>
+        {{ else }}
+          <script src="{{ .Site.BaseURL }}js/autocomplete-search.staging.js"></script>
+        {{ end }}
+        
       {{ else }}
         <script src="{{ .Site.BaseURL }}js/autocomplete-search.staging.js"></script>
       {{ end }}
-      
+
+    {{ end }}
+    
   {{ else }}
     <script src="{{ .Site.BaseURL }}js/autocomplete-search.js"></script>
   {{ end }}

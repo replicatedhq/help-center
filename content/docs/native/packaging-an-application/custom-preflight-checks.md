@@ -4,7 +4,7 @@ title: "Custom Preflight Checks"
 description: "A guide to implementing the Custom Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
 weight: "214"
 categories: [ "Packaging a Native Application" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/custom-preflight-checks/]
 ---

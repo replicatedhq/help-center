@@ -4,7 +4,7 @@ title: "Next Steps"
 description: "Next Steps"
 weight: "106"
 categories: [ "Replicated Scheduler" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 ---
 

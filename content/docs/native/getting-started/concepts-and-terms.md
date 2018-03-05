@@ -4,7 +4,7 @@ title: "Concepts and Terminology"
 description: "The core concepts and terms used in these documents to describe the Replicated functionality."
 weight: "102"
 categories:  [ "Replicated Scheduler" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 aliases: [/docs/getting-started/concepts-and-terms/]
 ---

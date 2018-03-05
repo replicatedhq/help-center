@@ -4,7 +4,7 @@ title: "Development Environment"
 description: "How to set up an environment to ship with Replicated and Kubernetes"
 weight: "2503"
 categories:  [ "Shipping With Kubernetes" ]
-index: "docs/kubernetes"
+index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---

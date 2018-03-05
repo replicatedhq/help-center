@@ -4,7 +4,7 @@ title: "Airgapped Installations"
 description: "The steps required of the end customer to install a Replicated application into an airgapped environment."
 weight: "705"
 categories: [ "Distributing a Swarm Application" ]
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---

@@ -4,7 +4,7 @@ title: "Create & Manage Releases"
 description: "An introduction to the release channel management workflow for development on the Replicated platform."
 weight: "503"
 categories: [ "Shipping With Docker Swarm" ]
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 icon: "replicatedDockerSwarm"
 gradient: "swarm"
 ---

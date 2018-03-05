@@ -4,7 +4,7 @@ title: "Replicated Native Scheduler"
 description: "A quick overview of how to get started with the Replicated native scheduler."
 weight: "100"
 categories: [ "Replicated Scheduler" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 aliases: [/docs, /docs/native/getting-started, /docs/getting-started/get-started/]
 hideFromList: true
 icon: "replicatedCircle"

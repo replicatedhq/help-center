@@ -4,7 +4,7 @@ lastmod: "2017-06-14T00:00:00Z"
 title: "Replicated CLI Alias"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
-index: "docs"
+index: "other"
 tags: ["CLI Commands"]
 ---
 

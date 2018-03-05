@@ -5,7 +5,7 @@ description: "Instructions for installing Replicated to an existing Docker Swarm
 keywords: "installing, removing, migrating"
 weight: "704"
 categories: [ "Distributing a Swarm Application" ]
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---

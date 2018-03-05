@@ -4,7 +4,7 @@ title: "Managing Kubernetes in Customer Environments"
 description: "Ship it to your customer."
 weight: "2701"
 categories: [ "Manage Customer Installations" ]
-index: "docs/kubernetes"
+index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
 aliases : [docs/kubernetes/distributing-an-application/]
 hideFromList: true

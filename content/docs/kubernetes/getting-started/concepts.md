@@ -4,7 +4,7 @@ title: "Concepts and Terminology"
 description: "The core concepts and terms used in these documents to describe the Replicated functionality."
 weight: "2502"
 categories:  [ "Shipping With Kubernetes" ]
-index: "docs/kubernetes"
+index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---

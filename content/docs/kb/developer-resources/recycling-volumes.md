@@ -4,7 +4,7 @@ lastmod: "2017-12-01T00:00:00Z"
 title: "Recycling Volume Data"
 weight: "999999"
 description: "How to re-use a named volume with new data across multiple application versions"
-index: "docs"
+index: "other"
 categories: [ "Developer Resources" ]
 aliases: ['docs/packaging-an-application/recycling-volumes/']
 tags: ["Application YAML"]

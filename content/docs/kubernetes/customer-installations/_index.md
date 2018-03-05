@@ -4,7 +4,7 @@ title: "Managing Customer Installations"
 description: "Ship it to your customer."
 weight: "2700"
 categories: [ "Manage Customer Installations" ]
-index: "docs/kubernetes"
+index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
 ---
 

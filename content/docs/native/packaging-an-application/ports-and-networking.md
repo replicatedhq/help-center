@@ -4,7 +4,7 @@ title: "Ports / Networking"
 description: "Defining containers exposed ports and container-to-container communication"
 weight: "205"
 categories: [ "Packaging a Native Application" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 ---
 

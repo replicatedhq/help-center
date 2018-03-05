@@ -4,7 +4,7 @@ lastmod: "2017-11-01T00:00:00Z"
 title: "Pinning the Release Sequence of an Application"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
-index: "docs"
+index: "other"
 ---
 
 ## From the Vendor Console

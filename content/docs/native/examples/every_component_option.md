@@ -4,7 +4,7 @@ title: "Event Component Option"
 description: "A an example YAML with every possible options."
 weight: "404"
 categories: [ "Replicated Scheduler Examples" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 ---
 

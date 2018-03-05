@@ -4,7 +4,7 @@ lastmod: "2016-07-01T00:00:00Z"
 title: "Custom Supplied TLS Certs and Keys"
 weight: "999999"
 categories: [ "Developer Resources" ]
-index: "docs"
+index: "other"
 tags: ["Application YAML"]
 ---
 

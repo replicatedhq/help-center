@@ -4,7 +4,7 @@ lastmod: "2016-06-01T00:00:00Z"
 title: "Adding SMTP Support On-Premises"
 weight: "999999"
 categories: [ "Developer Resources" ]
-index: "docs"
+index: "other"
 tags: ["Replicated UI", "Application YAML"]
 ---
 

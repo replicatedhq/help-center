@@ -5,7 +5,7 @@ description: "Instructions for manually installing Replicated 2"
 weight: "305"
 keywords: "installing, removing"
 categories: [ "Managing Customer Installations" ]
-index: "docs/native"
+index: ["docs/native", "docs"]
 aliases: [docs/distributing-an-application/installing-manually]
 icon: "replicatedCircle"
 ---

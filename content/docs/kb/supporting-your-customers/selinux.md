@@ -4,7 +4,7 @@ lastmod: "2017-09-05T00:00:00Z"
 title: "SELinux"
 weight: "999999"
 categories: [ "Supporting Your Customers" ]
-index: "docs"
+index: "other"
 tags: ["Docker"]
 kb-sections: ["Replicated Scheduler"]
 
