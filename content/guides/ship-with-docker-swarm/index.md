@@ -5,6 +5,7 @@
   gradient: "swarm"
   icon: "replicatedDockerSwarm"
   index: false
+  aliases: [/tags/swarm/]
   chapters:
     - title: "Creating a Replicated Swarm Application"
       description: "Package your Docker Compose application as a Replicated application"

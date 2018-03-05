@@ -5,7 +5,7 @@ description: "How to sync users from LDAP to your application"
 weight: "2305"
 categories: [ "LDAP And Identity Integration" ]
 index: "other"
-aliases: [/docs/packaging-an-application/ldap-integration/,/docs/kb/developer-resources/ldap/]
+aliases: [/docs/packaging-an-application/ldap-integration/,/docs/kb/developer-resources/ldap/,/tags/ldap/]
 ---
 
 In addition to authentication, Replicated can sync a directory (or a subset of a directory) to your application. This is useful when your application needs to know the list of all users and expects them to be in a users table in the database.

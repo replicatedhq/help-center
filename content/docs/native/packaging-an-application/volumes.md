@@ -25,7 +25,7 @@ Optional properties:
 
 - `permission` should be a octal permission string.
 - `owner` should be the uid of the user inside the container.
-- `options` {{< version version="2.3.0" >}} optional volume settings in an array of strings, a "ro" entry puts the volume into read-only mode.
+- `options` {{< version version="2.3.0" >}} optional volume settings in an array of strings, a `ro` entry puts the volume into read-only mode.
 - `is_ephemeral` {{< version version="2.3.5" >}} Ephemeral volumes do not prevent containers from being re-allocated across nodes. Ephemeral volumes will also be excluded from snapshots.
 - `is_excluded_from_backup` exclude this volume from backup if Snapshots enabled.
 

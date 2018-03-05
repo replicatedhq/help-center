@@ -95,7 +95,7 @@ By default the Support Bundle V1 will include the following files:
 | /scheduler/node/*&lt;node_id&gt;*/etc/hostname | A copy of the `/etc/hostname` file. The system's host name. |
 | /scheduler/node/*&lt;node_id&gt;*/etc/hosts | A copy of the `/etc/hosts` file. Static table lookup for hostnames. |
 | /scheduler/node/*&lt;node_id&gt;*/etc/os-release | A copy of the `/etc/os-release` file. Contain operating system identification data. |
-| /scheduler/node/*&lt;node_id&gt;*/etc/replicated.conf | A copy of the `/etc/replicated.conf` file. Rplicated legacy 1.x configuration. |
+| /scheduler/node/*&lt;node_id&gt;*/etc/replicated.conf | A copy of the `/etc/replicated.conf` file. Replicated legacy 1.x configuration. |
 | /scheduler/node/*&lt;node_id&gt;*/etc/sysconfig/docker | A copy of the `/etc/sysconfig/docker` file. Legacy systemd docker configuration. |
 | /scheduler/node/*&lt;node_id&gt;*/etc/sysconfig/replicated | A copy of the `/etc/sysconfig/replicated` file. Systemd replicated configuration. |
 | /scheduler/node/*&lt;node_id&gt;*/etc/sysconfig/replicated-operator | A copy of the `/etc/sysconfig/replicated-operator` file. Systemd replicated-operator configuration. |

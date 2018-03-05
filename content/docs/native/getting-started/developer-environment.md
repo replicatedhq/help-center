@@ -6,13 +6,14 @@ weight: "104"
 categories: [ "Replicated Scheduler" ]
 index: "docs/native"
 icon: "replicatedCircle"
+aliases: [/tags/studio/, /docs/kb/developer-resources/using-replicated-studio-to-quickly-iterate-on-your-yaml/]
 ---
 
 Once your application is working in Docker, you'll want to set up a simple environment to iterate on your Replicated YAML. Our Replicated Studio is designed to let shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.
 
 {{< linked_headline "Install Replicated Studio" >}}
 
-With our simple installation script (on a Linux server in your IaaS of choice, or in a local dev environment in Vagrant/VirtualBox):
+With our simple installation script (on a Linux server in your IaaS provider of choice, or in a local dev environment in Vagrant/VirtualBox):
 
 ```bash
 curl -sSL https://get.replicated.com/studio | sudo bash
@@ -24,7 +25,7 @@ You'll have everything you need to get started, including a full Replicated inst
 
 During installation, a new directory named `replicated` is created in your home directory. Once your license is activated, Replicated Studio will setup the most recent release and save it to `~/replicated/current.yaml`. Any time this file is updated and saved, Replicated Studio will create a new release using the next available sequence number.
 
-You can also use your favorite editor locally (like Atom, Visual Stuido Code, Vim, or Emacs) and upload your changes once you're ready. Eg. Using SCP:
+You can also use your favorite editor locally (like Atom, Visual Studio Code, Vim, or Emacs) and upload your changes once you're ready. Eg. Using SCP:
 
 ```bash
 scp current.yaml [myuser]@[my.development.host]:/home/[myuser]/replicated

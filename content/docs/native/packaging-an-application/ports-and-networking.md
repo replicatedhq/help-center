@@ -10,7 +10,7 @@ icon: "replicatedCircle"
 
 {{< linked_headline "Ports" >}}
 
-The Replicated Native Scheduler does not ship with an overlay network. All container-to-container communcation has to occur on the host networking stack.
+The Replicated Native Scheduler does not ship with an overlay network. All container-to-container communication has to occur on the host networking stack.
 
 All ports listed in the Dockerfile with the EXPOSE directive will be automatically exposed when started. The Docker runtime will choose a random port, ensuring that there are no conflicts. If you need to specify a specific public (host) port, you can list it here.
 

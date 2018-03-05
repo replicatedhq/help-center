@@ -6,7 +6,7 @@ weight: "212"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
 icon: "replicatedCircle"
-aliases: [/docs/packaging-an-application/support-bundle/]
+aliases: [/docs/packaging-an-application/support-bundle/,/tags/support-bundle/]
 ---
 
 A support bundle is an archive that is available for the customer to download via the Support tab of the On-Prem Console or the [Replicated CLI](/api/replicatedctl/replicatedctl_support-bundle/).

@@ -66,4 +66,4 @@ In the example above at least 2 hosts are required. 3 instances of the freighter
 
 {{< linked_headline "Templates" >}}
 
-The cluster property for both components and containers can be templatized. The template function must be parsable as a boolean. In addition, each of the properties of *cluster_host_count* and *cluster_instance_count* can be templatized. In this case the template function must be parsable as an unsigned integer. This was introduced in Replicated {{< version version="2.8.0" >}}.
+The cluster property for both components and containers can be templated. The template function must be parsable as a boolean. In addition, each of the properties of *cluster_host_count* and *cluster_instance_count* can be templated. In this case the template function must be parsable as an unsigned integer. This was introduced in Replicated {{< version version="2.8.0" >}}.

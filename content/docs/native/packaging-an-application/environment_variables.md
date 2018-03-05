@@ -39,8 +39,8 @@ There is also a flag provided to exclude anything secret from the support bundle
 
 {{< linked_headline "when" >}}
 
-The `when` attribte will cause an environment variable not to be injected when the template evalulates to false. In the above example, only one `POSTGRES_URI` variable will be set in the container, depending on the value of the `bring_own_postgres` config option.
+The `when` attribute will cause an environment variable not to be injected when the template evaluates to false. In the above example, only one `POSTGRES_URI` variable will be set in the container, depending on the value of the `bring_own_postgres` config option.
 
 {{< linked_headline "is_excluded_from_support" >}}
 
-Having environment variables in Support Bundles can be usedul whgen troubleshooting. However, environment variables can contain sensitive data.  Setting `is_excluded_from_support` to `true` will exclude them from Support Bundles. We recommend excluding any sensitive data from support bundles.
+Having environment variables in Support Bundles can be useful when troubleshooting. However, environment variables can contain sensitive data.  Setting `is_excluded_from_support` to `true` will exclude them from Support Bundles. We recommend excluding any sensitive data from support bundles.

@@ -6,7 +6,7 @@ weight: "213"
 categories: [ "Packaging a Native Application" ]
 index: "docs/native"
 icon: "replicatedCircle"
-aliases: [/docs/packaging-an-application/preflight-checks/]
+aliases: [/docs/packaging-an-application/preflight-checks/,/tags/preflight-checks/]
 ---
 
 A preflight check is a test that is run before installing and running an application.  The test will analyze the system to determine if the environment meets the minimum requirements.

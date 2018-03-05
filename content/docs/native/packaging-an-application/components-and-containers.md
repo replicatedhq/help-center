@@ -12,7 +12,7 @@ aliases: [/docs/packaging-an-application/components-and-containers/]
 The `components` section of the YAML defines how the containers will be created and started. A component is
 a group of one or more containers that are guaranteed to run on the same node.
 
-An example of a component using the common options is below. We've also create an example of a [componnet and container that uses every possible option in our examples](/docs/native/examples/every_component_option/).
+An example of a component using the common options is below. We've also create an example of a [component and container that uses every possible option in our examples](/docs/native/examples/every_component_option/).
 
 ```yaml
 components:
@@ -49,7 +49,7 @@ The `source` field is a reference to the Docker registry where this container im
 
 If using the [Replicated Registry](/docs/native/getting-started/docker-registries/), set this to `source: replicated`. Nothing else is required; the Replicated Native Scheduler will find the image from the license file and have access to it.
 
-If referencing a public image thast doesn't require any authentication to pull, set this to `source: public`. Replicated will automatically pull this image when needed.
+If referencing a public image that doesn't require any authentication to pull, set this to `source: public`. Replicated will automatically pull this image when needed.
 
 If referencing a private image that requires authentication and is stored on a non-Replicated registry (Docker Hub, Quay.io, etc), then this should be set to the "reference" name you used when adding the registry to the [vendor portal](https://vendor.replicated.com). For example, if I set up an external registry and named it `dockerhub`, then this should be set to `source: dockerhub`.
 

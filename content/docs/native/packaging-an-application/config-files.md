@@ -32,7 +32,7 @@ The next section contains inline configuration files that we can supply to our c
 
 {{< linked_headline "Customer Files" >}}
 
-Similar to config files, the Replicated Native Scheduler supports mounting a customer supplied file, in it's entirity, into a container. This is defined as a `customer_file` and an example is below.
+Similar to config files, the Replicated Native Scheduler supports mounting a customer supplied file, in it's entirety, into a container. This is defined as a `customer_file` and an example is below.
 
 Sometimes it can be helpful to allow a customer to supply a file to your app. A good example of this is when your customer should supply an SSL certificate and private key. To add customer supplied files to your container, you must first define the file as a config option, and then create a link to it in any container that needs that file. Replicated will prompt for the file to be uploaded and will ensure that the file is at the correct location in the container when it is started.
 

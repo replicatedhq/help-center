@@ -35,7 +35,7 @@ Network mode supports bridge, host, container or none.  Learn more about Docker'
 ```
 
 ### Security Options
-With security options you can use Docker security with existing well know systems such as apparmor.
+With security options you can use Docker security with existing well know systems such as AppArmor.
 
 ```yaml
   security_options:

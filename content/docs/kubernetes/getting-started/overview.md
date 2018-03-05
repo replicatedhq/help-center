@@ -5,7 +5,7 @@ description: "A quick overview of how to get started with Kubernetes and Replica
 weight: "2501"
 categories: [ "Shipping With Kubernetes" ]
 index: "docs/kubernetes"
-aliases : [docs/kubernetes/getting-started/]
+aliases : [docs/kubernetes/getting-started/,/tags/kubernetes/]
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
@@ -16,7 +16,7 @@ Replicated can be used with a Kubernetes application to deploy an enterprise-ins
 
 Compared to other schedulers supported by Replicated, Kubernetes offers:
 
-* Native Kubernetes exerience, including the ability to ship and reuse existing Kubernetes specs
+* Native Kubernetes experience, including the ability to ship and reuse existing Kubernetes specs
 * Automatic provisioning of a Kubernetes cluster on any supported operating system
 * Standard Kubernetes functionality including cluster-wide DNS resolution and load balancing
 
@@ -25,7 +25,7 @@ Compared to other schedulers supported by Replicated, Kubernetes offers:
 There are a cases where using other schedulers, such as the Replicated Native scheduler or Docker Swarm provides a better experience.
 
 * Some enterprises require the use of Long Term Support Operating Systems in the 2.x kernel series such as RedHat Enterprise Linux 6. Replicated with Docker Swarm requires Docker 17.03 or later, while RHEL6 only supports Docker 1.7.1. To support RHEL 6 and older versions of Docker, consider the [Replicated Native Scheduler](/docs/native/getting-started).
-* If existing Kubernete specs are not available, writing them only to support an enterprise installation might take extra time. In this case, the learning curve of Docker Swarm could be a good choice.
+* If existing Kubernetes specs are not available, writing them only to support an enterprise installation might take extra time. In this case, the learning curve of Docker Swarm could be a good choice.
 
 ## Overview
 The process to ship your application in Replicated consists of the following steps:

@@ -7,7 +7,6 @@ categories:  [ "Shipping With Kubernetes" ]
 index: "docs/kubernetes"
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
-aliases: [/docs/kb/developer-resources/using-replicated-studio-to-quickly-iterate-on-your-yaml/]
 ---
 
 Once your application is working in Docker, you'll want to set up a simple environment to iterate on your Replicated YAML. Our Replicated Studio is designed to let shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.
