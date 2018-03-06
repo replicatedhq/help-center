@@ -5,7 +5,7 @@ description: "The config section of the Replicated YAML creates a dynamic settin
 weight: "302"
 categories: [ "Config Screen" ]
 index: "other"
-aliases: [/docs/packaging-an-application/config-screen/]
+aliases: [/docs/packaging-an-application/config-screen/,/docs/config-screen/]
 ---
 
 The admin console settings screen configuration is specified as an array configuration
