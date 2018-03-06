@@ -4,8 +4,9 @@ title: "Redis"
 description: "An example deploying a Swarm application with templated configuration"
 weight: "405"
 categories: [ "Replicated + Swarm Examples" ]
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
 gradient: "swarm"
+icon: "replicatedDockerSwarm"
 ---
 
 ## Redis Example

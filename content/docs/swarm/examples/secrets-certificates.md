@@ -4,7 +4,8 @@ title: "Nginx Secrets"
 description: "An example mounting TLS certificates using Docker Swarm secrets"
 weight: "405"
 categories: [ "Replicated + Swarm Examples" ]
-index: "docs/swarm"
+index: ["docs/swarm", "docs"]
+icon: "replicatedDockerSwarm"
 gradient: "swarm"
 ---
 
