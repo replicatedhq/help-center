@@ -38,7 +38,6 @@ taxonomies:
 algolia:
   index: "help_center_staging"
   appID: "5PHVQPX4AR"
-  key: 5b85668fa951d036dd47817202dc4d18
 
 menu:
   main:

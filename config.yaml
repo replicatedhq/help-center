@@ -11,6 +11,7 @@ googleAnalytics: "UA-61084834-1"
 Params:
   author: "Replicated"
   copyright: "Replicated, Inc"
+  search_env: "prod"
 
   favicon: ""
   pagetitle: "Replicated"
