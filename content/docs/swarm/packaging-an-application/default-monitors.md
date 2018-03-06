@@ -8,4 +8,5 @@ categories: [ "Packaging a Swarm Application" ]
 index: ["docs/swarm", "docs"]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
+draft: true
 ---
