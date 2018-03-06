@@ -7,10 +7,10 @@ categories: [ "Reference" ]
 index: false
 api: true
 gradient: "purpleToPink"
-aliases : [docs/reference/vendor-api]
+aliases : [docs/reference/vendor-api,/categories/vendor-api/]
 ---
 
-The Replicated Vendor API is available to create and manage applications, release, customers, liceneses and more.
+The Replicated Vendor API is available to create and manage applications, release, customers, licenses, and more.
 
 We publish a swagger spec at [https://api.replicated.com/vendor/v1/spec/vendor-api.json](https://api.replicated.com/vendor/v1/spec/vendor-api.json). We also have an interactive API console available at [https://replicated-vendor-api.readme.io/v1.0/reference](https://replicated-vendor-api.readme.io/v1.0/reference)
 
