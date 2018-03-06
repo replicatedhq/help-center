@@ -18,7 +18,7 @@ Your machine must support docker-engine {{< swarm_docker_version_minimum >}} - {
 Replicated provides an easy install script for Swarm that works with the the following list of operating systems:
 
 - Debian 7.7+
-- Ubuntu 14.04 / 15.10 / 16.04
+- Ubuntu 14.04 / 16.04
 - Fedora 21 / 22
 - Red Hat Enterprise Linux 7+
 - CentOS 7+
