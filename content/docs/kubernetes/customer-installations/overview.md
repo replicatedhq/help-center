@@ -17,4 +17,4 @@ While Replicated and your application can run on a pre-built Kubernetes cluster,
 
 The [Airgapped Installation](/docs/kubernetes/customer-installations/airgapped-installations) section provides documentation about installing the Replicated Kubernetes Appliance in an airgapped setting.
 
-Help installing Replicated and the Replicated Kubernetes Appliance is available through the [Replicated community](https://help.replicated.com/community) or via email at [contact@replicated.com](mailto:contact@replicated.com).
+Help installing Replicated and the Replicated Kubernetes Appliance is available through the [Replicated community](https://help.replicated.com/community/) or via email at [contact@replicated.com](mailto:contact@replicated.com).

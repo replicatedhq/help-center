@@ -11,7 +11,7 @@ icon: "replicatedDockerSwarm"
 hideFromList: true
 ---
 
-Once you have packaged your application for Replicated on Swarm, it is time to distribute it to your customers. This documentation contains everything needed to successfully install and manage customer installations using Replicated for Docker Swarm. Help installing Replicated on Docker Swarm is available through the [Replicated community](https://help.replicated.com/community) or by email at [contact@replicated.com](mailto:contact@replicated.com).
+Once you have packaged your application for Replicated on Swarm, it is time to distribute it to your customers. This documentation contains everything needed to successfully install and manage customer installations using Replicated for Docker Swarm. Help installing Replicated on Docker Swarm is available through the [Replicated community](https://help.replicated.com/community/) or by email at [contact@replicated.com](mailto:contact@replicated.com).
 
 The [Installing](/docs/swarm/customer-installations/installing) section contains all of the documentation for provisioning Docker Swarm clusters and installing Replicated, whether it is through the easy install script, a manual installation, or an airgapped installation.
 
