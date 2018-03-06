@@ -7,4 +7,5 @@ categories: [ "Packaging a Kubernetes Application" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
+draft: true
 ---

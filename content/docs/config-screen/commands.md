@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Commands"
 description: "The config section of the Replicated YAML creates a dynamic settings page that customers can use to configure their instance."
 weight: "303"
-categories: [ "Replicated Config Screen" ]
+categories: [ "Config Screen" ]
 index: "docs/config"
 aliases: [/docs/packaging-an-application/commands/]
 ---
