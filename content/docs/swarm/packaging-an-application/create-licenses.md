@@ -5,6 +5,7 @@ description: "Details on the options available to vendors when creating a licens
 weight: "219"
 categories: [ "Packaging a Swarm Application" ]
 index: ["docs/swarm", "docs"]
+gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---
 

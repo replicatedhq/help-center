@@ -6,6 +6,7 @@ weight: "219"
 categories: [ "Packaging a Kubernetes Application" ]
 index: ["docs/kubernetes", "docs"]
 icon: "replicatedKubernetes"
+gradient: "kubernetes"
 aliases: [/docs/distributing-an-application/kubernetes/create-licenses/]
 ---
 
