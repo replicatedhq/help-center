@@ -7,6 +7,7 @@ categories: [ "Shipping With Docker Swarm" ]
 index: ["docs/swarm", "docs"]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
+nextPage: "swarm/packaging-an-application/overview.md"
 ---
 
 When building your application, you have the option to use the Replicated private registry, or any supported external private or public registry.

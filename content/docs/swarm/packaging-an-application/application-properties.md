@@ -7,6 +7,7 @@ categories: [ "Packaging a Swarm Application" ]
 index: ["docs/swarm", "docs"]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
+nextPage: "swarm/customer-installations/overview.md"
 ---
 
 The properties section of the YAML allows you to configure properties of the admin console.
