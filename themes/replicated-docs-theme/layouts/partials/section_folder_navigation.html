@@ -130,6 +130,37 @@
                 {{ end }}
             </div>
             {{ end }}
+            <div class="u-marginBottom--most">
+              <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Config Screen</h3>
+              {{ with .Site.GetPage "section" "docs" "config-screen" }}
+                  {{ range .Pages }}
+                      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                          <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
+                              {{ .Title }}
+                          </a>
+                      </p>
+                  {{ end }}
+                  {{ range .Sections }}
+                      {{ $firstPage := index (first 1 .Pages) 0 }}
+                      <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                          <a href="{{ $firstPage.Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}">{{ .Title }}</a>
+                      </h3>
+                      {{ if .InSection $currentPage }}
+                          <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
+                              {{ range .Pages }}
+                                  {{ if not .Params.hideFromList }}
+                                  <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                      <a href="{{ .Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
+                                          {{ .Title }}
+                                      </a>
+                                  </p>
+                                  {{ end }}
+                              {{ end }}
+                          </div>
+                      {{ end }}
+                  {{ end }}
+              {{ end }}
+            </div>
             {{ if or (eq $category "Snapshots") (eq $category "LDAP and Identity Integration") (eq $category "Config Screen") (eq $category "Knowledge Base") }}
             <div class="u-marginBottom--most">
                 <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Snapshots</h3>
@@ -165,37 +196,6 @@
             <div class="u-marginBottom--most">
                 <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">LDAP & Identity</h3>
                 {{ with .Site.GetPage "section" "docs" "ldap-and-identity" }}
-                    {{ range .Pages }}
-                        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                            <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                {{ .Title }}
-                            </a>
-                        </p>
-                    {{ end }}
-                    {{ range .Sections }}
-                        {{ $firstPage := index (first 1 .Pages) 0 }}
-                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
-                            <a href="{{ $firstPage.Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}">{{ .Title }}</a>
-                        </h3>
-                        {{ if .InSection $currentPage }}
-                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
-                                {{ range .Pages }}
-                                    {{ if not .Params.hideFromList }}
-                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                                        <a href="{{ .Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                            {{ .Title }}
-                                        </a>
-                                    </p>
-                                    {{ end }}
-                                {{ end }}
-                            </div>
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
-            </div>
-            <div class="u-marginBottom--most">
-                <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Config Screen</h3>
-                {{ with .Site.GetPage "section" "docs" "config-screen" }}
                     {{ range .Pages }}
                         <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
                             <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
