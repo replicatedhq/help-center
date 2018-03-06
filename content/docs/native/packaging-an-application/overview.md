@@ -4,7 +4,7 @@ title: "Packaging An Application"
 description: "The components section of the Replicated YAML defines how the containers will be created and started."
 weight: "200"
 categories: [ "Packaging a Native Application" ]
-aliases: [docs/native/packaging-an-application/,/categories/packaging-an-application/,/docs/packaging-an-application/yaml-overview/,/tags/development/,/guides/get-to-know-our-features/]
+aliases: [/docs/native/packaging-an-application/,/categories/packaging-an-application/,/docs/packaging-an-application/yaml-overview/,/tags/development/,/guides/get-to-know-our-features/]
 index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 hideFromList: true
