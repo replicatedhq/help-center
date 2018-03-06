@@ -10,7 +10,7 @@ gradient: "orangeToOrange"
 icon: "troubleshoot"
 ---
 
-Once you've [created a support bundle spec](./spec) and have [collected a few bundles from your customers](./generate), it's a good idea to check your spec into source control and treat it the same way you'd treat other code. Having a process around code reviews and being able to accept pull requests to update the spec is useful and supported by Repicated.
+Once you've [created a support bundle spec](/guides/support-bundle/spec) and have [collected a few bundles from your customers](/guides/support-bundle/generate), it's a good idea to check your spec into source control and treat it the same way you'd treat other code. Having a process around code reviews and being able to accept pull requests to update the spec is useful and supported by Replicated.
 
 On the Create a new Support Bundle Spec page, enable the "Link to spec in GitHub" option. If you haven't yet linked your GitHub account to your Replicated account, you'll be prompted to log in to GitHub.
 

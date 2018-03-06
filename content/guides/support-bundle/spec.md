@@ -47,7 +47,7 @@ There are also some specs that support optional arguments that are often passed 
       output_dir: /docker/my-container
 ```
 
-The `docker ps` command only includes running containers, by default. If you want to include all, containers, you could change this spec to be the example below. Note the capitalized `All` because that's how Docker's seriaization library receives this. Replicated doesn't translate these options; we pass them directly through to the command.
+The `docker ps` command only includes running containers, by default. If you want to include all, containers, you could change this spec to be the example below. Note the capitalized `All` because that's how Docker's serialization library receives this. Replicated doesn't translate these options; we pass them directly through to the command.
 
 ```yaml
 -specs:
@@ -61,7 +61,7 @@ The `docker ps` command only includes running containers, by default. If you wan
 ### `lifecycle`
 
 
-The `lifecycle` message allows you to confiugre messages and prompts, and optionally securely upload the support bundle to the analysis tools at `https://console.replicated.com`. By default, if no lifecycle is specified, the support bundle spec will prompt the user, asking if they want to upload the generated bundle. This default is the equivilent of the following `lifecycle` spec:
+The `lifecycle` message allows you to configure messages and prompts, and optionally securely upload the support bundle to the analysis tools at `https://console.replicated.com`. By default, if no lifecycle is specified, the support bundle spec will prompt the user, asking if they want to upload the generated bundle. This default is the equivalent of the following `lifecycle` spec:
 
 
 ```yaml
