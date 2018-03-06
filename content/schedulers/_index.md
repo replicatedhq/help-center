@@ -3,6 +3,7 @@ title: "Choosing the right scheduler"
 description: "Compare the differences between the orchestration layers Replicated allows you to use."
 headerGradient: "blueToBlue"
 wrapperCSSClass: "scheduler-types-section"
+aliases: [/docs/getting-started/schedulers/]
 ---
 
 <div class="scheduler-type main-section u-borderBottom--gray">
