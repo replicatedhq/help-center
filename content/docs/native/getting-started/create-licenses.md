@@ -1,13 +1,12 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Create Customers and Licenses"
+title: "Create Customers & Licenses"
 description: "Details on the options available to vendors when creating a license for an end customer's upcoming installation."
-weight: "219"
-categories: [ "Packaging a Kubernetes Application" ]
-index: ["docs/kubernetes", "docs"]
-icon: "replicatedKubernetes"
-gradient: "kubernetes"
-aliases: [/docs/distributing-an-application/kubernetes/create-licenses/]
+weight: "106"
+categories: [ "Packaging a Native Application" ]
+index: ["docs/native", "docs"]
+aliases: [docs/distributing-an-application/create-licenses]
+icon: "replicatedCircle"
 ---
 
 Each customer you deploy to via Replicated will need a separate license file for their installation. This license file identifies the customer & application during the installation and update processes. A customer license is created in the Customers section of the [vendor portal](https://vendor.replicated.com/customers). You can manage the values and properties of that customer and license, including custom license fields, by selecting an individual customer.
@@ -38,7 +37,7 @@ By default, licenses will be set to disable clustered installations. This will p
 
 {{< linked_headline "Airgap Download Enabled" >}}
 
-By default, licenses will be set to disable [airgap installations](https://blog.replicated.com/2016/05/24/airgapped-installation-support/). By enabling this feature, the actual `.rli` file will have license meta data embedded in it and must be redownloaded.
+By default, licenses will be set to disable [airgap installations](https://blog.replicated.com/2016/05/24/airgapped-installation-support/). By enabling this feature, the actual `.rli` file will have license meta data embedded in it and must be re-downloaded.
 
 {{< linked_headline "Require Activation" >}}
 
@@ -54,4 +53,4 @@ It is important to identify the type of license that is being created, `developm
 
 {{< linked_headline "Custom License Fields" >}}
 
-[Custom license fields](/docs/kb/developer-resources/custom-license-fields) can be set for all licenses. This is useful if specific customer information might change from customer to customer. These fields can be read from both the [template functions](/docs/packaging-an-application/template-functions) as well as from the [Integetration API](/categories/integration-api). Examples of custom license fields are "seats" to limit the number of active users or "hostname" in order to specify the domain that the application can be run on.
+[Custom license fields](/docs/kb/developer-resources/custom-license-fields) can be set for all licenses. This is useful if specific customer information might change from customer to customer. These fields can be read from both the [template functions](/docs/packaging-an-application/template-functions) as well as from the [Integration API](/categories/integration-api). Examples of custom license fields are "seats" to limit the number of active users or "hostname" in order to specify the domain that the application can be run on.
