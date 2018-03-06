@@ -6,6 +6,7 @@ weight: "304"
 categories: [ "Config Screen" ]
 index: "other"
 aliases: [/docs/packaging-an-application/test-procs/]
+nextPage: "snapshots/overview.md"
 ---
 
 Using the `test_proc` directive in your app definition YAML, you enable your customers to
