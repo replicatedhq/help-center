@@ -28,10 +28,22 @@ config:
     command: certificate_verify
     timeout: 5
     arg_fields:
-    - ssl_cert_file
-    - ssl_key_file
+    - tls_key
+    - tls_certificate
     - hostname
   items:
+  - name: hostname
+    title: Hostname
+    type: text
+    recommended: false
+    default: ""
+    value_cmd:
+      name: host_ip
+      value_at: 0
+    when: ""
+    affix: ""
+    required: true
+    items: []
   - name: tls_key
     title: Private Key File
     type: file
