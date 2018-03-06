@@ -11,7 +11,8 @@ icon: "replicatedKubernetes"
 
 {{< linked_headline "Secrets" >}}
 
-Kubernetes secrets are a common resource and are often deployed using a different process from other resource types. Secrets should be deployed before the specs that reference them, and the contents of secrets is likely to be dynamic for each customer.
+Replicated does not externally manage secrets in Kubernetes clusters, instead being specified and used as part of the application specification. [Template functions](../template-functions) can be used to dynamically write secrets into a configuration item from [config items](/docs/config-screen/config-yaml) or [commands](/docs/config-screen/commands).
 
-Using the [Replicated template functions](../template-functions), it's possible to dynamically write secrets based on config items (user supplied data), cmds (generated data) or other externally available, dynamically built input.
+Kubernetes resources are created in the order they appear in the release YAML. Pods that reference secrets will not start until the secret is available. Until the secret is successfully mounted, the pod will stay in the `Pending` state. To reduce the amount of time the Kubernetes scheduler stays in this state, create secrets before creating pods.
 
+Replicated does not recommend managing secrets separately from the release YAML. Secrets are provisioned in the namespace of the application release, which is subject to change between updates.
