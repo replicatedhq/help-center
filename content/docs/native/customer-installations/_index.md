@@ -4,6 +4,7 @@ title: "Managing Customer Installations"
 description: "Documentation for installing and supporting your customers."
 weight: "301"
 categories: [ "Managing Customer Installation" ]
-index: "docs/native"
 aliases: [docs/distributing-an-application/maintenance]
+icon: "replicatedCircle"
+index: false
 ---
