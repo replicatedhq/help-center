@@ -1,4 +1,5 @@
 ---
 title: "Kubernetes"
+index: false
 ---
 

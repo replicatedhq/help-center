@@ -1,6 +1,6 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Core Concepts"
+title: "Concepts and Terminology"
 description: "The core concepts requried to ship an application on Replicated using Docker Swarm."
 weight: "501"
 categories:  [ "Shipping With Docker Swarm" ]

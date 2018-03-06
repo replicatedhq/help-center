@@ -1,12 +1,13 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Overview"
+title: "Shipping With Kubernetes on Replicated"
 description: "A quick overview of how to get started with Kubernetes and Replicated."
 weight: "2501"
 categories: [ "Shipping With Kubernetes" ]
 index: ["docs/kubernetes", "docs"]
 aliases : [docs/kubernetes/getting-started/,/tags/kubernetes/]
 gradient: "kubernetes"
+hideFromList: true
 icon: "replicatedKubernetes"
 ---
 
