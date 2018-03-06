@@ -5,7 +5,7 @@ description: "The process for end customers to update Replicated services to acc
 weight: "303"
 categories: [ "Managing Customer Installation" ]
 index: ["docs/native", "docs"]
-aliases: [docs/distributing-an-application/upgrading,/tags/upgrading-replicated/,/docs/distributing-an-application/upgrading/]
+aliases: [/docs/distributing-an-application/upgrading,/tags/upgrading-replicated/,/docs/distributing-an-application/upgrading/]
 icon: "replicatedCircle"
 ---
 

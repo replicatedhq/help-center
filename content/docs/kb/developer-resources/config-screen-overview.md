@@ -31,7 +31,7 @@ Saved anytime to restart with new values.
 {{< linked_headline "Conditional Inputs" >}}
 
 Conditional inputs allow you to determine when an item or group is shown.
-([technical documentation](/on-prem-config#section-when-conditional-inputs-))
+([technical documentation](/docs/config-screen/config-yaml))
 
 ![Conditional Inputs](/images/post-screens/conditional-inputs.gif)
 

@@ -6,7 +6,7 @@ weight: "2701"
 categories: [ "Manage Customer Installations" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
-aliases : [docs/kubernetes/distributing-an-application/]
+aliases : [docs/kubernetes/distributing-an-application/,/docs/kubernetes/packaging-an-application/]
 hideFromList: true
 icon: "replicatedKubernetes"
 ---

@@ -12,7 +12,7 @@ icon: "replicatedCircle"
 {{< warning title="Old Version Warning" >}}
 The content in this document is for a previous version of Replicated. If you are looking
 for the current version, it is available at
-<a href="{{< baseurl >}}/docs/distributing-an-application/upgrading/">{{< baseurl >}}/docs/distributing-an-application/upgrading/</a>
+<a href="/docs/distributing-an-application/upgrading/">{{< baseurl >}}here</a>.
 {{< /warning >}}
 
 You may need to add the Replicated repository and GPG key to the package manager before
