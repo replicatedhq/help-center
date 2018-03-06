@@ -1,6 +1,6 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Nginx"
+title: "Nginx Secrets"
 description: "An example mounting TLS certificates using Docker Swarm secrets"
 weight: "405"
 categories: [ "Replicated + Swarm Examples" ]
