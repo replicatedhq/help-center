@@ -102,14 +102,16 @@ config:
 {{< linked_headline "Certificate Verification" >}}
 
 `certificate_verify` – Test whether or not the supplied x509 certificate is valid. Optionally
-validate the key pair and hostname. Applies to a group of items. This command expects the
-certificate as the first argument with additional optional arguments private key and hostname.
-These arguments come from values entered by your customer into the config items within this
+validate the key pair, hostname and CA certificate. Applies to a group of items. This command expects the
+certificate as the first argument with additional optional arguments private key and hostname. If a CA cert is not 
+supplied and the certificate issuer is the same as the subject of the supplied certificate, it is treated as a 
+self-signed certificate. These arguments come from values entered by your customer into the config items within this
 group. The arguments, in expected order:
 
 1. x509 certificate
 1. Private key (optional)
 1. Hostname (optional)
+1. x509 CA certificate (optional)
 
 ```yaml
 config:
@@ -124,6 +126,7 @@ config:
     - ssl_cert
     - ssl_key
     - hostname
+    - ca_cert
   items:
   - name: hostname
 ```
