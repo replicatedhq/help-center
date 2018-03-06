@@ -7,6 +7,7 @@ categories: [ "Packaging a Kubernetes Application" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
+nextPage: "kubernetes/customer-installations/overview.md"
 ---
 
 The properties section of the YAML allows you to configure properties of the admin console.

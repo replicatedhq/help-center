@@ -33,7 +33,7 @@ cat ./kubernetes-init.sh | sudo bash -s airgap
 On the license properties page in the vendor portal, enable Airgap installations for this license and copy the download link. This URL is designed to be delivered to that customer. They will use this link to download
 current airgap packages when you promote a release. When they download new airgap packages to their server, it is important that your customer set the `--trust-server-names` and `--content-disposition` flags for `wget` or rename the file to something ending with `.airgap`.
 
-Your customer will need the `.airgap` package and the normal Replicated license (.rli) file. Be sure to download the license file *after* enabling the airgap feature on the license. Airgap-enabled licenses have more metadataembedded than non-airgap licenses. Airgap enabled licenses can be used to install in non-airgap mode, but non-airgap licenses cannot be used to install in airgap mode.
+Your customer will need the `.airgap` package and the normal Replicated license (.rli) file. Be sure to download the license file *after* enabling the airgap feature on the license. Airgap-enabled licenses have more metadata embedded than non-airgap licenses. Airgap enabled licenses can be used to install in non-airgap mode, but non-airgap licenses cannot be used to install in airgap mode.
 
 {{< linked_headline "Install Application" >}}
 
