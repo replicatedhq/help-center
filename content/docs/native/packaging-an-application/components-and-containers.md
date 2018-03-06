@@ -12,7 +12,7 @@ aliases: [/docs/packaging-an-application/components-and-containers/]
 The `components` section of the YAML defines how the containers will be created and started. A component is
 a group of one or more containers that are guaranteed to run on the same node.
 
-An example of a component using the common options is below. We've also create an example of a [component and container that uses every possible option in our examples](/docs/native/examples/every_component_option/).
+An example of a component using the common options is below. We've also create an example of a [component and container that uses every possible option in our examples](/docs/native/examples/every-component-option/).
 
 ```yaml
 components:
