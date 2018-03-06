@@ -12,7 +12,7 @@ icon: "replicatedKubernetes"
 
 # Create And Ship A Release
 
-When starting and learning the Replicated platform, the [Vendor Portal](https://vendor.replicated.com) will be the place you spend most of your time. This guide is designed to help you get familiar with the concepts and ideas that are important to successfully ship your application on Replicated. If you get stuck or need help, head to our [community](https://help.replicated.com/community).
+When starting and learning the Replicated platform, the [Vendor Portal](https://vendor.replicated.com) will be the place you spend most of your time. This guide is designed to help you get familiar with the concepts and ideas that are important to successfully ship your application on Replicated. If you get stuck or need help, head to our [community](https://help.replicated.com/community/).
 
 This guide will deploy one of the canonical Kubernetes applications using Replicated, and then iterate on it to ship an update. The guide isn't going to teach Kubernetes, but will start with a working Kubernetes application ([Guestbook all-in-one example](https://github.com/kubernetes/kubernetes/blob/master/examples/guestbook/all-in-one/guestbook-all-in-one.yaml)).
 
