@@ -6,7 +6,7 @@ weight: "305"
 keywords: "installing, removing"
 categories: [ "Managing Customer Installations" ]
 index: ["docs/native", "docs"]
-aliases: [docs/distributing-an-application/installing-manually]
+aliases: [/docs/distributing-an-application/installing-manually,/docs/native/packaging-an-application/installing-manually/]
 icon: "replicatedCircle"
 ---
 

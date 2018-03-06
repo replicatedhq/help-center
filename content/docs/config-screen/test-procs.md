@@ -5,7 +5,7 @@ description: "The config section of the Replicated YAML creates a dynamic settin
 weight: "304"
 categories: [ "Config Screen" ]
 index: "other"
-aliases: [/docs/packaging-an-application/test-procs/,/docs/native/packaging-an-application/test-procs/]
+aliases: [/docs/packaging-an-application/test-procs/,/docs/native/packaging-an-application/test-procs/,/docs/swarm/packaging-an-application/test-procs/]
 nextPage: "snapshots/overview.md"
 ---
 

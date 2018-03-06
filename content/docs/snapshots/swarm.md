@@ -5,7 +5,7 @@ description: "Configuring Snapshots on Docker Swarm"
 weight: "2205"
 categories: [ "Snapshots" ]
 index: "other"
-aliases: [/docs/packaging-an-application/swarm-snapshots/]
+aliases: [/docs/packaging-an-application/swarm-snapshots/,/docs/swarm/packaging-an-application/snapshots/]
 ---
 
 {{< linked_headline "Snapshots with Docker Swarm" >}}

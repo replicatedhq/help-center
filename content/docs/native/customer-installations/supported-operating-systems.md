@@ -6,7 +6,7 @@ keywords:  "operating system, os"
 weight: "303"
 categories: [ "Managing Customer Installation" ]
 index: ["docs/native", "docs"]
-aliases: [docs/distributing-an-application/supported-operating-systems]
+aliases: [docs/distributing-an-application/supported-operating-systems,/docs/native/packaging-an-application/supported-operating-systems/]
 icon: "replicatedCircle"
 ---
 

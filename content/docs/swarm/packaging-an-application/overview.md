@@ -80,7 +80,7 @@ cmds:
 
 {{< linked_headline "Monitors" >}}
 
-The Replicated Native Scheduler can include [CPU and memory monitors](/docs/swarm/packaging-an-application/default-monitors/) for any container without any code. The following YAML will show a CPU and a memory graph of the `redis` container on the Admin Console dashboard page.
+The Replicated Native Scheduler can include CPU and memory monitors for any container without any code. The following YAML will show a CPU and a memory graph of the `redis` container on the Admin Console dashboard page.
 
 ```yaml
 monitors:
@@ -124,4 +124,4 @@ images:
 ```
 
 
-There are other keys, not listed here, that are required to enable advanced functionality. To see more, [continue reading](/docs/swarm/packaging-an-application/supported-properties) or head to the [Docker Swarm examples](/docs/swarm/examples/).
+There are other keys, not listed here, that are required to enable advanced functionality. To see more, see the [Docker Swarm examples](/docs/swarm/examples/).
