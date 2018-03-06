@@ -119,7 +119,7 @@ components:
 
 {{< linked_headline "Monitors" >}}
 
-The Replicated Native Scheduler can include [CPU and memory monitors](/docs/native/packaging-an-application/default-monitors/) for any container without any code. The following YAML will show a CPU and a memory graph of the `redis` container on the Admin Console dashboard page.
+The Replicated Native Scheduler can include CPU and memory monitors for any container without any code. The following YAML will show a CPU and a memory graph of the `redis` container on the Admin Console dashboard page.
 
 ```yaml
 monitors:

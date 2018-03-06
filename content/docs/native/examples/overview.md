@@ -5,13 +5,13 @@ description: "The components section of the Replicated YAML defines how the cont
 weight: "401"
 categories: [ "Replicated Scheduler Examples" ]
 index: ["docs/native", "docs"]
-aliases: [docs/native/examples/,/categories/examples/]
+aliases: [/docs/native/examples/,/categories/examples/]
 icon: "replicatedCircle"
 hideFromList: true
 ---
 
 This section contains examples of shipping an application in Replicated using the Native Scheduler.
 
-- [Counter App](../counter-app): A simple example of an app that has nginx and redis using the Native Scheduler
-- [Load Balancer](../load-balancer-example): Adding a load balancer to the [counter app example](../counter-app)
-- [Every Component Option](../every-component-option): An example of a single container in the Native Scheduler that has every possible option set in YAML
+- [Counter App](/docs/native/examples/counter-app): A simple example of an app that has nginx and redis using the Native Scheduler
+- [Load Balancer](/docs/native/examples/load-balancer): Adding a load balancer to the [counter app example](../counter-app)
+- [Every Component Option](/docs/native/examples/every-component-option): An example of a single container in the Native Scheduler that has every possible option set in YAML

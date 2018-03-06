@@ -7,13 +7,14 @@ categories: [ "Packaging a Kubernetes Application" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
+aliases: [/docs/kubernetes/packaging-an-application/overview/]
 ---
 
 Replicated will deploy an application that is defined in a YAML spec. We currently support deploying an application that uses the Replicated scheduler or deploying a Kubernetes application. Understanding how each of these will be installed and maintained is an important consideration when choosing the scheduler to use to deploy your application.
 
 {{< linked_headline "Replicated Scheduler" >}}
 
-The Replicated scheduler is a propietary, mature container scheduler that supports the features required by enterprise customers. It was designed and built to enable your customer to install a complex application on one or a cluster of servers, without having to preinstall anything else. They can simply bring Linux servers that are compatible with Docker 1.7.1 or newer, and can deploy and manage your application on their servers. This scheduler supports [airgap installations](/docs/distributing-an-application/airgapped-installations) and many other features that enterprise users need. We recommend choosing the Replicated scheduler for most installations.
+The Replicated scheduler is a proprietary, mature container scheduler that supports the features required by enterprise customers. It was designed and built to enable your customer to install a complex application on one or a cluster of servers, without having to preinstall anything else. They can simply bring Linux servers that are compatible with Docker 1.7.1 or newer, and can deploy and manage your application on their servers. This scheduler supports [airgap installations](/docs/distributing-an-application/airgapped-installations) and many other features that enterprise users need. We recommend choosing the Replicated scheduler for most installations.
 
 Our YAML definition is stored in a public repo at [https://github.com/replicatedhq/libyaml/](https://github.com/replicatedhq/libyaml/).
 

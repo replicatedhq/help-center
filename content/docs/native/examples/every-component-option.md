@@ -8,6 +8,10 @@ index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 ---
 
+## Every Component Option
+
+This is an example YAML using every possible option on the native components specification.
+
 ```yaml
 components:
   - name: Worker

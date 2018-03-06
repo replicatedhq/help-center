@@ -130,6 +130,7 @@
                 {{ end }}
             </div>
             {{ end }}
+            {{ if or (eq $category "Snapshots") (eq $category "LDAP and Identity Integration") (eq $category "Config Screen") (eq $category "Knowledge Base") }}
             <div class="u-marginBottom--most">
               <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Config Screen</h3>
               {{ with .Site.GetPage "section" "docs" "config-screen" }}
@@ -161,7 +162,6 @@
                   {{ end }}
               {{ end }}
             </div>
-            {{ if or (eq $category "Snapshots") (eq $category "LDAP and Identity Integration") (eq $category "Config Screen") (eq $category "Knowledge Base") }}
             <div class="u-marginBottom--most">
                 <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Snapshots</h3>
                 {{ with .Site.GetPage "section" "docs" "snapshots" }}
