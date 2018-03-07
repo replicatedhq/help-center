@@ -11,8 +11,6 @@ icon: "replicatedKubernetes"
 
 Template functions are marked by the double curly bracket + *"repl"* escape sequence. They allow for user input to be dynamically inserted into application configuration values. The sequence should be `{{repl`, not `{{ repl`.
 
-Template functions that refer to your containers are always addressed in pairs with "component name" and "image name".  You should use the full image name as it appears in your container definition.
-
 ### Go Templates
 Replicated uses Go's [template engine](http://golang.org/pkg/text/template) to execute the following functions.  In addition to the functions listed here, all of the Go template runtime is available.  Please note that Go template functions must still be escaped with "repl" escape sequence as demonstrated below.
 
@@ -70,93 +68,6 @@ ports:
      port_type: tcp
      when: '{{repl ConfigOptionNotEquals "http_enabled" "1" }}'
 ```
-
-{{< template_function name="NodePrivateIPAddress" replicated="true" kubernetes="false" swarm="false" >}}
-```go
-func NodePrivateIPAddress(componentName string, imageName string) string
-```
-Returns Private IP Address of a given Component as a string.
-
-```yaml
-env_vars:
-- name: REDIS_HOST_PRIVATE
-  value: '{{repl NodePrivateIPAddress "DB" "redis" }}'
-```
-Replaces HostPrivateIpAddress which is deprecated.
-
-{{< template_function name="NodePrivateIPAddressFirst" replicated="true" kubernetes="false" swarm="false" >}}
-```go
-func NodePrivateIPAddressFirst(componentName string, imageName string) string
-```
-Returns the first node's Private IP Address of a given Component as a string.
-
-{{< template_function name="NodePrivateIPAddressAll" replicated="true" kubernetes="false" swarm="false" >}}
-```go
-func NodePrivateIPAddressAll(componentName string, imageName string) []string
-```
-Returns node private IP addresses for all instances of a given Component as an array of strings.
-Replaces HostPrivateIpAddressAll which is deprecated.
-
-Note: `ContainerExposedPortAll`, `NodePrivateIPAddressAll`, `NodePublicIPAddressAll` are guaranteed to return in the same order
-
-{{< template_function name="NodePublicIPAddress" replicated="true" kubernetes="false" swarm="false" >}}
-```go
-func NodePublicIPAddress(componentName string, imageName string) string
-```
-Returns Public IP Address of a given Component as a string.
-```yaml
-env_vars:
-- name: REDIS_HOST_PUBLIC
-  value: '{{repl NodePublicIPAddress "DB" "redis" }}'
-```
-Replaces HostPublicIpAddress which is deprecated.
-
-{{< template_function name="NodePublicIPAddressFirst" replicated="true" kubernetes="false" swarm="false" >}}
-```go
-func NodePublicIPAddressFirst(componentName string, imageName string) string
-```
-Returns first node's public IP addresses for a given Component as a string.
-
-{{< template_function name="NodePublicIPAddressAll" replicated="true" kubernetes="false" swarm="false" >}}
-```go
-func NodePublicIPAddressAll(componentName string, imageName string) []string
-```
-Returns node public IP addresses for all instances of a given Component as an array of strings.
-Replaces HostPublicIpAddressAll which is deprecated.
-
-Note: `ContainerExposedPortAll`, `NodePrivateIPAddressAll`, `Node PublicIPAddressAll` are guaranteed to return in the same order
-
-{{< template_function name="ContainerExposedPort" replicated="true" kubernetes="false" swarm="false" >}}
-```go
-func ContainerExposedPort(componentName string, imageName string, internalPort string) string
-```
-Returns the node's public port mapped to the supplied exposed container port as a string.
-
-```yaml
-env_vars:
-- name: REDIS_PORT
-  value: '{{repl ContainerExposedPort "DB" "redis" "6379" }}'
-```
-
-{{< template_function name="ContainerExposedPortFirst" replicated="true" kubernetes="false" swarm="false" >}}
-```go
-func ContainerExposedPortFirst(componentName string, imageName string, internalPort string) string
-```
-Returns the first node's public port mapped to the supplied exposed container port as a string.
-
-```yaml
-env_vars:
-- name: REDIS_PORT
-  value: '{{repl ContainerExposedPortFirst "DB" "redis" "6379" }}'
-```
-
-{{< template_function name="ContainerExposedPortAll" replicated="true" kubernetes="false" swarm="false" >}}
-```go
-func ContainerExposedPortAll(componentName string, imageName string, internalPort string) string
-```
-Returns the node public port mapped to the supplied exposed container port for all instances of a given Component as an array of strings.
-
-Note: `ContainerExposedPortAll`, `NodePrivateIPAddressAll`, `NodePublicIPAddressAll` are guaranteed to return in the same order
 
 {{< template_function name="LicenseFieldValue" replicated="true" kubernetes="true" swarm="true" >}}
 ```go
@@ -304,49 +215,6 @@ Returns a bool indicating if the value is the currently applied value for Consol
 func ConsoleSettingNotEquals(name string, value string) bool
 ```
 Returns a bool indicating if the value is not the currently applied value for ConsoleSetting with name.
-
-{{< template_function name="ThisHostInterfaceAddress" replicated="true" kubernetes="false" swarm="false" >}}
-Deprecated, please use ThisNodePublicIPAddress, ThisNodePrivateIPAddress or ThisNodeDockerAddress instead.
-```go
-func ThisHostInterfaceAddress(interfaceName string) string
-```
-Returns the valid IPv4 address associated with the given network interface of the host on which the current container instance is deployed as a string. For a clustered application this value will be different for each host.
-```yaml
-env_vars:
-- name: CASSANDRA_BROADCAST_ADDRESS_INTERNAL
-  value: '{{repl ThisHostInterfaceAddress "docker0" }}'
-```
-
-{{< template_function name="ThisNodePublicIPAddress" replicated="true" kubernetes="false" swarm="false" >}}
-```go
-func ThisNodePublicIPAddress() string
-```
-Returns the public IP address of the host on which the current container instance is deployed as a string. For a clustered application this value will be different for each host.
-```yaml
-env_vars:
-- name: CASSANDRA_ADDRESS_PUBLIC
-  value: '{{repl ThisNodePublicIPAddress }}'
-```
-Replaces ThisHostPublicIpAddress which is deprecated.
-
-{{< template_function name="ThisNodePrivateIPAddress" replicated="true" kubernetes="false" swarm="false" >}}
-```go
-func ThisNodePrivateIPAddress() string
-```
-Returns the private IP address of the host on which the current container instance is deployed as a string. This address is either what was entered manually when host was provisioned or detected from eth0 interface by default. For a clustered application this value will be different for each host.
-```yaml
-env_vars:
-- name: CASSANDRA_BROADCAST_ADDRESS_INTERNAL
-  value: '{{repl ThisNodePrivateIPAddress }}'
-```
-Replaces ThisHostPrivateIpAddress which is depreciated.
-
-{{< template_function name="ThisNodeDockerAddress" replicated="true" kubernetes="false" swarm="false" >}}
-```go
-func ThisNodeDockerAddress() string
-```
-Returns the docker0 address on the host on which the current container instance is deployed.
-For a clustered application this value will be different for each host.
 
 {{< template_function name="LDAPCopyAuthFrom" replicated="true" kubernetes="true" swarm="true" >}}
 ```go
@@ -643,18 +511,6 @@ properties:
   app_url: '{{repl IngressAddress "frontend" 80 }}'
 ```
 
-{{< template_function name="SwarmIngressAddress" replicated="false" kubernetes="false" swarm="true" >}}
-```go
-SwarmIngressAddress() string
-```
-
-SwarmIngressAddress returns the ingress address of the swarm cluster.
-
-```yaml
-properties:
-  app_url: '{{repl SwarmIngressAddress }}'
-```
-
 {{< template_function name="PremkitAPIAddress" replicated="false" kubernetes="true" swarm="true" >}}
 ```go
 PremkitAPIAddress() string
@@ -662,46 +518,12 @@ PremkitAPIAddress() string
 
 PremkitAPIAddress returns the address of the Premkit service in the cluster.
 
-```yaml
-spec:
-  containers:
-  - name: myservice
-    image: mycompany/myservice:1.0
-    env:
-    - name: REPLICATED_INTEGRATIONAPI
-      value: {{repl PremkitAPIAddress }}
-```
-
-{{< template_function name="PremkitNetworkName" replicated="false" kubernetes="false" swarm="true" >}}
-```go
-PremkitNetworkName() string
-```
-
-PremkitNetworkName returns the name of the premkit docker network.
-
 {{< template_function name="StatsdAddress" replicated="false" kubernetes="true" swarm="true" >}}
 ```go
 StatsdAddress() string
 ```
 
 StatsdAddress returns the address of the Statsd service in the cluster.
-
-```yaml
-spec:
-  containers:
-  - name: myservice
-    image: mycompany/myservice:1.0
-    env:
-    - name: REPLICATED_STATSD_ADDRESS
-      value: {{repl StatsdAddress }}
-```
-
-{{< template_function name="StatsdNetworkName" replicated="false" kubernetes="false" swarm="true" >}}
-```go
-StatsdNetworkName() string
-```
-
-StatsdNetworkName returns the name of the Statsd docker network.
 
 ## Notes
 

@@ -21,7 +21,7 @@ There are three types of custom preflight checks:
 
 - Run a preflight check using your own container - see [scheduler](#scheduler)
 - Run a shell script using ubuntu trusty - see [raw](#raw)
-- Use a common preflight check - see [disk_space_available](#disk-space-available), [disk_space_total](#disk-space-total), [port_available](#port-available), [tcp_dial](#tcp-dial)
+- Use a common preflight check - see [api_version](#api-version), [cluster_size](#cluster-size), [no_restore_in_progress](#no-restore-in-progress), [server_version](#server-version), [total_cores](#total-cores), [total_memory](#total-memory), [volume_claim_bound](#volume-claim-bound), [volume_claims](#volume-claims).
 
 # Commands
 
@@ -137,217 +137,21 @@ custom_requirements:
         options: ["ro"]
 ```
 
-{{< linked_headline "Disk Space Available" >}}
+- Use a common preflight check - see [api_version](#api-version), [cluster_size](#cluster-size), [no_restore_in_progress](#no-restore-in-progress), [server_version](#server-version), [total_cores](#total-cores), [total_memory](#total-memory), [volume_claim_bound](#volume-claim-bound), [volume_claims](#volume-claims).
 
-The disk space available command will return the disk space available in bytes. Note that the
-result is always a string and must be parsed (e.g. `{{repl .Result | ParseFloat | lt 1e+9 }}` or
-`{{repl .Result | ParseFloat | HumanSize }}`). The clustering and tags properties will determine
-where the command is run. If cluster is *false* the command will run on all nodes in the
-cluster.
+{{< linked_headline "API Version" >}}
 
-**Id:** `disk_space_available`
+{{< linked_headline "Cluster Size" >}}
 
-**Status Codes:** 1, 22, 62 [*](#status-codes)
+{{< linked_headline "No Restore in Progress" >}}
 
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| dir | string | yes | The directory to check |
-| cluster | string | no | Is clustering enabled (evaluated to a boolean value) |
-| tags | array[string] | no | Determines nodes where the check is performed when cluster=true |
-| conflicts | array[string] | no | Skips nodes with the tag when cluster=true |
+{{< linked_headline "Server Version" >}}
 
-### Example
+{{< linked_headline "Total Memory" >}}
 
-```yaml
-custom_requirements:
-- id: disk-space-available-mysql
-  message: Mysql data directory has sufficient disk space
-  details: The /data/mysql directory must have at least 8GB of disk space available.
-  when: '{{repl eq AppVersion AppVersionFirst }}' # initial install only
-  results:
-  - status: success
-    message: Directory /data/mysql has enough space available
-    condition:
-      status_code: 0 # and
-      bool_expr: '{{repl Trim .Result | ParseFloat | lt 8e9 }}' # 8GB
-  - status: error
-    message:
-      default_message: Directory /data/mysql has {{.bytes}} space available. Please increase disk space to at least 8GB.
-      args:
-        bytes: '{{repl ParseFloat .Result | HumanSize }}'
-    condition:
-      status_code: 0
-  - status: warn
-    message:
-      default_message: 'Invalid status code {{.status}}. ERROR: {{.error}}'
-      args:
-        status: '{{repl .StatusCode }}'
-        error: '{{repl .Error }}'
-    # else error
-  command:
-    id: disk_space_available
-    data:
-      cluster: true
-      tags: ["db"]
-      dir: /data/mysql
-```
+{{< linked_headline "Volume Claim Bound" >}}
 
-{{< linked_headline "Disk Space Total" >}}
-
-The disk space total command will return the disk space available in bytes. Note that the result is
-always a string and must be parsed (e.g. `{{repl .Result | ParseFloat | lt 1e+9 }}` or
-`{{repl .Result | ParseFloat | HumanSize }}`). The clustering and tags properties will determine
-where the command is run. If cluster is *false* the command will run on all nodes in the
-cluster.
-
-**Id:** `disk_space_total`
-
-**Status Codes:** 1, 22, 62 [*](#status-codes)
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| dir | string | yes | The directory to check |
-| cluster | string | no | Is clustering enabled (evaluated to a boolean value) |
-| tags | array[string] | no | Determines nodes where the check is performed when cluster=true |
-| conflicts | array[string] | no | Skips nodes with the tag when cluster=true |
-
-### Example
-
-```yaml
-custom_requirements:
-- id: disk-space-total-mysql
-  message: Mysql data directory has sufficient disk space
-  details: The /data/mysql directory must have at least 8GB of disk space total.
-  when: '{{repl ne AppVersion AppVersionFirst }}' # upgrade only
-  results:
-  - status: success
-    message: Directory /data/mysql has enough space total
-    condition:
-      status_code: 0 # and
-      bool_expr: '{{repl Trim .Result | ParseFloat | lt 8e9 }}' # 8GB
-  - status: error
-    message:
-      default_message: Directory /data/mysql has {{.bytes}} space total. Please increase disk space to at least 8GB.
-      args:
-        bytes: '{{repl ParseFloat .Result | HumanSize }}'
-    condition:
-      status_code: 0
-  - status: warn
-    message:
-      default_message: 'Invalid status code {{.status}}. ERROR: {{.error}}'
-      args:
-        status: '{{repl .StatusCode }}'
-        error: '{{repl .Error }}'
-    # else error
-  command:
-    id: disk_space_total
-    data:
-      cluster: true
-      tags: ["db"]
-      dir: /data/mysql
-```
-
-{{< linked_headline "Port Available" >}}
-
-The port available command will determine whether the port and ip are available for use. Status
-code 98 (address already in use) will be returned when unable to bind to the address. The
-clustering and tags properties will determine where the command is run. If cluster is *false*
-the command will run on all nodes in the cluster.
-
-**Id:** `port_available`
-
-**Status Codes:** 1, 22, 62, 98 [*](#status-codes)
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| port | string | yes | The port to check |
-| proto | string | no | The protocol, one of `tcp` (default) or `udp` |
-| ip | string | no | The ip to bind to, defaults to 0.0.0.0 (will take precedence over interface if set) |
-| interface | string | no | The interface to bind to |
-| cluster | string | no | Is clustering enabled (evaluated to a boolean value) |
-| tags | array[string] | no | Determines nodes where the check is performed when cluster=true |
-| conflicts | array[string] | no | Skips nodes with the tag when cluster=true |
-
-### Example
-
-```yaml
-custom_requirements:
-- id: port-available-lb-80
-  message: Load balancer port is available
-  when: '{{repl eq AppVersion AppVersionFirst }}' # only on first install
-  details: Port 80 must be available for the load balancer.
-  results:
-  - status: success
-    message: Port 80 is available
-    condition:
-      status_code: 0
-  - status: error
-    message: Port 80 is not available
-    condition:
-      status_code: 98
-  - status: warn
-    message:
-      default_message: 'Invalid status code {{.status}}. ERROR: {{.error}}'
-      args:
-        status: '{{repl .StatusCode }}'
-        error: '{{repl .Error }}'
-    # else error
-  command:
-    id: port_available
-    data:
-      port: '80'
-      ip: '{{repl ThisNodePublicIPAddress }}'
-      cluster: true
-      tags: ["lb"]
-```
-
-{{< linked_headline "TCP Dial" >}}
-
-The tcp dial command will determine whether a connection can be made over tcp to the address
-specified. Status code 111 (connection refused) will be returned when unable to connect to the
-address. The clustering and tags properties will determine where the command is run. If cluster is
-*false* the command will run **only** on the local node.
-
-**Id:** `tcp_dial`
-
-**Status Codes:** 1, 22, 62, 111 [*](#status-codes)
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| addr | string | yes | The address to connect to |
-| cluster | string | no | Is clustering enabled (evaluated to a boolean value) |
-| tags | array[string] | no | Determines nodes where the check is performed when cluster=true |
-| conflicts | array[string] | no | Skips nodes with the tag when cluster=true |
-
-### Example
-
-```yaml
-custom_requirements:
-- id: tcp-dial-github
-  message: Can access github.com
-  details: Can connect to the address github.com:443.
-  results:
-  - status: success
-    message: Successful connection to the address github.com:443.
-    condition:
-      status_code: 0
-  - status: error
-    message: Failed to connect to the address github.com:443.
-    condition:
-      status_code: 111
-  - status: warn
-    message:
-      default_message: 'Invalid status code {{.status}}. ERROR: {{.error}}'
-      args:
-        status: '{{repl .StatusCode }}'
-        error: '{{repl .Error }}'
-    # else error
-  command:
-    id: tcp_dial
-    data:
-      addr: 'github.com:443'
-      cluster: false
-```
+{{< linked_headline "Volume Claims" >}}
 
 # Resource Specification
 

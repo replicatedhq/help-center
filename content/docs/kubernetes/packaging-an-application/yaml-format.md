@@ -20,7 +20,7 @@ Our YAML definition is stored in a public repo at [https://github.com/replicated
 
 {{< linked_headline "Swarm Scheduler" >}}
 
-More recent versions of the Docker Engine include swarm mode for natively scheduling containers across a cluster of Docker Engines called a swarm. Replicated supports Docker version 13.1 or greater and the Swarm scheduler. A Docker Compose version 3 YAML is required to distribute your application in swarm mode. We recommend choosing the Docker Swarm scheduler if you have existing Compose YAML and if your customer does not require a Linux distribution without support for newer Docker versions.
+More recent versions of the Docker Engine include swarm mode for natively scheduling containers across a cluster of Docker Engines called a swarm. Replicated supports Docker version 17.03 or greater and the Swarm scheduler. A Docker Compose version 3 YAML is required to distribute your application in swarm mode. We recommend choosing the Docker Swarm scheduler if you have existing Compose YAML and if your customer does not require a Linux distribution without support for newer Docker versions.
 
 {{< linked_headline "Kubernetes Scheduler" >}}
 
@@ -134,28 +134,6 @@ custom_metrics:
   xfiles_factor: 0.6
 ```
 
-{{< linked_headline "Ready State" >}}
-
-(Note: The Ready State is only compatible with the Replicated scheduler. To learn how Replicated starts a Kubernetes application, see the detail in the [Kubernetes](/docs/packaging-an-application/kubernetes) document).
-
-You can add a health check that Replicated will poll after your containers have all been started. The purpose of this is to report when your application is fully running and ready to start using. Once your application is running, we stop polling this health check and rely on other methods to monitor the status. The timeout parameter allows you to specify (in seconds) how long to keep retrying the command, if it fails. You can use a timeout value of -1 to indicate infinite polling. A timeout of 0 is not supported and causes the default of 10 minutes to be used.
-
-{{< version version="2.7.0" >}} You can specify an optional third argument to set the HTTP timeout. Replicated will use a default timeout of 5 seconds if not specified.
-
-### Available Commands:
-- `http_status_code`
-- `tcp_port_accept`
-
-```yaml
-state:
-  ready:
-    command: http_status_code
-    args:
-    - 'http://{{repl NodePublicIPAddress "My Component" "my-web-container" }}/ping'
-    - '200'
-    - '5'
-    timeout: 900
-```
 
 {{< linked_headline "Customer Config Section" >}}
 
