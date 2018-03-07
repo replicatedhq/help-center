@@ -68,7 +68,13 @@
   top: 4px;
   left: -1px;
 }
-
+.scheduler-type li.u-commandPromptBlueDark::before {
+  background-position: -186px -128px;
+  width: 29px;
+  height: 23px;
+  top: 3px;
+  left: 0;
+}
 .scheduler-type li.u-ymlBlueDark::before {
   background-position: -152px -30px;
   width: 25px;
