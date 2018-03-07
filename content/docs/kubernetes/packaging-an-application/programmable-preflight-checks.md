@@ -1,19 +1,18 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Preflight Checks"
-description: "A guide to implementing the Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
-weight: "608"
-categories: [ "Packaging a Swarm Application" ]
-index: ["docs/swarm", "docs"]
-icon: "replicatedDockerSwarm"
-gradient: "swarm"
+title: "Programmable Preflight Checks"
+description: "A guide to implementing Programmable Preflight Checks to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
+weight: "2608"
+categories: [ "Packaging a Kubernetes Application" ]
+index: ["docs/kubernetes", "docs"]
+gradient: "kubernetes"
+icon: "replicatedKubernetes"
+aliases: [/docs/packaging-an-application/preflight-checks-k8s/,/docs/kubernetes/packaging-an-application/preflight-checks]
 ---
 
 A preflight check is a test that is run before installing and running an application.  The test will analyze the system to determine if the environment meets the minimum requirements.
 
-The preflight check may be manually run for an existing installation by visiting:
-
-- `https://[your server address]:8800/run-checks`
+The preflight check may be manually run for an existing installation by visiting https://&lt;your server address&gt;:8800/run-checks
 
 By default, Replicated automatically adds preflight checks for:
 
@@ -27,7 +26,9 @@ By default, Replicated automatically adds preflight checks for:
 | TCP Ports (Replicated services) | 9870-9880 on docker0 |
 | Outbound internet access (if required) | Replicated APIs, external registries |
 
-Additionally, it's recommended to specify additional system requirements in the `host_requirements` section of the application YAML. These host requirements will apply to single node installs, as well as each node on distributed installs.
+Additionally, it's recommended to specify additional system requirements in the `host_requirements` section of the
+application YAML. These host requirements will apply to single node installs, as well as each node on distributed
+installs.
 
 ```yaml
 name: My Counter App
@@ -42,9 +43,8 @@ host_requirements:
 
 {{< version version="2.3.0" >}} The application level `host_requirements` key can be used to automatically upgrade Replicated.  This feature can be enabled by specifying a version range in the the `replicated_version` key.  Version range syntax is similar to that used by [npm](https://docs.npmjs.com/misc/semver).  Versions that don't support this feature will simply ignore the value.  This key is also ignored by the pre-flight checks.
 
-`docker_version` refers to the lowest acceptable version of docker on the host. Any host running a docker version at or above this value will meet the requirement.
-
-Replicated enforces these requirements and will not allow the customer to start the application without either meeting these requirements or dismissing the warnings. Upon dismissing preflight warnings, an entry will be recorded in the on-premise audit log.
+Replicated enforces these requirements and will not allow the customer to start the application without either meeting these requirements or
+dismissing the warnings. Upon dismissing preflight warnings, an entry will be recorded in the on-premise audit log.
 
 ![Preflight Checks Screenshot](/images/post-screens/preflight-checks.png)
 
