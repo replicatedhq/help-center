@@ -52,7 +52,6 @@ jobs:
             # google-site-verification file is not needed on staging
             cd ..
             cp ${SRC_DIR}/build/* ./
-            sed -i -e 's/HELPCENTER_BASE_URL/https\:\/\/help.staging.replicated.com/g' ./nginx.conf
             docker build -t ${PROJECT_NAME}:${CIRCLE_SHA1:0:7} .
 
             export AWS_ACCESS_KEY_ID=$STAGING_AWS_ACCESS_KEY_ID
@@ -81,7 +80,6 @@ jobs:
             hugo -s ${SRC_DIR} -d ${DST_DIR} -b "https://help.replicated.com/"
             cd ..
             cp ${SRC_DIR}/build/* ./
-            sed -i -e 's/HELPCENTER_BASE_URL/https\:\/\/help.replicated.com/g' ./nginx.conf
             mv google8b98ed0b455f3b19.html ${DST_DIR}
             docker build -t ${PROJECT_NAME}:${CIRCLE_SHA1:0:7} .
 
