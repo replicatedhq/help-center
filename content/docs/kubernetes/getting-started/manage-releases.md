@@ -1,85 +1,30 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Create & Manage Releases"
-description: "How to push and access private images in Replicated's hosted private registry"
-weight: "2506"
+description: "An introduction to the release channel management workflow for development on the Replicated platform."
+weight: "2507"
 categories: [ "Shipping With Kubernetes" ]
 index: ["docs/kubernetes", "docs"]
-gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-When building your application, you have the option to use the Replicated private registry, or any supported external private or public registry.
+{{< linked_headline "Create Releases" >}}
 
-{{< linked_headline "Replicated Registry" >}}
+The [Replicated vendor portal](https://vendor.replicated.com) provides you with a location to create and release versions of your application to various release channels. The vendor portal hosts a built-in YAML editor and linter to help you write and validate YAML.
 
-Every application created in Replicated has a completely isolated, private Docker registry available. You can push images to your private registry by finding the endpoint at (https://vendor.replicated.com/#/images) and using the Docker CLI to tag and push images. When using the Swarm Scheduler, Replicated will be able to automatically use the customer license file to authenticate and pull any images from the Replicated Registry.
+{{< linked_headline "Promoting Releases" >}}
 
-{{< linked_headline "Tagging Images" >}}
+Once a release is ready to be installed, the release can be promoted to one or more release channels. More details can be found in our [Promote Releases](/docs/native/packaging-an-application/promote-releases/) documentation.
 
-The first thing you will need to do is tag your image. Replicated accepts images in the standard Docker format: `registry.replicated.com/<application-slug>/<image-name>:<version>`. You can find your application slug on the Images page of the [Replicated Vendor Portal](https://vendor.replicated.com/#/images).
+{{< linked_headline "Manage Release Channels" >}}
 
-An example of tagging an existing image is:
+By default, there are 3 release channels: Stable, Beta and Unstable. When you first log in to Replicated and select the Channels tab, you'll see these default release channels created. You can delete, edit or create new channels at any time. The channels we create by default are commonly used:
 
-```shell
-$ sudo docker tag worker registry.replicated.com/myapp/worker:1.0.1
-```
+### Unstable
+The Unstable channel is designed for you to constantly push releases to, much in the same way that you continuously deploy new versions to your cloud product. This is the channel that your development environment should have a license assigned to. This channel is designed to be internal and for testing, not for your customers to be licensed against.
 
-{{< linked_headline "Logging In" >}}
+### Beta
+The Beta channel is created for release candidates and early adopting customers. We recommend you promote a release to the Beta channel once it's passed automated testing in the Unstable channel. You can also choose to license some early-adopting customers against this channel.
 
-Next you will need to log into the Replicated private registry with your account credentials. When prompted, you will use your email address for your username.
-
-```shell
-$ sudo docker login registry.replicated.com
-Username: my@mycompany.com
-Password: <your password>
-Login Succeeded
-```
-
-{{< linked_headline "Pushing Images" >}}
-
-Finally you can push your image to the Replicated private registry.
-
-```shell
-$ sudo docker push registry.replicated.com/myapp/worker:1.0.1
-The push refers to a repository [registry.replicated.com/myapp/worker] (len: 1)
-Sending image list
-Pushing repository registry.replicated.com/myapp/worker (1 tags)
-07595b42e5d5: Image successfully pushed
-f9910c2fd14a: Image successfully pushed
-4f409c5d1046: Image successfully pushed
-8e471642d573: Image successfully pushed
-Pushing tag for rev [8e471642d573] on {https://registry.replicated.com/v1/repositories/myapp/worker/tags/1.0.1}
-```
-
-For additional information on building, tagging and pushing docker images, please refer to the
-[Docker CLI Documentation](https://docs.docker.com/engine/reference/commandline/cli/).
-
-{{< linked_headline "Using External Registries" >}}
-
-When using Docker Swarm, Replicated supports pulling public, unauthenticated images from any Docker registry that supports the standard [Docker Registry HTTP API](https://docs.docker.com/registry/spec/api/).
-
-Additionally, Replicated supports private images hosted in other registries including Docker Hub, Quay.io and more. Currently, Replicated does not support private images in Amazon Elastic Container Registry because of the short-lived auth scheme in use. When using external private registries,
-
-To use private images from an external registry, you need to add the registry via the Vendor website. The guide for [integrating a third party registry](/docs/kb/developer-resources/third-party-registries) explains this in further detail.
-
-{{< linked_headline "Referencing Images from the Replicated Registry" >}}
-
-Images stored in the Replicated private registry can be accessed by adding a static `imagePullSecret` to any container definition that references a private image. Replicated will automatically create a secret named `replicatedregistrykey` and deploy it with your application. Referencing this secret will make your private images available on the target cluster.
-
-{{< linked_headline "Referencing External Images" >}}
-
-All external (to Replicated) images included in your Kubernetes application must be specified in the `images` section of your YAML in order to be included in the airgap bundle your customer will download and install.
-
-```yaml
-images:
-- source: mythirdpartyprivateregistry
-  name: namespace/imagename
-  tag: 2.0.0
-- source: public
-  name: redis
-  tag: 3.2-alpine
-- source: public
-  name: postgres
-  tag: 9.4
-```
+### Stable
+For most of your customers, you will create a license that assigns them to the Stable channel. By doing so, they'll only receive updates when you push a new version to this channel.

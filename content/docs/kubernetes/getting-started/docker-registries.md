@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Docker Registries"
 description: "How to push and access private images in Replicated's hosted private registry."
-weight: "2505"
+weight: "2506"
 categories: [ "Shipping With Kubernetes" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
@@ -13,7 +13,7 @@ When building your application, you have the option to use the Replicated privat
 
 {{< linked_headline "Replicated Registry" >}}
 
-Every application created in Replicated has a completely isolated, private Docker registry available. You can push images to your private registry by finding the endpoint at (https://vendor.replicated.com/#/images) and using the Docker CLI to tag and push images. When using the Swarm Scheduler, Replicated will be able to automatically use the customer license file to authenticate and pull any images from the Replicated Registry.
+Every application created in Replicated has a completely isolated, private Docker registry available. You can push images to your private registry by finding the endpoint at (https://vendor.replicated.com/#/images) and using the Docker CLI to tag and push images. When using the Kubernetes Scheduler, Replicated will be able to automatically use the customer license file to authenticate and pull any images from the Replicated Registry.
 
 {{< linked_headline "Tagging Images" >}}
 
@@ -57,13 +57,19 @@ For additional information on building, tagging and pushing docker images, pleas
 
 {{< linked_headline "Using External Registries" >}}
 
-When using Docker Swarm, Replicated supports pulling public, unauthenticated images from any Docker registry that supports the standard [Docker Registry HTTP API](https://docs.docker.com/registry/spec/api/).
+Replicated supports pulling public, unauthenticated images from any Docker registry that supports the standard [Docker Registry HTTP API](https://docs.docker.com/registry/spec/api/).
 
 Additionally, Replicated supports private images hosted in other registries including Docker Hub, Quay.io and more. Currently, Replicated does not support private images in Amazon Elastic Container Registry because of the short-lived auth scheme in use. When using external private registries,
 
 To use private images from an external registry, you need to add the registry via the Vendor website. The guide for [integrating a third party registry](/docs/kb/developer-resources/third-party-registries) explains this in further detail.
 
-All images included in your Swarm application must be specified in the `images` section of your YAML in order to be included in the airgap bundle your customer will download and install.
+{{< linked_headline "Referencing Images from the Replicated Registry" >}}
+
+Images stored in the Replicated private registry can be accessed by adding a static `imagePullSecret` to any container definition that references a private image. Replicated will automatically create a secret named `replicatedregistrykey` and deploy it with your application. Referencing this secret will make your private images available on the target cluster.
+
+{{< linked_headline "Referencing External Images" >}}
+
+All external (to Replicated) images included in your Kubernetes application must be specified in the `images` section of your YAML in order to be included in the airgap bundle your customer will download and install.
 
 ```yaml
 images:

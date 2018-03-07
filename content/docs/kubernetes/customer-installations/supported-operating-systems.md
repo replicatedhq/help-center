@@ -16,9 +16,6 @@ Your machine must support docker-engine {{< kubernetes_docker_version_minimum >}
 
 Replicated provides an easy install script to work with the the following list of operating system.
 
-- Debian 7.7+
 - Ubuntu 16.04
-- Fedora 22
-- Red Hat Enterprise Linux 7.2+
-- CentOS 7+
-- Amazon Linux 2017.03
+- Red Hat Enterprise Linux 7.4
+- CentOS 7
