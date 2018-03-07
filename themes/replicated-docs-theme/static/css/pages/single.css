@@ -240,7 +240,7 @@
   border: 1px solid lightgray;
   position: absolute;
   width: 100%;
-  bottom: -148px;
+  bottom: -140px;
   background: #fff;
   box-sizing: border-box;
   z-index: 2;
@@ -254,8 +254,9 @@
   pointer-events: none;
 }
 
-.sidebar .scheduler-menu-item a:hover {
-  color: #2A98CB;
+.sidebar .scheduler-menu-item:hover {
+  background: rgba(163, 211, 233, .2);
+  border-radius: 2px;
 }
 
 .sidebar #dropdown-link .icon {
@@ -304,7 +305,7 @@
   top: 4px;
 }
 .page-content .admonition.warning p.admonition-title::before {
-  background-position: -70px -154px;
+  background-position: -72px -158px;
   width: 18px;
   height: 17px;
 }
