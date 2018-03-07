@@ -17,9 +17,8 @@ flexibility to the point that an arbitrary command can be executed by a vendor p
 the [commands section](#commands) below for a full list of commands that may be run including
 examples.
 
-There are three types of custom preflight checks:
+There are two types of custom preflight checks:
 
-- Run a preflight check using your own container - see [scheduler](#scheduler)
 - Run a shell script using ubuntu trusty - see [raw](#raw)
 - Use a common preflight check - see [api_version](#api-version), [cluster_size](#cluster-size), [no_restore_in_progress](#no-restore-in-progress), [server_version](#server-version), [total_cores](#total-cores), [total_memory](#total-memory), [volume_claim_bound](#volume-claim-bound), [volume_claims](#volume-claims).
 
@@ -28,68 +27,6 @@ There are three types of custom preflight checks:
 Commands will be run to determine the status of a requirement. They return result messages, a
 status code and an error. Next we will look at examples. For details on the fields please see the
 [resource specification](#resource-specification) section at the bottom of the page.
-
-{{< linked_headline "Scheduler" >}}
-
-The scheduler command references a container in the components section of the yaml. Standard out
-and standard error will be captured and returned via the result message. Any exit code as a result
-of the container will be returned via the status code of the command. When the container cannot be
-run due to an error, an error will be returned. The container will be run on the nodes as specified
-by the component section of the container yaml.
-
-**Id:** `scheduler`
-
-**Status Codes:** 1, 22, 62 [*](#status-codes)
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| source | ReplicatedSchedulerSource<br />`{component: string, container: string}` | yes | A component and container reference |
-| cmd | string | no | Optionally override the container cmd |
-| config_files | array[ConfigFile] | no | {{< version version="2.7.0" >}} Additional config files to mount as volumes in the container |
-| entrypoint | array[string] | no | Optionally override the container entrypoint |
-| ports | array[ExposedPort] | no | Optionally override the container exposed ports |
-
-### Example
-
-```yaml
-custom_requirements:
-- id: check-schema-version
-  message: Database schema is at the correct version
-  details: The database schema must be at version 2
-  when: '{{repl eq AppVersionCurrent 2 }}' # only when upgrading from app version 2
-  results:
-  - status: success # error, warn, success
-    message: Schema is at version 2
-    condition: # error, status_code, bool_expr
-      status_code: 0 # and
-      bool_expr: '{{repl Trim .Result | eq "2" }}' # template vars .StatusCode, .Result, .Results, .Error
-  - status: error
-    message: # it is possible to localize these messages
-      id: custom_requirements[check-schema-version].results[1] # this is the default message id
-      default_message: Schema is at incorrect version {{.version}}. Please upgrade your schema to version 2.
-      args:
-        version: '{{repl Trim .Result }}'
-    condition: # error, status_code, bool_expr
-      status_code: 0
-  - status: warn
-    message:
-      default_message: Unexpected status {{.status_code}}
-      args:
-        status_code: '{{repl .StatusCode }}'
-    # if no error: true condition is specified the check will fallback to the default error message
-  command:
-    id: scheduler
-    timeout: 30 # in seconds, default to 15, -1 == no timeout
-    data:
-      component: DB # the component and container from the components section of the yaml
-      container: mysql
-      cmd: "[\"sh\", \"-c\", \"'exec mysql -h {{repl ThisNodePrivateIPAddress }} -u myuser -p {{repl ConfigOption \"mysql_pass\" }} yourdatabase < /opt/check-schema-version.sql'\"]"
-      config_files:
-      - filename: /opt/check-schema-version.sql
-        contents: |
-          select version from schema limit 1;
-      ports: [] # override scheduler container properties
-```
 
 {{< linked_headline "Raw" >}}
 

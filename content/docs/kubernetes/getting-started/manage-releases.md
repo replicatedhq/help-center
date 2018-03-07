@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Create & Manage Releases"
 description: "An introduction to the release channel management workflow for development on the Replicated platform."
-weight: "503"
+weight: "2507"
 categories: [ "Shipping With Kubernetes" ]
 index: ["docs/kubernetes", "docs"]
 icon: "replicatedKubernetes"

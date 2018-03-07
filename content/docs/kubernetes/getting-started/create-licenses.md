@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Create Customers & Licenses"
 description: "Details on the options available to vendors when creating a license for an end customer's upcoming installation."
-weight: "2507"
+weight: "2508"
 categories: [ "Shipping With Kubernetes on Replicated" ]
 index: ["docs/kubernetes", "docs"]
 icon: "replicatedKubernetes"
@@ -55,4 +55,4 @@ It is important to identify the type of license that is being created, `developm
 
 {{< linked_headline "Custom License Fields" >}}
 
-[Custom license fields](/docs/kb/developer-resources/custom-license-fields) can be set for all licenses. This is useful if specific customer information might change from customer to customer. These fields can be read from both the [template functions](/docs/packaging-an-application/template-functions) as well as from the [Integration API](/categories/integration-api). Examples of custom license fields are "seats" to limit the number of active users or "hostname" in order to specify the domain that the application can be run on.
+[Custom license fields](/docs/kb/developer-resources/custom-license-fields) can be set for all licenses. This is useful if specific customer information might change from customer to customer. These fields can be read from both the [template functions](/docs/kubernetes/packaging-an-application/template-functions/) as well as from the [Integration API](/categories/integration-api). Examples of custom license fields are "seats" to limit the number of active users or "hostname" in order to specify the domain that the application can be run on.
