@@ -59,17 +59,17 @@ aliases: [/docs/getting-started/schedulers/]
                 </div>
                 <div class='flex1 flex-column u-paddingLeft--most flex-verticalCenter left-content'>
                     <ul class="pros-list">
+                        <li class="u-commandPromptBlue">
+                            <h6>One-line Installation</h6>
+                            <p>Customers require zero knowledge of Kubernetes to install your application into their enterprise environment. Replicated will automatically install Kubernetes 1.9.3 and your application.</p>
+                        </li>
                         <li class="u-ymlBlueDark">
                             <h6>Reuse your existing k8s specs</h6>
                             <p>Existing kubernetes yml files are compatible with Replicated.</p>
                         </li>
-                        <li class="u-powerBlue">
-                            <h6>Run at scale</h6>
-                            <p>Kubernetes is a powerful scheduler that is capable of running extremely large clusters.</p>
-                        </li>
                         <li class="u-replicatedIconBlue">
-                            <h6>Bring your own cluster</h6>
-                            <p>Replicated works on existing Kubernetes clusters.</p>
+                            <h6>Run at Scale</h6>
+                            <p>With the option to install into an existing Kubernetes cluster for advanced IT orgs, Replicated can power installations of significant scale and availability.</p>
                         </li>
                     </ul>
                 </div>
@@ -131,7 +131,7 @@ aliases: [/docs/getting-started/schedulers/]
                                 <tr>
                                     <td>One-line installation</td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                 </tr>
                                 <tr>
@@ -143,20 +143,26 @@ aliases: [/docs/getting-started/schedulers/]
                                 <tr>
                                     <td>Automatic node failover</td>
                                     <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-yellowCustomCircle tooltip" title="Currently works only with distribution into existing K8S clusters."></span></td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                 </tr>
                                 <tr>
                                     <td>Airgap support</td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                 </tr>
                                 <tr>
-                                    <td>Preflight Checks</td>
+                                    <td>Custom Preflight Checks</td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-yellowCustomCircle tooltip" title="Custom pre-flight checks not yet supported."></span></td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>Programable Preflight Checks</td>
+                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
                                 </tr>
                                 <tr>
                                     <td>Support Bundle Generator</td>
@@ -180,7 +186,7 @@ aliases: [/docs/getting-started/schedulers/]
                                     <td>Differential Snapshot &amp; Restore</td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                 </tr>
                                 <tr>
                                     <td>LDAP/AD Integration</td>
@@ -208,9 +214,3 @@ aliases: [/docs/getting-started/schedulers/]
         </div>
     </div>
 </div>
-
-
-
-
-
-
