@@ -23,11 +23,11 @@ time="2017-01-01T00:00:00.000000000-00:00" level=warning msg="You are running li
 Replicated provides an easy install script to work with the the following list of operating system.
 
 - Debian 7.7+
-- Ubuntu 14.04 / 15.10 / 16.04
+- Ubuntu 14.04 / 16.04
 - Fedora 21 / 22
 - Red Hat Enterprise Linux 6.5+
 - CentOS 6+
-- Amazon Linux 2014.03 / 2014.09 / 2015.03 / 2015.09 / 2016.03 / 2016.09 / 2017.03
+- Amazon Linux 2014.03 / 2014.09 / 2015.03 / 2015.09 / 2016.03 / 2016.09 / 2017.03 / 2017.09
 - Oracle Linux 6.5+
 
 As new operating systems start to support Docker we extend our install script and QA process to include them.  Operating systems that support Docker but are not yet included in the easy install script can still be used using the [manual install instructions](/docs/native/packaging-an-application/installing-manually/).
