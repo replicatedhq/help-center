@@ -145,16 +145,33 @@ jobs:
                 tf-api-production ${PROJECT_NAME}
             fi
 
-  build_index:
+  build_staging_index:
     <<: *defaults
     steps:
       - checkout
       - setup_remote_docker
       - run:
-          name: Setup Index Build
+          name: Setup Staging Index Build
           <<: *setup_steps
       - run:
-          name: Build Index
+          name: Build Staging Index
+          command: |
+            set -vu
+            if [ "${CIRCLE_PROJECT_USERNAME}" == "replicatedhq" ]; then
+              mkdir public
+              make index-and-send-staging
+            fi
+
+  build_prod_index:
+    <<: *defaults
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Setup Prod Index Build
+          <<: *setup_steps
+      - run:
+          name: Build Prod Index
           command: |
             set -vu
             if [ "${CIRCLE_PROJECT_USERNAME}" == "replicatedhq" ]; then
@@ -186,7 +203,13 @@ workflows:
           filters:
             branches:
               only: release
-      - build_index:
+      - build_staging_index:
+          requires:
+            - deploy_staging
+          filters:
+            branches:
+              only: master
+      - build_prod_index:
           requires:
             - deploy_production
           filters:
