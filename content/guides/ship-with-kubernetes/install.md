@@ -1,6 +1,6 @@
 ---
 date: "2018-01-30T04:02:20Z"
-title: "Installing And Testing A Kubernetes Release"
+title: "Installing and Testing a Kubernetes Release"
 description: "A guide to installing and testing a Kubernetes appliance and release in Replicated"
 weight: "11002"
 categories: [ "Kubernetes Guide" ]
@@ -12,7 +12,7 @@ icon: "replicatedKubernetes"
 
 # Installing and Testing a Kubernetes Release
 
-This guide will give you first-hand experience installing a Replicated Kubernetes appliance and the Guestbook application. If you haven't yet created the Guestbook application, head back to the [Create And Ship A Release](../create-release) guide and complete that first.
+This guide will give you first-hand experience installing a Replicated Kubernetes appliance and the Guestbook application. If you haven't yet created the Guestbook application, head back to the [Create and Ship as Release](../create-release) guide and complete that first.
 
 Now that we've created a release and promoted it to the the Unstable channel, the next step is to create a customer license and use this this license to install the application on a test server.
 
