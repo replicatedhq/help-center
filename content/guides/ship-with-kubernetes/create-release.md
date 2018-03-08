@@ -10,13 +10,13 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-# Create And Ship A Release
+# Create and Ship a Release
 
 When starting and learning the Replicated platform, the [Vendor Portal](https://vendor.replicated.com) will be the place you spend most of your time. This guide is designed to help you get familiar with the concepts and ideas that are important to successfully ship your application on Replicated. If you get stuck or need help, head to our [community](https://help.replicated.com/community/).
 
 This guide will deploy one of the canonical Kubernetes applications using Replicated, and then iterate on it to ship an update. The guide isn't going to teach Kubernetes, but will start with a working Kubernetes application ([Guestbook all-in-one example](https://github.com/kubernetes/kubernetes/blob/master/examples/guestbook/all-in-one/guestbook-all-in-one.yaml)).
 
-{{< linked_headline "Create A New Application" >}}
+{{< linked_headline "Create a New Application" >}}
 
 To start, log in (or create an account) on [vendor.replicated.com](https://vendor.replicated.com) and create a new application. After signing up and activating your account, you will be prompted to create a new application. Give it a name like "Kubernetes Guestbook Example", select the "Kubernetes + Replicated" option, and click "Create application".
 
@@ -28,7 +28,7 @@ You'll should be at the channels page now. This is a list of your release channe
 
 ![Create Release](/images/guides/kubernetes/create-release.png)
 
-{{< linked_headline "Create A Release" >}}
+{{< linked_headline "Create a Release" >}}
 
 You should now see a YAML editor where you can define how you application will work and the integration with Replicated functionality. Once you are familiar with this concepts, you'll probably use our CLI and API to automate this and not manually edit YAML in this site. But for now, let's continue by adding the Guestbook example.
 
