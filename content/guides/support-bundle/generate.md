@@ -2,7 +2,7 @@
 date: "2018-01-30T04:02:20Z"
 title: "Generate a Support Bundle"
 description: "How to get a support bundle from a customer"
-weight: "801"
+weight: "802"
 categories: [ "Support Bundle" ]
 index: "guides"
 type: "chapter"
