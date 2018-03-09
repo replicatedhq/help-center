@@ -1,6 +1,6 @@
 ---
 date: "2018-01-30T04:02:20Z"
-title: "Support Bundle Specs"
+title: "Create a Support Bundle Spec"
 description: "A guide to creating your first support bundle specification for generating bundles"
 weight: "801"
 categories: [ "Support Bundle" ]
