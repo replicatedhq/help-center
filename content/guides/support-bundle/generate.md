@@ -10,16 +10,22 @@ gradient: "orangeToOrange"
 icon: "troubleshoot"
 ---
 
-Once you've [created a support bundle spec](/guides/support-bundle/spec), you can give a command to your customer to generate a support bundle based on the spec. If you change the spec to include additional collected files, the command your customer will run doesn't change.
+Once you've [created a support bundle spec](/guides/support-bundle/spec), you can give a command to your customer to generate a support bundle based on the spec. As this spec changes over time, the command will remain consistent for that customer.
 
-To collect a support bundle, find the customer on [https://console.replicated.com/customers](https://console.replicated.com/customers) and go to the Customers list. Select the customer and click the "Generate a support bundle" link. There will be a single `docker run` command that's customized for this one customer. Give this command to your customer, and when they run it, it will always download the latest support bundle spec from Replicated before generating.
+After creating our default support bundle spec, you will be on the `Generate bundle command` step of the install process.
 
-```shell
-$ sudo docker run --interactive --tty --rm --name support-bundle --volume $PWD:/out --volume /var/run/docker.sock:/var/run/docker.sock --workdir /out replicated/support-bundle:alpha generate --customer-id "<ID>"
+![](/images/guides/support-bundle/upload-spec.png)
 
-Starting support bundle collection...
-Done! Do you want to upload the support bundle for analysis? [Y/n]: Y
-Upload complete!
-```
+Now, you will need a machine running Docker that you can use to run the provided `docker run` command. After provisioning a machine on a cloud provider of your choosing, run the command and follow the prompts. At the end, it will show you that the support bundle has been uploaded.
 
-If your customer chooses to upload the support bundle for analysis, visit [https://console.replicated.com/support/bundles](https://console.replicated.com/support/bundles) to view and download the bundle.
+![](/images/guides/support-bundle/docker-run.png)
+
+## Analyzing a Bundle
+
+Once uploaded, you will be taken to the bundle analyze page. This page contains information from the uploaded support bundle, to give a quick summary of the system's status. To download the full support bundle, including information such as logs, use the `Download bundle` at the top right of the page.
+
+![](/images/guides/support-bundle/analysis.png)
+
+## Next Steps
+
+Now that we have generated and analyzed a support bundle, we can begin iterating on our bundle to get more information from the system, such as command outputs or gathering files.
