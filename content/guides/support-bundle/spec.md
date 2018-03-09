@@ -1,7 +1,7 @@
 ---
 date: "2018-01-30T04:02:20Z"
-title: "Spec"
-description: "A support bundle spec defines what data to collect and store in a support bundle."
+title: "Support Bundle Specs"
+description: "A guide to creating your first support bundle specification for generating bundles"
 weight: "801"
 categories: [ "Support Bundle" ]
 index: "guides"
@@ -10,71 +10,28 @@ gradient: "orangeToOrange"
 icon: "troubleshoot"
 ---
 
-You can define what to include in your support bundle by creating and editing a support bundle spec. This is simply a YAML document that defines 
+The Support Bundle is a standalone tool that you can use to retrieve and upload troubleshooting data from servers that aren't running the full Replicated software, when Replicated will not start, or for servers that you don't have access to. In this guide, we will sign up for the Replicated Console, and create our first support bundle spec.
 
-- What files and command outputs to include in the bundle
-- How data is stored and organized inside the bundle
-- Lifecycle, messages and prompts that will be displayed to your customer when generating a support bundle
+The [Replicated Console](https://console.repliated.com) is your primary portal for managing support bundle specifications, the support bundles generated from them, and your customers. Sign up and login to the console, then click the `Get started with Troubleshoot` button.
 
-The support bundle spec is a single YAML document with two top level keys, `specs` and `lifecycle`.
+![](/images/guides/support-bundle/troubleshoot.png)
 
-### `specs`
-The `specs` top level YAML key contains as many items as you'd like, each defining an item to include in the bundle. We've shipped and included many built-in commands that can be very simple to add.
+## Create a Customer
 
-For example, you can include `uptime` in the support bundle to determine how long it's been since the server was last rebooted:
+The first time you use the Replicated Console to troubleshoot, you will be asked to create you first customer. Enter a name and email for your customer, then click "Create Customer". These identifiers are used in the console to identify who has uploaded a bundle.
 
-```yaml
-specs:
-  - os.uptime:
-      output_dir: /os/uptime
-```
+![](/images/guides/support-bundle/create-customer.png)
 
-Some specs require additional options to be included. For example, to run a command and include the output in the support bundle:
-```yaml
-specs:
-  - os.run-command:
-      output_dir: /commands/ping-google/
-      name: ping
-      args:
-        - "www.google.com"
-```
+## Create Your First Spec
 
-There are also some specs that support optional arguments that are often passed directly through to the command that is being run. For example, to collect the output of `docker ps`, you could include
+With your first customer created, you will now be prompted to create your first spec. Enter a name for your spec. This will be used for when you want multiple specs for different purposes. Now, select the "Docker" and "Operating system info", which are good defaults for a system just running Docker. After that, click "Set defaults" to the next page.
 
-```yaml
--specs:
-  - docker.container-inspect:
-      output_dir: /docker/my-container
-```
+![](/images/guides/support-bundle/create-spec.png)
 
-The `docker ps` command only includes running containers, by default. If you want to include all, containers, you could change this spec to be the example below. Note the capitalized `All` because that's how Docker's serialization library receives this. Replicated doesn't translate these options; we pass them directly through to the command.
+## Next Steps
 
-```yaml
--specs:
-  - docker.container-inspect:
-      output_dir: /docker/my-container
-      container_list_options:
-        All: true
-```
+Now that you've created your first support bundle spec, you will be brought to a page with a command and a place to upload a bundle.
 
+![](/images/guides/support-bundle/upload-spec.png)
 
-### `lifecycle`
-
-
-The `lifecycle` message allows you to configure messages and prompts, and optionally securely upload the support bundle to the analysis tools at `https://console.replicated.com`. By default, if no lifecycle is specified, the support bundle spec will prompt the user, asking if they want to upload the generated bundle. This default is the equivalent of the following `lifecycle` spec:
-
-
-```yaml
-- lifecycle:
-  - mesage:
-    contents: "Starting support bundle collection..."
-  - generate: {}
-  - upload:
-      prompt:
-        message: "Done! Do you want to upload the support bundle for analysis?"
-        accept: "Upload complete!"
-        decline: "Skipping upload. Please send the support bundle at {{.BundlePath}} to support."
-        defualt: true
-```
-
-The `lifecycle` key can include as many messages before and after the `generate` step as you'd like. Normally there should be exactly one `generate` step. As in the example above, there are some template functions available in the messaging. These are defined in the support bundle template functions reference documentation.
+In the next sections, we will run this command, analyze our bundle, and begin iterating on our support bundle specification.
