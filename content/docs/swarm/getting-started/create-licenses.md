@@ -54,3 +54,7 @@ It is important to identify the type of license that is being created, `developm
 {{< linked_headline "Custom License Fields" >}}
 
 [Custom license fields](/docs/kb/developer-resources/custom-license-fields) can be set for all licenses. This is useful if specific customer information might change from customer to customer. These fields can be read from both the [template functions](/docs/packaging-an-application/template-functions) as well as from the [Integration API](/categories/integration-api). Examples of custom license fields are "seats" to limit the number of active users or "hostname" in order to specify the domain that the application can be run on.
+
+{{< linked_headline "Archiving Licenses" >}}
+
+When a license is archived in the vendor portal, it will be hidden in the default license search and become read-only. Archival does not affect the utility of license files downloaded before the change. If you wish for them to expire, set an expiration date and policy before archiving. This is a convenience feature for how licenses are displayed in the vendor portal.
