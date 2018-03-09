@@ -50,4 +50,7 @@ menu:
     - Name: "API Reference"
       Weight: 3
       URL: "/api/"
+    - Name: "Community"
+      Weight: 3
+      URL: "https://help.replicated.com/community/"
 ---
