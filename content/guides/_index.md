@@ -3,7 +3,6 @@ layout: "guides"
 title: "Guides"
 description: "Guides for all things Replicated for beginners and experienced users alike."
 index: "guides"
-aliases: [/categories/getting-started/,/docs/getting-started/schedulers/,/tags/schedulers/]
 guides:
   - title: "Replicated Scheduler"
     description: "When you have to support older operating systems such as RHEL 6 and CentOS 6, the Replicated Native Scheduler is a good choice."

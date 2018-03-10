@@ -1,15 +1,15 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Preflight Checks"
-description: "A guide to implementing the Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
+title: "Programmable Preflight Checks"
+description: "A guide to implementing Programmable Preflight Checks to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
 weight: "213"
 categories: [ "Packaging a Native Application" ]
 index: ["docs/native", "docs"]
 icon: "replicatedCircle"
-aliases: [/docs/packaging-an-application/preflight-checks/,/tags/preflight-checks/]
+aliases: [/docs/packaging-an-application/preflight-checks/,/tags/preflight-checks/,/docs/native/packaging-an-application/preflight-checks]
 ---
 
-A preflight check is a test that is run before installing and running an application.  The test will analyze the system to determine if the environment meets the minimum requirements.
+A programmable preflight check is a test that is run before installing and running an application.  The test will analyze the system to determine if the environment meets the minimum requirements.
 
 The preflight check may be manually run for an existing installation by visiting https://&lt;your server address&gt;:8800/run-checks
 

@@ -1,6 +1,6 @@
 ---
 date: "2018-01-30T04:02:20Z"
-title: "Installing And Testing A Kubernetes Release"
+title: "Installing and Testing a Kubernetes Release"
 description: "A guide to installing and testing a Kubernetes appliance and release in Replicated"
 weight: "11002"
 categories: [ "Kubernetes Guide" ]
@@ -12,9 +12,9 @@ icon: "replicatedKubernetes"
 
 # Installing and Testing a Kubernetes Release
 
-This guide will give you first-hand experience installing a Replicated Kubernetes appliance and the Guestbook application. If you haven't yet created the Guestbook application, head back to the [Create And Ship A Release](../create-release) guide and complete that first.
+This guide will give you first-hand experience installing a Replicated Kubernetes appliance and the Guestbook application. If you haven't yet created the Guestbook application, head back to the [Create and Ship as Release](../create-release) guide and complete that first.
 
-Now that we've created a release and promoted it to the the Unstable channel, the next step is to create a customer license and use this this license to isntall the application on a test server.
+Now that we've created a release and promoted it to the the Unstable channel, the next step is to create a customer license and use this this license to install the application on a test server.
 
 {{< linked_headline "Create License" >}}
 
@@ -38,7 +38,7 @@ Next, ssh into the server we just created, and run the install script:
 $ curl -sSL https://get.replicated.com/kubernetes-init | sudo bash
 ```
 
-You should be able to select the defaults for any prmopts that are presented.
+You should be able to select the defaults for any prompts that are presented.
 
 Once the installation script is completed, it will show the URL you can connect to in order to continue the installation. This install script will install Docker, Kubernetes and prepare the server for your application (the Guestbook in this case).
 
@@ -78,7 +78,7 @@ retraced-processor-b86668d48-m6lgr                      1/1       Running   0   
 
 {{< linked_headline "Install License" >}}
 
-At this point, Replicated and Kubernetes are running, but the Guestbook app isn't yet. To complete the installation, visit the URL that the installation script displayed whebn completed. Replicated automatically provisions a self-signed certificate on every installation, so you'll have to accept this cert to continue. We recommend that every installation change this to a trusted cert, and that can be completed in the browser, at the next step.
+At this point, Replicated and Kubernetes are running, but the Guestbook app isn't yet. To complete the installation, visit the URL that the installation script displayed when completed. Replicated automatically provisions a self-signed certificate on every installation, so you'll have to accept this cert to continue. We recommend that every installation change this to a trusted cert, and that can be completed in the browser, at the next step.
 
 On the next screen, you have the option of uploading a trusted cert and key. For this demo, let's continue with the Replicated-generated self-signed cert. Click the orange button to continue, and then Proceed Anyway in the popup.
 
@@ -100,11 +100,11 @@ Finally, the settings page is here with default configuration items. These can a
 
 ![Settings Page](/images/guides/kubernetes/settings.png)
 
-Click the Dashboard link on the top to see the default, most basic Replicated installation with Kubnernetes possible running. If you are still connected to this server over ssh, `kubectl get pods --all-namespaces` will show a few pods, including the Guestbook services we just deployed.
+Click the Dashboard link on the top to see the default, most basic Replicated installation with Kubernetes possible running. If you are still connected to this server over ssh, `kubectl get pods --all-namespaces` will show a few pods, including the Guestbook services we just deployed.
 
 ![Dashboard](/images/guides/kubernetes/dashboard.png)
 
-On the top nav, there's a link to the /cluster page. Clicking that will show you the Kubernetes services that we hust deployed.
+On the top nav, there's a link to the /cluster page. Clicking that will show you the Kubernetes services that we just deployed.
 
 ![Cluster](/images/guides/kubernetes/cluster.png)
 
