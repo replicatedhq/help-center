@@ -35,11 +35,7 @@ specs:
 ### Outputs
 
 
-- `task_ls.raw` - Raw output
-
 - `task_ls.json` - JSON output
-
-- `task_ls.human` - Human-readable output
 
     
 <br>

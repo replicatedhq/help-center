@@ -40,11 +40,7 @@ specs:
 ### Outputs
 
 
-- `service_ls.raw` - Raw output
-
 - `service_ls.json` - JSON output
-
-- `service_ls.human` - Human-readable output
 
     
 <br>

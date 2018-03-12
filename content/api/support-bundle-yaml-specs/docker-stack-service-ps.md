@@ -45,11 +45,7 @@ specs:
 ### Outputs
 
 
-- `service_ps.raw` - Raw output
-
 - `service_ps.json` - JSON output
-
-- `service_ps.human` - Human-readable output
 
     
 <br>

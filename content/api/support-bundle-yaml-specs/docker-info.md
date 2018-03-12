@@ -26,11 +26,7 @@ specs:
 ### Outputs
 
 
-- `docker_info.raw` - The raw JSON from the docker daemon
-
 - `docker_info.json` - A pretty-printed JSON representation
-
-- `docker_info.human` - A human-readable representation
 
     
 <br>
