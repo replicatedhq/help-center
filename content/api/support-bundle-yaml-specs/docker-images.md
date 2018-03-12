@@ -38,11 +38,7 @@ specs:
 ### Outputs
 
 
-- `image_ls.raw` - Raw output
-
 - `image_ls.json` - JSON output
-
-- `image_ls.human` - Human-readable output
 
     
 <br>

@@ -24,11 +24,7 @@ specs:
 ### Outputs
 
 
-- `docker_version.raw` - Raw output
-
 - `docker_version.json` - JSON output
-
-- `docker_version.human` - Human-readable output
 
     
 <br>

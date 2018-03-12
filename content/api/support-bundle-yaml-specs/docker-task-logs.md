@@ -43,7 +43,9 @@ specs:
 ### Outputs
 
 
-- `{{.TaskId}}.raw` - The raw output. Will generate this file for each matched service task
+- `{{.TaskId}}.stdout` - The stdout output. Will generate this file for each matched service task
+
+- `{{.TaskId}}.stderr` - The stderr output. Will generate this file for each matched service task
 
     
 <br>

@@ -35,11 +35,7 @@ specs:
 ### Outputs
 
 
-- `node_ls.raw` - Raw output
-
 - `node_ls.json` - JSON output
-
-- `node_ls.human` - Human-readable output
 
     
 <br>

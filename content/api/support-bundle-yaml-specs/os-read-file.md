@@ -32,7 +32,7 @@ specs:
 ### Outputs
 
 
-- `contents` - The file contents
+- `bigtool.conf` - The file contents
 
     
 <br>
