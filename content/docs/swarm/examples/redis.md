@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Redis"
 description: "An example deploying a Swarm application with templated configuration"
-weight: "405"
+weight: "5000002"
 categories: [ "Replicated + Swarm Examples" ]
 index: ["docs/swarm", "docs"]
 gradient: "swarm"
