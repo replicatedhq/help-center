@@ -222,7 +222,7 @@ Returns customer defined console settings for the TLS data or proxy settings. Va
 |tls.cert.name|TLS cert filename|
 |tls.cert.data|TLS cert contents|
 |tls.hostname|Hostname used to secure Replicated TLS traffic|
-|tls.source|Source of the TLS cert, either "self-signed", "key-cert" or "server-path"|
+|tls.config.option|Source of the TLS cert, either "self-signed", "key-cert" or "server-path"|
 |http.proxy|Proxy http address (e.g. http://10.128.0.4:3128)|
 |http.proxy.enabled|Proxy is enabled when value is 1, not enabled when it is 0|
 
