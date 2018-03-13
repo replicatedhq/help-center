@@ -3,6 +3,7 @@ title: "Choosing the right scheduler"
 description: "Compare the differences between the orchestration layers Replicated allows you to use."
 headerGradient: "blueToBlue"
 wrapperCSSClass: "scheduler-types-section"
+aliases: [/docs/getting-started/schedulers/,/categories/getting-started/,/docs/getting-started/schedulers/,/tags/schedulers/]
 ---
 
 <div class="scheduler-type main-section u-borderBottom--gray">
@@ -25,6 +26,9 @@ wrapperCSSClass: "scheduler-types-section"
                     <h5>Replicated + built-in scheduler</h5>
                     <p>The Replicated scheduler is a mature container orchestration runtime that supports Docker 1.7.1 and newer.</p>
                     <p>Used by over 500 enterprises in production systems today. This scheduler is a good choice if you want to maximize compatibility with enterprise systems and want to provide a simple, appliance-like experience.</p>
+                    <div class="u-marginTop--small">
+                        <a href="/guides/native-scheduler" class="Button secondary">Get Started</a>
+                    </div>
                 </div>
                 <div class='flex1 flex-column u-paddingLeft--most flex-verticalCenter right-content'>
                     <ul class="pros-list">
@@ -55,20 +59,23 @@ wrapperCSSClass: "scheduler-types-section"
                     <span class="logo kubernetesLogo-combo"></span>
                     <h5>Kubernetes + Replicated</h5>
                     <p>Kubernetes is a powerful and popular container orchestration and scheduler platform. Many organizations are investing in running their hosted product on Kubernetes, and want to leverage this investment for enterprise installations.</p><p>Replicated helps minimize the interactions between your customer and the Kubernetes cluster, with the builtin Admin Console providing the functionality required to manage your application.</p>
+                    <div class="u-marginTop--small">
+                        <a href="/guides/ship-with-kubernetes" class="Button secondary">Get Started</a>
+                    </div>
                 </div>
                 <div class='flex1 flex-column u-paddingLeft--most flex-verticalCenter left-content'>
                     <ul class="pros-list">
+                        <li class="u-commandPromptBlueDark">
+                            <h6>One-line Installation</h6>
+                            <p>Customers require zero knowledge of Kubernetes to install your application into their enterprise environment. Replicated will automatically install Kubernetes 1.9.3 and your application.</p>
+                        </li>
                         <li class="u-ymlBlueDark">
                             <h6>Reuse your existing k8s specs</h6>
                             <p>Existing kubernetes yml files are compatible with Replicated.</p>
                         </li>
-                        <li class="u-powerBlue">
-                            <h6>Run at scale</h6>
-                            <p>Kubernetes is a powerful scheduler that is capable of running extremely large clusters.</p>
-                        </li>
                         <li class="u-replicatedIconBlue">
-                            <h6>Bring your own cluster</h6>
-                            <p>Replicated works on existing Kubernetes clusters.</p>
+                            <h6>Run at Scale</h6>
+                            <p>With the option to install into an existing Kubernetes cluster for advanced IT orgs, Replicated can power installations of significant scale and availability.</p>
                         </li>
                     </ul>
                 </div>
@@ -85,6 +92,9 @@ wrapperCSSClass: "scheduler-types-section"
                     <span class="logo dockerSwarmLogo-combo"></span>
                     <h5>Docker Swarm + Replicated</h5>
                     <p>Docker Swarm is great if you have existing docker-compose files and want to target servers running Docker 1.13.1 or newer.</p><p>Replicated supports deploying Swarm services to a swarm cluster. On operating systems supporting Docker 1.13.1 or later, you can provide an appliance-like enterprise experience using the Swarm scheduler, using your existing docker-compose.yml.</p>
+                    <div class="u-marginTop--small">
+                        <a href="/guides/ship-with-docker-swarm/" class="Button secondary">Get Started</a>
+                    </div>
                 </div>
                 <div class='flex1 flex-column u-paddingLeft--most flex-verticalCenter right-content'>
                     <ul class="pros-list">
@@ -130,7 +140,7 @@ wrapperCSSClass: "scheduler-types-section"
                                 <tr>
                                     <td>One-line installation</td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                 </tr>
                                 <tr>
@@ -142,20 +152,26 @@ wrapperCSSClass: "scheduler-types-section"
                                 <tr>
                                     <td>Automatic node failover</td>
                                     <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-yellowCustomCircle tooltip" title="Currently works only with distribution into existing K8S clusters."></span></td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                 </tr>
                                 <tr>
                                     <td>Airgap support</td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                 </tr>
                                 <tr>
-                                    <td>Preflight Checks</td>
+                                    <td>Custom Preflight Checks</td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-yellowCustomCircle tooltip" title="Custom pre-flight checks not yet supported."></span></td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>Programable Preflight Checks</td>
+                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
                                 </tr>
                                 <tr>
                                     <td>Support Bundle Generator</td>
@@ -179,7 +195,7 @@ wrapperCSSClass: "scheduler-types-section"
                                     <td>Differential Snapshot &amp; Restore</td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                 </tr>
                                 <tr>
                                     <td>LDAP/AD Integration</td>
@@ -207,9 +223,3 @@ wrapperCSSClass: "scheduler-types-section"
         </div>
     </div>
 </div>
-
-
-
-
-
-

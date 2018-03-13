@@ -40,15 +40,14 @@ The install script can take flags to help your customers with specialized enterp
 | bypass-storagedriver-warnings | Bypass the storagedriver warning                                                                   |
 | bootstrap-token               | Authentication token used by kubernetes when adding additional nodes                               |
 | bootstrap-token-ttl           | TTL of the `bootstrap-token`                                                                       |
-| docker-version                | Install a specific version of docker                                                               |
 | http-proxy                    | If present, then use proxy                                                                         |
 | log-level                     | If present, this will be the log level of the Replicated daemon (debug, info, or error).           |
 | no-docker                     | Skip docker installation                                                                           |
 | no-proxy                      | If present, do not use a proxy                                                                     |
 | public-address                | The public IP address                                                                              |
 | private-address               | The private IP address                                                                             |
-| release-sequence              | Something, not sure.                                                                               |
-| skip-pull                     | Guess                                                                                              |
+| release-sequence              | The release of your app to install
+
 | kubernetes-namespace          | The namespace to install Replicated into                                                           |
 | ui-bind-port                  | The port to bind the UI to                                                                         |
 | no-ce-on-ee                   | Disable installation of Docker CE onto platforms it does not support - RHEL, SLES and Oracle Linux |

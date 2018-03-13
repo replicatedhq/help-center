@@ -7,6 +7,7 @@ categories: [ "Packaging a Native Application" ]
 index: ["docs/native", "docs"]
 aliases: [docs/distributing-an-application/promote-releases]
 icon: "replicatedCircle"
+nextPage: "native/customer-installations/overview.md"
 ---
 
 Every Replicated license points to a Release Channel. When a license is installed, it will pull down and install the release that is currently at the top of its channel. It’s recommended to create customer licenses on the Stable channel, and only promote releases to Stable that are ready for all customers to install.

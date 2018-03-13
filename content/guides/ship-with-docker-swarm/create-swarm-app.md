@@ -65,7 +65,7 @@ In the next part of this guide, we will create a Replicated release with our Doc
 
 The Replicated Vendor Portal offers tooling necessary to create and deploy software services, license software to customers, and iterate upon our software via releases. In this section, we will take the Redis service we created in the prior section and turn it into a licensable Replicated release. In the next sections, we will create a customer license, install Replicated on Swarm, and run our software in an on-premise environment.
 
-If you require help at any time with these steps, help is available through the [Replicated community](https://help.replicated.com/community) or via email at [contact@replicated.com](mailto:contact@replicated.com). 
+If you require help at any time with these steps, help is available through the [Replicated community](https://help.replicated.com/community/) or via email at [contact@replicated.com](mailto:contact@replicated.com). 
 
 {{< linked_headline "Create a New Application" >}}
 

@@ -53,11 +53,7 @@ specs:
 ### Outputs
 
 
-- `container_ls.raw` - Raw output
-
 - `container_ls.json` - JSON output
-
-- `container_ls.human` - Human-readable output
 
     
 <br>

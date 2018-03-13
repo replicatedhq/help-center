@@ -2,6 +2,7 @@
   title: "Using the Replicated Native Scheduler"
   description: "A step-by-step guide to shipping your application with the Replicated Native Scheduler."
   level: "replicatedCircle"
+  icon: "replicatedCircle"
   gradient: "redToRed"
   index: false
   chapters:

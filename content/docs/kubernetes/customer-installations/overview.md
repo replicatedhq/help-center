@@ -11,10 +11,10 @@ hideFromList: true
 icon: "replicatedKubernetes"
 ---
 
-After building your application as a [series of Kubernetes manifests](/docs/kubernetes/customer-installations/overview), use this documentation to distribute it to your customers. Here, you will find all of the information necessary to setup and manage your application running on Kubernetes clusters.
+After building your application as a series of Kubernetes manifests, use this documentation to distribute it to your customers. Here, you will find all of the information necessary to setup and manage your application running on Kubernetes clusters.
 
 While Replicated and your application can run on a pre-built Kubernetes cluster, the [Installing](/docs/kubernetes/customer-installations/installing) documentation provides information about Replicated's Kubernetes appliance, an opinionated, easy setup Kubernetes node ready to run Replicated applications.
 
 The [Airgapped Installation](/docs/kubernetes/customer-installations/airgapped-installations) section provides documentation about installing the Replicated Kubernetes Appliance in an airgapped setting.
 
-Help installing Replicated and the Replicated Kubernetes Appliance is available through the [Replicated community](https://help.replicated.com/community) or via email at [contact@replicated.com](mailto:contact@replicated.com).
+Help installing Replicated and the Replicated Kubernetes Appliance is available through the [Replicated community](https://help.replicated.com/community/) or via email at [contact@replicated.com](mailto:contact@replicated.com).

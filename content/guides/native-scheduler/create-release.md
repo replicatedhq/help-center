@@ -13,7 +13,7 @@ aliases: [/guides/getting-started]
 
 # Create And Ship A Release
 
-When starting out with Replicated, the [Vendor Portal](https://vendor.replicated.com) will be the place you spend most of your time. Going through this guide will help you become familiar with the concepts and ideas that are important to be successful shipping on Replicated using the Vendor Portal. If you get stuck or need help with any of these steps, head to our [community](https://help.replicated.com/community) or send us an email to [contact@replicated.com](mailto:contact@replicated.com) and we'll be happy to help.
+When starting out with Replicated, the [Vendor Portal](https://vendor.replicated.com) will be the place you spend most of your time. Going through this guide will help you become familiar with the concepts and ideas that are important to be successful shipping on Replicated using the Vendor Portal. If you get stuck or need help with any of these steps, head to our [community](https://help.replicated.com/community/) or send us an email to [contact@replicated.com](mailto:contact@replicated.com) and we'll be happy to help.
 
 {{< linked_headline "Create A New Application" >}}
 
@@ -46,7 +46,7 @@ components:
         version: "3.2.11"
 ```
 
-Next, click the Save Release button. Once the release is saved, we should promote it to the Unstable channel to make it available for installation. To do this, click thhe "< Releases" link in the top left and then click the Promote button on the row we just created (it should have Sequence 1). In this popup, check the Unstable channel, and click the Promote button.
+Next, click the Save Release button. Once the release is saved, we should promote it to the Unstable channel to make it available for installation. To do this, click the "< Releases" link in the top left and then click the Promote button on the row we just created (it should have Sequence 1). In this popup, check the Unstable channel, and click the Promote button.
 
 ![Create Application](/images/guides/native/promote-release.png)
 

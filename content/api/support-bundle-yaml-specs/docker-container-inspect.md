@@ -41,11 +41,7 @@ specs:
 ### Outputs
 
 
-- `{{.Name}}.raw` - The raw output of the inspect call. Will generate this file for each matched container
-
 - `{{.Name}}.json` - The json output of the inspect call. Will generate this file for each matched container
-
-- `{{.Name}}.human` - The human-readable output of the inspect call. Will generate this file for each matched container
 
     
 <br>

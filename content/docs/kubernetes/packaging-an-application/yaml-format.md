@@ -12,20 +12,6 @@ aliases: [/docs/kubernetes/packaging-an-application/overview/]
 
 Replicated will deploy an application that is defined in a YAML spec. We currently support deploying an application that uses the Replicated scheduler or deploying a Kubernetes application. Understanding how each of these will be installed and maintained is an important consideration when choosing the scheduler to use to deploy your application.
 
-{{< linked_headline "Replicated Scheduler" >}}
-
-The Replicated scheduler is a proprietary, mature container scheduler that supports the features required by enterprise customers. It was designed and built to enable your customer to install a complex application on one or a cluster of servers, without having to preinstall anything else. They can simply bring Linux servers that are compatible with Docker 1.7.1 or newer, and can deploy and manage your application on their servers. This scheduler supports [airgap installations](/docs/distributing-an-application/airgapped-installations) and many other features that enterprise users need. We recommend choosing the Replicated scheduler for most installations.
-
-Our YAML definition is stored in a public repo at [https://github.com/replicatedhq/libyaml/](https://github.com/replicatedhq/libyaml/).
-
-{{< linked_headline "Swarm Scheduler" >}}
-
-More recent versions of the Docker Engine include swarm mode for natively scheduling containers across a cluster of Docker Engines called a swarm. Replicated supports Docker version 13.1 or greater and the Swarm scheduler. A Docker Compose version 3 YAML is required to distribute your application in swarm mode. We recommend choosing the Docker Swarm scheduler if you have existing Compose YAML and if your customer does not require a Linux distribution without support for newer Docker versions.
-
-{{< linked_headline "Kubernetes Scheduler" >}}
-
-Kubernetes is a popular cluster and orchestration tool when running Docker containers. Often, you may already have Kubernetes resources written to deploy your application. Replicated can deliver this down to an existing Kubernetes cluster, and provide all of the enterprise features that will be required to support, maintain, update and run your application behind the firewall. We recommend choosing the Kubernetes scheduler if you have existing Kubernetes YAML and if you customer is able to provision and maintain a Kubernetes cluster.
-
 {{< linked_headline "Replicated API Version" >}}
 
 At the top of the YAML file, regardless of the scheduler, there must be a Replicated API version. The current API version to use is {{< replicated_api_version_current >}}. Note: The [Changelog](https://release-notes.replicated.com/) tracks the API version.
@@ -48,7 +34,7 @@ The properties section includes definitions of some optional (but recommended) a
 
 ```yaml
 properties:
-  app_url: http://{{repl ThisNodePrivateIPAddress }}
+  app_url: http://{{repl ServiceAddress nginx }}
   console_title: My Enterprise Application
 ```
 
@@ -91,19 +77,6 @@ cmds:
   - "64"
 ```
 
-{{< linked_headline "Components" >}}
-
-The [components section](/docs/packaging-an-application/components-and-containers/) defines the container runtime environment for your containers, if using the Replicated scheduler.  This will include everything from the container image, environment variables, [application orchestration](/docs/packaging-an-application/events-and-orchestration/), config files, [optional clustering](/docs/packaging-an-application/clustering/) and more.
-
-```yaml
-components:
-- name: Redis
-  containers:
-  - source: public
-    image_name: redis
-    version: 3.0.5
-```
-
 {{< linked_headline "Monitors" >}}
 
 When using the Replicated scheduler, the containers which make up your components can be monitored for resource usage metrics on an individual basis. For each metric, simply specify each component and container image pair. For example, if you want to see CPU and memory usage metrics for some of your Redis container and your private worker image pulled from quay.io (in a Worker component):
@@ -134,28 +107,6 @@ custom_metrics:
   xfiles_factor: 0.6
 ```
 
-{{< linked_headline "Ready State" >}}
-
-(Note: The Ready State is only compatible with the Replicated scheduler. To learn how Replicated starts a Kubernetes application, see the detail in the [Kubernetes](/docs/packaging-an-application/kubernetes) document).
-
-You can add a health check that Replicated will poll after your containers have all been started. The purpose of this is to report when your application is fully running and ready to start using. Once your application is running, we stop polling this health check and rely on other methods to monitor the status. The timeout parameter allows you to specify (in seconds) how long to keep retrying the command, if it fails. You can use a timeout value of -1 to indicate infinite polling. A timeout of 0 is not supported and causes the default of 10 minutes to be used.
-
-{{< version version="2.7.0" >}} You can specify an optional third argument to set the HTTP timeout. Replicated will use a default timeout of 5 seconds if not specified.
-
-### Available Commands:
-- `http_status_code`
-- `tcp_port_accept`
-
-```yaml
-state:
-  ready:
-    command: http_status_code
-    args:
-    - 'http://{{repl NodePublicIPAddress "My Component" "my-web-container" }}/ping'
-    - '200'
-    - '5'
-    timeout: 900
-```
 
 {{< linked_headline "Customer Config Section" >}}
 
@@ -191,7 +142,7 @@ admin_commands:
 
 {{< linked_headline " Custom Preflight Checks" >}}
 
-A [preflight check](/docs/packaging-an-application/preflight-checks/) is a test that is run before installing and running an application. The test will analyze the system to determine if the environment meets the minimum requirements and provide feedback during installation if these requirements are not met.
+A [preflight check](/docs/kubernetes/packaging-an-application/preflight-checks/) is a test that is run before installing and running an application. The test will analyze the system to determine if the environment meets the minimum requirements and provide feedback during installation if these requirements are not met.
 
 ```yaml
 host_requirements:

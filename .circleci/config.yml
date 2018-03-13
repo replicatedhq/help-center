@@ -1,0 +1,217 @@
+version: 2
+
+environment: &environment
+  environment:
+    PROJECT_NAME: help-center
+    PROJECT_ORG: replicatedhq
+    SRC_DIR: /tmp/src
+    DST_DIR: /tmp/built
+  working_directory: /tmp/src
+
+defaults: &defaults
+  <<: *environment
+  docker:
+    - image: circleci/node:8.9.4
+
+defaults_py: &defaults_py
+  <<: *environment
+  docker:
+    - image: circleci/python:2
+
+setup_steps: &setup_steps
+  command: |
+    sudo apt-get install python-pip python-dev build-essential
+    sudo npm install -g npm@3.x.x
+    sudo npm install -g grunt-cli
+    yarn install
+
+hugo_setup_steps: &hugo_setup_steps
+  command: |
+    cd /tmp
+    wget https://github.com/gohugoio/hugo/releases/download/v0.27.1/hugo_0.27.1_Linux-64bit.tar.gz
+    tar xzvf hugo_0.27.1_Linux-64bit.tar.gz
+    sudo mv hugo /usr/bin/hugo
+
+jobs:
+  build_staging:
+    <<: *defaults_py
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Setup Staging
+          <<: *hugo_setup_steps
+      - run:
+          name: Build Staging
+          command: |
+            pip install awscli --upgrade --user
+
+            rm -rf ./.git
+            mkdir ${DST_DIR}
+            hugo -s ${SRC_DIR} -d ${DST_DIR} -b "https://help.staging.replicated.com/"
+            # google-site-verification file is not needed on staging
+            cd ..
+            cp ${SRC_DIR}/build/* ./
+            docker build -t ${PROJECT_NAME}:${CIRCLE_SHA1:0:7} .
+
+            export AWS_ACCESS_KEY_ID=$STAGING_AWS_ACCESS_KEY_ID
+            export AWS_SECRET_ACCESS_KEY=$STAGING_AWS_SECRET_ACCESS_KEY
+            $(/home/circleci/.local/bin/aws ecr get-login --no-include-email --region us-east-1)
+            docker tag ${PROJECT_NAME}:${CIRCLE_SHA1:0:7} 923411875752.dkr.ecr.us-east-1.amazonaws.com/${PROJECT_NAME}:${CIRCLE_SHA1:0:7}
+            docker push 923411875752.dkr.ecr.us-east-1.amazonaws.com/${PROJECT_NAME}:${CIRCLE_SHA1:0:7}
+            docker tag ${PROJECT_NAME}:${CIRCLE_SHA1:0:7} 923411875752.dkr.ecr.us-east-1.amazonaws.com/${PROJECT_NAME}:latest
+            docker push 923411875752.dkr.ecr.us-east-1.amazonaws.com/${PROJECT_NAME}:latest
+
+  build_production:
+    <<: *defaults_py
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Setup Production
+          <<: *hugo_setup_steps
+      - run:
+          name: Build Production
+          command: |
+            pip install awscli --upgrade --user
+
+            rm -rf ./.git
+            mkdir ${DST_DIR}
+            hugo -s ${SRC_DIR} -d ${DST_DIR} -b "https://help.replicated.com/"
+            cd ..
+            cp ${SRC_DIR}/build/* ./
+            mv google8b98ed0b455f3b19.html ${DST_DIR}
+            docker build -t ${PROJECT_NAME}:${CIRCLE_SHA1:0:7} .
+
+            export AWS_ACCESS_KEY_ID=$PRODUCTION_AWS_ACCESS_KEY_ID
+            export AWS_SECRET_ACCESS_KEY=$PRODUCTION_AWS_SECRET_ACCESS_KEY
+            $(/home/circleci/.local/bin/aws ecr get-login --no-include-email --region us-east-1)
+            docker tag ${PROJECT_NAME}:${CIRCLE_SHA1:0:7} 799720048698.dkr.ecr.us-east-1.amazonaws.com/${PROJECT_NAME}:${CIRCLE_SHA1:0:7}
+            docker push 799720048698.dkr.ecr.us-east-1.amazonaws.com/${PROJECT_NAME}:${CIRCLE_SHA1:0:7}
+            docker tag ${PROJECT_NAME}:${CIRCLE_SHA1:0:7} 799720048698.dkr.ecr.us-east-1.amazonaws.com/${PROJECT_NAME}:latest
+            docker push 799720048698.dkr.ecr.us-east-1.amazonaws.com/${PROJECT_NAME}:latest
+
+  deploy_staging:
+    <<: *defaults_py
+    steps:
+      - setup_remote_docker
+      - deploy:
+          name: Maybe deploy staging
+          command: |
+            set -vu
+            if [ "${CIRCLE_PROJECT_USERNAME}" == "replicatedhq" ]; then
+              pip install awscli --upgrade --user
+
+              export AWS_ACCESS_KEY_ID=$STAGING_AWS_ACCESS_KEY_ID
+              export AWS_SECRET_ACCESS_KEY=$STAGING_AWS_SECRET_ACCESS_KEY
+              $(/home/circleci/.local/bin/aws ecr get-login --no-include-email --region us-east-1)
+
+              docker run -it \
+                -e AWS_ACCESS_KEY_ID=$STAGING_AWS_ACCESS_KEY_ID \
+                -e AWS_SECRET_ACCESS_KEY=$STAGING_AWS_SECRET_ACCESS_KEY \
+                923411875752.dkr.ecr.us-east-1.amazonaws.com/deployer:latest \
+                ecs \
+                deploy \
+                --timeout 1200 \
+                -i ${PROJECT_NAME} 923411875752.dkr.ecr.us-east-1.amazonaws.com/${PROJECT_NAME}:${CIRCLE_SHA1:0:7} \
+                --region us-east-1 \
+                tf-api-staging ${PROJECT_NAME}
+            fi
+
+  deploy_production:
+    <<: *defaults_py
+    steps:
+      - setup_remote_docker
+      - deploy:
+          name: Maybe deploy production
+          command: |
+            set -vu
+            if [ "${CIRCLE_PROJECT_USERNAME}" == "replicatedhq" ]; then
+              pip install awscli --upgrade --user
+
+              export AWS_ACCESS_KEY_ID=$PRODUCTION_AWS_ACCESS_KEY_ID
+              export AWS_SECRET_ACCESS_KEY=$PRODUCTION_AWS_SECRET_ACCESS_KEY
+              $(/home/circleci/.local/bin/aws ecr get-login --no-include-email --region us-east-1)
+
+              docker run -it \
+                -e AWS_ACCESS_KEY_ID=$PRODUCTION_AWS_ACCESS_KEY_ID \
+                -e AWS_SECRET_ACCESS_KEY=$PRODUCTION_AWS_SECRET_ACCESS_KEY \
+                799720048698.dkr.ecr.us-east-1.amazonaws.com/deployer:latest \
+                ecs \
+                deploy \
+                --timeout 1200 \
+                -i ${PROJECT_NAME} 799720048698.dkr.ecr.us-east-1.amazonaws.com/${PROJECT_NAME}:${CIRCLE_SHA1:0:7} \
+                --region us-east-1 \
+                tf-api-production ${PROJECT_NAME}
+            fi
+
+  build_staging_index:
+    <<: *defaults
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Setup Staging Index Build
+          <<: *setup_steps
+      - run:
+          name: Build Staging Index
+          command: |
+            set -vu
+            if [ "${CIRCLE_PROJECT_USERNAME}" == "replicatedhq" ]; then
+              mkdir public
+              make index-and-send-staging
+            fi
+
+  build_prod_index:
+    <<: *defaults
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Setup Prod Index Build
+          <<: *setup_steps
+      - run:
+          name: Build Prod Index
+          command: |
+            set -vu
+            if [ "${CIRCLE_PROJECT_USERNAME}" == "replicatedhq" ]; then
+              mkdir public
+              make index-and-send
+            fi
+
+workflows:
+  version: 2
+  build_accept_deploy:
+    jobs:
+      - build_staging:
+          filters:
+            branches:
+              only: master
+      - build_production:
+          filters:
+            branches:
+              only: release
+      - deploy_staging:
+          requires:
+            - build_staging
+          filters:
+            branches:
+              only: master
+      - deploy_production:
+          requires:
+            - build_production
+          filters:
+            branches:
+              only: release
+      - build_staging_index:
+          requires:
+            - deploy_staging
+          filters:
+            branches:
+              only: master
+      - build_prod_index:
+          requires:
+            - deploy_production
+          filters:
+            branches:
+              only: release
