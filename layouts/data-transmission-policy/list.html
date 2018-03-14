@@ -1,0 +1,48 @@
+{{ partial "headerWithSearch.html" . }}
+<main>
+    <article class="single">
+            {{ if .Params.gradient }}
+                <div class="u-gradient--{{ .Params.gradient }} main-section header flex-column flex1 justifyContent--center">
+            {{ else }}
+                <div class="u-gradient--redToRed main-section header flex-column flex1 justifyContent--center">
+            {{ end }}
+            <div class="container">
+                <div class="paddingContainer">
+                    <div class="flex flex-auto u-width--full justifyContent--spaceBetween alignItems--center u-marginTop--more">
+                        <div class="u-width--full u-marginRight--more">
+                            <h1 class="u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--center">{{ .Title }}</h1>
+                            <p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--normal u-lineHeight--normal">{{ .Description }}</p>
+                        </div>
+                        <div class="flex-auto u-hidden--mobileTablet">
+                            <span class="icon u-{{ .Params.icon }} u-marginRight--normal"></span>
+                        </div>
+                    </div>
+                    {{ if .Params.tags }}
+                        <div class="tags">
+                            <ul>
+                                {{ range .Params.tags }}
+                                    <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="paddingContainer">
+                <div class="u-flexTabletReflow flex1">
+                    <div class="flex1 page-content-wrapper">
+                        <div class="page-content">
+                            {{ .Content }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            {{ template "_internal/disqus.html" . }}
+        </div>
+    </article>
+</main>
+{{ partial "footer.html" . }}
