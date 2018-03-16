@@ -4,7 +4,7 @@ title: "Support Bundle Specs"
 description: "A guide to creating your first support bundle specification for generating bundles"
 weight: "801"
 categories: [ "Support Bundle" ]
-index: "guides"
+index: false
 type: "chapter"
 gradient: "orangeToOrange"
 icon: "troubleshoot"
