@@ -47,10 +47,12 @@ The install script can take flags to help your customers with specialized enterp
 | public-address                | The public IP address                                                                              |
 | private-address               | The private IP address                                                                             |
 | release-sequence              | The release of your app to install
-
 | kubernetes-namespace          | The namespace to install Replicated into                                                           |
 | ui-bind-port                  | The port to bind the UI to                                                                         |
 | no-ce-on-ee                   | Disable installation of Docker CE onto platforms it does not support - RHEL, SLES and Oracle Linux |
+| host_path_provisioner		| Disable automatically provisioning storage for PersistentVolumeClaims on the host				     |
+| storage_class			| The name of an alternative StorageClass that will provision storage for PVCs                       |
+| service_type			| Enable Service type of LoadBalancer for the Replicated Admin console				     |
 
 Example quick install with flags:
 
@@ -58,3 +60,11 @@ Example quick install with flags:
 curl -sSL https://get.replicated.com/kubernetes-init | sudo bash -s no-proxy ui-bind-port=8000
 ```
 
+{{< linked_headline "Install to an Existing Cluster" >}}
+
+Replicated can be installed to an existing Kubernetes 1.9 cluster. This example demonstrates deploying Replicated to an environment supporting LoadBalancer services and with an existing StorageClass named Standard to provision storage for PersistentVolumeClaims.
+
+```shell
+curl -sSL "https://get.replicated.com/kubernetes-yml-generate?storage_class=standard&host_path_provisioner=0&service_type=LoadBalancer | bash > replicated.yml
+kubectl apply -f replicated.yml
+```
