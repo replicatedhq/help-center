@@ -21,7 +21,7 @@ The Replicated airgap installation script for Kubernetes will install docker-eng
 
 {{< linked_headline "Install Replicated" >}}
 
-Replicated can be installed by downloading the latest release from https://s3.amazonaws.com/replicated-airgap-work/replicated___docker__kubernetes.tar.gz and running the following commands:
+Replicated can be installed by downloading the latest release from https://s3.amazonaws.com/replicated-airgap-work/replicated__docker__kubernetes.tar.gz and running the following commands:
 
 ```shell
 tar xzvf replicated.tar.gz

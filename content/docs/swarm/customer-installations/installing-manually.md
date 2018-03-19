@@ -22,10 +22,6 @@ export LC_CTYPE=C;echo "$(head -c 128 /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -
 docker stack deploy -c docker-compose.yml replicated
 ```
 
-{{< linked_headline "Installing Behind a Proxy" >}}
-
-Proxy support for Swarm will be included in a future release of Replicated.
-
 {{< linked_headline "Uninstall Entire Swarm Stack" >}}
 
 To remove the entire Swarm stack run the following script.

@@ -41,7 +41,7 @@ By default, licenses will be set to disable [airgap installations](https://blog.
 
 {{< linked_headline "Require Activation" >}}
 
-The license file becomes the key to download & install your application. For this reason, it is wise to enable the [license activation feature](/docs/kb/supporting-your-customers/two-factor-licenses) on all licenses. This will add a simple step to your customer's installation experience, where the email you specify will be sent an activation code required to proceed past step 2 in the process.
+The license file becomes the key to download & install your application. For this reason, it is wise to enable the [license activation feature](https://help.replicated.com/community/t/2-factor-authentication-for-customer-licenses/73) on all licenses. This will add a simple step to your customer's installation experience, where the email you specify will be sent an activation code required to proceed past step 2 in the process.
 
 {{< linked_headline "Enable Console LDAP Authentication" >}}
 

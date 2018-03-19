@@ -97,7 +97,7 @@ sudo systemctl restart replicated replicated-ui replicated-operator
 
 {{< linked_headline "Removing Replicated" >}}
 
-To remove Replicated run the following script.
+To remove Replicated, run the following commands:
 
 ### Ubuntu/Debian
 ```shell
