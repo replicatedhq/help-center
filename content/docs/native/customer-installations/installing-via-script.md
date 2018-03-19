@@ -97,14 +97,7 @@ sudo systemctl restart replicated replicated-ui replicated-operator
 
 {{< linked_headline "Removing Replicated" >}}
 
-To remove Replicated with our uninstall script run.
-
-```shell
-curl -sSL https://get.replicated.com/uninstall | sudo bash
-```
-
-
-To remove Replicated manually run the following commands.
+To remove Replicated, run the following commands:
 
 ### Ubuntu/Debian
 ```shell

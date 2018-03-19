@@ -4,7 +4,7 @@ title: "Generate a Support Bundle"
 description: "How to get a support bundle from a customer"
 weight: "802"
 categories: [ "Support Bundle" ]
-index: "guides"
+index: false
 type: "chapter"
 gradient: "orangeToOrange"
 icon: "troubleshoot"
