@@ -59,12 +59,3 @@ Example quick install with flags:
 ```shell
 curl -sSL https://get.replicated.com/kubernetes-init | sudo bash -s no-proxy ui-bind-port=8000
 ```
-
-{{< linked_headline "Install to an Existing Cluster" >}}
-
-Replicated can be installed to an existing Kubernetes 1.9 cluster. This example demonstrates deploying Replicated to an environment supporting LoadBalancer services and with an existing StorageClass named Standard to provision storage for PersistentVolumeClaims.
-
-```shell
-curl -sSL "https://get.replicated.com/kubernetes-yml-generate?storage_class=standard&host_path_provisioner=0&service_type=LoadBalancer | bash > replicated.yml
-kubectl apply -f replicated.yml
-```
