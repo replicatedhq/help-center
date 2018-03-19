@@ -30,7 +30,7 @@ or all of the following options:
   "TlsBootstrapKey": "/etc/server.key",
   "LogLevel": "debug",
   "LicenseFileLocation": "/tmp/license.rli",
-  "LicenseBootstrapAirgapPackagePath": "/tmp/airgap.bundle",
+  "LicenseBootstrapAirgapPackagePath": "/tmp/bundle.airgap",
   "LicenseBootstrapChannelID": "4331c5fa27ad4726644993e1bd234ded",
   "ImportSettingsFrom": "/tmp/settings.conf",
   "BypassPreflightChecks": true
