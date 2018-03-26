@@ -11,7 +11,7 @@ icon: "replicatedKubernetes"
 
 Once your application is working in Docker, you'll want to set up a simple environment to iterate on your Replicated YAML. Our Replicated Studio is designed to shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.
 
-{{< linked_headline "Easy Install" >}}
+{{< linked_headline "Easy Install (Recommended)" >}}
 
 This script will install Kubernetes, Replicated, and Studio on your development machine.
 
@@ -19,9 +19,9 @@ This script will install Kubernetes, Replicated, and Studio on your development 
 curl -sSL https://get.replicated.com/studio-k8s | sudo bash
 ```
 
-{{< linked_headline "Replicated Studio Manual Install" >}}
+{{< linked_headline "Replicated Studio Manual Install (Advanced)" >}}
 
-If you need to customize your configuration, follow these three steps and adapt as needed.
+If you need to customize your configuration, follow these three steps and adapt as needed rather than using the easy install script above.
 
 1. Install [Replicated with Kubernetes](https://help.replicated.com/docs/kubernetes/customer-installations/installing/).
 
