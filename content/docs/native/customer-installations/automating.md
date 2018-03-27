@@ -22,18 +22,19 @@ or all of the following options:
 
 ```json
 {
+  "BypassPreflightChecks": true,
   "DaemonAuthenticationType": "password",
   "DaemonAuthenticationPassword": "this-is-a-secret",
-  "TlsBootstrapType": "server-path",
-  "TlsBootstrapHostname": "server.company.com",
-  "TlsBootstrapCert": "/etc/server.crt",
-  "TlsBootstrapKey": "/etc/server.key",
-  "LogLevel": "debug",
+  "ImportSettingsFrom": "/tmp/settings.conf",
   "LicenseFileLocation": "/tmp/license.rli",
   "LicenseBootstrapAirgapPackagePath": "/tmp/bundle.airgap",
   "LicenseBootstrapChannelID": "4331c5fa27ad4726644993e1bd234ded",
-  "ImportSettingsFrom": "/tmp/settings.conf",
-  "BypassPreflightChecks": true
+  "LogLevel": "debug",
+  "ReleaseSequence": 123,
+  "TlsBootstrapType": "server-path",
+  "TlsBootstrapHostname": "server.company.com",
+  "TlsBootstrapCert": "/etc/server.crt",
+  "TlsBootstrapKey": "/etc/server.key"
 }
 ```
 
@@ -41,19 +42,20 @@ These settings are explained in the following table:
 
 | Setting | Acceptable Values | Description |
 |---------|-------------------|-------------|
+| BypassPreflightChecks	 | Boolean `true` or `false` | Allows application to start without preflight checks |
 | DaemonAuthenticationType | `anonymous` or `password` | Replicated supports anonymous and password protected access. |
 | DaemonAuthenticationPassword | Any `string` | If DaemonAuthenticationType is set to `password` this value is required to access the Replicated console. |
 | DaemonToken | Any `string` | Authentication token used by operators for automating a cluster installation |
+| ImportSettingsFrom | A file location as a `string` | If your application has any required config settings, you can supply custom values here. Replicated will read these and set them as if the user manually configured it. (see below) |
+| LicenseFileLocation | A file location as a `string` | This should be set to the location of an installable .rli license file. Note that you should not enable activation on this license. |
+| LicenseBootstrapAirgapPackagePath | A file location as a `string` | This should be set to the location of the airgap bundle path. When set, the automated install will proceed as an [airgapped installation](/docs/distributing-an-application/airgapped-installations/). Note that `LicenseFileLocation` must also be set. |
+| LicenseBootstrapChannelID | A channel ID as a `string` | This property allows specifying the installation channel for [multi-channel licenses](/docs/kb/supporting-your-customers/multichannel-licenses/). |
+| LogLevel | `['debug', 'info, 'error']` | If present, this will set the log level of the Replicated daemon. |
+| ReleaseSequence | The `number` of an app release | Pins the application to a release available in the license's channel, but is overridden by pins made in the vendor console. See [Pinning the Release Sequence of an Application](https://help.replicated.com/community/t/pinning-the-release-sequence-of-an-application/66). |
 | TlsBootstrapType | `['server-path', 'self-signed']` | The type of TLS cert the Replicated UI will run with. Use self-signed for a fully automated setup, use server-path to provide a static cert and key to bootstrap the console with. |
 | TlsBootstrapHostname | Any `string` | The hostname to use for the Replicated-UI :8800 console |
 | TlsBootstrapCert | A file location as a `string` | If TlsBootstrapType is set to server-path, this value should be present and set to the location of a PEM encoded certificate file. |
 | TlsBootstrapKey | A file location as a `string` | If TlsBootstrapType is set to server-path, this value should be present and set to the location of a PEM encoded key file. |
-| LogLevel | `['debug', 'info, 'error']` | If present, this will set the log level of the Replicated daemon. |
-| LicenseFileLocation | A file location as a `string` | This should be set to the location of an installable .rli license file. Note that you should not enable activation on this license. |
-| LicenseBootstrapAirgapPackagePath | A file location as a `string` | This should be set to the location of the airgap bundle path. When set, the automated install will proceed as an [airgapped installation](/docs/distributing-an-application/airgapped-installations/). Note that `LicenseFileLocation` must also be set. |
-| LicenseBootstrapChannelID | A channel ID as a `string` | This property allows specifying the installation channel for [multi-channel licenses](/docs/kb/supporting-your-customers/multichannel-licenses/). |
-| ImportSettingsFrom | A file location as a `string` | If your application has any required config settings, you can supply custom values here. Replicated will read these and set them as if the user manually configured it. (see below) |
-| BypassPreflightChecks	 | Boolean `true` or `false` | Allows application to start without preflight checks |
 
 ## Configure App Settings Automatically
 
