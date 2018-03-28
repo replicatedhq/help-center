@@ -121,6 +121,9 @@ images:
 - source: public
   name: postgres
   tag: 9.4
+- source: replicated
+  name: app
+  tag: v1
 ```
 
 
