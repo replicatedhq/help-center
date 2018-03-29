@@ -67,6 +67,17 @@ To use private images from an external registry, you need to add the registry vi
 
 Images stored in the Replicated private registry can be accessed by adding a static `imagePullSecrets` to any container definition that references a private image. Replicated will automatically create a secret named `replicatedregistrykey` and deploy it with your application. Referencing this secret will make your private images available on the target cluster.
 
+```yaml
+spec:
+  containers:
+  - name: database
+    image: registry.replicated.com/myapplication/database:latest
+    ports:
+    - containerPort: 5432
+  imagePullSecrets:
+    - name: replicatedregistrykey
+```
+
 {{< linked_headline "Bundling Airgap Images" >}}
 
 All images included in your Kubernetes application must be specified in the `images` section of your YAML in order to be included in the airgap bundle your customer will download and install.
