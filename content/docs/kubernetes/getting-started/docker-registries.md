@@ -65,7 +65,7 @@ To use private images from an external registry, you need to add the registry vi
 
 {{< linked_headline "Referencing Images from the Replicated Registry" >}}
 
-Images stored in the Replicated private registry can be accessed by adding a static `imagePullSecret` to any container definition that references a private image. Replicated will automatically create a secret named `replicatedregistrykey` and deploy it with your application. Referencing this secret will make your private images available on the target cluster.
+Images stored in the Replicated private registry can be accessed by adding a static `imagePullSecrets` to any container definition that references a private image. Replicated will automatically create a secret named `replicatedregistrykey` and deploy it with your application. Referencing this secret will make your private images available on the target cluster.
 
 {{< linked_headline "Bundling Airgap Images" >}}
 
