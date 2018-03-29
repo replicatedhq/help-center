@@ -67,13 +67,13 @@ To use private images from an external registry, you need to add the registry vi
 
 Images stored in the Replicated private registry can be accessed by adding a static `imagePullSecrets` to any container definition that references a private image. Replicated will automatically create a secret named `replicatedregistrykey` and deploy it with your application. Referencing this secret will make your private images available on the target cluster.
 
+Continuing the example above, if the application is using the image registry.replicated.com/myapp/worker:1.0.1, a minimal spec could be:
+
 ```yaml
 spec:
   containers:
-  - name: database
-    image: registry.replicated.com/myapplication/database:latest
-    ports:
-    - containerPort: 5432
+  - name: worker
+     image: registry.replicated.com/myapp/worker:1.0.1
   imagePullSecrets:
     - name: replicatedregistrykey
 ```
