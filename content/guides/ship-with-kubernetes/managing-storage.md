@@ -1,13 +1,14 @@
 ---
-date: "2016-07-03T04:02:20Z"
-title: "Storage"
+date: "2018-01-30T04:02:20Z"
+title: "Managing Storage"
 description: "Overview of how Persistent Volumes work with Replicated"
-keywords: "persistent volumes, cluster, kubernetes"
-weight: "2705"
-categories: [ "Manage Customer Installations" ]
-index: ["docs/kubernetes", "docs"]
+weight: "11004"
+categories: [ "Kubernetes Guide" ]
+index: "guides/kubernetes"
+type: "chapter"
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
+nextPage: "kubernetes/getting-started/overview.md"
 ---
 
 {{< linked_headline "Rook" >}}
