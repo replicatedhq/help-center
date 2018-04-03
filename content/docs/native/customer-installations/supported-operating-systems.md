@@ -27,7 +27,7 @@ Replicated provides an easy install script to work with the the following list o
 - Fedora 21 / 22
 - Red Hat Enterprise Linux 6.5+
 - CentOS 6+
-- Amazon Linux 2014.03 / 2014.09 / 2015.03 / 2015.09 / 2016.03 / 2016.09 / 2017.03 / 2017.09
+- Amazon Linux 2014.03 / 2014.09 / 2015.03 / 2015.09 / 2016.03 / 2016.09 / 2017.03 / 2017.09 / 2.0
 - Oracle Linux 6.5+
 
 As new operating systems start to support Docker we extend our install script and QA process to include them.  Operating systems that support Docker but are not yet included in the easy install script can still be used using the [manual install instructions](/docs/native/packaging-an-application/installing-manually/).
