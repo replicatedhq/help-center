@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Install into an Existing Cluster"
 description: "Instructions for installing Replicated via the easy install script, manually or behind a proxy. Also includes instructions for uninstalling Replicated."
 keywords: "installing, cluster, kubernetes"
-weight: "2706"
+weight: "2705"
 categories: [ "Manage Customer Installations" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
