@@ -8,7 +8,6 @@ index: "guides/kubernetes"
 type: "chapter"
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
-nextPage: "kubernetes/getting-started/overview.md"
 ---
 
 # Iterate and Ship Updates
