@@ -80,14 +80,14 @@ cmds:
 
 {{< linked_headline "Monitors" >}}
 
-The Replicated Native Scheduler can include CPU and memory monitors for any container without any code. The following YAML will show a CPU and a memory graph of the `redis` container on the Admin Console dashboard page.
+When using the Swarm scheduler, services can be monitored for resource usage metrics. The following YAML will show a CPU and a memory graph of the `redis` service on the Admin Console dashboard page.
 
 ```yaml
 monitors:
   cpuacct:
-    - Redis,redis
+  - redis
   memory:
-     - Redis,redis
+  - redis
 ```
 
 {{< linked_headline "Customer Config Section" >}}
