@@ -12,7 +12,7 @@ icon: "troubleshoot"
 
 The Support Bundle is a standalone tool that you can use to retrieve and upload troubleshooting data from servers that aren't running the full Replicated software, when Replicated will not start, or for servers that you don't have access to. In this guide, we will sign up for the Replicated Console, and create our first support bundle spec.
 
-The [Replicated Console](https://console.repliated.com) is your primary portal for managing support bundle specifications, the support bundles generated from them, and your customers. Sign up and login to the console, then click the `Get started with Troubleshoot` button.
+The [Replicated Console](https://console.replicated.com) is your primary portal for managing support bundle specifications, the support bundles generated from them, and your customers. Sign up and login to the console, then click the `Get started with Troubleshoot` button.
 
 ![](/images/guides/support-bundle/troubleshoot.png)
 
