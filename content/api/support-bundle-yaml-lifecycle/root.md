@@ -18,7 +18,8 @@ If you do not specify a lifecycle in your YAML spec, the following default lifec
 lifecycle:
     - message: 
         contents: "Starting support bundle collection..."
-    - generate: {}
+    - generate:
+        use_defaults: true
     - upload:
         prompt: 
           message: "Done! Do you want to upload the support bundle for analysis?"
