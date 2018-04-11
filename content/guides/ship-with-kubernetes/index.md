@@ -15,4 +15,7 @@
     - title: "Iterate and Ship Updates"
       description: "Learn how to iterate and ship updates once you've deployed"
       slug: "iterate"
+    - title: "Managing Storage"
+      description: "Learn about options for providing persistent storage to your appliction"
+      slug: "managing-storage"
 ---

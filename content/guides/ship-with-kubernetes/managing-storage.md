@@ -37,6 +37,11 @@ Replicated is monitoring progress of the CSI framework and may add support for p
 For now, customers who wish to use EBS volumes with Replicated may choose to mount a volume on each host at `/opt/replicated/rook`, effectively backing Rook with EBS storage.
 Alternatively, Rook can be disabled entirely by setting the `storage_provisioner` parameter to 0, which would require sysadmins to manually provision an EBS volume for each of the four Persistent Volume Claims defined by Replicated in addition to any required to run your app.
 
+{{< linked_headline "Tips" >}}
+
+Deployments with Pods that mount Persistent Volumes should specify an update strategy type of `Recreate` or a `RollingUpdate` with a `maxUnavailable` value of `1`.
+The default `RollingUpdate` with `maxUnavailable` value of `25%` will prevent old Pods from terminating and yielding their Persistent Volumes, which will keep new Pods from starting.
+
 {{< linked_headline "Troubleshooting" >}}
 
 The [Rook toolbox](https://rook.io/docs/rook/master/toolbox.html) provides a convenient image for monitoring and debugging your Rook cluster. You can run it as a pod in the `rook` namespace and have access to commands such as `ceph status` to check the health of your storage cluster.
