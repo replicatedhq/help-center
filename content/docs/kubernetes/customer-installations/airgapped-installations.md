@@ -11,7 +11,7 @@ icon: "replicatedKubernetes"
 
 An "airgapped" environment is a network that has no path to inbound or outbound internet traffic at all. Some enterprise customers require that you ship a package they can install in their airgapped environment.
 
-Replicated supports this type of installation on a single node, using the following steps:
+Replicated supports this type of installation, using the following steps:
 
 {{< linked_headline "Prepare the environment" >}}
 
