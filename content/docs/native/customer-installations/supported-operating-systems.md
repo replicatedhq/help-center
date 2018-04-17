@@ -23,7 +23,7 @@ time="2017-01-01T00:00:00.000000000-00:00" level=warning msg="You are running li
 Replicated provides an easy install script to work with the the following list of operating system.
 
 - Debian 7.7+
-- Ubuntu 14.04 / 16.04
+- Ubuntu 14.04.5 / 16.04
 - Fedora 21 / 22
 - Red Hat Enterprise Linux 6.5+
 - CentOS 6+
