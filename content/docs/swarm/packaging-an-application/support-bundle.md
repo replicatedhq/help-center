@@ -78,6 +78,7 @@ By default the Support Bundle will include the following files in the master fol
 | /default/commands/ip_addr_show/stdout | Show protocol (IP or IPv6) addresses on a device. Result of the command `ip -o addr show` |
 | /default/commands/ip_link_show/stdout | Show network devices. Result of the command `ip -o link show` |
 | /default/commands/ip_route_show/stdout | Show routing table entries. Result of the command `ip -o route show` |
+| /default/commands/loadavg/stdout | Show system load average. Result of the command `loadavg` |
 | /default/commands/ps/stdout | Report a snapshot of the current processes. Result of the command `ps fauxwww` |
 | /default/commands/uptime/uptime | Tell how long the system has been running. Result of the command `uptime` |
 | /default/docker/container_ls.json | List all containers. Result of the command `docker ps -a` |
@@ -93,6 +94,7 @@ By default the Support Bundle will include the following files in the master fol
 | /default/etc/system-release | Operating system identification data. A copy of the `/etc/system-release` file |
 | /default/etc/systemd/system/docker.service.d/http-proxy.conf | Systemd docker proxy configuration. A copy of the `/etc/systemd/system/docker.service.d/http-proxy.conf` file |
 | /default/etc/timezone | The system's timezone. A copy of the `/etc/timezone` file |
+| /default/journald/docker/logs.raw | The Docker Journald logs |
 | /default/os-release/os-release | Operating system identification data. A copy of the `/etc/os-release` file. |
 | /default/proc/cpuinfo | Information about the processor, such as its type, make, model, and performance. A copy of the `/proc/cpuinfo` file |
 | /default/proc/meminfo | Information about memory usage, both physical and swap. A copy of the `/proc/meminfo` file |
