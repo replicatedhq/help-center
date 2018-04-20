@@ -43,9 +43,9 @@ SnapshotsS3Bucket: S3 bucket name. This option is only used with s3 backend.
 
 SnapshotsAWSRegion: S3 bucket region. This option is only used with s3 backend.
 
-SnapshotsAWSKeyID: ID of the secret key that has write access to the specified S3 bucket. This option is only used with s3 backend.
+SnapshotsAWSKeyID: ID of the secret key that has write access to the specified S3 bucket. This option is only used with s3 backend. Leave unset on EC2 to use the instance profile.
 
-SnapshotsAWSSecretKey: Secret key value. This option is only used with s3 backend.
+SnapshotsAWSSecretKey: Secret key value. This option is only used with s3 backend. Leave unset on EC2 to use the instance profile.
 
 SnapshotsSFTPHost: Hostname or IP of the server where snapshots will be stored. The value can be in host or host:port format. The address can be of the same server, however the value localhost cannot be used. This option is only used with sftp backend.
 
