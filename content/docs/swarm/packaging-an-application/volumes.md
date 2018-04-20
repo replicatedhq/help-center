@@ -9,6 +9,8 @@ gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---
 
+{{< linked_headline "Managing Volumes" >}}
+
 Docker Swarm supports both binding a host path as part of a definition for a single service as well as anonymous and named volumes in the [top-level volumes key](https://docs.docker.com/compose/compose-file/#volumes). When scheduling your services, keep in mind that the tasks (containers) backing a service can be deployed on any node in a swarm, and this may be a different node each time the service is updated. It is possible to specify [constraints](https://docs.docker.com/compose/compose-file/#placement) so that the service's tasks are deployed on a node that has the volume present. [Node labels](https://docs.docker.com/engine/reference/commandline/service_create/#specify-service-constraints---constraint) are particularly useful in this case and can be configured via the Replicated browser admin console by your customer. See the example below:
 
 ```yaml
