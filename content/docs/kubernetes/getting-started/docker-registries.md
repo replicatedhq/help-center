@@ -97,3 +97,5 @@ images:
   name: app
   tag: v1
 ```
+
+Kubernetes will attempt to pull any images with a `latest` tag by default, even when available locally. To ensure successful airgap installs, either avoid using the `latest` tag or set the `imagePullPolicy` to `IfNotPresent`.
