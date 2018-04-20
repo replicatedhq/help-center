@@ -35,4 +35,4 @@ services:
           - node.labels.role == db
 ```
 
-When using named volumes Docker will use the default driver configured by the Engine (in most cases, this is the local driver) by default. Docker can be configured to use a [volume driver](https://docs.docker.com/storage/volumes/) that is multi-host aware. See [this link](https://docs.docker.com/engine/extend/legacy_plugins/#volume-plugins) for a list of Docker volume plugins. Replicated does not add any additional support for volume plugins. This must be configured by your customer at runtime.
+When using named volumes, Docker will use the default driver configured by the Engine (in most cases, this is the local driver) by default. In addition, Docker can be configured to use a [volume driver](https://docs.docker.com/storage/volumes/) that is multi-host aware. See [this link](https://docs.docker.com/engine/extend/legacy_plugins/#volume-plugins) for a list of Docker volume plugins available. Replicated does not add any additional support for volume plugins. This must be configured by your customer at runtime.
