@@ -31,6 +31,10 @@ curl -sSL "https://get.replicated.com/kubernetes-yml-generate?service_type=LoadB
 kubectl apply -f replicated.yml
 ```
 
+## Namespaces
+
+Replicated components are deployed to the `default` namespace and your app is deployed to a separate namespace as `replicated_<app_id>`.
+
 ## Limitations
 
 ### Node Ports
