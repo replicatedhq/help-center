@@ -50,3 +50,11 @@ Login as an admin when attempting to apply the generated yaml:
 ```shell
 kubectl --username=admin --password=<password> apply -f replicated.yml
 ```
+
+### Resources
+
+For a single-node cluster 4 CPUs are required to meet the resource requests of all system and replicated pods. More may be required to meet the additional resource requests of your app.
+
+### Kubernetes Version
+
+Replicated's Kubernetes scheduler is compatible with v1.9 Kubernetes API servers only.
