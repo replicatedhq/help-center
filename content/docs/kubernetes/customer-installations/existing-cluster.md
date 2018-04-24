@@ -18,7 +18,7 @@ When deploying to an environment with [dynamic volume provisioning](https://kube
 You should also disable the Host Path provisioner when specifying a storage class.
 
 ```shell
-curl -sSL "https://get.replicated.com/kubernetes-yml-generate?storage_class=standard&host_path_provisioner=0" | bash > replicated.yml
+curl -sSL "https://get.replicated.com/kubernetes-yml-generate?storage_class=standard&storage_provisioner=0" | bash > replicated.yml
 kubectl apply -f replicated.yml
 ```
 
@@ -33,12 +33,7 @@ kubectl apply -f replicated.yml
 
 ## Namespaces
 
-Replicated components are deployed to the `default` namespace and your app is deployed to a separate namespace as `replicated_<app_id>`. To modify the namespace that Replicated components are deployed to, set the `kubernetes_namespace` param. The app namespace is not configurable.
-
-```shell
-curl -sSL "https://get.replicated.com/kubernetes-yml-generate?kubernetes_namespace=replicated" | bash > replicated.yml
-kubectl apply -f replicated.yml
-```
+Replicated components are deployed to the `default` namespace and your app is deployed to a separate namespace as `replicated_<app_id>`.
 
 ## Limitations
 
