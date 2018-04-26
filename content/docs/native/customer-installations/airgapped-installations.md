@@ -37,7 +37,7 @@ Your customer will need the `.airgap` package and the normal Replicated license 
 
 {{< linked_headline "Install Airgap Package" >}}
 
-Next, navigate to the Admin Console at https://\<server_ip\>:8800. Accept the self signed certificate, pass the preflight checks, and you will see the license upload screen. Upload the [airgap enabled license](/docs/native/packaging-an-application/create-licenses/#airgap-download-enabled) and then select the airgapped install option. You will have to provide a path to the .airgap file and upload the .rli file here.
+Next, navigate to the Admin Console at https://\<server_ip\>:8800. Accept the self signed certificate, pass the preflight checks, and you will see the license upload screen. Upload the [airgap enabled license](/docs/native/getting-started/create-licenses/#airgap-download-enabled) and then select the airgapped install option. You will have to provide a path to the .airgap file and upload the .rli file here.
 
 Once this screen is completed, Replicated runs as normal. In the Admin Console Settings page (/console/settings), there is a section to set the Airgap properties. You can install updates and sync the license by downloading new versions of these, renaming them with the .airgap extension and placing them in the locations specified on the /console/settings page.
 

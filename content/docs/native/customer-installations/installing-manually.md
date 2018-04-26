@@ -54,7 +54,7 @@ docker run -d --name=replicated-ui \
 ![Cluster](/images/post-screens/manual-install-2.x/click-cluster.png)
 1. Click the Add Node button
 1. Select Docker Run option
-1. Copy the command from the text area below
+1. Copy the command from the Add Node window
 1. Paste and run the command in the terminal window
 
 At this point, the new node should show up on the Cluster page.

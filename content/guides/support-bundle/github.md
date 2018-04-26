@@ -1,13 +1,14 @@
 ---
 date: "2018-01-30T04:02:20Z"
-title: "Github"
+title: "Github Integration"
 description: "A support bundle spec defines what data to collect and store in a support bundle."
-weight: "801"
+weight: "804"
 categories: [ "Support Bundle" ]
-index: "guides"
+index: false
 type: "chapter"
 gradient: "orangeToOrange"
 icon: "troubleshoot"
+nextPage: "/api/support-bundle-yaml.md"
 ---
 
 Once you've [created a support bundle spec](/guides/support-bundle/spec) and have [collected a few bundles from your customers](/guides/support-bundle/generate), it's a good idea to check your spec into source control and treat it the same way you'd treat other code. Having a process around code reviews and being able to accept pull requests to update the spec is useful and supported by Replicated.

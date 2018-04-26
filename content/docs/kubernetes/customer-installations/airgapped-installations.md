@@ -21,10 +21,10 @@ The Replicated airgap installation script for Kubernetes will install docker-eng
 
 {{< linked_headline "Install Replicated" >}}
 
-Replicated can be installed by downloading the latest release from https://s3.amazonaws.com/replicated-airgap-work/replicated___docker__kubernetes.tar.gz and running the following commands:
+Replicated can be installed by downloading the latest release from https://s3.amazonaws.com/replicated-airgap-work/replicated__docker__kubernetes.tar.gz and running the following commands:
 
 ```shell
-tar xzvf replicated.tar.gz
+tar xzvf replicated__docker__kubernetes.tar.gz
 cat ./kubernetes-init.sh | sudo bash -s airgap
 ```
 
@@ -37,7 +37,6 @@ Your customer will need the `.airgap` package and the normal Replicated license 
 
 {{< linked_headline "Install Application" >}}
 
-Next, navigate to the management console at https://\<server_ip\>:8800. Accept the self signed certificate, pass the preflight checks, and you will see the license upload screen. Upload the [airgap enabled license](/docs/distributing-an-application/kubernetes/create-licenses/#airgap-download-enabled) and then select the airgapped install option. You will have to provide a path to the .airgap file and upload the .rli file here.
+Next, navigate to the management console at https://\<server_ip\>:8800. Accept the self signed certificate, pass the preflight checks, and you will see the license upload screen. Upload the [airgap enabled license](/docs/kubernetes/getting-started/create-licenses/#airgap-download-enabled) and then select the airgapped install option. You will have to provide a path to the .airgap file and upload the .rli file here.
 
 Once this screen is completed, Replicated runs as normal. In the :8800/console/settings page, there is a section to set the Airgap mode settings. You can install updates and sync the license by downloading new versions of these, renaming them with the .airgap extension and placing them in the locations specified on the /console/settings page.
-

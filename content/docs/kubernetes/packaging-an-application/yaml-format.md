@@ -30,7 +30,7 @@ name: My Enterprise Application
 
 {{< linked_headline "Detailed App Properties Description" >}}
 
-The properties section includes definitions of some optional (but recommended) application properties. For a list of available properties see [Application Properties](/docs/packaging-an-application/application-properties). You will notice the `{{repl` escape sequence. This invokes a Replicated [template function](/docs/packaging-an-application/template-functions), which will be discussed in more detail soon.
+The properties section includes definitions of some optional (but recommended) application properties. For a list of available properties see [Application Properties](/docs/kubernetes/packaging-an-application/application-properties). You will notice the `{{repl` escape sequence. This invokes a Replicated [template function](/docs/kubernetes/packaging-an-application/template-functions), which will be discussed in more detail soon.
 
 ```yaml
 properties:
@@ -53,7 +53,7 @@ console_support_markdown: |
 
 {{< linked_headline "Snapshots (Backups)" >}}
 
-The snapshots key is available to to enable and configure [Snapshots](/docs/packaging-an-application/snapshots/). The following example will allow your customer to enable snapshots and create a script to run the snapshot.
+The snapshots key is available to to enable and configure [Snapshots](/docs/snapshots/overview). The following example will allow your customer to enable snapshots and create a script to run the snapshot.
 
 ```yaml
 backup:
@@ -67,7 +67,7 @@ backup:
 
 {{< linked_headline "CMD" >}}
 
-The Replicated platform has some built in [commands](/docs/packaging-an-application/commands/) that make writing your configuration much more powerful. In the cmds section you can write commands which we will use later.  These are useful to generate install-time values such as default certs/keys, randomized passwords, JWT token keys, etc.
+The Replicated platform has some built in [commands](/docs/config-screen/commands/) that make writing your configuration much more powerful. In the cmds section you can write commands which we will use later.  These are useful to generate install-time values such as default certs/keys, randomized passwords, JWT token keys, etc.
 
 ```yaml
 cmds:
@@ -77,23 +77,9 @@ cmds:
   - "64"
 ```
 
-{{< linked_headline "Monitors" >}}
-
-When using the Replicated scheduler, the containers which make up your components can be monitored for resource usage metrics on an individual basis. For each metric, simply specify each component and container image pair. For example, if you want to see CPU and memory usage metrics for some of your Redis container and your private worker image pulled from quay.io (in a Worker component):
-
-```yaml
-monitors:
-  cpuacct:
-  - Redis,redis
-  - Worker,quay.io/myenterpriseapp/worker
-  memory:
-  - Redis,redis
-  - Worker,quay.io/myenterpriseapp/worker
-```
-
 {{< linked_headline "Custom Metrics" >}}
 
-Regardless of the scheduler used, Replicated can also display [custom metrics](/docs/packaging-an-application/custom-metrics/) sent from the running instance to the Admin Console by including the stats names in a custom_metrics key.
+Replicated can display [custom metrics](/docs/kubernetes/packaging-an-application/custom-metrics/) sent from the running instance to the Admin Console by including the stats names in a custom_metrics key.
 
 ```yaml
 custom_metrics:
@@ -110,7 +96,7 @@ custom_metrics:
 
 {{< linked_headline "Customer Config Section" >}}
 
-This section is where you can configure fields to gather input from the user. This input can be used to further configure your application. The values here can be used as inputs to container environment variables, config files, and more using [template functions](/docs/packaging-an-application/template-functions/) or tested for validity with [test procs](/docs/packaging-an-application/test-procs/). The [config section](/docs/packaging-an-application/config-screen/) is comprised of configuration groups and items. These items will render as a form in the Settings screen of the Replicated admin console.
+This section is where you can configure fields to gather input from the user. This input can be used to further configure your application. The values here can be used as inputs to container environment variables, config files, and more using [template functions](/docs/kubernetes/packaging-an-application/template-functions/) or tested for validity with [test procs](/docs/config-screen/test-procs/). The [config section](/docs/config-screen/config-yaml/) is comprised of configuration groups and items. These items will render as a form in the Settings screen of the Replicated admin console.
 
 ```yaml
 config:
@@ -129,7 +115,7 @@ config:
 
 {{< linked_headline "Admin Commands" >}}
 
-Optionally you can expose [admin commands](/docs/packaging-an-application/admin-commands/) in your containers. To configure the commands, add the following section. This example will allow the customer to run the `redis-cli` command with any arbitrary arguments. The command will be executed only in the Docker containers that match image name and version as well as defined in the named component. A command that will work with this configuration is `replicated admin redis-cli info`. Replicated will find the appropriate node to run this command on; the customer can run these on the main admin console.
+Optionally you can expose [admin commands](/docs/kubernetes/packaging-an-application/admin-commands/) in your containers. To configure the commands, add the following section. This example will allow the customer to run the `redis-cli` command with any arbitrary arguments. The command will be executed only in the Docker containers that match image name and version as well as defined in the named component. A command that will work with this configuration is `replicated admin redis-cli info`. Replicated will find the appropriate node to run this command on; the customer can run these on the main admin console.
 
 ```yaml
 admin_commands:
@@ -153,5 +139,3 @@ host_requirements:
   disk_space: 8GB
   replicated_version: ">=2.3.0 <2.4.1"
 ```
-
-For the full configuration see [Examples](/categories/examples).

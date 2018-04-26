@@ -156,6 +156,12 @@ aliases: [/docs/getting-started/schedulers/,/categories/getting-started/,/docs/g
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                 </tr>
                                 <tr>
+                                    <td>Legacy OS support</td>
+                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
+                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
+                                </tr>
+                                <tr>
                                     <td>Airgap support</td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>

@@ -6,7 +6,7 @@
   icon: "replicatedKubernetes"
   index: false
   chapters:
-    - title: "Creating and Ship a Release"
+    - title: "Create and Ship a Release"
       description: "Using Replicated to create and promote your first Kubernetes release "
       slug: "create-release"
     - title: "Install and Test"
@@ -15,4 +15,7 @@
     - title: "Iterate and Ship Updates"
       description: "Learn how to iterate and ship updates once you've deployed"
       slug: "iterate"
+    - title: "Managing Storage"
+      description: "Learn about options for providing persistent storage to your appliction"
+      slug: "managing-storage"
 ---

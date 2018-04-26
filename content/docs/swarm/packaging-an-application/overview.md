@@ -14,6 +14,7 @@ hideFromList: true
 Using Replicated with the built-in Docker Swarm support allows you to use your existing `docker-compose.yml` and Swarm Services to deploy your application using the Replicated platform.
 
 Shipping a Swarm application with Replicated involves creating a single YAML file that contains your Docker Swarm services and additional Replicated configuration data. This is packaged as a multi-document YAML file, with a special comment at the top of each included documented to describe it's structure.
+Replicated supports Compose `3` versions up to `3.3`.
 
 A typical Docker Swarm release in Replicated will contain two documents, and will have the following structure:
 
@@ -80,14 +81,14 @@ cmds:
 
 {{< linked_headline "Monitors" >}}
 
-The Replicated Native Scheduler can include CPU and memory monitors for any container without any code. The following YAML will show a CPU and a memory graph of the `redis` container on the Admin Console dashboard page.
+When using the Swarm scheduler, services can be monitored for resource usage metrics. The following YAML will show a CPU and a memory graph of the `redis` service on the Admin Console dashboard page.
 
 ```yaml
 monitors:
   cpuacct:
-    - Redis,redis
+  - redis
   memory:
-     - Redis,redis
+  - redis
 ```
 
 {{< linked_headline "Customer Config Section" >}}
@@ -121,6 +122,9 @@ images:
 - source: public
   name: postgres
   tag: 9.4
+- source: replicated
+  name: app
+  tag: v1
 ```
 
 

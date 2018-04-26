@@ -72,10 +72,6 @@ export LC_CTYPE=C;echo "$(head -c 128 /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -
 docker stack deploy -c docker-compose.yml replicated
 ```
 
-{{< linked_headline "Installing Behind a Proxy" >}}
-
-Proxy support for Swarm will be included in a future release of Replicated.
-
 {{< linked_headline "Customizing Overlay Networks" >}}
 
 Replicated requires four overlay networks in addition to any overlay networks required by your app.
