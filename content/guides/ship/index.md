@@ -2,7 +2,7 @@
   title: "Using Replicated Ship"
   description: "An overview of Replicated's Ship product"
   level: "shipGuide"
-  gradient: "replicatedShip"
+  gradient: "turquoiseToGreen"
   icon: "replicatedShip"
   index: false
   chapters:

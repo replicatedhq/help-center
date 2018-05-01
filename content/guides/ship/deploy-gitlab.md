@@ -6,7 +6,7 @@ weight: "30010"
 categories: [ "Ship Guide" ]
 index: "guides/ship"
 type: "chapter"
-gradient: "ship"
+gradient: "turquoiseToGreen"
 icon: "replicatedShip"
 ---
 
@@ -42,6 +42,7 @@ A Ship release is a yaml file describing the assets to include, the configuratio
 There are three sections to the Ship yaml - assets, config, and lifecycle.
 
 1. Assets
+
 ```yaml
 assets:
   v1:
@@ -71,7 +72,9 @@ assets:
       mode: 0777
 ```
   The `assets` section describes the files that ship will create when run. There are two types of assets currently supported in Ship, though we'll only be using `inline` here. `inline` assets create templated files at the destination location, while `docker` assets do the same with exported Docker images. For the purposes of this demo, we'll be using public Docker images with no allowance for airgapped installations, but normally we would explicitly include all the Docker images within the Ship yaml.
+
 1. Config
+
 ```yaml
 config:
   v1:
@@ -127,7 +130,9 @@ config:
         type: bool
 ```
   The `configuration` section uses the same layout and structure as that of Replicated, and is greatly expanded upon [here](https://help.replicated.com/docs/config-screen/config-yaml/). There is one exception - 'when' fields can only be templatable strings. We'll use it to determine what settings the user would like for their GitLab installation.
+
 1. Lifecycle
+
 ```yaml
 lifecycle:
   v1:
