@@ -1,6 +1,6 @@
 ---
 date: "2018-05-01T19:00:00Z"
-title: "Deploy an Application With Ship"
+title: "Deploying GitLab With Ship"
 description: "A guide to creating and shipping a Kubernetes app with Ship"
 weight: "30010"
 categories: [ "Ship Guide" ]
@@ -33,7 +33,7 @@ By default, three release channels are created - Stable, Beta and Nightly. We'll
 ![Create Release Channel](/images/guides/ship/stable-beta-nightly.png)
 
 
-{{< linked_headline "#Editing a Release" >}}
+{{< linked_headline "Editing a Release" >}}
 
 A Ship release is a yaml file describing the assets to include, the configuration options to present to the installer, and what text to display at runtime. We'll use the builtin editor on console to get started.
 
@@ -42,115 +42,115 @@ A Ship release is a yaml file describing the assets to include, the configuratio
 There are three sections to the Ship yaml - assets, config, and lifecycle.
 
 1. Assets
-  ```yaml
-  assets:
-    v1:
-    - inline:
-        contents: |
-          #!/bin/sh
-          git clone git@gitlab.com:charts/gitlab.git
-          helm dependencies update
-          helm upgrade --install gitlab . \
-            --timeout 600 \
-            --set global.hosts.domain={{repl config "domain_name"}} \
-            {{repl if {{repl config "external_ip"}} }}--set global.hosts.externalIP={{repl config "external_ip"}}{{end}} \
-            --set gitlab.migrations.initialRootPassword={{repl config "gitlab_root_password"}} \
-            --set certmanager-issuer.email={{repl config "certificate_email"}} \
-            {{repl if {{repl config "external_postgres"}} }} --set global.psql.host={{repl config "postgres_host"}} \
-            --set global.psql.password.secret={{repl config "postgres_k8s_secret_name"}} \
-            --set global.psql.password.key={{repl config "postgres_password"}} {{repl end}} \
-            {{repl if {{repl config "redis_ha"}} }}--set redis.enabled=false --set redis-ha.enabled=true{{repl end}} 
+```yaml
+assets:
+  v1:
+  - inline:
+      contents: |
+        #!/bin/sh
+        git clone git@gitlab.com:charts/gitlab.git
+        helm dependencies update
+        helm upgrade --install gitlab . \
+          --timeout 600 \
+          --set global.hosts.domain={{repl config "domain_name"}} \
+          {{repl if {{repl config "external_ip"}} }}--set global.hosts.externalIP={{repl config "external_ip"}}{{end}} \
+          --set gitlab.migrations.initialRootPassword={{repl config "gitlab_root_password"}} \
+          --set certmanager-issuer.email={{repl config "certificate_email"}} \
+          {{repl if {{repl config "external_postgres"}} }} --set global.psql.host={{repl config "postgres_host"}} \
+          --set global.psql.password.secret={{repl config "postgres_k8s_secret_name"}} \
+          --set global.psql.password.key={{repl config "postgres_password"}} {{repl end}} \
+          {{repl if {{repl config "redis_ha"}} }}--set redis.enabled=false --set redis-ha.enabled=true{{repl end}} 
 
-        dest: ./assets/install.sh
-        mode: 0777
-    - inline:
-        contents: |
-          #!/bin/sh
+      dest: ./assets/install.sh
+      mode: 0777
+  - inline:
+      contents: |
+        #!/bin/sh
 
-        dest: ./assets/uninstall.sh
-        mode: 0777
-  ```
+      dest: ./assets/uninstall.sh
+      mode: 0777
+```
   The `assets` section describes the files that ship will create when run. There are two types of assets currently supported in Ship, though we'll only be using `inline` here. `inline` assets create templated files at the destination location, while `docker` assets do the same with exported Docker images. For the purposes of this demo, we'll be using public Docker images with no allowance for airgapped installations, but normally we would explicitly include all the Docker images within the Ship yaml.
 1. Config
-  ```yaml
-  config:
-    v1:
-      - name: config_options
-        title: Gitlab Configuration Options
-        description: The options required by GitLab
-        items:
-        - name: domain_name
-          title: Domain Name
-          description: Specify a domain which will contain records to resolve gitlab, registry, and minio to the appropriate IP for your chart
-          type: text
-          required: true
-        - name: external_ip
-          title: External IP
-          description: If you plan to manually configure your DNS records they should all point to a static IP. For example if you choose example.local and you have a static IP of 10.10.10.10, then gitlab.example.local, registry.example.local and minio.example.local should all resolve to 10.10.10.10.
-          type: text
-          required: false
-        - name: gitlab_root_password
-          title: Gitlab Root Password
-          description: The initial root password for GitLab.
-          type: text
-          required: true
-        - name: certificate_email
-          title: Certificate Email
-          description: The email to associate with the letsencrypt certificates generated by cert-manager.
-          type: text
-          required: true
-        - name: external_postgres
-          title: Use an External Postgres Database
-          type: bool
-          required: true
-        - name: postgres_host
-          title: External Postgres Host
-          description: The hostname of the external postgres instance GitLab should use
-          type: text
-          when: '{{repl ConfigOptionEquals "external_postgres" "1"}}'
-          required: true
-        - name: postgres_k8s_secret_name
-          title: External Postgres Kubernetes Secret Name
-          description: The name of the Kubernetes secret Postgres should use
-          type: text
-          when: '{{repl ConfigOptionEquals "external_postgres" "1"}}'
-          required: true
-        - name: postgres_password
-          title: External Postgres Password
-          description: The key of the password for  the external postgres instance GitLab should use
-          type: password
-          when: '{{repl ConfigOptionEquals "external_postgres" "1"}}'
-          required: true
-        - name: redis_ha
-          title: Redis-ha
-          description: Use high availibility Redis-ha
-          type: bool
-  ```
+```yaml
+config:
+  v1:
+    - name: config_options
+      title: Gitlab Configuration Options
+      description: The options required by GitLab
+      items:
+      - name: domain_name
+        title: Domain Name
+        description: Specify a domain which will contain records to resolve gitlab, registry, and minio to the appropriate IP for your chart
+        type: text
+        required: true
+      - name: external_ip
+        title: External IP
+        description: If you plan to manually configure your DNS records they should all point to a static IP. For example if you choose example.local and you have a static IP of 10.10.10.10, then gitlab.example.local, registry.example.local and minio.example.local should all resolve to 10.10.10.10.
+        type: text
+        required: false
+      - name: gitlab_root_password
+        title: Gitlab Root Password
+        description: The initial root password for GitLab.
+        type: text
+        required: true
+      - name: certificate_email
+        title: Certificate Email
+        description: The email to associate with the letsencrypt certificates generated by cert-manager.
+        type: text
+        required: true
+      - name: external_postgres
+        title: Use an External Postgres Database
+        type: bool
+        required: true
+      - name: postgres_host
+        title: External Postgres Host
+        description: The hostname of the external postgres instance GitLab should use
+        type: text
+        when: '{{repl ConfigOptionEquals "external_postgres" "1"}}'
+        required: true
+      - name: postgres_k8s_secret_name
+        title: External Postgres Kubernetes Secret Name
+        description: The name of the Kubernetes secret Postgres should use
+        type: text
+        when: '{{repl ConfigOptionEquals "external_postgres" "1"}}'
+        required: true
+      - name: postgres_password
+        title: External Postgres Password
+        description: The key of the password for  the external postgres instance GitLab should use
+        type: password
+        when: '{{repl ConfigOptionEquals "external_postgres" "1"}}'
+        required: true
+      - name: redis_ha
+        title: Redis-ha
+        description: Use high availibility Redis-ha
+        type: bool
+```
   The `configuration` section uses the same layout and structure as that of Replicated, and is greatly expanded upon [here](https://help.replicated.com/docs/config-screen/config-yaml/). There is one exception - 'when' fields can only be templatable strings. We'll use it to determine what settings the user would like for their GitLab installation.
 1. Lifecycle
-  ```yaml
-  lifecycle:
-    v1:
-      - message:
-          contents: |
-            This tool will prepare assets so you can deploy GitLab-Enterpise
-            to your existing Kubernetes cluster
-      - render: {}
-      - message:
-          contents: |
-            GitLab is ready to deploy to your kubernetes cluster.
-            
-            If you have Helm configured locally, you can
-            run the following command to deploy GitLab to
-            your kubernetes cluster:
-                
-                bash ./scripts/install.sh
-      - message:
+```yaml
+lifecycle:
+  v1:
+    - message:
+        contents: |
+          This tool will prepare assets so you can deploy GitLab-Enterpise
+          to your existing Kubernetes cluster
+    - render: {}
+    - message:
+        contents: |
+          GitLab is ready to deploy to your kubernetes cluster.
+          
+          If you have Helm configured locally, you can
+          run the following command to deploy GitLab to
+          your kubernetes cluster:
+              
+              bash ./scripts/install.sh
+    - message:
         level: warn
         contents: |
           A state file has been written to {{repl context "state_file_path" }} -- please store it
           somewhere safe, you'll need it if you want to recover or update this installation of GitLab.
-  ```
+```
   The `lifecycle` section is the messaging that will be seen by the end user. Contents will be printed to the screen in order during execution, with `render: {}` being replaced with the configuration options. Message levels change the color of the rendered text, and can be `debug`, `info` (the default), `warn` or `error`.
 
 Once we've finished editing our yaml, we can create a release from it.
@@ -161,7 +161,7 @@ Once we've finished editing our yaml, we can create a release from it.
 
 Before we can test our app, we need to add a customer to the channel. Since Nightly releases shouldn't be going to production, we'll add ATestCustomer.
 
-![Add Customer To Channel](/images/guides/ship/channel-details.png)
+![Add Customer To Channel](/images/guides/ship/channel-details-withcust.png)
 
 {{< linked_headline "Installing the Release" >}}
 
