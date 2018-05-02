@@ -32,7 +32,6 @@ By default, three release channels are created - Stable, Beta and Nightly. We'll
 
 ![Create Release Channel](/images/guides/ship/stable-beta-nightly.png)
 
-
 {{< linked_headline "Editing a Release" >}}
 
 A Ship release is a yaml file describing the assets to include, the configuration options to present to the installer, and what text to display at runtime. We'll use the builtin editor on console to get started.
@@ -71,6 +70,7 @@ assets:
       dest: ./assets/uninstall.sh
       mode: 0777
 ```
+
   The `assets` section describes the files that ship will create when run. There are two types of assets currently supported in Ship, though we'll only be using `inline` here. `inline` assets create templated files at the destination location, while `docker` assets do the same with exported Docker images. For the purposes of this demo, we'll be using public Docker images with no allowance for airgapped installations, but normally we would explicitly include all the Docker images within the Ship yaml.
 
 1. Config
@@ -129,6 +129,7 @@ config:
         description: Use high availibility Redis-ha
         type: bool
 ```
+
   The `configuration` section uses the same layout and structure as that of Replicated, and is greatly expanded upon [here](https://help.replicated.com/docs/config-screen/config-yaml/). There is one exception - 'when' fields can only be templatable strings. We'll use it to determine what settings the user would like for their GitLab installation.
 
 1. Lifecycle
@@ -156,6 +157,7 @@ lifecycle:
           A state file has been written to {{repl context "state_file_path" }} -- please store it
           somewhere safe, you'll need it if you want to recover or update this installation of GitLab.
 ```
+
   The `lifecycle` section is the messaging that will be seen by the end user. Contents will be printed to the screen in order during execution, with `render: {}` being replaced with the configuration options. Message levels change the color of the rendered text, and can be `debug`, `info` (the default), `warn` or `error`.
 
 Once we've finished editing our yaml, we can create a release from it.
@@ -173,7 +175,6 @@ Before we can test our app, we need to add a customer to the channel. Since Nigh
 Now we can produce an installation script for our test customer.
 
 ![Install A Release](/images/guides/ship/install-script.png)
-
 
 {{< linked_headline "Promoting a Release" >}}
 
