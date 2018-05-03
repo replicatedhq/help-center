@@ -6,7 +6,7 @@ weight: "30010"
 categories: [ "Ship Guide" ]
 index: "guides/ship"
 type: "chapter"
-gradient: "turquoiseToGreen"
+gradient: "console"
 icon: "replicatedShip"
 ---
 
