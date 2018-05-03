@@ -114,7 +114,7 @@ config:
 
 
 ## Install Script
-Now tha all of the YAML is included, we can create a simple bash script to run the installation:
+Now that all of the YAML is included, we can create a simple bash script to run the installation:
 
 ```yaml
 assets:
