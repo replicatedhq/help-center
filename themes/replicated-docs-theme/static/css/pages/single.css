@@ -240,7 +240,7 @@
   border: 1px solid lightgray;
   position: absolute;
   width: 100%;
-  bottom: -140px;
+  bottom: -291px;
   background: #fff;
   box-sizing: border-box;
   z-index: 2;
@@ -254,7 +254,8 @@
   pointer-events: none;
 }
 
-.sidebar .scheduler-menu-item:hover {
+.sidebar .scheduler-menu-item:hover,
+.sidebar .scheduler-menu-item-sub:hover {
   background: rgba(163, 211, 233, .2);
   border-radius: 2px;
 }
