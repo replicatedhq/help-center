@@ -1,8 +1,8 @@
 ---
 date: "2018-05-01T19:00:00Z"
-title: "Deploying GitLab With Ship"
+title: "Deploying an application"
 description: "A guide to creating and shipping a Kubernetes app with Ship"
-weight: "30010"
+weight: "30002"
 categories: [ "Ship Guide" ]
 index: "guides/ship"
 type: "chapter"
@@ -36,11 +36,11 @@ By default, three release channels are created - Stable, Beta and Nightly. We'll
 
 A Ship release is a yaml file describing the assets to include, the configuration options to present to the installer, and what text to display at runtime. We'll use the builtin editor on console to get started.
 
-![Edit Yaml](/images/guides/ship/edit-release.png) 
+![Edit Yaml](/images/guides/ship/edit-release.png)
 
 There are three sections to the Ship yaml - assets, config, and lifecycle.
 
-1. Assets
+{{< linked_headline "Assets" >}}
 
 ```yaml
 assets:
@@ -59,21 +59,15 @@ assets:
           {{repl if {{repl config "external_postgres"}} }} --set global.psql.host={{repl config "postgres_host"}} \
           --set global.psql.password.secret={{repl config "postgres_k8s_secret_name"}} \
           --set global.psql.password.key={{repl config "postgres_password"}} {{repl end}} \
-          {{repl if {{repl config "redis_ha"}} }}--set redis.enabled=false --set redis-ha.enabled=true{{repl end}} 
+          {{repl if {{repl config "redis_ha"}} }}--set redis.enabled=false --set redis-ha.enabled=true{{repl end}}
 
-      dest: ./assets/install.sh
-      mode: 0777
-  - inline:
-      contents: |
-        #!/bin/sh
-
-      dest: ./assets/uninstall.sh
+      dest: ./gitlab/scripts/install.sh
       mode: 0777
 ```
 
   The `assets` section describes the files that ship will create when run. There are two types of assets currently supported in Ship, though we'll only be using `inline` here. `inline` assets create templated files at the destination location, while `docker` assets do the same with exported Docker images. For the purposes of this demo, we'll be using public Docker images with no allowance for airgapped installations, but normally we would explicitly include all the Docker images within the Ship yaml.
 
-1. Config
+{{< linked_headline "Config" >}}
 
 ```yaml
 config:
@@ -95,7 +89,7 @@ config:
       - name: gitlab_root_password
         title: Gitlab Root Password
         description: The initial root password for GitLab.
-        type: text
+        type: password
         required: true
       - name: certificate_email
         title: Certificate Email
@@ -132,7 +126,7 @@ config:
 
   The `configuration` section uses the same layout and structure as that of Replicated, and is greatly expanded upon [here](https://help.replicated.com/docs/config-screen/config-yaml/). There is one exception - 'when' fields can only be templatable strings. We'll use it to determine what settings the user would like for their GitLab installation.
 
-1. Lifecycle
+{{< linked_headline "Lifecycle" >}}
 
 ```yaml
 lifecycle:
@@ -145,12 +139,12 @@ lifecycle:
     - message:
         contents: |
           GitLab is ready to deploy to your kubernetes cluster.
-          
+
           If you have Helm configured locally, you can
           run the following command to deploy GitLab to
           your kubernetes cluster:
-              
-              bash ./scripts/install.sh
+
+              bash ./gitlab/scripts/install.sh
     - message:
         level: warn
         contents: |
@@ -170,14 +164,6 @@ Before we can test our app, we need to add a customer to the channel. Since Nigh
 
 ![Add Customer To Channel](/images/guides/ship/channel-details-withcust.png)
 
-{{< linked_headline "Installing the Release" >}}
+{{< linked_headline "Next Steps" >}}
 
-Now we can produce an installation script for our test customer.
-
-![Install A Release](/images/guides/ship/install-script.png)
-
-{{< linked_headline "Promoting a Release" >}}
-
-Once we've tested things out, we can promote the release to the Beta channel.
-
-![Promote Release](/images/guides/ship/promote-release.png)
+Now that's we've created and shipped the first version of our application, continue to the [next section](../installing) to learn how an enterprise customer will install this release.
