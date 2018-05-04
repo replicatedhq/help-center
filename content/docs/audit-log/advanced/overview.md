@@ -7,7 +7,8 @@ categories: [ "Replicated Audit Log" ]
 index: ["docs/audit-log", "docs"]
 aliases: [ /docs/audit-log/advanced ]
 hideFromList: true
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 Once you've started sending events into your Audit Log, it's time to explore some of the advanced functionality.

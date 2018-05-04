@@ -5,7 +5,8 @@ description: "Events in an audit log must be ordered"
 weight: "1607"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 Some properties of an audit event can be renamed after the event is received. There is a limited amount of these and the original event is still [immutable](/docs/audit-log/how-to/immutable/). But data can change over time, and it's important to be able to link to and find events later.

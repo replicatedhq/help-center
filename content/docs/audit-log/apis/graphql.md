@@ -5,7 +5,8 @@ description: "Events in an audit log must be ordered"
 weight: "2205"
 categories: [ "APIs" ]
 index: ["docs/audit-log", "docs"]
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 The recommended way to search events using an API is to POST your query and variables to the appropriate Audit Log GraphQL endpoint.

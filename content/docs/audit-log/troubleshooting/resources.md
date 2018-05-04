@@ -7,7 +7,8 @@ categories: [ "Troubleshooting" ]
 index: ["docs/audit-log", "docs"]
 aliases: [ /docs/audit-log/troubleshooting ]
 hideFromList: true
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 ### [Retraced Status](https://retraced.statuspage.io) | [API Documentation](https://retraced.readme.io) | [Release Notes](/documentation/troubleshooting/release-notes) | [Contact](mailto:support@retraced.io)

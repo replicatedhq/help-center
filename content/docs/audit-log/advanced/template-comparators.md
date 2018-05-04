@@ -5,7 +5,8 @@ description: "Events in an audit log must be ordered"
 weight: "1804"
 categories: [ "Advanced Audit Logging" ]
 index: ["docs/audit-log", "docs"]
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 

@@ -5,7 +5,8 @@ description: "Events in an audit log must be ordered"
 weight: "1804"
 categories: [ "Advanced Audit Logging" ]
 index: ["docs/audit-log", "docs"]
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 SSH Event Streaming allows Enterprise API users to stream events as they occur over ssh using an Enterprise API Token.

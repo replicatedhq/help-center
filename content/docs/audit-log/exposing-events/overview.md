@@ -7,7 +7,8 @@ categories: [ "Replicated Audit Log" ]
 index: ["docs/audit-log", "docs"]
 aliases: [ /docs/audit-log/advanced ]
 hideFromList: true
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 There are two main way to expose your audit log data to your application's users. Users can browse and search events using an embeddable viewer UI, or they can access data programmatically using API tokens.

@@ -7,7 +7,8 @@ categories: [ "APIs" ]
 index: ["docs/audit-log", "docs"]
 aliases: [ /docs/audit-log/apis ]
 hideFromList: true
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 Replicated Audit Log provides several APIs:

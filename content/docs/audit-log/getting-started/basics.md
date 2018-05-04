@@ -5,7 +5,8 @@ description: "Events in an audit log must be ordered"
 weight: "1603"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 At it's core, the Replicated Audit Log consists of 3 components:

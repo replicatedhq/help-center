@@ -7,7 +7,8 @@ categories: [ "SDKs" ]
 index: ["docs/audit-log", "docs"]
 aliases: [ /docs/audit-log/sdks ]
 hideFromList: true
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 It's possible to use the Replicated Audit completely with the [documented API](/docs/audit-log/apis/overview/). But that can often be a little tedious, so we've created easy-to-use SDKs for popular languages and frameworks. If you don't see your stack on here, [reach out](/community) to send a request and we'll see how we can help!

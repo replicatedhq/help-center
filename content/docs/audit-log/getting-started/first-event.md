@@ -5,7 +5,8 @@ description: "Events in an audit log must be ordered"
 weight: "1604"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 Getting started with Retraced is easy. The best way to start is to pick a single event to start sending to confirm that everything is set up right. If your site has a login event, it's a perfect first event because it covers most of the scenarios that can be tricky when starting to audit log. Login events can have both a successful and failed response, it can be anonymous or authenticated and it may or may not belong to a group.
