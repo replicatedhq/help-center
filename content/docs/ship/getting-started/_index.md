@@ -1,10 +1,10 @@
 ---
 date: "2018-03-03T04:02:20Z"
 title: "Ship Overview"
-description: "Replicated ship overview"
-weight: "1601"
-categories: [ "Replicated Audit Log" ]
+description: "Replicated Ship overview"
+weight: "40001"
+categories: [ "Ship" ]
 index: false
-icon: "replicatedCircle"
+icon: "ship"
 ---
 

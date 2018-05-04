@@ -11,6 +11,10 @@ icon: "replicatedShip"
 previousPage: "/"
 ---
 
+{{< linked_headline "About This Guide" >}}
+
+This guide will walk you through the process of taking an existing Helm application, package it and distribute it in Replicated using [Replicated Ship](/docs/ship). For this guide, we will take the GitLab Helm charts and use them to create an easy-to-deploy application.
+
 {{< linked_headline "Introduction to Replicated Ship" >}}
 
 Replicated Ship is a set of tools (APIs, YAML spec, and distributable components) that make it easy to package and distribute a modern, cloud-native application for an enterprise customer to install, configure, and operate in their own private environment.

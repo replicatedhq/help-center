@@ -1,7 +1,7 @@
 ---
 date: "2018-05-01T19:00:00Z"
-title: "Iterating and updates"
-description: "A guide to packaging and distributing an update to an application"
+title: "Iterate And Ship Updates"
+description: "Learn how to iterate and release updates to a Helm application"
 weight: "30004"
 categories: [ "Ship Guide" ]
 index: "guides/ship"

@@ -1,7 +1,7 @@
 ---
 date: "2018-05-01T19:00:00Z"
-title: "Installing an application"
-description: "Understanding how to install an application deployed with Ship"
+title: "Testing The Customer Installation"
+description: "A step-by-step guide of what the experience will be like installing the application"
 weight: "30003"
 categories: [ "Ship Guide" ]
 index: "guides/ship"
