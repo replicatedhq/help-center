@@ -83,7 +83,11 @@
 
 .aa-suggestion .u-replicatedKubernetes,
 .aa-suggestion .u-replicatedCircle,
-.aa-suggestion .u-replicatedDockerSwarm {
+.aa-suggestion .u-replicatedDockerSwarm,
+.aa-suggestion .u-replicatedAuditLog,
+.aa-suggestion .u-replicatedShip,
+.aa-suggestion .u-replicatedTroubleshoot,
+.aa-suggestion .u-replicatedHelm {
   transform: scale(0.3);
   left: -30px;
   top: -26px;
