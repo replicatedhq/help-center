@@ -5,7 +5,8 @@ description: "Learn the basic ideas of how the Replicated Audit Log works and ho
 weight: "1702"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 hideFromList: true
 ---
 

@@ -5,7 +5,8 @@ description: "Events in an audit log must be ordered"
 weight: "1803"
 categories: [ "Advanced Audit Logging" ]
 index: ["docs/audit-log", "docs"]
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 Display templates is an important part of controlling how the events are rendered in the browser, exports or over any other stream.

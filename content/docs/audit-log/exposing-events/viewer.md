@@ -5,7 +5,8 @@ description: "Events in an audit log must be ordered"
 weight: "1902"
 categories: [ "Exposing Events" ]
 index: ["docs/audit-log", "docs"]
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 The Retraced embedded viewer is the easiest way consume and understand your audit log data. This guide will walk you through the viewer's features.

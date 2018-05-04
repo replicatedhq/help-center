@@ -5,7 +5,8 @@ description: "Events in an audit log must be ordered"
 weight: "2103"
 categories: [ "SDKs" ]
 index: ["docs/audit-log", "docs"]
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 

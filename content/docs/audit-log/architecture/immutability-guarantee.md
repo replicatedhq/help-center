@@ -5,7 +5,8 @@ description: "Events in an audit log must be ordered"
 weight: "2002"
 categories: [ "Architecture" ]
 index: ["docs/audit-log", "docs"]
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 When you send audit events into Retraced, we offer functionality that guarantees the data you sent is the data that was received. We use the same functionality to allow you to, at any time, cryptographically verify that the events have not changed since they were written and no events have been removed.

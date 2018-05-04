@@ -5,7 +5,8 @@ description: "Events in an audit log must be ordered"
 weight: "1605"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 The Retraced interface supports searching for events. While it's presented as a single, simple input field, the Retraced search interface supports complex structured queries.

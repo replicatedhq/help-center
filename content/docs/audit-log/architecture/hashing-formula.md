@@ -5,7 +5,8 @@ description: "Events in an audit log must be ordered"
 weight: "2003"
 categories: [ "Architecture" ]
 index: ["docs/audit-log", "docs"]
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 When both the sender and the receiver of a message independently calculate a digest of the message, it's a proven way to ensure that both sides have the same content. But both sides needs to have a reference that describes how to calculate the digest. This document describes the specification that the Replicated API uses to calculate a message digest.

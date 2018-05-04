@@ -5,7 +5,8 @@ description: "Events in an audit log must be ordered"
 weight: "2302"
 categories: [ "Troubleshooting" ]
 index: ["docs/audit-log", "docs"]
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 By default, Retraced will send a daily email to all admins on your account with key statistics and indictors of anything that's changed or unexpected.

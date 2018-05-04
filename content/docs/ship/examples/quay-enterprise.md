@@ -5,7 +5,8 @@ description: "Shipping Quay Enterprise on Replicated Ship"
 weight: "2202"
 categories: [ "Ship Examples" ]
 index: ["docs/products", "docs"]
-icon: "ship"
+icon: "replicatedShip"
+gradient: "console"
 ---
 
 [Quay Enterprise](https://coreos.com/quay-enterprise/) is a proprietary, enterprise-ready container registry. Quay Enterprise is designed to run on Kubernetes, and has public installation instructions available on the [CoreOS documentation](https://coreos.com/quay-enterprise/docs/latest/tectonic/index.html). This is an example of converting these manual installation instructions into an easy-to-use, scriptable process.

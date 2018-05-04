@@ -7,7 +7,8 @@ categories: [ "Architecture" ]
 index: ["docs/audit-log", "docs"]
 aliases: [ /docs/audit-log/architecvture ]
 hideFromList: true
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 Retraced is more than a traditional database to store and retrieve objects. The "Architecture" documentation provides an overview of some of the features that Retraced provides to provide immutability and verifiability of your audit log data.

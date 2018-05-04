@@ -5,7 +5,8 @@ description: "Events in an audit log must be ordered"
 weight: "1903"
 categories: [ "Exposing Events" ]
 index: ["docs/audit-log", "docs"]
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 The Retraced Enterprise API enables users to consume audit log data programmatically and integrate it with an external monitoring or security system.

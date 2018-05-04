@@ -5,6 +5,7 @@ description: "The Replicated Audit Log is a self-hosted, embedded audit log for 
 weight: "1801"
 categories: [ "Advanced Audit Logging" ]
 index: false
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 

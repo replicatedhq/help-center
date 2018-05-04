@@ -5,7 +5,8 @@ description: "Events in an audit log must be ordered"
 weight: "2204"
 categories: [ "APIs" ]
 index: ["docs/audit-log", "docs"]
-icon: "replicatedCircle"
+icon: "replicatedAuditLog"
+gradient: "console"
 ---
 
 ### [Swagger JSON](https://api.retraced.io/admin/v1/swagger.json) | [API Console](https://retraced.readme.io/v1.0/reference)
