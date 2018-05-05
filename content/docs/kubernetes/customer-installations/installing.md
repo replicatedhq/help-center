@@ -41,21 +41,30 @@ The install script can take flags to help your customers with specialized enterp
 | bootstrap-token               | Authentication token used by kubernetes when adding additional nodes                               |
 | bootstrap-token-ttl           | TTL of the `bootstrap-token`                                                                       |
 | http-proxy                    | If present, then use proxy                                                                         |
+| ip-alloc-range                | Customize the range of IPs assigned to pods                                                        |
 | log-level                     | If present, this will be the log level of the Replicated daemon (debug, info, or error).           |
 | no-docker                     | Skip docker installation                                                                           |
 | no-proxy                      | If present, do not use a proxy                                                                     |
 | public-address                | The public IP address                                                                              |
 | private-address               | The private IP address                                                                             |
-| release-sequence              | The release of your app to install
-| kubernetes-namespace          | The namespace to install Replicated into                                                           |
+| release-sequence              | The release of your app to install                                                                 |
 | ui-bind-port                  | The port to bind the UI to                                                                         |
 | no-ce-on-ee                   | Disable installation of Docker CE onto platforms it does not support - RHEL, SLES and Oracle Linux |
-| storage_provisioner		| Disable automatically provisioning storage for PersistentVolumeClaims on the host				     |
-| storage_class			| The name of an alternative StorageClass that will provision storage for PVCs                       |
-| service_type			| Enable Service type of LoadBalancer for the Replicated Admin console				     |
+| reset                         | Uninstall Kubernetes                                                                               |
+| storage-provisioner           | Disable automatically provisioning storage for PersistentVolumeClaims on the host                  |
+| storage-class                 | The name of an alternative StorageClass that will provision storage for PVCs                       |
+| service-type                  | Enable Service type of LoadBalancer for the Replicated Admin console                               |
 
 Example quick install with flags:
 
 ```shell
 curl -sSL https://get.replicated.com/kubernetes-init | sudo bash -s no-proxy ui-bind-port=8000
+```
+
+{{< linked_headline "Uninstalling" >}}
+
+Use the `reset` flag to uninstall Kubernetes and Replicated:
+
+```shell
+curl -sSL https://get.replicated.com/kubernetes-init | sudo bash -s reset
 ```
