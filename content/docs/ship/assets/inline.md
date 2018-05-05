@@ -8,3 +8,6 @@ index: ["docs/products", "docs"]
 icon: "replicatedShip"
 gradient: "console"
 ---
+
+{{< linked_headline "Inline Asset Type" >}}
+

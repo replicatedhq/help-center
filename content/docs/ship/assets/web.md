@@ -4,7 +4,8 @@ title: "Web"
 description: "Description of the web asset type"
 weight: "41005"
 categories: [ "Ship Assets" ]
-index: ["docs/products", "docs"]
+index: false
 icon: "replicatedShip"
 gradient: "console"
+hideFromList: true
 ---
