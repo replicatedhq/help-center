@@ -11,11 +11,11 @@ gradient: "console"
 
 {{< linked_headline "Kubernetes and Airgap" >}}
 
-When distributing a Kubernetes (or Helm) application using Replicated Ship, there will be a running Kubernetes cluster running to deploy to. Enterprise Kubernetes clusters that are used for internal applications can be installed and operated in airgapped environments. An airgap cluster is any cluster that doesn't have outbound Internet access, and therefore cannot pull the application images from a Docker registry.
+When distributing a Kubernetes (or Helm) application using Replicated Ship, there will be a running Kubernetes cluster to deploy to. Enterprise Kubernetes clusters that are used for internal applications can be installed and operated in airgapped environments. An airgap cluster is any cluster that doesn't have outbound Internet access, and therefore cannot pull the application images from a Docker registry.
 
-The recommended way to deploy applications to airgap clusters is to require a Docker registry that's already running in the environment.
+The recommended way to deploy applications to airgap clusters is to require a Docker registry that's already running in the customer environment.
 
-When requiring an existing Docker registry to use, the images will have to be retagged and pushed to the registry at install time. Replicated Ship supports workflow from the workstation that's performing the installation:
+When requiring an existing Docker registry to use, the images will have to be retagged and pushed to the registry at install time. Replicated Ship supports this workflow from the workstation that's performing the installation:
 
 1. Require that the installer provide the registry name and namespace in the registry
 1. Require that the workstation running the installation be logged in to the registry
@@ -60,4 +60,18 @@ assets:
           docker push {{repl ConfigOption "registry_endpoint"}}/{{repl ConfigOption "registry_namespace"}}/redis:4.1
 
           kubectl apply -f ./installer/k8s
+
+config:
+  v1:
+    - name: registry
+      title: Docker Registry
+      items:
+        - name: registry_endpoint
+          type: text
+          required: true
+          help_text: registry.mycompany.com
+        - name: registry_namespace
+          type: text
+          required: true
+          help_text: myapp
 ```
