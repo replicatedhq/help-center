@@ -15,7 +15,4 @@
     - title: "Testing The Customer Installation"
       description: "A step-by-step guide of what the experience will be like installing the application"
       slug: "installing"
-    - title: "Iterate and Ship Updates"
-      description: "Learn how to iterate and release updates to a Helm application"
-      slug: "iterate"
 ---
