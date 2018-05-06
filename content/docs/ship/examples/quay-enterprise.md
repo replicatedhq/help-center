@@ -2,10 +2,12 @@
 date: "2018-05-02T01:19:20Z"
 title: "Quay Enterprise"
 description: "Shipping Quay Enterprise on Replicated Ship"
-weight: "2202"
+weight: "46002"
 categories: [ "Ship Examples" ]
-index: ["docs/products", "docs"]
+index: false
 icon: "replicatedShip"
+draft: true
+hideFromList: true
 gradient: "console"
 ---
 

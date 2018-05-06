@@ -1,7 +1,7 @@
 ---
 date: "2018-05-01T19:00:00Z"
-title: "Deploying an application"
-description: "A guide to creating and shipping a Kubernetes app with Ship"
+title: "Packaging A Helm Application"
+description: "A walkthrough of taking an existing Helm application and adding it to Replicated Ship"
 weight: "30002"
 categories: [ "Ship Guide" ]
 index: "guides/ship"
