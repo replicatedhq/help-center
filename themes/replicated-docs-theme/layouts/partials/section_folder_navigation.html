@@ -31,18 +31,24 @@
                 <div class="u-borderTop--gray u-paddingTop--normal u-marginTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
                     <a href="/docs/products/getting-started" class="u-color--curiousBlue">Replicated Products</a>
                     <div class="u-marginTop--small">
+                        <!--
                         <a href="/docs/audit-log" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
                             <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Audit Log</p>
                         </a>
+                        -->
+                        <!--
                         <a href="/docs/entitlements" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
                             <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Entitlements</p>
                         </a>
+                        -->
                         <a href="/docs/ship" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
                             <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Ship</p>
                         </a>
+                        <!--
                         <a href="/docs/troubleshoot" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
                             <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Troubleshoot</p>
                         </a>
+                        -->
                     </div>
                 </div>
             </div>
@@ -147,7 +153,7 @@
                 {{ end }}
             </div>
             {{ end }}
-            {{ if or (eq $category "Snapshots") (eq $category "LDAP and Identity Integration") (eq $category "Config Screen") (eq $category "Knowledge Base") }}
+            {{ if or (eq $category "Snapshots") (eq $category "LDAP and Identity Integration") (eq $category "Config Screen") (eq $category "Replicated Private Registry") }}
             <div class="u-marginBottom--most">
               <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Config Screen</h3>
               {{ with .Site.GetPage "section" "docs" "config-screen" }}
@@ -271,7 +277,7 @@
                         {{ end }}
                     {{ end }}
                 {{ end }}
-            </div>            
+            </div>
             {{ end }}
             {{ if eq $scope "Audit Log" }}
             <div class="u-marginBottom--most">

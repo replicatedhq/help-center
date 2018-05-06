@@ -4,8 +4,10 @@ title: "Quay Enterprise"
 description: "Shipping Quay Enterprise on Replicated Ship"
 weight: "46002"
 categories: [ "Ship Examples" ]
-index: ["docs/products", "docs"]
+index: false
 icon: "replicatedShip"
+draft: true
+hideFromList: true
 gradient: "console"
 ---
 

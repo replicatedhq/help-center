@@ -6,9 +6,10 @@ weight: "40002"
 categories: [ "Ship" ]
 index: ["docs/ship", "docs"]
 aliases: [ /docs/ship/, /docs/ship/getting-started ]
-hideFromList: true
 icon: "replicatedShip"
 gradient: "console"
 ---
 
-Replicated SHip
+{{< linked_headline "Replicated Ship" >}}
+
+Replicated Ship is a modern, composable way to define and package any application so that it can be configured, installed, updated and operated by someone with limited knowledge of how the software works.
