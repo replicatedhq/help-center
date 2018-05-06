@@ -241,6 +241,37 @@
                     {{ end }}
                 {{ end }}
             </div>
+            <div class="u-marginBottom--most">
+                <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Private Registry</h3>
+                {{ with .Site.GetPage "section" "docs" "registry" }}
+                    {{ range .Pages }}
+                        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                            <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
+                                {{ .Title }}
+                            </a>
+                        </p>
+                    {{ end }}
+                    {{ range .Sections }}
+                        {{ $firstPage := index (first 1 .Pages) 0 }}
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="{{ $firstPage.Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}">{{ .Title }}</a>
+                        </h3>
+                        {{ if .InSection $currentPage }}
+                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
+                                {{ range .Pages }}
+                                    {{ if not .Params.hideFromList }}
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="{{ .Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
+                                            {{ .Title }}
+                                        </a>
+                                    </p>
+                                    {{ end }}
+                                {{ end }}
+                            </div>
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+            </div>            
             {{ end }}
             {{ if eq $scope "Audit Log" }}
             <div class="u-marginBottom--most">
