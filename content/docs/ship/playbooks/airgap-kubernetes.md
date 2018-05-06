@@ -52,6 +52,7 @@ assets:
               - containerPort: 6379
     - inline:
         dest: ./installer/install.sh
+        mode: 0755
         contents: |
           #!/bin/bash
 

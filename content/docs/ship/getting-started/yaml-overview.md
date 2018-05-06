@@ -5,7 +5,6 @@ description: "An overview of Ship"
 weight: "40003"
 categories: [ "Ship" ]
 index: ["docs/ship", "docs"]
-aliases: [ /docs/ship/, /docs/ship/getting-started ]
 icon: "replicatedShip"
 gradient: "console"
 ---

@@ -24,8 +24,4 @@ guides:
     description: "Get started creating and managing support bundles using Replicated Troubleshoot."
     level: "replicatedTroubleshoot"
     slug: "troubleshoot"
-  - title: "Replicated Audit Log"
-    description: "A guide to integrating the Replicatd Audit Log services into your application, both in the cloud and enterprise-installable versions."
-    level: "replicatedAuditLog"
-    slug: "audit-log"
 ---
