@@ -13,10 +13,16 @@
   max-width: 295px;
   box-sizing: border-box;
   margin-bottom: 30px;
+  line-height: normal;
 }
 .guide-block .icon-wrapper {
   min-height: 78px;
   margin-bottom: 30px;
+}
+
+.howto .guide-block {
+  max-width: none;
+  min-height: 407px;
 }
 
 /* ≥ 768px */
