@@ -30,6 +30,7 @@
 .u-marginTop--more { margin-top: 20px; }
 .u-marginTop--thirty { margin-top: 30px; }
 .u-marginTop--most { margin-top: 40px; }
+.u-marginTop--60 { margin-top: 60px; }
 .u-marginRight--normal { margin-right: 12px; }
 .u-marginLeft--normal { margin-left: 12px; }
 .u-marginRight--more { margin-right: 20px; }
@@ -98,7 +99,7 @@
 /* ≥ 1024px */
 @media screen and (min-width: 64em) {
   .paddingContainer { padding: 0 30px; }
-  .main-section { padding: 85px 0 40px; }
+  .main-section { padding: 85px 0 30px; }
   .content.main-section { padding: 60px 0 75px; }
 }
 

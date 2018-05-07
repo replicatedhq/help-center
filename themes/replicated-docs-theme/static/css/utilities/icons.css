@@ -53,6 +53,26 @@
   width: 117px;
   height: 119px;
 }
+.icon.u-replicatedShip {
+  background-position: -348px -252px;
+  width: 117px;
+  height: 119px;
+}
+.icon.u-replicatedTroubleshoot {
+  background-position: -348px -378px;
+  width: 117px;
+  height: 119px;
+}
+.icon.u-replicatedAuditLog {
+  background-position: -224px -502px;
+  width: 117px;
+  height: 119px;
+}
+.icon.u-replicatedHelm {
+  background-position: -348px -502px;
+  width: 117px;
+  height: 119px;
+}
 .icon.u-troubleshoot {
   background-position: -347px -130px;
   width: 118px;
