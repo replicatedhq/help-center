@@ -20,7 +20,7 @@ A tenant in the Replicated Private Registry is a team on vendor.replicated.com o
 
 {{< linked_headline "Authentication and Authorization" >}}
 
-The Replicated Private Registry supports several method of authentication. Note that public authentication is never allowedl the registry only accepts authenticated requests.
+The Replicated Private Registry supports several method of authentication. Note that public authentication is never allowed the registry only accepts authenticated requests.
 
 ### Vendor Authentication
 
