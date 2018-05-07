@@ -6,12 +6,10 @@
         <div class="dropdown u-marginBottom--most">
             <p class="u-fontWeight--bold u-fontSize--largest u-color--tuna u-paddingBottom--normal">Documentation</p>
             <p class="u-fontSize--large u-fontWeight--medium u-cursor--pointer flex justifyContent--spaceBetween alignItems--center" id="dropdown-link">
-                {{ if eq $category "other" }}
-                    <span>Replicated Features</span>
+                {{ if $scope }}
+                    <span>{{ $scope | title }}</span>
                 {{ else }}
-                    {{ if $scope }}
-                        <span>{{ $scope | title }}</span>
-                    {{ end }}
+                    <span>{{ $category | title }}</span>
                 {{ end }}
                 <span class="icon u-chevronIcon u-margingRight--small"></span>
             </p>
@@ -40,10 +38,10 @@
                             <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Snapshots</p>
                         </a>
                         <a href="/docs/ldap-and-identity/overview/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
-                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">LDAP & Identity</p>
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">LDAP & Identity Integration</p>
                         </a>
                         <a href="/docs/registry/security/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
-                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Private Registry</p>
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Replicated Private Registry</p>
                         </a>
                     </div>
                 </div>
