@@ -48,7 +48,9 @@ assets:
   - inline:
       contents: |
         #!/bin/sh
-        git clone git@gitlab.com:charts/gitlab.git
+        mkdir -p ./installer/gitlab
+        curl -o gitlab.tar.gz https://gitlab.com/charts/gitlab/-/archive/e57c8ccbde6c2c6ef0f3eea6cb23411ae4cafc56/gitlab-e57c8ccbde6c2c6ef0f3eea6cb23411ae4cafc56.tar.gz
+        tar xzvf -C ./installer/gitlab/gitlab.tar.gz
         helm dependencies update
         helm upgrade --install gitlab . \
           --timeout 600 \
