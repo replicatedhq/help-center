@@ -33,7 +33,7 @@ assets:
   v1:
     - docker:
         dest: ./installer/images/redis.tar
-        image: redis:4.1
+        image: redis:4.0.9
     - inline:
         dest: ./installer/k8s/redis.yml
         contents: |
@@ -44,7 +44,7 @@ assets:
           spec:
             containers:
             - name: redis
-              image: {{repl ConfigOption "registry_endpoint"}}/{{repl ConfigOption "registry_namespace"}}/redis:4/1
+              image: {{repl ConfigOption "registry_endpoint"}}/{{repl ConfigOption "registry_namespace"}}/redis:4.0.9
               env:
               - name: MASTER
                 value: "true"
@@ -57,8 +57,8 @@ assets:
           #!/bin/bash
 
           docker load < ./installer/images/redis.tar
-          docker tag redis:4.1 {{repl ConfigOption "registry_endpoint"}}/{{repl ConfigOption "registry_namespace"}}/redis:4.1
-          docker push {{repl ConfigOption "registry_endpoint"}}/{{repl ConfigOption "registry_namespace"}}/redis:4.1
+          docker tag redis:4.0.9 {{repl ConfigOption "registry_endpoint"}}/{{repl ConfigOption "registry_namespace"}}/redis:4.1
+          docker push {{repl ConfigOption "registry_endpoint"}}/{{repl ConfigOption "registry_namespace"}}/redis:4.0.9
 
           kubectl apply -f ./installer/k8s
 
