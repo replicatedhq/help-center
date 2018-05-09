@@ -52,7 +52,7 @@ assets:
               spec:
                 containers:
                   - name: support-bundle
-                    image: replicated/support-bundle:unstable
+                    image: replicated/support-bundle:alpha
                     imagePullPolicy: Always
                     command:
                       - /bin/sleep
