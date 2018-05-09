@@ -75,3 +75,9 @@ lifecycle:
   v1:
     - render: {}
 ```
+
+
+{{< note title="Bundle Uploading" >}}
+The above example uses `--yes-upload` in the call to `support-bundle generate`. You can change this to `--no-upload` to disable uploading to https://console.replicated.com
+{{< /note >}}
+    
