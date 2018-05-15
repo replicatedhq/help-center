@@ -9,7 +9,7 @@ icon: "replicatedCircle"
 aliases: [/tags/studio/, /docs/kb/developer-resources/using-replicated-studio-to-quickly-iterate-on-your-yaml/]
 ---
 
-Once your application is working in Docker, you'll want to set up a simple environment to iterate on your Replicated YAML. Our Replicated Studio is designed to let you shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.
+Once your application is working in Docker, you'll want to set up a simple environment to iterate on your Replicated YAML. Our Replicated Studio is designed to let one shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.
 
 {{< linked_headline "Install Replicated Studio" >}}
 
