@@ -24,7 +24,6 @@ Replicated provides an easy install script to work with the the following list o
 
 - Debian 7.7+
 - Ubuntu 14.04.5 / 16.04
-- Fedora 21 / 22
 - Red Hat Enterprise Linux 6.5+
 - CentOS 6+
 - Amazon Linux 2014.03 / 2014.09 / 2015.03 / 2015.09 / 2016.03 / 2016.09 / 2017.03 / 2017.09 / 2018.03 / 2.0
