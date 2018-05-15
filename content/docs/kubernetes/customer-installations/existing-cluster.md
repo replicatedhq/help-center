@@ -16,6 +16,7 @@ Replicated can be installed to an existing Kubernetes 1.9 cluster. Use the `http
 
 When deploying to an environment with [dynamic volume provisioning](https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/), use the `storage_class` param to set how PersistentVolumeClaims are fulfilled.
 You should also disable the Host Path provisioner when specifying a storage class.
+All Replicated PVCs will use the specified storage class and all application PVCs will be rewritten with both `storageClassName` field and `volume.beta.kubernetes.io/storage-class` annotation set to the specified parameter.
 
 ```shell
 curl -sSL "https://get.replicated.com/kubernetes-yml-generate?storage_class=standard&storage_provisioner=0" | bash > replicated.yml
