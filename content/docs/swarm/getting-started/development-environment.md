@@ -9,7 +9,7 @@ gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---
 
-Once your application is working in Docker, you'll want to set up a simple environment to iterate on your Replicated YAML. Our Replicated Studio is designed to let shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.
+Once your application is working in Docker, you'll want to set up a simple environment to iterate on your Replicated YAML. Our Replicated Studio is designed to let you shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.
 
 {{< linked_headline "Install Replicated Studio" >}}
 
