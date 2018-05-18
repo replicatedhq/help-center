@@ -180,12 +180,6 @@ aliases: [/docs/getting-started/schedulers/,/categories/getting-started/,/docs/g
                                     <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
                                 </tr>
                                 <tr>
-                                    <td>Programable Preflight Checks</td>
-                                    <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
-                                    <td class="icon-cell"><span class="icon u-grayFailCircle"></span></td>
-                                </tr>
-                                <tr>
                                     <td>Support Bundle Generator</td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
                                     <td class="icon-cell"><span class="icon u-greenCheckCircle"></span></td>
