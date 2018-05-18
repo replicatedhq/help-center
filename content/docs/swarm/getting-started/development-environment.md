@@ -33,12 +33,6 @@ Update the `replicated_replicated` Swarm service and change the environment vari
 sudo docker service update replicated_replicated --env-add MARKET_BASE_URL=http://10.138.0.4:8006
 ```
 
-Save and deploy the changes to Replicated:
-
-```bash
-sudo docker stack deploy -c /tmp/replicated-docker-compose.yml replicated
-```
-
 ### Run Replicated Studio
 
 ```bash
