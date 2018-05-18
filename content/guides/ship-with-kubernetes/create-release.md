@@ -14,7 +14,7 @@ icon: "replicatedKubernetes"
 
 When starting and learning the Replicated platform, the [Vendor Portal](https://vendor.replicated.com) will be the place you spend most of your time. This guide is designed to help you get familiar with the concepts and ideas that are important to successfully ship your application on Replicated. If you get stuck or need help, head to our [community](https://help.replicated.com/community/).
 
-This guide will deploy one of the canonical Kubernetes applications using Replicated, and then iterate on it to ship an update. The guide isn't going to teach Kubernetes, but will start with a working Kubernetes application ([Guestbook all-in-one example](https://github.com/kubernetes/kubernetes/blob/master/examples/guestbook/all-in-one/guestbook-all-in-one.yaml)).
+This guide will deploy one of the canonical Kubernetes applications using Replicated, and then iterate on it to ship an update. The guide isn't going to teach Kubernetes, but will start with a working Kubernetes application ([Guestbook all-in-one example](https://raw.githubusercontent.com/kubernetes/examples/12cff4b7a59334080958469052bf9cde80e75618/guestbook/all-in-one/guestbook-all-in-one.yaml)).
 
 {{< linked_headline "Create a New Application" >}}
 
@@ -46,7 +46,7 @@ The default YAML document you have contains some boilerplate Replicated settings
 #
 ```
 
-The first 2 lines of this are Replicated specific, and cannot be changed. But below this, let's paste in the [Guestbook application YAML](https://raw.githubusercontent.com/kubernetes/kubernetes/master/examples/guestbook/all-in-one/guestbook-all-in-one.yaml). The example YAML contains a few different Kubernetes specs, each identifies with a `---` separator. We need to include the `# kind: scheduler-kubernetes` directive below each separator.  For reference, the [fully constructed YAML is available](https://gist.github.com/marccampbell/073749867dadba44b5a01b687d006552).
+The first 2 lines of this are Replicated specific, and cannot be changed. But below this, let's paste in the [Guestbook application YAML](https://raw.githubusercontent.com/kubernetes/examples/12cff4b7a59334080958469052bf9cde80e75618/guestbook/all-in-one/guestbook-all-in-one.yaml). The example YAML contains a few different Kubernetes specs, each identifies with a `---` separator. We need to include the `# kind: scheduler-kubernetes` directive below each separator.  For reference, the [fully constructed YAML is available](https://gist.github.com/marccampbell/073749867dadba44b5a01b687d006552).
 
 {{< linked_headline "Save and Promote Release" >}}
 

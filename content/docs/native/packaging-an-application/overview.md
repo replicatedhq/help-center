@@ -33,7 +33,7 @@ cmds:
     args:
       - "128"
 
-/* Include a single redi container */
+/* Include a single redis container */
 components:
   - name: Redis
     containers:

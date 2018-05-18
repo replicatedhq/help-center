@@ -1,9 +1,9 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Add Node"
+title: "Adding Nodes"
 description: "Instructions for adding a node to an existing cluster"
 keywords: "installing, cluster, kubernetes"
-weight: "2706"
+weight: "2707"
 categories: [ "Manage Customer Installations" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"

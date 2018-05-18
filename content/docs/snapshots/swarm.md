@@ -36,7 +36,7 @@ backup:
     replicated admin backup-redis-to-rdb
     replicated admin mv-backup-rdb-to-safe-place
   swarm:
-    volumes: [ "redis-backup data" ]
+    volumes: [ "redis-backup-data" ]
 
 ---
 # kind: scheduler-swarm
