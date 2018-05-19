@@ -296,7 +296,7 @@ custom_requirements:
     id: port_available
     data:
       port: '80'
-      ip: '{{repl ThisNodePublicIPAddress }}'
+      ip: '{{repl ThisNodePrivateIPAddress }}'
       cluster: true
       tags: ["lb"]
 ```
