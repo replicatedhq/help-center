@@ -13,7 +13,7 @@ Once your application is working in Docker, you'll want to set up a simple envir
 
 {{< linked_headline "Easy Install (Recommended)" >}}
 
-This script will install Kubernetes, Replicated, and Studio on your development machine (on a Linux server in your IaaS provider of choice, or in a local dev environment in Vagrant/VirtualBox).
+This script will install Kubernetes, Replicated, and Studio on your development machine (on a Linux server in your IaaS provider of choice).
 
 ```bash
 curl -sSL https://get.replicated.com/studio-k8s | sudo bash
