@@ -13,7 +13,7 @@ Once your application is working in Docker, you'll want to set up a simple envir
 
 {{< linked_headline "Install Replicated Studio" >}}
 
-First, use the easy install script to install Replicated with Swarm.
+First, use our simple installation script (on a Linux server in your IaaS provider of choice, or in a local dev environment in Vagrant/VirtualBox) to install Replicated with Swarm.
 
 ```bash
 curl -sSL https://get.replicated.com/swarm-init | sudo bash
