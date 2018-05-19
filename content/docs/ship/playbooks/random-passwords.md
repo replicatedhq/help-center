@@ -13,15 +13,18 @@ gradient: "console"
 
 When distributing an applications, it can be useful to generate passwords as part of the bootstrap process. For example, if your app bundles an SQL database, you'll want to set a password on this database, and allow other application components to use that password to access the data. 
 
-While the template function `RandomString` can be used to generate random data, it does not directly guarantee that the data will be the same accross upgrades. For example, the following config spec will cause the value of `db_password` to change every time a customer pulls an update or reconfigures the application:
+While the template function `RandomString` can be used to generate random data, it does not directly guarantee that the data will be the same across upgrades. For example, the following config spec will cause the value of `db_password` to change every time a customer pulls an update or reconfigures the application. 
 
 ```yaml
 config:
   v1:
     - items:
       - name: db_password
+        # This won't work!
         value: '{{repl RandomString 32}}'
 ```
+
+We say `This won't work` because in most cases, we want to avoid changing the database password on every update. While many databases support setting a root password during the initial configuration, often they can require extra steps to change it after the first one is set.
 
 {{< linked_headline "Managing Persistent Random Strings" >}}
 
@@ -45,4 +48,4 @@ assets:
           password={{repl ConfigOption "db_password" }}
 ```
 
-Assuming the `state.json` file is in the right location when ship is run by the end customer, this will ensure that the database password will only be generated once on initial app configuration, and then will remain constant through any future reconfigurations or upgrades.
+Assuming the `state.json` file is in the right location when ship is run by the end customer, this will ensure that the database password will only be referenced
