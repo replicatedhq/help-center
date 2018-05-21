@@ -27,31 +27,10 @@ Find the private IP of the host:
 sudo docker info --format "{{.Swarm.NodeAddr}}"
 ```
 
-Add `MARKET_BASE_URL=http://[private-ip-address]:8006` to `replicated.environment` in `/tmp/replicated-docker-compose.yml`.
-
-```yaml
-versionon: '3.3'
-
-services:
-
-  replicated:
-    image: quay.io/replicated/replicated:stable-2.20.2
-    ports:
-      - 9874:9874
-      - 9878:9878
-    environment:
-      - MARKET_BASE_URL=http://10.138.0.4:8006
-      - RELEASE_CHANNEL=stable
-      - LOG_LEVEL=info
-      - SCHEDULER_ENGINE=swarm
-      - LOCAL_ADDRESS=10.138.0.4
-      ...
-```
-
-Save and deploy the changes to Replicated:
+Update the `replicated_replicated` Swarm service and change the environment variable `MARKET_BASE_URL` to `http://[private-ip-address]:8006`. For example if your the ip you obtained from the previous command was `10.138.0.4` you will run the following:
 
 ```bash
-sudo docker stack deploy -c /tmp/replicated-docker-compose.yml replicated
+sudo docker service update replicated_replicated --env-add MARKET_BASE_URL=http://10.138.0.4:8006
 ```
 
 ### Run Replicated Studio
