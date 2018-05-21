@@ -30,7 +30,8 @@ sudo docker info --format "{{.Swarm.NodeAddr}}"
 Update the `replicated_replicated` Swarm service and change the environment variable `MARKET_BASE_URL` to `http://[private-ip-address]:8006`. For example if your the ip you obtained from the previous command was `10.138.0.4` you will run the following:
 
 ```bash
-sudo docker service update replicated_replicated --env-add MARKET_BASE_URL=http://10.138.0.4:8006
+sudo docker service update replicated_replicated \
+    --env-add MARKET_BASE_URL=http://10.138.0.4:8006
 ```
 
 ### Run Replicated Studio
