@@ -297,7 +297,7 @@ custom_requirements:
     id: port_available
     data:
       port: '80'
-      ip: '{{repl ThisNodePublicIPAddress }}'
+      ip: '{{repl SwarmIngressAddress }}'
       cluster: true
       tags: ["lb"]
 ```
