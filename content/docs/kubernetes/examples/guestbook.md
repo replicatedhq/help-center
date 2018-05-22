@@ -2,7 +2,7 @@
 date: "2018-05-03T04:02:20Z"
 title: "Kubernetes Guestbook"
 description: "A quick Kubernetes application on Replicated."
-weight: "406"
+weight: "4402"
 categories: [ "Kubernetes Examples" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"

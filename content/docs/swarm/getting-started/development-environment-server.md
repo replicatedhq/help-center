@@ -10,9 +10,7 @@ draft: "true"
 
 ---
 
-Once your application is working in Docker, you'll want to set up a simple environment to iterate on your Replicated YAML. Our Replicated Studio is designed to let shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.
-
-{{< linked_headline "Install Replicated Studio" >}}
+You'll need to install Studio onto your development server (not your development machine like you would do w/ ngrok).
 
 First, use our simple installation script (on a Linux server in your IaaS provider of choice, or in a local dev environment in Vagrant/VirtualBox) to install Replicated with Swarm.
 
@@ -48,9 +46,9 @@ sudo docker run --name studio -d \
 ```
 
 
-{{< linked_headline "Iterate on your application YAML" >}}
+## Iterate on your application YAML
 
-During installation, a new directory named `replicated` is created in your home directory. Once your license is activated, Replicated Studio will setup the most recent release and save it to `~/replicated/current.yaml`. Any time this file is updated and saved, Replicated Studio will create a new release using the next available sequence number.
+During installation, a new directory named `replicated` is created in your development server's home directory. Once your license is activated, Replicated Studio will setup the most recent release and save it to `~/replicated/current.yaml`. Any time this file is updated and saved, Replicated Studio will create a new release using the next available sequence number.
 
 You can also use your favorite editor locally (like Atom, Visual Studio Code, Vim, or Emacs) and upload your changes once you're ready. For example, to copy your YAML using `scp`:
 
@@ -71,7 +69,7 @@ To do this, rebuild your Docker images on your Studio server reusing the existin
 
 **_Note: When iterating on Docker images in Studio, referencing local Docker images using the `latest` tag is not supported. Replicated will re-pull any images with the `latest` tag, thus overwriting any changes you are making locally._**
 
-{{< linked_headline "Additional features" >}}
+## Additional features
 
 The logs from Replicated Studio display any lint or syntax issues detected in your application yaml. You can also view all interactions the on-prem Replicated has with the Studio API.
 

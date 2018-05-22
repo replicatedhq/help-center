@@ -9,7 +9,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-Once your application is working in Kubernetes, you'll want to set up a simple environment to iterate on your Replicated YAML. Our Replicated Studio is designed to let shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.
+Once your application is working in Kubernetes, you'll want to set up a simple environment to iterate on your Replicated YAML. Our Replicated Studio is designed to shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.
 
 {{< linked_headline "Install Replicated Studio (with ngrok)" >}}
 
