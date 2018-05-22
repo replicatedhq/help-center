@@ -21,7 +21,7 @@ specs:
 ```
 
 
-    ### Outputs
+### Outputs
 
     
 - `stderr` - The stdout from the command

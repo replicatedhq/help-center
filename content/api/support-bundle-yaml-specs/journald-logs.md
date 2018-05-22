@@ -41,7 +41,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `logs.raw` - The raw output the `journald` logs for the unit

@@ -28,7 +28,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `contents` - The contents of the uptime file

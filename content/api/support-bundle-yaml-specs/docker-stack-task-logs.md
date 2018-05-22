@@ -45,7 +45,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `{{.TaskId}}.stdout` - The stdout output. Will generate this file for each matched service task

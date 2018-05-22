@@ -32,7 +32,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `task_ls.json` - JSON output

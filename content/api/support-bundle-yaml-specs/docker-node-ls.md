@@ -32,7 +32,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `node_ls.json` - JSON output

@@ -69,7 +69,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `audit_events.csv` - The audit events in CSV format

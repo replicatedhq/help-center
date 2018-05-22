@@ -36,7 +36,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `stdout.raw` - The standard output of the command

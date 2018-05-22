@@ -40,7 +40,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `{{.Name}}.stdout` - The stdout logs. Will generate this file for each matched container

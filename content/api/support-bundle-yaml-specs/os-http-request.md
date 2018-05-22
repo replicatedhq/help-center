@@ -49,7 +49,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `body` - The response body

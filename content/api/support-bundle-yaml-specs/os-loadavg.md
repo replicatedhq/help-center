@@ -28,7 +28,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `contents` - The raw loadavg info 

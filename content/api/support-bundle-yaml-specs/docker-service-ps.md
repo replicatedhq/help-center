@@ -32,7 +32,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `service_ps.json` - JSON output

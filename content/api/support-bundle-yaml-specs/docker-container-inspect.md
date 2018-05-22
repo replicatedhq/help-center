@@ -38,7 +38,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `{{.Name}}.json` - The json output of the inspect call. Will generate this file for each matched container

@@ -35,7 +35,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `image_ls.json` - JSON output

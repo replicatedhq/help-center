@@ -34,7 +34,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `{{.Name}}` - Output will match the name of the file. If `src_path` is `/var/log/nginx/access.log`, then `output_dir` will contain a file `access.log`

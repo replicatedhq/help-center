@@ -21,7 +21,7 @@ specs:
 ```
 
 
-    ### Outputs
+### Outputs
 
     
 - `docker_version.json` - JSON output

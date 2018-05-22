@@ -32,7 +32,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `service_ls.json` - JSON output

@@ -47,7 +47,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `{{.Name}}.stdout` - The stdout output of the logs call. Will generate this file for each matched service

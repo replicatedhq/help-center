@@ -29,7 +29,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `bigtool.conf` - The file contents

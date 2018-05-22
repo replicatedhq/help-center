@@ -54,7 +54,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `container_ls.json` - JSON output

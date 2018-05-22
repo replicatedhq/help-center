@@ -40,7 +40,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `{{.StackName}}_{{.ServiceName}}.stdout` - The stdout output. Will generate this file for each matched service

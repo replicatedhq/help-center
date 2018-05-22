@@ -51,7 +51,7 @@ specs:
 
 
 
-    ### Outputs
+### Outputs
 
     
 - `stderr` - The standard error of the command

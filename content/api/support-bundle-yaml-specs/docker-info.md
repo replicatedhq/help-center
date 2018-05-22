@@ -23,7 +23,7 @@ specs:
 ```
 
 
-    ### Outputs
+### Outputs
 
     
 - `docker_info.json` - A pretty-printed JSON representation
