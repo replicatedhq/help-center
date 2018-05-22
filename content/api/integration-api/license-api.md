@@ -27,7 +27,6 @@ Returns current license information.
 | ----------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | license_id        | String            | License ID of this installation. Multiple installations can use the same license.                                        |
 | installation_id   | String            | Unique ID of this installation.                                                                                          |
-| assignee          | String            | License assignee or customer name.                                                                                        |
 | release_channel   | String            | Release channel name. Available in Replicated API 1.3.5 and later                                                        |
 | fields            | Array             | Always returned. This is the array of field names and their values.                                                      |
 | expiration_time   | String (optional) | License expiration time in RFC 3339 format. Will be omitted if license does not expire.                                  |
@@ -58,7 +57,6 @@ JSON
 {
   "license_id": "f49b290abf39b945c6f519ee6ca1c4ad",
   "installation_id": "44e8188e6fec84ac425829cde0eeee8e",
-  "assignee": "Some Big Bank",
   "release_channel": "Unstable",
   "fields": [
     {
