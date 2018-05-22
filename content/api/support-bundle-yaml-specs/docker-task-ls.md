@@ -24,23 +24,23 @@ specs:
           - cooltool-backend-
 ```
 
-    
+
 ### Optional Parameters
 
 
 - `Filters` - Filters for tasks
 
 
+
+    ### Outputs
+
     
-### Outputs
-
-
 - `task_ls.json` - JSON output
 
-    
+
 <br>
 {{< note title="Shared Parameters" >}}
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
-    
+
     

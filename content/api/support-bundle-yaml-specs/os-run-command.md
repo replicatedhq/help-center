@@ -30,14 +30,14 @@ specs:
         - /etc/os-release
 ```
 
-    
+
 ### Required Parameters
 
 
 - `name` - The command to run
 
 
-    
+
 ### Optional Parameters
 
 
@@ -50,18 +50,18 @@ specs:
 - `env` - Specifies additional environment variables
 
 
+
+    ### Outputs
+
     
-### Outputs
-
-
 - `stderr` - The standard error of the command
 
 - `stdout` - The standard output of the command
 
-    
+
 <br>
 {{< note title="Shared Parameters" >}}
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
-    
+
     

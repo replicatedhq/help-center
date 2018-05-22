@@ -22,16 +22,16 @@ specs:
       description: Info about the docker daemon
 ```
 
+
+    ### Outputs
+
     
-### Outputs
-
-
 - `docker_info.json` - A pretty-printed JSON representation
 
-    
+
 <br>
 {{< note title="Shared Parameters" >}}
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
-    
+
     

@@ -20,23 +20,23 @@ specs:
       output_dir: /system/load
 ```
 
-    
+
 ### Optional Parameters
 
 
 - `template` - (Optional) a template for the human-readable output
 
 
+
+    ### Outputs
+
     
-### Outputs
-
-
 - `contents` - The raw loadavg info 
 
-    
+
 <br>
 {{< note title="Shared Parameters" >}}
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
-    
+
     

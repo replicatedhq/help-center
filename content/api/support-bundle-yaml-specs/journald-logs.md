@@ -23,14 +23,14 @@ specs:
       since: '2018-01-01'
 ```
 
-    
+
 ### Required Parameters
 
 
 - `unit` - Systemd unit from which to collect logs
 
 
-    
+
 ### Optional Parameters
 
 
@@ -40,16 +40,16 @@ specs:
 - `since` - Since date for log collection
 
 
+
+    ### Outputs
+
     
-### Outputs
-
-
 - `logs.raw` - The raw output the `journald` logs for the unit
 
-    
+
 <br>
 {{< note title="Shared Parameters" >}}
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
-    
+
     

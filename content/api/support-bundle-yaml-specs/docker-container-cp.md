@@ -23,7 +23,7 @@ specs:
       output_dir: /www/access/
 ```
 
-    
+
 ### Required Parameters
 
 
@@ -33,16 +33,16 @@ specs:
 - `src_path` - The path of the target file in the container's filesystem
 
 
+
+    ### Outputs
+
     
-### Outputs
-
-
 - `{{.Name}}` - Output will match the name of the file. If `src_path` is `/var/log/nginx/access.log`, then `output_dir` will contain a file `access.log`
 
-    
+
 <br>
 {{< note title="Shared Parameters" >}}
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
-    
+
     

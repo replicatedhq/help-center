@@ -33,7 +33,7 @@ specs:
             - cooltool-worker
 ```
 
-    
+
 ### Optional Parameters
 
 
@@ -46,18 +46,18 @@ specs:
 - `service_list_options` - Options for filtering all swarm services
 
 
+
+    ### Outputs
+
     
-### Outputs
-
-
 - `{{.Name}}.stdout` - The stdout output of the logs call. Will generate this file for each matched service
 
 - `{{.Name}}.stderr` - The stderr output of the logs call. Will generate this file for each matched service
 
-    
+
 <br>
 {{< note title="Shared Parameters" >}}
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
-    
+
     

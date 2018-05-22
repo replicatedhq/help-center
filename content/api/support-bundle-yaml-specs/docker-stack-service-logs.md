@@ -22,14 +22,14 @@ specs:
       namespace: cooltool-core
 ```
 
-    
+
 ### Required Parameters
 
 
 - `namespace` - The stack's namespace
 
 
-    
+
 ### Optional Parameters
 
 
@@ -39,18 +39,18 @@ specs:
 - `service_list_options` - Options as would be passed to `docker stack services
 
 
+
+    ### Outputs
+
     
-### Outputs
-
-
 - `{{.StackName}}_{{.ServiceName}}.stdout` - The stdout output. Will generate this file for each matched service
 
 - `{{.StackName}}_{{.ServiceName}}.stderr` - The stderr output. Will generate this file for each matched service
 
-    
+
 <br>
 {{< note title="Shared Parameters" >}}
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
-    
+
     

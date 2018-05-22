@@ -20,16 +20,16 @@ specs:
       output_dir: /docker/version
 ```
 
+
+    ### Outputs
+
     
-### Outputs
-
-
 - `docker_version.json` - JSON output
 
-    
+
 <br>
 {{< note title="Shared Parameters" >}}
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
-    
+
     

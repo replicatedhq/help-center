@@ -27,30 +27,30 @@ specs:
             - com.cooltool.tier=api
 ```
 
-    
+
 ### Required Parameters
 
 
 - `namespace` - The stack's namespace
 
 
-    
+
 ### Optional Parameters
 
 
 - `task_list_options` - Options as would be passed to `docker stack ps`
 
 
+
+    ### Outputs
+
     
-### Outputs
-
-
 - `service_ps.json` - JSON output
 
-    
+
 <br>
 {{< note title="Shared Parameters" >}}
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
-    
+
     

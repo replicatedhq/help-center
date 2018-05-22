@@ -27,7 +27,7 @@ specs:
             - dnsmasq
 ```
 
-    
+
 ### Optional Parameters
 
 
@@ -37,16 +37,16 @@ specs:
 - `container_list_options` - Options to be used to filter the list of containers, as in [The Docker API](https://github.com/moby/moby/blob/master/api/types/client.go#L61)
 
 
+
+    ### Outputs
+
     
-### Outputs
-
-
 - `{{.Name}}.json` - The json output of the inspect call. Will generate this file for each matched container
 
-    
+
 <br>
 {{< note title="Shared Parameters" >}}
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
-    
+
     
