@@ -56,7 +56,7 @@ If you supply an invalid yaml file that isn't recognized as a valid update in th
 
 ### Applying updates to the dev server
 
-After you have saved your `current.yaml` changes, you can navigate to your on-prem Admin Console (`https://<YOUR SERVER ADDRESS>:8800`) and click the `Check for updates` button to see your new release.
+After you have saved your `current.yaml` changes, you can navigate to your on-prem Admin Console (`https://<YOUR SERVER ADDRESS>:8800`) and click the `Check for updates` button to have your new release be detected and automatically applied.
 
 {{< linked_headline "Iterate on your application images" >}}
 
@@ -75,6 +75,8 @@ You can follow these logs in real time using:
 ```bash
 docker logs -f studio
 ```
+
+By default updates are automatically applied when they're detected by your development server (regardless to what the license setting is.) If you would prefer to manually apply updates, you can simply set the environment variable `-e STUDIO_UPDATE_POLICY=manual` when starting studio on your local development machine.
 
 {{< linked_headline "Some limitations" >}}
 
