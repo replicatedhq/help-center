@@ -19,8 +19,76 @@ When running Kubernetes in a cloud provider or in a managed Kubernetes stack suc
 
 {{< linked_headline "Ingress in the Replicated Appliance" >}}
 
-A Kubernetes appliance deployed by Replicated is more portable, and doesn't make any assumptions about externally available resources. To build ingress into an enterprise application, you can either use NodePort (recommend) or ship your own ingress controller.
+Replicated ships with the [Contour](https://github.com/heptio/contour) ingress controller, which runs as a DaemonSet in the `heptio-contour` namespace.
+A NodePort service forwards incoming traffic on ports 80 and 443 to Contour through every node in your cluster.
 
-The [Kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport) explains how to implement nodePort. This is recommended in the Replicated appliance because it's portable and will work on single node Kubernetes installation.
+The Contour ingress controller supports a variety of [options through annotations](https://github.com/heptio/contour/blob/master/docs/annotations.md).
+These options may not be supported in all your customers' cloud environments with different ingress controller implementations.
 
-Alternatively, to use an ingress resource in Replicated, you will have to provide your own ingress controller or it will fail to deploy. A portable and common ingress controller can be deployed using nginx, and [examples are found in the official Kubernetes project](https://github.com/kubernetes/ingress-nginx).
+{{< linked_headline "Ingress with TLS on Contour" >}}
+
+To configure Contour to serve HTTPS requests on port 443, first define a Secret in your yaml that contains a certificate and private key.
+This certificate may come from a file uploaded on the customer's config screen or can be generated with the `cert_out` command as shown below.
+
+Contour uses Envoy's SNI feature to provide TLS support.
+This requires that your certificate be associated with a valid host domain name (not an IP address) and the hostname appears in the ingress's `spec.tls.hosts` and `spec.rules.host` fields as shown below.
+
+```yaml
+---
+# kind: replicated
+cmds:
+- name: cert_out
+  cmd: cert
+  args:
+  - "2048"
+  - "newbravo.replicated.com"
+config:
+- name: HiddenCertValues
+  items:
+  - type: file
+    name: newcert_privatekey
+    hidden: true
+    data_cmd:
+      name: cert_out
+      value_at: 0
+  - type: file
+    name: newcert_cert
+    hidden: true
+    data_cmd:
+      name: cert_out
+      value_at: 1
+  - type: file
+    name: newcert_ca
+    hidden: true
+    data_cmd:
+      name: cert_out
+      value_at: 2
+---
+# kind: scheduler-kubernetes
+apiVersion: v1
+kind: Secret
+metadata:
+  name: tls
+data:
+  tls.crt: '{{repl ConfigOptionData "newcert_cert" | Base64Encode }}'
+  tls.key: '{{repl ConfigOptionData "newcert_privatekey" | Base64Encode }}'
+---
+# kind: scheduler-kubernetes
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: backend
+spec:
+  tls:
+  - secretName: tls
+    hosts:
+    - newbravo.replicated.com
+  rules:
+  - host: newbravo.replicated.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: frontend
+          servicePort: 80
+```
