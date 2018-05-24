@@ -1,5 +1,5 @@
 ---
-date: "2016-07-03T04:02:20Z"
+date: "2018-05-23T04:02:20Z"
 title: "Automating Installations"
 description: "How to automate installation of Replicated and an application."
 weight: "2709"
