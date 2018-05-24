@@ -20,23 +20,23 @@ specs:
       output_dir: /system/uptime
 ```
 
-    
+
 ### Optional Parameters
 
 
 - `template` - Template for the human-readable output
 
 
-    
+
 ### Outputs
 
-
+    
 - `contents` - The contents of the uptime file
 
-    
+
 <br>
 {{< note title="Shared Parameters" >}}
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
-    
+
     

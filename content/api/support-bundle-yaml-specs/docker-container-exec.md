@@ -25,7 +25,7 @@ specs:
           - '-t'
 ```
 
-    
+
 ### Required Parameters
 
 
@@ -35,18 +35,18 @@ specs:
 - `exec_config` - Same as would be passed to `docker exec`, as in [The Docker API](https://github.com/moby/moby/blob/master/api/types/configs.go#L43)
 
 
-    
+
 ### Outputs
 
-
+    
 - `stdout.raw` - The standard output of the command
 
 - `stderr.raw` - The standard error of the command
 
-    
+
 <br>
 {{< note title="Shared Parameters" >}}
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
-    
+
     

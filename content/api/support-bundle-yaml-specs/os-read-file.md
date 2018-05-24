@@ -21,23 +21,23 @@ specs:
       filepath: /etc/bigtool.conf
 ```
 
-    
+
 ### Required Parameters
 
 
 - `filepath` - The file path on the host. If running Support Bundle via docker, this will work, but symlinks are not supported
 
 
-    
+
 ### Outputs
 
-
+    
 - `bigtool.conf` - The file contents
 
-    
+
 <br>
 {{< note title="Shared Parameters" >}}
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
-    
+
     
