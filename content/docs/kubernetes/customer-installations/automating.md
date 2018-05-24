@@ -1,8 +1,8 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Airgapped Installations"
+title: "Automating Installations"
 description: "How to automate installation of Replicated and an application."
-weight: "2714"
+weight: "2709"
 categories: [ "Manage Customer Installations" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
