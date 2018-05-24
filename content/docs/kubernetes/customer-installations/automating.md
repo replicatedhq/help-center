@@ -45,7 +45,6 @@ These settings are explained in the following table:
 | BypassPreflightChecks	 | Boolean `true` or `false` | Allows application to start without preflight checks |
 | DaemonAuthenticationType | `anonymous` or `password` | Replicated supports anonymous and password protected access. |
 | DaemonAuthenticationPassword | Any `string` | If DaemonAuthenticationType is set to `password` this value is required to access the Replicated console. |
-| DaemonToken | Any `string` | Authentication token used by operators for automating a cluster installation |
 | ImportSettingsFrom | A file location as a `string` | If your application has any required config settings, you can supply custom values here. Replicated will read these and set them as if the user manually configured it. (see below) |
 | LicenseFileLocation | A file location as a `string` | This should be set to the location of an installable .rli license file. Note that you should not enable activation on this license. |
 | LicenseBootstrapAirgapPackagePath | A file location as a `string` | This should be set to the location of the airgap bundle path. When set, the automated install will proceed as an [airgapped installation](/docs/distributing-an-application/airgapped-installations/). Note that `LicenseFileLocation` must also be set. |
