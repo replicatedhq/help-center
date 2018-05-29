@@ -85,7 +85,7 @@ config_files:
 ```go
 func LicenseProperty(propertyName string) string
 ```
-Returns a property from the License as a string.  Valid propertyNames are "assignee", "channel.name", "expiration.date", and "expiration.policy".
+Returns a property from the License as a string.  Valid propertyNames are "assignee", "channel.name", "expiration.date", "expiration.policy", and "license.id".
 ```yaml
 config_files:
   - filename: /opt/app/config.yml
