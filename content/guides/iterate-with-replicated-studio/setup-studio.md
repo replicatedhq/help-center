@@ -11,8 +11,6 @@ icon: "replicatedCircle"
 aliases: [/guides/setup-studio]
 ---
 
-In order to get your application working with Replicated, you'll want to set up a simple environment to iterate on your Replicated YAML and images. Our Replicated Studio is designed to shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.
-
 {{< linked_headline "Install Replicated Studio (with ngrok)" >}}
 
 ### 1. Run Replicated Studio on your local dev machine
