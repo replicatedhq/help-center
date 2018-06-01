@@ -1,14 +1,14 @@
 ---
 date: "2018-05-25T12:00:00Z"
-title: "Why Should I Use Replicated Studio"
+title: "Intro to Studio"
 description: "What Replicated Studio is, what it does, and why you should use it"
 weight: "9010"
 categories: [ "Replicated Studio Guide" ]
-index: "guides/ship"
+index: "guides/studio"
 type: "chapter"
 gradient: "redToRed"
 icon: "replicatedCircle"
-aliases: [/guides/why-studio]
+aliases: [/guides/intro-to-studio]
 ---
 
 In order to get your application working with Replicated, you'll want to set up a simple environment to iterate on your Replicated YAML and images. Our Replicated Studio is designed to shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.

@@ -4,7 +4,7 @@ title: "Install Replicated Studio and ngrok"
 description: "Setup Replicated Studio on your local machine"
 weight: "9011"
 categories: [ "Replicated Studio Guide" ]
-index: "guides/ship"
+index: "guides/studio"
 type: "chapter"
 gradient: "redToRed"
 icon: "replicatedCircle"
