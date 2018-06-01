@@ -4,7 +4,7 @@ title: "Configure Replicated to Use Studio"
 description: "Install Replicated and configure it to use Studio"
 weight: "9012"
 categories: [ "Replicated Studio Guide" ]
-index: "guides/ship"
+index: "guides/studio"
 type: "chapter"
 gradient: "redToRed"
 icon: "replicatedCircle"

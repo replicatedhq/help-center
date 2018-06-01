@@ -6,9 +6,9 @@
   gradient: "redToRed"
   index: false
   chapters:
-    - title: "Why Should I Use Studio?"
+    - title: "Intro to Studio"
       description: "What Replicated Studio is good for and why you might want to use it"
-      slug: "why-studio" 
+      slug: "intro-to-studio"
     - title: "Install Replicated Studio and ngrok"
       description: "Setup Replicated Studio on your local machine"
       slug: "setup-studio"
