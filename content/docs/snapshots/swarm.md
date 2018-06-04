@@ -55,3 +55,20 @@ volumes:
   redis-data:
   redis-backup-data:
 ```
+
+{{< linked_headline "Multi-strategy Snapshots with Docker Swarm" >}}
+
+[Multi-strategy snapshots](/docs/snapshots/custom-scripts/#multi-strategy-backup) can also be used with Swarm.
+
+When configuring multi-strategy snapshots, all volumes that will be restored should be included under the same strategy.
+
+```yaml
+...
+backup:
+  enabled: true
+  strategies:
+    - name: full
+      swarm:
+        volumes: [ "redis-backup-data" ]
+...
+```
