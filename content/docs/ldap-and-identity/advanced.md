@@ -1,47 +1,17 @@
 ---
-date: "2016-07-07T04:02:20Z"
-title: "LDAP & Identity Integration Overview"
+date: "2018-06-04T12:02:20Z"
+title: "Advanced LDAP Integration"
 description: "Enabling LDAP and AD user auth and sync in an application through Replicated."
-weight: "2300"
+weight: "2307"
 categories: [ "LDAP And Identity Integration" ]
-aliases : [docs/ldap-and-identity/]
-previousPage: "snapshots/kubernetes.md"
 index: "other"
 ---
 
-Replicated can be integrated with LDAP servers to sync users and/or authenticate users between the directory and your application.
+Advanced LDAP integration can be used to integrate with more complicated LDAP models with multiple user search DNs or multiple organizational units. Additionally it can be configured to authenticate with [multiple domains](/docs/ldap-and-identity/advanced-example/).
 
 {{< linked_headline "Configuration" >}}
 
 To enable the identity services in your application, a top level key in your release yaml must be present:
-
-```yaml
-
-identity:
-  enabled: true
-  provisioner: 'https://localhost/ldap/auth'
-  sources:
-    - source: ldap
-      enabled: true
-```
-
-| Field |	Description |
-|-------|-------------|
-| enabled | Boolean indicating if LDAP authentication is enabled on this installation. |
-| provisioner | (Optional) Host that provides provisioning API for synchronization with LDAP. This is required if using directory sync, and can be omiitted if only using LDAP authentication. |
-| sources | `ldap` and `ldap_advanced` sources are supported. |
-
-Additionally, before your application containers can use the Replicated LDAP integration, you'll need to collect some LDAP settings from your enterprise customer. We recommend you include our suggested configuration items in your application yaml to start.
-
-{{< linked_headline "Authentication" >}}
-
-Replicated provides a simple API to your containers that can be used to authenticate with a directory.
-
-{{< linked_headline "Directory Sync" >}}
-
-{{< linked_headline "Configuration" >}}
-
-At the root level, configure the identity object
 
 ```yaml
 identity:
@@ -50,6 +20,8 @@ identity:
   sources:
   - source: ldap
     enabled: '{{repl if ConfigOptionEquals "auth_source" "auth_type_ldap"}}true{{repl else}}false{{repl end}}'
+  - source: ldap_advanced
+    enabled: '{{repl if ConfigOptionEquals "auth_source" "auth_type_ldap_advanced"}}true{{repl else}}false{{repl end}}'
 ```
 
 ```yaml
@@ -65,6 +37,8 @@ identity:
       title: Built In
     - name: auth_type_ldap
       title: LDAP
+    - name: auth_type_ldap_advanced
+      title: LDAP Advanced
 - name: ldap_settings
   title: LDAP Server Settings
   when: auth_source=auth_type_ldap
@@ -211,10 +185,34 @@ identity:
     title: Test password
     type: password
     required: false
+- name: ldap_settings_advanced
+  title: LDAP Advanced Server Settings
+  description: |
+    Upload a file below for advanced integration configuration. This file must conform to the
+    [Advanced LDAP Configuration Specification](https://help.replicated.com/docs/packaging-an-application/ldap-integration/#advanced-ldap-configuration-specification).
+  when: auth_source=auth_type_ldap_advanced
+  test_proc:
+    # Optional.
+    # When defined, the Test button will be shown on the LDAP settings section which will allow validating
+    # the supplied file.
+    display_name: Validate Config
+    command: ldap_config_validate
+    run_on_save: true
+    arg_fields:
+    - ldap_config_file
+  items:
+  - name: ldap_config_file
+    # LDAP server type.  All standard LDAP implementations are supported.
+    # In order to use Provisioning API, the LDAP server (AD being an exception) must support the Content Sync feature.
+    title: LDAP Config File
+    type: file
+    required: true
 ```
-
-Note the use of the LdapCopyAuthFrom function. This is optional, but when LDAP is used to secure the Replicated console, settings entered on that screen will be copied as default values.
 
 {{< linked_headline "Identity API" >}}
 
-See [Identity API](/api/integration-api) for information on how to authenticate and sync with LDAP server.
+See [Identity API](/api/integration-api) for information on how to authenticate and sync with LDAP server. It is important to note that an [identity source](/api/integration-api/identity-api/#get-identity-v1-sources) is required when authenticating and syncing with the LDAP server in a multi-domain configuration.
+
+{{< linked_headline "Advanced LDAP Configuration Specification" >}}
+
+See the [Advanced LDAP Specification](/docs/ldap-and-identity/advanced-spec/) for more details.
