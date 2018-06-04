@@ -1,15 +1,13 @@
 ---
-date: "2016-07-07T04:02:20Z"
-title: "Multiple LDAP Domains"
-description: "Configuring Replicated to authenticate against mulitple LDAP/AD domains"
-weight: "2306"
+date: "2018-06-04T12:02:20Z"
+title: "Advanced LDAP Config Spec"
+description: "Enabling LDAP and AD user auth and sync in an application through Replicated."
+weight: "2308"
 categories: [ "LDAP And Identity Integration" ]
 index: "other"
 ---
 
-{{< linked_headline "Advanced LDAP Configuration Specification" >}}
-
-The following JSON schema defines the advanced LDAP config spec. This is especially useful if you intend to support identity management via multiple LDAP domains or organizational units.
+The following JSON schema defines the Advanced LDAP configuration specification. This is especially useful if you intend to support identity management via multiple LDAP domains or organizational units.
 
 ```json
 {
