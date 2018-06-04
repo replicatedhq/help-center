@@ -48,4 +48,4 @@ assets:
           password={{repl ConfigOption "db_password" }}
 ```
 
-Assuming the `state.json` file is in the right location when ship is run by the end customer, this will ensure that the database password will only be referenced
+Assuming the `state.json` file is in the right location when ship is run by the end customer, this will ensure that the database password will only be generated one time, and any subsequent `ship` runs will read from the initially generated password.
