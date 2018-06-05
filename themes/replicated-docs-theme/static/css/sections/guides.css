@@ -103,11 +103,23 @@
   font-size: 14px;
   padding-bottom: 5px;
   cursor: pointer;
-  color: #525252
+  color: #2a98cb;
+  border-bottom: 2px transparent solid;
 }
+.studioIntro--installScript.empty {
+  font-weight: 500;
+  font-size: 14px;
+  padding: 1em;
+  border: dashed #9b9b9b 1px;
+  border-radius: 0.3em;
+}
+.studioIntro--installScript.empty p {
+  margin: 0;
+  color: #9b9b9b;
+}
+.studioIntro--link:hover,
 .studioIntro--link.selected {
   border-bottom: 2px #2a98cb solid;
-  color: #323232;
 }
 
 /* ≥ 568px */
