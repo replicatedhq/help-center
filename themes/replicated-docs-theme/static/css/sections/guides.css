@@ -96,6 +96,20 @@
   color: #2A98CB;
 }
 
+/* Iterate with Replicated Studio -- Configure (custom CSS) */
+.studioIntro--link {
+  margin: 0 15px 0 0;
+  font-weight: 500;
+  font-size: 14px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  color: #525252
+}
+.studioIntro--link.selected {
+  border-bottom: 2px #2a98cb solid;
+  color: #323232;
+}
+
 /* ≥ 568px */
 @media screen and (min-width: 35.5em) {
   .chapter-block ul {
