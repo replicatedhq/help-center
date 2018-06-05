@@ -4,6 +4,8 @@
   level: "troubleshoot"
   icon: "troubleshoot"
   index: false
+  aliases: 
+    - /guides/support-bundle
   chapters:
     - title: "Create a Support Bundle Spec"
       description: "Define what information you want to collect when diagnosing an issue"
