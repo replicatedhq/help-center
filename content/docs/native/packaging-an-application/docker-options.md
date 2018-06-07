@@ -141,3 +141,16 @@ Dynamic marks that a container's image should always be pulled, whether it is in
 ```yaml
     dynamic: true
 ```
+
+### Labels
+
+[Labels](https://docs.docker.com/config/labels-custom-metadata/) can be applied to a container by Replicated. Labels are templateable, and will be split on the first `=` to form the label key and value. If no `=` is present, the entire string will become the key and the value will be the empty string.
+
+For example, `my.container.label` would become a label with a key of `my.container.label` and an empty value while `my.container.value=IMPORTANT=FALSE` would have a key of `my.container.value` and a value of `IMPORTANT=FALSE`.
+
+```yaml
+    labels:
+      - my.container.label
+      - my.container.value=IMPORTANT=FALSE
+      - 'my.template.value={{repl ConfigOption "labelValue" }}'
+```
