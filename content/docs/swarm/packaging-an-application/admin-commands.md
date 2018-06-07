@@ -26,6 +26,10 @@ or
 ```bash
 $ docker exec -it "$(docker inspect --format "{{.Status.ContainerStatus.ContainerID}}" "$(docker service ps "$(docker service inspect --format "{{.ID}}" replicated_replicated | awk "NR==1")" -q)")" replicated admin <command_alias> <params>
 ```
+or from a script
+```bash
+$ replicated admin --no-tty <command_alias> <params>
+```
 
 {{< linked_headline "Examples" >}}
 
