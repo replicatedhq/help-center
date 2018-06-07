@@ -50,15 +50,27 @@ components:
           threshold_healthy: 3
         cmd: '["run-worker"]'
         config_files:
-          - contents: string
-            file_mode: string
+          - contents:
+              server {
+                listen       80;
+                server_name  localhost;
+                location / {
+                  proxy_set_header X-Real-IP  $remote_addr;
+                  proxy_set_header X-Forwarded-For $remote_addr;
+                  proxy_set_header Host $host;
+                  proxy_pass http://{{repl HostPrivateIpAddress "App" "wlaoh/counter" }}:{{repl ContainerExposedPort "App" "wlaoh/counter" "3000" }};
+                }
+              }
+            filename: /etc/nginx/conf.d/default.conf
+
+          - file_mode: string
             file_owner: string
             filename: string
             owner: string
             path: string
             ref: string
             repo: string
-            source: string
+            source: github
         cpu_shares: string
         customer_files:
           - file_mode: string
@@ -67,8 +79,8 @@ components:
             name: string
             when: string/boolean
         display_name: string
-        dynamic: string/boolean
-        entrypoint: [string]
+        dynamic: false
+        entrypoint: ["/bin/application"]
         env_vars:
           - is_excluded_from_support: false
             name: LOG_LEVEL
@@ -97,15 +109,13 @@ components:
           max_size: "10m"
         memory_limit: string
         memory_swap_limit: string
-        name: string
         network_mode: string
         pid_mode: string
         ports:
           - interface: "docker0"
-            port_type:
-            private_port:
-            public_port:
-            when:
+            port_type: tcp
+            private_port: 80
+            when: true
         privileged: true
         restart:
           max: 5
@@ -117,7 +127,7 @@ components:
         shm_size: 1073741824
         source: replicated
         support_commands:
-          - command: ["run-command" "-a"]
+          - command: ["run-command","-a"]
             filename: /tmp/run-command.out
         support_files:
           - filename: /var/application-data
@@ -133,18 +143,24 @@ components:
             host_path: '{{repl ConfigOption "hostPath" }}'
             is_ephemeral: false
             is_excluded_from_backup: false
-            options:
-              - string
+            options: ["ro"]
             owner: root
-            permission: rwx
+            permission: rx
         volumes_from:
-          - string
+          - startup
         when: true
 
       - source: replicated
         image_name: startup
         version: 1.0.1
         ephemeral: true
+        name: startup
+        ports:
+          - interface: "docker0"
+            port_type: tcp
+            private_port: 80
+            public_port: 9009
+            when: true
         publish_events:
         - name: startup container started
           trigger: container-start
