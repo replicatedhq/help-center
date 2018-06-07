@@ -31,6 +31,12 @@ or
 $ docker exec -it replicated replicated admin <command_alias> <params>
 ```
 
+or from a script
+
+```bash
+$ replicated admin --no-tty <command_alias> <params>
+```
+
 {{< linked_headline "Examples" >}}
 
 ### `nginx-reload`
