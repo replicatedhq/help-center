@@ -17,11 +17,17 @@ _Note: If you are calling admin commands from a script use the `--no-tty` flag._
 
 
 ```bash
-$ kubectl exec -it "$(kubectl get pods -l=app=replicated -l=tier=master -o=jsonpath='{.items..metadata.name}')" -c replicated -- replicated admin <command_alias> <params>
+$ kubectl exec -it \
+    "$(kubectl get pods -l=app=replicated -l=tier=master -o=jsonpath='{.items..metadata.name}')" \
+    -c replicated -- \
+    replicated admin <command_alias> <params>
 ```
 or from a script
 ```bash
-$ kubectl exec "$(kubectl get pods -l=app=replicated -l=tier=master -o=jsonpath='{.items..metadata.name}')" -c replicated -- replicated admin --no-tty <command_alias> <params>
+$ kubectl exec \
+    "$(kubectl get pods -l=app=replicated -l=tier=master -o=jsonpath='{.items..metadata.name}')" \
+    -c replicated -- \
+    replicated admin --no-tty <command_alias> <params>
 ```
 
 {{< linked_headline "Examples" >}}
