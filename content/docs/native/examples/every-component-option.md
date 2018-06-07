@@ -139,8 +139,8 @@ components:
             is_ephemeral: false
             is_excluded_from_backup: false
             options: ["ro"]
-            owner: root
-            permission: rx
+            owner: "0"
+            permission: "0555"
         volumes_from:
           - startup
         when: true
