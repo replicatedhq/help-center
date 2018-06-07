@@ -41,7 +41,7 @@ components:
         min_disk_space: 10GB
 
     containers:
-      - allocate_tty: string
+      - allocate_tty: false
         cluster: true
         cluster_instance_count:
           initial: 4
@@ -63,9 +63,9 @@ components:
               }
             filename: /etc/nginx/conf.d/default.conf
 
-          - file_mode: string
-            file_owner: string
-            filename: string
+          - file_mode: "0444"
+            file_owner: "0"
+            filename: "/data/config.yml"
             owner: string
             path: string
             ref: string
@@ -73,11 +73,11 @@ components:
             source: github
         cpu_shares: string
         customer_files:
-          - file_mode: string
-            file_owner: string
-            filename: string
-            name: string
-            when: string/boolean
+          - file_mode: "0777"
+            file_owner: "0"
+            filename: "/data/otherconfig.yml"
+            name: your_file_name
+            when: true
         display_name: string
         dynamic: false
         entrypoint: ["/bin/application"]
@@ -93,9 +93,6 @@ components:
         ephemeral: false
         hostname: string
         extra_hosts:
-          - address: string
-            hostname: string
-            when: true
           - address: '{{repl ConfigOption "extraHostAddress" "" }}'
             hostname: '{{repl ConfigOption "extraHostName" "" }}'
             when: '{{repl ConfigOptionNotEquals "extraHostAddress" "" }}'
@@ -107,10 +104,8 @@ components:
         logs:
           max_files: "3"
           max_size: "10m"
-        memory_limit: string
-        memory_swap_limit: string
-        network_mode: string
-        pid_mode: string
+        memory_limit: 500m
+        memory_swap_limit: 1g
         ports:
           - interface: "docker0"
             port_type: tcp
@@ -119,11 +114,11 @@ components:
         privileged: true
         restart:
           max: 5
-          policy: unless-stopped
+          policy: on-failure
         security_cap_add:
-          - string
+          - SYS_MODULE
         security_options:
-          - string
+          - '{{repl if ConfigOptionEquals "enable_unconfined_apparmor_profile" "1"}}apparmor=unconfined{{repl end}}'
         shm_size: 1073741824
         source: replicated
         support_commands:
@@ -134,9 +129,9 @@ components:
         suppress_restart:
           - string
         ulimits:
-          - hard: string
-            name: string
-            soft: string
+          - name: nofile
+            soft: 1024
+            hard: 1024
         version: "1.1.0"
         volumes:
           - container_path: /mnt-path
@@ -155,6 +150,8 @@ components:
         version: 1.0.1
         ephemeral: true
         name: startup
+        network_mode: host
+        pid_mode: host
         ports:
           - interface: "docker0"
             port_type: tcp
@@ -163,8 +160,8 @@ components:
             when: true
         publish_events:
         - name: startup container started
-          trigger: container-start
-          data: ""
+          trigger: port-listen
+          data: "9009"
           subscriptions:
           - component: worker
             container: worker
