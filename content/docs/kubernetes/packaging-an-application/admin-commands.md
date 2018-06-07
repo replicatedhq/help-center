@@ -22,7 +22,9 @@ $ kubectl exec -it \
     -c replicated -- \
     replicated admin <command_alias> <params>
 ```
+
 or from a script
+
 ```bash
 $ kubectl exec \
     "$(kubectl get pods -l=app=replicated -l=tier=master -o=jsonpath='{.items..metadata.name}')" \
