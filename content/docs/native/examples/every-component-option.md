@@ -66,19 +66,18 @@ components:
           - file_mode: "0444"
             file_owner: "0"
             filename: "/data/config.yml"
-            owner: string
-            path: string
-            ref: string
-            repo: string
             source: github
-        cpu_shares: string
+            owner: my_github_org
+            repo: my_github_repo
+            path: path/to/config.yml
+            ref: master
+        cpu_shares: 1024
         customer_files:
           - file_mode: "0777"
             file_owner: "0"
             filename: "/data/otherconfig.yml"
             name: your_file_name
             when: true
-        display_name: string
         dynamic: false
         entrypoint: ["/bin/application"]
         env_vars:
@@ -91,7 +90,7 @@ components:
             value: '{{repl ConfigOption "serverKey" }}'
             when: '{{repl ConfigOptionNotEquals "serverKey" "" }}'
         ephemeral: false
-        hostname: string
+        hostname: server.replexample.int
         extra_hosts:
           - address: '{{repl ConfigOption "extraHostAddress" "" }}'
             hostname: '{{repl ConfigOption "extraHostName" "" }}'
@@ -126,8 +125,6 @@ components:
             filename: /tmp/run-command.out
         support_files:
           - filename: /var/application-data
-        suppress_restart:
-          - string
         ulimits:
           - name: nofile
             soft: 1024
@@ -144,7 +141,6 @@ components:
         volumes_from:
           - startup
         when: true
-
       - source: replicated
         image_name: startup
         version: 1.0.1
