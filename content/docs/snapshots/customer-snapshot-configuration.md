@@ -29,6 +29,8 @@ Local configuration only requires the name of the directory where snapshots will
 
 S3 configuration requires that the bucket exists and the supplied key has write permissions to the bucket.  When configuring a new server, the bucket should be empty.
 
+When backing up to an S3 bucket, users can optionally force the use of `aws:kms` encryption by setting the `AWS Server Side Encryption` parameter to `aws:kms`. To use an encryption key other than the bucket default when doing this, set `AWS Server Side Encryption Key ARN` to the desired key ARN.
+
 ### SFTP
 
 SFTP configuration requires that the path on the remote server exists and the user specified in the configuration has read/write permissions on the folder.  When configuring a new server, the destination folder on the remote server should be empty.
