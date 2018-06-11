@@ -18,7 +18,7 @@ To start, we'll want to navigate to the "specs" tab of [console.replicated.com](
 ![](/images/guides/support-bundle/sb-spec-list.png)
 
 
-From here, we can click edit, and it will pull up the spec editor, which should be populated with some defaults based on the tiles we checked back in [Support Bundle Specs](/guides/support-bundle/spec):
+From here, we can click edit, and it will pull up the spec editor, which should be populated with some defaults based on the tiles we checked back in Support Bundle Specs:
 
 ![](/images/guides/support-bundle/spec-edit.png)
 
