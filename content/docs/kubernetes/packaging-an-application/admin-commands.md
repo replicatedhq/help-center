@@ -15,7 +15,6 @@ _Note: If you are calling admin commands from a script use the `--no-tty` flag._
 
 {{< linked_headline "Executing" >}}
 
-
 ```bash
 $ kubectl exec -it \
     "$(kubectl get pods -l=app=replicated -l=tier=master -o=jsonpath='{.items..metadata.name}')" \
