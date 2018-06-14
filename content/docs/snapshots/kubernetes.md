@@ -26,6 +26,21 @@ backup:
     pvc_names: [ "redis-data-volume" ]
 ```
 
+[Multi-strategy snapshots](/docs/snapshots/custom-scripts/#multi-strategy-backup) can also be used with Kubernetes.
+
+When configuring multi-strategy snapshots, all PVCs should be included under the same strategy.
+
+```yaml
+...
+backup:
+  enabled: true
+  strategies:
+    - name: full
+      kubernetes:
+        pvc_names: [ "redis-data-volume" ]
+...
+```
+
 ### Example
 
 Below is an End-to-end application config for a PVC-backed redis deployment.
