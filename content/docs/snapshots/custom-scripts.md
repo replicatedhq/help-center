@@ -17,11 +17,11 @@ Snapshots include customer console configuration, data from bind mounted volumes
 
 `pause_containers`: A string that can equal "true" or "false". If true, Replicated will pause all containers and then resume them upon completion (note your app will potentially have downtime). Take a look at [this article](/docs/kb/developer-resources/zero-downtime-backup/) for tips on zero downtime backups.
 
-`exclude_registry_data`: A boolean or template function that evaluates to a boolean.   If value is true, on-prem Docker registry will not be included in backups.
+`exclude_registry_data`: A boolean or template function that evaluates to a boolean. If value is true, on-prem Docker registry will not be included in backups.
 
-`disable_deduplication`: A boolean or template function that evaluates to a boolean.   If value is true, backed up files will not be deduplicated.  Every identical file will be uploaded to the specified backend every time and will be saved in its own storage space.
+`disable_deduplication`: A boolean or template function that evaluates to a boolean. If value is true, backed up files will not be deduplicated.  Every identical file will be uploaded to the specified backend every time and will be saved in its own storage space.
 
-`script`: A bash script that will run on the server at the time of backup.
+`script`: A shell script that will run on the server at the time of backup. _Note: The designated executable must be `/bin/sh`. `/bin/bash` is not available in the container that executes the script._
 
 ```yaml
 backup:
@@ -49,7 +49,7 @@ The new multi-strategy snapshot functionality in Replicated Platform allows the 
 
 `pause_containers`: A string that can equal "true" or "false". If true, Replicated will pause all containers and then resume them upon completion (note your app will potentially have downtime). Take a look at [this article](/docs/kb/developer-resources/zero-downtime-backup/) for tips on zero downtime backups.
 
-`script`: A bash script that will run on the server at the time of backup.
+`script`: A shell script that will run on the server at the time of backup. _Note: The designated executable must be `/bin/sh`. `/bin/bash` is not available in the container that executes the script._
 
 ```yaml
 backup:
