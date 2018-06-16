@@ -22,23 +22,5 @@ lifecycle:
     - render: {}
 ```
 
-```yaml
-lifecycle:
-  v1:
-    - render:
-        skip_plan: true
-        skip_state_warning: true
-```
-
-    
-### Optional Parameters
-
-
-- `skip_plan` - Whether to skip the "plan" phase of `render`, in which the user can confirm the actions that Ship will take to generate application assets
-
-
-- `skip_state_warning` - If set to `true`, will omit the default warning message informing the user that a state file has been created and to save that state file for future ship runs. If this is set to `true`, your YAML should specify a `message` step that explains the purpose and importance of this state file.
-
-
     
     

@@ -50,10 +50,10 @@ assets:
 - `dest` - The destination for the docker image, such as `api.tar` or `docker-images/worker.tar`.
 
 
-- `image` - The destination for the docker image, such as `api.tar` or `docker-images/worker.tar`.
+- `image` - The docker image URL
 
 
-- `source` - The source for the image. Should be either `public`, `replicated`, or the name of a third-party private registry previously configured on [vendor.replicated.com](https://vendor.replicated.com)
+- `source` - The source for the image. Should be either `public`, `replicated`, or the name of a third-party private registry previously configured on [console.replicated.com](https://console.replicated.com)
 
 
     
