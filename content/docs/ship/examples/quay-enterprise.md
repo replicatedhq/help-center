@@ -184,7 +184,7 @@ lifecycle:
   - message:
      level: warn
      contents: |
-       A state file has been written to {{repl context "state_file_path" }} -- please store it
+       A state file has been written to {{repl Installation "state_file_path" }} -- please store it
        somewhere safe, you'll need it if you want to update or recover this installation of Quay.io Enterprise.
 ```
 
