@@ -56,6 +56,9 @@ support:
             run: my-nginx
 ```
 
+{{< linked_headline "Excluding Logs From Support Bundles" >}}
+If a pod's logs may contain sensitive information or are simply large and not useful for your debugging processes, you can exclude that pod's logs from support bundles. To do this, add the label `com.replicated.excludelogs=true` to the pod in question.
+
 {{< linked_headline "Default Support Files" >}}
 
 {{< note title="Legacy Support Bundle" >}}
