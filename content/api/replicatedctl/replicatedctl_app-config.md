@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-config
 categories:
 - replicatedctl
-date: 2018-02-20T00:45:55Z
+date: 2018-06-22T16:37:46-07:00
 description: Manage app config
+gradient: purpleToPink
 index: docs
 title: replicatedctl app-config
 weight: "551"
-gradient: "purpleToPink"
 ---
 
 ## replicatedctl app-config
@@ -17,8 +17,13 @@ Manage app config
 
 ### Synopsis
 
-
 Manage app config
+
+### Options
+
+```
+  -h, --help   help for app-config
+```
 
 ### Options inherited from parent commands
 
@@ -27,6 +32,7 @@ Manage app config
 ```
 
 ### SEE ALSO
+
 * [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
 * [replicatedctl app-config export](/api/replicatedctl/replicatedctl_app-config_export/)	 - Export app config settings
 * [replicatedctl app-config import](/api/replicatedctl/replicatedctl_app-config_import/)	 - Import app config settings from stdin

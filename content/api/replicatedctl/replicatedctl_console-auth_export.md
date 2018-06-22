@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_console-auth_export
 categories:
 - replicatedctl
-date: 2018-02-20T00:45:55Z
+date: 2018-06-22T16:37:46-07:00
 description: Export console auth config for current auth type
+gradient: purpleToPink
 index: docs
 title: replicatedctl console-auth export
 weight: "551"
-gradient: "purpleToPink"
 ---
 
 ## replicatedctl console-auth export
@@ -17,16 +17,16 @@ Export console auth config for current auth type
 
 ### Synopsis
 
-
 Export console auth config for current auth type
 
 ```
-replicatedctl console-auth export
+replicatedctl console-auth export [flags]
 ```
 
 ### Options
 
 ```
+  -h, --help              help for export
   -o, --output string     Output format. One of: json|yaml
       --template string   Format the output using the given Go template
       --type string       Get configuration for auth type (one of anonymous, password, ldap)
@@ -39,5 +39,6 @@ replicatedctl console-auth export
 ```
 
 ### SEE ALSO
+
 * [replicatedctl console-auth](/api/replicatedctl/replicatedctl_console-auth/)	 - Manage UI console authentication settings
 

@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_console-auth_reset
 categories:
 - replicatedctl
-date: 2018-02-20T00:45:55Z
+date: 2018-06-22T16:37:46-07:00
 description: Resets console authentication to type anonymous
+gradient: purpleToPink
 index: docs
 title: replicatedctl console-auth reset
 weight: "551"
-gradient: "purpleToPink"
 ---
 
 ## replicatedctl console-auth reset
@@ -17,11 +17,16 @@ Resets console authentication to type anonymous
 
 ### Synopsis
 
-
 Resets console authentication to type anonymous
 
 ```
-replicatedctl console-auth reset
+replicatedctl console-auth reset [flags]
+```
+
+### Options
+
+```
+  -h, --help   help for reset
 ```
 
 ### Options inherited from parent commands
@@ -31,5 +36,6 @@ replicatedctl console-auth reset
 ```
 
 ### SEE ALSO
+
 * [replicatedctl console-auth](/api/replicatedctl/replicatedctl_console-auth/)	 - Manage UI console authentication settings
 
