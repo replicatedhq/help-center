@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-release_notes
 categories:
 - replicatedctl
-date: 2018-02-20T00:45:55Z
+date: 2018-06-22T16:37:46-07:00
 description: Display release notes for an app releases
+gradient: purpleToPink
 index: docs
 title: replicatedctl app-release notes
 weight: "551"
-gradient: "purpleToPink"
 ---
 
 ## replicatedctl app-release notes
@@ -17,11 +17,16 @@ Display release notes for an app releases
 
 ### Synopsis
 
-
 Display release notes for an app releases
 
 ```
-replicatedctl app-release notes SEQUENCE
+replicatedctl app-release notes SEQUENCE [flags]
+```
+
+### Options
+
+```
+  -h, --help   help for notes
 ```
 
 ### Options inherited from parent commands
@@ -31,5 +36,6 @@ replicatedctl app-release notes SEQUENCE
 ```
 
 ### SEE ALSO
+
 * [replicatedctl app-release](/api/replicatedctl/replicatedctl_app-release/)	 - Manage app releases
 
