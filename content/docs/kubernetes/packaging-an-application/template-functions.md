@@ -38,9 +38,11 @@ func ConfigOptionData(fileName string) string
 ```
 Returns the contents of the file uploaded for a configuration option as a string.
 ```yaml
-config_files:
-- filename: /opt/certs/server.key
-  contents: {{repl ConfigOptionData "ssl_key"}}
+kind: Secret
+metadata:
+  name: www-tls
+data:
+  cert: '{{repl ConfigOptionData "ssl_cert" | Base64Encode }}'
 ```
 
 {{< template_function name="ConfigOptionEquals" replicated="true" kubernetes="true" swarm="true" >}}
@@ -75,10 +77,9 @@ func LicenseFieldValue(customLicenseFieldName string) string
 ```
 Returns the value for the Custom License Field as a string.
 ```yaml
-config_files:
-  - filename: /opt/app/config.yml
-    contents: |
-      max_users: '{{repl LicenseFieldValue "maximum_users" }}'
+env:
+- name: MAX_USERS
+  value: '{{repl LicenseFieldValue "maximum_users" }}'
 ```
 
 {{< template_function name="LicenseProperty" replicated="true" kubernetes="true" swarm="true" >}}
@@ -87,10 +88,9 @@ func LicenseProperty(propertyName string) string
 ```
 Returns a property from the License as a string.  Valid propertyNames are "assignee", "channel.name", "expiration.date", "expiration.policy", and "license.id".
 ```yaml
-config_files:
-  - filename: /opt/app/config.yml
-    contents: |
-      expiration.date: {{repl LicenseProperty "expiration.date"}}
+env:
+- name: LICENSE_ID
+  value: '{{repl LicenseFieldValue "license.id" }}'
 ```
 
 {{< template_function name="AppID" replicated="true" kubernetes="true" swarm="true" >}}
@@ -99,7 +99,7 @@ func AppID() string
 ```
 Returns the app id.
 ```yaml
-env_vars:
+env:
 - name: APP_ID
   value: '{{repl AppID }}'
 ```
@@ -110,7 +110,7 @@ func AppVersion() int
 ```
 Returns the app version sequence.
 ```yaml
-env_vars:
+env:
 - name: APP_VERSION
   value: '{{repl AppVersion }}'
 ```
@@ -121,7 +121,7 @@ func AppVersionFirst() int
 ```
 Returns the version sequence of the first version installed.
 ```yaml
-env_vars:
+env:
 - name: APP_VERSION_FIRST
   value: '{{repl AppVersionFirst }}'
 ```
@@ -132,7 +132,7 @@ func AppVersionCurrent() int
 ```
 Returns the current app version sequence.
 ```yaml
-env_vars:
+env:
 - name: APP_VERSION_CURRENT
   value: '{{repl AppVersionCurrent }}'
 ```
@@ -143,7 +143,7 @@ func RunOffline() bool
 ```
 Returns whether or not we are running in airgap mode. This is available in the Kubernetes and Swarm implementations, but will always return false.
 ```yaml
-env_vars:
+env:
 - name: IS_AIRGAP
   value: '{{repl RunOffline }}'
 ```
@@ -162,7 +162,7 @@ Possible Options:
 `release.channel`
 
 ```yaml
-env_vars:
+env:
 - name: VERSION
   value: '{{repl AppSetting "version.label"}}'
 - name: RELEASE_NOTES
@@ -240,7 +240,7 @@ Possible Options:
 | RestrictedGroupQuery | string |
 
 ```yaml
-env_vars:
+env:
 - name: LDAP_HOSTNAME
   value: '{{repl LdapCopyAuthFrom "Hostname"}}'
 ```
@@ -251,7 +251,7 @@ func Now() string
 ```
 Returns the current timestamp as an RFC3339 formatted string.
 ```yaml
-env_vars:
+env:
 - name: START_TIME
   value: '{{repl Now }}'
 ```
@@ -262,7 +262,7 @@ func NowFmt(format string) string
 ```
 Returns the current timestamp as a formatted string. See Golang's time formatting guidelines [here](https://golang.org/pkg/time/#pkg-constants.
 ```yaml
-env_vars:
+env:
 - name: START_DATE
   value: '{{repl Now "20060102" }}'
 ```
@@ -273,7 +273,7 @@ func TrimSpace(s string) string
 ```
 Trim returns a string with all leading and trailing spaces removed.
 ```yaml
-env_vars:
+env:
 - name: VALUE
   value: '{{repl ConfigOption "str_value" | Trim }}
 ```
@@ -284,7 +284,7 @@ func Trim(s string, args ...string) string
 ```
 Trim returns a string with all leading and trailing string contained in the optional args removed (default space).
 ```yaml
-env_vars:
+env:
 - name: VALUE
   value: '{{repl ConfigOption "str_value" | Trim " " "." }}
 ```
@@ -295,7 +295,7 @@ func Split(s string, sep string) []string
 ```
 Split slices s into all substrings separated by sep and returns an array of the substrings between those separators.
 ```yaml
-env_vars:
+env:
 - name: BROKEN_APART_A_B_C
   value: '{{repl Split "A,B,C" "," }}'
 ```
@@ -304,7 +304,7 @@ Combining `Split` and `index`:
 Assuming the `github_url` param is set to `https://github.mycorp.internal:3131`, the following would set
 `GITHUB_HOSTNAME` to `github.mycorp.internal`.
 ```yaml
-env_vars:
+env:
 - name: GITHUB_HOSTNAME
   value: '{{repl index (Split (index (Split (ConfigOption "github_url") "/") 2) ":") 0}}'
 ```
@@ -316,7 +316,7 @@ func ToLower(stringToAlter string) string
 ```
 Returns the string, in lowercase.
 ```yaml
-env_vars:
+env:
 - name: COMPANY_NAME
   value: '{{repl ConfigOption "company_name" | ToLower }}'
 ```
@@ -327,7 +327,7 @@ func ToUpper(stringToAlter string) string
 ```
 Returns the string, in uppercase.
 ```yaml
-env_vars:
+env:
 - name: COMPANY_NAME
   value: '{{repl ConfigOption "company_name" | ToUpper }}'
 ```
@@ -338,7 +338,7 @@ func HumanSize(size interface{}) string
 ```
 HumanSize returns a human-readable approximation of a size in bytes capped at 4 valid numbers (eg. "2.746 MB", "796 KB"). The size must be a integer or floating point number.
 ```yaml
-env_vars:
+env:
 - name: MIN_SIZE_HUMAN
   value: '{{repl ConfigOption "min_size_bytes" | HumanSize }}
 ```
@@ -349,7 +349,7 @@ func UrlEncode(stringToEncode string) string
 ```
 Returns the string, url encoded.
 ```yaml
-env_vars:
+env:
 - name: SMTP_CONNECTION_URL
   value: '{{repl ConfigOption "smtp_email" | UrlEncode }}:{{repl ConfigOption "smtp_password" | UrlEncode }}@smtp.example.com:587'
 ```
@@ -360,7 +360,7 @@ func Base64Encode(stringToEncode string) string
 ```
 Returns a Base64 encoded string.
 ```yaml
-env_vars:
+env:
 - name: NAME_64_VALUE
   value: '{{repl ConfigOption "name" | Base64Encode }}'
 ```
@@ -371,7 +371,7 @@ func Base64Decode(stringToDecode string) string
 ```
 Returns decoded string from a Base64 stored value.
 ```yaml
-env_vars:
+env:
 - name: NAME_PLAIN_TEXT
   value: '{{repl ConfigOption "base_64_encoded_name" | Base64Decode }}'
 ```
@@ -382,7 +382,7 @@ func ParseBool(str string) bool
 ```
 ParseBool returns the boolean value represented by the string.
 ```yaml
-env_vars:
+env:
 - name: VALUE
   value: '{{repl ConfigOption "str_value" | ParseBool }}'
 ```
@@ -393,7 +393,7 @@ func ParseFloat(str string) float64
 ```
 ParseFloat returns the float value represented by the string.
 ```yaml
-env_vars:
+env:
 - name: VALUE
   value: '{{repl ConfigOption "str_value" | ParseFloat }}'
 ```
@@ -404,7 +404,7 @@ func ParseInt(str string, args ...int) int64
 ```
 ParseInt returns the integer value represented by the string with optional base (default 10).
 ```yaml
-env_vars:
+env:
 - name: VALUE
   value: '{{repl ConfigOption "str_value" | ParseInt }}'
 ```
@@ -415,7 +415,7 @@ func ParseUint(str string, args ...int) uint64
 ```
 ParseUint returns the unsigned integer value represented by the string with optional base (default 10).
 ```yaml
-env_vars:
+env:
 - name: VALUE
   value: '{{repl ConfigOption "str_value" | ParseUint }}'
 ```
@@ -430,7 +430,7 @@ If at least one of the operands is a floating point number, the result will be a
 
 If both operands are integers, the result will be an integer.
 ```yaml
-env_vars:
+env:
 - name: MAX_USERS_PLUS_ONE
   value: '{{repl Add (LicenseFieldValue "maximum_users") 1}}'
 ```
@@ -445,7 +445,7 @@ If at least one of the operands is a floating point number, the result will be a
 
 If both operands are integers, the result will be an integer.
 ```yaml
-env_vars:
+env:
 - name: MAX_USERS_MINUS_ONE
   value: '{{repl Sub (LicenseFieldValue "maximum_users") 1}}'
 ```
@@ -460,7 +460,7 @@ If at least one of the operands is a floating point number, the result will be a
 
 If both operands are integers, the result will be an integer.
 ```yaml
-env_vars:
+env:
 - name: DOUBLE_NUM_ADDRESSES
   value: '{{repl Mult (NodePrivateIPAddressAll "DB" "redis" | len) 2}}'
 ```
@@ -475,7 +475,7 @@ If at least one of the operands is a floating point number, the result will be a
 
 If both operands are integers, the result will be an integer and will be rounded down.
 ```yaml
-env_vars:
+env:
 - name: HALF_MAX_USERS
   value: '{{repl Div (LicenseFieldValue "maximum_users") 2.0}}'
 ```
