@@ -31,30 +31,28 @@ support:
 
 {{< linked_headline "Custom Files and Commands" >}}
 
-In addition to the [default support files](/docs/packaging-an-application/support-bundle/#default-support-files) included in the support bundle, addtional files can be added via the `support` section of your yaml. Files from within the application’s containers can be included, as well as output of commands executed in the container. Support files and commands are supported by both the native and kubernetes schedulers. For more complex support commands it is possible to create a [config file](/docs/packaging-an-application/components-and-containers/#config-files) and execute that file from a support command. These files will be available withing the _/scheduler_ directory of the support bundle.
+In addition to the [default support files](/docs/kubernetes/packaging-an-application/support-bundle/#default-support-files) included in the support bundle, addtional files can be added via the `support` section of your yaml. Files from within the application’s containers can be included, as well as output of commands executed in the container. For more complex support commands it is possible to create a [config map file](/docs/kubernetes/packaging-an-application/config-maps/) and execute that file from a support command. These files will be available withing the _/scheduler_ directory of the support bundle.
 
 ```yaml
 support:
   files:
     - filename: /var/log/nginx/access.log
       source:
-        replicated:
-          component: Nginx
-          container: my-nginx
         kubernetes:
           selector:
             run: my-nginx
+          container: nginx
   commands:
     - filename: access_last_1000.log
       command: [tail, -n1000, /var/log/nginx/access.log]
       source:
-        replicated:
-          component: Nginx
-          container: my-nginx
         kubernetes:
           selector:
             run: my-nginx
+          container: nginx
 ```
+
+If the container name is not specified then the first container in the pod's container list will be used.
 
 {{< linked_headline "Excluding Logs From Support Bundles" >}}
 If a pod's logs may contain sensitive information or are simply large and not useful for your debugging processes, you can exclude that pod's logs from support bundles. To do this, add the label `com.replicated.excludelogs=true` to the pod in question.
