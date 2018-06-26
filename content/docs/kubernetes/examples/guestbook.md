@@ -52,6 +52,20 @@ config:
       command: resolve_host
 
 #
+# Images
+#
+images:
+- name: k8s.gcr.io/redis
+  source: public
+  tag: e2e
+- name: gcr.io/google_samples/gb-redisslave
+  source: public
+  tag: v1
+- name: gcr.io/google-samples/gb-frontend
+  source: public
+  tag: v4
+
+#
 # Documentation for additional features
 # https://help.replicated.com/categories/packaging-an-application/
 #
