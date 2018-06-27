@@ -91,7 +91,7 @@ By default the Support Bundle will include the following files:
 | /scheduler/kubernetes/api_versions.json | Kubernetes API versions |
 | /scheduler/kubernetes/cluster_info.json | Kubernetes cluster info |
 | /scheduler/kubernetes/server_version.json | Kubernetes server version |
-| /scheduler/kubernetes/logs/\<pod\>-\<container\>/\<pod\>.log | Replicated UI container logs |
+| /scheduler/kubernetes/logs/\<pod\>-\<container\>/\<pod\>.log | App container logs |
 | /scheduler/kubernetes/replicated/\<replicated_pod\>-replicated/\<replicated_pod\>.log | Replicated container logs |
 | /scheduler/kubernetes/replicated/\<replicated_pod\>-replicated-ui/\<replicated_pod\>.log | Replicated UI container logs |
 | /scheduler/kubernetes/resources/componentstatuses/resource.json | Kubernetes componentstatuses info |
