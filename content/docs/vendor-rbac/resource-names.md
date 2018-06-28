@@ -47,6 +47,10 @@ index: "other"
 | [platform/team/token/create](#platform-team-token-create) |
 | [platform/team/token/[:tokenName]/delete](#platform-team-token-tokenname-delete) |
 | [team/auditlog/read](#team-auditlog-read) |
+| [team/policy/read](#team-policy-read) |
+| [team/policy/update](#team-policy-update) |
+| [team/policy/delete](#team-policy-delete) |
+| [team/policy/create](#team-policy-create) |
 | [registry/auth](#registry-auth) |
 | [registry/namespace/:namespace/pull](#registry-namespace-namespace-pull) |
 | [registry/namespace/:namespace/push](#registry-namespace-namespace-push) |
@@ -197,6 +201,22 @@ Grants the holder permission to delete the token(s) identified by the names spec
 ### team/auditlog/read
 
 Grants the holder permission to view the audit log for the team.
+
+### team/policy/read
+
+Grants the holder permission to view RBAC policies for the team.
+
+### team/policy/update
+
+Grants the holder permission to update RBAC policies for the team.
+
+### team/policy/delete
+
+Grants the holder permission to delete RBAC policies for the team.
+
+### team/policy/create
+
+Grants the holder permission to create RBAC policies for the team.
 
 ### registry/auth
 
