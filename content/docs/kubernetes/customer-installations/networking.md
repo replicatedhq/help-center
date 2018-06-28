@@ -15,7 +15,10 @@ Weave runs as a DaemonSet in the `kube-system` namespace and includes a controll
 ## Encryption
 
 Replicated will configure Weave to encrypt all traffic between hosts in your clusters by default.
-As a performance optimization, you can disable this behavior in a trusted network by passing the `encrypt_network=0` param to the kubernetes-init install script.
+As a performance optimization, you can disable this behavior in a trusted network by passing the `encrypt_network=0` param to the kubernetes-init install script:
+```bash
+curl -sSL https://get.replicated.com/kubernetes-init | sudo bash -s encrypt-network=0
+```
 
 If Weave is not able to configure an IPSec tunnel with the ESP protocol then encrypted traffic may be routed through a slower tunnel known as `sleeve`.
 This will happen when running on a kernel version below Linux 4.2 or when a firewall rule is blocking `esp` packets.
