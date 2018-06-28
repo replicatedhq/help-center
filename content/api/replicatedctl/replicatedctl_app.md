@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-02-20T00:45:55Z
 description: Manage apps
-gradient: purpleToPink
 index: docs
 title: replicatedctl app
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app
@@ -17,13 +17,8 @@ Manage apps
 
 ### Synopsis
 
+
 Manage apps
-
-### Options
-
-```
-  -h, --help   help for app
-```
 
 ### Options inherited from parent commands
 
@@ -32,7 +27,6 @@ Manage apps
 ```
 
 ### SEE ALSO
-
 * [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
 * [replicatedctl app inspect](/api/replicatedctl/replicatedctl_app_inspect/)	 - Display detailed information on the app
 * [replicatedctl app start](/api/replicatedctl/replicatedctl_app_start/)	 - Start the app

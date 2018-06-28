@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_support-bundle
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-02-20T00:45:55Z
 description: Generate a support bundle
-gradient: purpleToPink
 index: docs
 title: replicatedctl support-bundle
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl support-bundle
@@ -17,16 +17,11 @@ Generate a support bundle
 
 ### Synopsis
 
+
 Generate a support bundle
 
 ```
-replicatedctl support-bundle [flags]
-```
-
-### Options
-
-```
-  -h, --help   help for support-bundle
+replicatedctl support-bundle
 ```
 
 ### Options inherited from parent commands
@@ -36,6 +31,5 @@ replicatedctl support-bundle [flags]
 ```
 
 ### SEE ALSO
-
 * [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
 

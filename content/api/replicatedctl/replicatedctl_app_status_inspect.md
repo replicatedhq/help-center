@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app_status_inspect
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-02-20T00:45:55Z
 description: Display detailed information on the app's status
-gradient: purpleToPink
 index: docs
 title: replicatedctl app status inspect
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app status inspect
@@ -17,16 +17,16 @@ Display detailed information on the app's status
 
 ### Synopsis
 
+
 Display detailed information on the app's status
 
 ```
-replicatedctl app status inspect [flags]
+replicatedctl app status inspect
 ```
 
 ### Options
 
 ```
-  -h, --help              help for inspect
   -o, --output string     Output format. One of: json|yaml
       --template string   Format the output using the given Go template
 ```
@@ -38,6 +38,5 @@ replicatedctl app status inspect [flags]
 ```
 
 ### SEE ALSO
-
 * [replicatedctl app status](/api/replicatedctl/replicatedctl_app_status/)	 - Manage the app status
 

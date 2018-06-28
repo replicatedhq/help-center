@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_license_inspect
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-02-20T00:45:55Z
 description: Display detailed information on the license
-gradient: purpleToPink
 index: docs
 title: replicatedctl license inspect
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl license inspect
@@ -17,16 +17,16 @@ Display detailed information on the license
 
 ### Synopsis
 
+
 Display detailed information on the license
 
 ```
-replicatedctl license inspect [flags]
+replicatedctl license inspect
 ```
 
 ### Options
 
 ```
-  -h, --help              help for inspect
   -o, --output string     Output format. One of: json|yaml
       --sync              Sync license
       --template string   Format the output using the given Go template
@@ -39,6 +39,5 @@ replicatedctl license inspect [flags]
 ```
 
 ### SEE ALSO
-
 * [replicatedctl license](/api/replicatedctl/replicatedctl_license/)	 - Manage the license
 

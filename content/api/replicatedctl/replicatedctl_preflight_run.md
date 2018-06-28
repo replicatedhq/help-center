@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_preflight_run
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-02-20T00:45:55Z
 description: Run the preflight checks
-gradient: purpleToPink
 index: docs
 title: replicatedctl preflight run
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl preflight run
@@ -17,16 +17,16 @@ Run the preflight checks
 
 ### Synopsis
 
+
 Run the preflight checks
 
 ```
-replicatedctl preflight run [flags]
+replicatedctl preflight run
 ```
 
 ### Options
 
 ```
-  -h, --help              help for run
   -o, --output string     Output format. One of: json|yaml
   -q, --quiet             Only display checksum
       --sequence string   App sequence (default "current")
@@ -39,6 +39,5 @@ replicatedctl preflight run [flags]
 ```
 
 ### SEE ALSO
-
 * [replicatedctl preflight](/api/replicatedctl/replicatedctl_preflight/)	 - View or manage preflight checks
 

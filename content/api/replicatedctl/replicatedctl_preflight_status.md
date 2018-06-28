@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_preflight_status
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-02-20T00:45:55Z
 description: Get preflight status
-gradient: purpleToPink
 index: docs
 title: replicatedctl preflight status
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl preflight status
@@ -17,16 +17,16 @@ Get preflight status
 
 ### Synopsis
 
+
 Get preflight status
 
 ```
-replicatedctl preflight status [flags]
+replicatedctl preflight status
 ```
 
 ### Options
 
 ```
-  -h, --help              help for status
   -q, --quiet             Display true or false
       --sequence string   App sequence (default "current")
 ```
@@ -38,6 +38,5 @@ replicatedctl preflight status [flags]
 ```
 
 ### SEE ALSO
-
 * [replicatedctl preflight](/api/replicatedctl/replicatedctl_preflight/)	 - View or manage preflight checks
 

@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_license
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-02-20T00:45:55Z
 description: Manage the license
-gradient: purpleToPink
 index: docs
 title: replicatedctl license
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl license
@@ -17,13 +17,8 @@ Manage the license
 
 ### Synopsis
 
+
 Manage the license
-
-### Options
-
-```
-  -h, --help   help for license
-```
 
 ### Options inherited from parent commands
 
@@ -32,7 +27,6 @@ Manage the license
 ```
 
 ### SEE ALSO
-
 * [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
 * [replicatedctl license activate](/api/replicatedctl/replicatedctl_license_activate/)	 - Activate the license
 * [replicatedctl license inspect](/api/replicatedctl/replicatedctl_license_inspect/)	 - Display detailed information on the license

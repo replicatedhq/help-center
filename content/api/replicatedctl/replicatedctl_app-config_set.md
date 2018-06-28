@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-config_set
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-02-20T00:45:55Z
 description: Sets an individual app config value
-gradient: purpleToPink
 index: docs
 title: replicatedctl app-config set
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app-config set
@@ -17,18 +17,18 @@ Sets an individual app config value
 
 ### Synopsis
 
+
 Sets an individual app config value
 
 ```
-replicatedctl app-config set NAME [flags]
+replicatedctl app-config set NAME
 ```
 
 ### Options
 
 ```
-      --data strings    Sets the item data
-  -h, --help            help for set
-      --value strings   Sets the item value
+      --data stringSlice    Sets the item data
+      --value stringSlice   Sets the item value
 ```
 
 ### Options inherited from parent commands
@@ -38,6 +38,5 @@ replicatedctl app-config set NAME [flags]
 ```
 
 ### SEE ALSO
-
 * [replicatedctl app-config](/api/replicatedctl/replicatedctl_app-config/)	 - Manage app config
 

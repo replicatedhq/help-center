@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_task_attach
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-02-20T00:45:55Z
 description: Stream task progress
-gradient: purpleToPink
 index: docs
 title: replicatedctl task attach
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl task attach
@@ -17,16 +17,16 @@ Stream task progress
 
 ### Synopsis
 
+
 Stream task progress
 
 ```
-replicatedctl task attach ID [flags]
+replicatedctl task attach ID
 ```
 
 ### Options
 
 ```
-  -h, --help              help for attach
   -q, --quiet             Suppress stdout
       --raw               Raw JSON stream
       --template string   Format the output using the given Go template
@@ -39,6 +39,5 @@ replicatedctl task attach ID [flags]
 ```
 
 ### SEE ALSO
-
 * [replicatedctl task](/api/replicatedctl/replicatedctl_task/)	 - Manage tasks
 

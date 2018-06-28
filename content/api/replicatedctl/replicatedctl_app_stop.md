@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app_stop
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-02-20T00:45:55Z
 description: Stop the app
-gradient: purpleToPink
 index: docs
 title: replicatedctl app stop
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app stop
@@ -17,10 +17,11 @@ Stop the app
 
 ### Synopsis
 
+
 Stop the app
 
 ```
-replicatedctl app stop [flags]
+replicatedctl app stop
 ```
 
 ### Options
@@ -28,7 +29,6 @@ replicatedctl app stop [flags]
 ```
   -a, --attach            Attach to task
   -f, --force             Force stop
-  -h, --help              help for stop
   -q, --quiet             Only display task ID
       --raw               Raw JSON stream
       --template string   Format the output using the given Go template
@@ -41,6 +41,5 @@ replicatedctl app stop [flags]
 ```
 
 ### SEE ALSO
-
 * [replicatedctl app](/api/replicatedctl/replicatedctl_app/)	 - Manage apps
 
