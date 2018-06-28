@@ -47,6 +47,9 @@ index: "other"
 | [platform/team/token/create](#platform-team-token-create) |
 | [platform/team/token/[:tokenName]/delete](#platform-team-token-tokenname-delete) |
 | [team/auditlog/read](#team-auditlog-read) |
+| [registry/auth](#registry-auth) |
+| [registry/namespace/:namespace/pull](#registry-namespace-namespace-pull) |
+| [registry/namespace/:namespace/push](#registry-namespace-namespace-push) |
 
 
 #### platform/app/[:appId]/delete
@@ -194,3 +197,15 @@ Grants the holder permission to delete the token(s) identified by the names spec
 ### team/auditlog/read
 
 Grants the holder permission to view the audit log for the team.
+
+### registry/auth
+
+Grants the holder permission to authenticate with Replicated image registry.
+
+### registry/namespace/:namespace/pull
+
+Grants the holder permission to pull images from Replicated registry.
+
+### registry/namespace/:namespace/push
+
+Grants the holder permission to push images into Replicated registry.
