@@ -3,28 +3,22 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_params
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
-description: Manage Replicated daemon parameters. Provides the ability to import,
-  export, set and unset parameters.
-gradient: purpleToPink
+date: 2018-02-20T00:45:55Z
+description: Manage params
 index: docs
 title: replicatedctl params
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl params
 
-Manage Replicated daemon parameters. Provides the ability to import, export, set and unset parameters.
+Manage params
 
 ### Synopsis
 
-Manage Replicated daemon parameters. Provides the ability to import, export, set and unset parameters.
 
-### Options
-
-```
-  -h, --help   help for params
-```
+Manage params
 
 ### Options inherited from parent commands
 
@@ -33,10 +27,9 @@ Manage Replicated daemon parameters. Provides the ability to import, export, set
 ```
 
 ### SEE ALSO
-
 * [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
-* [replicatedctl params export](/api/replicatedctl/replicatedctl_params_export/)	 - Export Replicated daemon parameters to stdout
-* [replicatedctl params import](/api/replicatedctl/replicatedctl_params_import/)	 - Import Replicated parameters from stdin
-* [replicatedctl params set](/api/replicatedctl/replicatedctl_params_set/)	 - Sets an individual Replicated daemon parameter value
-* [replicatedctl params unset](/api/replicatedctl/replicatedctl_params_unset/)	 - Unsets a runtime overridden Replicated daemon parameter value
+* [replicatedctl params export](/api/replicatedctl/replicatedctl_params_export/)	 - Export params
+* [replicatedctl params import](/api/replicatedctl/replicatedctl_params_import/)	 - Import params from stdin
+* [replicatedctl params set](/api/replicatedctl/replicatedctl_params_set/)	 - Sets an individual param value
+* [replicatedctl params unset](/api/replicatedctl/replicatedctl_params_unset/)	 - Unsets a runtime overridden param value
 

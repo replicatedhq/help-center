@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-config_export
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-02-20T00:45:55Z
 description: Export app config settings
-gradient: purpleToPink
 index: docs
 title: replicatedctl app-config export
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app-config export
@@ -17,16 +17,16 @@ Export app config settings
 
 ### Synopsis
 
+
 Export app config settings
 
 ```
-replicatedctl app-config export [flags]
+replicatedctl app-config export
 ```
 
 ### Options
 
 ```
-  -h, --help              help for export
   -o, --output string     Output format. One of: json|yaml
       --template string   Format the output using the given Go template
 ```
@@ -38,6 +38,5 @@ replicatedctl app-config export [flags]
 ```
 
 ### SEE ALSO
-
 * [replicatedctl app-config](/api/replicatedctl/replicatedctl_app-config/)	 - Manage app config
 

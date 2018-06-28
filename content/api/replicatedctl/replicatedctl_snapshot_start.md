@@ -3,9 +3,8 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_snapshot_start
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-02-20T00:45:55Z
 description: Start a snapshot
-gradient: purpleToPink
 index: docs
 title: replicatedctl snapshot start
 weight: "551"
@@ -17,17 +16,17 @@ Start a snapshot
 
 ### Synopsis
 
+
 Start a snapshot
 
 ```
-replicatedctl snapshot start [flags]
+replicatedctl snapshot start
 ```
 
 ### Options
 
 ```
       --exclude-app-data   Only backup Replicated data and exclude app data
-  -h, --help               help for start
       --wait               Block until snapshot is complete
 ```
 
@@ -37,7 +36,6 @@ replicatedctl snapshot start [flags]
       --host string                        Replicated API host (default "unix:///var/run/replicated/replicated-cli.sock")
       --path string                        Snapshot location path. The value should be an absolute path. This option is only used with local and sftp backends.
       --s3-bucket string                   S3 bucket name. This option is only used with s3 backend.
-      --s3-compatible-endpoint string      AWS compatible S3 endpoint. This option is only used with s3 backend.
       --s3-key-id string                   ID of the secret key that has write access to the specified S3 bucket. This option is only used with s3 backend.
       --s3-region string                   S3 bucket region. This option is only used with s3 backend.
       --s3-secret-key string               Secret key value. This option is only used with s3 backend.
@@ -50,6 +48,5 @@ replicatedctl snapshot start [flags]
 ```
 
 ### SEE ALSO
-
 * [replicatedctl snapshot](/api/replicatedctl/replicatedctl_snapshot/)	 - Manage snapshots
 

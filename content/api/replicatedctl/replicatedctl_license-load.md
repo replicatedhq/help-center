@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_license-load
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-02-20T00:45:55Z
 description: Load the license from stdin
-gradient: purpleToPink
 index: docs
 title: replicatedctl license-load
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl license-load
@@ -17,18 +17,17 @@ Load the license from stdin
 
 ### Synopsis
 
+
 Load the license from stdin
 
 ```
-replicatedctl license-load [flags]
+replicatedctl license-load
 ```
 
 ### Options
 
 ```
   -a, --attach            Attach to task
-      --force-online      Force an online installation even when running in airgapped mode
-  -h, --help              help for license-load
   -q, --quiet             Only display task ID
       --raw               Raw JSON stream
       --template string   Format the output using the given Go template
@@ -41,6 +40,5 @@ replicatedctl license-load [flags]
 ```
 
 ### SEE ALSO
-
 * [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
 

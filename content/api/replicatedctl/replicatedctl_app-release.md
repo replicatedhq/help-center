@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-release
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-02-20T00:45:55Z
 description: Manage app releases
-gradient: purpleToPink
 index: docs
 title: replicatedctl app-release
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app-release
@@ -17,13 +17,8 @@ Manage app releases
 
 ### Synopsis
 
+
 Manage app releases
-
-### Options
-
-```
-  -h, --help   help for app-release
-```
 
 ### Options inherited from parent commands
 
@@ -32,7 +27,6 @@ Manage app releases
 ```
 
 ### SEE ALSO
-
 * [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
 * [replicatedctl app-release apply](/api/replicatedctl/replicatedctl_app-release_apply/)	 - Applies pending app releases
 * [replicatedctl app-release inspect](/api/replicatedctl/replicatedctl_app-release_inspect/)	 - Display detailed information on one or more app releases

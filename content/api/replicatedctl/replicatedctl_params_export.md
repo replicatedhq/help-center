@@ -3,37 +3,30 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_params_export
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
-description: Export Replicated daemon parameters to stdout
-gradient: purpleToPink
+date: 2018-02-20T00:45:55Z
+description: Export params
 index: docs
 title: replicatedctl params export
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl params export
 
-Export Replicated daemon parameters to stdout
+Export params
 
 ### Synopsis
 
-Export Replicated daemon parameters to stdout
+
+Export params
 
 ```
-replicatedctl params export [flags]
-```
-
-### Examples
-
-```
-replicatedctl params export --output yaml > params.yaml
-replicatedctl params export --template '{{.AppUpdateCheckSchedule}}'
+replicatedctl params export
 ```
 
 ### Options
 
 ```
-  -h, --help              help for export
   -o, --output string     Output format. One of: json|yaml
       --template string   Format the output using the given Go template
 ```
@@ -45,6 +38,5 @@ replicatedctl params export --template '{{.AppUpdateCheckSchedule}}'
 ```
 
 ### SEE ALSO
-
-* [replicatedctl params](/api/replicatedctl/replicatedctl_params/)	 - Manage Replicated daemon parameters. Provides the ability to import, export, set and unset parameters.
+* [replicatedctl params](/api/replicatedctl/replicatedctl_params/)	 - Manage params
 

@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_console-auth_import
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-02-20T00:45:55Z
 description: Import console authentication config from stdin
-gradient: purpleToPink
 index: docs
 title: replicatedctl console-auth import
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl console-auth import
@@ -17,17 +17,17 @@ Import console authentication config from stdin
 
 ### Synopsis
 
+
 Import console authentication config from stdin
 
 ```
-replicatedctl console-auth import [flags]
+replicatedctl console-auth import
 ```
 
 ### Options
 
 ```
       --format string   Input format. One of: json|yaml (default "json")
-  -h, --help            help for import
 ```
 
 ### Options inherited from parent commands
@@ -37,6 +37,5 @@ replicatedctl console-auth import [flags]
 ```
 
 ### SEE ALSO
-
 * [replicatedctl console-auth](/api/replicatedctl/replicatedctl_console-auth/)	 - Manage UI console authentication settings
 

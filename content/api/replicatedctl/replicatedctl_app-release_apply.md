@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-release_apply
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-02-20T00:45:55Z
 description: Applies pending app releases
-gradient: purpleToPink
 index: docs
 title: replicatedctl app-release apply
 weight: "551"
+gradient: "purpleToPink"
 ---
 
 ## replicatedctl app-release apply
@@ -17,17 +17,17 @@ Applies pending app releases
 
 ### Synopsis
 
+
 Applies pending app releases
 
 ```
-replicatedctl app-release apply [flags]
+replicatedctl app-release apply
 ```
 
 ### Options
 
 ```
   -a, --attach            Attach to task
-  -h, --help              help for apply
   -q, --quiet             Only display task ID
       --raw               Raw JSON stream
       --sequence int      Apply releases up to and including specified sequence (0 for all)
@@ -41,6 +41,5 @@ replicatedctl app-release apply [flags]
 ```
 
 ### SEE ALSO
-
 * [replicatedctl app-release](/api/replicatedctl/replicatedctl_app-release/)	 - Manage app releases
 
