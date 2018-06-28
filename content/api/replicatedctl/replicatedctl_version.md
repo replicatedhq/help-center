@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_version
 categories:
 - replicatedctl
-date: 2018-02-20T00:45:55Z
+date: 2018-06-22T16:37:46-07:00
 description: Get the Replicated CLI version information
+gradient: purpleToPink
 index: docs
 title: replicatedctl version
 weight: "551"
-gradient: "purpleToPink"
 ---
 
 ## replicatedctl version
@@ -17,16 +17,16 @@ Get the Replicated CLI version information
 
 ### Synopsis
 
-
 Get the Replicated CLI version information
 
 ```
-replicatedctl version
+replicatedctl version [flags]
 ```
 
 ### Options
 
 ```
+  -h, --help    help for version
       --quiet   Only print the version
 ```
 
@@ -37,5 +37,6 @@ replicatedctl version
 ```
 
 ### SEE ALSO
+
 * [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
 

@@ -56,6 +56,17 @@ support:
             run: my-nginx
 ```
 
+{{< linked_headline "Excluding Logs From Support Bundles" >}}
+If a service's logs may contain sensitive information or are simply large and not useful for your debugging processes, you can exclude that service's logs from support bundles. To do this, add the label `com.replicated.excludelogs=true` to the service in question.
+
+```yaml
+services:
+  private-worker:
+    image: app
+    labels:
+      com.replicated.excludelogs: "true"
+```
+
 {{< linked_headline "Default Support Files" >}}
 
 {{< note title="Legacy Support Bundle" >}}
