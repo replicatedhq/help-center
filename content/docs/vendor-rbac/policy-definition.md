@@ -25,5 +25,8 @@ A policy is defined in a single JSON document.
 }
 ```
 
- There is some minimal metadata included, but the primary contents of a policy document is the `resources` key. The `resources` key can contain two arrays, identified as `allowed` and `denied`. As the names indicate, resources specified in the `allowed` list will be allowed for users assigned to the policy, and resources specified in the `denied` list will be denied.
+ There is some minimal metadata included, but the primary contents of a policy document is the `resources` key. The `resources` key should contain two arrays, identified as `allowed` and `denied`. As the names indicate, resources specified in the `allowed` list will be allowed for users assigned to the policy, and resources specified in the `denied` list will be denied.
 
+ Resource names are heirarchical, and support wildcards and globs. It's possible to create a policy document that has conflicting rules, and the behavior here is [predictable and documented](../rule-order).
+
+For a complete list of resource names that can be defined in a policy document, continue to the [Resource Names](../resource-names) list.
