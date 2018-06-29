@@ -9,6 +9,10 @@ icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/support-bundle/,/tags/support-bundle/]
 ---
 
+{{< note title="Older Replicated Instances" >}}
+The content in this document is specific to the current default V2 Support Bundle in Replicated. If you are looking for the list of files included in previous releases of Replicated, it is available at <a href="/docs/native/packaging-an-application/support-bundle-v1/">{{< baseurl >}}native/packaging-an-application/support-bundle-v1/</a>
+{{< /note >}}
+
 A support bundle is an archive that is available for the customer to download via the Support tab of the On-Prem Console or the [Replicated CLI](/api/replicatedctl/replicatedctl_support-bundle/).
 
 Contents of the support page can be customized by including markdown in the top-level of the YAML.
@@ -31,39 +35,12 @@ support:
 
 {{< linked_headline "Custom Files and Commands" >}}
 
-In addition to the [default support files](/docs/native/packaging-an-application/support-bundle/#default-support-files) included in the support bundle, additional files can be added via the `support` section of your yaml. Files from within the application’s containers can be included, as well as output of commands executed in the container. Support files and commands are supported by both the native and kubernetes schedulers. For more complex support commands it is possible to create a [config file](/docs/native/packaging-an-application/config-files) and execute that file from a support command. These files will be available within the _/scheduler_ directory of the support bundle.
-
-```yaml
-support:
-  files:
-    - filename: /var/log/nginx/access.log
-      source:
-        replicated:
-          component: Nginx
-          container: my-nginx
-        kubernetes:
-          selector:
-            run: my-nginx
-  commands:
-    - filename: access_last_1000.log
-      command: [tail, -n1000, /var/log/nginx/access.log]
-      source:
-        replicated:
-          component: Nginx
-          container: my-nginx
-        kubernetes:
-          selector:
-            run: my-nginx
-```
+Custom support bundle files and commands can be included by setting a default troubleshoot spec in [Replicated Console](https://console.replicated.com/troubleshoot/specs). The support bundle task definitions can be found [here](/api/support-bundle-yaml-specs/shared). Support specs will be retrieved when the bundle is generated for online installations and are included as part of the Replicated license file (`.rli`) for airgapped installations.
 
 {{< linked_headline "Excluding Logs From Support Bundles" >}}
 If a container's logs may contain sensitive information or are simply large and not useful for your debugging processes, you can exclude that container's logs from support bundles and disk persistance. To do this, [add the label](/docs/native/packaging-an-application/docker-options/#labels) `com.replicated.excludelogs=true` to the container in question.
 
 {{< linked_headline "Default Support Files" >}}
-
-{{< note title="Older Replicated Instances" >}}
-The content in this document is specific to the current default Support Bundle in Replicated. If you are looking for the list of files included in previous releases of Replicated, it is available at <a href="/docs/native/packaging-an-application/support-bundle-v1/">{{< baseurl >}}native/packaging-an-application/support-bundle-v1/</a>
-{{< /note >}}
 
 By default the Support Bundle will include the following files in the master folder:
 
