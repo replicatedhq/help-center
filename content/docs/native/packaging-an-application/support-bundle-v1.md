@@ -9,8 +9,8 @@ icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/support-bundle-v1/]
 ---
 
-{{< note title="New Replicated Instances" >}}
-The content in this document is specific to the legacy Support Bundle in Replicated. If you are looking for the documentation for the V2 Support Bundle, it is available at <a href="/docs/native/packaging-an-application/support-bundle/">{{< baseurl >}}native/packaging-an-application/support-bundle/</a>
+{{< note title="Current Replicated Instances" >}}
+The content in this document is specific to the original Support Bundle shipped with Replicated. If you are looking for the documentation for the V2 Support Bundle, it is available at <a href="/docs/native/packaging-an-application/support-bundle/">{{< baseurl >}}native/packaging-an-application/support-bundle/</a>
 {{< /note >}}
 
 A support bundle is an archive that is available for the customer to download via the Support tab of the On-Prem Console or the [Replicated CLI](/api/replicatedctl/replicatedctl_support-bundle/).
