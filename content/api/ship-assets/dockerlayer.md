@@ -2,7 +2,7 @@
 categories:
 - ship-assets
 date: 2018-01-17T23:51:55Z
-description: A `dockerlayer` asset will pull an image from registry.replicated.com or from a configured third party private registry and extract a single layer from the image in a `dest` directory
+description: A `dockerlayer` asset will pull an image from a public docker registry, registry.replicated.com, or a configured third party registry and produce a tar archive of the container image.
 index: docs
 title: dockerlayer
 weight: "100"
@@ -13,7 +13,7 @@ gradient: "purpleToPink"
 
 ## dockerlayer
 
-A `dockerlayer` asset will pull an image from registry.replicated.com or from a configured third party private registry and extract a single layer from the image in a `dest` directory
+A `dockerlayer` asset will pull an image from a public docker registry, registry.replicated.com, or a configured third party registry and produce a tar archive of the container image.
 
 
 ```yaml
@@ -40,13 +40,6 @@ assets:
 
 
 - `source` - The source for the image. Should be either `public`, `replicated`, or the name of a third-party private registry previously configured on [console.replicated.com](https://console.replicated.com)
-
-
-    
-### Optional Parameters
-
-
-- `mode` - The unix file permissions to be set on target unpack directory, e.g `777`
 
 
     
