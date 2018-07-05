@@ -41,7 +41,7 @@ assets:
         image: 'postgres:9.6'
         dest: images/postgres.tar
         source: public
-        mode: '600'
+        mode: 600
 ```
 
     
