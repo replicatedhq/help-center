@@ -12,9 +12,14 @@ index: "other"
 | [platform/app/:appId/delete](#platform-app-appid-delete) |
 | [platform/app/create](#platform-app-create) |
 | [platform/app/[:appId]/read](#platform-app-appid-read) |
+| [platform/app/[:appId]/airgap/create](#platform-app-appid-airgap-create) |
 | [platform/app/[:appId]/branding/update](#platform-app-appid-branding-update) |
 | [platform/app/[:appId]/branding/delete](#platform-app-appid-branding-delete) |
 | [platform/app/[:appId]/branding/read](#platform-app-appid-branding-read) |
+| [platform/app/[:appId]/integration/list](#platform-app-appid-integration-list) |
+| [platform/app/[:appId]/image/list](#platform-app-appid-image-list) |
+| [platform/app/[:appId]/image/key/delete](#platform-app-appid-image-key-delete) |
+| [platform/app/[:appId]/externalregistry/list](#platform-app-appid-registry-list) |
 | [platform/app/[:appId]/externalregistry/create](#platform-app-appid-externalregistry-create) |
 | [platform/app/[:appId]/externalregistry/[:registryName]/update](#platform-app-appid-externalregistry-registryname-update) |
 | [platform/app/[:appId]/externalregistry/[:registryName]/delete](#platform-app-appid-externalregistry-registryname-delete) |
@@ -39,6 +44,11 @@ index: "other"
 | [platform/app/[:appId]/release/[:sequence]/update](#platform-app-appid-release-sequence-update) |
 | [platform/app/[:appId]/release/[:sequence]/read](#platform-app-appid-release-sequence-read) |
 | [platform/app/[:appId]/release/[:sequence]/archive](#platform-app-appid-release-sequence-archive) |
+| [integration/catalog/list](#integration-catalog-list) |
+| [team/integration/list](#team-integration-list) |
+| [team/integration/create](#team-integration-create) |
+| [team/integration/[:integrationId]/delete](#team-integration-integrationid-delete) |
+| [team/integration/[:integrationId]/update](#team-integration-integrationid-update) |
 | [platform/team/member/[:memberId]/read](#platform-team-member-memberid-read) |
 | [platform/team/member/invite](#platform-team-member-invite) |
 | [platform/team/member/[:memberId]/delete](#platform-team-member-memberid-delete) |
@@ -65,6 +75,9 @@ When allowed, the holder will be allowed to create new applications.
 ### platform/app/[:appId]/read
 Grants the holder permission to view the application. Specifically, applications with read permission will be returned in the API call to [list applications](https://replicated-vendor-api.readme.io/v1.0/reference#listapps).
 
+### platform/app/[:appId]/airgap/create
+Grants the holder permission to create airgap builds.
+
 ### platform/app/[:appId]/branding/update
 Grants the holder permission to create or update custom branding for he specified application(s). This grants the permission across all channels in the application, regardless of the permission to the specific channel.
 
@@ -74,6 +87,18 @@ Grants the holder permission to remove custom branding from any channel in the s
 ### platform/app/[:appId]/branding/read
 
 Grants the holder the ability to view the custom CSS for the application(s) specified.
+
+### platform/app/[:appId]/integration/list
+Grants the holder the ability to list integrations for the specified application(s).
+
+### platform/app/[:appId]/image/list
+Grants the holder the ability to list images stored in Replicated registry for the specified application(s).
+
+### platform/app/[:appId]/image/key/delete
+Grants the holder the ability to Content Trust keys stored in Replicated registry for the specified application(s).
+
+### platform/app/[:appId]/externalregistry/list
+Grants the holder the ability to list external docker registry fo the specified application(s).
 
 ### platform/app/[:appId]/externalregistry/create
 
@@ -173,6 +198,26 @@ Grants the holder permission to archive release sequence `[:sequence]` in the sp
 ### platform/team/member/[:memberId]/read
 
 Grants the holder permission to view the team member(s) information, specified by ID.
+
+### integration/catalog/list
+
+Grants the holder permission to view the catalog events and triggers available for integrations.
+
+### team/integration/list
+
+Grants the holder permission to view team's integrations.
+
+### team/integration/create
+
+Grants the holder permission to create an integration.
+
+### team/integration/[:integrationId]/delete
+
+Grants the holder permission to delete specified integration(s).
+
+### team/integration/[:integrationId]/update
+
+Grants the holder permission to update specified integration(s).
 
 ### platform/team/member/invite
 
