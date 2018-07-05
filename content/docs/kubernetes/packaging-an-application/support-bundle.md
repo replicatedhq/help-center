@@ -33,6 +33,9 @@ support:
 Custom support bundle files and commands can be included by setting a default troubleshoot spec in [Replicated Console](https://console.replicated.com/troubleshoot/specs). The support bundle task definitions can be found [here](/api/support-bundle-yaml-specs/shared).
 
 
+{{< linked_headline "Excluding Logs From Support Bundles" >}}
+If a pod's logs may contain sensitive information or are simply large and not useful for your debugging processes, you can exclude that pod's logs from support bundles. To do this, add the label `com.replicated.excludelogs=true` to the pod in question.
+
 {{< linked_headline "Default Support Files" >}}
 
 By default the Support Bundle will include the following files:

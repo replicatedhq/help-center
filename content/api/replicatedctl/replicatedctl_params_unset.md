@@ -3,25 +3,36 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_params_unset
 categories:
 - replicatedctl
-date: 2018-02-20T00:45:55Z
-description: Unsets a runtime overridden param value
+date: 2018-06-22T16:37:46-07:00
+description: Unsets a runtime overridden Replicated daemon parameter value
+gradient: purpleToPink
 index: docs
 title: replicatedctl params unset
 weight: "551"
-gradient: "purpleToPink"
 ---
 
 ## replicatedctl params unset
 
-Unsets a runtime overridden param value
+Unsets a runtime overridden Replicated daemon parameter value
 
 ### Synopsis
 
-
-Unsets a runtime overridden param value
+Unsets a runtime overridden Replicated daemon parameter value
 
 ```
-replicatedctl params unset KEY
+replicatedctl params unset KEY [flags]
+```
+
+### Examples
+
+```
+replicatedctl params unset AppUpdateCheckSchedule
+```
+
+### Options
+
+```
+  -h, --help   help for unset
 ```
 
 ### Options inherited from parent commands
@@ -31,5 +42,6 @@ replicatedctl params unset KEY
 ```
 
 ### SEE ALSO
-* [replicatedctl params](/api/replicatedctl/replicatedctl_params/)	 - Manage params
+
+* [replicatedctl params](/api/replicatedctl/replicatedctl_params/)	 - Manage Replicated daemon parameters. Provides the ability to import, export, set and unset parameters.
 
