@@ -9,7 +9,7 @@ index: "other"
 
 ## Support Engineer
 
-The support engineer policy grants read access to releass, channels, and application data, but read-write access to customer and license details.
+The support engineer policy grants read access to release, channels, and application data, but read-write access to customer and license details.
 
 ```json
 {
