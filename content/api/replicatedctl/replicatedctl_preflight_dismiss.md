@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_preflight_dismiss
 categories:
 - replicatedctl
-date: 2018-02-20T00:45:55Z
+date: 2018-06-22T16:37:46-07:00
 description: Dismiss preflight check warnings
+gradient: purpleToPink
 index: docs
 title: replicatedctl preflight dismiss
 weight: "551"
-gradient: "purpleToPink"
 ---
 
 ## replicatedctl preflight dismiss
@@ -17,11 +17,10 @@ Dismiss preflight check warnings
 
 ### Synopsis
 
-
 Dismiss preflight check warnings
 
 ```
-replicatedctl preflight dismiss
+replicatedctl preflight dismiss [flags]
 ```
 
 ### Options
@@ -29,6 +28,7 @@ replicatedctl preflight dismiss
 ```
       --checksum string   Preflight checksum
   -f, --force             Force dismiss checks
+  -h, --help              help for dismiss
       --sequence string   App sequence (default "current")
 ```
 
@@ -39,5 +39,6 @@ replicatedctl preflight dismiss
 ```
 
 ### SEE ALSO
+
 * [replicatedctl preflight](/api/replicatedctl/replicatedctl_preflight/)	 - View or manage preflight checks
 

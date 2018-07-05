@@ -31,6 +31,8 @@ S3 configuration requires that the bucket exists and the supplied key has write 
 
 When backing up to an S3 bucket, users can optionally force the use of `aws:kms` encryption by setting the `AWS Server Side Encryption` parameter to `aws:kms`. To use an encryption key other than the bucket default when doing this, set `AWS Server Side Encryption Key ARN` to the desired key ARN.
 
+S3 compatible stores other than Amazon can be used by setting the `S3 Compatible Endpoint` parameter to the desired URL. To use Amazon S3, leave this parameter empty.
+
 ### SFTP
 
 SFTP configuration requires that the path on the remote server exists and the user specified in the configuration has read/write permissions on the folder.  When configuring a new server, the destination folder on the remote server should be empty.

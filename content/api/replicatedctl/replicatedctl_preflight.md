@@ -3,12 +3,12 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_preflight
 categories:
 - replicatedctl
-date: 2018-02-20T00:45:55Z
+date: 2018-06-22T16:37:46-07:00
 description: View or manage preflight checks
+gradient: purpleToPink
 index: docs
 title: replicatedctl preflight
 weight: "551"
-gradient: "purpleToPink"
 ---
 
 ## replicatedctl preflight
@@ -17,8 +17,13 @@ View or manage preflight checks
 
 ### Synopsis
 
-
 View or manage preflight checks
+
+### Options
+
+```
+  -h, --help   help for preflight
+```
 
 ### Options inherited from parent commands
 
@@ -27,6 +32,7 @@ View or manage preflight checks
 ```
 
 ### SEE ALSO
+
 * [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
 * [replicatedctl preflight dismiss](/api/replicatedctl/replicatedctl_preflight_dismiss/)	 - Dismiss preflight check warnings
 * [replicatedctl preflight run](/api/replicatedctl/replicatedctl_preflight_run/)	 - Run the preflight checks
