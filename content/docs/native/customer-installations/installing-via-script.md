@@ -106,7 +106,7 @@ service replicated-ui stop
 service replicated-operator stop
 docker stop replicated-premkit
 docker stop replicated-statsd
-docker rm -f replicated replicated-ui replicated-operator replicated-premkit replicated-statsd retraced-api retraced-processor retraced-cron retraced-nsqd
+docker rm -f replicated replicated-ui replicated-operator replicated-premkit replicated-statsd retraced-api retraced-processor retraced-cron retraced-nsqd retraced-postgres
 docker images | grep "quay\.io/replicated" | awk '{print $3}' | xargs sudo docker rmi -f
 docker images | grep "registry\.replicated\.com/library/retraced" | awk '{print $3}' | xargs sudo docker rmi -f
 apt-get remove -y replicated replicated-ui replicated-operator
@@ -122,7 +122,7 @@ service replicated-ui stop
 service replicated-operator stop
 docker stop replicated-premkit
 docker stop replicated-statsd
-docker rm -f replicated replicated-ui replicated-operator replicated-premkit replicated-statsd retraced-api retraced-processor retraced-cron retraced-nsqd
+docker rm -f replicated replicated-ui replicated-operator replicated-premkit replicated-statsd retraced-api retraced-processor retraced-cron retraced-nsqd retraced-postgres
 docker images | grep "quay\.io/replicated" | awk '{print $3}' | xargs sudo docker rmi -f
 docker images | grep "registry\.replicated\.com/library/retraced" | awk '{print $3}' | xargs sudo docker rmi -f
 yum remove -y replicated replicated-ui replicated-operator
