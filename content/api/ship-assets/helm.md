@@ -24,8 +24,7 @@ assets:
           repo: github.com/replicatedhq/superbigtool-k8s
           ref: 8fcaebe55af67fe6789fa678faaa76fa867fbc
           path: k8s-yamls/
-          dest: ./k8s/
-          private: true
+          source: private
         dest: charts/rendered/
 ```
 
