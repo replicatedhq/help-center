@@ -32,6 +32,13 @@ assets:
 
 Web asset types support the use of HTTP methods `GET` and `POST`, and all standard request fields. Web asset types are equipped with the following fields to support a wide variety of HTTP requests:
 
+| Field                                                            | Description                                                                                                                                     |
+| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `url`                                                            |                                                                                                                                                 |
+| `body`                                                           |                                                                                                                                                 |
+| `headers`                                                        |                                                                                                                                                 |
+| `method`                                                         |                                                                                                                                                 |
+
 The following example will utilize an `Authorization` header to `POST` some content `body` to the specified URL and ultimately create a `replicated.html` file on the installer's workstation containing the HTTP response of that `POST`:
 
 ```yaml
