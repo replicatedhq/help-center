@@ -20,7 +20,7 @@ The following example will create a `replicated.html` file on the installer's wo
 assets:
   v1:
     - web:
-        url: 'https://www.replicated.com'
+        url: https://www.replicated.com
         dest: ./installer/replicated.html
         method: GET
 ```
@@ -35,7 +35,7 @@ The following example utilizes an `Authorization` header to `POST` some content 
 assets:
   v1:
     - web:
-        url: 'https://www.replicated.com'
+        url: https://www.replicated.com
         dest: replicated.html
         method: POST
         body: Hello from Replicated!

@@ -20,7 +20,7 @@ A `web` asset allows to pull content from a private or public URL
 assets:
   v1:
     - web:
-        url: 'https://www.replicated.com'
+        url: https://www.replicated.com
         dest: ./installer/replicated.html
         method: GET
 ```
@@ -29,7 +29,7 @@ assets:
 assets:
   v1:
     - web:
-        url: 'https://www.replicated.com'
+        url: https://www.replicated.com
         dest: replicated.html
         method: POST
         body: Hello from Replicated!
