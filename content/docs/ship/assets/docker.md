@@ -21,11 +21,11 @@ The following example will create a `redis.tar` on the installer's workstation, 
 assets:
   v1:
     - docker:
-        dest: ./installer/images/redis.tar
+        dest: ./images/redis.tar
         image: redis:4.0.9
 
     - inline:
-        dest: ./installer/install.sh
+        dest: ./install.sh
         mode: 0755
         contents: |
           #!/bin/bash
@@ -60,12 +60,12 @@ The following example will download a private image from the Replicated Private 
 assets:
   v1:
     - docker:
-        dest: ./installer/images/worker.tar
+        dest: ./images/worker.tar
         image: registry.replicated.com/application/worker:1.0.1
         source: replicated
 
     - inline:
-        dest: ./installer/install.sh
+        dest: ./install.sh
         mode: 0755
         contents: |
           #!/bin/bash

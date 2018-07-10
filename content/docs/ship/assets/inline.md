@@ -21,37 +21,38 @@ An example of delivering a simple Kubernetes manifest as an `inline` asset in Sh
 assets:
   v1:
     - inline:
-        dest: ./installer/k8s/redis.yml
+        dest: ./k8s/redis.yml
         contents: |
-apiVersion: v1
-kind: Pod
-metadata:
-  labels:
-    name: redis
-    redis-sentinel: "true"
-    role: master
-  name: redis-master
-spec:
-  containers:
-    - name: master
-      image: redis:4.0.9
-      ports:
-        - containerPort: 6379
-      resources:
-        limits:
-          cpu: "0.1"
-          value: "true"
+          ---
+          apiVersion: v1
+          kind: Pod
+          metadata:
+            labels:
+              name: redis
+              redis-sentinel: "true"
+              role: master
+            name: redis-master
+          spec:
+            containers:
+              - name: master
+                image: redis:4.0.9
+                ports:
+                  - containerPort: 6379
+                resources:
+                  limits:
+                    cpu: "0.1"
+                    value: "true"
 ```
 
 {{< linked_headline "Application Config" >}}
 
 An example of delivering an applicastion config file as an `inline` asset (redis.conf) in Ship is:
 
-```text
+```yaml
 assets:
   v1:
     - inline:
-        dest: ./installer/conf/redis.conf
+        dest: ./conf/redis.conf
         contents: |
           slaveof redis-master 6379
           slave-serve-stale-data yes
@@ -65,7 +66,7 @@ An example of delivering a shell script as an `inline` asset in Ship is:
 assets:
   v1:
     - inline:
-        dest: ./installer/install.sh
+        dest: ./install.sh
         mode: 755
         contents: |
           #!/bin/bash
