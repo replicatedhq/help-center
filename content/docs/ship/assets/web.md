@@ -9,12 +9,11 @@ icon: "replicatedShip"
 gradient: "console"
 hideFromList: true
 ---
-
 {{< linked_headline "Web Asset Type" >}}
 
-Web asset types are useful to deliver raw HTML to a specified directory on the workstation. Given a URL, the `Web` asset type will pull the HTML content from the URL and place it in the specified directory.
+A `web` asset delivers HTML content from a private or public URL.
 
-{{< linked_headline "Delivering HTML content from a URL" >}}
+{{< linked_headline "Delivering HTML Content" >}}
 
 The following example will create a `replicated.html` file on the installer's workstation:
 
@@ -22,35 +21,48 @@ The following example will create a `replicated.html` file on the installer's wo
 assets:
   v1:
     - web:
-        url: https://www.replicated.com
+        url: 'https://www.replicated.com'
         dest: ./installer/replicated.html
         method: GET
-
 ```
 
 {{< linked_headline "Utilizing HTTP Methods and Headers" >}}
 
-Web asset types support the use of HTTP methods `GET` and `POST`, and all standard request fields. Web asset types are equipped with the following fields to support a wide variety of HTTP requests:
+Web asset types support multiple HTTP methods and all standard request fields to give you flexibility in pulling HTML content from a private or public URL.
 
-| Field                                                            | Description                                                                                                                                     |
-| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `url`                                                            |                                                                                                                                                 |
-| `body`                                                           |                                                                                                                                                 |
-| `headers`                                                        |                                                                                                                                                 |
-| `method`                                                         |                                                                                                                                                 |
-
-The following example will utilize an `Authorization` header to `POST` some content `body` to the specified URL and ultimately create a `replicated.html` file on the installer's workstation containing the HTTP response of that `POST`:
+The following example utilizes an `Authorization` header to `POST` some content `body`. A `replicated.html` file is created on the installer's workstation containing the response body:
 
 ```yaml
 assets:
   v1:
     - web:
-        url: https://www.replicated.com
-        dest: ./installer/replicated.html
+        url: 'https://www.replicated.com'
+        dest: replicated.html
         method: POST
-        body: |
-          Hello from Replicated!
+        body: Hello from Replicated!
         headers:
-           - Authorization: {{repl ConfigOption "authKey"}}
-
+          Authorization:
+            - '{{repl ConfigOption "authKey"}}'
 ```
+
+    
+### Required Parameters
+
+
+- `method` - The HTTP method, supports `GET` and `POST` methods
+
+
+- `url` - A public or private URL to pull content from
+
+
+    
+### Optional Parameters
+
+
+- `body` - Content to send with a `POST` request
+
+
+- `headers` - HTTP request headers to send with the request
+
+
+- `mode` - Unix file permissions to set on the asset
