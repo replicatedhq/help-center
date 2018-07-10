@@ -2,7 +2,7 @@
 categories:
 - ship-assets
 date: 2018-01-17T23:51:55Z
-description: A `web` asset allows to pull content from a private or public URL
+description: Deliver HTML content
 index: docs
 title: web
 weight: "100"
