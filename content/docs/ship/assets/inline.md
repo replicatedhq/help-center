@@ -3,7 +3,7 @@ date: "2018-05-02T01:19:20Z"
 title: "inline"
 description: "Description of the inline asset type"
 weight: "41003"
-categories: [ "Ship Assets" ]
+categories: [ "Ship Asset Types" ]
 index: ["docs/products", "docs"]
 icon: "replicatedShip"
 gradient: "console"
