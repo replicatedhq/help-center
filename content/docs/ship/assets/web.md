@@ -29,7 +29,7 @@ assets:
 
 Web asset types support multiple HTTP methods and all standard request fields to give you flexibility in pulling HTML content from a private or public URL.
 
-The following example utilizes an `Authorization` header to `POST` some content `body`. A `replicated.html` file is created on the installer's workstation containing the response body:
+The following example utilizes an `Authorization` header to `POST` some content body. A `replicated.html` file is created on the installer's workstation containing the response body:
 
 ```yaml
 assets:
