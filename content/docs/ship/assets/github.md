@@ -1,13 +1,12 @@
 ---
 date: "2018-05-02T01:19:20Z"
-title: "GitHub"
+title: "github"
 description: "Deliver assets from private or public GitHub repositories"
 weight: "41006"
-categories: [ "Ship Assets" ]
+categories: [ "Ship Asset Types" ]
 index: false
 icon: "replicatedShip"
 gradient: "console"
-hideFromList: true
 ---
 
 {{< linked_headline "GitHub Asset Type" >}}
@@ -20,8 +19,7 @@ GitHub assets can be used to pull content from private or public GitHub reposito
 
 {{< linked_headline "Delivering Assets from Private Repositories" >}}
 
-To deliver an asset from a private github repository, you'll need to install the [Replicated GitHub Application](https://github.com/apps/replicated) into your organization
-and give it access to the repositories you'd like to deliver.
+To deliver an asset from a private github repository, you'll need to install the [Replicated GitHub Application](https://github.com/apps/replicated) into your organization and give it access to any repositories you'd like to deliver.
 
 
 {{< linked_headline "Delivering a Single File" >}}
