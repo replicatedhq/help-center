@@ -1,13 +1,12 @@
 ---
 date: "2018-05-02T01:19:20Z"
 title: "Web"
-description: "Description of the web asset type"
+description: "Deliver HTML content"
 weight: "41005"
 categories: [ "Ship Assets" ]
-index: false
+index: ["docs/products", "docs"]
 icon: "replicatedShip"
 gradient: "console"
-hideFromList: true
 ---
 {{< linked_headline "Web Asset Type" >}}
 
@@ -49,7 +48,7 @@ assets:
 ### Required Parameters
 
 
-- `method` - The HTTP method, supports `GET` and `POST` methods
+- `method` - The HTTP method, supports `GET` and `POST`
 
 
 - `url` - A public or private URL to pull content from
