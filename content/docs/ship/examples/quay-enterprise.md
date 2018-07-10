@@ -26,22 +26,22 @@ assets:
   v1:
     - web:
         url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-enterprise-namespace.yml
-        dest: ./installer/k8s/quay-enterprise-namespace.yml
+        dest: ./k8s/quay-enterprise-namespace.yml
     - web:
         url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-enterprise-config-secret.yml
-        dest: ./installer/k8s/quay-enterprise-config-secret.yml
+        dest: ./k8s/quay-enterprise-config-secret.yml
     - web:
         url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-enterprise-redis.yml
-        dest: ./installer/k8s/quay-enterprise-redis.yml
+        dest: ./k8s/quay-enterprise-redis.yml
     - web:
         url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-enterprise-app-rc.yml
-        dest: ./installer/k8s/quay-enterprise-app-rc.yml
+        dest: ./k8s/quay-enterprise-app-rc.yml
     - web:
         url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-enterprise-service-nodeport.yml
-        dest: ./installer/k8s/quay-enterprise-service-nodeport.yml
+        dest: ./k8s/quay-enterprise-service-nodeport.yml
     - web:
         url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-enterprise-service-loadbalancer.yml
-        dest: ./installer/k8s/quay-enterprise-service-loadbalancer.yml
+        dest: ./k8s/quay-enterprise-service-loadbalancer.yml
 
 ```
 
@@ -53,7 +53,7 @@ The installation instructions also require that you download a Pull Secret from 
 assets:
   v1:
     - inline:
-        dest: ./installer/secrets/config.json
+        dest: ./secrets/config.json
         contents: |
           {{repl ConfigOption "pull_secret"}}
 config:
@@ -77,22 +77,22 @@ assets:
   v1:
     - web:
         url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-servicetoken-role-k8s1-6.yaml
-        dest: ./installer/k8s/1.6/quay-servicetoken-role-k8s1-6.yaml
+        dest: ./k8s/1.6/quay-servicetoken-role-k8s1-6.yaml
     - web:
         url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-servicetoken-role-binding-k8s1-6.yaml
-        dest: ./installer/k8s/1.6/quay-servicetoken-role-binding-k8s1-6.yaml
+        dest: ./k8s/1.6/quay-servicetoken-role-binding-k8s1-6.yaml
     - web:
         url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-servicetoken-role.yaml
-        dest: ./installer/k8s/1.5/quay-servicetoken-role.yaml
+        dest: ./k8s/1.5/quay-servicetoken-role.yaml
     - web:
         url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-servicetoken-role-binding.yaml
-        dest: ./installer/k8s/1.5/quay-servicetoken-role-binding.yaml
+        dest: ./k8s/1.5/quay-servicetoken-role-binding.yaml
     - web:
         url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-servicetoken-role.yaml
-        dest: ./installer/k8s/1.4/quay-servicetoken-role.yaml
+        dest: ./k8s/1.4/quay-servicetoken-role.yaml
     - web:
         url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-servicetoken-role-binding-k8s1-4.yaml
-        dest: ./installer/k8s/1.4/quay-servicetoken-role-binding-k8s1-4.yaml
+        dest: ./k8s/1.4/quay-servicetoken-role-binding-k8s1-4.yaml
 ```
 
 ### Ingress

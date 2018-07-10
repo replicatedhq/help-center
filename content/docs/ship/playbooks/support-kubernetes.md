@@ -1,7 +1,7 @@
 ---
 date: "2018-05-02T01:19:20Z"
 title: "Troubleshoot A Kubernetes Application"
-description: "Including Replicated's flexible Troubleshoot tooling to support your end customers "
+description: "Including Replicated's flexible Troubleshoot tooling to support your end customers"
 weight: "44004"
 categories: [ "Ship Playbooks" ]
 index: ["docs/products", "docs"]
@@ -33,7 +33,7 @@ In this example we include two assets:
 assets:
   v1:
     - inline:
-        dest: ./installer/k8s/troubleshoot/support-deployment.yml
+        dest: ./k8s/troubleshoot/support-deployment.yml
         contents: |
           ---
           apiVersion: extensions/v1beta1
@@ -58,7 +58,7 @@ assets:
                       - /bin/sleep
                       - infinity
     - inline:
-       dest: ./installer/scripts/troubleshoot/support-bundle.sh
+       dest: ./scripts/troubleshoot/support-bundle.sh
        contents: |
          #!/bin/sh
          OUTPUT_PATH=supportbundle.tar.gz
