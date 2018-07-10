@@ -2,36 +2,29 @@
 categories:
 - support-bundle-yaml-specs
 date: 2018-01-17T23:51:55Z
-description: Collect information about the system's uptime
+description: Get the kubernetes version
 index: docs
-title: os.uptime
+title: kubernetes.version
 weight: "100"
 gradient: "purpleToPink"
 ---
 
-## os.uptime
+## kubernetes.version
 
-Collect information about the system's uptime
+Get the kubernetes version
 
 
 ```yaml
 specs:
-  - os.uptime:
-      output_dir: /system/uptime
+  - kubernetes.version:
+      output_dir: /kubernetes/
 ```
-
-
-### Optional Parameters
-
-
-- `template` - Template for the human-readable output
-
 
 
 ### Outputs
 
     
-- `contents` - The contents of the uptime file
+- `server_version.json` - A json file containing the version information of the Kubernetes cluster
 
 
 <br>
