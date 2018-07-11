@@ -2,7 +2,7 @@
 categories:
 - ship-assets
 date: 2018-01-17T23:51:55Z
-description: Deliver HTML content
+description: Deliver web content accessible with a private or public URL
 index: docs
 title: web
 weight: "100"
@@ -13,30 +13,7 @@ gradient: "purpleToPink"
 
 ## web
 
-A `web` asset allows to pull content from a private or public URL
-
-
-```yaml
-assets:
-  v1:
-    - web:
-        url: https://www.replicated.com
-        dest: ./installer/replicated.html
-        method: GET
-```
-
-```yaml
-assets:
-  v1:
-    - web:
-        url: https://www.replicated.com
-        dest: replicated.html
-        method: POST
-        body: Hello from Replicated!
-        headers:
-          Authorization:
-            - '{{repl ConfigOption "authKey"}}'
-```
+A `web` asset delivers web content from a private or public URL
 
     
 ### Required Parameters
@@ -61,5 +38,12 @@ assets:
 - `mode` - Unix file permissions to set on the asset
 
 
-    
-    
+```yaml
+assets:
+  v1:
+    - web:
+        url: http://www.replicated.com
+        dest: ./replicated.html
+        method: GET
+```
+ 

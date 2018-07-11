@@ -1,7 +1,7 @@
 ---
 date: "2018-05-02T01:19:20Z"
 title: "Web"
-description: "Deliver HTML content"
+description: "Deliver web content accessible with a private or public URL"
 weight: "41005"
 categories: [ "Ship Assets" ]
 index: ["docs/products", "docs"]
