@@ -40,8 +40,9 @@ The install script can take flags to help your customers with specialized enterp
 | bypass-storagedriver-warnings | Bypass the storagedriver warning                                                                   |
 | bootstrap-token               | Authentication token used by kubernetes when adding additional nodes                               |
 | bootstrap-token-ttl           | TTL of the `bootstrap-token`                                                                       |
-| disable-contour               | If present, disables the deployment of the Contour ingress controller                               |
+| disable-contour               | If present, disables the deployment of the Contour ingress controller                              |
 | encrypt-network               | Disable network encryption with `encrypt-network=0`                                                |
+| hard-fail-on-loopback         | If present, aborts the installation if devicemapper on loopback mode is detected                   |
 | http-proxy                    | If present, then use proxy                                                                         |
 | ip-alloc-range                | Customize the range of IPs assigned to pods                                                        |
 | service-cidr                  | Customize the range of virtual IPs assigned to services                                            |
