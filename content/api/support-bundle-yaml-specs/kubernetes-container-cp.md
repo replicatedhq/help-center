@@ -41,9 +41,7 @@ specs:
       output_dir: /kubernetes/deployment-pod-logs
       pod_list_options:
         labelSelector: run=api
-      namespace: default
       src_path: /logs/
-      timeout_seconds: 30
 ```
 
 
@@ -60,7 +58,7 @@ specs:
 - `container` - The Kubernetes container. If omitted, files will be copied from all containers in matched pods
 
 
-- `namespace` - The Kubernetes namespace
+- `namespace` - The Kubernetes namespace. If no namespace is provided, results from all namespaces are included
 
 
 - `pod` - The Kubernetes pod
@@ -73,7 +71,11 @@ specs:
 ### Outputs
 
     
+- `{{.Namespace}}/{{.Pod}}/{{.Container}}/` - A directory holding files copied from the pod and containers specified. Each pod and container will have a directory. Used when neither a pod name or a namespace is provided.
+
 - `{{.Pod}}/{{.Container}}/` - A directory holding files copied from the pod and containers specified. Each pod and container will have a directory. Used when a pod name is not provided.
+
+- `{{.Namespace}}/{{.Container}}/` - A directory holding files copied from the pod and containers specified. Each container will have a directory. Used when a pod name is provided, but a namespace is not.
 
 - `{{.Container}}/` - A directory holding files copied from the pod and containers specified. Each container will have a directory. Used when a pod name is provided.
 
