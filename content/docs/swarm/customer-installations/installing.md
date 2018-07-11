@@ -41,6 +41,7 @@ The install script can take flags to help your customers with specialized enterp
 | daemon-token                  | Authentication token used by operators for automating a cluster installation                       |
 | docker-version                | Install a specific version of docker                                                               |
 | exclude-subnet                | Prevent docker from creating a network in a subnet. Can be specified multiple times.               |
+| hard-fail-on-loopback         | If present, aborts the installation if devicemapper on loopback mode is detected                   |
 | http-proxy                    | If present, then use proxy                                                                         |
 | log-level                     | If present, this will be the log level of the Replicated daemon (debug, info, or error).           |
 | no-docker                     | Skip docker installation                                                                           |

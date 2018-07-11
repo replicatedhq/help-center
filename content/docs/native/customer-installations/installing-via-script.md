@@ -50,6 +50,7 @@ The install script takes optional flags to configure Replicated for your environ
 |ui-bind-port <PORT_NUMBER>|Change the default UI port binding from port 8800|
 |docker-version <VERSION>|Install with a specific version of Docker|
 |no-docker|Skip the docker installation|
+| hard-fail-on-loopback|If present, aborts the installation if devicemapper on loopback mode is detected|
 |bypass-storagedriver-warnings|For automation bypasses the warning for devicemapper with loopback|
 |log-level|Set the log level for Replicated. Can be `error`, `warn`, `info` or `debug`|
 |no-ce-on-ee|Disable installation of Docker CE onto platforms it does not support - RHEL, SLES and Oracle Linux|
