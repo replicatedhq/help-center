@@ -40,7 +40,7 @@ specs:
 ### Optional Parameters
 
 
-- `namespace` - The Kubernetes namespace
+- `namespace` - The Kubernetes namespace. If no namespace is provided, results from all namespaces are included
 
 
 - `resource_list_options` - An instance of metav1.ListOptions

@@ -48,7 +48,7 @@ specs:
 - `list_options` - The Kubernetes pod query options (used when querying for a label selector)
 
 
-- `namespace` - The Kubernetes namespace
+- `namespace` - The Kubernetes namespace. If no namespace is provided, results from all namespaces are included
 
 
 - `pod` - The Kubernetes pod
@@ -61,6 +61,8 @@ specs:
 ### Outputs
 
     
+- `{{.Namespace}}/{{.Name}}.log` - Logs pulled from Kubernetes pod. Kubernetes pulls logs from stdout/stderr into one output file. If a label selector is provided, it will create multiple log files following the same format. Used when a namespace is not provided.
+
 - `{{.Name}}.log` - Logs pulled from Kubernetes pod. Kubernetes pulls logs from stdout/stderr into one output file. If a label selector is provided, it will create multiple log files following the same format.
 
 
