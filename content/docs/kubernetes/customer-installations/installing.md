@@ -49,6 +49,7 @@ The install script can take flags to help your customers with specialized enterp
 | log-level                     | If present, this will be the log level of the Replicated daemon (debug, info, or error).           |
 | no-docker                     | Skip docker installation                                                                           |
 | no-proxy                      | If present, do not use a proxy                                                                     |
+| no-clear                      | If present, the terminal will not be cleared after the completion of the installation              |
 | public-address                | The public IP address                                                                              |
 | private-address               | The private IP address                                                                             |
 | release-sequence              | The release of your app to install                                                                 |
