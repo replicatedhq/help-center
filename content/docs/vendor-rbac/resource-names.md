@@ -61,7 +61,6 @@ index: "other"
 | [team/policy/update](#team-policy-update) |
 | [team/policy/delete](#team-policy-delete) |
 | [team/policy/create](#team-policy-create) |
-| [registry/auth](#registry-auth) |
 | [registry/namespace/:namespace/pull](#registry-namespace-namespace-pull) |
 | [registry/namespace/:namespace/push](#registry-namespace-namespace-push) |
 
@@ -262,10 +261,6 @@ Grants the holder permission to delete RBAC policies for the team.
 ### team/policy/create
 
 Grants the holder permission to create RBAC policies for the team.
-
-### registry/auth
-
-Grants the holder permission to authenticate with Replicated image registry.
 
 ### registry/namespace/:namespace/pull
 
