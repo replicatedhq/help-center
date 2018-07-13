@@ -39,11 +39,17 @@ Copy that *.ngrok.io* URL, you'll need it when you install Replicated on the dev
 
 ### 3. Install Replicated with Studio configuration on the dev server
 
-Finally, use our simple installation script (on a Linux server in your IaaS provider of choice, or in a local dev environment in Vagrant/VirtualBox) to install Replicated with Swarm. You'll be prompted for the ngrok hostname provided earlier during setup.
+Finally, use our simple installation script (on a Linux server in your IaaS provider of choice, or in a local dev environment in Vagrant/VirtualBox) to install Replicated with Kubernetes. You'll be prompted for the ngrok hostname provided earlier during setup.
 
 ```bash
 curl -sSL https://get.replicated.com/studio/k8s | sudo bash
 ```
+
+#### Alternative: Use an existing cluster
+
+If you already have [Replicated installed on an existing cluster](https://help.replicated.com/docs/kubernetes/customer-installations/existing-cluster/), instead of running the `https://get.replicated.com/studio/k8s` script, you can edit the `replicated` deployment and add an environment variable.
+The name of the environment variable should be `MARKET_BASE_URL` and the value should be your ngrok URL from step 2.
+
 
 {{< linked_headline "Iterate on your application YAML" >}}
 
