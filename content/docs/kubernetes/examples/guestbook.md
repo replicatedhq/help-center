@@ -14,11 +14,10 @@ icon: "replicatedKubernetes"
 A very simple application that runs with Replicated and Kubernetes.
 
 ```yaml
-
 ---
 # kind: replicated
 
-replicated_api_version: 2.9.2
+replicated_api_version: 2.23.0
 name: "Kubernetes Guestbook Example"
 
 #
@@ -32,7 +31,7 @@ properties:
 # https://help.replicated.com/docs/kb/supporting-your-customers/install-known-versions/
 #
 host_requirements:
-  replicated_version: ">=2.9.2"
+  replicated_version: ">=2.23.0"
 
 #
 # Settings screen
@@ -51,24 +50,24 @@ config:
       display_name: Check DNS
       command: resolve_host
 
-#
-# Images
-#
 images:
-- name: k8s.gcr.io/redis
-  source: public
+# Image pushed to registry.replicated.com/k8shelpexample/redis.
+# Only needs to be specified here for inclusion in airgap installs.
+- name: redis
+  source: replicated
   tag: e2e
-- name: gcr.io/google_samples/gb-redisslave
-  source: public
-  tag: v1
+
+# External image in private docker hub registry index.docker.io/replicated/examples.
+# Configured in vendor.replicated.com as "dockerhub" with endpoint "index.docker.io".
+# Needs to be specified here for both online and airgap installs.
+- name: replicated/examples
+  source: dockerhub
+  tag: redisreplica-v1
+
+# Public image, only needs to be specified here for inclusion in airgap installs.
 - name: gcr.io/google-samples/gb-frontend
   source: public
   tag: v4
-
-#
-# Documentation for additional features
-# https://help.replicated.com/categories/packaging-an-application/
-#
 
 ---
 # kind: scheduler-kubernetes
@@ -92,12 +91,17 @@ spec:
 ---
 # kind: scheduler-kubernetes
 
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: redis-master
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+      role: master
+      tier: backend
   template:
     metadata:
       labels:
@@ -107,7 +111,7 @@ spec:
     spec:
       containers:
       - name: master
-        image: k8s.gcr.io/redis:e2e  # or just image: redis
+        image: registry.replicated.com/k8shelpexample/redis:e2e
         resources:
           requests:
             cpu: 100m
@@ -120,37 +124,42 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: redis-slave
+  name: redis-replica
   labels:
     app: redis
     tier: backend
-    role: slave
+    role: replica
 spec:
   ports:
   - port: 6379
   selector:
     app: redis
     tier: backend
-    role: slave
+    role: replica
 ---
 # kind: scheduler-kubernetes
 
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: redis-slave
+  name: redis-replica
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      app: redis
+      role: replica
+      tier: backend
   template:
     metadata:
       labels:
         app: redis
-        role: slave
+        role: replica
         tier: backend
     spec:
       containers:
-      - name: slave
-        image: gcr.io/google_samples/gb-redisslave:v1
+      - name: replica
+        image: index.docker.io/replicated/examples:redisreplica-v1
         resources:
           requests:
             cpu: 100m
@@ -158,11 +167,6 @@ spec:
         env:
         - name: GET_HOSTS_FROM
           value: dns
-          # If your cluster config does not include a dns service, then to
-          # instead access an environment variable to find the master
-          # service's host, comment out the 'value: dns' line above, and
-          # uncomment the line below:
-          # value: env
         ports:
         - containerPort: 6379
 ---
@@ -176,9 +180,6 @@ metadata:
     app: guestbook
     tier: frontend
 spec:
-  # if your cluster supports it, uncomment the following to automatically create
-  # an external load-balanced IP for the frontend service.
-  # type: LoadBalancer
   ports:
   - port: 80
   selector:
@@ -187,12 +188,16 @@ spec:
 ---
 # kind: scheduler-kubernetes
 
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: guestbook
+      tier: frontend
   template:
     metadata:
       labels:
@@ -209,12 +214,6 @@ spec:
         env:
         - name: GET_HOSTS_FROM
           value: dns
-          # If your cluster config does not include a dns service, then to
-          # instead access environment variables to find service host
-          # info, comment out the 'value: dns' line above, and uncomment the
-          # line below:
-          # value: env
         ports:
         - containerPort: 80
-
 ```
