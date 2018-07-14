@@ -31,7 +31,7 @@ Next you will need to log into the Replicated private registry with your account
 
 ```shell
 $ sudo docker login registry.replicated.com
-Username: my@mycompany.com
+Username: me@mycompany.com
 Password: <your password>
 Login Succeeded
 ```
@@ -55,19 +55,20 @@ Pushing tag for rev [8e471642d573] on {https://registry.replicated.com/v1/reposi
 For additional information on building, tagging and pushing docker images, please refer to the
 [Docker CLI Documentation](https://docs.docker.com/engine/reference/commandline/cli/).
 
+
 {{< linked_headline "Using External Registries" >}}
 
 Replicated supports pulling public, unauthenticated images from any Docker registry that supports the standard [Docker Registry HTTP API](https://docs.docker.com/registry/spec/api/).
 
 Additionally, Replicated supports private images hosted in other registries including Docker Hub, Quay.io and more. Currently, Replicated does not support private images in Amazon Elastic Container Registry because of the short-lived auth scheme in use.
 
-To use private images from an external registry, you need to add the registry via the Vendor website. The guide for [integrating a third party registry](/docs/kb/developer-resources/third-party-registries) explains this in further detail.
+To use private images from an external registry, you need to add the registry via the Vendor website. The guide for [integrating a third party registry](https://help.replicated.com/community/t/using-third-party-registries/45/2) explains this in further detail.
 
-{{< linked_headline "Referencing Images from the Replicated Registry" >}}
+{{< linked_headline "Referencing Images from the Replicated Registry and Private Registries" >}}
 
-Images stored in the Replicated private registry can be accessed by adding a static `imagePullSecrets` to any container definition that references a private image. Replicated will automatically create a secret named `replicatedregistrykey` and deploy it with your application. Referencing this secret will make your private images available on the target cluster.
+Images stored in the Replicated private registry or an external private registry can be accessed by adding a static `imagePullSecrets` to any container definition that references the image. Replicated will automatically create a secret named `replicatedregistrykey` and deploy it into your application namespace. Note that if you specify namespaces in your Kubernetes spec, the resource will not be deployed to the application namespace and the secret required to pull private images will not be available.
 
-Continuing the example above, if the application is using the image registry.replicated.com/myapp/worker:1.0.1, a minimal spec could be:
+Continuing the example above, if the application is using the image `registry.replicated.com/myapp/worker:1.0.1`, a minimal spec using an image in the Replicated registry could be:
 
 ```yaml
 spec:
@@ -75,8 +76,32 @@ spec:
   - name: worker
      image: registry.replicated.com/myapp/worker:1.0.1
   imagePullSecrets:
-    - name: replicatedregistrykey
+  - name: replicatedregistrykey
 ```
+
+Referencing an external private image requires an extra step of specifying the image and its source in the `images` section of your Replicated yaml.
+If you have a private image such as `quay.io/namespace/imagename:2.0.0` and you have configured your `quay.io/namespace` registry on the Vendor website as `mythirdpartyprivateregistry`, then you could specify the image in your Replicated yaml as:
+
+```yaml
+images:
+- source: mythirdpartyprivateregistry
+  name: namespace/imagename
+  tag: 2.0.0
+```
+
+You could then use the image in your Kubernetes specs:
+
+```yaml
+spec:
+  containers:
+  - name: worker
+    image: quay.io/namespace/imagename:2.0.0
+  imagePullSecrets:
+  - name: replicatedregistrykey
+```
+
+Replicated would rewrite this spec to pull the image from registry.replicated.com, which would proxy the image from `quay.io/namespace`. Credentials for `quay.io/namespace` are never sent to customer installations.
+When configuring Docker Hub as your external private registry, always specify the endpoint as `index.docker.io`. See the [guestbook](/docs/kubernetes/examples/guestbook/) app with examples of private, external, and public images.
 
 {{< linked_headline "Bundling Airgap Images" >}}
 
