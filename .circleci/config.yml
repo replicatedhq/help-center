@@ -190,7 +190,7 @@ workflows:
       - build_production:
           filters:
             branches:
-              only: release
+              only: master
       - deploy_staging:
           requires:
             - build_staging
@@ -202,7 +202,7 @@ workflows:
             - build_production
           filters:
             branches:
-              only: release
+              only: master
       - build_staging_index:
           requires:
             - deploy_staging
@@ -214,4 +214,4 @@ workflows:
             - deploy_production
           filters:
             branches:
-              only: release
+              only: master
