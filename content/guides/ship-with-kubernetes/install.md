@@ -30,7 +30,11 @@ After creating the customer, click the "Download license" link in the upper righ
 
 {{< linked_headline "Create Test Server and Install Replicated" >}}
 
-To test this installation, we need a server. I'm going to create a test EC2 instance in AWS to try this out, but you can use any cloud provider or Vagrant box you'd like. For this guide, let's create an Ubuntu 16.04 server with at least 4 GB of RAM and 2 cores to run Kubernetes.
+To test this installation, we need a server. I'm going to create a test EC2 instance in AWS to try this out, but you can use any cloud provider or Vagrant box you'd like. For this guide, let's create a server with
+
+- Ubuntu 16.04
+- at least 4 GB of RAM
+- 2 CPU cores
 
 Next, ssh into the server we just created, and run the install script:
 
