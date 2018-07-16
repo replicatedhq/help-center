@@ -16,7 +16,7 @@ Assets are the core object that enables you to describe applications managed by 
 - Scripts for installing and upgrading your application to a cloud server
 - Private Docker images or `.tar.gz` archives
 - Container orchestration manifests for Kubernetes or Docker Compose
-- Modules for infrastructure automation tools like Chef, Ansible, Salt, or Puppet
+- Modules for infrastructure automation tools like Chef, Ansible, Salt, or Terraform
 - Any web content accessible with a private or public URL
 
 Documented here are a number of methods Ship provides to facilitating distributing assets to your on-prem customers.
