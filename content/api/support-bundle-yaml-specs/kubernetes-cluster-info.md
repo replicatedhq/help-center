@@ -2,36 +2,29 @@
 categories:
 - support-bundle-yaml-specs
 date: 2018-01-17T23:51:55Z
-description: Collect information about the system's uptime
+description: Get the Kubernetes cluster info
 index: docs
-title: os.uptime
+title: kubernetes.cluster-info
 weight: "100"
 gradient: "purpleToPink"
 ---
 
-## os.uptime
+## kubernetes.cluster-info
 
-Collect information about the system's uptime
+Get the Kubernetes cluster info
 
 
 ```yaml
 specs:
-  - os.uptime:
-      output_dir: /system/uptime
+  - kubernetes.cluster-info:
+      output_dir: /kubernetes/
 ```
-
-
-### Optional Parameters
-
-
-- `template` - Template for the human-readable output
-
 
 
 ### Outputs
 
     
-- `contents` - The contents of the uptime file
+- `cluster_info.json` - A json file holding the Kubernetes cluster info
 
 
 <br>
