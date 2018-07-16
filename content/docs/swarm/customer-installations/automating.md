@@ -1,12 +1,12 @@
 ---
-date: "2016-07-03T04:02:20Z"
+date: "2018-07-17T00:00:00Z"
 title: "Automated Installations"
 description: "How to automate installation of Replicated and an application"
-weight: "307"
+weight: "707"
 categories: [ "Managing Customer Installation" ]
-index: ["docs/native", "docs"]
-icon: "replicatedCircle"
-aliases: [/docs/kb/developer-resources/automate-install/,/guides/automate-your-workflow/,/tags/automation/]
+index: ["docs/swarm", "docs"]
+icon: "replicatedDockerSwarm"
+aliases: []
 ---
 
 Replicated has support for automated installation and configuration. This feature is built for bootstrapping new installations and not for managing existing installations.
@@ -17,8 +17,8 @@ values during initial installation.
 ## Configure Replicated Automatically
 
 During installation, Replicated will create a config file in `/etc/replicated.conf`. If this file
-exists, the installer will not overwrite it. To configure Replicated, create this file using any
-or all of the following options:
+exists, the installer will not overwrite it. To configure Replicated, create this file before installation, 
+using any or all of the following options:
 
 ```json
 {
