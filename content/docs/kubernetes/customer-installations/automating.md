@@ -1,12 +1,13 @@
 ---
-date: "2018-05-23T04:02:20Z"
-title: "Automating Installations"
-description: "How to automate installation of Replicated and an application."
-weight: "2709"
-categories: [ "Manage Customer Installations" ]
+date: "2018-07-17T00:00:00Z"
+title: "Automated Installations"
+description: "How to automate installation of Replicated and an application"
+weight: "2708"
+categories: [ "Managing Customer Installation" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
+aliases: []
 ---
 
 Replicated has support for automated installation and configuration. This feature is built for bootstrapping new installations and not for managing existing installations.
@@ -17,8 +18,8 @@ values during initial installation.
 ## Configure Replicated Automatically
 
 During installation, Replicated will create a config file in `/etc/replicated.conf`. If this file
-exists, the installer will not overwrite it. To configure Replicated, create this file using any
-or all of the following options:
+exists, the installer will not overwrite it. To configure Replicated, create this file before installation, 
+using any or all of the following options:
 
 ```json
 {
@@ -45,6 +46,7 @@ These settings are explained in the following table:
 | BypassPreflightChecks	 | Boolean `true` or `false` | Allows application to start without preflight checks |
 | DaemonAuthenticationType | `anonymous` or `password` | Replicated supports anonymous and password protected access. |
 | DaemonAuthenticationPassword | Any `string` | If DaemonAuthenticationType is set to `password` this value is required to access the Replicated console. |
+| DaemonToken | Any `string` | Authentication token used by operators for automating a cluster installation |
 | ImportSettingsFrom | A file location as a `string` | If your application has any required config settings, you can supply custom values here. Replicated will read these and set them as if the user manually configured it. (see below) |
 | LicenseFileLocation | A file location as a `string` | This should be set to the location of an installable .rli license file. Note that you should not enable activation on this license. |
 | LicenseBootstrapAirgapPackagePath | A file location as a `string` | This should be set to the location of the airgap bundle path. When set, the automated install will proceed as an [airgapped installation](/docs/distributing-an-application/airgapped-installations/). Note that `LicenseFileLocation` must also be set. |
@@ -81,7 +83,7 @@ config:
   - name: a_boolean
     title: Yea or Nay
     type: bool
-  - name: many_a_files
+  - name: many_files
     title: Pick many files.
     multiple: true
 ```
@@ -103,7 +105,7 @@ You could then create the `settings.conf` in this format:
  "a_boolean": {
    "value": "true"
  },
- "many_a_files": {
+ "many_files": {
    "multi_value": [
      "/some/fake/file1",
      "/some/fake/file2"
