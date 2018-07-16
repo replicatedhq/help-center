@@ -14,3 +14,4 @@ gradient: "purpleToPink"
 ## Ship Assets
 
 This is the reference documenation for Ship assets. To get started with Ship, head on over to [Shipping a Helm Application](/guides/helm-application/)
+
