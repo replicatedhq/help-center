@@ -2,7 +2,7 @@
 categories:
 - ship-assets
 date: 2018-01-17T23:51:55Z
-description: Deliver web content accessible with a private or public URL
+description: Deliver any web content
 index: docs
 title: web
 weight: "100"
@@ -13,7 +13,7 @@ gradient: "purpleToPink"
 
 ## web
 
-A `web` asset pulls any web content from a private or public URL
+Web asset types pull any web content from a private or public URL
 
 ```yaml
 assets:
