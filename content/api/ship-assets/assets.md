@@ -12,3 +12,5 @@ gradient: "purpleToPink"
 [Assets](/api/ship-assets/assets) | [Config](/api/ship-config/config) | [Lifecycle](/api/ship-lifecycle/lifecycle) 
 
 ## Ship Assets
+
+This is the reference documenation for Ship assets. To get started with Ship, head on over to [Shipping a Helm Application](/guides/helm-application/)
