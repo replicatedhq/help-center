@@ -10,58 +10,43 @@ gradient: "console"
 ---
 {{< linked_headline "Web Asset Type" >}}
 
-A `web` asset delivers HTML content from a private or public URL.
+Web asset types are useful to deliver any web content from a private or public URL. They are ideal for pulling data from private data stores to be used in a Ship application.
 
 {{< linked_headline "Delivering HTML Content" >}}
 
-The following example will create a `replicated.html` file on the installer's workstation:
+The following example will pull content from a public Amazon S3 Bucket and place the contents of the bucket at `./my-bucket-contents` on the installer's workstation:
 
 ```yaml
 assets:
   v1:
     - web:
-        url: https://www.replicated.com
-        dest: ./installer/replicated.html
+        url: https://my_bucket.s3.amazonaws.com/path-to-file
+        dest: ./my-bucket-contents
         method: GET
 ```
 
+
 {{< linked_headline "Utilizing HTTP Methods and Headers" >}}
 
-Web asset types support multiple HTTP methods and all standard request fields to give you flexibility in pulling HTML content from a private or public URL.
+While pulling the contents of an Amazon S3 Bucket is a great way to deliver content to be used in Ship, web asset types provide the functionality to `POST` content to any private or public URL, such as a private Amazon S3 Bucket.
 
-The following example utilizes an `Authorization` header to `POST` some content body. A `replicated.html` file is created on the installer's workstation containing the response body:
+The following example utilizes multiple headers to `POST` some Ship installation data to a private Amazon S3 Bucket:
 
 ```yaml
 assets:
   v1:
     - web:
-        url: https://www.replicated.com
-        dest: replicated.html
+        url: https://my_bucket.s3.amazonaws.com/path-to-file
+        dest: ./installation-log
         method: POST
-        body: Hello from Replicated!
+        body: |
+          Installation ID: 7623f763ghbds5c
+          Installation Date: Mon, 16 Jul  2018 12:00:00 GMT 
         headers:
           Authorization:
-            - '{{repl ConfigOption "authKey"}}'
+            - '{{repl ConfigOption "authString"}}'
+          Content-Type:
+            - text/plain
+          Date:
+            - Mon, 16 Jul  2018 12:00:00 GMT
 ```
-
-    
-### Required Parameters
-
-
-- `method` - The HTTP method, supports `GET` and `POST`
-
-
-- `url` - A public or private URL to pull content from
-
-
-    
-### Optional Parameters
-
-
-- `body` - Content to send with a `POST` request
-
-
-- `headers` - HTTP request headers to send with the request
-
-
-- `mode` - Unix file permissions to set on the asset
