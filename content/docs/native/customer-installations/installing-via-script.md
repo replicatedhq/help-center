@@ -1,6 +1,6 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Installing Replicated with the Easy Install Script"
+title: "Installing Replicated with an HTTP Proxy"
 description: "Instructions for installing Replicated via the easy install script."
 keywords: "installing"
 weight: "304"
@@ -43,6 +43,7 @@ The install script takes optional flags to configure Replicated for your environ
 |----|-----|
 |http-proxy <PROXY_ADDRESS>|Sets the HTTP proxy for Docker and Replicated|
 |no-proxy|Skip the proxy prompt|
+|additional-no-proxy|Address that can be reached without the HTTP proxy|
 |private-address <IP>|Set the nodes private IP address|
 |public-address <IP>|Set the nodes public IP (service) address|
 |no-auto|Prompts will wait indefinitely instead of 20 second timeouts|
@@ -67,7 +68,7 @@ When you're ready to start shipping to customers we recommend that you proxy thi
 
 {{< linked_headline "Installing Behind A Proxy" >}}
 
-The Replicated installation script supports environments where an HTTP proxy server is required to access the Internet. The installation script will prompt for the proxy address and will set up Replicated and Docker to use the supplied value.
+The Replicated installation script supports environments where an HTTP proxy server is required to access the Internet. The installation script will prompt for the proxy address and will [set up Replicated and Docker to use the supplied value](/docs/native/customer-installations/proxies/).
 
 An example of running the Replicated installation script with a proxy server is:
 ```shell

@@ -2,7 +2,7 @@
 date: "2017-04-11T00:00:00Z"
 title: "Adding Nodes To A Replicated Cluster"
 description: "Instructions for installing additional nodes with a Replicated cluster"
-weight: "308"
+weight: "309"
 categories: [ "Managing Customer Installation" ]
 index: ["docs/native", "docs"]
 aliases: [docs/distributing-an-application/add-nodes-replicated,/docs/distributing-an-application/add-nodes/,/docs/native/packaging-an-application/add-nodes/]

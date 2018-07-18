@@ -27,7 +27,7 @@ sudo bash ./install.sh
 ## Pick your Install Method
 
 ### Easy Installation
-We provide an easy-to-use one-line installation process (via shell script) which will detect your OS, ask a few questions and install the Replicated.  Included in the install will be init scripts, configuration files and as needed the Docker Engine.
+We provide an easy-to-use one-line installation process (via shell script) which will detect your OS, ask a few questions and install Replicated.  Included in the install will be init scripts, configuration files and as needed the Docker Engine.
 
 [Continue with the easy install script](/docs/native/packaging-an-application/installing-via-script)
 ### Manual Install

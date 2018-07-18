@@ -36,6 +36,7 @@ The install script can take flags to help your customers with specialized enterp
 
 | Flag                          | Usage                                                                                              |
 | ----------------------------- | -------------------------------------------------------------------------------------------------- |
+|additional-no-proxy            | Address that can be reached without the HTTP proxy                                                 |
 | airgap                        | airgap implies "no proxy" and "skip docker"                                                        |
 | bypass-storagedriver-warnings | Bypass the storagedriver warning                                                                   |
 | daemon-token                  | Authentication token used by operators for automating a cluster installation                       |
