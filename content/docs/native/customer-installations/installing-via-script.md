@@ -50,6 +50,7 @@ The install script takes optional flags to configure Replicated for your environ
 |ui-bind-port <PORT_NUMBER>|Change the default UI port binding from port 8800|
 |docker-version <VERSION>|Install with a specific version of Docker|
 |no-docker|Skip the docker installation|
+| hard-fail-on-loopback|If present, aborts the installation if devicemapper on loopback mode is detected|
 |bypass-storagedriver-warnings|For automation bypasses the warning for devicemapper with loopback|
 |log-level|Set the log level for Replicated. Can be `error`, `warn`, `info` or `debug`|
 |no-ce-on-ee|Disable installation of Docker CE onto platforms it does not support - RHEL, SLES and Oracle Linux|
@@ -106,7 +107,7 @@ service replicated-ui stop
 service replicated-operator stop
 docker stop replicated-premkit
 docker stop replicated-statsd
-docker rm -f replicated replicated-ui replicated-operator replicated-premkit replicated-statsd retraced-api retraced-processor retraced-cron retraced-nsqd
+docker rm -f replicated replicated-ui replicated-operator replicated-premkit replicated-statsd retraced-api retraced-processor retraced-cron retraced-nsqd retraced-postgres
 docker images | grep "quay\.io/replicated" | awk '{print $3}' | xargs sudo docker rmi -f
 docker images | grep "registry\.replicated\.com/library/retraced" | awk '{print $3}' | xargs sudo docker rmi -f
 apt-get remove -y replicated replicated-ui replicated-operator
@@ -122,7 +123,7 @@ service replicated-ui stop
 service replicated-operator stop
 docker stop replicated-premkit
 docker stop replicated-statsd
-docker rm -f replicated replicated-ui replicated-operator replicated-premkit replicated-statsd retraced-api retraced-processor retraced-cron retraced-nsqd
+docker rm -f replicated replicated-ui replicated-operator replicated-premkit replicated-statsd retraced-api retraced-processor retraced-cron retraced-nsqd retraced-postgres
 docker images | grep "quay\.io/replicated" | awk '{print $3}' | xargs sudo docker rmi -f
 docker images | grep "registry\.replicated\.com/library/retraced" | awk '{print $3}' | xargs sudo docker rmi -f
 yum remove -y replicated replicated-ui replicated-operator

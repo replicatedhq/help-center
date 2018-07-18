@@ -82,7 +82,7 @@ config:
   - name: a_boolean
     title: Yea or Nay
     type: bool
-  - name: many_a_files
+  - name: many_files
     title: Pick many files.
     multiple: true
 ```
@@ -104,7 +104,7 @@ You could then create the `settings.conf` in this format:
  "a_boolean": {
    "value": "true"
  },
- "many_a_files": {
+ "many_files": {
    "multi_value": [
      "/some/fake/file1",
      "/some/fake/file2"

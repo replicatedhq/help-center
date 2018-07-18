@@ -28,6 +28,8 @@ information you want to collect to debug your application. All Support Bundle sp
 
 - `meta` - A `name` and `labels` that can be used to organize and identify support bundle elements in generated bundles
 
+- `include_empty` - Allows empty files to be included in output
+
 ### Usage
 
 An example is shown below for the `os.read-file` collector.
@@ -53,5 +55,6 @@ specs:
         labels:
           area: "configuration"
           type: "readfile"
+      # Includes file in output even if empty
+      include_empty: true
 ```
-

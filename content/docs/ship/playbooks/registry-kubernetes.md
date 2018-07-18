@@ -11,7 +11,9 @@ gradient: "console"
 
 {{< linked_headline "Shipping a Docker Registry for airgap installations" >}}
 
-Whgen distributing a Kubernetes (or Helm) application, most customers will be able to provide a Docker registry that required application images can be pushed to. Replicated Ship can [retag and rewrite the Kubernetes YAML](/docs/ship/playbooks/airgap-kubernetes/) to work in this scenario.
+
+When distributing a Kubernetes (or Helm) application, most customers will be able to provide a Docker registry that required application images can be pushed to. Replicated Ship can [retag and rewrite the Kubernetes YAML](/docs/ship/playbooks/airgap-kubernetes/) to work in this scenario.
+
 
 If the Kubernetes cluster ] was set up using the [Replicated Kubernetes installer](/docs/kubernetes/customer-installations/installing-k8s-only/), a Docker registry might not be available. The Replicated Kubernetes installer will pre-pull the `registry:2` image on all nodes in the cluster.
 
@@ -23,7 +25,7 @@ To start, include the following assets in a Ship release. These define the Docke
 assets:
   v1:
     - inline:
-       dest: ./installer/k8s/registry/registry-service.yml
+       dest: ./k8s/registry/registry-service.yml
        contents: |
          ---
          kind: Service
@@ -39,7 +41,7 @@ assets:
                targetPort: 5000
 
     - inline:
-        dest: ./installer/k8s/registry/registry-pod.yml
+        dest: ./k8s/registry/registry-pod.yml
         contents: |
           ---
           apiVersion: v1
@@ -74,11 +76,11 @@ Next, include your private images in your Ship YAML as assets. This will force S
 assets:
   v1:
     - docker:
-        dest: ./installer/images/private-image.tar
+        dest: ./images/private-image.tar
         image: registry.replicated.com/myapplication/private-image:1
         source: replicated
     - inline:
-        dest: ./installer/k8s/pod.yml
+        dest: ./k8s/pod.yml
         contents: |
           ---
           apiVersion: v1
@@ -100,7 +102,7 @@ assets:
 assets:
   v1:
     - inline:
-        dest: ./installer/scripts/install.sh
+        dest: ./scripts/install.sh
         contents: |
           #!/bin/bash
 

@@ -102,6 +102,15 @@
       show: { effect: "fade", duration: 200 },
       hide: { effect: "fade", duration: 200 }
     });
+
+    // Iterate with Replicated Studio -- Configure (custom script)
+    $(".studioIntro--link").on("click", function() {
+        const scheduler = this.id.split('-')[0];
+        $(".studioIntro--link").removeClass("selected");
+        $(this).addClass("selected");
+        $(".studioIntro--installScript").hide();
+        $(".studioIntro--installScript." + scheduler).show();
+    });
 	</script>
 </body>
 </html>

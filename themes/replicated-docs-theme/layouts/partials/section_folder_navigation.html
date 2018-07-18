@@ -256,11 +256,13 @@
                 <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Private Registry</h3>
                 {{ with .Site.GetPage "section" "docs" "registry" }}
                     {{ range .Pages }}
-                        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                            <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                {{ .Title }}
-                            </a>
-                        </p>
+                        {{ if not .Params.hideFromList }}
+                            <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
+                                    {{ .Title }}
+                                </a>
+                            </p>
+                        {{ end }}
                     {{ end }}
                     {{ range .Sections }}
                         {{ $firstPage := index (first 1 .Pages) 0 }}

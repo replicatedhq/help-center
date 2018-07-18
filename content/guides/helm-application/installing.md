@@ -19,9 +19,11 @@ Now we can produce an installation script for our test customer.
 Copy the command from this screen, and take it to a workstation that has Docker installed, and run it. This is how you can distribute software that's packaged in Ship.
 
 ```shell
-$ curl -sSL https://raw.githubusercontent.com/replicatedhq/replicated-installer/master/install_scripts/templates/ship-install-static.yml |       CUSTOMER_ID="d83865968533497c49d57192ce49f7cc"  docker-compose -f -  up
-WARNING: The CUSTOMER_ENDPOINT variable is not set. Defaulting to a blank string.
-WARNING: The LOG_LEVEL variable is not set. Defaulting to a blank string.
+$ curl -sSL -o docker-compose.yml \           
+  "https://get.replicated.com/compose/ship.yml?customer_id=1751bb0c1d374338ff5f6d9184af5b0d&installation_id=VGKaaabSQek8lYgZzZU5AzQiw4tkZhMq" && \
+  docker-compose pull && \
+  docker-compose up --abort-on-container-exit
+
 Creating network "marc_default" with the default driver
 Creating marc_ship_1    ... done
 Creating marc_console_1 ... done

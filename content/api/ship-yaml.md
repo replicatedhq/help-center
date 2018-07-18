@@ -1,15 +1,11 @@
 ---
 categories: 
  - Reference
- - ship-assets
- - ship-config
- - ship-lifecycle
 date: 2018-01-17T23:51:55Z
 description: Documentation for Ship YAML specs
-index: false
+index: docs
 title: Ship YAML Reference
 weight: "13000"
-hideFromList: true
 ---
 
 ## Ship

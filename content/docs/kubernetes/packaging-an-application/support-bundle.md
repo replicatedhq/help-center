@@ -30,102 +30,92 @@ support:
 ```
 
 {{< linked_headline "Custom Files and Commands" >}}
+Custom support bundle files and commands can be included by setting a default troubleshoot spec in [Replicated Console](https://console.replicated.com/troubleshoot/specs). The support bundle task definitions can be found [here](/api/support-bundle-yaml-specs/shared).
 
-In addition to the [default support files](/docs/packaging-an-application/support-bundle/#default-support-files) included in the support bundle, addtional files can be added via the `support` section of your yaml. Files from within the application’s containers can be included, as well as output of commands executed in the container. Support files and commands are supported by both the native and kubernetes schedulers. For more complex support commands it is possible to create a [config file](/docs/packaging-an-application/components-and-containers/#config-files) and execute that file from a support command. These files will be available withing the _/scheduler_ directory of the support bundle.
 
-```yaml
-support:
-  files:
-    - filename: /var/log/nginx/access.log
-      source:
-        replicated:
-          component: Nginx
-          container: my-nginx
-        kubernetes:
-          selector:
-            run: my-nginx
-  commands:
-    - filename: access_last_1000.log
-      command: [tail, -n1000, /var/log/nginx/access.log]
-      source:
-        replicated:
-          component: Nginx
-          container: my-nginx
-        kubernetes:
-          selector:
-            run: my-nginx
-```
+{{< linked_headline "Excluding Logs From Support Bundles" >}}
+If a pod's logs may contain sensitive information or are simply large and not useful for your debugging processes, you can exclude that pod's logs from support bundles. To do this, add the label `com.replicated.excludelogs=true` to the pod in question.
 
 {{< linked_headline "Default Support Files" >}}
 
-{{< note title="Legacy Support Bundle" >}}
-The content in this document is specific to the current default Support Bundle in Replicated. If you are looking for the legacy Support Bundle version of this document, it is available at <a href="/docs/packaging-an-application/support-bundle-v1/">{{< baseurl >}}packaging-an-application/support-bundle-v1/</a>
-{{< /note >}}
-
 By default the Support Bundle will include the following files:
 
-| File                                                             | Description                                                                                                                                     |
-| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| /app/container-logs/logs/\*.stdout.log.gz                        | Vendor application archival container stdout logs                                                                                               |
-| /app/container-logs/logs/\*.stderr.log.gz                        | Vendor application archival container stderr logs                                                                                               |
-| /app/containers/\*.json                                          | Vendor application low-level container information. Result of the command `docker inspect <container>`                                          |
-| /app/custom/:component/commands/:filename.stdout                 | [Custom support commands](/docs/packaging-an-application/support-bundle/#custom-files-and-commands) stdout as defined by the vendor application |
-| /app/custom/:component/commands/:filename.stderr                 | [Custom support commands](/docs/packaging-an-application/support-bundle/#custom-files-and-commands) stderr as defined by the vendor application |
-| /app/custom/:component/:filename                                 | [Custom support files](/docs/packaging-an-application/support-bundle/#custom-files-and-commands) as defined by the vendor application           |
-| /app/logs/\*.log                                                 | Vendor application container logs. Result of the command `docker logs <container>`                                                              |
-| /default/commands/date                                           | Print the system date and time. Result of the command `date`                                                                                    |
-| /default/commands/df                                             | Report file system disk space usage for the local file systems. Result of the command `df -al`                                                  |
-| /default/commands/df_inodes                                      | Report file system inode usage for the local file systems. Result of the command `df -ali`                                                      |
-| /default/commands/dmesg                                          | Print the kernel ring buffer. Result of the command `dmesg`                                                                                     |
-| /default/commands/free                                           | Display amount of free and used memory in the system. Result of the command `free -m`                                                           |
-| /default/commands/hostname                                       | Show the system's host name. Result of the command `hostname`                                                                                   |
-| /default/commands/ip_addr_show                                   | Show protocol (IP or IPv6) addresses on a device. Result of the command `ip -o addr show`                                                       |
-| /default/commands/ip_link_show                                   | Show network devices. Result of the command `ip -o link show`                                                                                   |
-| /default/commands/ip_route_show                                  | Show routing table entries. Result of the command `ip -o route show`                                                                            |
-| /default/commands/ps                                             | Report a snapshot of the current processes. Result of the command `ps fauxwww`                                                                  |
-| /default/commands/uptime                                         | Tell how long the system has been running. Result of the command `uptime`                                                                       |
-| /default/docker/docker_images_all.json                           | List all Docker images. Result of the command `docker images -a`                                                                                |
-| /default/docker/docker_info.json                                 | Display system-wide information                                                                                                                 |
-| /default/docker/docker_ps_all.json                               | List all containers. Result of the command `docker ps -a`                                                                                       |
-| /default/etc/centos-release                                      | Operating system identification data for centos distributions. A copy of the `/etc/centos-release` file.                                        |
-| /default/etc/default/docker                                      | Upstart docker configuration. A copy of the `/etc/default/docker` file                                                                          |
-| /default/etc/hostname                                            | The system's host name. A copy of the `/etc/hostname` file                                                                                      |
-| /default/etc/hosts                                               | Static table lookup for hostnames. A copy of the `/etc/hosts` file                                                                              |
-| /default/etc/os-release                                          | Operating system identification data. A copy of the `/etc/os-release` file.                                                                     |
-| /default/etc/sysconfig/docker                                    | Systemd docker configuration. A copy of the `/etc/sysconfig/docker` file                                                                        |
-| /default/etc/system-release                                      | Operating system identification data. A copy of the `/etc/system-release` file                                                                  |
-| /default/etc/systemd/system/docker.service.d/http-proxy.conf     | Systemd docker proxy configuration. A copy of the `/etc/systemd/system/docker.service.d/http-proxy.conf` file                                   |
-| /default/etc/timezone                                            | The system's timezone. A copy of the `/etc/timezone` file                                                                                       |
-| /default/proc/cpuinfo                                            | Information about the processor, such as its type, make, model, and performance. A copy of the `/proc/cpuinfo` file                             |
-| /default/proc/meminfo                                            | Information about memory usage, both physical and swap. A copy of the `/proc/meminfo` file                                                      |
-| /default/proc/mounts                                             | Mounted filesystems. A copy of the `/proc/mounts` file                                                                                          |
-| /default/proc/uptime                                             | The time the system has been up. A copy of the `/proc/uptime` file                                                                              |
-| /default/proc/version                                            | The kernel version. A copy of the `/proc/version` file                                                                                          |
-| /default/proc/vmstat                                             | Detailed virtual memory statistics from the kernel. A copy of the `/proc/vmstat` file                                                           |
-| /default/var/log/upstart/docker.log                              | Docker upstart logs when running with the upstart init system                                                                                   |
-| /replicated/containers/\*.json                                   | Replicated low-level container information. Result of the command `docker inspect <container>`                                                  |
-| /replicated/etc/default/replicated                               | Replicated configuration file. A copy of the `/etc/default/replicated` file.                                                                    |
-| /replicated/etc/default/replicated-operator                      | Replicated operator configuration file. A copy of the `/etc/default/replicated-operator` file.                                                  |
-| /replicated/etc/replicated.conf                                  | Replicated configuration file. A copy of the `/etc/replicated.conf` file.                                                                       |
-| /replicated/etc/sysconfig/replicated                             | Replicated configuration file. A copy of the `/etc/sysconfig/replicated` file.                                                                  |
-| /replicated/etc/sysconfig/replicated-operator                    | Replicated operator configuration file. A copy of the `/etc/sysconfig/replicated-operator` file.                                                |
-| /replicated/internal/auditlog.csv                                | Replicated audit log events dump                                                                                                                |
-| /replicated/internal/config-commands.txt                         | Replicated config command results                                                                                                               |
-| /replicated/internal/daemon.json                                 | Replicated daemon information                                                                                                                   |
-| /replicated/internal/goroutines.txt                              | Replicated thread dump                                                                                                                          |
-| /replicated/internal/host-info.json                              | Replicated cluster host info                                                                                                                    |
-| /replicated/internal/ledis-app.dump                              | Replicated main database dump                                                                                                                   |
-| /replicated/internal/ledis-registry.dump                         | Replicated registry database dump                                                                                                               |
-| /replicated/internal/ledis-snapshots.dump                        | Replicated snapshots database dump                                                                                                              |
-| /replicated/internal/license.txt                                 | Replicated license information                                                                                                                  |
-| /replicated/internal/nodes.txt                                   | A list of all nodes when running with the Replicated Native scheduler                                                                           |
-| /replicated/internal/params.json                                 | Replicated runtime configuration                                                                                                                |
-| /replicated/internal/replicated-versions.txt                     | Replicated version information                                                                                                                  |
-| /replicated/internal/tasks.txt                                   | Replicated current tasks (queued, executing, or sleeping)                                                                                       |
-| /replicated/logs/\*.log                                          | Replicated container logs. Result of the command `docker logs <container>`                                                                      |
-| /replicated/logs/\*.journald.log                                 | Replicated journald logs when running with the systemd init system. Result of the command `journalctl -u <unit> -r`                             |
-| /replicated/var/lib/replicated-operator/replicated-operator.conf | Replicated operator configuration file. A copy of the `/var/lib/replicated-operator/replicated-operator.conf` file                              |
-| /replicated/var/log/upstart/\*.log                               | Replicated upstart logs when running with the upstart init system                                                                               |
-| /retraced/containers/\*.json                                     | Retraced low-level container information. Result of the command `docker inspect <container>`                                                    |
-| /retraced/logs/\*.log                                            | Retraced container logs. Result of the command `docker logs <container>`                                                                        |
-| /VERSION.json                                                    | Support-bundle command version information                                                                                                      |
+| File | Description |
+|------|-------------|
+| /default/commands/date/stdout | Print the system date and time. Result of the command `date` |
+| /default/commands/df/stdout | Report file system disk space usage for the local file systems. Result of the command `df -al` |
+| /default/commands/df_inodes/stdout | Report file system inode usage for the local file systems. Result of the command `df -ali` |
+| /default/commands/dmesg/stdout | Print the kernel ring buffer. Result of the command `dmesg` |
+| /default/commands/free/stdout | Display amount of free and used memory in the system. Result of the command `free -m` |
+| /default/commands/hostname/stdout | Show the system's host name. Result of the command `hostname` |
+| /default/commands/ip_addr_show/stdout | Show protocol (IP or IPv6) addresses on a device. Result of the command `ip -o addr show` |
+| /default/commands/ip_link_show/stdout | Show network devices. Result of the command `ip -o link show` |
+| /default/commands/ip_route_show/stdout | Show routing table entries. Result of the command `ip -o route show` |
+| /default/commands/loadavg/stdout | Show system load average. Result of the command `loadavg` |
+| /default/commands/ps/stdout | Report a snapshot of the current processes. Result of the command `ps fauxwww` |
+| /default/commands/uptime/uptime | Tell how long the system has been running. Result of the command `uptime` |
+| /default/docker/container_ls.json | List all containers. Result of the command `docker ps -a` |
+| /default/docker/docker_info.json | Display system-wide information |
+| /default/docker/docker_version.json | Docker version output |
+| /default/docker/image_ls.json | List all images. Result of the command `docker images`|
+| /default/etc/centos-release | Operating system identification data for centos distributions. A copy of the `/etc/centos-release` file. |
+| /default/etc/default/docker | Upstart docker configuration. A copy of the `/etc/default/docker` file |
+| /default/etc/hostname | The system's host name. A copy of the `/etc/hostname` file |
+| /default/etc/hosts | Static table lookup for hostnames. A copy of the `/etc/hosts` file |
+| /default/etc/os-release | Operating system identification data. A copy of the `/etc/os-release` file. |
+| /default/etc/sysconfig/docker | Systemd docker configuration. A copy of the `/etc/sysconfig/docker` file |
+| /default/etc/system-release | Operating system identification data. A copy of the `/etc/system-release` file |
+| /default/etc/systemd/system/docker.service.d/http-proxy.conf | Systemd docker proxy configuration. A copy of the `/etc/systemd/system/docker.service.d/http-proxy.conf` file |
+| /default/etc/timezone | The system's timezone. A copy of the `/etc/timezone` file |
+| /default/journald/docker/logs.raw | The Docker Journald logs |
+| /default/os-release/os-release | Operating system identification data. A copy of the `/etc/os-release` file. |
+| /default/proc/cpuinfo | Information about the processor, such as its type, make, model, and performance. A copy of the `/proc/cpuinfo` file |
+| /default/proc/meminfo | Information about memory usage, both physical and swap. A copy of the `/proc/meminfo` file |
+| /default/proc/mounts | Mounted filesystems. A copy of the `/proc/mounts` file |
+| /default/proc/uptime | The time the system has been up. A copy of the `/proc/uptime` file |
+| /default/proc/version | The kernel version. A copy of the `/proc/version` file |
+| /default/proc/vmstat | Detailed virtual memory statistics from the kernel. A copy of the `/proc/vmstat` file |
+| /default/var/log/upstart/docker.log | Docker upstart logs when running with the upstart init system |
+| /replicated/internal/audit_events.csv | Replicated audit log events dump |
+| /replicated/internal/config-commands.txt | Replicated config command results |
+| /replicated/internal/daemon.json | Replicated daemon information |
+| /replicated/internal/goroutines.txt | Replicated thread dump |
+| /replicated/internal/host-info.json | Replicated cluster host info |
+| /replicated/internal/ledis-app.dump | Replicated main database dump |
+| /replicated/internal/ledis-registry.dump | Replicated registry database dump |
+| /replicated/internal/ledis-snapshots.dump | Replicated snapshots database dump |
+| /replicated/internal/license.txt | Replicated license information |
+| /replicated/internal/params.json | Replicated runtime configuration |
+| /replicated/internal/replicated-versions.txt | Replicated version information |
+| /replicated/internal/tasks.txt | Replicated current tasks (queued, executing, or sleeping) |
+| /scheduler/kubernetes/api_versions.json | Kubernetes API versions |
+| /scheduler/kubernetes/cluster_info.json | Kubernetes cluster info |
+| /scheduler/kubernetes/server_version.json | Kubernetes server version |
+| /scheduler/kubernetes/logs/\<pod\>-\<container\>/\<pod\>.log | App container logs |
+| /scheduler/kubernetes/replicated/\<replicated_pod\>-replicated/\<replicated_pod\>.log | Replicated container logs |
+| /scheduler/kubernetes/replicated/\<replicated_pod\>-replicated-ui/\<replicated_pod\>.log | Replicated UI container logs |
+| /scheduler/kubernetes/resources/componentstatuses/resource.json | Kubernetes componentstatuses info |
+| /scheduler/kubernetes/resources/configmaps/resource.json | Kubernetes configmaps info |
+| /scheduler/kubernetes/resources/daemonsets/resource.json | Kubernetes daemonsets info |
+| /scheduler/kubernetes/resources/deployments/resource.json | Kubernetes deployments info |
+| /scheduler/kubernetes/resources/endpoints/resource.json | Kubernetes endpoints info |
+| /scheduler/kubernetes/resources/events/resource.json | Kubernetes events info |
+| /scheduler/kubernetes/resources/horizontalpodautoscalers/resource.json | Kubernetes horizontalpodautoscalers info |
+| /scheduler/kubernetes/resources/ingresses/resource.json | Kubernetes ingresses info |
+| /scheduler/kubernetes/resources/jobs/resource.json | Kubernetes jobs info |
+| /scheduler/kubernetes/resources/limitranges/resource.json | Kubernetes limitranges info |
+| /scheduler/kubernetes/resources/networkpolicies/resource.json | Kubernetes networkpolicies info |
+| /scheduler/kubernetes/resources/nodes/resource.json | Kubernetes nodes info |
+| /scheduler/kubernetes/resources/persistentvolumeclaims/resource.json | Kubernetes persistentvolumeclaims info |
+| /scheduler/kubernetes/resources/persistentvolumes/resource.json | Kubernetes persistentvolumes info |
+| /scheduler/kubernetes/resources/podsecuritypolicies/resource.json | Kubernetes podsecuritypolicies info |
+| /scheduler/kubernetes/resources/pods/resource.json | Kubernetes pods info |
+| /scheduler/kubernetes/resources/podtemplates/resource.json | Kubernetes podtemplates info |
+| /scheduler/kubernetes/resources/replicasets/resource.json | Kubernetes replicasets info |
+| /scheduler/kubernetes/resources/replicationcontrollers/resource.json | Kubernetes replicationcontrollers info |
+| /scheduler/kubernetes/resources/resourcequotas/resource.json | Kubernetes resourcequotas info |
+| /scheduler/kubernetes/resources/secrets/resource.json | Kubernetes secrets info |
+| /scheduler/kubernetes/resources/services/resource.json | Kubernetes services info |
+| /scheduler/kubernetes/resources/statefulsets/resource.json | Kubernetes statefulsets info |
+| /scheduler/kubernetes/resources/storageclasses/resource.json | Kubernetes storageclasses info |
+| /VERSION.json | Support-bundle command version information |

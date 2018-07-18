@@ -10,7 +10,7 @@ gradient: "orangeToOrange"
 icon: "troubleshoot"
 ---
 
-Once you've [created a support bundle spec](/guides/support-bundle/spec), you can give a command to your customer to generate a support bundle based on the spec. If you change the spec to include additional collected files, the command your customer will run doesn't change.
+Once you've [created a support bundle spec](/guides/troubleshoot/spec), you can give a command to your customer to generate a support bundle based on the spec. If you change the spec to include additional collected files, the command your customer will run doesn't change.
 
 To collect a support bundle, find the customer on [https://console.replicated.com/customers](https://console.replicated.com/customers) and go to the Customers list. Select the customer and click the "Generate a support bundle" link. There will be a single `docker run` command that's customized for this one customer. Give this command to your customer, and when they run it, it will always download the latest support bundle spec from Replicated before generating.
 

@@ -61,6 +61,8 @@ curl -sSL https://get.replicated.com/kubernetes-init \
 
 The airgap package can be installed by downloading the latest release from https://s3.amazonaws.com/replicated-airgap-work/replicated__docker__kubernetes.tar.gz and running the following commands:
 
+
 ```shell
 tar xzvf replicated__docker__kubernetes.tar.gz
 cat ./kubernetes-init.sh | sudo bash -s airgap kubernetes-only
+```

@@ -56,6 +56,17 @@ support:
             run: my-nginx
 ```
 
+{{< linked_headline "Excluding Logs From Support Bundles" >}}
+If a service's logs may contain sensitive information or are simply large and not useful for your debugging processes, you can exclude that service's logs from support bundles. To do this, add the label `com.replicated.excludelogs=true` to the service in question.
+
+```yaml
+services:
+  private-worker:
+    image: app
+    labels:
+      com.replicated.excludelogs: "true"
+```
+
 {{< linked_headline "Default Support Files" >}}
 
 {{< note title="Legacy Support Bundle" >}}
@@ -109,7 +120,7 @@ By default the Support Bundle will include the following files in the master fol
 | /replicated/etc/replicated.conf | Replicated configuration file. A copy of the `/etc/replicated.conf` file |
 | /replicated/etc/sysconfig/replicated | Replicated configuration file. A copy of the `/etc/sysconfig/replicated` file |
 | /replicated/etc/sysconfig/replicated-operator | Replicated operator configuration file. A copy of the `/etc/sysconfig/replicated-operator` file |
-| /replicated/internal/auditlog.csv | Replicated audit log events dump |
+| /replicated/internal/audit_events.csv | Replicated audit log events dump |
 | /replicated/internal/config-commands.txt | Replicated config command results |
 | /replicated/internal/daemon.json | Replicated daemon information |
 | /replicated/internal/goroutines.txt | Replicated thread dump |
@@ -125,18 +136,18 @@ By default the Support Bundle will include the following files in the master fol
 | /replicated/logs/\*.journald.log/logs.raw | Replicated journald logs when running with the systemd init system. Result of the command `journalctl -u <unit> -r` |
 | /retraced/containers/\*.json | Docker inspect results for all Retraced containers. Result of the command `docker inspect <container>` |
 | /retraced/logs/\*.json | Docker logs for all Retraced containers. Result of the command `docker logs <container>` |
-| /scheduler/swarm/replicated/logs/<task_id>.stderr | The logs of all Replicated tasks |
-| /scheduler/swarm/replicated/logs/<service_name>.stderr | The logs of all Replicated services |
+| /scheduler/swarm/replicated/logs/\<task_id\>.stderr | The logs of all Replicated tasks |
+| /scheduler/swarm/replicated/logs/\<service_name\>.stderr | The logs of all Replicated services |
 | /scheduler/swarm/replicated/service_ls.json | The list of Replicated services. Equivalent to `docker service ls --filter label=com.docker.stack.namespace=replicated` |
 | /scheduler/swarm/replicated/service_ps.json | The list of Replicated tasks. Equivalent to `docker service ps <servicename>` for all Replicated services |
-| /scheduler/swarm/retraced/logs/<task_id>.stderr | The logs for all Retraced tasks |
-| /scheduler/swarm/retraced/logs/<service_name>.stderr | The logs for all Retraced services |
+| /scheduler/swarm/retraced/logs/\<task_id\>.stderr | The logs for all Retraced tasks |
+| /scheduler/swarm/retraced/logs/\<service_name\>.stderr | The logs for all Retraced services |
 | /scheduler/swarm/retraced/service_ls.json | The list of Retraced services. Equivalent to `docker service ls --filter label=com.docker.stack.namespace=retraced` |
 | /scheduler/swarm/retraced/service_ps.json | The list of Replicated tasks. Equivalent to `docker service ps <servicename>` for all Retraced services |
-| /scheduler/swarm/stack/logs/<task_id>.stderr | The stderr logs of all app tasks |
-| /scheduler/swarm/stack/logs/<task_id>.stdout | The stdout logs of all app tasks |
-| /scheduler/swarm/stack/logs/<service_name>.stderr | The stderr logs of all app services |
-| /scheduler/swarm/stack/logs/<service_name>.stdout | The stdout logs of all app services  |
+| /scheduler/swarm/stack/logs/\<task_id\>.stderr | The stderr logs of all app tasks |
+| /scheduler/swarm/stack/logs/\<task_id\>.stdout | The stdout logs of all app tasks |
+| /scheduler/swarm/stack/logs/\<service_name\>.stderr | The stderr logs of all app services |
+| /scheduler/swarm/stack/logs/\<service_name\>.stdout | The stdout logs of all app services  |
 | /scheduler/swarm/stack/service_ls.json | The list of app services services. Equivalent to `docker service ls --filter label=com.docker.stack.namespace=<appnamespace>` |
 | /scheduler/swarm/stack/service_ps.json | The list of Replicated tasks. Equivalent to `docker service ps <servicename>` for all app services |
 | /scheduler/swarm/system/swarm-nodes/node_ls.json | The list of swarm nodes in the cluster. Equivalent to `docker node ls` |

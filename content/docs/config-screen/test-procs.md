@@ -81,30 +81,50 @@ by your customer into the config items within this group. The arguments, in expe
 1. Access key ID.
 1. Secret access key.
 1. AWS service.  Valid values are `ec2`, `s3`, and `sqs`.  Credentials will be validated using `DescribeRegions`, `ListBuckets`, and `ListQueues` operations respectively.  All calls will be made using `us-east-1` region.
+1. (Optional) Custom S3 endpoint. `s3` AWS service must be set. Allows for specifying a custom endpoint if you are using an S3-compatible service like Minio.
 
 ```yaml
 config:
 - name: aws
   title: AWS Integration
-  description: Provide your AWS access credentials
+  description: Provide your AWS Credentials
   test_proc:
-    display_name: Test Authentication
+    display_name: Test AWS Auth
     command: aws_auth
     timeout: 5
     arg_fields:
-    - aws_access_key_id
-    - aws_secret_access_key
-    - aws_service
+      - aws_access_key_id
+      - aws_secret_access_key
+      - aws_service
+      - aws_custom_endpoint
   items:
-  - name: aws_access_key_id
+    - name: aws_access_key_id
+      title: AWS Access Key ID
+      type: password
+    - name: aws_secret_access_key
+      title: AWS Secret Access Key
+      type: password
+    - name: aws_service
+      title: AWS Service
+      type: select_one
+      items:
+        - name: s3
+          title: S3
+        - name: ec2
+          title: EC2
+        - name: sqs
+          title: SQS
+    - name: aws_custom_endpoint
+      title: AWS Custom Endpoint
+      type: text
 ```
 
 {{< linked_headline "Certificate Verification" >}}
 
 `certificate_verify` – Test whether or not the supplied x509 certificate is valid. Optionally
 validate the key pair, hostname and CA certificate. Applies to a group of items. This command expects the
-certificate as the first argument with additional optional arguments private key and hostname. If a CA cert is not 
-supplied and the certificate issuer is the same as the subject of the supplied certificate, it is treated as a 
+certificate as the first argument with additional optional arguments private key and hostname. If a CA cert is not
+supplied and the certificate issuer is the same as the subject of the supplied certificate, it is treated as a
 self-signed certificate. These arguments come from values entered by your customer into the config items within this
 group. The arguments, in expected order:
 

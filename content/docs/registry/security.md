@@ -5,7 +5,6 @@ description: "A description of the security policies included in the Replicated 
 weight: "1303"
 categories: [ "Private Registry" ]
 index: "docs/registry"
-aliases: [/docs/packaging-an-application/commands/,/docs/swarm/packaging-an-application/commands/]
 ---
 
 {{< linked_headline "Replicated Private Registry Security" >}}

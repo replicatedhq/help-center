@@ -3,7 +3,7 @@ date: "2018-05-02T01:19:20Z"
 title: "Asset Types"
 description: "Types of assets available in Ship"
 weight: "41002"
-categories: [ "Ship Assets" ]
+categories: [ "Ship Asset Types" ]
 index: ["docs/products", "docs"]
 icon: "replicatedShip"
 gradient: "console"
@@ -16,14 +16,14 @@ Assets are the core object that enables you to describe applications managed by 
 - Scripts for installing and upgrading your application to a cloud server
 - Private Docker images or `.tar.gz` archives
 - Container orchestration manifests for Kubernetes or Docker Compose
-- Modules for infrastructure automation tools like Chef, Ansible, Salt, or Puppet
+- Modules for infrastructure automation tools like Chef, Ansible, Salt, or Terraform
 
 Documented here are a number of methods Ship provides to facilitating distributing assets to your on-prem customers.
 
 - Inline in your application spec
 - Proxied from to private docker registries
-- (coming soon) Proxied from to private github repos
-- (coming soon) Mirrored from public github repos
+- Proxied from to private github repos
+- Mirrored from public github repos
 
 In Ship, a short assets section to pull and run a private docker container might look like:
 

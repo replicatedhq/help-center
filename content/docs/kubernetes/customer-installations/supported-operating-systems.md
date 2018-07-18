@@ -18,4 +18,4 @@ Replicated provides an easy install script to work with the the following list o
 
 - Ubuntu 16.04
 - Red Hat Enterprise Linux 7.4
-- CentOS 7
+- CentOS 7.4
