@@ -53,7 +53,7 @@ The following example will pull content from a public Amazon S3 Bucket and place
 assets:
   v1:
     - web:
-        url: https://s3.us-east-2.amazonaws.com/installation-terms-and-conditions
+        url: https://s3.us-east-2.amazonaws.com/path-to/installation-terms-and-conditions
         dest: ./installation-terms-and-conditions
 ```
 
@@ -82,7 +82,7 @@ assets:
         image: redis:4.0.9
           
     - web:
-        url: https://s3.us-east-2.amazonaws.com/install.sh
+        url: https://s3.us-east-2.amazonaws.com/path-to/install.sh
         dest: ./install.sh
         mode: 0755
 ```
