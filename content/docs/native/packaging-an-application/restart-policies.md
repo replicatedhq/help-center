@@ -17,7 +17,7 @@ Optionally, containers can be configured to be restarted automatically. Currentl
 ### Never restart
 ```yaml
   restart:
-    policy: never
+    policy: no
 ```
 
 Specifying the following policy will always restart the container regardless of the exit code.
