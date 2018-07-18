@@ -62,14 +62,14 @@ Note that the `method` parameter is omitted in this simple example. Unless speci
 
 {{< linked_headline "Leveraging the Web Asset Type Across Ship Assets" >}}
 
-Suppose you want to deliver a public Docker image to your Ship application and load and push it to a registry. Suppose you have an Amazon S3 Bucket containing a script that, when executed, loads, tags, and pushes an image to a registry. It might look something like this:
+Suppose you want to deliver a public Docker image to your Ship application and load and push it to a registry. You have an Amazon S3 Bucket containing a script that, when executed, loads, tags, and pushes an image to a registry. It might look something like this:
 
 ```
 #!/bin/bash
 
 docker load < ./images/redis.tar
-docker tag redis:4.0.9 {{repl ConfigOption "registry_endpoint"}}/{{repl ConfigOption "registry_namespace"}}/redis:4.0.9
-docker push {{repl ConfigOption "registry_endpoint"}}/{{repl ConfigOption "registry_namespace"}}/redis:4.0.9
+docker tag redis:4.0.9 registry_endpoint/registry_namespace/redis:4.0.9
+docker push registry_endpoint/registry_namespace/redis:4.0.9
 ```
 
 Instead of providing this script inline, you could retrieve it with a Web Asset:
@@ -85,20 +85,5 @@ assets:
         url: https://s3.us-east-2.amazonaws.com/install.sh
         dest: ./install.sh
         mode: 0755
-
-config:
-  v1:
-    - name: registry
-      title: Docker Registry
-      items:
-        - name: registry_endpoint
-          type: text
-          required: true
-          help_text: registry.mycompany.com
-        - name: registry_namespace
-          type: text
-          required: true
-          help_text: myapp
-
 ```
 
