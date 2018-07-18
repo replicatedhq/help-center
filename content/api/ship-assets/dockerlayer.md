@@ -16,16 +16,6 @@ gradient: "purpleToPink"
 A `dockerlayer` asset will pull an image from a public docker registry, registry.replicated.com, or a configured third party registry and produce a tar archive of the container image.
 
 
-```yaml
-assets:
-  v1:
-    - dockerlayer:
-        image: 'quay.io/cooltool-enterprise/configs:1.0.1'
-        dest: config/
-        source: quayio-private
-        layer: f7126e84abc96fbc8495c33052724fad48115829e86987adbf556474f0ead5c1
-```
-
     
 ### Required Parameters
 
@@ -41,6 +31,15 @@ assets:
 
 - `source` - The source for the image. Should be either `public`, `replicated`, or the name of a third-party private registry previously configured on [console.replicated.com](https://console.replicated.com)
 
+### Examples
 
-    
+```yaml
+assets:
+  v1:
+    - dockerlayer:
+        image: 'quay.io/cooltool-enterprise/configs:1.0.1'
+        dest: config/
+        source: quayio-private
+        layer: f7126e84abc96fbc8495c33052724fad48115829e86987adbf556474f0ead5c1
+```
     

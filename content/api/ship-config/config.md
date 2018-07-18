@@ -13,10 +13,6 @@ gradient: "purpleToPink"
 
 ## Ship Config
 
-This is the reference documenation for Ship config. To get started with Ship, head on over to [Shipping a Helm Application](/guides/helm-application/)
-
-The configuration options API is identical to that used for applications managed by
+This is the reference documenation for Ship config. To get started with Ship, head on over to [Shipping a Helm Application](/guides/helm-application/).  The configuration options API is identical to that used for applications managed by
 Replicated's scheduler suite, and the documentation can be found at [Config Screen YAML
 ](/docs/config-screen/config-yaml/).
-
-
