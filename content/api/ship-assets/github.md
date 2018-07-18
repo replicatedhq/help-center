@@ -16,18 +16,7 @@ gradient: "purpleToPink"
 A `github` asset is created from files downloaded from either a public or a linked Github repo.
 
 
-```yaml
-assets:
-  v1:
-    - github:
-        repo: github.com/replicatedhq/superbigtool-k8s
-        ref: 8fcaebe55af67fe6789fa678faaa76fa867fbc
-        path: k8s-yamls/
-        dest: ./k8s/
-        source: private
-```
 
-    
 ### Required Parameters
 
 
@@ -50,5 +39,18 @@ assets:
 - `ref` - Reference to a github commit to pull, usually a SHA or a tag -- usage of branches is supported but discouraged as content could change within a single Ship release
 
 
-    
+
+### Examples
+
+
+```yaml
+assets:
+  v1:
+    - github:
+        repo: github.com/replicatedhq/superbigtool-k8s
+        ref: 8fcaebe55af67fe6789fa678faaa76fa867fbc
+        path: k8s-yamls/
+        dest: ./k8s/
+        source: private
+```
     

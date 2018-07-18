@@ -15,20 +15,14 @@ gradient: "purpleToPink"
 
 A `web` asset delivers web content from a private or public URL
 
-
-```yaml
-assets:
-  v1:
-    - web:
-        url: 'https://my_bucket.s3.amazonaws.com/path-to-file'
-        dest: ./my-bucket-contents
-```
-
     
 ### Required Parameters
 
 
 - `url` - A public or private URL to pull content from
+
+
+- `dest` - A path to which the content should be written when generating assets
 
 
     
@@ -47,8 +41,17 @@ assets:
 - `method` - Defaults to `GET` if not present, supports `POST`
 
 
-- `mode` - Unix file permissions to set on the asset
+- `mode` - Unix file permissions to set on the asset, e.g `600`
 
 
-    
+
+### Examples
+
+```yaml
+assets:
+  v1:
+    - web:
+        url: 'https://my_bucket.s3.amazonaws.com/path-to-file'
+        dest: ./my-bucket-contents
+```
     
