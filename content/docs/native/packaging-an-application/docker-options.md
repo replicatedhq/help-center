@@ -12,7 +12,8 @@ icon: "replicatedCircle"
 
 You may also limit the resources used by your containers with the memory, cpushares and network modes and further secure your containers with security options
 
-### Memory and Swap Limit
+{{< linked_headline "Memory and Swap Limit" >}}
+
 The amount of memory or swap for your container.  The format is number|unit where unit may be one of b, k, m or g.  By default there is no memory or swap limit and your container can use as much as needed.  You can learn more at [User Memory Constraints documentation](https://docs.docker.com/engine/reference/run/#/user-memory-constraints).
 
 ```yaml
@@ -20,21 +21,24 @@ The amount of memory or swap for your container.  The format is number|unit wher
   memory_swap_limit: 1g
 ```
 
-### CPU Shares
+{{< linked_headline "CPU Shares" >}}
+
 Using CPU shares you can change the access to the servers CPU at busy times.  When non CPU-intensive processes are other containers may use extra CPU time.  The default is 1024 and by increasing or decreasing the value on a container you change how the weighted CPU access is granted across all running containers.  You can learn more at [CPU Share Constraints documentation](https://docs.docker.com/engine/reference/run/#/cpu-share-constraint).
 
 ```yaml
   cpu_shares: 2048
 ```
 
-### Network Mode
+{{< linked_headline "Network Mode" >}}
+
 Network mode supports bridge, host, container or none.  Learn more about Docker's network modes at [Network Settings](https://docs.docker.com/engine/reference/run/#/network-settings).
 
 ```yaml
   network_mode: host
 ```
 
-### Security Options
+{{< linked_headline "Security Options" >}}
+
 With security options you can use Docker security with existing well know systems such as AppArmor.
 
 ```yaml
@@ -51,7 +55,8 @@ When specifying your security options you can use template functions and any bla
 
 Learn more about Docker's [security configuration](https://docs.docker.com/engine/reference/run/#/security-configuration).
 
-### Privileged Mode and Security Capability
+{{< linked_headline "Privileged Mode and Security Capability" >}}
+
 Security capabilities and access to devices are limited for containers by default, however you can add security capabilities with the privileged and security_cap_add option.
 
 ```yaml
@@ -62,21 +67,23 @@ Security capabilities and access to devices are limited for containers by defaul
 
 Learn more about [Security Capabilities](https://docs.docker.com/engine/reference/run/#/runtime-privilege-and-linux-capabilities).
 
-### Allocate TTY
+{{< linked_headline "Allocate TTY">}}
+
 For interactive processes you can allocate a TTYL with allocate_tty.  Learn more by reading about container process [Foreground](https://docs.docker.com/engine/reference/run/#/foreground).
 
 ```yaml
   allocate_tty: true
 ```
 
-### Hostname
+{{< linked_headline "Hostname" >}}
+
 Sets the hostname inside of the container.  See the network host section under [Network settings](https://docs.docker.com/engine/reference/run/#/network-settings).
 
 ```yaml
   hostname: anxiety-closet
 ```
 
-### Extra Hosts
+{{< linked_headline "Extra Hosts" >}}
 
 Add extra hostname mappings with hostname, address and an optional when field.  See [extra_hosts](https://docs.docker.com/compose/compose-file/#extrahosts).
 
@@ -88,7 +95,7 @@ Add extra hostname mappings with hostname, address and an optional when field.  
     address: 10.0.1.32
 ```
 
-### Named Containers
+{{< linked_headline "Named Containers" >}}
 
 The name argument sets the name of your running container. It is provided as a convenience method during development when you may want to connect to your containers and view logs. References to the container in template functions should continue to the use image name.  Do not use on containers which run concurrently as the second container will fail to start due to a name conflict.
 
@@ -98,7 +105,7 @@ The name argument sets the name of your running container. It is provided as a c
 
 For more information see [named containers](https://docs.docker.com/engine/reference/run/#/container-identification).
 
-### Entrypoint
+{{< linked_headline "Entrypoint" >}}
 
 When working with third party containers you may want to override the default entry point using the entrypoint option.
 Learn more about [overriding entrypoints](https://docs.docker.com/engine/reference/builder/#/entrypoint) and how the [cmd and entrypoint options](https://docs.docker.com/engine/reference/builder/#/understand-how-cmd-and-entrypoint-interact) work together.  Entrypoint takes an array of strings.
@@ -107,7 +114,7 @@ Learn more about [overriding entrypoints](https://docs.docker.com/engine/referen
     entrypoint: ["redis", "-p", "6380"]
 ```
 
-### Ulimits
+{{< linked_headline "Ulimits" >}}
 
 Since setting ulimit settings in a container requires extra privileges not available in the default container, you can set these using the ulimits property of the container. Learn more about ulimits [here](https://docs.docker.com/engine/reference/commandline/run/#/set-ulimits-in-container---ulimit).
 
@@ -118,7 +125,7 @@ Since setting ulimit settings in a container requires extra privileges not avail
       hard: 1024
 ```
 
-### Pid Mode
+{{< linked_headline "Pid Mode" >}}
 
 Pid mode lets you specify the process namespace for your container. By default each container has its own space and by declaring a `pid_mode` you can see the processes of another container or host. See [PID settings](https://docs.docker.com/engine/reference/run/#pid-settings---pid) to learn more.
 
@@ -126,7 +133,7 @@ Pid mode lets you specify the process namespace for your container. By default e
     pid_mode: host
 ```
 
-### Shm-Size
+{{< linked_headline "Shm-Size" >}}
 
 {{< version version="2.15.0" >}} Shm-Size lets you specify the size of `/dev/shm` for your container in bytes. If omitted or 0, the system defaults to 64MB.
 
@@ -134,10 +141,23 @@ Pid mode lets you specify the process namespace for your container. By default e
     shm_size: 67108864
 ```
 
-### Dynamic
+{{< linked_headline "Dynamic" >}}
 
 Dynamic marks that a container's image should always be pulled, whether it is initially used by the application or not. This can be used to prepare images for containers that your application might run dynamically or for containers where running depends on template functions that may change during startup.
 
 ```yaml
     dynamic: true
+```
+
+{{< linked_headline "Labels" >}}
+
+[Labels](https://docs.docker.com/config/labels-custom-metadata/) can be applied to a container by Replicated. Labels are templateable, and will be split on the first `=` to form the label key and value. If no `=` is present, the entire string will become the key and the value will be the empty string.
+
+For example, `my.container.label` would become a label with a key of `my.container.label` and an empty value while `my.container.value=IMPORTANT=FALSE` would have a key of `my.container.value` and a value of `IMPORTANT=FALSE`.
+
+```yaml
+    labels:
+      - my.container.label
+      - my.container.value=IMPORTANT=FALSE
+      - 'my.template.value={{repl ConfigOption "labelValue" }}'
 ```

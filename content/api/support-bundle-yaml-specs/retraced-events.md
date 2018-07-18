@@ -42,7 +42,7 @@ specs:
         CRUD: 'c,u,d'
 ```
 
-    
+
 ### Required Parameters
 
 
@@ -55,7 +55,7 @@ specs:
 - `project_id` - The Audit Log Project ID
 
 
-    
+
 ### Optional Parameters
 
 
@@ -68,16 +68,16 @@ specs:
 - `query` - A structured query for filtering events, as in https://github.com/retracedhq/retraced-go/blob/master/graphql.go#L16
 
 
-    
+
 ### Outputs
 
-
+    
 - `audit_events.csv` - The audit events in CSV format
 
-    
+
 <br>
 {{< note title="Shared Parameters" >}}
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
-    
+
     

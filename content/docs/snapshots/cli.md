@@ -19,23 +19,15 @@ The Replicated CLI can be used to examine and restore snapshots. There are two w
   "SnapshotsAWSRegion": "us-east-1",
   "SnapshotsAWSKeyID": "xxxx",
   "SnapshotsAWSSecretKey": "xxxx",
+  "SnapshotsAWSServerSideEncryption": "aws:kms",
+  "SnapshotsAWSSSEKMSKeyID": "arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab",
   "SnapshotsSFTPHost": "192.168.0.10",
   "SnapshotsSFTPUsername": "jondoe",
   "SnapshotsSFTPPrivateKeyPEM": "pem data"
 }
 ```
 
-```
-replicatedctl snapshot ls \
- --backend-options SnapshotsStore=s3 \
- --backend-options SnapshotsS3Bucket=snapshots \
- --backend-options SnapshotsAWSRegion=us-east-1 \
- --backend-options SnapshotsAWSKeyID=ABCDEFGHIJK123456789 \
- --backend-options SnapshotsAWSSecretKey=xxxx \
- --backend-options SnapshotsSFTPPrivateKeyPEM=YmFzZTY0IGVuY29kZWQgcGVtIGRhdGE=
-Snapshot backend options
-SnapshotsStore: Snapshot backend type. Valid values are s3, sftp, and local.
-```
+Documentation for the `replicatedctl snapshot` command can be found [here](/api/replicatedctl/replicatedctl_snapshot/).
 
 SnapshotsPath: Snapshot location path. The value should be an absolute path. This option is not used with s3 backend. When used with sftp option, the path has to exist, and the SFTP user needs to have write access to it.
 
@@ -46,6 +38,10 @@ SnapshotsAWSRegion: S3 bucket region. This option is only used with s3 backend.
 SnapshotsAWSKeyID: ID of the secret key that has write access to the specified S3 bucket. This option is only used with s3 backend. Leave unset on EC2 to use the instance profile.
 
 SnapshotsAWSSecretKey: Secret key value. This option is only used with s3 backend. Leave unset on EC2 to use the instance profile.
+
+SnapshotsAWSServerSideEncryption: S3 Server Side Encryption parameter. Can be `aws:kms` to enforce aws:kms usage or the empty string to use bucket settings.
+
+SnapshotsAWSSSEKMSKeyID: S3 Server Side Encryption Key ARN. Set to an AWS key ARN to override bucket defaults or the empty string to use the bucket default key with `aws:kms` set. Ignored when the S3 Server Side Encryption parameter is not `aws:kms`.
 
 SnapshotsSFTPHost: Hostname or IP of the server where snapshots will be stored. The value can be in host or host:port format. The address can be of the same server, however the value localhost cannot be used. This option is only used with sftp backend.
 

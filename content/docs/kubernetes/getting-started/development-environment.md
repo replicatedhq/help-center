@@ -39,11 +39,17 @@ Copy that *.ngrok.io* URL, you'll need it when you install Replicated on the dev
 
 ### 3. Install Replicated with Studio configuration on the dev server
 
-Finally, use our simple installation script (on a Linux server in your IaaS provider of choice, or in a local dev environment in Vagrant/VirtualBox) to install Replicated with Swarm. You'll be prompted for the `Replicated Studio URL` during setup, use the hostname that ngrok provided you (routing to port 8006 on your local machine).
+Finally, use our simple installation script (on a Linux server in your IaaS provider of choice, or in a local dev environment in Vagrant/VirtualBox) to install Replicated with Kubernetes. You'll be prompted for the `Replicated Studio URL` during setup, use the hostname that ngrok provided you (routing to port 8006 on your local machine).
 
 ```bash
 curl -sSL https://get.replicated.com/studio/k8s | sudo bash
 ```
+
+#### Alternative: Use an existing cluster
+
+If you already have [Replicated installed on an existing cluster](https://help.replicated.com/docs/kubernetes/customer-installations/existing-cluster/), instead of running the `https://get.replicated.com/studio/k8s` script, you can edit the `replicated` deployment and add an environment variable.
+The name of the environment variable should be `MARKET_BASE_URL` and the value should be your ngrok URL from step 2.
+
 
 {{< linked_headline "Iterate on your application YAML" >}}
 
@@ -65,6 +71,8 @@ As well as being able to iterate on your application YAML, you can also use Stud
 To do this, rebuild your Docker images on your Studio server reusing the existing tags. Once you restart the application from the on-prem Admin Console (`https://<YOUR SERVER ADDRESS>:8800`) or CLI, your updated images will be used by Replicated.
 
 **_Note: When iterating on Docker images in Studio, referencing local Docker images using the `latest` tag is not supported. Replicated will re-pull any images with the `latest` tag, thus overwriting any changes you are making locally._**
+
+**_Note: Pulling third-party private images is not supported with Replicated studio. If your app uses an external private registry, you'll need to pull the images down to the server where the on-prem Admin Console is running, and ensure your `imagePullPolicy` is set to `ifNotPresent` _**
 
 {{< linked_headline "Additional features" >}}
 

@@ -1,7 +1,7 @@
 ---
 date: "2018-05-02T01:19:20Z"
 title: "Troubleshoot A Kubernetes Application"
-description: "Including Replicated's flexible Troubleshoot tooling to support your end customers "
+description: "Including Replicated's flexible Troubleshoot tooling to support your end customers"
 weight: "44004"
 categories: [ "Ship Playbooks" ]
 index: ["docs/products", "docs"]
@@ -33,7 +33,7 @@ In this example we include two assets:
 assets:
   v1:
     - inline:
-        dest: ./installer/k8s/troubleshoot/support-deployment.yml
+        dest: ./k8s/troubleshoot/support-deployment.yml
         contents: |
           ---
           apiVersion: extensions/v1beta1
@@ -58,7 +58,7 @@ assets:
                       - /bin/sleep
                       - infinity
     - inline:
-       dest: ./installer/scripts/troubleshoot/support-bundle.sh
+       dest: ./scripts/troubleshoot/support-bundle.sh
        contents: |
          #!/bin/sh
          OUTPUT_PATH=supportbundle.tar.gz
@@ -68,7 +68,7 @@ assets:
          pod=$(kubectl get pods --selector=tier=support-bundle -o jsonpath='{.items[*].metadata.name}')
 
          echo "Collecting from pod ${pod}"
-         /bin/sh -c "kubectl exec ${pod} -- support-bundle generate --customer-id={{repl context "customer_id"}} --out - --quiet --yes-upload " > $OUTPUT_PATH
+         /bin/sh -c "kubectl exec ${pod} -- support-bundle generate --customer-id={{repl Installation "customer_id"}} --out - --quiet --yes-upload " > $OUTPUT_PATH
 
          echo "Bundle generated at ${OUTPUT_PATH}"
 lifecycle:

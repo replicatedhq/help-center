@@ -3,30 +3,36 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_params_set
 categories:
 - replicatedctl
-date: 2018-02-20T00:45:55Z
-description: Sets an individual param value
+date: 2018-06-22T16:37:46-07:00
+description: Sets an individual Replicated daemon parameter value
+gradient: purpleToPink
 index: docs
 title: replicatedctl params set
 weight: "551"
-gradient: "purpleToPink"
 ---
 
 ## replicatedctl params set
 
-Sets an individual param value
+Sets an individual Replicated daemon parameter value
 
 ### Synopsis
 
-
-Sets an individual param value
+Sets an individual Replicated daemon parameter value
 
 ```
-replicatedctl params set KEY
+replicatedctl params set KEY [flags]
+```
+
+### Examples
+
+```
+replicatedctl params set AppUpdateCheckSchedule --value '@every 5h'
 ```
 
 ### Options
 
 ```
+  -h, --help           help for set
       --value string   Sets the param value
 ```
 
@@ -37,5 +43,6 @@ replicatedctl params set KEY
 ```
 
 ### SEE ALSO
-* [replicatedctl params](/api/replicatedctl/replicatedctl_params/)	 - Manage params
+
+* [replicatedctl params](/api/replicatedctl/replicatedctl_params/)	 - Manage Replicated daemon parameters. Provides the ability to import, export, set and unset parameters.
 

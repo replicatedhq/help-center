@@ -25,7 +25,7 @@ specs:
           - cooltool/supportbundle 0.11.1
 ```
 
-    
+
 ### Required Parameters
 
 
@@ -35,7 +35,7 @@ specs:
 - `url` - The HTTP request URL
 
 
-    
+
 ### Optional Parameters
 
 
@@ -48,16 +48,16 @@ specs:
 - `insecure` - Set to `true` to skip TLS verification
 
 
-    
+
 ### Outputs
 
-
+    
 - `body` - The response body
 
-    
+
 <br>
 {{< note title="Shared Parameters" >}}
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
-    
+
     

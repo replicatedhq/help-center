@@ -65,7 +65,7 @@ your kubernetes cluster:
     bash ./scripts/install.sh
 
 
-A state file has been written to {{repl context "state_file_path" }} -- please store it
+A state file has been written to {{repl Installation "state_file_path" }} -- please store it
 somewhere safe, you'll need it if you want to recover or update this installation of GitLab.
 ```
 

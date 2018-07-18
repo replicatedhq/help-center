@@ -26,7 +26,7 @@ specs:
             - com.cooltool.tier=api
 ```
 
-    
+
 ### Optional Parameters
 
 
@@ -39,18 +39,18 @@ specs:
 - `task_list_options` - Options for filtering stack tasks
 
 
-    
+
 ### Outputs
 
-
+    
 - `{{.TaskId}}.stdout` - The stdout output. Will generate this file for each matched service task
 
 - `{{.TaskId}}.stderr` - The stderr output. Will generate this file for each matched service task
 
-    
+
 <br>
 {{< note title="Shared Parameters" >}}
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
-    
+
     

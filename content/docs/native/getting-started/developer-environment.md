@@ -67,6 +67,8 @@ To do this, rebuild your Docker images on your Studio server reusing the existin
 
 **_Note: When iterating on Docker images in Studio, referencing local Docker images using the `latest` tag is not supported. Replicated will re-pull any images with the `latest` tag, thus overwriting any changes you are making locally._**
 
+**_Note: Pulling third-party private images is not supported with Replicated studio. If your app uses an external private registry, you'll need to pull the images down to the server where the on-prem Admin Console is running. _**
+
 {{< linked_headline "Additional features" >}}
 
 The logs from Replicated Studio display any lint or syntax issues detected in your application yaml. You can also view all interactions the on-prem Replicated has with the Studio API.

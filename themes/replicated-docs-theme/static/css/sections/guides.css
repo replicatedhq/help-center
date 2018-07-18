@@ -96,6 +96,32 @@
   color: #2A98CB;
 }
 
+/* Iterate with Replicated Studio -- Configure (custom CSS) */
+.studioIntro--link {
+  margin: 0 15px 0 0;
+  font-weight: 500;
+  font-size: 14px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  color: #2a98cb;
+  border-bottom: 2px transparent solid;
+}
+.studioIntro--installScript.empty {
+  font-weight: 500;
+  font-size: 14px;
+  padding: 1em;
+  border: dashed #9b9b9b 1px;
+  border-radius: 0.3em;
+}
+.studioIntro--installScript.empty p {
+  margin: 0;
+  color: #9b9b9b;
+}
+.studioIntro--link:hover,
+.studioIntro--link.selected {
+  border-bottom: 2px #2a98cb solid;
+}
+
 /* ≥ 568px */
 @media screen and (min-width: 35.5em) {
   .chapter-block ul {

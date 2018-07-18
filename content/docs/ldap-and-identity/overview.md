@@ -29,8 +29,7 @@ identity:
 |-------|-------------|
 | enabled | Boolean indicating if LDAP authentication is enabled on this installation. |
 | provisioner | (Optional) Host that provides provisioning API for synchronization with LDAP. This is required if using directory sync, and can be omiitted if only using LDAP authentication. |
-| sources | Only `ldap` source is supported at this time. |
-
+| sources | `ldap` and `ldap_advanced` sources are supported. |
 
 Additionally, before your application containers can use the Replicated LDAP integration, you'll need to collect some LDAP settings from your enterprise customer. We recommend you include our suggested configuration items in your application yaml to start.
 
@@ -39,7 +38,6 @@ Additionally, before your application containers can use the Replicated LDAP int
 Replicated provides a simple API to your containers that can be used to authenticate with a directory.
 
 {{< linked_headline "Directory Sync" >}}
-
 
 {{< linked_headline "Configuration" >}}
 
@@ -52,10 +50,7 @@ identity:
   sources:
   - source: ldap
     enabled: '{{repl if ConfigOptionEquals "auth_source" "auth_type_ldap"}}true{{repl else}}false{{repl end}}'
-  - source: ldap_advanced
-    enabled: '{{repl if ConfigOptionEquals "auth_source" "auth_type_ldap_advanced"}}true{{repl else}}false{{repl end}}'
 ```
-
 
 ```yaml
 - name: auth
@@ -70,8 +65,6 @@ identity:
       title: Built In
     - name: auth_type_ldap
       title: LDAP
-    - name: auth_type_ldap_advanced
-      title: LDAP Advanced
 - name: ldap_settings
   title: LDAP Server Settings
   when: auth_source=auth_type_ldap
@@ -218,28 +211,6 @@ identity:
     title: Test password
     type: password
     required: false
-- name: ldap_settings_advanced
-  title: LDAP Advanced Server Settings
-  description: |
-    Upload a file below for advanced integration configuration. This file must conform to the
-    [Advanced LDAP Configuration Specification](https://help.replicated.com/docs/packaging-an-application/ldap-integration/#advanced-ldap-configuration-specification).
-  when: auth_source=auth_type_ldap_advanced
-  test_proc:
-    # Optional.
-    # When defined, the Test button will be shown on the LDAP settings section which will allow validating
-    # the supplied file.
-    display_name: Validate Config
-    command: ldap_config_validate
-    run_on_save: true
-    arg_fields:
-    - ldap_config_file
-  items:
-  - name: ldap_config_file
-    # LDAP server type.  All standard LDAP implementations are supported.
-    # In order to use Provisioning API, the LDAP server (AD being an exception) must support the Content Sync feature.
-    title: LDAP Config File
-    type: file
-    required: true
 ```
 
 Note the use of the LdapCopyAuthFrom function. This is optional, but when LDAP is used to secure the Replicated console, settings entered on that screen will be copied as default values.
@@ -247,92 +218,3 @@ Note the use of the LdapCopyAuthFrom function. This is optional, but when LDAP i
 {{< linked_headline "Identity API" >}}
 
 See [Identity API](/api/integration-api) for information on how to authenticate and sync with LDAP server.
-
-{{< linked_headline "Advanced LDAP Configuration Specification" >}}
-
-The following JSON schema defines the advanced LDAP config spec. This is especially useful if you intend to support identity management via multiple LDAP domains or organizational units.
-
-```json
-{
-	"$schema": "http://json-schema.org/draft-04/schema#",
-	"type": "array",
-	"items": {
-		"$ref": "#/definitions/ldap_host"
-	},
-	"definitions": {
-		"ldap_host": {
-			"type": "object",
-			"properties": {
-				"ServerType": {
-					"type": "string",
-					"enum": ["openldap", "ad", "other"]
-				},
-				"Hostname": {
-					"type": "string",
-					"format": "hostname"
-				},
-				"Port": {
-					"type": "integer"
-				},
-				"Encryption": {
-					"type": "string",
-					"enum": ["plain", "starttls", "ldaps"]
-				},
-				"BaseDN": {
-					"type": "string"
-				},
-				"UserSearchDNs": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					},
-					"minItems": 1
-				},
-				"FieldUsername": {
-					"type": "string"
-				},
-				"SearchUsername": {
-					"type": "string"
-				},
-				"SearchPassword": {
-					"type": "string"
-				},
-				"RestrictedGroupCNs": {
-					"oneOf": [
-						{
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
-						},
-						{
-							"type": "null"
-						}
-					]
-				},
-				"LoginUsername": {
-					"type": "string"
-				},
-				"LoginPassword": {
-					"type": "string"
-				},
-				"AdvancedSearch": {
-					"type": "boolean"
-				},
-				"UserQuery": {
-					"type": "string"
-				},
-				"GroupQuery": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"ServerType", "Hostname", "Port", "Encryption", "BaseDN",
-				"UserSearchDNs", "FieldUsername", "SearchUsername",
-				"SearchPassword"
-			],
-			"additionalProperties": false
-		}
-	}
-}
-```

@@ -23,7 +23,7 @@ To start, include the following assets in a Ship release. These define the Docke
 assets:
   v1:
     - inline:
-       dest: ./installer/k8s/registry/registry-service.yml
+       dest: ./k8s/registry/registry-service.yml
        contents: |
          ---
          kind: Service
@@ -39,7 +39,7 @@ assets:
                targetPort: 5000
 
     - inline:
-        dest: ./installer/k8s/registry/registry-pod.yml
+        dest: ./k8s/registry/registry-pod.yml
         contents: |
           ---
           apiVersion: v1
@@ -74,11 +74,11 @@ Next, include your private images in your Ship YAML as assets. This will force S
 assets:
   v1:
     - docker:
-        dest: ./installer/images/private-image.tar
+        dest: ./images/private-image.tar
         image: registry.replicated.com/myapplication/private-image:1
         source: replicated
     - inline:
-        dest: ./installer/k8s/pod.yml
+        dest: ./k8s/pod.yml
         contents: |
           ---
           apiVersion: v1
@@ -100,7 +100,7 @@ assets:
 assets:
   v1:
     - inline:
-        dest: ./installer/scripts/install.sh
+        dest: ./scripts/install.sh
         contents: |
           #!/bin/bash
 

@@ -13,36 +13,5 @@ gradient: "purpleToPink"
 
 ## Ship Lifecycle
 
-This is the reference documenation for Ship lifecycle. To get started with Ship, head on over to [Ship Guides](/guides/ship/)
-
-Lifeycle is where you can define and customize the end-user experience for customers installing your application. Lifecycle has two step types at the moment:
-
-- `message` - print a message to the console
-- `render` - collect configuration and generate assets
-
-In ship, a short assets section to pull and run a private docker container might look like
-
-```yaml
-lifecycle:
-  v1:
-    - message:
-        contents: |
-          This installer will prepare assets so you can run CoolTool Enterprise.
-    - render: {}
-    - message:
-        contents: |
-          Asset rendering complete! Copy the following files to your production server
-          
-             ./scripts/install.sh  
-             ./images/myimage.tar
-          
-          And then, on that server, run
-             
-             bash ./scripts/install.sh 
-          
-          To start the app. Thanks for using CoolTool!
-          
-```
-
-We're always interested to hear more about how you're deploying your application to your customers, if there's a lifecycle step you'd like to see, drop us a line at https://vendor.replicated.com/support or https://help.replicated.com/community.
+This is the reference documenation for Ship lifecycle. To get started with Ship, head on over to [Shipping a Helm Application](/guides/helm-application/)
 

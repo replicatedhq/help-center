@@ -56,6 +56,9 @@ support:
             run: my-nginx
 ```
 
+{{< linked_headline "Excluding Logs From Support Bundles" >}}
+If a container's logs may contain sensitive information or are simply large and not useful for your debugging processes, you can exclude that container's logs from support bundles and disk persistance. To do this, [add the label](/docs/native/packaging-an-application/docker-options/#labels) `com.replicated.excludelogs=true` to the container in question.
+
 {{< linked_headline "Default Support Files" >}}
 
 {{< note title="Older Replicated Instances" >}}
@@ -113,7 +116,7 @@ By default the Support Bundle will include the following files in the master fol
 | /replicated/etc/replicated.conf                                  | Replicated configuration file. A copy of the `/etc/replicated.conf` file                                                                        |
 | /replicated/etc/sysconfig/replicated                             | Replicated configuration file. A copy of the `/etc/sysconfig/replicated` file                                                                   |
 | /replicated/etc/sysconfig/replicated-operator                    | Replicated operator configuration file. A copy of the `/etc/sysconfig/replicated-operator` file                                                 |
-| /replicated/internal/auditlog.csv                                | Replicated audit log events dump                                                                                                                |
+| /replicated/internal/audit_events.csv                                | Replicated audit log events dump                                                                                                                |
 | /replicated/internal/config-commands.txt                         | Replicated config command results                                                                                                               |
 | /replicated/internal/daemon.json                                 | Replicated daemon information                                                                                                                   |
 | /replicated/internal/goroutines.txt                              | Replicated thread dump                                                                                                                          |

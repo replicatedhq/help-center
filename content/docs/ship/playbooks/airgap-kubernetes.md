@@ -32,10 +32,10 @@ Once these requirements are met, the Ship assets and scripts can:
 assets:
   v1:
     - docker:
-        dest: ./installer/images/redis.tar
+        dest: ./images/redis.tar
         image: redis:4.1
     - inline:
-        dest: ./installer/k8s/redis.yml
+        dest: ./k8s/redis.yml
         contents: |
           apiVersion: v1
           kind: Pod
@@ -51,7 +51,7 @@ assets:
               ports:
               - containerPort: 6379
     - inline:
-        dest: ./installer/install.sh
+        dest: ./install.sh
         mode: 0755
         contents: |
           #!/bin/bash

@@ -24,23 +24,23 @@ specs:
           - cooltool-docker-swarm-
 ```
 
-    
+
 ### Optional Parameters
 
 
 - `Filters` - Same as would be passed to `docker node ls`
 
 
-    
+
 ### Outputs
 
-
+    
 - `node_ls.json` - JSON output
 
-    
+
 <br>
 {{< note title="Shared Parameters" >}}
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
-    
+
     

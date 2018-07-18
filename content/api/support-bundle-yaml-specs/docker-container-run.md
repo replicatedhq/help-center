@@ -31,32 +31,32 @@ specs:
           NetworkMode: host
 ```
 
-    
+
 ### Required Parameters
 
 
 - `container_create_config` - Container create options as would be passed to `docker run`
 
 
-    
+
 ### Optional Parameters
 
 
 - `enable_pull` - If `true`, allow this container to be pulled if not present
 
 
-    
+
 ### Outputs
 
-
+    
 - `stdout.raw` - The standard output of the container
 
 - `stderr.raw` - The standard error of the container
 
-    
+
 <br>
 {{< note title="Shared Parameters" >}}
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
-    
+
     
