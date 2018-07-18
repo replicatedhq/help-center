@@ -85,5 +85,8 @@ assets:
         url: https://s3.us-east-2.amazonaws.com/path-to/install.sh
         dest: ./install.sh
         mode: 0755
+        headers:
+          Accept:
+            - text/x-shellscript
 ```
 
