@@ -31,3 +31,5 @@ config:
 ```
 
 The configuration options API is identical to that used for applications managed by Replicated's scheduler suite, and the documentation can be found at [Config Screen YAML](/docs/config-screen/config-yaml/).
+
+Config values, but not defaults, will be saved at `.ship/state.json` when assets are generated. On subsequent runs of ship, these saved values will be used instead of values within your config when preparing the initial settings screen for the user. If an item has `readonly: true` set, then values from the saved state will not be used for that item. This allows users to have their existing settings prepopulated when rerunning ship.
