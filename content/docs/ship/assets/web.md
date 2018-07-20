@@ -37,9 +37,6 @@ There are cases where using other asset types provides a better Ship experience:
 - Pulling a Docker image. Use a [Docker Asset](https://help.replicated.com/docs/ship/assets/docker/#docker-asset-type) to pull an image from a public docker registry, registry.replicated.com, or a configured third party registry and produce a tar archive of the container image
 
 
-- Pulling a helm chart. Use a Helm Asset to template and render an existing helm chart. You can either reference an existing chart in a private or public github repo, or your installer runbook can include assets to drop an existing helm chart at `local.chart_root`
-
-
 - Pulling content from GitHub. Create a [GitHub Asset](https://help.replicated.com/docs/ship/assets/github/#github-asset-type) from files downloaded from either a public or a linked Github repo
 
 
