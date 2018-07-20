@@ -14,6 +14,12 @@ gradient: "purpleToPink"
 Adds a step that will generate a support bundle. It has one argument, use_defaults
 
 
+```yaml
+lifecycle:
+  - generate:
+      use_defaults: true
+```
+
 
 ### Optional Parameters
 
