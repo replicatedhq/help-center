@@ -24,5 +24,5 @@ lifecycle:
 ### Optional Parameters
 
 
-- `prompt` - is the message prompt to display to the end customer for entering a note
+- `prompt` - the message prompt to display to the end customer for entering a note
 
