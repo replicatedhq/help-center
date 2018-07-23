@@ -5,7 +5,6 @@ description: Documentation for standalone Support Bundle specs
 index: false
 title: Support Bundle YAML Reference
 weight: "12000"
-hideFromList: true
 ---
 
 ## Support Bundle
