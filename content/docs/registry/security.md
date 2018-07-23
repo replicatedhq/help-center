@@ -23,7 +23,7 @@ The Replicated Private Registry supports several method of authentication. Note 
 
 ### Vendor Authentication
 
-All accounts with Read/Write access on vendor.replicated.com or console.replicated.com will have full access to all images pushed by the tenance to the registry. These users can push and pull images to and from the registry.
+All accounts with Read/Write access on vendor.replicated.com or console.replicated.com will have full access to all images pushed by the tenant to the registry. These users can push and pull images to and from the registry.
 
 ### End Customer Authentication
 
@@ -37,7 +37,7 @@ The registry metadata is stored in a shared database instance. This contains inf
 
 The registry image data is securely stored in an encrypted S3 bucket. This results in each layer being encrypted at rest, using a shared key stored in [Amazon Key Management Service](https://aws.amazon.com/kms/). Each tenant has a unique directory in the shared bucket and access is limited to the team or license making the request.
 
-The registry cluster is running on a harded operating system image (CentOS-based), and all instances are on a private VPC. The instances running the cluster and the registry images do not have public IP addresses assigned, instead only port 443 traffic is allowed from a layer 7 load balancer into these servers.
+The registry cluster is running on a hardend operating system image (CentOS-based), and all instances are on a private VPC. The instances running the cluster and the registry images do not have public IP addresses assigned, instead only port 443 traffic is allowed from a layer 7 load balancer into these servers.
 
 Additionally, there are no ssh public keys on these servers, and password-based ssh login is disallowed. The servers are not configured to have any remote access. All deployments to these servers are automated using tools such as Terraform and a custom-built CI/CD process. Only verified images will be pulled and run.
 

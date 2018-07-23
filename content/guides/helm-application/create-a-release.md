@@ -50,9 +50,9 @@ assets:
         #!/bin/sh
         mkdir -p ./installer/gitlab
         curl -o gitlab.tar.gz https://gitlab.com/charts/gitlab/-/archive/e57c8ccbde6c2c6ef0f3eea6cb23411ae4cafc56/gitlab-e57c8ccbde6c2c6ef0f3eea6cb23411ae4cafc56.tar.gz
-        tar xzvf -C ./installer/gitlab/gitlab.tar.gz
+        ar xzvf gitlab.tar.gz -C ./installer/gitlab --strip-components=1
         helm dependencies update
-        helm upgrade --install gitlab . \
+        helm upgrade --install gitlab ./installer/gitlab \
           --timeout 600 \
           --set global.hosts.domain={{repl config "domain_name"}} \
           {{repl if {{repl config "external_ip"}} }}--set global.hosts.externalIP={{repl config "external_ip"}}{{end}} \
