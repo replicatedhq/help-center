@@ -1,7 +1,7 @@
 ---
 date: "2018-03-03T04:02:20Z"
 title: "Analyzers"
-description: "An explanation of Troubleshoot Collectors"
+description: "An explanation of Troubleshoot Analyzers"
 weight: "1902"
 categories: [ "Replicated Troubleshoot" ]
 index: ["docs/troubleshoot", "docs"]
@@ -20,3 +20,5 @@ After uploading a support bundle to the [Vendor Portal](https://vendor.replicate
 Many different analyzers are run, and attempt to find known incompatibilities, misconfigured services and environment issues that might be causing problems. Additionally, commonly accessed information such as version numbers, server load, and more are displayed here to help reduce the need to dig through log files to find this information.
 
 This section of the documentation lists some of the analyzers that might be displayed and an explanation of why it was added. The list of analyzers here is not a complete list of every analyer run, rather it's a look into some of the commonly reported insights.
+
+Additionally, [custom analyzers](/docs/troubleshoot/analyzers/custom/) can be written to extract insights specific to your application.

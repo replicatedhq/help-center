@@ -5,7 +5,6 @@ description: "An explanation of Troubleshoot Collectors"
 weight: "1905"
 categories: [ "Replicated Troubleshoot" ]
 index: ["docs/troubleshoot", "docs"]
-aliases: [ /docs/troubleshoot/analyzers ]
 icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
