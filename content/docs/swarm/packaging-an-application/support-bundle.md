@@ -98,6 +98,7 @@ By default the Support Bundle will include the following files in the master fol
 | /default/docker/image_ls.json | List all images. Result of the command `docker images`|
 | /default/etc/centos-release | Operating system identification data for centos distributions. A copy of the `/etc/centos-release` file. |
 | /default/etc/default/docker | Upstart docker configuration. A copy of the `/etc/default/docker` file |
+| /default/etc/fstab | The system's filesystems table. A copy of the `/etc/fstab` file |
 | /default/etc/hostname | The system's host name. A copy of the `/etc/hostname` file |
 | /default/etc/hosts | Static table lookup for hostnames. A copy of the `/etc/hosts` file |
 | /default/etc/os-release | Operating system identification data. A copy of the `/etc/os-release` file. |
