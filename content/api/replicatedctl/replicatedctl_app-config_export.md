@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-config_export
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-07-12T15:30:20-07:00
 description: Export app config settings
 gradient: purpleToPink
 index: docs
@@ -27,6 +27,7 @@ replicatedctl app-config export [flags]
 
 ```
   -h, --help              help for export
+      --hidden            Include hidden values in output
   -o, --output string     Output format. One of: json|yaml
       --template string   Format the output using the given Go template
 ```
