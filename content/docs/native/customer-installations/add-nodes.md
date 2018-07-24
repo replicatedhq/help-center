@@ -7,7 +7,6 @@ categories: [ "Managing Customer Installation" ]
 index: ["docs/native", "docs"]
 aliases: [docs/distributing-an-application/add-nodes-replicated,/docs/distributing-an-application/add-nodes/,/docs/native/packaging-an-application/add-nodes/]
 icon: "replicatedCircle"
-nextPage: "native/examples/overview.md"
 ---
 
 When an application is configured by the vendor with a clustering strategy, Replicated makes it possible for the end customer to install additional nodes on remote instances to run a distributed application. Installations of Replicated using the [easy installation script](/docs/native/packaging-an-application/installing-via-script/) will install an operator on the local node automatically.
