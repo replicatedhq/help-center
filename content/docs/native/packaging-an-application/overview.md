@@ -25,15 +25,14 @@ properties:
 backup:
   enabled: true
 
-/* Create a random string to persist over the lifetime of
-   this installation */
+# Create a random string to persist over the lifetime of this installation
 cmds:
   - name: jwt_hmac_secret
     cmd: random
     args:
       - "128"
 
-/* Include a single redis container */
+# Include a single redis container
 components:
   - name: Redis
     containers:
@@ -41,14 +40,14 @@ components:
         image_name: redis
         version: 3.2.11
 
-/* Define CPU and memory graphs to show in the Admin Console */
+# Define CPU and memory graphs to show in the Admin Console
 monitors:
   cpuacct:
     - Redis,redis
   memory:
     - Redis,redis
 
-/* Define the config screen to show in the Admin Console */
+# Define the config screen to show in the Admin Console
 config:
   - name: hostname
     title: Hostname
