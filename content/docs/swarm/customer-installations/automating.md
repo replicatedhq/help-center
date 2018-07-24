@@ -2,7 +2,7 @@
 date: "2018-07-17T00:00:00Z"
 title: "Automated Installations"
 description: "How to automate installation of Replicated and an application"
-weight: "707"
+weight: "708"
 categories: [ "Managing Customer Installation" ]
 index: ["docs/swarm", "docs"]
 icon: "replicatedDockerSwarm"
