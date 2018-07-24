@@ -519,7 +519,7 @@ environment:
 func Namespace() string
 ```
 
-Namespace returns the value of the namespace the vendor application is installed in.
+Namespace returns the value of the namespace the vendor application is installed in. This is also the swarm stack name.
 
 
 {{< linked_headline "SwarmIngressAddress" >}}

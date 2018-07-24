@@ -2,7 +2,7 @@
 date: "2018-05-02T01:19:20Z"
 title: "Generating Random Passwords"
 description: "Generate static password values that are unique to each customer's installation"
-weight: "44005"
+weight: "44006"
 categories: [ "Ship Playbooks" ]
 index: ["docs/products", "docs"]
 icon: "replicatedShip"
