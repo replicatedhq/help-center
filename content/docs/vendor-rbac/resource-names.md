@@ -278,7 +278,7 @@ Grants the holder permission to push images into Replicated registry.
 
 ### customer/list
 
-Grants the holder the ability to list customers.
+Grants the holder the ability to see list of customers.
 
 ### customer/[:customerId]/read
 
@@ -286,11 +286,11 @@ Grants the holder permission to view the customer information, specified by cust
 
 ### customer/create
 
-Grants the holder permission to create new customer.
+Grants the holder permission to create a new customer.
 
 ### customer/upload_avatar
 
-Grants the holder permission to upload a avatar
+Grants the holder permission to upload a avatar.
 
 ### customer/[:customerId]/update
 
