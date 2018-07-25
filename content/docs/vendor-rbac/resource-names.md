@@ -63,6 +63,12 @@ index: "other"
 | [team/policy/create](#team-policy-create) |
 | [registry/namespace/:namespace/pull](#registry-namespace-namespace-pull) |
 | [registry/namespace/:namespace/push](#registry-namespace-namespace-push) |
+| [customer/list] (#customer-list) |
+| [customer/[:customerId]/read] (#customer-customerId-read)|
+| [customer/create] (#customer-create) |
+| [customer/upload_avatar] (#customer-uploadAvatar) |
+| [customer/[:customerId]/update] (#customer-customerId-update) |
+| [customer/[:customerId]/delete] (#customer-customerId-delete) |
 
 
 #### platform/app/[:appId]/delete
@@ -269,3 +275,27 @@ Grants the holder permission to pull images from Replicated registry.
 ### registry/namespace/:namespace/push
 
 Grants the holder permission to push images into Replicated registry.
+
+### customer/list
+
+Grants the holder the ability to list customers.
+
+### customer/[:customerId]/read
+
+Grants the holder permission to view the customer information, specified by customer ID.
+
+### customer/create
+
+Grants the holder permission to create new customer.
+
+### customer/upload_avatar
+
+Grants the holder permission to upload a avatar
+
+### customer/[:customerId]/update
+
+Grants the holder poermission to update customer informations, specified by customer ID.
+
+### customer/[:customerId]/delete
+
+Grants the holder permission to remove customer.
