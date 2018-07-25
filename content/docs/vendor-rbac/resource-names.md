@@ -63,12 +63,12 @@ index: "other"
 | [team/policy/create](#team-policy-create) |
 | [registry/namespace/:namespace/pull](#registry-namespace-namespace-pull) |
 | [registry/namespace/:namespace/push](#registry-namespace-namespace-push) |
-| [customer/list] (#customer-list) |
-| [customer/[:customerId]/read] (#customer-customerId-read)|
-| [customer/create] (#customer-create) |
-| [customer/upload_avatar] (#customer-uploadAvatar) |
-| [customer/[:customerId]/update] (#customer-customerId-update) |
-| [customer/[:customerId]/delete] (#customer-customerId-delete) |
+| [customer/list](#customer-list) |
+| [customer/[:customerId]/read](#customer-customerId-read)|
+| [customer/create](#customer-create) |
+| [customer/upload_avatar](#customer-uploadAvatar) |
+| [customer/[:customerId]/update](#customer-customerId-update) |
+| [customer/[:customerId]/delete](#customer-customerId-delete) |
 
 
 #### platform/app/[:appId]/delete
