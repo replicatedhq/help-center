@@ -10,4 +10,4 @@ aliases: [/docs/vendor-rbac]
 
 Replicated offers customizable, role based access control policies that can be used to grant or deny access to users when interacting with the Replicated services.
 
-Every team has 2 policies automatically created: "Admin" and "Read Only". Teams on the "Business" plan or above can customize these and add additional policies, that can be used to control access to specific resources, such as the ability to promote to a specific channel, or edit certain licenses.
+Every team has 2 policies automatically created: "Admin" and "Read Only". Teams on the "Enterprise" plan can create custom policies and roles that can be used to control access to specific resources, such as the ability to promote to a specific channel, or edit certain licenses.
