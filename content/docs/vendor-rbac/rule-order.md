@@ -9,7 +9,7 @@ index: "other"
 
 When defining policies, it's possible that a resource name might be specified in both the `allow` and the `deny` chains. When this happens, there are defined rules that determine which rule is applied.
 
-If `denied` is left empty, it will be implied as a `**/*` rule (unless as `**/*` rule is specified in the `allowed` resources. If a rule exactly conflicts with another rule, the `denied` rule will take precedence.
+If `denied` is left empty, it will be implied as a `**/*` rule (unless `**/*` rule is specified in the `allowed` resources. If a rule exactly conflicts with another rule, the `denied` rule will take precedence.
 
 ### Most specific rule takes precedence
 The most specific rule definition will always be applied, when compared with less specific rules. Specificity of a rule is calculated by the number of `**` and `*` in the definition. A `**` in the rule definition is the least specific, followed by rules with `*` and then finally rules with no wildcards.
