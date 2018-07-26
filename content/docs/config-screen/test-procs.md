@@ -305,7 +305,7 @@ config:
 
 {{< linked_headline "JSON Validation" >}}
 
-`json_validate` - Tests for valid JSON.  The validate_json test_proc takes a single argument which is the item name that contains the JSON to test.
+`validate_json` - Tests for valid JSON.  The validate_json test_proc takes a single argument which is the item name that contains the JSON to test.
 
 ```yaml
 config:
