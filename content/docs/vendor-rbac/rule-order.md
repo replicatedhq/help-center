@@ -1,7 +1,7 @@
 ---
 date: "2018-08-22T04:02:20Z"
 title: "Rule Order"
-description: "A description of how a Replicaed RBAC Policy is applied when there are conflicting policies."
+description: "A description of how a Replicated RBAC Policy is applied when there are conflicting policies."
 weight: "2704"
 categories: [ "Vendor RBAC" ]
 index: "other"
