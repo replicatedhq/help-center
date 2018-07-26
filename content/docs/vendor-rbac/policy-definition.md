@@ -16,7 +16,7 @@ A policy is defined in a single JSON document.
     "resources": {
       "allowed": [
         "**/read",
-        "**/read"
+        "**/list"
       ],
       "denied": [
         "**/*"
