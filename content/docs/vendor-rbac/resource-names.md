@@ -158,7 +158,7 @@ Grants the holder permissions to unarchive the specified license (by ID) in the 
 
 ### platform/app/[:appId]/license/[:licenseId]/read
 
-Grants the holder permission to view the license specified by ID. If this is denied, the licenses will not show up in search, CSV export or on the Vnedor Portal.
+Grants the holder permission to view the license specified by ID. If this is denied, the licenses will not show up in search, CSV export or on the Vendor Portal.
 
 ### platform/app/[:appId]/license/[:licenseId]/update
 
