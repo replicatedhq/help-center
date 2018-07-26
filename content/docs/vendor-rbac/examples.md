@@ -18,6 +18,7 @@ The support engineer policy grants read access to release, channels, and applica
     "resources": {
       "allowed": [
         "**/read",
+        "**/list",
         "platform/app/*/license/**"
       ],
       "denied": [
