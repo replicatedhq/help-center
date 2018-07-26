@@ -43,7 +43,9 @@ In this example, a policy grants access to view all customers, but not create re
     "resources": {
       "allowed": [
         "platform/app/*/license/*/read",
-        "platform/app/*/read"
+        "platform/app/*/license/*/list",
+        "platform/app/*/read",
+        "platform/app/*/list"
       ],
       "denied": [
         "**/*"
