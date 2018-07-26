@@ -23,6 +23,8 @@ Snapshots include customer console configuration, data from bind mounted volumes
 
 `script`: A shell script that will run on the server at the time of backup. _Note: The designated executable must be `/bin/sh`. `/bin/bash` is not available in the container that executes the script._
 
+`restore_script`: A shell script that will run on the server at the time of restore.  This script will be executed after all other data has been restored and the application has entered the Started state.
+
 ```yaml
 backup:
   enabled: '{{repl ConfigOptionEquals "backup_enabled" "1" }}'
@@ -50,6 +52,8 @@ The multi-strategy snapshot functionality in Replicated Platform supports differ
 `pause_containers`: A string that can equal "true" or "false". If true, Replicated will pause all containers and then resume them upon completion (note your app will potentially have downtime). It's possible to snapshot most data without pausing the containers, we've [published an article](/docs/kb/developer-resources/zero-downtime-backup/) for tips on zero downtime backups.
 
 `script`: A shell script that will run on the server at the time of backup. _Note: The designated executable must be `/bin/sh`. `/bin/bash` is not available in the container that executes the script._
+
+`restore_script`: A shell script that will run on the server at the time of restore.  This script will be executed after all other data has been restored and the application has entered the Started state.  Only the script defined for the strategy whose snapshot is being restored will be executed.
 
 ```yaml
 backup:
