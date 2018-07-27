@@ -35,7 +35,6 @@ index: "other"
 | [platform/app/[:appId]/license/[:licenseId]/unarchive](#platform-app-appid-license-licenseid-unarchive) |
 | [platform/app/[:appId]/license/[:licenseId]/read](#platform-app-appid-license-licenseid-read) |
 | [platform/app/[:appId]/license/[:licenseId]/update](#platform-app-appid-license-licenseid-update) |
-| [platform/app/[:appId]/license/[:licenseId]/download](#platform-app-appid-license-licenseid-download) |
 | [platform/app/[:appId]/licensefields/create](#platform-app-appid-licensefields-create) |
 | [platform/app/[:appId]/licensefields/read](#platform-app-appid-licensefields-read) |
 | [platform/app/[:appId]/licensefields/update](#platform-app-appid-licensefields-update) |
@@ -163,10 +162,6 @@ Grants the holder permission to view the license specified by ID. If this is den
 ### platform/app/[:appId]/license/[:licenseId]/update
 
 Grants the holder permission to edit the license specified (by ID) for the specified application(s).
-
-### platform/app/[:appId]/license/[:licenseId]/download
-
-Grants the holder permission to download the license file for the specified licenses (by ID) in the specified application(s).
 
 ### platform/app/[:appId]/licensefields/create
 
