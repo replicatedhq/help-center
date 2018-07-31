@@ -16,6 +16,22 @@ gradient: "purpleToPink"
 A `message` step will print a message to the console or UI.
 
 
+
+### Required Parameters
+
+
+- `contents` - the message to display
+
+
+
+### Optional Parameters
+
+
+- `level` - the severity of the message -- defaults to `info`. Other options are `debug`, `warn`, and `error`
+
+
+### Examples
+
 ```yaml
 lifecycle:
   v1:
@@ -34,20 +50,3 @@ lifecycle:
           Please ensure docker is configured on the target server.
         level: warn
 ```
-
-    
-### Required Parameters
-
-
-- `contents` - the message to display
-
-
-    
-### Optional Parameters
-
-
-- `level` - the severity of the message -- defaults to `info`. Other options are `debug`, `warn`, and `error`
-
-
-    
-    
