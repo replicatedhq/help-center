@@ -15,17 +15,18 @@ gradient: "purpleToPink"
 
 A `web` asset delivers web content from a private or public URL
 
-    
+
+
 ### Required Parameters
+
+
+- `dest` - A path to which the file should be written when generating assets
 
 
 - `url` - A public or private URL to pull content from
 
 
-- `dest` - A path to which the content should be written when generating assets
 
-
-    
 ### Optional Parameters
 
 
@@ -41,8 +42,10 @@ A `web` asset delivers web content from a private or public URL
 - `method` - Defaults to `GET` if not present, supports `POST`
 
 
-- `mode` - Unix file permissions to set on the asset, e.g `600`
+- `mode` - Unix file permissions to set on the asset
 
+
+- `when` - This asset will be included when 'when' is omitted or true
 
 
 ### Examples
@@ -54,4 +57,3 @@ assets:
         url: 'https://my_bucket.s3.amazonaws.com/path-to-file'
         dest: ./my-bucket-contents
 ```
-    

@@ -16,7 +16,7 @@ gradient: "purpleToPink"
 An `inline` asset is one that is specified directly in your Ship application's spec.
 
 
-    
+
 ### Required Parameters
 
 
@@ -26,11 +26,15 @@ An `inline` asset is one that is specified directly in your Ship application's s
 - `dest` - A path to which the file should be written when generating assets
 
 
-    
+
 ### Optional Parameters
 
 
 - `mode` - Specifies file mode of the created asset, defaults to `0644`
+
+
+- `when` - This asset will be included when 'when' is omitted or true
+
 
 ### Examples
 
@@ -79,4 +83,3 @@ assets:
                       - containerPort: 3000
 
 ```
-      

@@ -32,16 +32,17 @@ A `github` asset is created from files downloaded from either a public or a link
 - `source` - One of `public` or `private`, if `private`, access to the repo can be validated on release creation
 
 
-    
+
 ### Optional Parameters
 
 
 - `ref` - Reference to a github commit to pull, usually a SHA or a tag -- usage of branches is supported but discouraged as content could change within a single Ship release
 
 
+- `when` - This asset will be included when 'when' is omitted or true
+
 
 ### Examples
-
 
 ```yaml
 assets:
@@ -53,4 +54,3 @@ assets:
         dest: ./k8s/
         source: private
 ```
-    

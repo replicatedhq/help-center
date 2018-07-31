@@ -15,17 +15,31 @@ gradient: "purpleToPink"
 
 A `helm` asset will template and render an existing helm chart. You can either reference an existing chart in a private or public github repo, or your installer runbook can include assets to drop an existing helm chart at `local.chart_root`.
 
+
+
 ### Required Parameters
 
 
 - `dest` - The directory in which to render the chart. If the source chart is at `charts/src/nginx`, and `dest` is set to `charts/rendered/`, then the chart will be templated at `charts/rendered/nginx`
 
 
-    
+
 ### Optional Parameters
 
 
 - `github` - Configuration for indicating a chart hosted in a private or public github repo. Fields are same as `assets.v1.github`
+
+    required:
+
+  - `path` - Path in repo from which to pull file or directory
+
+  - `ref` - Reference to a github commit to pull, usually a SHA or a tag -- usage of branches is supported but discouraged as content could change within a single Ship release
+
+  - `repo` - The GitHub repository to pull from, formated as `owner`/`repo` e.g. `replicatedhq/ship`
+
+    optional:
+
+  - `source` - One of `public` or `private`, if `private`, access to the repo can be validated on release creation
 
 
 - `helm_opts` - Additional options as would be passed to `helm template`
@@ -33,8 +47,16 @@ A `helm` asset will template and render an existing helm chart. You can either r
 
 - `local` - Configuration for indicating an already existing source chart to render from.
 
+    required:
+
+  - `chart_root` - The base directory of the existing chart.
+
 
 - `values` - Values to set during rendering, overrides defaults in `values.yaml` if present in the chart root.
+
+
+- `when` - This asset will be included when 'when' is omitted or true
+
 
 ### Examples
 
@@ -65,5 +87,4 @@ assets:
         local:
           chart_root: charts/src/nginx/
         dest: charts/rendered/
-```   
-    
+```

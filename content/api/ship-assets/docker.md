@@ -16,7 +16,7 @@ gradient: "purpleToPink"
 A `docker` asset will pull an image from a public docker registry, registry.replicated.com, or a configured third party registry and produce a tar archive of the container image.
 
 
-    
+
 ### Required Parameters
 
 
@@ -29,15 +29,17 @@ A `docker` asset will pull an image from a public docker registry, registry.repl
 - `source` - The source for the image. Should be either `public`, `replicated`, or the name of a third-party private registry previously configured on [console.replicated.com](https://console.replicated.com)
 
 
-    
+
 ### Optional Parameters
+
 
 - `mode` - The unix file permissions to be set on the image tar archive, e.g `600`.
 
 
+- `when` - This asset will be included when 'when' is omitted or true
+
 
 ### Examples
-
 
 ```yaml
 assets:
