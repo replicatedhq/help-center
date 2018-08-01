@@ -2,7 +2,7 @@
 categories:
 - ship-assets
 date: 2018-01-17T23:51:55Z
-description: A `amazon_elastic_kubernetes_service` asset generates a terraform file that will create an Amazon EKS Cluster
+description: An `amazon_elastic_kubernetes_service` asset generates a terraform file that will create an Amazon EKS Cluster
 index: docs
 title: amazon_elastic_kubernetes_service
 weight: "100"
@@ -13,7 +13,7 @@ gradient: "purpleToPink"
 
 ## amazon_elastic_kubernetes_service
 
-A `amazon_elastic_kubernetes_service` asset generates a terraform file that will create an Amazon EKS Cluster
+An `amazon_elastic_kubernetes_service` asset generates a terraform file that will create an Amazon EKS Cluster
 
 
 
