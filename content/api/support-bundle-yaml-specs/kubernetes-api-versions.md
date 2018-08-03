@@ -15,9 +15,10 @@ The API versions of the Kubernetes cluster
 
 
 ```yaml
-specs:
-  - kubernetes.api-versions:
-      output_dir: /kubernetes/
+collect:
+  v1:
+    - kubernetes.api-versions:
+        output_dir: /kubernetes/
 ```
 
 
@@ -32,4 +33,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

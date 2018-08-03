@@ -15,10 +15,11 @@ Collect information about containers
 
 
 ```yaml
-specs:
-  - docker.ps:
-      output_dir: /docker/ps/
-      All: true
+collect:
+  v1:
+    - docker.ps:
+        output_dir: /docker/ps/
+        All: true
 ```
 
 
@@ -61,4 +62,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

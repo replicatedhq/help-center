@@ -15,16 +15,17 @@ Collect information about the tasks running in a service
 
 
 ```yaml
-specs:
-  - docker.stack-service-ps:
-      output_dir: /swarm/stacks/cooltool/service-tasks
-      description: Tasks owned by services in the cooltool stack
-      namespace: cooltool-core
-      task_list_options:
-        Filters:
-          label:
-            - com.cooltool.tier=www
-            - com.cooltool.tier=api
+collect:
+  v1:
+    - docker.stack-service-ps:
+        output_dir: /swarm/stacks/cooltool/service-tasks
+        description: Tasks owned by services in the cooltool stack
+        namespace: cooltool-core
+        task_list_options:
+          Filters:
+            label:
+              - com.cooltool.tier=www
+              - com.cooltool.tier=api
 ```
 
 
@@ -53,4 +54,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

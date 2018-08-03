@@ -15,9 +15,10 @@ Get the version of the docker server
 
 
 ```yaml
-specs:
-  - docker.version:
-      output_dir: /docker/version
+collect:
+  v1:
+    - docker.version:
+        output_dir: /docker/version
 ```
 
 
@@ -32,4 +33,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

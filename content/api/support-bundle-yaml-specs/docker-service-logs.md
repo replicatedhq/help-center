@@ -15,22 +15,24 @@ Collect logs from a docker swarm service. One of `service` or `service_list_opti
 
 
 ```yaml
-specs:
-  - docker.service-logs:
-      output_dir: /swarm/services/www
-      service: cooltool-www
+collect:
+  v1:
+    - docker.service-logs:
+        output_dir: /swarm/services/www
+        service: cooltool-www
 ```
 
 ```yaml
-specs:
-  - docker.service-logs:
-      output_dir: /swarm/services/core-stack
-      service_list_options:
-        Filters:
-          name:
-            - cooltool-www
-            - cooltool-api
-            - cooltool-worker
+collect:
+  v1:
+    - docker.service-logs:
+        output_dir: /swarm/services/core-stack
+        service_list_options:
+          Filters:
+            name:
+              - cooltool-www
+              - cooltool-api
+              - cooltool-worker
 ```
 
 
@@ -60,4 +62,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

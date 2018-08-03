@@ -15,19 +15,21 @@ Run a command. Will be run in the support bundle container if `docker run replic
 
 
 ```yaml
-specs:
-  - os.run-command:
-      output_dir: /system/commands/ping-google
-      name: date
+collect:
+  v1:
+    - os.run-command:
+        output_dir: /system/commands/ping-google
+        name: date
 ```
 
 ```yaml
-specs:
-  - os.run-command:
-      output_dir: /system/commands/ping-google
-      name: cat
-      args:
-        - /etc/os-release
+collect:
+  v1:
+    - os.run-command:
+        output_dir: /system/commands/ping-google
+        name: cat
+        args:
+          - /etc/os-release
 ```
 
 
@@ -64,4 +66,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

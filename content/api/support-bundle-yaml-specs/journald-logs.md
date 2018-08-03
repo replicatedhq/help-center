@@ -15,12 +15,13 @@ Collect logs from journald
 
 
 ```yaml
-specs:
-  - journald.logs:
-      output_dir: /system/journald/cooltool-api
-      reverse: true
-      unit: cooltool-api
-      since: '2018-01-01'
+collect:
+  v1:
+    - journald.logs:
+        output_dir: /system/journald/cooltool-api
+        reverse: true
+        unit: cooltool-api
+        since: '2018-01-01'
 ```
 
 
@@ -52,4 +53,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

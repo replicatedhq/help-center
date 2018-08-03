@@ -15,13 +15,14 @@ Collect information about the nodes in a Docker Swarm installation
 
 
 ```yaml
-specs:
-  - docker.node-ls:
-      description: List of swarm nodes
-      output_dir: /swarm/nodes/
-      Filters:
-        name:
-          - cooltool-docker-swarm-
+collect:
+  v1:
+    - docker.node-ls:
+        description: List of swarm nodes
+        output_dir: /swarm/nodes/
+        Filters:
+          name:
+            - cooltool-docker-swarm-
 ```
 
 
@@ -43,4 +44,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

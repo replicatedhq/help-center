@@ -15,14 +15,15 @@ Collect the stdout and stderr of `exec`-ing a command on a running docker contai
 
 
 ```yaml
-specs:
-  - docker.container-exec:
-      container: supergoodtool-www
-      output_dir: /www/debug/
-      exec_config:
-        Cmd:
-          - nginx
-          - '-t'
+collect:
+  v1:
+    - docker.container-exec:
+        container: supergoodtool-www
+        output_dir: /www/debug/
+        exec_config:
+          Cmd:
+            - nginx
+            - '-t'
 ```
 
 
@@ -49,4 +50,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

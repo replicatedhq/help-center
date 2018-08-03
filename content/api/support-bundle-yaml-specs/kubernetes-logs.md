@@ -15,30 +15,32 @@ Collect the logs for one or more kubernetes pods
 
 
 ```yaml
-specs:
-  - kubernetes.logs:
-      output_dir: /kubernetes/api-pod-logs
-      pod: cooltool-api-110212121-ab123ef
-      namespace: default
-      pod_log_options:
-        timestamps: true
-        sinceSeconds: 1000000
-        limitBytes: 1000000000
-      timeout_seconds: 30
+collect:
+  v1:
+    - kubernetes.logs:
+        output_dir: /kubernetes/api-pod-logs
+        pod: cooltool-api-110212121-ab123ef
+        namespace: default
+        pod_log_options:
+          timestamps: true
+          sinceSeconds: 1000000
+          limitBytes: 1000000000
+        timeout_seconds: 30
 ```
 
 ```yaml
-specs:
-  - kubernetes.logs:
-      output_dir: /kubernetes/api-pod-logs
-      namespace: default
-      pod_log_options:
-        timestamps: true
-        sinceSeconds: 1000000
-        limitBytes: 1000000000
-      list_options:
-        labelSelector: type=reporting
-      timeout_seconds: 30
+collect:
+  v1:
+    - kubernetes.logs:
+        output_dir: /kubernetes/api-pod-logs
+        namespace: default
+        pod_log_options:
+          timestamps: true
+          sinceSeconds: 1000000
+          limitBytes: 1000000000
+        list_options:
+          labelSelector: type=reporting
+        timeout_seconds: 30
 ```
 
 
@@ -71,4 +73,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

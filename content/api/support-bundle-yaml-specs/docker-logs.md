@@ -15,20 +15,21 @@ Collect the stdout/stderr logs from one or more docker containers. One of `conta
 
 
 ```yaml
-specs:
-  - docker.logs:
-      description: >-
-        The docker logs for all the containers labeled with
-        com.supercooltool.onprem
-      output_dir: /docker/logs
-      timeout_seconds: 100
-      container_list_options:
-        All: true
-        Filters:
-          label:
-            - com.supercooltool.onprem=true
-      container_logs_options:
-        Timestamps: true
+collect:
+  v1:
+    - docker.logs:
+        description: >-
+          The docker logs for all the containers labeled with
+          com.supercooltool.onprem
+        output_dir: /docker/logs
+        timeout_seconds: 100
+        container_list_options:
+          All: true
+          Filters:
+            label:
+              - com.supercooltool.onprem=true
+        container_logs_options:
+          Timestamps: true
 ```
 
 
@@ -58,4 +59,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

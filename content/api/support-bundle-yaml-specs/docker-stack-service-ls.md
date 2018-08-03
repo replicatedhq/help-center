@@ -15,11 +15,12 @@ Collect information about services in a swarm stack
 
 
 ```yaml
-specs:
-  - docker.stack-service-ls:
-      output_dir: /swarm/stacks/cooltool/services
-      description: Logs from services in the cooltool stack
-      namespace: cooltool-core
+collect:
+  v1:
+    - docker.stack-service-ls:
+        output_dir: /swarm/stacks/cooltool/services
+        description: Logs from services in the cooltool stack
+        namespace: cooltool-core
 ```
 
 
@@ -48,4 +49,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

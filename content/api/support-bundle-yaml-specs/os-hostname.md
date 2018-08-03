@@ -15,9 +15,10 @@ Get the hostname
 
 
 ```yaml
-specs:
-  - os.hostname:
-      output_dir: /system/hostname
+collect:
+  v1:
+    - os.hostname:
+        output_dir: /system/hostname
 ```
 
 
@@ -34,4 +35,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

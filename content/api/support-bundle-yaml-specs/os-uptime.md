@@ -15,9 +15,10 @@ Collect information about the system's uptime
 
 
 ```yaml
-specs:
-  - os.uptime:
-      output_dir: /system/uptime
+collect:
+  v1:
+    - os.uptime:
+        output_dir: /system/uptime
 ```
 
 
@@ -39,4 +40,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  
