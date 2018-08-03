@@ -24,6 +24,6 @@
     "gulp-useref": "^3.1.2",
     "hugo-algolia": "^1.2.13",
     "retraced-logs-viewer": "^2.1.18",
-    "support-bundle-upload": "^1.0.6"
+    "support-bundle-upload": "^1.0.7"
   }
 }
