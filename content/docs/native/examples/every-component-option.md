@@ -92,8 +92,8 @@ components:
         ephemeral: false
         hostname: server.replexample.int
         extra_hosts:
-          - address: '{{repl ConfigOption "extraHostAddress" "" }}'
-            hostname: '{{repl ConfigOption "extraHostName" "" }}'
+          - address: '{{repl ConfigOption "extraHostAddress" }}'
+            hostname: '{{repl ConfigOption "extraHostName" }}'
             when: '{{repl ConfigOptionNotEquals "extraHostAddress" "" }}'
         image_name: worker
         labels:

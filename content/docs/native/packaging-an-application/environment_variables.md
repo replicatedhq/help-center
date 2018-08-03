@@ -30,11 +30,11 @@ There is also a flag provided to exclude anything secret from the support bundle
     - name: POSTGRES_URI
       value: 'postgres://{{repl ConfigOption "postgres_user"}}:{{repl ConfigOption "postgres_pass"}}@{{repl ConfigOption "postgres_host"}}:5432'
       is_excluded_from_support: true
-      when: '{{repl ConfigOption "bring_own_postgres" "1"}}'
+      when: '{{repl ConfigOptionEquals "bring_own_postgres" "1"}}'
     - name: POSTGRES_URI
       value: 'postgres://myappuser:{{repl ConfigOption "generated_password"}}@{{repl NodePrivateIPAddress "DB" "postgres"}}:5432'
       is_excluded_from_support: true
-      when: '{{repl ConfigOption "bring_own_postgres" "0"}}
+      when: '{{repl ConfigOptionEquals "bring_own_postgres" "0"}}
 ```
 
 {{< linked_headline "when" >}}
