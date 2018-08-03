@@ -101,7 +101,10 @@ spec:
 ```
 
 Replicated would rewrite this spec to pull the image from registry.replicated.com, which would proxy the image from `quay.io/namespace`. Credentials for `quay.io/namespace` are never sent to customer installations.
-When configuring Docker Hub as your external private registry, always specify the endpoint as `index.docker.io`. See the [guestbook](/docs/kubernetes/examples/guestbook/) app with examples of private, external, and public images.
+When configuring Docker Hub as your external private registry, always specify the endpoint as `index.docker.io`.
+Always use the latest API version of a resource to ensure that the images will be correctly rewritten by Replicated.
+Replicated will rewrite the images in an `apps/v1` Deployment, for example, but not an `apps/v1beta1` or `extensions/v1beta1` Deployment.
+See the [guestbook](/docs/kubernetes/examples/guestbook/) app with examples of private, external, and public images.
 
 {{< linked_headline "Bundling Airgap Images" >}}
 
