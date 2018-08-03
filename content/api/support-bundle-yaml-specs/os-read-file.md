@@ -15,10 +15,11 @@ Read a file from the filesystem
 
 
 ```yaml
-specs:
-  - os.read-file:
-      output_dir: /files/etc/bigtool-conf
-      filepath: /etc/bigtool.conf
+collect:
+  v1:
+    - os.read-file:
+        output_dir: /files/etc/bigtool-conf
+        filepath: /etc/bigtool.conf
 ```
 
 
@@ -40,4 +41,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

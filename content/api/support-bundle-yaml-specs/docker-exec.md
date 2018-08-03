@@ -15,15 +15,16 @@ Collect the stdout/stderr of executing a command in an already running docker co
 
 
 ```yaml
-specs:
-  - docker.exec:
-      container: supergoodtool-www
-      output_dir: /www/debug/
-      exec_config:
-        Cmd:
-          - toolctl
-          - info
-          - '--verbose'
+collect:
+  v1:
+    - docker.exec:
+        container: supergoodtool-www
+        output_dir: /www/debug/
+        exec_config:
+          Cmd:
+            - toolctl
+            - info
+            - '--verbose'
 ```
 
 
@@ -50,4 +51,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

@@ -15,13 +15,14 @@ Collect a list of docker swarm services
 
 
 ```yaml
-specs:
-  - docker.service-ls:
-      output_dir: /swarm/services/list/
-      description: List of all services starting with `cooltool-`
-      Filters:
-        name:
-          - cooltool-
+collect:
+  v1:
+    - docker.service-ls:
+        output_dir: /swarm/services/list/
+        description: List of all services starting with `cooltool-`
+        Filters:
+          name:
+            - cooltool-
 ```
 
 
@@ -43,4 +44,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

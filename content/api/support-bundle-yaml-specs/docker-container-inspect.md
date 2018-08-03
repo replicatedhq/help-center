@@ -15,16 +15,17 @@ Collect the `docker inspect` output for one or more running or stopped container
 
 
 ```yaml
-specs:
-  - docker.container-inspect:
-      output_dir: /containers/cooltool/www-stack
-      container_list_options:
-        All: true
-        Filters:
-          name:
-            - www
-            - nginx
-            - dnsmasq
+collect:
+  v1:
+    - docker.container-inspect:
+        output_dir: /containers/cooltool/www-stack
+        container_list_options:
+          All: true
+          Filters:
+            name:
+              - www
+              - nginx
+              - dnsmasq
 ```
 
 
@@ -49,4 +50,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

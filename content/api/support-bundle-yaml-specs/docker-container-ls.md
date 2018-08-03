@@ -15,14 +15,15 @@ Collect information about one or more containers
 
 
 ```yaml
-specs:
-  - docker.container-ls:
-      output_dir: /docker/cooltool/containers/
-      All: true
-      Filters:
-        name:
-          - www
-          - haproxy
+collect:
+  v1:
+    - docker.container-ls:
+        output_dir: /docker/cooltool/containers/
+        All: true
+        Filters:
+          name:
+            - www
+            - haproxy
 ```
 
 
@@ -65,4 +66,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

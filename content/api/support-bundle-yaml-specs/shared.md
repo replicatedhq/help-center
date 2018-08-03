@@ -35,26 +35,27 @@ information you want to collect to debug your application. All Support Bundle sp
 An example is shown below for the `os.read-file` collector.
 
 ```yaml
-specs:
-  - os.read-file:
-      # path on the host
-      filepath: /etc/goodtool.conf
-      # path in the bundle
-      output_dir: /files/etc/goodtool-conf
-      # a description that will be included in the bundle
-      description: The GoodTool application configuration file
-      # give up if we can't read the file in 10 seconds
-      timeout_seconds: 10
-      # scrub anything that might be sensitive
-      scrub:
-        regex: (db_password|api_secret_key) = (.*)
-        replace: $1 = REDACTED
-      # metadata that will be included in the bundle
-      meta:
-        name: goodtool_conf
-        labels:
-          area: "configuration"
-          type: "readfile"
-      # Includes file in output even if empty
-      include_empty: true
+collect:
+  v1:
+    - os.read-file:
+        # path on the host
+        filepath: /etc/goodtool.conf
+        # path in the bundle
+        output_dir: /files/etc/goodtool-conf
+        # a description that will be included in the bundle
+        description: The GoodTool application configuration file
+        # give up if we can't read the file in 10 seconds
+        timeout_seconds: 10
+        # scrub anything that might be sensitive
+        scrub:
+          regex: (db_password|api_secret_key) = (.*)
+          replace: $1 = REDACTED
+        # metadata that will be included in the bundle
+        meta:
+          name: goodtool_conf
+          labels:
+            area: "configuration"
+            type: "readfile"
+        # Includes file in output even if empty
+        include_empty: true
 ```

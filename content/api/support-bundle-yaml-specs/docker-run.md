@@ -15,20 +15,21 @@ Collect the stderr/stdout of running a single docker container
 
 
 ```yaml
-specs:
-  - docker.run:
-      description: Listing of host's network interfaces
-      output_dir: /host/network
-      container_create_config:
-        Config:
-          Cmd:
-            - ip
-            - addr
-            - show
-          Image: 'debian:latest'
-        HostConfig:
-          AutoRemove: true
-          NetworkMode: host
+collect:
+  v1:
+    - docker.run:
+        description: Listing of host's network interfaces
+        output_dir: /host/network
+        container_create_config:
+          Config:
+            Cmd:
+              - ip
+              - addr
+              - show
+            Image: 'debian:latest'
+          HostConfig:
+            AutoRemove: true
+            NetworkMode: host
 ```
 
 
@@ -59,4 +60,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

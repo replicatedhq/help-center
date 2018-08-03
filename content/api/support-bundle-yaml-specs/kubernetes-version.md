@@ -15,9 +15,10 @@ Get the kubernetes version
 
 
 ```yaml
-specs:
-  - kubernetes.version:
-      output_dir: /kubernetes/
+collect:
+  v1:
+    - kubernetes.version:
+        output_dir: /kubernetes/
 ```
 
 
@@ -32,4 +33,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

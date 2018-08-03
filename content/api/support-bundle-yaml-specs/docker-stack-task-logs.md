@@ -15,36 +15,39 @@ Collect logs from a docker swarm task
 
 
 ```yaml
-specs:
-  - docker.stack-task-logs:
-      output_dir: /swarm/stacks/cooltool/service-logs
-      description: Logs from services in the cooltool stack
-      namespace: cooltool-core
-      task_list_options:
-        Filters:
-          name:
-            - redis.1
+collect:
+  v1:
+    - docker.stack-task-logs:
+        output_dir: /swarm/stacks/cooltool/service-logs
+        description: Logs from services in the cooltool stack
+        namespace: cooltool-core
+        task_list_options:
+          Filters:
+            name:
+              - redis.1
 ```
 
 ```yaml
-specs:
-  - docker.stack-task-logs:
-      output_dir: /swarm/stacks/cooltool/service-logs
-      description: Logs from services in the cooltool stack
-      namespace: cooltool-core
-      labels: {}
+collect:
+  v1:
+    - docker.stack-task-logs:
+        output_dir: /swarm/stacks/cooltool/service-logs
+        description: Logs from services in the cooltool stack
+        namespace: cooltool-core
+        labels: {}
 ```
 
 ```yaml
-specs:
-  - docker.stack-task-logs:
-      output_dir: /swarm/stacks/cooltool/service-logs
-      description: Logs from services in the cooltool stack
-      namespace: cooltool-core
-      labels:
-        com.replicated.excludelogs: 'false'
-        abc: xyz
-        abc2: ''
+collect:
+  v1:
+    - docker.stack-task-logs:
+        output_dir: /swarm/stacks/cooltool/service-logs
+        description: Logs from services in the cooltool stack
+        namespace: cooltool-core
+        labels:
+          com.replicated.excludelogs: 'false'
+          abc: xyz
+          abc2: ''
 ```
 
 
@@ -81,4 +84,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

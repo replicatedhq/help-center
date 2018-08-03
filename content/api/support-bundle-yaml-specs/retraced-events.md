@@ -15,31 +15,33 @@ Collect Audit Log events from a running Retraced instance
 
 
 ```yaml
-specs:
-  - retraced.events:
-      output_dir: /audit/events
-      api_endpoint: 'https://auditlogs.mycorp.internal:8080'
-      api_token: aef342f32f22f3edf1f1f3f3ef
-      project_id: f3edf1f1f3f3efaef342f32f22
+collect:
+  v1:
+    - retraced.events:
+        output_dir: /audit/events
+        api_endpoint: 'https://auditlogs.mycorp.internal:8080'
+        api_token: aef342f32f22f3edf1f1f3f3ef
+        project_id: f3edf1f1f3f3efaef342f32f22
 ```
 
 ```yaml
-specs:
-  - retraced.events:
-      output_dir: /audit/events
-      api_endpoint: 'https://auditlogs.mycorp.internal:8080'
-      api_token: aef342f32f22f3edf1f1f3f3ef
-      project_id: f3edf1f1f3f3efaef342f32f22
-      insecure: true
-      timeout_seconds: 10
-      mask:
-        Action: true
-        Description: true
-        ActorID: true
-        ActorName: true
-        CanonicalTime: true
-      query:
-        CRUD: 'c,u,d'
+collect:
+  v1:
+    - retraced.events:
+        output_dir: /audit/events
+        api_endpoint: 'https://auditlogs.mycorp.internal:8080'
+        api_token: aef342f32f22f3edf1f1f3f3ef
+        project_id: f3edf1f1f3f3efaef342f32f22
+        insecure: true
+        timeout_seconds: 10
+        mask:
+          Action: true
+          Description: true
+          ActorID: true
+          ActorName: true
+          CanonicalTime: true
+        query:
+          CRUD: 'c,u,d'
 ```
 
 
@@ -80,4 +82,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

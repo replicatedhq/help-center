@@ -15,15 +15,16 @@ Collect the stdout/stderr logs from one or more docker containers. One of `conta
 
 
 ```yaml
-specs:
-  - docker.container-logs:
-      output_dir: /docker/cooltool/logs/www
-      container_list_options:
-        All: true
-        Filters:
-          name:
-            - www
-            - haproxy
+collect:
+  v1:
+    - docker.container-logs:
+        output_dir: /docker/cooltool/logs/www
+        container_list_options:
+          All: true
+          Filters:
+            name:
+              - www
+              - haproxy
 ```
 
 
@@ -53,4 +54,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

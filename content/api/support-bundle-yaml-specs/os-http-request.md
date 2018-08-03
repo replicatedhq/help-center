@@ -15,14 +15,15 @@ Collect information about the response from making an HTTP request
 
 
 ```yaml
-specs:
-  - os.http-request:
-      output_dir: /system/ping-ip
-      url: 'https://api.replicated.com/market/v1/echo/ip'
-      method: get
-      header:
-        User-Agent:
-          - cooltool/supportbundle 0.11.1
+collect:
+  v1:
+    - os.http-request:
+        output_dir: /system/ping-ip
+        url: 'https://api.replicated.com/market/v1/echo/ip'
+        method: get
+        header:
+          User-Agent:
+            - cooltool/supportbundle 0.11.1
 ```
 
 
@@ -60,4 +61,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

@@ -15,13 +15,14 @@ Collect information about the tasks run by one or more services
 
 
 ```yaml
-specs:
-  - docker.service-ps:
-      output_dir: /swarm/services/www/tasks/
-      description: List of all services starting with `cooltool-`
-      Filters:
-        name:
-          - cooltool-
+collect:
+  v1:
+    - docker.service-ps:
+        output_dir: /swarm/services/www/tasks/
+        description: List of all services starting with `cooltool-`
+        Filters:
+          name:
+            - cooltool-
 ```
 
 
@@ -43,4 +44,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

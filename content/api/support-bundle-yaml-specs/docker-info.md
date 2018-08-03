@@ -15,11 +15,12 @@ Collect info about the Docker daemon
 
 
 ```yaml
-specs:
-  - docker.info:
-      output_dir: /docker/daemon/
-      timeout_seconds: 10
-      description: Info about the docker daemon
+collect:
+  v1:
+    - docker.info:
+        output_dir: /docker/daemon/
+        timeout_seconds: 10
+        description: Info about the docker daemon
 ```
 
 
@@ -34,4 +35,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

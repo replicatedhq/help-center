@@ -15,15 +15,16 @@ Collect logs from a docker swarm task
 
 
 ```yaml
-specs:
-  - docker.task-logs:
-      output_dir: /swarm/tasks/logs
-      description: Logs from cooltool tasks in the www and api tiers
-      task_list_options:
-        Filters:
-          label:
-            - com.cooltool.tier=www
-            - com.cooltool.tier=api
+collect:
+  v1:
+    - docker.task-logs:
+        output_dir: /swarm/tasks/logs
+        description: Logs from cooltool tasks in the www and api tiers
+        task_list_options:
+          Filters:
+            label:
+              - com.cooltool.tier=www
+              - com.cooltool.tier=api
 ```
 
 
@@ -53,4 +54,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

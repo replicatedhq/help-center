@@ -15,33 +15,36 @@ Collect a file by copying from a running docker container
 
 
 ```yaml
-specs:
-  - docker.container-cp:
-      description: the supergoodtool www site access logs
-      container: supergoodtool-www
-      src_path: /var/log/nginx/access.log
-      output_dir: /www/access/
+collect:
+  v1:
+    - docker.container-cp:
+        description: the supergoodtool www site access logs
+        container: supergoodtool-www
+        src_path: /var/log/nginx/access.log
+        output_dir: /www/access/
 ```
 
 ```yaml
-specs:
-  - docker.container-cp:
-      description: the supergoodtool www site access logs
-      labels:
-        - container.name.label
-      src_path: /var/log/nginx/access.log
-      output_dir: /www/access/
+collect:
+  v1:
+    - docker.container-cp:
+        description: the supergoodtool www site access logs
+        labels:
+          - container.name.label
+        src_path: /var/log/nginx/access.log
+        output_dir: /www/access/
 ```
 
 ```yaml
-specs:
-  - docker.container-cp:
-      description: the supergoodtool www site access logs
-      labels:
-        - container.name.label
-      src_path: /var/log/nginx/access.log
-      output_dir: /www/access/
-      include_empty: true
+collect:
+  v1:
+    - docker.container-cp:
+        description: the supergoodtool www site access logs
+        labels:
+          - container.name.label
+        src_path: /var/log/nginx/access.log
+        output_dir: /www/access/
+        include_empty: true
 ```
 
 
@@ -75,4 +78,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

@@ -15,33 +15,36 @@ Collect a file or directory from one or more kubernetes pods and containers. If 
 
 
 ```yaml
-specs:
-  - kubernetes.container-cp:
-      output_dir: /kubernetes/all-api-pod-logs
-      pod: cooltool-api-110212121-ab123ef
-      namespace: default
-      src_path: /logs/app.log
-      timeout_seconds: 30
+collect:
+  v1:
+    - kubernetes.container-cp:
+        output_dir: /kubernetes/all-api-pod-logs
+        pod: cooltool-api-110212121-ab123ef
+        namespace: default
+        src_path: /logs/app.log
+        timeout_seconds: 30
 ```
 
 ```yaml
-specs:
-  - kubernetes.container-cp:
-      output_dir: /kubernetes/api-pod-logs
-      pod: cooltool-api-110212121-ab123ef
-      container: api
-      namespace: default
-      src_path: /logs/app.log
-      timeout_seconds: 30
+collect:
+  v1:
+    - kubernetes.container-cp:
+        output_dir: /kubernetes/api-pod-logs
+        pod: cooltool-api-110212121-ab123ef
+        container: api
+        namespace: default
+        src_path: /logs/app.log
+        timeout_seconds: 30
 ```
 
 ```yaml
-specs:
-  - kubernetes.container-cp:
-      output_dir: /kubernetes/deployment-pod-logs
-      pod_list_options:
-        labelSelector: run=api
-      src_path: /logs/
+collect:
+  v1:
+    - kubernetes.container-cp:
+        output_dir: /kubernetes/deployment-pod-logs
+        pod_list_options:
+          labelSelector: run=api
+        src_path: /logs/
 ```
 
 
@@ -85,4 +88,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

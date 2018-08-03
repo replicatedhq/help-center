@@ -15,9 +15,10 @@ Collect information about CPU load
 
 
 ```yaml
-specs:
-  - os.loadavg:
-      output_dir: /system/load
+collect:
+  v1:
+    - os.loadavg:
+        output_dir: /system/load
 ```
 
 
@@ -39,4 +40,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

@@ -15,18 +15,30 @@ Collect a list of resources managed by the cluster
 
 
 ```yaml
-specs:
-  - kubernetes.resource-list:
-      output_dir: /kubernetes/resources/deployments
-      namespace: default
-      kind: deployments
+collect:
+  v1:
+    - kubernetes.resource-list:
+        output_dir: /kubernetes/resources/deployments
+        namespace: default
+        kind: deployments
 ```
 
 ```yaml
-specs:
-  - kubernetes.resource-list:
-      output_dir: /kubernetes/resources/services
-      kind: svc
+collect:
+  v1:
+    - kubernetes.resource-list:
+        output_dir: /kubernetes/resources/deployments-apps-v1beta2
+        namespace: default
+        kind: deployments
+        group_version: apps/v1beta2
+```
+
+```yaml
+collect:
+  v1:
+    - kubernetes.resource-list:
+        output_dir: /kubernetes/resources/services
+        kind: svc
 ```
 
 
@@ -38,6 +50,9 @@ specs:
 
 
 ### Optional Parameters
+
+
+- `group_version` - Optionally override the default group and version for the resource kind (in the format "group/version").
 
 
 - `namespace` - The Kubernetes namespace. If no namespace is provided, results from all namespaces are included
@@ -58,4 +73,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

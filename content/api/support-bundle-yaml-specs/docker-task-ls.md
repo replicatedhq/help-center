@@ -15,13 +15,14 @@ List docker swarm tasks
 
 
 ```yaml
-specs:
-  - docker.task-ls:
-      output_dir: /swarm/tasklist
-      Filters:
-        name:
-          - cooltool-api-
-          - cooltool-backend-
+collect:
+  v1:
+    - docker.task-ls:
+        output_dir: /swarm/tasklist
+        Filters:
+          name:
+            - cooltool-api-
+            - cooltool-backend-
 ```
 
 
@@ -43,4 +44,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

@@ -15,13 +15,14 @@ Collect a list of docker images present on the server
 
 
 ```yaml
-specs:
-  - docker.image-ls:
-      output_dir: /cooltool/images/
-      All: true
-      Filters:
-        label:
-          - com.supercooltool.app=supercooltool-enterprise
+collect:
+  v1:
+    - docker.image-ls:
+        output_dir: /cooltool/images/
+        All: true
+        Filters:
+          label:
+            - com.supercooltool.app=supercooltool-enterprise
 ```
 
 
@@ -46,4 +47,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  

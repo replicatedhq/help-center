@@ -15,32 +15,35 @@ Collect logs from one or more services in a stack
 
 
 ```yaml
-specs:
-  - docker.stack-service-logs:
-      output_dir: /swarm/stacks/cooltool/service-logs
-      description: Logs from services in the cooltool stack
-      namespace: cooltool-core
+collect:
+  v1:
+    - docker.stack-service-logs:
+        output_dir: /swarm/stacks/cooltool/service-logs
+        description: Logs from services in the cooltool stack
+        namespace: cooltool-core
 ```
 
 ```yaml
-specs:
-  - docker.stack-service-logs:
-      output_dir: /swarm/stacks/cooltool/service-logs
-      description: Logs from services in the cooltool stack
-      namespace: cooltool-core
-      labels: {}
+collect:
+  v1:
+    - docker.stack-service-logs:
+        output_dir: /swarm/stacks/cooltool/service-logs
+        description: Logs from services in the cooltool stack
+        namespace: cooltool-core
+        labels: {}
 ```
 
 ```yaml
-specs:
-  - docker.stack-service-logs:
-      output_dir: /swarm/stacks/cooltool/service-logs
-      description: Logs from services in the cooltool stack
-      namespace: cooltool-core
-      labels:
-        com.replicated.excludelogs: 'false'
-        abc: xyz
-        abc2: ''
+collect:
+  v1:
+    - docker.stack-service-logs:
+        output_dir: /swarm/stacks/cooltool/service-logs
+        description: Logs from services in the cooltool stack
+        namespace: cooltool-core
+        labels:
+          com.replicated.excludelogs: 'false'
+          abc: xyz
+          abc2: ''
 ```
 
 
@@ -77,4 +80,4 @@ specs:
 This spec also inherits all of the required and optional [Shared Parameters](/api/support-bundle-yaml-specs/shared/)
 {{< /note >}}
 
-    
+  
