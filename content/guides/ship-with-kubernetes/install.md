@@ -35,6 +35,7 @@ To test this installation, we need a server. I'm going to create a test EC2 inst
 - Ubuntu 16.04
 - at least 4 GB of RAM
 - 2 CPU cores
+- at least 50GB of disk space
 
 Next, ssh into the server we just created, and run the install script:
 
