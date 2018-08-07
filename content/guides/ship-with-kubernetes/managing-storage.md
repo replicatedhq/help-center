@@ -45,3 +45,5 @@ The default `RollingUpdate` with `maxUnavailable` value of `25%` will prevent ol
 {{< linked_headline "Troubleshooting" >}}
 
 The [Rook toolbox](https://rook.io/docs/rook/master/toolbox.html) provides a convenient image for monitoring and debugging your Rook cluster. You can run it as a pod in the `rook` namespace and have access to commands such as `ceph status` to check the health of your storage cluster.
+
+For more information on managing the storage needs of Kubernetes in customer environments, see [Managing Storage](/docs/kubernetes/customer-installations/managing-storage/).
