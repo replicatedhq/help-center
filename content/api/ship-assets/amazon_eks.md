@@ -2,18 +2,18 @@
 categories:
 - ship-assets
 date: 2018-01-17T23:51:55Z
-description: An `amazon_elastic_kubernetes_service` asset generates a terraform file that will create an Amazon EKS Cluster
+description: An `amazon_eks` asset generates a terraform file that will create an Amazon EKS Cluster
 index: docs
-title: amazon_elastic_kubernetes_service
+title: amazon_eks
 weight: "100"
 gradient: "purpleToPink"
 ---
 
 [Assets](/api/ship-assets/assets) | [Config](/api/ship-config/config) | [Lifecycle](/api/ship-lifecycle/lifecycle) 
 
-## amazon_elastic_kubernetes_service
+## amazon_eks
 
-An `amazon_elastic_kubernetes_service` asset generates a terraform file that will create an Amazon EKS Cluster
+An `amazon_eks` asset generates a terraform file that will create an Amazon EKS Cluster
 
 
 
@@ -54,7 +54,7 @@ An `amazon_elastic_kubernetes_service` asset generates a terraform file that wil
   - `zones` - The availability zones to create subnets within
 
 
-- `dest` - The path within `terraform/` to place the generated file. Defaults to `amazon_elastic_kubernetes_service.tf`
+- `dest` - The path within `terraform/` to place the generated file. Defaults to `amazon_eks.tf`
 
 
 - `existing_vpc` - The existing VPC to use for the EKS cluster
@@ -79,7 +79,7 @@ An `amazon_elastic_kubernetes_service` asset generates a terraform file that wil
 ```yaml
 assets:
   v1:
-    - amazon_elastic_kubernetes_service:
+    - amazon_eks:
         cluster_name: existing-vpc-cluster
         region: us-east-1
         existing_vpc:
@@ -102,7 +102,7 @@ assets:
 ```yaml
 assets:
   v1:
-    - amazon_elastic_kubernetes_service:
+    - amazon_eks:
         cluster_name: new-vpc-cluster
         region: us-west-2
         created_vpc:
