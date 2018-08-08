@@ -2,18 +2,18 @@
 categories:
 - ship-lifecycle
 date: 2018-01-17T23:51:55Z
-description: A `kubectl` step will run `kubectl apply` with the provided file path and kubeconfig.
+description: A `kubectl_apply` step will run `kubectl apply` with the provided file path and kubeconfig.
 index: docs
-title: kubectl
+title: kubectl_apply
 weight: "100"
 gradient: "purpleToPink"
 ---
 
 [Assets](/api/ship-assets/assets) | [Config](/api/ship-config/config) | [Lifecycle](/api/ship-lifecycle/lifecycle) 
 
-## kubectl
+## kubectl_apply
 
-A `kubectl` step will run `kubectl apply` with the provided file path and kubeconfig.
+A `kubectl_apply` step will run `kubectl apply` with the provided file path and kubeconfig.
 
 
 
@@ -35,14 +35,14 @@ A `kubectl` step will run `kubectl apply` with the provided file path and kubeco
 ```yaml
 lifecycle:
   v1:
-    - kubectl:
+    - kubectl_apply:
         path: config.yml
 ```
 
 ```yaml
 lifecycle:
   v1:
-    - kubectl:
+    - kubectl_apply:
         path: k8s/another.yml
         kubeconfig: k8s/generated_kubeconfig
 ```
