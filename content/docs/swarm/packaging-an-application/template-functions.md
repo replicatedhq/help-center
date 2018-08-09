@@ -34,7 +34,7 @@ services:
       - redis
     environment:
 {{repl if eq (ConsoleSetting "airgap.install") true}}
-      AIRGAP="true"
+      - AIRGAP="true"
 {{repl end}}
     deploy:
       mode: replicated
