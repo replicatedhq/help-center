@@ -31,7 +31,7 @@ The support engineer policy grants read access to release, channels, and applica
 
 ## Sales
 
-The sales policy grants read-write access to customers and license details, but nothing else.
+The sales policy grants read-write access to customers and license details, and read-only access to resources necessary to manage licenses, but nothing else.
 
 ```json
 {
@@ -39,6 +39,9 @@ The sales policy grants read-write access to customers and license details, but 
     "name": "Sales",
     "resources": {
       "allowed": [
+        "platform/app/*/read",
+        "platform/app/*/channel/*/read",
+        "platform/app/*/licensefields/read",
         "platform/app/*/license/**"
       ],
       "denied": [
