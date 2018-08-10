@@ -137,6 +137,7 @@ lifecycle:
         contents: |
           This tool will prepare assets so you can deploy GitLab-Enterpise
           to your existing Kubernetes cluster
+    - config: {}
     - render: {}
     - message:
         contents: |

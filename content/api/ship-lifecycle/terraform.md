@@ -20,7 +20,7 @@ A `terraform` step will deploy terraform resources.
 ### Optional Parameters
 
 
-- `path` - the directory within `installer` to run terraform within.
+- `path` - the directory within `installer` within which to run terraform.
 
 
 ### Examples

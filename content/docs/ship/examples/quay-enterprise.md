@@ -171,6 +171,7 @@ lifecycle:
       contents: |
         This program will prepare a script and kubernetes manifests that can be used to deploy
         Quay.io enterprise to your existing Kubernetes cluster.
+  - config: {}
   - render: {}
   - message:
      contents: |
