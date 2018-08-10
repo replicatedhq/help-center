@@ -11,7 +11,7 @@ gradient: "console"
 
 {{< linked_headline "Ship Lifecycle" >}}
 
-The lifecycle key is where you can define and customize the end-user experience for customers installing your application. A lifecycle has two step types:
+The lifecycle key is where you can define and customize the end-user experience for customers installing your application. A lifecycle has several step types:
 
 - `"message"` - print a message to the console. This can be used multiple times.
 - `"config"` - collect configuration from the end user based on the top-level `config` section
