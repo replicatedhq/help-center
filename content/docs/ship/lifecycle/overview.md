@@ -11,10 +11,11 @@ gradient: "console"
 
 {{< linked_headline "Ship Lifecycle" >}}
 
-The lifecycle key is where you can define and customize the end-user experience for customers installing your application. A lifecycle has two step types:
+The lifecycle key is where you can define and customize the end-user experience for customers installing your application. A lifecycle has several step types:
 
 - `"message"` - print a message to the console. This can be used multiple times.
-- `"render"` - collect configuration and generate assets. This commonly is used once in an application.
+- `"config"` - collect configuration from the end user based on the top-level `config` section
+- `"render"` - generate assets based on provided config values. This commonly is used once in an application.
 
 In ship, a short assets section to pull and run a private docker container might look like
 
@@ -24,6 +25,7 @@ lifecycle:
     - message:
         contents: |
           This installer will prepare assets so you can run CoolTool Enterprise.
+    - config: {}
     - render: {}
     - message:
         contents: |
