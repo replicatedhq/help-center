@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_console-auth
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-08-13T13:37:11-07:00
 description: Manage UI console authentication settings
 gradient: purpleToPink
 index: docs
