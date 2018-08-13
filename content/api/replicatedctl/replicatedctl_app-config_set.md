@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-config_set
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-08-13T13:37:11-07:00
 description: Sets an individual app config value
 gradient: purpleToPink
 index: docs
@@ -26,9 +26,9 @@ replicatedctl app-config set NAME [flags]
 ### Options
 
 ```
-      --data strings    Sets the item data
-  -h, --help            help for set
-      --value strings   Sets the item value
+      --data stringArray    Sets the item data
+  -h, --help                help for set
+      --value stringArray   Sets the item value
 ```
 
 ### Options inherited from parent commands

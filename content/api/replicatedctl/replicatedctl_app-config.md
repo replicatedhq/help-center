@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-config
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-08-13T13:37:11-07:00
 description: Manage app config
 gradient: purpleToPink
 index: docs

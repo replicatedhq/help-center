@@ -1,33 +1,28 @@
 ---
 aliases:
-- docs/reference/replicatedctl/replicatedctl_version
+- docs/reference/replicatedctl/replicatedctl_cluster
 categories:
 - replicatedctl
 date: 2018-08-13T13:37:11-07:00
-description: Get the Replicated CLI version information
+description: Manage the cluster
 gradient: purpleToPink
 index: docs
-title: replicatedctl version
+title: replicatedctl cluster
 weight: "551"
 ---
 
-## replicatedctl version
+## replicatedctl cluster
 
-Get the Replicated CLI version information
+Manage the cluster
 
 ### Synopsis
 
-Get the Replicated CLI version information
-
-```
-replicatedctl version [flags]
-```
+Manage the cluster
 
 ### Options
 
 ```
-  -h, --help    help for version
-      --quiet   Only print the version
+  -h, --help   help for cluster
 ```
 
 ### Options inherited from parent commands
@@ -39,4 +34,5 @@ replicatedctl version [flags]
 ### SEE ALSO
 
 * [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
+* [replicatedctl cluster node-join-script](/api/replicatedctl/replicatedctl_cluster_node-join-script/)	 - Outputs the script to run to join a node to the cluster
 
