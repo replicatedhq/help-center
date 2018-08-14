@@ -2,7 +2,7 @@
 date: "2018-07-17T00:00:00Z"
 title: "Automated Installations"
 description: "How to automate installation of Replicated and an application"
-weight: "2709"
+weight: "2710"
 categories: [ "Managing Customer Installation" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
