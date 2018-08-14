@@ -19,7 +19,7 @@ Replicated's Kubernetes scheduler uses [Rook](https://rook.io/) to dynamically p
 
 Replicated's install script will default to creating a cluster backed by the host directory `/opt/replicated/rook`.
 Each file in the cluster begins with a single copy, i.e. without replication.
-When a new node is added to the cluster, you can edit the Pool custom resource named `replicapool` in the `rook` namespace and configure it to store copies of each file on two separate hosts:
+When a new node is added to the cluster, you can edit the Pool custom resource named `replicapool` in the `rook-ceph` namespace and configure it to store copies of each file on two separate hosts:
 
 ```shell
 kubectl -n rook patch pool replicapool --type='json' -p='[{"op": "replace", "path": "/spec/replicated/size", "value": 2}]'
@@ -44,6 +44,6 @@ The default `RollingUpdate` with `maxUnavailable` value of `25%` will prevent ol
 
 {{< linked_headline "Troubleshooting" >}}
 
-The [Rook toolbox](https://rook.io/docs/rook/master/toolbox.html) provides a convenient image for monitoring and debugging your Rook cluster. You can run it as a pod in the `rook` namespace and have access to commands such as `ceph status` to check the health of your storage cluster.
+The [Rook toolbox](https://rook.io/docs/rook/master/toolbox.html) provides a convenient image for monitoring and debugging your Rook cluster. You can run it as a pod in the `rook-ceph` namespace and have access to commands such as `ceph status` to check the health of your storage cluster.
 
 For more information on managing the storage needs of Kubernetes in customer environments, see [Managing Storage](/docs/kubernetes/customer-installations/managing-storage/).
