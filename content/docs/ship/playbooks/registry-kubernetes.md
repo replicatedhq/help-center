@@ -9,6 +9,42 @@ icon: "replicatedShip"
 gradient: "console"
 ---
 
+{{< linked_headline "Pulling images from Replicated registry" >}}
+
+When installing an application on a server that has internet access, private images can be served from Replicated registry.  Authentication will be performed with `customer_id` and `installation_id` as the username and the password respectively.  These can be used with the `docker login` command or as Kubernetes registry secrets.  In the following example, a Kubernetes secret is created in order to pull a private image from Replicated registry.
+
+```yaml
+---
+assets:
+  v1:
+    - inline:
+        dest: ./k8s/pod.yml
+        contents: |
+          ---
+          apiVersion: v1
+          kind: Pod
+          metadata:
+            name: app
+            labels:
+              app: app
+          spec:
+            containers:
+              - name: app
+                image: registry.replicated.com/myapp/redis:5.0
+                imagePullPolicy: Always
+            imagePullSecrets:
+              - name: replicatedregistrykey
+
+          ---
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            name: replicatedregistrykey
+          type: kubernetes.io/dockerconfigjson
+          data:
+            .dockerconfigjson: {{repl print "{\"auths\": {\"registry.replicated.com\":{\"username\":\"" (Installation "customer_id") "\",\"password\":\"" (Installation "installation_id") "\" } } } " | Base64Encode }}
+  ```
+
 {{< linked_headline "Shipping a Docker Registry for airgap installations" >}}
 
 When distributing a Kubernetes (or Helm) application, most customers will be able to provide a Docker registry that required application images can be pushed to. Replicated Ship can [retag and rewrite the Kubernetes YAML](/docs/ship/recipes/airgap-kubernetes/) to work in this scenario.
