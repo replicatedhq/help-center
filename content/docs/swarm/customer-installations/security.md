@@ -3,7 +3,7 @@ date: "2018-07-24T08:00:00Z"
 title: "Security"
 description: "Security is essential to enterprise software. This page describes some of the measures we employ to protect our users' production environments."
 keywords: "security, cve, vulnerabilities, policy"
-weight: "708"
+weight: "709"
 categories: [ "Distributing a Swarm Application" ]
 index: ["docs/swarm", "docs"]
 gradient: "swarm"

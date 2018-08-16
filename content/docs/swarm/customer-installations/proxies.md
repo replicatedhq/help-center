@@ -2,7 +2,7 @@
 date: "2018-07-15T04:02:20Z"
 title: "Proxies"
 description: "Instructions for configuring Replicated in environments with an HTTP Proxy"
-weight: "706"
+weight: "707"
 categories: [ "Distributing a Swarm Application" ]
 index: ["docs/swarm", "docs"]
 gradient: "swarm"
