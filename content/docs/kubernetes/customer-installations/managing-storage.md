@@ -37,3 +37,9 @@ It is critical to benchmark your app's storage requirements and enforce them wit
 
 A small app with a 1GB airgap bundle and a single 10GB Persistent Volume Claim would require 15GB to install in addition to the 16GB required for a base Replicated airgap install.
 Adding ~25% capacity to allow for accumulating container logs without triggering Kubernetes evicition levels, a preflight check of 40GB would be the minimum required for the app.
+
+{{< linked_headline "Troubleshooting" >}}
+
+The [Ceph Dashboard](https://github.com/rook/rook/blob/master/Documentation/ceph-dashboard.md) is included in the `rook-ceph-mgr` pod of the `rook-ceph` namespace. Follow the instructions for creating an external service to view the dashboard.
+
+The [Rook toolbox](https://rook.io/docs/rook/master/toolbox.html) provides a convenient image for monitoring and debugging your Rook cluster. You can run it as a pod in the `rook-ceph` namespace and have access to commands such as `ceph status` to check the health of your storage cluster.
