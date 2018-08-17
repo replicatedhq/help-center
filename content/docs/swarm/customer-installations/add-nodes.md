@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Add Nodes"
 description: "Adding nodes to a Swarm cluster that was deployed with Replicated"
-weight: "707"
+weight: "708"
 categories: [ "Distributing a Swarm Application" ]
 index: ["docs/swarm", "docs"]
 aliases: [docs/distributing-an-application/add-nodes-swarm]

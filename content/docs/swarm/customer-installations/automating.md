@@ -2,11 +2,12 @@
 date: "2018-07-17T00:00:00Z"
 title: "Automated Installations"
 description: "How to automate installation of Replicated and an application"
-weight: "708"
+weight: "710"
 categories: [ "Managing Customer Installation" ]
 index: ["docs/swarm", "docs"]
 icon: "replicatedDockerSwarm"
 aliases: []
+gradient: "swarm"
 ---
 
 Replicated has support for automated installation and configuration. This feature is built for bootstrapping new installations and not for managing existing installations.

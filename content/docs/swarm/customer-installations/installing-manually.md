@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Installing to an Existing Cluster"
 description: "Instructions for installing Replicated to an existing Docker Swarm cluster"
 keywords: "installing, removing, migrating"
-weight: "704"
+weight: "705"
 categories: [ "Distributing a Swarm Application" ]
 index: ["docs/swarm", "docs"]
 gradient: "swarm"
