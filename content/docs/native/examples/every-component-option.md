@@ -29,6 +29,7 @@ components:
       cpu_mhz: 2000
       memory: 4GB
       disk_space: 10GB
+      docker_space: 5GB
     logs:
       max_size: "10m"
       max_files: "3"

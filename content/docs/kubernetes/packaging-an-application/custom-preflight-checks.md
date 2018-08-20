@@ -37,6 +37,7 @@ host_requirements:
   cpu_mhz: 2400
   memory: 8GB
   disk_space: 80GB
+  docker_space: 10GB
   replicated_version: ">=2.3.0 <2.4.1"
 ```
 
