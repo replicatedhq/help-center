@@ -2,7 +2,7 @@
 categories:
 - analyze-yaml-specs
 date: 2018-01-17T23:51:55Z
-description: Check that the total memory for a cluster meets the required minimum
+description: Check that the Kubernetes version meets the required minimum
 index: docs
 title: kubernetes.version
 weight: "100"
@@ -11,7 +11,7 @@ gradient: "purpleToPink"
 
 ## kubernetes.version
 
-Check that the total memory for a cluster meets the required minimum
+Check that the Kubernetes version meets the required minimum
 
 
 ```yaml
@@ -25,5 +25,5 @@ analyze:
 ### Required Parameters
 
 
-- `semver_minimum` - The minimum kubernetes version
+- `semver_minimum` - The minimum Kubernetes version
 

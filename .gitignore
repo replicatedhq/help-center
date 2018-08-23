@@ -15,3 +15,5 @@ swagger2markup-*.jar
 # Logs
 logs
 *.log
+
+hugo

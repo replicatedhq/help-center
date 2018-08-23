@@ -27,7 +27,6 @@ collect:
 collect:
   v1:
     - kubernetes.resource-list:
-<<<<<<< HEAD
         output_dir: /kubernetes/resources/deployments-apps-v1beta2
         namespace: default
         kind: deployments
@@ -38,8 +37,6 @@ collect:
 collect:
   v1:
     - kubernetes.resource-list:
-=======
->>>>>>> Analyze
         output_dir: /kubernetes/resources/services
         kind: svc
 ```
