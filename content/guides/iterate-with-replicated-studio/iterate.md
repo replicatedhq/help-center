@@ -18,7 +18,7 @@ During Studio installation on your local development machine, a new directory na
 From there you can use your favorite editor locally (like Atom, Visual Studio Code, Vim, or Emacs) and saved changes will trigger new updates available to your development server.
 
 **_Note: In the directory `~/replicated/releases/` you can view a copy of each release Replicated Studio has created along the way._**
-If you supply an invalid yaml file that isn't recognized as a valid update in the on-prem UI, you can simply delete the invalid release iteration from the local directory `~/replicated/releases` save a new version of `current.yaml`.
+If you supply an invalid yaml file that isn't recognized as a valid update in the on-prem UI, you can simply delete the invalid release iteration from the local directory `~/replicated/releases` and save a new version of `current.yaml`.
 
 ### Applying updates to the dev server
 

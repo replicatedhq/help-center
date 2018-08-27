@@ -14,7 +14,7 @@ When building your application, you have the option to use the Replicated privat
 
 {{< linked_headline "Replicated Registry" >}}
 
-Every application created in Replicated has a completely isolated, private Docker registry available. You can push images to your private registry by finding the endpoint at (https://vendor.replicated.com/#/images) and using the Docker CLI to tag and push images. When using the Swarm Scheduler, Replicated will be able to automatically use the customer license file to authenticate and pull any images from the Replicated Registry.
+Every application created in Replicated has a private, [completely isolated](/docs/registry/security) Docker registry available. You can push images to your private registry by finding the endpoint at (https://vendor.replicated.com/#/images) and using the Docker CLI to tag and push images. When using the Swarm Scheduler, Replicated will be able to automatically use the customer license file to authenticate and pull any images from the Replicated Registry.
 
 {{< linked_headline "Tagging Images" >}}
 
@@ -62,9 +62,15 @@ When using Docker Swarm, Replicated supports pulling public, unauthenticated ima
 
 Additionally, Replicated supports private images hosted in other registries including Docker Hub, Quay.io and more. Currently, Replicated does not support private images in Amazon Elastic Container Registry because of the short-lived auth scheme in use.
 
-To use private images from an external registry, you need to add the registry via the Vendor website. The guide for [integrating a third party registry](/docs/kb/developer-resources/third-party-registries) explains this in further detail.
+To use private images from an external registry, you need to add the registry via the Vendor website. The guide for [integrating a third party registry](/docs/kb/developer-resources/third-party-registries) explains this in further detail. You'll also need to [declare](#declaring-images) any external registry images in an `images` section in your Replicated YAML.
 
-All images included in your Swarm application must be specified in the `images` section of your YAML in order to be included in the airgap bundle your customer will download and install.
+
+
+{{< linked_headline "Declaring Images" >}}
+
+To include images in your application, you'll need to add them to your YAML as follows.
+
+All public and private images included in your Swarm application must be specified in this `images` section of your YAML in order to be included in the airgap bundle your customer will download and install.
 
 ```yaml
 images:
