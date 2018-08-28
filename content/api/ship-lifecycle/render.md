@@ -16,6 +16,8 @@ gradient: "purpleToPink"
 A `render` step will do the work of collecting configuration values from a user and using them to generate the final assets that can be used to deploy an application.
 
 
+
+
 ### Examples
 
 ```yaml

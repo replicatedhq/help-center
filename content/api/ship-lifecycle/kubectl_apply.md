@@ -17,6 +17,8 @@ A `kubectl_apply` step will run `kubectl apply` with the provided file path and 
 
 
 
+
+
 ### Required Parameters
 
 
@@ -45,4 +47,12 @@ lifecycle:
     - kubectl_apply:
         path: k8s/another.yml
         kubeconfig: k8s/generated_kubeconfig
+```
+
+```yaml
+lifecycle:
+  v1:
+    - kubectl_apply:
+        path: k8s/another.yml
+        kubeconfig: '{{repl AmazonEKS "eks_cluster_name" }}'
 ```
