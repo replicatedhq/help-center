@@ -45,7 +45,7 @@ specs:
     output_dir: "/dns/resolv"
 ```
 
-That's it! Now we can save this spec, and collect another support bundle using the same command we ran in [Generate a Support Bundle](/guides/support-bundle/generate). Our new bundle should now contain the additional files we requested:
+That's it! Now we can save this spec, and collect another support bundle using the same command we ran in [Generate a Support Bundle](/guides/troubleshoot/generate). Our new bundle should now contain the additional files we requested:
 
 ```shell
 $ docker run ... # etc

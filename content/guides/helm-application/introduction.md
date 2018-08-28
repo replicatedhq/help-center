@@ -31,7 +31,7 @@ The most common use of Replicated Ship is to distribute a Kubernetes (or Helm) a
 
 ### Customizable Installation/Update Process
 
-When the end customer installs a Ship application, Ship will launch a branded and customizable web-based setup console. It's here that customized [commands](/docs/ship/commands) can generate data such as keys, certs, random strings, etc. The console also shows an interactive form for the operator to input data that's required to start the application.
+When the end customer installs a Ship application, Ship will launch a branded and customizable web-based setup console. It's here that customized [config options](/docs/ship/config/overview) can generate data such as keys, certs, random strings, etc. The console also shows an interactive form for the operator to input data that's required to start the application.
 
 The web-based console is a nice, user friendly way to set up the application, but automation is a big part of Ship. When an application is distributed on Ship, it's easy for the operator to automate the configuration and update process so any updates can be applied to a change management process and then staged for deployment. This can even be used to create a continuous delivery process for your on-prem software.
 

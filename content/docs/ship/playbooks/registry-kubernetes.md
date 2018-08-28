@@ -47,7 +47,7 @@ assets:
 
 {{< linked_headline "Shipping a Docker Registry for airgap installations" >}}
 
-When distributing a Kubernetes (or Helm) application, most customers will be able to provide a Docker registry that required application images can be pushed to. Replicated Ship can [retag and rewrite the Kubernetes YAML](/docs/ship/recipes/airgap-kubernetes/) to work in this scenario.
+When distributing a Kubernetes (or Helm) application, most customers will be able to provide a Docker registry that required application images can be pushed to. Replicated Ship can [retag and rewrite the Kubernetes YAML](/docs/ship/playbooks/airgap-kubernetes/) to work in this scenario.
 
 If the Kubernetes cluster ] was set up using the [Replicated Kubernetes installer](/docs/kubernetes/customer-installations/installing-k8s-only/), a Docker registry might not be available. The Replicated Kubernetes installer will pre-pull the `registry:2` image on all nodes in the cluster.
 
