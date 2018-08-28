@@ -1311,7 +1311,7 @@ components:
   - source: public
     image_name: wlaoh/counter
     version: signed
-    cmd: '{{repl ConfigOption "one_host" }}'
+    cmd: '{{ repl ConfigOption "one_host" }}'
     name: '{{repl ConfigOption "hostname" }}'
 
 ```
@@ -1402,11 +1402,11 @@ config:
   - name: left
     title: Left
     type: text
-    when: '{{repl ConfigOptionEquals "right" "right option" }}'
+    when: '{{ repl ConfigOptionEquals "right" "right option" }}'
   - name: right
     title: Right
     type: text
-    when: '{{repl ConfigOptionEquals "left" "left option" }}'
+    when: '{{ repl ConfigOptionEquals "left" "left option" }}'
 
 ```
 
