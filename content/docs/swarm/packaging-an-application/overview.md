@@ -11,7 +11,7 @@ index: ["docs/swarm", "docs"]
 hideFromList: true
 ---
 
-Using Replicated with the built-in Docker Swarm support allows you to use your existing `docker-compose.yml` and Swarm Services to deploy your application using the Replicated platform.
+Using Replicated's built-in Docker Swarm support allows you to use your existing `docker-compose.yml` and Swarm Services to deploy your application using the Replicated platform.
 
 Shipping a Swarm application with Replicated involves creating a single YAML file that contains your Docker Swarm services and additional Replicated configuration data. This is packaged as a multi-document YAML file, with a special comment at the top of each included documented to describe it's structure.
 Replicated supports Compose `3` versions up to `3.5` [depending on the installed version of Docker](https://docs.docker.com/compose/compose-file/compose-versioning/).
@@ -107,7 +107,7 @@ config:
 
 {{< linked_headline "Container Images" >}}
 
-To use private images from an external registry, you need to add the registry to [vendor.replicated.com](https://vendor.replicated.com). The guide for [integrating a third party registry](/docs/kb/developer-resources/third-party-registries) explains this in further detail.
+To use private images from an external registry, you need to add the registry to [vendor.replicated.com](https://vendor.replicated.com). The guide for [integrating a third party registry](https://help.replicated.com/community/t/using-third-party-registries/45) explains this in further detail.
 
 For Airgapped installations, all images included in your Swarm application must be specified in the `images` section of your YAML in order to be included in the airgap bundle your customer will download and install.
 

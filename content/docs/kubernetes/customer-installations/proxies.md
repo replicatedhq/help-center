@@ -41,5 +41,5 @@ Use the [ConsoleSetting](/docs/kubernetes/packaging-an-application/template-func
 ```yaml
 env:
   - name: HTTP_PROXY
-    value: {{ repl ConsoleSetting "http.proxy"}}
+    value: {{repl ConsoleSetting "http.proxy"}}
 ```
