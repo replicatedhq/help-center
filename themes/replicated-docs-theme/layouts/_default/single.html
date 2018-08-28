@@ -41,7 +41,7 @@
 								<div class="prev-next-arrows justifyContent--spaceBetween flex u-marginTop--most">
 									<div class="next flex u-textAlign--left">
 										{{ if .Params.previousPage }}
-											{{ with .Site.GetPage .Params.previousPage }}
+											{{ with .Site.GetPage "page" "docs" .Params.previousPage }}
 											<a href="{{ .Permalink }}">
 												<span class="icon u-chevronIcon"></span>
 												{{ .Title }}
@@ -58,7 +58,7 @@
 										</div>
 										<div class="previous flex u-textAlign--right">
 										{{ if .Params.nextPage }}
-											{{ with .Site.GetPage .Params.nextPage }}
+											{{ with .Site.GetPage "page" "docs" .Params.nextPage }}
 											<a href="{{ .Permalink }}">
 												{{ .Title }}
 												<span class="icon u-chevronIcon"></span>

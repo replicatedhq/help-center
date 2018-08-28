@@ -13,8 +13,6 @@ Each customer you deploy to via Replicated will need a separate license file for
 
 If you are looking to create or manage custom license fields you can do so in the License Fields section of the [vendor portal](https://vendor.replicated.com/) or via the [Vendor License API](/api/vendor-api). License values are used by Replicated to enable/disable various functionality, many of the values are also available in the on-prem instance via the [license integration API](https://replicated.readme.io/docs/license-api).
 
-![](/images/post-screens/create-customer.png)
-
 {{< linked_headline "Name (Required)" >}}
 
 The name of the customer to whom this license is assigned.

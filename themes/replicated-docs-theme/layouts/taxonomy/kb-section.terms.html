@@ -1,0 +1,42 @@
+{{ partial "headerWithSearch.html" . }}
+	<main>
+		<article class="single docs-page">
+			<div class="u-gradient--turquoiseToGreen main-section flex-column flex1 justifyContent--center">
+				<div class="container u-marginTop--most">
+					<div class="paddingContainer">
+						<div class="flex flex-auto justifyContent--center u-marginTop--more">
+							<div class="flex-auto u-hidden--mobileTablet">
+								<span class="icon u-docsHeaderIcon u-marginRight--normal"></span>
+							</div>
+							<div class="flex-auto u-widthMobile--full">
+								<h3 class="u-color--white u-fontWeight--bold u-fontSize--header">Knowledge Base</h3>
+								<p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--small u-lineHeight--normal">Docs and guides providing you with everything you need to know when it comes to creating and distributing applications with Replicated.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main-section">
+				<div class="container flex">
+                    <div class="u-flexTabletReflow flex1 quicklinks-block-wrapper paddingContainer flexWrap--wrap">
+                        {{ range ($.Site.GetPage "taxonomyTerm" "kb-sections").Pages }}
+                            <div class="quicklink-block-wrapper kb-quicklink">
+                                <a href="{{ .RelPermalink }}">
+                                    <div class="quicklink-block">
+                                        <div>
+                                            <p class="u-fontSize--largest u-color--tuna u-fontWeight--medium u-marginBottom--normal">{{ .Title }}</p>
+                                            <p class="u-fontSize--normal u-color--dustyGray u-lineHeight--normal">{{ .Description }}</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {{ end }}
+                    </div>
+				</div>
+			</div>
+			<div>
+				{{ template "_internal/disqus.html" . }}
+			</div>
+		</article>
+	</main>
+{{ partial "footer.html" . }}
