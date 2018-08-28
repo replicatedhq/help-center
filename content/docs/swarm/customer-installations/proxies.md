@@ -40,5 +40,5 @@ Replicated will not add the `HTTP_PROXY` or `NO_PROXY` environment variables to 
 Use the [ConsoleSetting](/docs/swarm/packaging-an-application/template-functions/#consolesetting) template function to add `HTTP_PROXY` to the environment of any of your application services.
 ```yaml
 environment:
-  - HTTP_PROXY={{ repl ConsoleSetting "http.proxy"}}
+  - HTTP_PROXY={{repl ConsoleSetting "http.proxy"}}
 ```

@@ -39,23 +39,14 @@ In addition to the [default support files](/docs/swarm/packaging-an-application/
 support:
   files:
     - filename: /var/log/nginx/access.log
-      source:
-        replicated:
-          component: Nginx
-          container: my-nginx
-        kubernetes:
-          selector:
-            run: my-nginx
+      swarm:
+        service: my-nginx-service
   commands:
     - filename: access_last_1000.log
       command: [tail, -n1000, /var/log/nginx/access.log]
-      source:
-        replicated:
-          component: Nginx
-          container: my-nginx
-        kubernetes:
-          selector:
-            run: my-nginx
+      swarm:
+        service: my-nginx-service
+
 ```
 
 {{< linked_headline "Excluding Logs From Support Bundles" >}}
