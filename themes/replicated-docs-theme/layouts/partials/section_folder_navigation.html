@@ -59,7 +59,7 @@
             {{ if eq $scope "Native Scheduler" }}
             <div class="u-marginBottom--most">
                 <h3 class="u-fontWeight--bold u-fontSize--large u-lineHeight--normal u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Replicated Native Scheduler</h3>
-                {{ with .Site.GetPage "section" "docs" "native" }}
+                {{ with .Site.GetPage "/docs/native" }}
                     {{ range .Pages }}
                         <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
                             <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
@@ -92,7 +92,7 @@
             {{ if eq $scope "Docker Swarm" }}
             <div class="u-marginBottom--most">
                 <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Swarm</h3>
-                {{ with .Site.GetPage "section" "docs" "swarm" }}
+                {{ with .Site.GetPage "/docs/swarm" }}
                     {{ range .Pages }}
                         <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
                             <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
@@ -125,7 +125,7 @@
             {{ if eq $scope "Kubernetes" }}
             <div class="u-marginBottom--most">
                 <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Kubernetes</h3>
-                {{ with .Site.GetPage "section" "docs" "kubernetes" }}
+                {{ with .Site.GetPage "/docs/kubernetes" }}
                     {{ range .Pages }}
                         <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
                             <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
@@ -158,7 +158,7 @@
             {{ if eq $category "Config Screen" }}
             <div class="u-marginBottom--most">
               <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Config Screen</h3>
-              {{ with .Site.GetPage "section" "docs" "config-screen" }}
+              {{ with .Site.GetPage "docs/config-screen" }}
                   {{ range .Pages }}
                       <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
                           <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
@@ -191,7 +191,7 @@
             {{ if eq $category "Snapshots" }}
             <div class="u-marginBottom--most">
                 <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Snapshots</h3>
-                {{ with .Site.GetPage "section" "docs" "snapshots" }}
+                {{ with .Site.GetPage "/docs/snapshots" }}
                     {{ range .Pages }}
                         <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
                             <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
@@ -224,7 +224,7 @@
             {{ if eq $category "LDAP and Identity Integration" }}
             <div class="u-marginBottom--most">
                 <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">LDAP & Identity</h3>
-                {{ with .Site.GetPage "section" "docs" "ldap-and-identity" }}
+                {{ with .Site.GetPage "/docs/ldap-and-identity" }}
                     {{ range .Pages }}
                         <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
                             <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
@@ -257,7 +257,7 @@
             {{ if eq $category "Replicated Private Registry" }}
             <div class="u-marginBottom--most">
                 <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Private Registry</h3>
-                {{ with .Site.GetPage "section" "docs" "registry" }}
+                {{ with .Site.GetPage "/docs/registry" }}
                     {{ range .Pages }}
                         {{ if not .Params.hideFromList }}
                             <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
@@ -292,7 +292,7 @@
             {{ if eq $category "Vendor RBAC" }}
             <div class="u-marginBottom--most">
                 <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Vendor RBAC</h3>
-                {{ with .Site.GetPage "section" "docs" "vendor-rbac" }}
+                {{ with .Site.GetPage "/docs/vendor-rbac" }}
                     {{ range .Pages }}
                         {{ if not .Params.hideFromList }}
                             <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
@@ -327,7 +327,7 @@
             {{ if eq $scope "Audit Log" }}
             <div class="u-marginBottom--most">
                 <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Replicated Audit Log</h3>
-                {{ with .Site.GetPage "section" "docs" "audit-log" }}
+                {{ with .Site.GetPage "/docs/audit-log" }}
                     {{ range .Pages }}
                         <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
                             <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
@@ -360,7 +360,7 @@
             {{ if eq $scope "Ship" }}
             <div class="u-marginBottom--most">
                 <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Replicated Ship</h3>
-                {{ with .Site.GetPage "section" "docs" "ship" }}
+                {{ with .Site.GetPage "/docs/ship" }}
                     {{ range .Pages }}
                         <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
                             <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
@@ -393,7 +393,7 @@
             {{ if eq $scope "Troubleshoot" }}
             <div class="u-marginBottom--most">
                 <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Replicated Troubleshoot</h3>
-                {{ with .Site.GetPage "section" "docs" "troubleshoot" }}
+                {{ with .Site.GetPage "/docs/troubleshoot" }}
                     {{ range .Pages }}
                         <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
                             <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
@@ -426,7 +426,7 @@
             {{ if eq $scope "Entitlements" }}
             <div class="u-marginBottom--most">
                 <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Replicated Entitlements</h3>
-                {{ with .Site.GetPage "section" "docs" "entitlements" }}
+                {{ with .Site.GetPage "/docs/entitlements" }}
                     {{ range .Pages }}
                         <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
                             <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
