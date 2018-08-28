@@ -22,7 +22,7 @@ Each file in the cluster begins with a single copy, i.e. without replication.
 When a new node is added to the cluster, you can edit the Pool custom resource named `replicapool` in the `rook` namespace and configure it to store copies of each file on two separate hosts:
 
 ```shell
-kubectl -n rook patch pool replicapool --type='json' -p='[{"op": "replace", "path": "/spec/replicated/size", "value": 2}]'
+kubectl -n rook-ceph patch pool replicapool --type='json' -p='[{"op": "replace", "path": "/spec/replicated/size", "value": 2}]'
 ```
 
 {{< linked_headline "Dynamic Provisioning in Cloud Environments" >}}
