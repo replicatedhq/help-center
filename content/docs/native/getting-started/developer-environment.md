@@ -40,7 +40,7 @@ Copy that *.ngrok.io* URL, you'll need it when you install Replicated on the dev
 
 ### 3. Install Replicated with Studio configuration on the dev server
 
-Finally, use our simple installation script (on a Linux server in your IaaS provider of choice, or in a local dev environment in Vagrant/VirtualBox) to install Replicated an the native scheduler. You'll be prompted for the ngrok hostname provided earlier during setup.
+Finally, use our simple installation script (on a Linux server in your IaaS provider of choice, or in a local dev environment in Vagrant/VirtualBox) to install Replicated an the native scheduler. You'll be prompted for the `Replicated Studio URL` during setup, use the hostname that ngrok provided you (routing to port 8006 on your local machine).
 
 ```bash
 curl -sSL https://get.replicated.com/studio/native | sudo bash
