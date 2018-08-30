@@ -82,6 +82,18 @@ properties:
   console_title: My Enterprise Application
 ```
 
+{{< linked_headline "Terms" >}}
+
+The terms section allows you to specify content to display to the end-user in the Admin Console prior to installing a license. These terms must be accepted by the end-user before proceeding. This functionality is only available when using the release channel installation script available in the "/channels" screen of the Vendor Portal.
+
+```yaml
+terms:
+  markdown: |
+    # Terms
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non bibendum orci. Sed quis malesuada nisl, id congue ex. Nunc vestibulum eleifend tellus, vel facilisis odio aliquam non. Quisque ut est quis neque tempor feugiat...
+```
+
 {{< linked_headline "Snapshots (Backups)" >}}
 
 The snapshots key is available to to enable and configure [Snapshots](/docs/snapshots/). The following example will enable snapshots from the Admin Console, using the default behavior.
