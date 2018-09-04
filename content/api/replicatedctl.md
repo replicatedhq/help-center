@@ -35,6 +35,7 @@ replicatedctl
 * [replicatedctl app](/api/replicatedctl/replicatedctl_app/)	 - Manage apps
 * [replicatedctl app-config](/api/replicatedctl/replicatedctl_app-config/)	 - Manage app config
 * [replicatedctl app-release](/api/replicatedctl/replicatedctl_app-release/)	 - Manage app releases
+* [replicatedctl cluster](/api/replicatedctl/replicatedctl_cluster/)	 - Manage the cluster
 * [replicatedctl console-auth](/api/replicatedctl/replicatedctl_console-auth/)	 - Manage UI console authentication settings
 * [replicatedctl license](/api/replicatedctl/replicatedctl_license/)	 - Manage the license
 * [replicatedctl license-load](/api/replicatedctl/replicatedctl_license-load/)	 - Load the license from stdin
@@ -42,6 +43,7 @@ replicatedctl
 * [replicatedctl preflight](/api/replicatedctl/replicatedctl_preflight/)	 - View or manage preflight checks
 * [replicatedctl snapshot](/api/replicatedctl/replicatedctl_snapshot/)	 - Manage snapshots
 * [replicatedctl support-bundle](/api/replicatedctl/replicatedctl_support-bundle/)	 - Generate a support bundle
+* [replicatedctl system](/api/replicatedctl/replicatedctl_system/)	 - Get Replicated system information
 * [replicatedctl task](/api/replicatedctl/replicatedctl_task/)	 - Manage tasks
 * [replicatedctl version](/api/replicatedctl/replicatedctl_version/)	 - Get the Replicated CLI version information
 
