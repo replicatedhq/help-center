@@ -21,7 +21,7 @@ By default, Replicated automatically adds preflight checks for:
 | Linux Kernel | 3.10 or greater |
 | Memory | 1 GB |
 | Docker Version | {{< docker_version_minimum >}} - {{< docker_version_default >}} |
-| Disk Space | /tmp 1 GB <br /> /var/lib/replicated 250 MB <br /> /var/lib/docker/aufs 1 GB (aufs storage driver root directory) |
+| Disk Space | /tmp 1 GB <br /> /var/lib/replicated 250 MB <br /> /var/lib/docker 1 GB (docker root directory) |
 | TCP Ports (Replicated services) | 9870-9880 on docker0 |
 | Outbound internet access (if required) | Replicated APIs, external registries |
 
@@ -37,6 +37,7 @@ host_requirements:
   cpu_mhz: 2400
   memory: 8GB
   disk_space: 80GB
+  docker_space: 10GB
   replicated_version: ">=2.3.0 <2.4.1"
 ```
 
@@ -55,6 +56,7 @@ components:
     cpu_mhz: 2400
     memory: 8GB
     disk_space: 30GB
+    docker_space: 10GB
 ```
 
 Note that component host requirements are not additive, thus when multiple components are allocated to a single host, each requirement
