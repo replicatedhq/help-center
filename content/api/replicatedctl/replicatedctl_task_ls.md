@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_task_ls
 categories:
 - replicatedctl
-date: 2018-06-22T16:37:46-07:00
+date: 2018-08-14T17:46:29-07:00
 description: List tasks
 gradient: purpleToPink
 index: docs

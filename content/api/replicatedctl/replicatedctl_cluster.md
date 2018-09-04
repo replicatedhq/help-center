@@ -1,32 +1,28 @@
 ---
 aliases:
-- docs/reference/replicatedctl/replicatedctl_support-bundle
+- docs/reference/replicatedctl/replicatedctl_cluster
 categories:
 - replicatedctl
 date: 2018-08-14T17:46:29-07:00
-description: Generate a support bundle
+description: Manage the cluster
 gradient: purpleToPink
 index: docs
-title: replicatedctl support-bundle
+title: replicatedctl cluster
 weight: "551"
 ---
 
-## replicatedctl support-bundle
+## replicatedctl cluster
 
-Generate a support bundle
+Manage the cluster
 
 ### Synopsis
 
-Generate a support bundle
-
-```
-replicatedctl support-bundle [flags]
-```
+Manage the cluster
 
 ### Options
 
 ```
-  -h, --help   help for support-bundle
+  -h, --help   help for cluster
 ```
 
 ### Options inherited from parent commands
@@ -38,4 +34,5 @@ replicatedctl support-bundle [flags]
 ### SEE ALSO
 
 * [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
+* [replicatedctl cluster node-join-script](/api/replicatedctl/replicatedctl_cluster_node-join-script/)	 - Outputs the script to run to join a node to the cluster
 

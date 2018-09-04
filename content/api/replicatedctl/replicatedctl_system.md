@@ -1,32 +1,28 @@
 ---
 aliases:
-- docs/reference/replicatedctl/replicatedctl_support-bundle
+- docs/reference/replicatedctl/replicatedctl_system
 categories:
 - replicatedctl
 date: 2018-08-14T17:46:29-07:00
-description: Generate a support bundle
+description: Get Replicated system information
 gradient: purpleToPink
 index: docs
-title: replicatedctl support-bundle
+title: replicatedctl system
 weight: "551"
 ---
 
-## replicatedctl support-bundle
+## replicatedctl system
 
-Generate a support bundle
+Get Replicated system information
 
 ### Synopsis
 
-Generate a support bundle
-
-```
-replicatedctl support-bundle [flags]
-```
+Get Replicated system information
 
 ### Options
 
 ```
-  -h, --help   help for support-bundle
+  -h, --help   help for system
 ```
 
 ### Options inherited from parent commands
@@ -38,4 +34,5 @@ replicatedctl support-bundle [flags]
 ### SEE ALSO
 
 * [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
+* [replicatedctl system status](/api/replicatedctl/replicatedctl_system_status/)	 - Gets the Replicated system status
 
