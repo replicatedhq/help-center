@@ -68,5 +68,6 @@ linkcheck:
 		--exlcude 'help.replicated.com/faq' \
 		--exclude 'help.replicated.com/privacy' \
 		--exclude 'help.replicated.com/guidelines' \
+		--exclude 'microsoft.com' \
 		\
 		--color=always  | grep -E 'Getting|Finished|BROKEN|^$$'
