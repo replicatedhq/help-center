@@ -58,4 +58,4 @@ For a single-node cluster 4 CPUs are required to meet the resource requests of a
 
 ### Kubernetes Version
 
-Replicated's Kubernetes scheduler is compatible with v1.9 Kubernetes API servers only.
+Ensure the major and minor version of your cluster's server match what is [expected by the version of Replicated being installed](/docs/kubernetes/customer-installations/installing/#compatible-kubernetes-versions)

@@ -66,6 +66,21 @@ Example quick install with flags:
 curl -sSL https://get.replicated.com/kubernetes-init | sudo bash -s no-proxy ui-bind-port=8000
 ```
 
+{{< linked_headline "Compatible Kubernetes Versions" >}}
+
+Every release of Replicated is pinned to a version of Kubernetes, which will be installed by the install script.
+
+| Replicated Version | Kubernetes Version |
+| ------------------ | ------------------ |
+| < 2.26.0           | 1.9.3              |
+| >= 2.26.0          | 1.11.1             |
+
+{{< linked_headline "Upgrading" >}}
+
+The install script can be re-run to upgrade Replicated to the latest version.
+If an upgrade of Kubernetes is required, the script will begin the upgrade and prompt to run upgrade scripts on each node in the cluster.
+Applications will have a few minutes of downtime when Kubernetes upgrades are performed.
+
 {{< linked_headline "Uninstalling" >}}
 
 Use the `reset` flag to uninstall Kubernetes and Replicated:
