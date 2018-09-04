@@ -19,16 +19,16 @@ Params:
 
   docker_version_default: "17.12.1-ce"
   docker_version_minimum: "1.7.1"
-  replicated_api_version_current: "2.25.2"
-  replicated_latest_version: "2.25.2"
-  replicated_latest_release_date: "August 6, 2018"
+  replicated_api_version_current: "2.26.0"
+  replicated_latest_version: "2.26.0"
+  replicated_latest_release_date: "September 4, 2018"
 
   swarm_docker_version_minimum: "1.13.1"
   swarm_docker_version_default: "17.12.1-ce"
 
   kubernetes_docker_version_minimum: "1.12.3"
   kubernetes_docker_version_default: "1.12.3"
-  kubernetes_version: "1.9.3"
+  kubernetes_version: "1.11.1"
 
 taxonomies:
   category: "categories"
