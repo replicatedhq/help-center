@@ -19,7 +19,7 @@ To enable the identity services in your application, a top level key in your rel
 
 identity:
   enabled: true
-  provisioner: 'https://localhost/ldap/auth'
+  provisioner: 'https://{{repl NodePrivateIPAddress "Backend" "App"}}/ldap/auth'
   sources:
     - source: ldap
       enabled: true
