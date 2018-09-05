@@ -145,7 +145,7 @@ in the settings section of the On-Prem Console.
     title: Key
     type: text
     value: ""
-    default: localhost
+    default: change me
 ```
 
 ### `required`
