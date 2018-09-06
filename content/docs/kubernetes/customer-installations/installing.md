@@ -56,6 +56,7 @@ The install script can take flags to help your customers with specialized enterp
 | ui-bind-port                  | The port to bind the UI to                                                                         |
 | no-ce-on-ee                   | Disable installation of Docker CE onto platforms it does not support - RHEL, SLES and Oracle Linux |
 | reset                         | Uninstall Kubernetes                                                                               |
+| force-reset                   | If present, suppress all prompts and warning messages before uninstalling Kubernetes               |
 | storage-provisioner           | Disable automatically provisioning storage for PersistentVolumeClaims on the host                  |
 | storage-class                 | The name of an alternative StorageClass that will provision storage for PVCs                       |
 | service-type                  | Enable Service type of LoadBalancer for the Replicated Admin console                               |
