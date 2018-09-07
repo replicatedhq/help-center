@@ -38,6 +38,22 @@ It is critical to benchmark your app's storage requirements and enforce them wit
 A small app with a 1GB airgap bundle and a single 10GB Persistent Volume Claim would require 15GB to install in addition to the 16GB required for a base Replicated airgap install.
 Adding ~25% capacity to allow for accumulating container logs without triggering Kubernetes evicition levels, a preflight check of 40GB would be the minimum required for the app.
 
+{{< linked_headline "HostPath Storage Provisioner" >}}
+
+As an alternative to the Rook storage provisioner, Replicated provides a host path provisioner. This provisioner is ideal in single node installations to aviod the overhead of Rook. This provisioner can be enabled by passing in additional flags to the Replicated kubernetes init scripts. See the example below:
+
+```yaml
+curl -sSL https://get.replicated.com/kubernetes-init | sudo bash -s storage-provisioner=hostpath
+```
+
+{{< linked_headline "Alternate Storage Provisioners" >}}
+
+It is possible to bring your own storage provisioner when necessary. See the example below to omit Replicated's dynamic storage provisioners:
+
+```yaml
+curl -sSL https://get.replicated.com/kubernetes-init | sudo bash -s storage-provisioner=0 storage-class=standard
+```
+
 {{< linked_headline "Troubleshooting" >}}
 
 The [Ceph Dashboard](https://github.com/rook/rook/blob/master/Documentation/ceph-dashboard.md) is included in the `rook-ceph-mgr` pod of the `rook-ceph` namespace. Follow the instructions for creating an external service to view the dashboard.
