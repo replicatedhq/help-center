@@ -40,7 +40,7 @@ Adding ~25% capacity to allow for accumulating container logs without triggering
 
 {{< linked_headline "HostPath Storage Provisioner" >}}
 
-As an alternative to the Rook storage provisioner, Replicated provides a host path provisioner. This provisioner is ideal in single node installations to aviod the overhead of Rook. This provisioner can be enabled by passing in additional flags to the Replicated kubernetes init scripts. See the example below:
+As an alternative to the Rook storage provisioner, Replicated provides a host path provisioner. This provisioner is ideal in single node installations to avoid the overhead of Rook. This provisioner can be enabled by passing in additional flags to the Replicated Kubernetes init scripts. See the example below:
 
 ```yaml
 curl -sSL https://get.replicated.com/kubernetes-init | sudo bash -s storage-provisioner=hostpath
@@ -48,7 +48,7 @@ curl -sSL https://get.replicated.com/kubernetes-init | sudo bash -s storage-prov
 
 {{< linked_headline "Alternate Storage Provisioners" >}}
 
-It is possible to bring your own storage provisioner when necessary. See the example below to omit Replicated's dynamic storage provisioners:
+It is possible to bring your own storage provisioner when necessary. See the example below to omit Replicated's provided storage provisioner:
 
 ```yaml
 curl -sSL https://get.replicated.com/kubernetes-init | sudo bash -s storage-provisioner=0 storage-class=standard
