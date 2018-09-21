@@ -22,6 +22,7 @@ identity:
   provisioner: 'https://{{repl NodePrivateIPAddress "Backend" "App"}}/ldap/auth'
   sources:
     - source: ldap
+      filter: '(objectclass=*)'
       enabled: true
 ```
 
@@ -30,6 +31,7 @@ identity:
 | enabled | Boolean indicating if LDAP authentication is enabled on this installation. |
 | provisioner | (Optional) Host that provides provisioning API for synchronization with LDAP. This is required if using directory sync, and can be omiitted if only using LDAP authentication. |
 | sources | `ldap` and `ldap_advanced` sources are supported. |
+| filter | (Optional) filter to pass to the LDAP server during the sync operation |
 
 Additionally, before your application containers can use the Replicated LDAP integration, you'll need to collect some LDAP settings from your enterprise customer. We recommend you include our suggested configuration items in your application yaml to start.
 
@@ -49,6 +51,7 @@ identity:
   provisioner: 'http://{{repl NodePrivateIPAddress "MyContainerName" "Container Image Name"}}:6006'
   sources:
   - source: ldap
+    filter: '{{repl ConfigOption "ldap_sync_filter"}}'
     enabled: '{{repl if ConfigOptionEquals "auth_source" "auth_type_ldap"}}true{{repl else}}false{{repl end}}'
 ```
 
@@ -201,6 +204,10 @@ identity:
     value: '{{repl LdapCopyAuthFrom "FieldUsername"}}'
     default: uid
     required: true
+  - name: ldap_sync_filter
+    title: LDAP Sync Filter
+    type: text
+    default: '(objectclass=*)'
   - name: ldap_login_username
     # Optional user name filed.  This can be used with test_proc to validate credentials before saving.
     title: Test username
