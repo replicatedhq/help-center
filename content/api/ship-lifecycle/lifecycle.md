@@ -13,5 +13,5 @@ gradient: "purpleToPink"
 
 ## Ship Lifecycle
 
-This is the reference documenation for Ship lifecycle. To get started with Ship, head on over to [Shipping a Helm Application](/guides/helm-application/)
+Ship lifecycle steps define the steps that a Ship application will proceed through.
 
