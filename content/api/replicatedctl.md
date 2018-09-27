@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl
 categories:
 - Reference
-date: 2018-06-22T16:37:46-07:00
+date: 2018-09-27T12:18:29-07:00
 description: Documentation for the replicatedctl command line
 gradient: purpleToPink
 index: docs
@@ -45,5 +45,6 @@ replicatedctl
 * [replicatedctl support-bundle](/api/replicatedctl/replicatedctl_support-bundle/)	 - Generate a support bundle
 * [replicatedctl system](/api/replicatedctl/replicatedctl_system/)	 - Get Replicated system information
 * [replicatedctl task](/api/replicatedctl/replicatedctl_task/)	 - Manage tasks
+* [replicatedctl terms](/api/replicatedctl/replicatedctl_terms/)	 - Read and accept the terms of service
 * [replicatedctl version](/api/replicatedctl/replicatedctl_version/)	 - Get the Replicated CLI version information
 
