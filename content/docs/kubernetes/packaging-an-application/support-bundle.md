@@ -92,31 +92,16 @@ By default the Support Bundle will include the following files:
 | /scheduler/kubernetes/api_versions.json | Kubernetes API versions |
 | /scheduler/kubernetes/cluster_info.json | Kubernetes cluster info |
 | /scheduler/kubernetes/server_version.json | Kubernetes server version |
+| /scheduler/kubernetes/heptio-contour/logs/\<pod\>-\<container\>/\<pod\>.log | Heptio contour container logs |
+| /scheduler/kubernetes/heptio-contour/resources/\*/resource.json | Heptio contour resource info |
+| /scheduler/kubernetes/kube-system/logs/\<pod\>-\<container\>/\<pod\>.log | Kubernetes system container logs |
+| /scheduler/kubernetes/kube-system/resources/\*/resource.json | Kubernetes system resource info |
 | /scheduler/kubernetes/logs/\<pod\>-\<container\>/\<pod\>.log | App container logs |
 | /scheduler/kubernetes/replicated/\<replicated_pod\>-replicated/\<replicated_pod\>.log | Replicated container logs |
 | /scheduler/kubernetes/replicated/\<replicated_pod\>-replicated-ui/\<replicated_pod\>.log | Replicated UI container logs |
-| /scheduler/kubernetes/resources/componentstatuses/resource.json | Kubernetes componentstatuses info |
-| /scheduler/kubernetes/resources/configmaps/resource.json | Kubernetes configmaps info |
-| /scheduler/kubernetes/resources/daemonsets/resource.json | Kubernetes daemonsets info |
-| /scheduler/kubernetes/resources/deployments/resource.json | Kubernetes deployments info |
-| /scheduler/kubernetes/resources/endpoints/resource.json | Kubernetes endpoints info |
-| /scheduler/kubernetes/resources/events/resource.json | Kubernetes events info |
-| /scheduler/kubernetes/resources/horizontalpodautoscalers/resource.json | Kubernetes horizontalpodautoscalers info |
-| /scheduler/kubernetes/resources/ingresses/resource.json | Kubernetes ingresses info |
-| /scheduler/kubernetes/resources/jobs/resource.json | Kubernetes jobs info |
-| /scheduler/kubernetes/resources/limitranges/resource.json | Kubernetes limitranges info |
-| /scheduler/kubernetes/resources/networkpolicies/resource.json | Kubernetes networkpolicies info |
-| /scheduler/kubernetes/resources/nodes/resource.json | Kubernetes nodes info |
-| /scheduler/kubernetes/resources/persistentvolumeclaims/resource.json | Kubernetes persistentvolumeclaims info |
-| /scheduler/kubernetes/resources/persistentvolumes/resource.json | Kubernetes persistentvolumes info |
-| /scheduler/kubernetes/resources/podsecuritypolicies/resource.json | Kubernetes podsecuritypolicies info |
-| /scheduler/kubernetes/resources/pods/resource.json | Kubernetes pods info |
-| /scheduler/kubernetes/resources/podtemplates/resource.json | Kubernetes podtemplates info |
-| /scheduler/kubernetes/resources/replicasets/resource.json | Kubernetes replicasets info |
-| /scheduler/kubernetes/resources/replicationcontrollers/resource.json | Kubernetes replicationcontrollers info |
-| /scheduler/kubernetes/resources/resourcequotas/resource.json | Kubernetes resourcequotas info |
-| /scheduler/kubernetes/resources/secrets/resource.json | Kubernetes secrets info |
-| /scheduler/kubernetes/resources/services/resource.json | Kubernetes services info |
-| /scheduler/kubernetes/resources/statefulsets/resource.json | Kubernetes statefulsets info |
-| /scheduler/kubernetes/resources/storageclasses/resource.json | Kubernetes storageclasses info |
+| /scheduler/kubernetes/resources/\*/resource.json | Kubernetes resource info in the app namespace |
+| /scheduler/kubernetes/rook-ceph/logs/\<pod\>-\<container\>/\<pod\>.log | Rook/Ceph container logs |
+| /scheduler/kubernetes/rook-ceph/resources/\*/resource.json | Rook/Ceph resource info |
+| /scheduler/kubernetes/rook-ceph-system/logs/\<pod\>-\<container\>/\<pod\>.log | Rook/Ceph system container logs |
+| /scheduler/kubernetes/rook-ceph-system/resources/\*/resource.json | Rook/Ceph system resource info |
 | /VERSION.json | Support-bundle command version information |
