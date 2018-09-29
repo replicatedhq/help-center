@@ -9,11 +9,13 @@ weight: "100"
 gradient: "purpleToPink"
 ---
 
-[Assets](/api/ship-assets/assets) | [Config](/api/ship-config/config) | [Lifecycle](/api/ship-lifecycle/lifecycle) 
+[Assets](/api/ship-assets/assets) | [Config](/api/ship-config/config) | [Lifecycle](/api/ship-lifecycle/lifecycle)
 
 ## helm
 
 A `helm` asset will template and render an existing helm chart. You can either reference an existing chart in a private or public github repo, or your installer runbook can include assets to drop an existing helm chart at `local.chart_root`.
+
+
 
 
 
@@ -42,6 +44,19 @@ A `helm` asset will template and render an existing helm chart. You can either r
   - `source` - One of `public` or `private`, if `private`, access to the repo can be validated on release creation
 
 
+- `helm_fetch` - Configuration for indicating a chart hosted somewhere that would be accessible to the `helm fetch` function.
+
+    required:
+
+  - `chart_ref` - `chart URL | repo/chartname` as would be passed to `helm fetch`
+
+    optional:
+
+  - `repo_url` - repository URL as would be passed to `helm fetch` with the `--repo` flag
+
+  - `version` - version as would be passed to `helm fetch` with the `--version` flag
+
+
 - `helm_opts` - Additional options as would be passed to `helm template`
 
 
@@ -53,6 +68,9 @@ A `helm` asset will template and render an existing helm chart. You can either r
 
 
 - `values` - Values to set during rendering, overrides defaults in `values.yaml` if present in the chart root.
+
+
+- `values_from` - values_from
 
 
 - `when` - This asset will be included when 'when' is omitted or true
