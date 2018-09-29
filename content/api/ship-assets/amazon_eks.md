@@ -2,18 +2,20 @@
 categories:
 - ship-assets
 date: 2018-01-17T23:51:55Z
-description: An `amazon_eks` asset generates a terraform file that will create an Amazon EKS Cluster
+description: An `amazon_eks` asset generates a terraform file that will create an Amazon EKS Cluster.
 index: docs
 title: amazon_eks
 weight: "100"
 gradient: "purpleToPink"
 ---
 
-[Assets](/api/ship-assets/assets) | [Config](/api/ship-config/config) | [Lifecycle](/api/ship-lifecycle/lifecycle) 
+[Assets](/api/ship-assets/assets) | [Config](/api/ship-config/config) | [Lifecycle](/api/ship-lifecycle/lifecycle)
 
 ## amazon_eks
 
-An `amazon_eks` asset generates a terraform file that will create an Amazon EKS Cluster
+An `amazon_eks` asset generates a terraform file that will create an Amazon EKS Cluster.
+
+It also populates a template function `AmazonEKS` that takes the name of the cluster and returns the path to the generated kubeconfig for the cluster. This template function is only valid after the asset has been generated as part of the `render` lifecycle step, but can be used by later assets within that step. The file itself is created when the generated terraform is applied, whether by the `terraform` lifecycle step or otherwise. This is intended to be used within the [kubectl_apply](/api/ship-lifecycle/lifecycle/kubectl_apply/) lifecycle step.
 
 
 
@@ -54,7 +56,7 @@ An `amazon_eks` asset generates a terraform file that will create an Amazon EKS 
   - `zones` - The availability zones to create subnets within
 
 
-- `dest` - The path within `terraform/` to place the generated file. Defaults to `amazon_eks.tf`
+- `dest` - The path within `installer/` to place the generated file. Defaults to `amazon_eks.tf`
 
 
 - `existing_vpc` - The existing VPC to use for the EKS cluster
@@ -92,10 +94,10 @@ assets:
             - xyz789-2
         autoscaling_groups:
           - name: group1
-            group_size: 2
+            group_size: '2'
             machine_type: m5.large
           - name: group2
-            group_size: 1
+            group_size: '1'
             machine_type: t2.large
 ```
 
@@ -118,6 +120,6 @@ assets:
             - 10.0.130.0/24
         autoscaling_groups:
           - name: firstgroup
-            group_size: 3
+            group_size: '3'
             machine_type: m5.large
 ```
