@@ -18,7 +18,7 @@ values during initial installation.
 ## Configure Replicated Automatically
 
 During installation, Replicated will create a config file in `/etc/replicated.conf`. If this file
-exists, the installer will not overwrite it. To configure Replicated, create this file before installation, 
+exists, the installer will not overwrite it. To configure Replicated, create this file before installation,
 using any or all of the following options:
 
 ```json
@@ -117,3 +117,8 @@ You could then create the `settings.conf` in this format:
  }
 }
 ```
+
+## Additional Settings
+
+Additional fields can be set in the `etc/replicated.conf` for
+[using the cli to restore snapshots](/docs/snapshots/cli).
