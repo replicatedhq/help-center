@@ -8,7 +8,6 @@ index: ["docs/kubernetes", "docs"]
 icon: "replicatedKubernetes"
 gradient: "kubernetes"
 aliases: [/docs/distributing-an-application/kubernetes/create-licenses/]
-nextPage: "kubernetes/packaging-an-application/yaml-format.md"
 ---
 
 Each customer you deploy to via Replicated will need a separate license file for their installation. This license file identifies the customer & application during the installation and update processes. A customer license is created in the Customers section of the [vendor portal](https://vendor.replicated.com/customers). You can manage the values and properties of that customer and license, including custom license fields, by selecting an individual customer.
