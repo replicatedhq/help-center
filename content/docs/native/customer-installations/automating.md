@@ -116,3 +116,8 @@ You could then create the `settings.conf` in this format:
  }
 }
 ```
+
+## Additional Settings
+
+Additional fields can be set in the `etc/replicated.conf` for
+[using the cli to restore snapshots](/docs/snapshots/cli).
