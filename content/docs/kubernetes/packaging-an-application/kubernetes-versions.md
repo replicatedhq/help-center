@@ -2,7 +2,7 @@
 date: "2018-08-14T04:02:20Z"
 title: "Auto-Upgrading Replicated"
 description: "Configured Replicated to automatically upgrade"
-weight: "2614"
+weight: "2615"
 categories: [ "Packaging a Kubernetes Application" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
@@ -19,3 +19,4 @@ host_requirements:
 ```
 
 If configured, Replicated will attempt to auto-upgrade itself every time your app is updated to a new version.
+This feature is not enabled on airgap installs.

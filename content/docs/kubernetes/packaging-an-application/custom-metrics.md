@@ -2,7 +2,7 @@
 date: "2016-07-02T00:00:00Z"
 lastmod: "2016-07-02T00:00:00Z"
 title: "Custom Metrics"
-weight: "2611"
+weight: "2612"
 categories: [ "Packaging a Kubernetes Application" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"

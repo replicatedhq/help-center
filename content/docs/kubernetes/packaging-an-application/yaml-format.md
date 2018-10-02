@@ -57,12 +57,9 @@ The snapshots key is available to to enable and configure [Snapshots](/docs/snap
 
 ```yaml
 backup:
-  enabled: '{{repl ConfigOptionEquals "backup_enabled" "1" }}'
-  hidden: '{{repl ConfigOptionEquals "backup_enabled" "0" }}'
-  pause_all: false
-  script: |
-    #!/bin/sh
-    myappcli backup
+  enabled: true
+  kubernetes:
+    pvc_names: [ "redis-data-volume" ]
 ```
 
 {{< linked_headline "CMD" >}}
@@ -126,17 +123,16 @@ admin_commands:
   container: redis
 ```
 
-{{< linked_headline " Custom Preflight Checks" >}}
+{{< linked_headline "Custom Preflight Checks" >}}
 
 A [preflight check](/docs/kubernetes/packaging-an-application/preflight-checks/) is a test that is run before installing and running an application. The test will analyze the system to determine if the environment meets the minimum requirements and provide feedback during installation if these requirements are not met.
 
 ```yaml
-host_requirements:
-  docker_version: "1.10.3"
-  cpu_cores: 2
-  cpu_mhz: 2400
-  memory: 8GB
-  disk_space: 8GB
-  docker_space: 4GB
-  replicated_version: ">=2.3.0 <2.4.1"
+kubernetes:
+  requirements:
+    server_version: ">=1.9.3"
+    api_versions: ["apps/v1", "core/v1"]
+    cluster_size: "1"
+    total_cores: "2"
+    total_memory: 11.25GB
 ```

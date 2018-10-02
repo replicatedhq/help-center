@@ -2,10 +2,11 @@
 date: "2016-07-03T04:02:20Z"
 title: "Upgrading Replicated"
 description: "The process for end customers to update Replicated services to access the latest improvements to the underlying system since their installation."
-weight: "303"
-categories: [ "Managing Customer Installation" ]
+weight: "2712"
+categories: [ "Manage Customer Installation" ]
 index: ["docs/kubernetes", "docs"]
 aliases: [/docs/distributing-an-application/upgrading,/tags/upgrading-replicated/,/docs/distributing-an-application/upgrading/]
+gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
