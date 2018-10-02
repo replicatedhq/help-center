@@ -78,9 +78,7 @@ Every release of Replicated is pinned to a version of Kubernetes, which will be 
 
 {{< linked_headline "Upgrading" >}}
 
-The install script can be re-run to upgrade Replicated to the latest version.
-If an upgrade of Kubernetes is required, the script will begin the upgrade and prompt to run upgrade scripts on each node in the cluster.
-Applications will have a few minutes of downtime when Kubernetes upgrades are performed.
+Please refer to our docs on upgrading [here](../upgrading)
 
 {{< linked_headline "Uninstalling" >}}
 
