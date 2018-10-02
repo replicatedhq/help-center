@@ -29,4 +29,6 @@ cat ./kubernetes-init.sh | sudo bash -s airgap
 ```
 
 ## Auto-Upgrades
-Installations with internet access will automatically be upgraded to the latest `replicated_version` in the `host_requirements` section of your application YAML in versions greater than 2.23.0.
+Installations, with internet access, can be configured to automatically update if there is an update available that does not require a change in the version of Kubernetes. Refer to this [compatability table](../installing/#compatible-kubernetes-versions), when configuring your application to auto-upgrade.
+
+Auto-upgrade will automatically upgrade to the latest `replicated_version` in the `host_requirements` section of your application YAML. This feature will only work in replicated versions greater than 2.23.0.
