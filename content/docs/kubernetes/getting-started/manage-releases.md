@@ -5,6 +5,7 @@ description: "An introduction to the release channel management workflow for dev
 weight: "2507"
 categories: [ "Shipping With Kubernetes" ]
 index: ["docs/kubernetes", "docs"]
+gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
