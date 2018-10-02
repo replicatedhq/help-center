@@ -14,16 +14,16 @@ The Replicated Kubernetes installer builds on [kubeadm](https://kubernetes.io/do
 
 ## Core Components
 Replicated's install script will first install Docker and a few binaries on the host: `kubelet`, `kubeadm`, and `kubectl`.
-It then delegates to `kubeadm init` to bootstrap the cluster.
-Kubeadm creates a systemd service to run the `kubelet` binary directly on each host.
-All other system services run as pods in the `kube-system` namespace, including the Kubernetes API Server, Kube Proxy, Etcd, Kube Controller Manager, the Kube Scheduler, and CoreDNS.
+The `kubelet` binary runs as a systemd service, while `kubeadm` and `kubectl` commands are run manually.
+Replicated then delegates to `kubeadm init` to bootstrap the cluster.
+All system services besides `kubelet` run as pods in the `kube-system` namespace, including the Kubernetes API Server, Kube Proxy, Etcd, Kube Controller Manager, the Kube Scheduler, and CoreDNS.
 
 ## Networking
 
 Replicated adds a Weave DaemonSet to the `kube-system` namespace to provide pod networking on every node in the cluster.
 Weave places a binary in `/opt/cni/bin` that fulfills the [CNI](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#cni) interface, which ensures that every pod is assigned an IP address that is routeable across the cluster.
 The Weave DaemonSet includes a Network Policy Controller to support [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/network-policies/) resources in the cluster.
-All traffic between hosts is encrypted by default.
+All traffic between hosts is [encrypted by default](http://localhost:1313/docs/kubernetes/customer-installations/networking/#encryption).
 
 ## Storage
 
@@ -31,7 +31,7 @@ Replicated installs the [Rook Operator](https://rook.io/) in the `rook-ceph-syst
 Then Replicated creates a Ceph cluster by creating a [Cluster](https://rook.io/docs/rook/v0.8/ceph-cluster-crd.html) config in the `rook-ceph-system` namespace.
 Replicated configures the cluster to use the `/opt/replicated/rook` directory on all nodes automatically.
 Finally, a [Pool](https://rook.io/docs/rook/v0.8/ceph-pool-crd.html) is created to provide block storage backed by the cluster for PersistentVolumeClaims.
-This Pool does not provide replication by default; the cluster cannot recover from the loss of a node.
+This Pool does not provide replication by default, but can be [configured to allow the cluster to recover from the loss of a node](https://help.replicated.com/guides/ship-with-kubernetes/managing-storage/#replication).
 
 ## Ingress
 
