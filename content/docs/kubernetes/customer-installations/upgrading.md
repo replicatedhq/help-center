@@ -9,8 +9,11 @@ aliases: [/docs/distributing-an-application/upgrading,/tags/upgrading-replicated
 icon: "replicatedKubernetes"
 ---
 
-The install script can be re-run to upgrade Replicated to the latest version.
-Installations with internet access will automatically be upgraded to the latest `replicated_version` in the `host_requirements` section of your application YAML in versions greater than 2.23.0.
+Re-run the install script to upgrade Replicated to the latest version.
+```shell
+curl -sSL -o install.sh  https://get.replicated.com/kubernetes-init
+sudo bash ./install.sh
+```
 
 If an upgrade of Kubernetes is required, the script will begin the upgrade and prompt to run upgrade scripts on each node in the cluster.
 When upgrading only the Replicated version, the install script will be required to be re-run on only the master.
@@ -24,3 +27,6 @@ https://s3.amazonaws.com/replicated-airgap-work/replicated.tar.gz.
 tar xzvf replicated__docker__kubernetes.tar.gz
 cat ./kubernetes-init.sh | sudo bash -s airgap
 ```
+
+## Auto-Upgrades
+Installations with internet access will automatically be upgraded to the latest `replicated_version` in the `host_requirements` section of your application YAML in versions greater than 2.23.0.
