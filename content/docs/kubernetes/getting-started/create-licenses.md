@@ -33,7 +33,7 @@ When you create a license you can specify how the license will behave when it ex
 
 {{< linked_headline "Update Policy" >}}
 
-By default, licenses will be set to manual updates. This means that the end customer will need to read the release notes and [click a button to apply the update](https://blog.replicated.com/2015/12/31/1-click-update-experience/). It is possible to turn on automatic updates, which will apply any update when it is detected.
+By default, licenses will be set to manual updates. This means that the end customer will need to read the release notes and [click a button to apply the update](https://blog.replicated.com/1-click-update-experience/). It is possible to turn on automatic updates, which will apply any update when it is detected.
 
 {{< linked_headline "Clustered Installation Enabled" >}}
 
@@ -41,7 +41,7 @@ By default, licenses will be set to disable clustered installations. This will p
 
 {{< linked_headline "Airgap Download Enabled" >}}
 
-By default, licenses will be set to disable [airgap installations](https://blog.replicated.com/2016/05/24/airgapped-installation-support/). By enabling this feature, the actual `.rli` file will have license meta data embedded in it and must be re-downloaded.
+By default, licenses will be set to disable [airgap installations](https://blog.replicated.com/airgapped-installation-support/). By enabling this feature, the actual `.rli` file will have license meta data embedded in it and must be re-downloaded.
 
 {{< linked_headline "Require Activation" >}}
 
