@@ -43,10 +43,10 @@
       _paq.push(['enableLinkTracking']);
       (function() {
         var u="//{{ .host }}/";
-        _paq.push(['setTrackerUrl', u+'js/']);
+        _paq.push(['setTrackerUrl', u+'data/']);
         _paq.push(['setSiteId', '{{ .site }}']);
         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'js/'; s.parentNode.insertBefore(g,s);
       })();
     </script>
     <!-- End Matomo Code -->
