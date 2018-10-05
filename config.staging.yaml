@@ -14,7 +14,7 @@ Params:
   search_env: "staging"
 
   matomo:
-    host: \/\/data-2.staging.replicated.com\/
+    host: "data-2.staging.replicated.com"
     site: "2"
 
   favicon: ""
