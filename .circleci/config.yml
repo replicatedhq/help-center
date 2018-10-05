@@ -61,7 +61,7 @@ jobs:
 
             rm -rf ./.git
             mkdir ${DST_DIR}
-            hugo -s ${SRC_DIR} -d ${DST_DIR} -b "https://help.staging.replicated.com/"
+            hugo -s ${SRC_DIR} -d ${DST_DIR} --config ${SRC_DIR}/config.staging.yaml -b "https://help.staging.replicated.com/"
             # google-site-verification file is not needed on staging
             cd ..
             cp ${SRC_DIR}/build/* ./
@@ -90,7 +90,7 @@ jobs:
 
             rm -rf ./.git
             mkdir ${DST_DIR}
-            hugo -s ${SRC_DIR} -d ${DST_DIR} -b "https://help.replicated.com/"
+            hugo -s ${SRC_DIR} -d ${DST_DIR} --config ${SRC_DIR}/config.prod.yaml -b "https://help.replicated.com/"
             cd ..
             cp ${SRC_DIR}/build/* ./
             mv google8b98ed0b455f3b19.html ${DST_DIR}
