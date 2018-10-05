@@ -14,7 +14,7 @@ Params:
   search_env: "dev"
 
   matomo:
-    host: \/\/localhost:4000\/
+    host: "localhost:4000"
     site: "2"
 
   favicon: ""
