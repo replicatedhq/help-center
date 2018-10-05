@@ -13,6 +13,10 @@ Params:
   copyright: "Replicated, Inc"
   search_env: "staging"
 
+  matomo:
+    host: \/\/data-2.staging.replicated.com\/
+    site: "2"
+
   favicon: ""
   pagetitle: "Replicated"
   permalink: "#"

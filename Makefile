@@ -1,5 +1,5 @@
 VENDOR_SWAGGER_SOURCE ?= "https://api.replicated.com/vendor"
- 
+
 SHELL := /bin/bash -o pipefail
 install:
 	yarn
@@ -15,7 +15,7 @@ build_staging:
 	hugo -v --config config.staging.yaml
 
 serve:
-	hugo serve
+	hugo serve --disableFastRender
 
 serve_staging:
 	hugo serve --config config.staging.yaml
@@ -42,7 +42,7 @@ setup:
 
 
 # this skips *all* of community, but its a start
-# it only really works against prod right now, but with some more exclusions 
+# it only really works against prod right now, but with some more exclusions
 # it could probably work for staging as well. Notably, we have no community
 # in staging. For now just want to run this in prod and see how it feels,
 # not blocking any builds yet.
