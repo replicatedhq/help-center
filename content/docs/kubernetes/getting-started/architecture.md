@@ -23,7 +23,7 @@ All system services besides `kubelet` run as pods in the `kube-system` namespace
 Replicated adds a Weave DaemonSet to the `kube-system` namespace to provide pod networking on every node in the cluster.
 Weave places a binary in `/opt/cni/bin` that fulfills the [CNI](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#cni) interface, which ensures that every pod is assigned an IP address that is routeable across the cluster.
 The Weave DaemonSet includes a Network Policy Controller to support [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/network-policies/) resources in the cluster.
-All traffic between hosts is [encrypted by default](http://localhost:1313/docs/kubernetes/customer-installations/networking/#encryption).
+All traffic between hosts is [encrypted by default](/docs/kubernetes/customer-installations/networking/#encryption).
 
 ## Storage
 
