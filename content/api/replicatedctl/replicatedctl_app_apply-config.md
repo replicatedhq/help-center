@@ -1,26 +1,26 @@
 ---
 aliases:
-- docs/reference/replicatedctl/replicatedctl_app_stop
+- docs/reference/replicatedctl/replicatedctl_app_apply-config
 categories:
 - replicatedctl
 date: 2018-10-08T23:39:27Z
-description: Stop the app
+description: Apply the changed configuration to the app
 gradient: purpleToPink
 index: docs
-title: replicatedctl app stop
+title: replicatedctl app apply-config
 weight: "551"
 ---
 
-## replicatedctl app stop
+## replicatedctl app apply-config
 
-Stop the app
+Apply the changed configuration to the app
 
 ### Synopsis
 
-Stop the app
+Apply the changed configuration to the app
 
 ```
-replicatedctl app stop [flags]
+replicatedctl app apply-config [flags]
 ```
 
 ### Options
@@ -28,7 +28,7 @@ replicatedctl app stop [flags]
 ```
   -a, --attach            Attach to task
   -f, --force             Force stop
-  -h, --help              help for stop
+  -h, --help              help for apply-config
   -q, --quiet             Only display task ID
       --raw               Raw JSON stream
       --template string   Format the output using the given Go template

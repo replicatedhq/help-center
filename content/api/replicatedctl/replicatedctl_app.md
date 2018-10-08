@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app
 categories:
 - replicatedctl
-date: 2018-09-27T12:18:29-07:00
+date: 2018-10-08T23:39:27Z
 description: Manage apps
 gradient: purpleToPink
 index: docs
@@ -34,6 +34,7 @@ Manage apps
 ### SEE ALSO
 
 * [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
+* [replicatedctl app apply-config](/api/replicatedctl/replicatedctl_app_apply-config/)	 - Apply the changed configuration to the app
 * [replicatedctl app inspect](/api/replicatedctl/replicatedctl_app_inspect/)	 - Display detailed information on the app
 * [replicatedctl app start](/api/replicatedctl/replicatedctl_app_start/)	 - Start the app
 * [replicatedctl app status](/api/replicatedctl/replicatedctl_app_status/)	 - Display detailed information on the app's status
