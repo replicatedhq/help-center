@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Programmable Preflight Checks"
 description: "A guide to implementing Programmable Preflight Checks to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
-weight: "2609"
+weight: "2610"
 categories: [ "Packaging a Kubernetes Application" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
@@ -10,45 +10,13 @@ icon: "replicatedKubernetes"
 aliases: [/docs/packaging-an-application/preflight-checks-k8s/,/docs/kubernetes/packaging-an-application/preflight-checks]
 ---
 
-The host requirements section of the yaml gives Replicated the ability to analyze system
-requirements and warn or prevent the user from proceeding with an installation or upgrade. In
-addition to host requirements, Replicated has the ability to define fully customizable preflight
-requirements as of version {{< version version="2.5.0" >}}. These custom requirements provide
-flexibility to the point that an arbitrary command can be executed by a vendor provided image. See
-the [commands section](#commands) below for a full list of commands that may be run including
-examples.
+It is possible to run an arbitrary command in a Pod as a preflight check.
+The Pods can be scheduled to run on all nodes with the `global` mode or on a limited set of Nodes using selectors.
+All images used by raw command Pods must be defined in the [images](/docs/kubernetes/getting-started/docker-registries/#bundling-airgap-images) section of your Replicated yaml.
 
-There are two types of custom preflight checks:
+To begin using custom raw preflight commands, add a Pod spec to your release yaml with kind `preflight-kubernetes`, then configure a `raw` command to use it in the `custom_requirements` section of your Replicated yaml.
 
-- Run a shell script using ubuntu trusty - see [raw](#raw)
-- Use a common preflight check - see [api_version](#api-version), [cluster_size](#cluster-size), [no_restore_in_progress](#no-restore-in-progress), [server_version](#server-version), [total_cores](#total-cores), [total_memory](#total-memory), [volume_claim_bound](#volume-claim-bound), [volume_claims](#volume-claims).
-
-# Commands
-
-Commands will be run to determine the status of a requirement. They return result messages, a
-status code and an error. Next we will look at examples. For details on the fields please see the
-[resource specification](#resource-specification) section at the bottom of the page.
-
-{{< linked_headline "Raw" >}}
-
-The raw command is run inside Replicated's [command container](https://hub.docker.com/r/replicated/cmd/).
-The clustering and tags properties will determine where the command is run. If clustering is
-disabled the command will run on all nodes in the cluster. Additional properties to the raw command
-are all that can be specified in the container section of the yaml.
-
-**Id:** `raw`
-
-**Status Codes:** 1, 22, 62 [*](#status-codes)
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| cmd | string | yes | The cmd to be run when executing the container |
-| cluster | string | no | Is clustering enabled (evaluated to a boolean value) |
-| tags | array[string] | no | Determines nodes where the check is performed when cluster=true |
-| conflicts | array[string] | no | Skips nodes with the tag when cluster=true |
-| additional... |  | no | all possible container properties |
-
-### Example
+{{< linked_headline "Example" >}}
 
 ```yaml
 custom_requirements:
@@ -64,41 +32,44 @@ custom_requirements:
     message: File /etc/vendor-license does not exists.
     condition:
       status_code: 1
-    # else error
   command:
     id: raw
+    timeout: 15
     data:
-      cmd: '["test", "-e", "/host/etc/vendor-license"]'
-      volumes:
-      - host_path: /etc
-        container_path: /host/etc
-        options: ["ro"]
+      kubernetes:
+        pod_name: "license-checker" # matches the Pod name below
+        global: true
+
+---
+# kind: preflight-kubernetes
+apiVersion: v1
+kind: Pod
+metadata:
+  name: license-checker
+spec:
+  containers:
+  - name: tester
+    image: busybox
+    command: ["test", "-e", "/host/etc/vendor-license"]
+    ports:
+    - containerPort: 80
+    volumeMounts:¬
+    - name: etc
+      mountPath: /host/etc
+  volumes:
+  - name: etc
+    hostPath:
+      path: /etc
 ```
 
-- Use a common preflight check - see [api_version](#api-version), [cluster_size](#cluster-size), [no_restore_in_progress](#no-restore-in-progress), [server_version](#server-version), [total_cores](#total-cores), [total_memory](#total-memory), [volume_claim_bound](#volume-claim-bound), [volume_claims](#volume-claims).
+{{< linked_headline "Schema" >}}
 
-{{< linked_headline "API Version" >}}
-
-{{< linked_headline "Cluster Size" >}}
-
-{{< linked_headline "No Restore in Progress" >}}
-
-{{< linked_headline "Server Version" >}}
-
-{{< linked_headline "Total Memory" >}}
-
-{{< linked_headline "Volume Claim Bound" >}}
-
-{{< linked_headline "Volume Claims" >}}
-
-# Resource Specification
-
-Custom requirements are represented with the followings and properties.
+Add items to the `custom_requirements` section of your Replicated yaml using the following schema:
 
 {{< linked_headline "Requirement" >}}
 
-The requirement resource is the primary resource for custom preflight checks. A requirement
-represents a single check that is to be preformed during the installation and upgrade steps of the
+The custom requirement resource is the primary resource for custom preflight checks. A requirement
+represents a single check that is to be performed during the installation and upgrade steps of the
 application lifecycle.
 
 | **Name** | **Type** | **Required** | **Description** |
@@ -113,19 +84,34 @@ application lifecycle.
 {{< linked_headline "Command" >}}
 
 The command resource represents the command that is to be run. The command will return messages, a
-status code and possibly an error. See the [commands section](#commands) for a list of supported
-operations.
+status code and possibly an error.
 
 | **Name** | **Type** | **Required** | **Description** |
 |----------|----------|--------------|-----------------|
-| id | string | yes | The command id |
+| id | string | yes | Always the literal string "raw" |
 | timeout | int | no | Timeout in seconds, default 15 seconds, -1 denotes no timeout |
-| data | object | no | The command data |
+| data | Data | no | The command data |
+
+{{< linked_headline "Data" >}}
+
+| **Name** | **Type** | **Required** | **Description** |
+|----------|----------|--------------|-----------------|
+| kubernetes | Kubernetes | yes | Configuration object for the command pods |
+
+{{< linked_headline "Kubernetes" >}}
+
+| **Name** | **Type** | **Required** | **Description** |
+|----------|----------|--------------|-----------------|
+| global | boolean | no | Run on all nodes in the cluster ||
+| pod_name | string | yes | Gets the Pod spec from a `preflight-kubernetes` yaml doc |
+| node_selector | map[string]string | no | Run the Pod on nodes matching any label in this map |
+
+Either the `global` flag or the `node_selector` map should be set, but not both.
 
 {{< linked_headline "Result" >}}
 
 The result resource represents the different possible outcomes of the command. A result contains
-a status, message and condition. Result are evaluated in order and the first matching result will
+a status, message and condition. Results are evaluated in order and the first matching result will
 determine the requirement status. If no condition properties are specified that result will always
 evaluate to true. If no results match the requirement will receive status `error`.
 
@@ -150,22 +136,10 @@ the following variables from the result of the command: `.Results` (array of mes
 
 {{< linked_headline "Message" >}}
 
-A message resource can be localized via the id. It contains a default message that will be
-displayed when no localization is present. Messages have arguments that can be substituted into the
-text via templates.
+Messages have arguments that can be substituted into the text via templates.
 
 | **Name** | **Type** | **Required** | **Description** |
 |----------|----------|--------------|-----------------|
 | id | string | no | The message identifier. Can be used to localize the message. |
 | default_message | string | yes | The default message |
 | args | map[string]string | no | Arguments to the message |
-
-{{< linked_headline "Status Codes" >}}
-
-| **Code** | **Description** |
-|----------|-----------------|
-| 1 | Catchall for general errors |
-| 22 | Invalid argument |
-| 62 | Timeout |
-| 98 | Address already in use |
-| 111 | Connection refused |

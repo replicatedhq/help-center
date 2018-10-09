@@ -28,7 +28,7 @@ All traffic between hosts is [encrypted by default](/docs/kubernetes/customer-in
 ## Storage
 
 Replicated installs the [Rook Operator](https://rook.io/) in the `rook-ceph-system` namespace, which manages the ceph storage system.
-Then Replicated creates a Ceph cluster by creating a [Cluster](https://rook.io/docs/rook/v0.8/ceph-cluster-crd.html) config in the `rook-ceph-system` namespace.
+Then Replicated creates a Ceph cluster by creating a [Cluster](https://rook.io/docs/rook/v0.8/ceph-cluster-crd.html) config in the `rook-ceph` namespace.
 Replicated configures the cluster to use the `/opt/replicated/rook` directory on all nodes automatically.
 Finally, a [Pool](https://rook.io/docs/rook/v0.8/ceph-pool-crd.html) is created to provide block storage backed by the cluster for PersistentVolumeClaims.
 This Pool does not provide replication by default, but can be [configured to allow the cluster to recover from the loss of a node](https://help.replicated.com/guides/ship-with-kubernetes/managing-storage/#replication).
