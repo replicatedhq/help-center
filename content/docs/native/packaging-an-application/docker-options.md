@@ -157,7 +157,7 @@ Dynamic marks that a container's image should always be pulled, whether it is in
     dynamic: true
 ```
 
-Marking an image as dynamic will start the container as well. If you would only like to pull the image and not start the container, you can add the `when: false` field to your container options.
+Marking an image as dynamic will pull the image and start the container. To pull the image without starting the container, add the `when: false` field to the container's options.
 
 {{< linked_headline "Labels" >}}
 
