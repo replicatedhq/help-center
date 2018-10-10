@@ -141,6 +141,14 @@ Pid mode lets you specify the process namespace for your container. By default e
     shm_size: 67108864
 ```
 
+{{< linked_headline "Ephemeral" >}}
+
+Ephemeral marks that a container is expected to exit, and allows the scheduler to listen for the container to stop. One common scenario where this is required is running database migrations at startup.
+
+```yaml
+    ephemeral: true
+```
+
 {{< linked_headline "Dynamic" >}}
 
 Dynamic marks that a container's image should always be pulled, whether it is initially used by the application or not. This can be used to prepare images for containers that your application might run dynamically or for containers where running depends on template functions that may change during startup.
@@ -148,6 +156,8 @@ Dynamic marks that a container's image should always be pulled, whether it is in
 ```yaml
     dynamic: true
 ```
+
+Marking an image as dynamic will start the container as well. If you would only like to pull the image and not start the container, you can add the `when: false` field to your container options.
 
 {{< linked_headline "Labels" >}}
 
