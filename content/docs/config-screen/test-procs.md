@@ -80,8 +80,9 @@ by your customer into the config items within this group. The arguments, in expe
 
 1. Access key ID.
 1. Secret access key.
-1. AWS service.  Valid values are `ec2`, `s3`, and `sqs`.  Credentials will be validated using `DescribeRegions`, `ListBuckets`, and `ListQueues` operations respectively.  All calls will be made using `us-east-1` region.
+1. AWS service.  Valid values are `ec2`, `s3`, and `sqs`.  Credentials will be validated using `DescribeRegions`, `ListBuckets`, and `ListQueues` operations respectively.
 1. (Optional) Custom S3 endpoint. `s3` AWS service must be set. Allows for specifying a custom endpoint if you are using an S3-compatible service like Minio.
+1. (Optional) AWS Region (`us-east-1` by default).
 
 ```yaml
 config:
@@ -97,13 +98,16 @@ config:
       - aws_secret_access_key
       - aws_service
       - aws_custom_endpoint
+      - aws_region
   items:
     - name: aws_access_key_id
       title: AWS Access Key ID
       type: password
+      desciption: Will use instance profiles if possible when left blank.
     - name: aws_secret_access_key
       title: AWS Secret Access Key
       type: password
+      desciption: Will use instance profiles if possible when left blank.
     - name: aws_service
       title: AWS Service
       type: select_one
@@ -117,6 +121,10 @@ config:
     - name: aws_custom_endpoint
       title: AWS Custom Endpoint
       type: text
+    - name: aws_region
+      title: AWS Region
+      type: text
+      default: us-east-1
 ```
 
 {{< linked_headline "Certificate Verification" >}}
