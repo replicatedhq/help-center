@@ -53,7 +53,7 @@ spec:
     command: ["test", "-e", "/host/etc/vendor-license"]
     ports:
     - containerPort: 80
-    volumeMounts:¬
+    volumeMounts:
     - name: etc
       mountPath: /host/etc
   volumes:
