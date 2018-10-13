@@ -11,7 +11,9 @@
     "gulp": "gulp",
     "index-site": "hugo-algolia -m --all",
     "index-and-send": "hugo-algolia -s -m --all -c 19kb",
-    "index-and-send-staging": "hugo-algolia -s -m --all -c 19kb --config ./config.staging.yaml"
+    "index-and-send-staging": "hugo-algolia -s -m --all -c 19kb --config ./config.staging.yaml",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "algoliasearch": "^3.24.1",
@@ -24,6 +26,8 @@
     "gulp-useref": "^3.1.2",
     "hugo-algolia": "^1.2.13",
     "retraced-logs-viewer": "^2.1.18",
-    "support-bundle-upload": "^1.0.7"
-  }
+    "support-bundle-upload": "^1.0.7",
+    "snyk": "^1.103.4"
+  },
+  "snyk": true
 }
