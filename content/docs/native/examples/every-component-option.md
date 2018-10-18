@@ -121,6 +121,7 @@ components:
           - '{{repl if ConfigOptionEquals "enable_unconfined_apparmor_profile" "1"}}apparmor=unconfined{{repl end}}'
         shm_size: 1073741824
         source: replicated
+        stop_timeout: 10
         support_commands:
           - command: ["run-command","-a"]
             filename: /tmp/run-command.out
