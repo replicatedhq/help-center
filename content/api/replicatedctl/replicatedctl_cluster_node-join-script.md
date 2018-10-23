@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_cluster_node-join-script
 categories:
 - replicatedctl
-date: 2018-09-27T12:18:29-07:00
+date: 2018-10-08T23:39:27Z
 description: Outputs the script to run to join a node to the cluster
 gradient: purpleToPink
 index: docs

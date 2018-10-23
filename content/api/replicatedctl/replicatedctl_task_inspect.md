@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_task_inspect
 categories:
 - replicatedctl
-date: 2018-09-27T12:18:29-07:00
+date: 2018-10-08T23:39:27Z
 description: Display detailed information on one or more tasks
 gradient: purpleToPink
 index: docs
