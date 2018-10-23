@@ -19,7 +19,9 @@ Replicated's Kubernetes scheduler uses [Rook](https://rook.io/) to dynamically p
 
 Replicated's install script will default to creating a cluster backed by the host directory `/opt/replicated/rook`.
 Each file in the cluster begins with a single copy, i.e. without replication.
-When a new node is added to the cluster, you can edit the Pool custom resource named `replicapool` in the `rook-ceph` namespace and configure it to store copies of each file on two separate hosts:
+When a node is added or removed from the cluster, Replicated will automatically adjust the replication level up to a maximum of 3.
+
+Prior to Replicated 2.30, customers had to manually increase the replication level with the following command:
 
 ```shell
 kubectl -n rook-ceph patch pool replicapool --type='json' -p='[{"op": "replace", "path": "/spec/replicated/size", "value": 2}]'
