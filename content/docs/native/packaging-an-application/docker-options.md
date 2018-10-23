@@ -171,3 +171,11 @@ For example, `my.container.label` would become a label with a key of `my.contain
       - my.container.value=IMPORTANT=FALSE
       - 'my.template.value={{repl ConfigOption "labelValue" }}'
 ```
+
+{{< linked_headline "Stop-Timeout" >}}
+
+Stop Timeout is used to specify the number of seconds to wait after stopping an application container before killing it. By default this value is set to 10.
+
+```yaml
+    stop_timeout: 10
+```
