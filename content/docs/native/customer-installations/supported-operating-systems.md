@@ -20,7 +20,7 @@ On some operating systems including CentOS 6 and RHEL 6, features have been back
 time="2017-01-01T00:00:00.000000000-00:00" level=warning msg="You are running linux kernel version 2.6.32-573.8.1.el6.x86_64, which might be unstable running docker. Please upgrade your kernel to 3.10.0."
 ```
 
-Replicated provides an easy install script to work with the the following list of operating system.
+Replicated provides an easy install script to work with the following list of operating system.
 
 - Debian 7.7+
 - Ubuntu 14.04.5 / 16.04 / 18.04

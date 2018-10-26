@@ -6,7 +6,6 @@ weight: "304"
 categories: [ "Config Screen" ]
 index: "other"
 aliases: [/docs/packaging-an-application/test-procs/,/docs/native/packaging-an-application/test-procs/,/docs/swarm/packaging-an-application/test-procs/]
-nextPage: "snapshots/overview.md"
 ---
 
 The `test_proc` property in the configuration section of the YAML gives you the ability to easily test the validity of the unsaved configuration parameters entered by the end-user with minimal configuration.
@@ -32,8 +31,9 @@ There are two different argument properties of the `test_proc` object.
 
 {{< linked_headline "Commands" >}}
 
-Test commands are built directly into the Replicated platform. We currently offer the
-following set of commands:
+For additional functionality, fully customizable commands can be achieved through the use of [Programmable Test Procedures](/docs/packaging-an-application/programmable-test-procs/).
+
+See below for a list of test commands that are built into the Replicated Platform:
 
 ### Resolve Host
 

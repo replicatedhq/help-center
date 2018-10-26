@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Application Properties"
 description: "The Replicated YAML section `properties` allows several high level items to be defined."
-weight: "2614"
+weight: "2616"
 categories: [ "Packaging a Kubernetes Application" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"

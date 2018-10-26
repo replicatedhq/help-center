@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Promote Releases"
 description: "The process for leveraging Replicated's release channel management functionality to stage versions and deliver updates to customers."
-weight: "218"
+weight: "220"
 categories: [ "Packaging a Native Application" ]
 index: ["docs/native", "docs"]
 aliases: [docs/distributing-an-application/promote-releases]

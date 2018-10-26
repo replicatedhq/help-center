@@ -10,15 +10,24 @@ icon: "replicatedKubernetes"
 aliases: [/docs/packaging-an-application/preflight-checks-k8s/,/docs/kubernetes/packaging-an-application/preflight-checks]
 ---
 
-It is possible to run an arbitrary command in a Pod as a preflight check.
-The Pods can be scheduled to run on all nodes with the `global` mode or on a limited set of Nodes using selectors.
-All images used by raw command Pods must be defined in the [images](/docs/kubernetes/getting-started/docker-registries/#bundling-airgap-images) section of your Replicated yaml.
+The host requirements section of the yaml gives Replicated the ability to analyze system requirements and warn or prevent the user from proceeding with an installation or upgrade. In addition to host requirements, Replicated has the ability to define fully customizable preflight requirements as of version {{< version version="2.29.0" >}}. These programmable requirements provide flexibility to the point that an arbitrary command can be executed by a vendor provided image. See the [commands section](#commands) below for a full list of commands that may be run including examples.
 
-To begin using custom raw preflight commands, add a Pod spec to your release yaml with kind `preflight-kubernetes`, then configure a `raw` command to use it in the `custom_requirements` section of your Replicated yaml.
+{{< linked_headline "Commands" >}}
+
+Commands will be run to determine the status of a requirement. They return result messages, a status code and an error. Next we will look at examples. For details on the fields please see the [resource specification](#resource-specification) section at the bottom of the page.
+
+### Scheduler
+
+Run a preflight check using your own Pod definition.
+
+[Resource spec](/docs/kubernetes/packaging-an-application/commands-reference/#scheduler)
+
+To begin using custom raw preflight commands, add a Pod spec to your release yaml with kind `preflight-kubernetes`, then configure a `scheduler` command to use it in the `custom_requirements` section of your Replicated yaml.
 
 {{< linked_headline "Example" >}}
 
 ```yaml
+# kind: replicated
 custom_requirements:
 - id: license-file-exists
   message: License file exists
@@ -33,7 +42,7 @@ custom_requirements:
     condition:
       status_code: 1
   command:
-    id: raw
+    id: scheduler
     timeout: 15
     data:
       kubernetes:
@@ -62,15 +71,13 @@ spec:
       path: /etc
 ```
 
-{{< linked_headline "Schema" >}}
+{{< linked_headline "Resource Specification" >}}
 
-Add items to the `custom_requirements` section of your Replicated yaml using the following schema:
+Custom requirements are represented with the followings and properties.
 
-{{< linked_headline "Requirement" >}}
+### Requirement
 
-The custom requirement resource is the primary resource for custom preflight checks. A requirement
-represents a single check that is to be performed during the installation and upgrade steps of the
-application lifecycle.
+The requirement resource is the primary resource for Programmable Preflight Checks. A requirement represents a single check that is to be preformed during the installation and upgrade steps of the application lifecycle.
 
 | **Name** | **Type** | **Required** | **Description** |
 |----------|----------|--------------|-----------------|
@@ -78,68 +85,5 @@ application lifecycle.
 | message | string or Message | yes | A short description of the requirement |
 | details | string or Message | no | A more detailed description of the requirement |
 | when | string | no | Will determine if this requirement should be run (evaluated to a boolean value) |
-| command | Command | yes | The command that will be run |
-| results | array[Result] | yes | An array of result objects that when evaluated will determine success or failure |
-
-{{< linked_headline "Command" >}}
-
-The command resource represents the command that is to be run. The command will return messages, a
-status code and possibly an error.
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| id | string | yes | Always the literal string "raw" |
-| timeout | int | no | Timeout in seconds, default 15 seconds, -1 denotes no timeout |
-| data | Data | no | The command data |
-
-{{< linked_headline "Data" >}}
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| kubernetes | Kubernetes | yes | Configuration object for the command pods |
-
-{{< linked_headline "Kubernetes" >}}
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| global | boolean | no | Run on all nodes in the cluster ||
-| pod_name | string | yes | Gets the Pod spec from a `preflight-kubernetes` yaml doc |
-| node_selector | map[string]string | no | Run the Pod on nodes matching any label in this map |
-
-Either the `global` flag or the `node_selector` map should be set, but not both.
-
-{{< linked_headline "Result" >}}
-
-The result resource represents the different possible outcomes of the command. A result contains
-a status, message and condition. Results are evaluated in order and the first matching result will
-determine the requirement status. If no condition properties are specified that result will always
-evaluate to true. If no results match the requirement will receive status `error`.
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| status | string | yes | One of success, warn or error |
-| message | string or Message | yes | A description of the result |
-| condition | Condition | no | The condition that must be met |
-
-{{< linked_headline "Condition" >}}
-
-All properties of a condition must be met to determine that condition to be true. The `bool_expr`
-property is intended to be evaluated using Replicated templates. This template will receive
-the following variables from the result of the command: `.Results` (array of messages), `.Result`
-(the first message), `.StatusCode`, `.Error`.
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| error | boolean | no | Did the command result in an error? |
-| status_code | int | no | The command status code |
-| bool_expr | string | no | An expression that can be evaluated and parsed as a boolean |
-
-{{< linked_headline "Message" >}}
-
-Messages have arguments that can be substituted into the text via templates.
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| id | string | no | The message identifier. Can be used to localize the message. |
-| default_message | string | yes | The default message |
-| args | map[string]string | no | Arguments to the message |
+| command | [Command](/docs/kubernetes/packaging-an-application/commands-reference/#command) | yes | The command that will be run |
+| results | array\[[Result](/docs/kubernetes/packaging-an-application/commands-reference/#result)\] | yes | An array of result objects that when evaluated will determine success or failure |

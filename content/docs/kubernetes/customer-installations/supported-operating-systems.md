@@ -14,7 +14,7 @@ Replicated supports Linux-based servers that can run current versions of Docker 
 
 Your machine must support docker-engine {{< kubernetes_docker_version_minimum >}}. The install script will install docker-engine {{< kubernetes_docker_version_minimum >}} and Kubernetes {{< kubernetes_version >}}.
 
-Replicated provides an easy install script to work with the the following list of operating system.
+Replicated provides an easy install script to work with the following list of operating system.
 
 - Ubuntu 16.04.3 - 16.04.5
 - Red Hat Enterprise Linux 7.4 - 7.5

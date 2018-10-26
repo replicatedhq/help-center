@@ -11,7 +11,7 @@ icon: "replicatedDockerSwarm"
 
 Each customer you deploy to via Replicated will need a separate license file for their installation. This license file identifies the customer & application during the installation and update processes. A customer license is created in the Customers section of the [vendor portal](https://vendor.replicated.com/customers). You can manage the values and properties of that customer and license, including custom license fields, by selecting an individual customer.
 
-If you are looking to create or manage custom license fields you can do so in the License Fields section of the [vendor portal](https://vendor.replicated.com/) or via the [Vendor License API](/api/vendor-api). License values are used by Replicated to enable/disable various functionality, many of the values are also available in the on-prem instance via the [license integration API](https://replicated.readme.io/docs/license-api).
+If you are looking to create or manage custom license fields you can do so in the License Fields section of the [vendor portal](https://vendor.replicated.com/) or via the [Vendor License API](https://replicated-vendor-api.readme.io/v1.0/reference#licenses). License values are used by Replicated to enable/disable various functionality, many of the values are also available in the on-prem instance via the [license integration API](https://replicated.readme.io/docs/license-api).
 
 ![](/images/post-screens/create-customer.png)
 
@@ -35,7 +35,7 @@ By default, licenses will be set to manual updates. This means that the end cust
 
 {{< linked_headline "Clustered Installation Enabled" >}}
 
-By default, licenses will be set to disable clustered installations. This will prevent the "[add node](/docs/distributing-an-application/add-nodes/)" button from appearing on the Cluster tab of the on-prem admin console.
+By default, licenses will be set to disable clustered installations. This will prevent the "[add node](/docs/swarm/customer-installations/add-nodes/)" button from appearing on the Cluster tab of the on-prem admin console.
 
 {{< linked_headline "Airgap Download Enabled" >}}
 
@@ -55,7 +55,7 @@ It is important to identify the type of license that is being created, `developm
 
 {{< linked_headline "Custom License Fields" >}}
 
-[Custom license fields](/docs/kb/developer-resources/custom-license-fields) can be set for all licenses. This is useful if specific customer information might change from customer to customer. These fields can be read from both the [template functions](/docs/packaging-an-application/template-functions) as well as from the [Integration API](/categories/integration-api). Examples of custom license fields are "seats" to limit the number of active users or "hostname" in order to specify the domain that the application can be run on.
+[Custom license fields](/docs/kb/developer-resources/custom-license-fields) can be set for all licenses. This is useful if specific customer information might change from customer to customer. These fields can be read from both the [template functions](/docs/swarm/packaging-an-application/template-functions/) as well as from the [Integration API](/api/integration-api/). Examples of custom license fields are "seats" to limit the number of active users or "hostname" in order to specify the domain that the application can be run on.
 
 {{< linked_headline "Archiving Licenses" >}}
 
