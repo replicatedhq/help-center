@@ -80,7 +80,7 @@ by your customer into the config items within this group. The arguments, in expe
 
 1. Access key ID.
 1. Secret access key.
-1. AWS service.  Valid values are `ec2`, `s3`, and `sqs`.  Credentials will be validated using `DescribeRegions`, `ListBuckets`, and `ListQueues` operations respectively.
+1. AWS service.  Valid values are `ec2`, `s3`, and `sqs`.  Credentials will be validated using `DescribeRegions`, `ListAllMyBuckets`, and `ListQueues` operations respectively.
 1. (Optional) Custom S3 endpoint. `s3` AWS service must be set. Allows for specifying a custom endpoint if you are using an S3-compatible service like Minio.
 1. (Optional) AWS Region (`us-east-1` by default).
 
