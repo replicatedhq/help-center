@@ -47,4 +47,3 @@ replicatedctl
 * [replicatedctl task](/api/replicatedctl/replicatedctl_task/)	 - Manage tasks
 * [replicatedctl terms](/api/replicatedctl/replicatedctl_terms/)	 - Read and accept the terms of service
 * [replicatedctl version](/api/replicatedctl/replicatedctl_version/)	 - Get the Replicated CLI version information
-
