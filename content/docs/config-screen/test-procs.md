@@ -9,17 +9,33 @@ aliases: [/docs/packaging-an-application/test-procs/,/docs/native/packaging-an-a
 nextPage: "snapshots/overview.md"
 ---
 
-Using the `test_proc` directive in your app definition YAML, you enable your customers to
-easily test the validity of the unsaved configuration parameters they're entering.
+The `test_proc` property in the configuration section of the YAML gives you the ability to easily test the validity of the unsaved configuration parameters entered by the end-user with minimal configuration.
 
-You can specify a `run_on_save` property in any `test_proc`. if this evaluates to true, all
-installations will automatically run the `test_proc` whenever the settings page is saved.
-If the `test_proc` fails, a dialog will be displayed.
+Following is a detailed list of YAML properties of the `test_proc` object:
+
+| **Name** | **Type** | **Required** | **Description** |
+|----------|----------|--------------|-----------------|
+| display_name | string | yes | The text to show in the button in the browser UI. |
+| run_on_save | string or boolean | no | When true this test will run on saving the configuration. |
+| timeout | int | no | Timeout in seconds, default 15 seconds, -1 denotes no timeout |
+| command | string | yes | The command that will be run. See the list below for a list of [available commands](/docs/config-screen/test-procs/#commands). |
+| arg_fields | []string | no | A list of config item names for which to pass values to the test procedure. |
+| args | []string | no | A list of static arguments to pass to the test procedure. |
+
+{{< linked_headline "Arguments" >}}
+
+There are two different argument properties of the `test_proc` object.
+
+1. `arg_fields`: A list of configuration item names. When run, the item values will be passed to the command in order. This field only applies to test procedures that are a property of a configuration group. When a property of an item, the first argument will always be the item value.
+
+2. `args`: A list of static arguments that will be passed to the command. These will be appended after any `arg_fields` values.
+
+{{< linked_headline "Commands" >}}
 
 Test commands are built directly into the Replicated platform. We currently offer the
 following set of commands:
 
-{{< linked_headline "Resolve Host" >}}
+### Resolve Host
 
 `resolve_host` – Test whether or not a hostname can be resolved. Applies to a single item.
 The item's value will be resolved on the Replicated Management machine. Success or failure
@@ -39,7 +55,7 @@ config:
       - hostname
 ```
 
-{{< linked_headline "GitHub App Auth" >}}
+### GitHub App Auth
 
 `github_app_auth` – Test whether or not the supplied GitHub app key and secret are valid.
 Applies to a group of items. Both mainline and private enterprise versions of GitHub are
@@ -72,7 +88,7 @@ config:
   - name: github_type
 ```
 
-{{< linked_headline "AWS Auth" >}}
+### AWS Auth
 
 `aws_auth` – Test whether or not the supplied AWS key and secret are valid. Applies to a
 group of items. This command expects 3 arguments. These arguments come from values entered
@@ -127,7 +143,7 @@ config:
       default: us-east-1
 ```
 
-{{< linked_headline "Certificate Verification" >}}
+### Certificate Verification
 
 `certificate_verify` – Test whether or not the supplied x509 certificate is valid. Optionally
 validate the key pair, hostname and CA certificate. Applies to a group of items. This command expects the
@@ -159,7 +175,7 @@ config:
   - name: hostname
 ```
 
-{{< linked_headline "SMTP Auth" >}}
+### SMTP Auth
 
 `smtp_auth` – Test whether or not the supplied credentials are valid for the given SMTP
 server. Note that this procedure only tests authentication; it does not test whether or
@@ -175,7 +191,7 @@ into the config items within this group. The arguments, in expected order:
 - Password to send
 
 **Note that the address of the SMTP server must contain the correct port number ie
-smtp.gmail.com:587 for the test proc to validate correctly. A type of "None" will only
+smtp.gmail.com:587 for the test procedure to validate correctly. A type of "None" will only
 ensure the socket is available.**
 
 ```yaml
@@ -197,7 +213,7 @@ config:
     type: text
 ```
 
-{{< linked_headline "File Exists" >}}
+### File Exists
 
 `file_exists` - Test if a file exists on the host by giving its expected path. This can be
 applied to a group or an item, if applied to an item they imply the value, if applied to a
@@ -225,7 +241,7 @@ config:
       - true
 ```
 
-{{< linked_headline "Regex Match" >}}
+### Regex Match
 
 `regex_match` - Test if a given value matches a a regular expression for validation purposes.
 This can be applied to a group or an item, if applied to an item they imply the value, if
@@ -249,7 +265,7 @@ config:
       - "That doesn't seem to be a phone number!"
 ```
 
-{{< linked_headline "LDAP Auth" >}}
+### LDAP Auth
 
 `ldap_auth` - This test will ensure that the fields that your customer is supplying are
 complete and valid, for a detailed implementation reference see our LDAP integration section.
@@ -311,9 +327,9 @@ config:
 
 ```
 
-{{< linked_headline "JSON Validation" >}}
+### JSON Validation
 
-`validate_json` - Tests for valid JSON.  The validate_json test_proc takes a single argument which is the item name that contains the JSON to test.
+`validate_json` - Tests for valid JSON.  The `validate_json` test procedure takes a single argument which is the item name that contains the JSON to test.
 
 ```yaml
 config:
