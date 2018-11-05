@@ -15,7 +15,7 @@ Now that you've made some releases using the UI in vendor.replicated.com, its ti
 
 {{< linked_headline "Prerequisites " >}}
 
-This guide assumes you've already completed the steps in [create-release](./create-release.md) and [install](install.md). If you haven't already,
+This guide assumes you've already completed the steps in [create-release](../create-swarm-app) and [install](../installing). If you haven't already,
 you should complete those guide sections first. You'll also need:
 
 - [node](https://nodejs.org/en/download/)
