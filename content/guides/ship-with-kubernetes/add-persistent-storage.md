@@ -1,8 +1,8 @@
 ---
 date: "2018-01-30T04:02:20Z"
-title: "Managing Storage"
-description: "Overview of how Persistent Volumes work with Replicated"
-weight: "11004"
+title: "Add persistent Storage"
+description: "Adding persistent volumes to your application for resilient storage of application data"
+weight: "11005"
 categories: [ "Kubernetes Guide" ]
 index: "guides/kubernetes"
 type: "chapter"
@@ -10,6 +10,12 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 nextPage: "kubernetes/getting-started/overview.md"
 ---
+
+{{< linked_headline "Persistent Storage" >}}
+
+When your application needs to ship a database, blob store, or other means of persisting its data,
+its useful to use kubernetes [Persistent Volumes]() to manage the persistence and redundancy
+of that storage.
 
 {{< linked_headline "Rook" >}}
 
