@@ -16,4 +16,7 @@
     - title: "Iterating on Releases"
       description: "Iterate on applications by deploying releases with new features"
       slug: "iterating"
+    - title: "Automate your workflow"
+      description: "Learn best practices around managing your releases in version control to enable collaboration and automation"
+      slug: "automate"
 ---

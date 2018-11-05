@@ -15,7 +15,10 @@
     - title: "Iterate and Ship Updates"
       description: "Learn how to iterate and ship updates once you've deployed"
       slug: "iterate"
-    - title: "Managing Storage"
+    - title: "Automate your workflow"
+      description: "Learn best practices around managing your releases in version control to enable collaboration and automation"
+      slug: "automate"
+    - title: "Add persistent storage"
       description: "Learn about options for providing persistent storage to your appliction"
-      slug: "managing-storage"
+      slug: "add-persistent-storage"
 ---
