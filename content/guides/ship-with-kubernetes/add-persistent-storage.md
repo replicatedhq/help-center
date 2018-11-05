@@ -8,14 +8,56 @@ index: "guides/kubernetes"
 type: "chapter"
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
+aliases: [guides/ship-with-kubernetes/managing-storage]
 nextPage: "kubernetes/getting-started/overview.md"
 ---
 
 {{< linked_headline "Persistent Storage" >}}
 
 When your application needs to ship a database, blob store, or other means of persisting its data,
-its useful to use kubernetes [Persistent Volumes]() to manage the persistence and redundancy
-of that storage.
+it's useful to use kubernetes [Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) to manage the persistence and redundancy
+of that storage. This chapter give you a brief intro to how Replicated manages Persistent Volumes in Kubernetes, and some tips on how to leverage them to ship databases and other storage technology alongside your application.
+
+{{< linked_headline "Leveraging PVCs in StatefulSets" >}}
+
+For most stateful deployments, you'll want to include a Kubernetes [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) in your application. These are similar to Deployments,
+but with some extra features for stateful components, including direct integration with Persistent Volumes.
+
+An example StatefulSet is shown below, note especially the `volumeClaimTemplates` field, which is
+used to configure how Persistent Volumes are allocated.
+
+```sh
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mysql
+spec:
+  selector:
+    matchLabels:
+      app: mysql
+  serviceName: "mysql"
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:5
+        ports:
+        - containerPort: 3306
+          name: mysql
+  volumeClaimTemplates:
+  - metadata:
+      name: mysql
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: "default"
+      resources:
+        requests:
+          storage: 100Gi
+```
 
 {{< linked_headline "Rook" >}}
 
@@ -45,7 +87,7 @@ Alternatively, Rook can be disabled entirely by setting the `storage_provisioner
 
 {{< linked_headline "Tips" >}}
 
-Deployments with Pods that mount Persistent Volumes should specify an update strategy type of `Recreate` or a `RollingUpdate` with a `maxUnavailable` value of `1`.
-The default `RollingUpdate` with `maxUnavailable` value of `25%` will prevent old Pods from terminating and yielding their Persistent Volumes, which will keep new Pods from starting.
+- Deployments with Pods that mount Persistent Volumes should specify an update strategy type of `Recreate` or a `RollingUpdate` with a `maxUnavailable` value of `1`.
+- The default `RollingUpdate` with `maxUnavailable` value of `25%` will prevent old Pods from terminating and yielding their Persistent Volumes, which will keep new Pods from starting.
 
 For more information on managing the storage needs of Kubernetes in customer environments, see [Managing Storage](/docs/kubernetes/customer-installations/managing-storage/).
