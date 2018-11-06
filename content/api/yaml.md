@@ -48,7 +48,7 @@ admin_commands:
   command: [echo]
   component: DB
   container: redis
-      
+
 ```
 
 
@@ -68,7 +68,7 @@ components:
   - image_name: postgres
     source: public
     version: latest
-      
+
 ```
 
 
@@ -89,7 +89,7 @@ components:
   - image_name: postgres
     source: public
     version: latest
-      
+
 ```
 
 
@@ -117,7 +117,7 @@ components:
   - image_name: postgres
     source: public
     version: latest
-      
+
 ```
 
 
@@ -146,7 +146,7 @@ components:
   - image_name: postgres
     source: public
     version: latest
-      
+
 ```
 
 
@@ -157,7 +157,7 @@ components:
 ---
 admin_commands: []
 components: []
-      
+
 ```
 
 
@@ -177,7 +177,7 @@ components:
   - image_name: redis
     source: public
     version: latest
-      
+
 ```
 
 
@@ -189,7 +189,7 @@ admin_commands:
 - alias: aliasecho
   command: [echo]
   service: database
-      
+
 ```
 
 
@@ -202,7 +202,7 @@ admin_commands:
   command: [echo]
   selector:
     tier: database
-      
+
 ```
 
 
@@ -223,7 +223,7 @@ components:
   - image_name: redis
     source: public
     version: latest
-      
+
 ```
 
 
@@ -251,7 +251,7 @@ components:
   - image_name: redis
     source: public
     version: latest
-      
+
 ```
 
 
@@ -280,11 +280,11 @@ components:
   - image_name: redis
     source: public
     version: latest
-      
+
 ```
 
 
-    
+
 
 ## `prop-admincommand-shellalias-valid`
 
@@ -306,7 +306,7 @@ admin_commands:
   run_type: exec
   component: DB
   container: redis
-      
+
 ```
 
 
@@ -320,7 +320,7 @@ admin_commands:
   run_type: exec
   component: DB
   container: redis
-      
+
 ```
 
 
@@ -335,11 +335,11 @@ admin_commands:
   run_type: exec
   component: DB
   container: redis
-      
+
 ```
 
 
-    
+
 
 ## `prop-admincommand-requirements-present`
 
@@ -359,7 +359,7 @@ admin_commands:
 - command: [echo]
   component: DB
   container: redis
-      
+
 ```
 
 
@@ -371,7 +371,7 @@ admin_commands:
 - alias: echo
   component: DB
   container: redis
-      
+
 ```
 
 
@@ -385,11 +385,11 @@ admin_commands:
   command: [echo]
   component: DB
   container: redis
-      
+
 ```
 
 
-    
+
 
 ## `prop-admincommand-old-style-requirements-present`
 
@@ -410,7 +410,7 @@ admin_commands:
   command: [echo]
   component: alpha
   image: {}
-      
+
 ```
 
 
@@ -423,7 +423,7 @@ admin_commands:
   command: [echo]
   image:
     image_name: redis
-      
+
 ```
 
 
@@ -438,11 +438,11 @@ admin_commands:
   component: DB
   image:
     image_name: redis
-      
+
 ```
 
 
-    
+
 
 ## `prop-admincommand-multi-requirements-present`
 
@@ -465,7 +465,7 @@ admin_commands:
     container: redis
   swarm:
     service: myapp
-      
+
 ```
 
 
@@ -480,7 +480,7 @@ admin_commands:
     component: DB
   swarm:
     service: myapp
-      
+
 ```
 
 
@@ -497,11 +497,11 @@ admin_commands:
     container: redis
   swarm:
     service: myapp
-      
+
 ```
 
 
-    
+
 
 ## `prop-admincommand-verbose-requirements-present`
 
@@ -525,7 +525,7 @@ admin_commands:
       container: redis
     swarm:
       service: myapp
-      
+
 ```
 
 
@@ -541,7 +541,7 @@ admin_commands:
       component: redis
     swarm:
       service: myapp
-      
+
 ```
 
 
@@ -559,11 +559,11 @@ admin_commands:
       container: redis
     swarm:
       service: myapp
-      
+
 ```
 
 
-    
+
 
 ## `prop-admincommand-one-present`
 
@@ -582,7 +582,7 @@ Admin command must use one of several methods to identify the relevant container
 admin_commands:
 - alias: echo
   command: [echo]
-      
+
 ```
 
 
@@ -596,7 +596,7 @@ admin_commands:
   command: [echo]
   component: DB
   container: redis
-      
+
 ```
 
 
@@ -610,7 +610,7 @@ admin_commands:
   component: DB
   image:
     image_name: redis
-      
+
 ```
 
 
@@ -626,7 +626,7 @@ admin_commands:
     container: redis
   swarm:
     service: myapp
-      
+
 ```
 
 
@@ -643,11 +643,11 @@ admin_commands:
       container: redis
     swarm:
       service: myapp
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-cluster-count`
 
@@ -675,7 +675,7 @@ components:
   - source: public
     image_name: redis
     version: latest
-      
+
 ```
 
 
@@ -696,7 +696,7 @@ components:
   - source: public
     image_name: redis
     version: latest
-      
+
 ```
 
 
@@ -713,11 +713,11 @@ components:
   - source: public
     image_name: redis
     version: latest
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-cluster-strategy`
 
@@ -744,7 +744,7 @@ components:
   - source: public
     image_name: redis
     version: latest
-      
+
 ```
 
 
@@ -764,7 +764,7 @@ components:
   - source: public
     image_name: redis
     version: latest
-      
+
 ```
 
 
@@ -782,11 +782,11 @@ components:
   - source: public
     image_name: redis
     version: latest
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-volume-path-absolute`
 
@@ -809,7 +809,7 @@ components:
   containers:
   - source: public
     image_name: mongo
-      
+
 ```
 
 
@@ -825,7 +825,7 @@ components:
   containers:
   - source: public
     image_name: mongo
-      
+
 ```
 
 
@@ -840,11 +840,11 @@ components:
   containers:
   - source: public
     image_name: mongo
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-cluster-boolstring`
 
@@ -863,7 +863,7 @@ components:
 components:
 - name: DB
   cluster: "yes please"
-      
+
 ```
 
 
@@ -874,7 +874,7 @@ components:
 ---
 components:
 - name: DB
-      
+
 ```
 
 
@@ -885,7 +885,7 @@ components:
 components:
 - name: DB
   cluster: true
-      
+
 ```
 
 
@@ -896,29 +896,29 @@ components:
 components:
 - name: DB
   cluster: "false"
-      
+
 ```
 
 
-*Correct*: `component.cluster` == 0 
+*Correct*: `component.cluster` == 0
 
 ```yaml
 ---
 components:
 - name: DB
   cluster: "0"
-      
+
 ```
 
 
-*Correct*: `component.cluster` == 1 
+*Correct*: `component.cluster` == 1
 
 ```yaml
 ---
 components:
 - name: DB
   cluster: "1"
-      
+
 ```
 
 
@@ -929,11 +929,11 @@ components:
 components:
 - name: DB
   cluster: '{{repl ConfigOption "use_cluster"}}'
-      
+
 ```
 
 
-    
+
 
 ## `prop-port-min-api-version`
 
@@ -959,7 +959,7 @@ components:
       image_name: redis
       version: latest
 
-      
+
 ```
 
 
@@ -977,7 +977,7 @@ components:
       image_name: redis
       version: latest
 
-      
+
 ```
 
 
@@ -996,7 +996,7 @@ components:
       image_name: redis
       version: latest
 
-      
+
 ```
 
 
@@ -1014,11 +1014,11 @@ components:
       image_name: redis
       version: latest
 
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-container-host-count-min-uint`
 
@@ -1037,7 +1037,7 @@ Container's cluster_host_count property `min` must be an unsigned integer
 components:
 - cluster_host_count:
     min: "-2"
-      
+
 ```
 
 
@@ -1049,11 +1049,11 @@ components:
 components:
 - cluster_host_count:
     min: 3
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-container-host-count-max-uint`
 
@@ -1072,7 +1072,7 @@ Container's cluster_host_count property `max` must be an unsigned integer
 components:
 - cluster_host_count:
     max: -10
-      
+
 ```
 
 
@@ -1084,11 +1084,11 @@ components:
 components:
 - cluster_host_count:
     max: 10
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-container-host-count-healthy-uint`
 
@@ -1107,7 +1107,7 @@ Container's cluster_host_count property `threshold_healthy` must be an unsigned 
 components:
 - cluster_host_count:
     threshold_healthy: "all"
-      
+
 ```
 
 
@@ -1119,11 +1119,11 @@ components:
 components:
 - cluster_host_count:
     threshold_healthy: 5
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-container-host-count-degraded-uint`
 
@@ -1142,7 +1142,7 @@ Container's cluster_host_count property `threshold_degraded` must be an unsigned
 components:
 - cluster_host_count:
     threshold_degraded: "2.5"
-      
+
 ```
 
 
@@ -1154,11 +1154,11 @@ components:
 components:
 - cluster_host_count:
     threshold_degraded: 2
-      
+
 ```
 
 
-    
+
 
 ## `prop-cluster-size-public-port`
 
@@ -1185,7 +1185,7 @@ components:
     image_name: redis
     source: public
     version: latest
-      
+
 ```
 
 
@@ -1204,7 +1204,7 @@ components:
     image_name: redis
     source: public
     version: latest
-      
+
 ```
 
 
@@ -1224,7 +1224,7 @@ components:
     image_name: redis
     source: public
     version: latest
-      
+
 ```
 
 
@@ -1243,7 +1243,7 @@ components:
     image_name: redis
     source: public
     version: latest
-      
+
 ```
 
 
@@ -1260,7 +1260,7 @@ components:
     image_name: redis
     source: public
     version: latest
-      
+
 ```
 
 
@@ -1276,11 +1276,11 @@ components:
     image_name: redis
     source: public
     version: latest
-      
+
 ```
 
 
-    
+
 
 ## `tmpl-configoption-exists`
 
@@ -1312,7 +1312,7 @@ components:
   - image_name: wlaoh/counter
     name: '{{repl ConfigOption "not_existent" }}'
     source: public
-      
+
 ```
 
 
@@ -1354,13 +1354,13 @@ components:
   - source: public
     image_name: wlaoh/counter
     version: signed
-    cmd: '{{repl ConfigOption "one_host" }}'
+    cmd: '{{ repl ConfigOption "one_host" }}'
     name: '{{repl ConfigOption "hostname" }}'
-      
+
 ```
 
 
-    
+
 
 ## `prop-configitem-type-password`
 
@@ -1384,7 +1384,7 @@ config:
     title: Password
     type: text
     default: ""
-      
+
 ```
 
 
@@ -1401,11 +1401,11 @@ config:
     title: Password
     type: password
     default: ""
-      
+
 ```
 
 
-    
+
 
 ## `tmpl-configoption-not-circular`
 
@@ -1429,7 +1429,7 @@ config:
     title: A Circle
     type: text
     when: '{{ repl ConfigOptionEquals "circular" "I heard you liked circles" }}'
-      
+
 ```
 
 
@@ -1445,16 +1445,16 @@ config:
   - name: left
     title: Left
     type: text
-    when: '{{repl ConfigOptionEquals "right" "right option" }}'
+    when: '{{ repl ConfigOptionEquals "right" "right option" }}'
   - name: right
     title: Right
     type: text
-    when: '{{repl ConfigOptionEquals "left" "left option" }}'
+    when: '{{ repl ConfigOptionEquals "left" "left option" }}'
 
 ```
 
 
-    
+
 
 ## `prop-configitem-type-valid`
 
@@ -1478,7 +1478,7 @@ config:
     title: Cat Picture
     type: image_upload
     default: ""
-      
+
 ```
 
 
@@ -1503,11 +1503,11 @@ config:
     title: SSL Certificate
     type: textarea
     default: ""
-      
+
 ```
 
 
-    
+
 
 ## `prop-configitem-when-valid`
 
@@ -1536,7 +1536,7 @@ config:
     type: textarea
     default: ""
     when: ssl_is_good=1
-      
+
 ```
 
 
@@ -1557,7 +1557,7 @@ config:
     type: textarea
     default: ""
     when: ssl_is_bad!=1
-      
+
 ```
 
 
@@ -1584,7 +1584,7 @@ config:
   title: LDAP Server Settings
   when: auth_source>auth_type_ldap
   items: []
-      
+
 ```
 
 
@@ -1651,7 +1651,7 @@ config:
     default: ""
     when: database_use_ssl!=1
 
-      
+
 ```
 
 
@@ -1679,11 +1679,11 @@ config:
   - name: database_use_ssl
     title: Use SSL
     type: bool
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-container-names-unique`
 
@@ -1704,7 +1704,7 @@ custom_requirements:
   message: beta
 - id: alpha
   message: delta
-    
+
 ```
 
 
@@ -1719,7 +1719,7 @@ custom_requirements:
   message: delta
 - id: alpha
   message: zeta
-    
+
 ```
 
 
@@ -1733,11 +1733,11 @@ custom_requirements:
   message: beta
 - id: gamma
   message: delta
-    
+
 ```
 
 
-    
+
 
 ## `prop-component-container-unnamed-when-cluster-true`
 
@@ -1766,7 +1766,7 @@ components:
       initial: 2
     image_name: redis
     name: database
-      
+
 ```
 
 
@@ -1789,11 +1789,11 @@ components:
      initial: 2
     image_name: redis
     version: latest
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-container-event-subscription-container-exists`
 
@@ -1822,7 +1822,7 @@ components:
         - component: Pipeline
           container: logstash
           action: start
-      
+
 ```
 
 
@@ -1848,7 +1848,7 @@ components:
         - component: Pipeline
           container: logstash
           action: start
-      
+
 ```
 
 
@@ -1874,11 +1874,11 @@ components:
   containers:
   - source: public
     image_name: logstash
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-container-volume-modes-valid`
 
@@ -1906,7 +1906,7 @@ components:
         options:
           - rw
           - ro
-      
+
 ```
 
 
@@ -1926,7 +1926,7 @@ components:
         options:
           - z
           - Z
-      
+
 ```
 
 
@@ -1946,7 +1946,7 @@ components:
         options:
           - rshared
           - private
-      
+
 ```
 
 
@@ -1966,7 +1966,7 @@ components:
         options:
           - nocopy
           - nocopy
-      
+
 ```
 
 
@@ -1981,7 +1981,7 @@ components:
   - source: public
     image_name: redis
     version: latest
-      
+
 ```
 
 
@@ -1998,7 +1998,7 @@ components:
     volumes:
       - host_path: /tmp
         container_path: /tmp
-      
+
 ```
 
 
@@ -2020,11 +2020,11 @@ components:
           - Z
           - rshared
           - nocopy
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-container-volume-path-absolute`
 
@@ -2049,7 +2049,7 @@ components:
     volumes:
       - host_path: /tmp
         container_path: ubuntu/workspace
-      
+
 ```
 
 
@@ -2067,7 +2067,7 @@ components:
     volumes:
       - host_path: /tmp
         container_path: /home/ubuntu/workspace
-      
+
 ```
 
 
@@ -2084,11 +2084,11 @@ components:
     volumes:
       - host_path: /tmp
         container_path: '{{repl ConfigOption "mount_path"}}'
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-container-contenttrust-fingerprint-valid`
 
@@ -2113,7 +2113,7 @@ components:
       version: 3.2.1
       content_trust:
         public_key_fingerprint: flksdjflkds
-    
+
 ```
 
 
@@ -2136,11 +2136,11 @@ components:
       version: 3.2.1
       content_trust:
         public_key_fingerprint: aa:9c:75:89:de:46:3a:92:08:c7:ba:9a:29:fb:12:cc
-    
+
 ```
 
 
-    
+
 
 ## `prop-component-container-volumesfrom-exists`
 
@@ -2165,7 +2165,7 @@ components:
       version: 3.2.1
       volumes_from:
         - redis
-    
+
 ```
 
 
@@ -2182,7 +2182,7 @@ components:
       version: 3.2.1
       volumes_from:
         - mongo
-    
+
 ```
 
 
@@ -2203,11 +2203,11 @@ components:
       image_name: mongo
       name: mongo
       version: 3.2.1
-    
+
 ```
 
 
-    
+
 
 ## `prop-component-container-names-unique`
 
@@ -2234,7 +2234,7 @@ components:
       image_name: mongo
       name: db
       version: latest
-    
+
 ```
 
 
@@ -2255,7 +2255,7 @@ components:
       image_name: mongo
       name: db
       version: latest
-    
+
 ```
 
 
@@ -2280,11 +2280,11 @@ components:
       image_name: mongo
       name: mongo
       version: "3.2"
-    
+
 ```
 
 
-    
+
 
 ## `prop-component-container-instance-count-initial-uint`
 
@@ -2307,7 +2307,7 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
@@ -2322,7 +2322,7 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
@@ -2338,11 +2338,11 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-container-instance-count-max-uint`
 
@@ -2365,7 +2365,7 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
@@ -2381,11 +2381,11 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-container-instance-count-degraded-uint`
 
@@ -2408,7 +2408,7 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
@@ -2424,11 +2424,11 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-container-instance-count-healthy-uint`
 
@@ -2451,7 +2451,7 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
@@ -2467,11 +2467,11 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-container-volumesfrom-subscription-exists`
 
@@ -2503,7 +2503,7 @@ components:
     - alpha
     version: latest
     source: public
-    
+
 ```
 
 
@@ -2527,7 +2527,7 @@ components:
     image_name: alpine
     version: latest
     source: public
-    
+
 ```
 
 
@@ -2552,7 +2552,7 @@ components:
     - gamma
     version: latest
     source: public
-    
+
 ```
 
 
@@ -2573,7 +2573,7 @@ components:
     - subscriptions:
       - component: DB
         container: alphaname
-    
+
 ```
 
 
@@ -2598,7 +2598,7 @@ components:
     - alpha
     version: latest
     source: public
-    
+
 ```
 
 
@@ -2629,7 +2629,7 @@ components:
     - alpha
     version: latest
     source: public
-    
+
 ```
 
 
@@ -2662,11 +2662,11 @@ components:
     - subscriptions:
       - component: DB
         container: beta
-    
+
 ```
 
 
-    
+
 
 ## `prop-component-container-volume-ephemeral-type-check`
 
@@ -2689,7 +2689,7 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
@@ -2708,7 +2708,7 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
@@ -2723,11 +2723,11 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-container-volume-excluded-type-check`
 
@@ -2750,7 +2750,7 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
@@ -2769,7 +2769,7 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
@@ -2784,11 +2784,11 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-container-envvars-staticval-deprecated`
 
@@ -2812,7 +2812,7 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
@@ -2828,7 +2828,7 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
@@ -2845,11 +2845,11 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-container-envvars-excluded-type-check`
 
@@ -2872,7 +2872,7 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
@@ -2891,7 +2891,7 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
@@ -2906,11 +2906,11 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
-    
+
 
 ## `prop-component-container-shm-size-uint`
 
@@ -2932,7 +2932,7 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
@@ -2947,11 +2947,11 @@ components:
     image_name: redis
     version: latest
     source: public
-      
+
 ```
 
 
-    
+
 
 ## `prop-hostreq-docker-version-valid`
 
@@ -2969,7 +2969,7 @@ components:
 ---
 host_requirements:
   docker_version: the.good.one
-      
+
 ```
 
 
@@ -2979,7 +2979,7 @@ host_requirements:
 ---
 host_requirements:
   docker_version: 0.1.1
-      
+
 ```
 
 
@@ -2989,7 +2989,7 @@ host_requirements:
 ---
 host_requirements:
   docker_version: 1.09.1
-      
+
 ```
 
 
@@ -2999,7 +2999,7 @@ host_requirements:
 ---
 host_requirements:
   docker_version: 1.14.1
-      
+
 ```
 
 
@@ -3009,7 +3009,7 @@ host_requirements:
 ---
 host_requirements:
   docker_version: 17.13.1-ce
-      
+
 ```
 
 
@@ -3020,7 +3020,7 @@ host_requirements:
 ---
 host_requirements:
   docker_version: 17.09.1-ce
-      
+
 ```
 
 
@@ -3030,7 +3030,7 @@ host_requirements:
 ---
 host_requirements:
   docker_version: 17.09.1
-      
+
 ```
 
 
@@ -3040,11 +3040,11 @@ host_requirements:
 ---
 host_requirements:
   docker_version: 1.12.1
-      
+
 ```
 
 
-    
+
 
 ## `prop-hostreq-replicated-version-semver-valid`
 
@@ -3062,7 +3062,7 @@ host_requirements:
 ---
 host_requirements:
   replicated_version: the.good.one
-      
+
 ```
 
 
@@ -3072,7 +3072,7 @@ host_requirements:
 ---
 host_requirements:
   replicated_version: alpha-0.1.1
-      
+
 ```
 
 
@@ -3083,7 +3083,7 @@ host_requirements:
 ---
 host_requirements:
     replicated_version: 2.x
-      
+
 ```
 
 
@@ -3093,7 +3093,7 @@ host_requirements:
 ---
 host_requirements:
     replicated_version: 2.5.3
-      
+
 ```
 
 
@@ -3103,7 +3103,7 @@ host_requirements:
 ---
 host_requirements:
     replicated_version: '<=2.5.3 >2.5.x'
-      
+
 ```
 
 
@@ -3113,7 +3113,7 @@ host_requirements:
 ---
 host_requirements:
     replicated_version: '1.x'
-      
+
 ```
 
 
@@ -3123,7 +3123,7 @@ host_requirements:
 ---
 host_requirements:
     replicated_version: '=1.x'
-      
+
 ```
 
 
@@ -3133,11 +3133,11 @@ host_requirements:
 ---
 host_requirements:
     replicated_version: '>=1.4 <1.7'
-      
+
 ```
 
 
-    
+
 
 ## `prop-hostreq-system-ram-specs-valid`
 
@@ -3155,7 +3155,7 @@ host_requirements:
 ---
 host_requirements:
   memory: "128"
-      
+
 ```
 
 
@@ -3165,7 +3165,7 @@ host_requirements:
 ---
 host_requirements:
   memory: 0.0625TB
-      
+
 ```
 
 
@@ -3176,7 +3176,7 @@ host_requirements:
 ---
 host_requirements:
   memory: 2.0TB
-      
+
 ```
 
 
@@ -3186,11 +3186,11 @@ host_requirements:
 ---
 host_requirements:
   memory: 128KB
-      
+
 ```
 
 
-    
+
 
 ## `prop-hostreq-system-storage-specs-valid`
 
@@ -3208,7 +3208,7 @@ host_requirements:
 ---
 host_requirements:
   disk_space: "128"
-      
+
 ```
 
 
@@ -3218,7 +3218,7 @@ host_requirements:
 ---
 host_requirements:
   disk_space: 0.0625EB
-      
+
 ```
 
 
@@ -3229,7 +3229,7 @@ host_requirements:
 ---
 host_requirements:
   disk_space: 20.0TB
-      
+
 ```
 
 
@@ -3239,11 +3239,11 @@ host_requirements:
 ---
 host_requirements:
   disk_space: 128GB
-      
+
 ```
 
 
-    
+
 
 ## `prop-hostreq-docker-storage-specs-valid`
 
@@ -3261,7 +3261,7 @@ host_requirements:
 ---
 host_requirements:
   docker_space: "128"
-      
+
 ```
 
 
@@ -3271,7 +3271,7 @@ host_requirements:
 ---
 host_requirements:
   docker_space: 0.0625EB
-      
+
 ```
 
 
@@ -3282,7 +3282,7 @@ host_requirements:
 ---
 host_requirements:
   docker_space: 20.0TB
-      
+
 ```
 
 
@@ -3292,11 +3292,11 @@ host_requirements:
 ---
 host_requirements:
   docker_space: 128GB
-      
+
 ```
 
 
-    
+
 
 ## `prop-kubernetes-requirements-version-valid`
 
@@ -3315,7 +3315,7 @@ host_requirements:
 kubernetes:
   requirements:
     server_version: 17.01.1-ce
-      
+
 ```
 
 
@@ -3327,7 +3327,7 @@ kubernetes:
 kubernetes:
   requirements:
     server_version: 1.5.3
-      
+
 ```
 
 
@@ -3338,7 +3338,7 @@ kubernetes:
 kubernetes:
   requirements:
     server_version: '<=1.5.3 >1.5.x'
-      
+
 ```
 
 
@@ -3349,7 +3349,7 @@ kubernetes:
 kubernetes:
   requirements:
     server_version: '1.x'
-      
+
 ```
 
 
@@ -3360,7 +3360,7 @@ kubernetes:
 kubernetes:
   requirements:
     server_version: '=1.x'
-      
+
 ```
 
 
@@ -3371,11 +3371,11 @@ kubernetes:
 kubernetes:
   requirements:
     server_version: '>=1.4 <1.7'
-      
+
 ```
 
 
-    
+
 
 ## `prop-kubernetes-total-memory-valid`
 
@@ -3394,7 +3394,7 @@ kubernetes:
 kubernetes:
   requirements:
     total_memory: 0.0625TB
-      
+
 ```
 
 
@@ -3406,7 +3406,7 @@ kubernetes:
 kubernetes:
   requirements:
     total_memory: 2.0TB
-      
+
 ```
 
 
@@ -3417,7 +3417,7 @@ kubernetes:
 kubernetes:
   requirements:
     total_memory: 128KB
-      
+
 ```
 
 
@@ -3428,7 +3428,7 @@ kubernetes:
 kubernetes:
   requirements:
     total_memory: "128"
-      
+
 ```
 
 
@@ -3439,11 +3439,11 @@ kubernetes:
 kubernetes:
   requirements:
     total_memory: "129e6"
-      
+
 ```
 
 
-    
+
 
 ## `prop-kubernetes-persistent-storage-valid`
 
@@ -3462,7 +3462,7 @@ kubernetes:
 kubernetes:
   persistent_volume_claims:
   - storage: 0.0625TB
-      
+
 ```
 
 
@@ -3474,7 +3474,7 @@ kubernetes:
 kubernetes:
   persistent_volume_claims:
   - storage: 2.0TB
-      
+
 ```
 
 
@@ -3485,7 +3485,7 @@ kubernetes:
 kubernetes:
   persistent_volume_claims:
   - storage: 128KB
-      
+
 ```
 
 
@@ -3496,7 +3496,7 @@ kubernetes:
 kubernetes:
   persistent_volume_claims:
   - storage: "128"
-      
+
 ```
 
 
@@ -3507,7 +3507,7 @@ kubernetes:
 kubernetes:
   persistent_volume_claims:
   - storage: "129e6"
-      
+
 ```
 
 
@@ -3517,11 +3517,11 @@ kubernetes:
 ---
 kubernetes:
   persistent_volume_claims: []
-      
+
 ```
 
 
-    
+
 
 ## `prop-monitors-cpuacct-container-exists`
 
@@ -3546,7 +3546,7 @@ components:
 monitors:
   cpuacct:
     - Logstash,quay.io/getelk/logstash
-    
+
 ```
 
 
@@ -3563,7 +3563,7 @@ components:
 monitors:
   cpuacct:
     - Logstash,quay.io/getelk/logstash
-    
+
 ```
 
 
@@ -3581,7 +3581,7 @@ components:
 monitors:
   cpuacct:
     - Logstash,quay.io/getelk/logstash
-      
+
 ```
 
 
@@ -3594,7 +3594,7 @@ monitors:
     - swarmstash
 swarm:
   minimum_node_count: "1"
-      
+
 ```
 
 
@@ -3604,11 +3604,11 @@ swarm:
 ---
 monitors:
   cpuacct: []
-      
+
 ```
 
 
-    
+
 
 ## `prop-monitors-memory-container-exists`
 
@@ -3633,7 +3633,7 @@ components:
 monitors:
   memory:
     - Logstash,quay.io/getelk/logstash
-    
+
 ```
 
 
@@ -3650,7 +3650,7 @@ components:
 monitors:
   memory:
     - Logstash,quay.io/getelk/logstash
-    
+
 ```
 
 
@@ -3668,7 +3668,7 @@ components:
 monitors:
   memory:
     - Logstash,quay.io/getelk/logstash
-      
+
 ```
 
 
@@ -3681,11 +3681,11 @@ monitors:
     - swarmstash
 swarm:
   minimum_node_count: "1"
-      
+
 ```
 
 
-    
+
 
 ## `prop-monitors-custom-has-target`
 
@@ -3705,7 +3705,7 @@ monitors:
   custom:
     - name: whatever
       targets: []
-    
+
 ```
 
 
@@ -3717,7 +3717,7 @@ monitors:
   custom:
     - name: whatever
       target: ""
-    
+
 ```
 
 
@@ -3728,7 +3728,7 @@ monitors:
 monitors:
   custom:
     - name: whatever
-    
+
 ```
 
 
@@ -3752,11 +3752,11 @@ monitors:
         - stats.gauges.myapp100.ping.*
         - movingAverage(stats.gauges.myapp100.ping.*,60)
         - movingAverage(stats.gauges.myapp100.ping.*,600)
-      
+
 ```
 
 
-    
+
 
 ## `prop-monitors-custom-has-target`
 
@@ -3778,7 +3778,7 @@ monitors:
       targets: [stats.mystat.*]
       display:
         stroke_color: blue
-    
+
 ```
 
 
@@ -3792,7 +3792,7 @@ monitors:
       targets: [stats.mystat.*]
       display:
         fill_color: blue
-    
+
 ```
 
 
@@ -3819,11 +3819,11 @@ monitors:
       display:
         fill_color: '#44BB66'
         stroke_color: '#444444'
-      
+
 ```
 
 
-    
+
 
 ## `prop-statsd-port-valid`
 
@@ -3841,7 +3841,7 @@ If specified, `statsd.port` must be a valid TCP port
 ---
 statsd:
   port: -100
-    
+
 ```
 
 
@@ -3851,7 +3851,7 @@ statsd:
 ---
 statsd:
   port: 100000
-    
+
 ```
 
 
@@ -3862,7 +3862,7 @@ statsd:
 ---
 statsd:
   port: 43221
-      
+
 ```
 
 
@@ -3871,11 +3871,11 @@ statsd:
 ```yaml
 ---
 statsd: {}
-      
+
 ```
 
 
-    
+
 
 ## `prop-graphite-port-valid`
 
@@ -3893,7 +3893,7 @@ If specified, `graphite.port` must be a valid TCP port
 ---
 graphite:
   port: -100
-    
+
 ```
 
 
@@ -3903,7 +3903,7 @@ graphite:
 ---
 graphite:
   port: 100000
-    
+
 ```
 
 
@@ -3914,7 +3914,7 @@ graphite:
 ---
 graphite:
   port: 43221
-      
+
 ```
 
 
@@ -3923,11 +3923,11 @@ graphite:
 ```yaml
 ---
 graphite: {}
-      
+
 ```
 
 
-    
+
 
 ## `prop-custommetric-retention-valid`
 
@@ -3948,7 +3948,7 @@ custom_metrics:
     retention: 15 second resolution for  10 days
     aggregation_method: "average"
     xfiles_factor: 0.3
-    
+
 ```
 
 
@@ -3958,7 +3958,7 @@ custom_metrics:
 ```yaml
 ---
 custom_metrics: []
-      
+
 ```
 
 
@@ -3971,7 +3971,7 @@ custom_metrics:
     aggregation_method: "average"
     xfiles_factor: 0.3
 
-      
+
 ```
 
 
@@ -3985,7 +3985,7 @@ custom_metrics:
     aggregation_method: "average"
     xfiles_factor: 0.3
 
-      
+
 ```
 
 
@@ -3999,7 +3999,7 @@ custom_metrics:
     aggregation_method: "average"
     xfiles_factor: 0.3
 
-      
+
 ```
 
 
@@ -4013,7 +4013,7 @@ custom_metrics:
     aggregation_method: "average"
     xfiles_factor: 0.3
 
-      
+
 ```
 
 
@@ -4027,7 +4027,7 @@ custom_metrics:
     aggregation_method: "average"
     xfiles_factor: 0.3
 
-      
+
 ```
 
 
@@ -4041,7 +4041,7 @@ custom_metrics:
     aggregation_method: "average"
     xfiles_factor: 0.3
 
-      
+
 ```
 
 
@@ -4055,11 +4055,11 @@ custom_metrics:
     aggregation_method: "average"
     xfiles_factor: 0.3
 
-      
+
 ```
 
 
-    
+
 
 ## `prop-custommetric-aggregation-valid`
 
@@ -4080,7 +4080,7 @@ custom_metrics:
     retention: 15s:7d,1m:14d,15m:1y
     aggregation_method: "middle-out"
     xfiles_factor: 0.3
-    
+
 ```
 
 
@@ -4090,7 +4090,7 @@ custom_metrics:
 ```yaml
 ---
 custom_metrics: []
-      
+
 ```
 
 
@@ -4101,7 +4101,7 @@ custom_metrics: []
 custom_metrics:
   - target: stats.gauges.ping.rtt.*
 
-      
+
 ```
 
 
@@ -4115,7 +4115,7 @@ custom_metrics:
     aggregation_method: "sum"
     xfiles_factor: 0.3
 
-      
+
 ```
 
 
@@ -4129,7 +4129,7 @@ custom_metrics:
     aggregation_method: "average"
     xfiles_factor: 0.3
 
-      
+
 ```
 
 
@@ -4143,7 +4143,7 @@ custom_metrics:
     aggregation_method: "max"
     xfiles_factor: 0.3
 
-      
+
 ```
 
 
@@ -4157,7 +4157,7 @@ custom_metrics:
     aggregation_method: "min"
     xfiles_factor: 0.3
 
-      
+
 ```
 
 
@@ -4170,11 +4170,11 @@ custom_metrics:
     retention: "1s:10m,1m:4h,1h:30d"
     aggregation_method: "last"
     xfiles_factor: 0.3
-      
+
 ```
 
 
-    
+
 
 ## `prop-monitors-custom-display-labelscale-valid`
 
@@ -4195,7 +4195,7 @@ monitors:
     - target: stats.gauges.kfbr392.*
       display:
         label_scale: kfbr392
-    
+
 ```
 
 
@@ -4208,7 +4208,7 @@ monitors:
     - target: stats.gauges.kfbr392.*
       display:
         label_scale: 1.1.02
-    
+
 ```
 
 
@@ -4222,7 +4222,7 @@ monitors:
     - target: stats.gauges.kfbr392.*
       display:
         label_scale: metric
-    
+
 ```
 
 
@@ -4235,7 +4235,7 @@ monitors:
     - target: stats.gauges.kfbr392.*
       display:
         label_scale: none
-    
+
 ```
 
 
@@ -4248,7 +4248,7 @@ monitors:
     - target: stats.gauges.kfbr392.*
       display:
         label_scale: 1.84
-    
+
 ```
 
 
@@ -4261,7 +4261,7 @@ monitors:
     - target: stats.gauges.kfbr392.*
       display:
         label_scale: .1
-    
+
 ```
 
 
@@ -4274,7 +4274,7 @@ monitors:
     - target: stats.gauges.kfbr392.*
       display:
         label_scale: 12
-    
+
 ```
 
 
@@ -4287,11 +4287,11 @@ monitors:
     - target: stats.gauges.kfbr392.*
       display:
         label_scale: -12.23131131
-    
+
 ```
 
 
-    
+
 
 ## `prop-replicated-api-version-present`
 
@@ -4308,7 +4308,7 @@ monitors:
 ```yaml
 ---
 {}
-    
+
 ```
 
 
@@ -4317,7 +4317,7 @@ monitors:
 ```yaml
 ---
 replicated_api_version: kfbr392
-    
+
 ```
 
 
@@ -4327,11 +4327,11 @@ replicated_api_version: kfbr392
 ```yaml
 ---
 replicated_api_version: 2.9.0
-      
+
 ```
 
 
-    
+
 
 ## `prop-image-contenttrust-fingerprint-valid`
 
@@ -4343,7 +4343,7 @@ An image's `content_trust.public_key_fingerprint` must be a valid RFC4716 finger
 
 #### Examples:
 
-*Incorrect*: 
+*Incorrect*:
 
 ```yaml
 ---
@@ -4353,7 +4353,7 @@ images:
     tag: 3.2.1
     content_trust:
       public_key_fingerprint: flksdjflkds
-    
+
 ```
 
 
@@ -4368,11 +4368,11 @@ images:
     tag: 3.2.1
     content_trust:
       public_key_fingerprint: cb:69:19:cd:76:1f:17:54:92:a4:fc:a9:6f:a5:57:72
-    
+
 ```
 
 
-    
+
 
 ## `prop-properties-shellalias-valid`
 
@@ -4390,7 +4390,7 @@ images:
 ---
 properties:
   shell_alias: exec&echo
-      
+
 ```
 
 
@@ -4400,7 +4400,7 @@ properties:
 ---
 properties:
   shell_alias: exec**echo
-      
+
 ```
 
 
@@ -4411,11 +4411,11 @@ properties:
 ---
 properties:
   shell_alias: do_a-replicated_thing---plz
-      
+
 ```
 
 
-    
+
 
 ## `prop-properties-logourl-valid`
 
@@ -4433,7 +4433,7 @@ Logo URL must be a valid http or https URL
 ---
 properties:
   logo_url: yo://mylogo.com/logo.png
-      
+
 ```
 
 
@@ -4443,7 +4443,7 @@ properties:
 ---
 properties:
   logo_url: kfbr392
-      
+
 ```
 
 
@@ -4453,7 +4453,7 @@ properties:
 ---
 properties:
   logo_url: http://i.goo gr.com/rnZ3Ftf.png
-      
+
 ```
 
 
@@ -4464,11 +4464,11 @@ properties:
 ---
 properties:
   logo_url: http://x.y+a.com:3000/b/c
-      
+
 ```
 
 
-    
+
 
 ## `mesg-yaml-valid`
 
@@ -4488,13 +4488,13 @@ Document must be valid YAML. This could occur for many reasons, consult individu
 ```yaml
 ---
 }}{{}}{{
-          
+
 ```
 
 
 
 
-    
+
 
 ## `mesg-yaml-not-empty`
 
@@ -4510,13 +4510,13 @@ Document must not be empty
 
 ```yaml
 ---
-          
+
 ```
 
 
 
 
-    
+
 
 ## `prop-schema-valid`
 
@@ -4538,7 +4538,7 @@ components:
 - containers:
   - image_name: kfbr
     version: 392
-    
+
 ```
 
 
@@ -4550,7 +4550,7 @@ components:
 - containers:
   - source: public
     version: 3.2
-    
+
 ```
 
 
@@ -4559,7 +4559,7 @@ components:
 ```yaml
 ---
 deploy_this_great_app: plz&thx
-          
+
 ```
 
 
@@ -4568,7 +4568,7 @@ deploy_this_great_app: plz&thx
 ```yaml
 ---
 replicated_api_version: 2.11
-          
+
 ```
 
 
@@ -4580,7 +4580,7 @@ components:
 - containers:
 - volumes:
   - is_ephemeral: 2
-    
+
 ```
 
 
@@ -4592,7 +4592,7 @@ components:
 - containers:
 - volumes:
   - is_ephemeral: 1
-    
+
 ```
 
 
@@ -4604,7 +4604,7 @@ components:
 - containers:
 - volumes:
   - is_excluded_from_backup: 2
-    
+
 ```
 
 
@@ -4616,7 +4616,7 @@ components:
 - containers:
 - volumes:
   - is_excluded_from_backup: 1
-    
+
 ```
 
 
@@ -4626,7 +4626,7 @@ components:
 ---
 statsd:
 port: foo
-  
+
 ```
 
 
@@ -4636,7 +4636,7 @@ port: foo
 ---
 graphite:
 port: foo
-  
+
 ```
 
 
@@ -4647,7 +4647,7 @@ port: foo
 components:
 - cluster_host_count:
   min: false
-    
+
 ```
 
 
@@ -4664,11 +4664,11 @@ components:
   - image_name: redis
     version: latest
     source: replicated
-    
+
 ```
 
 
-    
+
 
 ## `prop-support-bundle`
 
@@ -4706,7 +4706,7 @@ support:
         replicated:
           component: LB
           container: wlaoh/nginx
-        
+
 ```
 
 
@@ -4720,7 +4720,7 @@ support:
 ```
 
 
-    
+
 
 ## `prop-swarm-secret-name-value`
 
@@ -4740,7 +4740,7 @@ replicated_api_version: "2.7.0"
 swarm:
   secrets:
   - name: foo
-        
+
 ```
 
 
@@ -4753,7 +4753,7 @@ swarm:
   secrets:
   - name: ""
     value: bar
-        
+
 ```
 
 
@@ -4768,7 +4768,7 @@ swarm:
     value: bar
     labels:
       alpha: beta
-        
+
 ```
 
 
@@ -4782,11 +4782,11 @@ swarm:
   secrets:
   - name: foo
     value: bar
-        
+
 ```
 
 
-    
+
 
 ## `prop-swarm-secret-label-key`
 
@@ -4810,7 +4810,7 @@ swarm:
     labels:
       alpha: beta
       "": delta
-        
+
 ```
 
 
@@ -4827,11 +4827,11 @@ swarm:
     labels:
       alpha: beta
       gamma: delta
-        
+
 ```
 
 
-    
+
 
 ## `prop-swarm-config-name-value`
 
@@ -4851,7 +4851,7 @@ replicated_api_version: "2.7.0"
 swarm:
   configs:
   - name: foo
-        
+
 ```
 
 
@@ -4864,7 +4864,7 @@ swarm:
   configs:
   - name: ""
     value: bar
-        
+
 ```
 
 
@@ -4879,7 +4879,7 @@ swarm:
     value: bar
     labels:
       alpha: beta
-        
+
 ```
 
 
@@ -4893,11 +4893,11 @@ swarm:
   configs:
   - name: foo
     value: bar
-        
+
 ```
 
 
-    
+
 
 ## `prop-swarm-config-label-key`
 
@@ -4921,7 +4921,7 @@ swarm:
     labels:
       alpha: beta
       "": delta
-        
+
 ```
 
 
@@ -4938,11 +4938,11 @@ swarm:
     labels:
       alpha: beta
       gamma: delta
-        
+
 ```
 
 
-    
+
 
 ## `prop-configitem-testproc-run-on-save`
 
@@ -4973,7 +4973,7 @@ config:
       args:
       - "([0-9]{3})[-]([0-9]{3})[-]([0-9]{4})$"
       - "That doesn't seem to be a phone number!"
-    
+
 ```
 
 
@@ -4994,7 +4994,7 @@ config:
   items:
   - name: phone_number
     type: text
-    
+
 ```
 
 
@@ -5016,7 +5016,7 @@ config:
       args:
       - "([0-9]{3})[-]([0-9]{3})[-]([0-9]{4})$"
       - "That doesn't seem to be a phone number!"
-      
+
 ```
 
 
@@ -5030,11 +5030,11 @@ config:
   items:
   - name: phone_number
     type: text
-      
+
 ```
 
 
-    
+
 
 ## `prop-configitem-testproc-command-valid`
 
@@ -5061,7 +5061,7 @@ config:
     test_proc:
       display_name: Is the json good?
       command: json_is_good
-    
+
 ```
 
 
@@ -5078,7 +5078,7 @@ config:
   items:
   - name: phone_number
     type: text
-    
+
 ```
 
 
@@ -5120,7 +5120,7 @@ config:
     test_proc:
       display_name: Check DNS
       command: resolve_host
-      
+
 ```
 
 
@@ -5134,14 +5134,42 @@ config:
   items:
   - name: docs_host
     type: text
-      
+
 ```
 
 
-    
+*Correct*: test_proc.custom_command specified instead of test_proc.command
+
+```yaml
+---
+config:
+- name: configs
+  title: Configuration
+  items:
+  - name: docs_host
+    type: text
+    test_proc:
+      display_name: Check DNS
+      custom_command:
+        id: scheduler
+        timeout: 15
+        data:
+          replicated:
+            component: password-checker
+            container: debian
+      results:
+      - status: success
+        message: Success!
+        condition:
+          status_code: 0
+          error: false
+
+```
+
+
+
 
 
 
 Autogenerated reference documentation for [Replicated YAML Linter](https://github.com/replicatedhq/replicated-lint)
-*Generated at Mon Aug 20 2018 16:38:41 GMT-0700 (PDT)*
-
+*Generated at Tue Nov 06 2018 09:22:41 GMT-0800 (PST)*
