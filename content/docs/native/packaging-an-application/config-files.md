@@ -30,6 +30,19 @@ The next section contains inline configuration files that we can supply to our c
         http.cors.allow-origin: /https?:\/\/{{repl ConfigOption "hostname" }}(:[0-9]+)?/
 ```
 
+You can also include file contents from GitHub If you've linked a GitHub account in Replicated.
+This integration can be configured on the app settings page on [vendor.replicated.com](https://vendor.replicated.com).
+
+```yaml
+    config_files:
+    - filename: "/data/config.yml"
+      source: github
+      owner: my_github_org
+      repo: my_github_repo
+      path: path/to/config.yml
+      ref: master
+```
+
 {{< linked_headline "Customer Files" >}}
 
 Similar to config files, the Replicated Native Scheduler supports mounting a customer supplied file, in it's entirety, into a container. This is defined as a `customer_file` and an example is below.
