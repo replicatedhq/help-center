@@ -1,6 +1,6 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Installing Replicated with an HTTP Proxy"
+title: "Installing Replicated by Script"
 description: "Instructions for installing Replicated via the easy install script."
 keywords: "installing"
 weight: "304"
