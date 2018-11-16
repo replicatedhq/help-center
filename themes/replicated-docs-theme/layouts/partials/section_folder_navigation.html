@@ -1,6 +1,9 @@
 {{ $currentPage := . }}
 {{ $currentSection := .CurrentSection }}
-{{ $scope :=  .CurrentSection.Parent.Title }}
+{{ $scope := "" }}
+{{ if .CurrentSection.Parent }}
+    {{ $scope = .CurrentSection.Parent.Title }}
+{{ end }}
 {{ $category := .CurrentSection.Title }}
 <div class="sidebar">
         <div class="dropdown u-marginBottom--most">
