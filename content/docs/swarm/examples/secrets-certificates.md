@@ -1,6 +1,6 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Nginx Secrets"
+title: "Nginx Secrets Example"
 description: "An example mounting TLS certificates using Docker Swarm secrets"
 weight: "405"
 categories: [ "Replicated + Swarm Examples" ]
@@ -13,48 +13,33 @@ gradient: "swarm"
 This is an example of an Nginx application mounting certificates with Docker Swarm secrets.
 
 ```yaml
+---
 # kind: replicated
 
-replicated_api_version: 2.9.2
-name: "SecretsApp"
+replicated_api_version: 2.29.0
+name: "Swarm Nginx Example"
 
 properties:
-  console_title: "SecretsApp"
+  console_title: Swarm Nginx Example
+  app_url: https://{{repl ConsoleSetting "tls.hostname" }}
+  logo_url: https://s3.amazonaws.com/poly-screenshots.angel.co/Project/5e/418654/b33617f926fd6c7df2ddab361dd3d60d-original.png
+
+host_requirements:
+  cpu_cores: 2
+  memory: 8GB
+  disk_space: 80GB
+  docker_space: 10GB
+  replicated_version: ">=2.29.0"
 
 config:
-- name: ssl
-  description: ""
-  test_proc:
-    display_name: Verify TLS settings
-    command: certificate_verify
-    timeout: 5
-    arg_fields:
-    - tls_key
-    - tls_certificate
-    - hostname
+- name: redis
+  title: Redis Configuration
+  description: Redis Configuration Items
   items:
-  - name: hostname
-    title: Hostname
+  - name: redis_timeout
+    title: Timeout
     type: text
-    recommended: false
-    default: ""
-    value_cmd:
-      name: host_ip
-      value_at: 0
-    when: ""
-    affix: ""
     required: true
-    items: []
-  - name: tls_key
-    title: Private Key File
-    type: file
-    required: true
-    affix: left
-  - name: tls_certificate
-    title: Certificate File
-    type: file
-    required: true
-    affix: right
 
 swarm:
   configs:
@@ -63,41 +48,63 @@ swarm:
       server {
         listen                443 ssl;
         server_name           localhost;
-        ssl_certificate       /run/secrets/site.crt;
-        ssl_certificate_key   /run/secrets/site.key;
+        ssl_certificate       /run/secrets/tls_cert;
+        ssl_certificate_key   /run/secrets/tls_key;
 
         location / {
             root   /usr/share/nginx/html;
             index  index.html index.htm;
         }
       }
+  - name: nginx_index
+    value: |
+      <p>
+        <h1>Hello!</h1>
+      </p>
+      <p>
+        The example app is working.
+      </p>
   secrets:
-  - name: site.crt
-    value: '{{repl ConfigOption "tls_certificate" }}'
-  - name: site.key
-    value: '{{repl ConfigOption "tls_key" }}'
+  - name: tls_cert
+    value: '{{repl ConsoleSetting "tls.cert.data" }}'
+  - name: tls_key
+    value: '{{repl ConsoleSetting "tls.key.data" }}'
+
+monitors:
+  cpuacct:
+  - nginx
+  memory:
+  - nginx
+
+backup:
+  enabled: true
 
 ---
 # kind: scheduler-swarm
-version: '3.3'
+version: "3.3"
 services:
   nginx:
     image: nginx:alpine
     ports:
     - 443:443
-    command: "sh -c \"exec nginx -g 'daemon off;\""
     configs:
     - source: nginx_config
       target: /etc/nginx/conf.d/site.conf
+    - source: nginx_index
+      target: /usr/share/nginx/html/index.html
     secrets:
-    - site.crt
-    - site.key
+    - tls_cert
+    - tls_key
 
 configs:
   nginx_config:
     external: true
-  "site.crt":
+  nginx_index:
     external: true
-  "site.key":
+
+secrets:
+  tls_cert:
+    external: true
+  tls_key:
     external: true
 ```
