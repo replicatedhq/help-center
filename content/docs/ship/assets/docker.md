@@ -13,6 +13,63 @@ gradient: "console"
 
 Docker asset types are useful to deliver both private and public Docker images to an installation. It's recommended to build for airgapped environments, where images cannot be pulled directly from the upstream registry. Using the `docker` asset type, it's possible to pull and load images on the workstation running the installation. Once pulled, adding a [simple script to push these to a local registry](/docs/ship/playbooks/airgap-kubernetes/) will ensure that the cluster can bootstrap and run offline. The [YAML reference documentation](https://help.staging.replicated.com/api/ship-assets/docker/) is published that defines all available keys.
 
+{{< linked_headline "Online Installs: Exposing Images from the Replicated Private Registry" >}}
+
+The following example will create a Kubernetes secret allowing private images to be pulled from the Replicated Registry.
+
+```yaml
+assets:
+  v1:
+    - inline:
+        dest: ./base/image-pull-secret.yaml
+        contents: |
+          ---
+          apiVersion: v1
+          kind: Secret
+          type: kubernetes.io/dockerconfigjson
+          metadata:
+            name: imagepullsecret-example
+            namespace: {{repl ConfigOption "namespace"}}
+          stringData:
+            .dockerconfigjson: |
+              {
+                "auths": {
+                  "registry.replicated.com": {
+                    "auth": "{{repl (Base64Encode (print (Installation "customer_id") ":" (Installation "installation_id")))}}",
+                    "email": "fake@fake.com",
+                    "username": "{{repl Installation "customer_id"}}",
+                    "password": "{{repl Installation "installation_id"}}"
+                  }
+                }
+              }
+    - inline:
+        dest: ./base/pod.yaml
+        contents: |
+          ---
+          apiVersion: v1
+          kind: Pod
+          metadata:
+            name: example-pod
+            namespace: {{repl ConfigOption "namespace"}}
+          spec:
+            imagePullSecrets:
+            - imagepullsecret-example
+            containers:
+            - name: example
+              image: registry.replicated.com/my-app/my-api-container:1.0.1
+
+
+config:
+  v1:
+    - name: namespace
+      title: Kubernetes namespace
+      items:
+        - name: namespace
+          type: text
+          default: default
+
+```
+
 {{< linked_headline "Delivering a Public Image" >}}
 
 The following example will create a `redis.tar` on the installer's workstation, and also an inline script to load and push it to a registry:
