@@ -8,13 +8,13 @@ index: "other"
 nextPage: "snapshots/overview.md"
 ---
 
-The `test_proc` property in the configuration section of the YAML gives you the ability to easily test the validity of the unsaved configuration parameters entered by the end-user with minimal configuration. Today there are many pre-configured commands that can be run including [host resolution](/docs/config-screen/test-procs/#resolve-host), [github auth](docs/config-screen/test-procs/#github-app-auth), [aws auth](/docs/config-screen/test-procs/#aws-auth) and [certificate verification](/docs/config-screen/test-procs/#certificate-verification), among many others.
+The `test_proc` property in the configuration section of the YAML gives you the ability to easily test the validity of the unsaved configuration parameters entered by the end-user with minimal configuration. Today there are many pre-configured commands that can be run including [host resolution](/docs/config-screen/test-procs/#resolve-host), [github auth](/docs/config-screen/test-procs/#github-app-auth), [aws auth](/docs/config-screen/test-procs/#aws-auth) and [certificate verification](/docs/config-screen/test-procs/#certificate-verification), among many others.
 
 The addition of Programmable Test Procedures enables you to run arbitrary containers to validate the same input from the configuration screen and show a friendly error message to the end-user. You can use runtime configuration as input to your container command and capture the result code and message and format it for display to the end-user.
 
 {{< linked_headline "Example" >}}
 
-The following example will check the validity of the password entered by the end-user. The `test_proc.custom_command` property of the yaml will instruct Replicated to run a container defined in the scheduler section of the YAML. The `test_proc.results` property can be utilized to interpret output from the container and format it for display to the end-user. For more detailed, scheduler specific examples refer to the [Native](/docs/native/packaging-an-application/programmable-test-procs/), [Kubernetes](/docs/kuberentes/packaging-an-application/programmable-test-procs/) and [Swarm](/docs/swarm/packaging-an-application/programmable-test-procs/) documentation for Programmable Test Procedures.
+The following example will check the validity of the password entered by the end-user. The `test_proc.custom_command` property of the yaml will instruct Replicated to run a container defined in the scheduler section of the YAML. The `test_proc.results` property can be utilized to interpret output from the container and format it for display to the end-user. For more detailed, scheduler specific examples refer to the [Native](/docs/native/packaging-an-application/programmable-test-procs/), [Kubernetes](/docs/kubernetes/packaging-an-application/programmable-test-procs/) and [Swarm](/docs/swarm/packaging-an-application/programmable-test-procs/) documentation for Programmable Test Procedures.
 
 ```yaml
 config:
