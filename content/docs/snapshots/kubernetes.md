@@ -13,7 +13,7 @@ Kubernetes Snapshots can be used to configure incremental backups for any Kubern
 that use a [Persistent Volume Claim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) (PVC)
 for persistent storage.
 
-### Configuration
+{{< linked_headline "Configuration" >}}
 
 In addition to storing your application data in a PVC, you'll need to whitelist it
 in your Replicated application yaml's `backup` section. For example, to back up a PVC named
@@ -41,7 +41,52 @@ backup:
 ...
 ```
 
-### Example
+{{< linked_headline "StatefulSets" >}}
+
+All PersistentVolumeClaims generated from a [StatefulSet's volumeClaimTemplates](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) will be included in a snapshot if the name in the `volumeClaimTemplate` matches a name in your backup whitelist.
+
+For example, with the following yaml two PersistentVolumeClaims would be generated: `www-web-0` and `www-web-1`.
+Both would be included in your snapshots because the whitelist includes `www`.
+
+```yaml
+backup:
+  enabled: true
+  kubernetes: pvc_names: ["www"]
+
+---
+#kind: scheduler-kubernetes
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: web
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  serviceName: nginx
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: k8s.gcr.io/nginx-slim:0.8
+        volumeMounts:
+        - name: www
+          mountPath: /usr/share/nginx/html
+  volumeClaimTemplates:
+  - metadata:
+      name: www
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 1Gi
+```
+
+{{< linked_headline "Example" >}}
 
 Below is an End-to-end application config for a PVC-backed redis deployment.
 
