@@ -14,7 +14,7 @@ icon: "replicatedKubernetes"
 
 This guide will give you first-hand experience installing a Replicated Kubernetes appliance and the Guestbook application. If you haven't yet created the Guestbook application, head back to the [Create and Ship as Release](../create-release) guide and complete that first.
 
-Now that we've created a release and promoted it to the the Unstable channel, the next step is to create a customer license and use this this license to install the application on a test server.
+Now that we've created a release and promoted it to the Unstable channel, the next step is to create a customer license and use this this license to install the application on a test server.
 
 {{< linked_headline "Create License" >}}
 

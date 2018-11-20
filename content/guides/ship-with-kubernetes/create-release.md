@@ -50,7 +50,7 @@ The first 2 lines of this are Replicated specific, and cannot be changed. But be
 
 {{< linked_headline "Save and Promote Release" >}}
 
-Next, click the Save Release button. Once the release is saved, we should promote it to the Unstable channel to make this release available for installation. To do this, click the "< Releases" link in the top left and then click the Promote button on the row we just created. In this popup, choose the Unstable channel and click the the Promote button.
+Next, click the Save Release button. Once the release is saved, we should promote it to the Unstable channel to make this release available for installation. To do this, click the "< Releases" link in the top left and then click the Promote button on the row we just created. In this popup, choose the Unstable channel and click the Promote button.
 
 ![Create Application](/images/guides/kubernetes/promote-release.png)
 

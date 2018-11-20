@@ -15,7 +15,7 @@ Replicated supports Linux-based servers that can run current versions of Docker.
 Your machine must support docker-engine {{< swarm_docker_version_minimum >}} - {{< swarm_docker_version_default >}}
 (with {{< swarm_docker_version_default >}} being the recommended version). This also requires a 64-bit distribution with a kernel minimum of 3.10.
 
-Replicated provides an easy install script for Swarm that works with the the following list of operating systems:
+Replicated provides an easy install script for Swarm that works with the following list of operating systems:
 
 - Debian 7.7+
 - Ubuntu 14.04.5 / 16.04 / 18.04

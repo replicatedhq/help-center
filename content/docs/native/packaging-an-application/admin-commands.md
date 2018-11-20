@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Admin Commands"
 description: "Implementation guide for application vendors to provide customers with aliased CLI commands that can be performed in the containers across a cluster."
 categories: [ "Packaging a Native Application" ]
-weight: "216"
+weight: "217"
 index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/admin-commands/]

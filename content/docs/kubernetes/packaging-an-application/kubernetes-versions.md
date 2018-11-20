@@ -2,7 +2,7 @@
 date: "2018-08-14T04:02:20Z"
 title: "Auto-Upgrading Replicated"
 description: "Configured Replicated to automatically upgrade"
-weight: "2615"
+weight: "2617"
 categories: [ "Packaging a Kubernetes Application" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"

@@ -9,15 +9,15 @@ icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/preflight-checks/,/tags/preflight-checks/,/docs/native/packaging-an-application/preflight-checks]
 ---
 
-The host requirements section of the yaml gives Replicated the ability to analyze system
+The host requirements section of the YAML gives Replicated the ability to analyze system
 requirements and warn or prevent the user from proceeding with an installation or upgrade. In
 addition to host requirements, Replicated has the ability to define fully customizable preflight
-requirements as of version {{< version version="2.5.0" >}}. These custom requirements provide
+requirements as of version {{< version version="2.5.0" >}}. These programmable requirements provide
 flexibility to the point that an arbitrary command can be executed by a vendor provided image. See
 the [commands section](#commands) below for a full list of commands that may be run including
 examples.
 
-There are three types of custom preflight checks:
+There are three types of Programmable Preflight Checks:
 
 - Run a preflight check using your own container - see [scheduler](#scheduler)
 - Run a shell script using ubuntu trusty - see [raw](#raw)
@@ -31,23 +31,7 @@ status code and an error. Next we will look at examples. For details on the fiel
 
 {{< linked_headline "Scheduler" >}}
 
-The scheduler command references a container in the components section of the yaml. Standard out
-and standard error will be captured and returned via the result message. Any exit code as a result
-of the container will be returned via the status code of the command. When the container cannot be
-run due to an error, an error will be returned. The container will be run on the nodes as specified
-by the component section of the container yaml.
-
-**Id:** `scheduler`
-
-**Status Codes:** 1, 22, 62 [*](#status-codes)
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| source | ReplicatedSchedulerSource<br />`{component: string, container: string}` | yes | A component and container reference |
-| cmd | string | no | Optionally override the container cmd |
-| config_files | array[ConfigFile] | no | {{< version version="2.7.0" >}} Additional config files to mount as volumes in the container |
-| entrypoint | array[string] | no | Optionally override the container entrypoint |
-| ports | array[ExposedPort] | no | Optionally override the container exposed ports |
+[Resource spec](/docs/native/packaging-an-application/commands-reference/#scheduler)
 
 ### Example
 
@@ -81,7 +65,7 @@ custom_requirements:
     id: scheduler
     timeout: 30 # in seconds, default to 15, -1 == no timeout
     data:
-      component: DB # the component and container from the components section of the yaml
+      component: DB # the component and container from the components section of the YAML
       container: mysql
       cmd: "[\"sh\", \"-c\", \"'exec mysql -h {{repl ThisNodePrivateIPAddress }} -u myuser -p {{repl ConfigOption \"mysql_pass\" }} yourdatabase < /opt/check-schema-version.sql'\"]"
       config_files:
@@ -93,22 +77,7 @@ custom_requirements:
 
 {{< linked_headline "Raw" >}}
 
-The raw command is run inside Replicated's [command container](https://hub.docker.com/r/replicated/cmd/).
-The clustering and tags properties will determine where the command is run. If clustering is
-disabled the command will run on all nodes in the cluster. Additional properties to the raw command
-are all that can be specified in the container section of the yaml.
-
-**Id:** `raw`
-
-**Status Codes:** 1, 22, 62 [*](#status-codes)
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| cmd | string | yes | The cmd to be run when executing the container |
-| cluster | string | no | Is clustering enabled (evaluated to a boolean value) |
-| tags | array[string] | no | Determines nodes where the check is performed when cluster=true |
-| conflicts | array[string] | no | Skips nodes with the tag when cluster=true |
-| additional... |  | no | all possible container properties |
+[Resource spec](/docs/native/packaging-an-application/commands-reference/#raw)
 
 ### Example
 
@@ -139,22 +108,7 @@ custom_requirements:
 
 {{< linked_headline "Disk Space Available" >}}
 
-The disk space available command will return the disk space available in bytes. Note that the
-result is always a string and must be parsed (e.g. `{{repl .Result | ParseFloat | lt 1e+9 }}` or
-`{{repl .Result | ParseFloat | HumanSize }}`). The clustering and tags properties will determine
-where the command is run. If cluster is *false* the command will run on all nodes in the
-cluster.
-
-**Id:** `disk_space_available`
-
-**Status Codes:** 1, 22, 62 [*](#status-codes)
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| dir | string | yes | The directory to check |
-| cluster | string | no | Is clustering enabled (evaluated to a boolean value) |
-| tags | array[string] | no | Determines nodes where the check is performed when cluster=true |
-| conflicts | array[string] | no | Skips nodes with the tag when cluster=true |
+[Resource spec](/docs/native/packaging-an-application/commands-reference/#disk-space-available)
 
 ### Example
 
@@ -194,22 +148,7 @@ custom_requirements:
 
 {{< linked_headline "Disk Space Total" >}}
 
-The disk space total command will return the disk space available in bytes. Note that the result is
-always a string and must be parsed (e.g. `{{repl .Result | ParseFloat | lt 1e+9 }}` or
-`{{repl .Result | ParseFloat | HumanSize }}`). The clustering and tags properties will determine
-where the command is run. If cluster is *false* the command will run on all nodes in the
-cluster.
-
-**Id:** `disk_space_total`
-
-**Status Codes:** 1, 22, 62 [*](#status-codes)
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| dir | string | yes | The directory to check |
-| cluster | string | no | Is clustering enabled (evaluated to a boolean value) |
-| tags | array[string] | no | Determines nodes where the check is performed when cluster=true |
-| conflicts | array[string] | no | Skips nodes with the tag when cluster=true |
+[Resource spec](/docs/native/packaging-an-application/commands-reference/#disk-space-total)
 
 ### Example
 
@@ -249,24 +188,7 @@ custom_requirements:
 
 {{< linked_headline "Port Available" >}}
 
-The port available command will determine whether the port and ip are available for use. Status
-code 98 (address already in use) will be returned when unable to bind to the address. The
-clustering and tags properties will determine where the command is run. If cluster is *false*
-the command will run on all nodes in the cluster.
-
-**Id:** `port_available`
-
-**Status Codes:** 1, 22, 62, 98 [*](#status-codes)
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| port | string | yes | The port to check |
-| proto | string | no | The protocol, one of `tcp` (default) or `udp` |
-| ip | string | no | The ip to bind to, defaults to 0.0.0.0 (will take precedence over interface if set) |
-| interface | string | no | The interface to bind to |
-| cluster | string | no | Is clustering enabled (evaluated to a boolean value) |
-| tags | array[string] | no | Determines nodes where the check is performed when cluster=true |
-| conflicts | array[string] | no | Skips nodes with the tag when cluster=true |
+[Resource spec](/docs/native/packaging-an-application/commands-reference/#port-available)
 
 ### Example
 
@@ -303,21 +225,7 @@ custom_requirements:
 
 {{< linked_headline "TCP Dial" >}}
 
-The tcp dial command will determine whether a connection can be made over tcp to the address
-specified. Status code 111 (connection refused) will be returned when unable to connect to the
-address. The clustering and tags properties will determine where the command is run. If cluster is
-*false* the command will run **only** on the local node.
-
-**Id:** `tcp_dial`
-
-**Status Codes:** 1, 22, 62, 111 [*](#status-codes)
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| addr | string | yes | The address to connect to |
-| cluster | string | no | Is clustering enabled (evaluated to a boolean value) |
-| tags | array[string] | no | Determines nodes where the check is performed when cluster=true |
-| conflicts | array[string] | no | Skips nodes with the tag when cluster=true |
+[Resource spec](/docs/native/packaging-an-application/commands-reference/#tcp-dial)
 
 ### Example
 
@@ -351,11 +259,11 @@ custom_requirements:
 
 # Resource Specification
 
-Custom requirements are represented with the followings and properties.
+Programmable Preflight Checks are represented with the following properties.
 
 {{< linked_headline "Requirement" >}}
 
-The requirement resource is the primary resource for custom preflight checks. A requirement
+The requirement resource is the primary resource for Programmable Preflight Checks. A requirement
 represents a single check that is to be preformed during the installation and upgrade steps of the
 application lifecycle.
 
@@ -365,65 +273,5 @@ application lifecycle.
 | message | string or Message | yes | A short description of the requirement |
 | details | string or Message | no | A more detailed description of the requirement |
 | when | string | no | Will determine if this requirement should be run (evaluated to a boolean value) |
-| command | Command | yes | The command that will be run |
-| results | array[Result] | yes | An array of result objects that when evaluated will determine success or failure |
-
-{{< linked_headline "Command" >}}
-
-The command resource represents the command that is to be run. The command will return messages, a
-status code and possibly an error. See the [commands section](#commands) for a list of supported
-operations.
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| id | string | yes | The command id |
-| timeout | int | no | Timeout in seconds, default 15 seconds, -1 denotes no timeout |
-| data | object | no | The command data |
-
-{{< linked_headline "Result" >}}
-
-The result resource represents the different possible outcomes of the command. A result contains
-a status, message and condition. Result are evaluated in order and the first matching result will
-determine the requirement status. If no condition properties are specified that result will always
-evaluate to true. If no results match the requirement will receive status `error`.
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| status | string | yes | One of success, warn or error |
-| message | string or Message | yes | A description of the result |
-| condition | Condition | no | The condition that must be met |
-
-{{< linked_headline "Condition" >}}
-
-All properties of a condition must be met to determine that condition to be true. The `bool_expr`
-property is intended to be evaluated using Replicated templates. This template will receive
-the following variables from the result of the command: `.Results` (array of messages), `.Result`
-(the first message), `.StatusCode`, `.Error`.
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| error | boolean | no | Did the command result in an error? |
-| status_code | int | no | The command status code |
-| bool_expr | string | no | An expression that can be evaluated and parsed as a boolean |
-
-{{< linked_headline "Message" >}}
-
-A message resource can be localized via the id. It contains a default message that will be
-displayed when no localization is present. Messages have arguments that can be substituted into the
-text via templates.
-
-| **Name** | **Type** | **Required** | **Description** |
-|----------|----------|--------------|-----------------|
-| id | string | no | The message identifier. Can be used to localize the message. |
-| default_message | string | yes | The default message |
-| args | map[string]string | no | Arguments to the message |
-
-{{< linked_headline "Status Codes" >}}
-
-| **Code** | **Description** |
-|----------|-----------------|
-| 1 | Catchall for general errors |
-| 22 | Invalid argument |
-| 62 | Timeout |
-| 98 | Address already in use |
-| 111 | Connection refused |
+| command | [Command](/docs/native/packaging-an-application/commands-reference/#command) | yes | The command that will be run |
+| results | array\[[Result](/docs/native/packaging-an-application/commands-reference/#result)\] | yes | An array of result objects that when evaluated will determine success or failure |
