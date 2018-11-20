@@ -31,7 +31,7 @@ There are two different argument properties of the `test_proc` object.
 
 {{< linked_headline "Commands" >}}
 
-For additional functionality, fully customizable commands can be achieved through the use of [Programmable Test Procedures](/docs/packaging-an-application/programmable-test-procs/).
+For additional functionality, fully customizable commands can be achieved through the use of [Programmable Test Procedures](/docs/config-screen/programmable-test-procs/).
 
 See below for a list of test commands that are built into the Replicated Platform:
 
