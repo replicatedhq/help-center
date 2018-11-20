@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-release_apply
 categories:
 - replicatedctl
-date: 2018-10-08T23:39:27Z
+date: 2018-11-02T12:45:57-07:00
 description: Applies pending app releases
 gradient: purpleToPink
 index: docs
@@ -26,12 +26,13 @@ replicatedctl app-release apply [flags]
 ### Options
 
 ```
-  -a, --attach            Attach to task
-  -h, --help              help for apply
-  -q, --quiet             Only display task ID
-      --raw               Raw JSON stream
-      --sequence int      Apply releases up to and including specified sequence (0 for all)
-      --template string   Format the output using the given Go template
+  -a, --attach               Attach to task
+      --fetch-timeout uint   Fetch timeout in seconds (default 60)
+  -h, --help                 help for apply
+  -q, --quiet                Only display task ID
+      --raw                  Raw JSON stream
+      --sequence int         Apply releases up to and including specified sequence (0 for all)
+      --template string      Format the output using the given Go template
 ```
 
 ### Options inherited from parent commands

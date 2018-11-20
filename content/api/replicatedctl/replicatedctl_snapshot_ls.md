@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_snapshot_ls
 categories:
 - replicatedctl
-date: 2018-10-08T23:39:27Z
+date: 2018-11-02T12:45:57-07:00
 description: List snapshots
 gradient: purpleToPink
 index: docs
