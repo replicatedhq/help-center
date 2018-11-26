@@ -37,7 +37,11 @@ Next, navigate to the management console at https://<server_ip>:8800. Accept the
 the preflight checks, and you will see the license upload screen. Upload the [airgap enabled license](/docs/swarm/getting-started/create-licenses/#airgap-download-enabled) and then select the airgapped install option.
 You will have to provide a path to the .airgap file and upload the .rli file here.
 
-Once this screen is completed, Replicated runs as normal. In the :8800/console/settings page, there is a section
+Once this screen is completed, Replicated runs as normal.
+
+{{< linked_headline "Updating License and Application" >}}
+
+In the :8800/console/settings page, there is a section
 to set the Airgap mode settings. You can install updates and sync the license by downloading new versions of these,
 renaming them with the .airgap extension and placing them in the locations specified on the /console/settings
 page.
