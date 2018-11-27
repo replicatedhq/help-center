@@ -59,4 +59,4 @@ For additional information on building, tagging and pushing docker images, pleas
 
 The Replicated Native Scheduler supports pulling public, unauthenticated images from any Docker registry that supports the standard [Docker Registry HTTP API](https://docs.docker.com/registry/spec/api/).
 
-Additionally, the Replicated Native Scheduler supports private images hosted in other registries including Docker Hub, Quay.io and more. Currently, Replicated does not support private images in Amazon Elastic Container Registry because of the short-lived auth scheme in use.
+Additionally, the Replicated Native Scheduler supports private images hosted in other registries including Docker Hub, Quay.io and more.
