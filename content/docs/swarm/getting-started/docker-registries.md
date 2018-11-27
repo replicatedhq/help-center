@@ -60,7 +60,7 @@ For additional information on building, tagging and pushing docker images, pleas
 
 When using Docker Swarm, Replicated supports pulling public, unauthenticated images from any Docker registry that supports the standard [Docker Registry HTTP API](https://docs.docker.com/registry/spec/api/).
 
-Additionally, Replicated supports private images hosted in other registries including Docker Hub, Quay.io and more. Currently, Replicated does not support private images in Amazon Elastic Container Registry because of the short-lived auth scheme in use.
+Additionally, Replicated supports private images hosted in other registries including Docker Hub, Quay.io and more.
 
 To use private images from an external registry, you need to add the registry via the Vendor website. The guide for [integrating a third party registry](https://help.replicated.com/community/t/using-third-party-registries/45) explains this in further detail. You'll also need to [declare](#declaring-images) any external registry images in an `images` section in your Replicated YAML.
 
