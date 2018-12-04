@@ -31,7 +31,7 @@ properties:
 # https://help.replicated.com/docs/kb/supporting-your-customers/install-known-versions/
 #
 host_requirements:
-  replicated_version: ">=2.23.0"
+  replicated_version: ">=2.30.0"
 
 #
 # Settings screen
@@ -118,6 +118,8 @@ spec:
             memory: 100Mi
         ports:
         - containerPort: 6379
+      imagePullSecrets:
+      - name: replicatedregistrykey
 ---
 # kind: scheduler-kubernetes
 
@@ -169,6 +171,8 @@ spec:
           value: dns
         ports:
         - containerPort: 6379
+      imagePullSecrets:
+      - name: replicatedregistrykey
 ---
 # kind: scheduler-kubernetes
 
@@ -216,4 +220,6 @@ spec:
           value: dns
         ports:
         - containerPort: 80
+      imagePullSecrets:
+      - name: replicatedregistrykey
 ```
