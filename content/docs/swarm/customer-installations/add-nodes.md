@@ -24,3 +24,16 @@ The scripted install is the recommended means for adding an additional node to t
 If a scripted install is not possible, additionally a docker CLI command is provided for adding additional nodes.
 
 ![Add Node Docker](/images/post-screens/add-node-swarm-docker.png)
+
+## Configure a Swarm for HA (High Availability)
+Replicated allows for configuring your Swarm to have multiple manager nodes for high availability. See [Docker's website](https://docs.docker.com/engine/swarm/admin_guide/) for additional documentation on high availability in Swarm.
+
+
+### Add Manager Nodes
+Using the same "Add Node" button on the Cluster page of the Admin Console, you can generate a script to add additional manager nodes to the Swarm.
+
+![Add Node Select Type](/images/post-screens/add-node-swarm-select-type.png)
+
+### Additional Info/Resources
+Docker recommends no more than 7 manager nodes for a Swarm, and additional info on this constraint can be found [here](https://docs.docker.com/engine/swarm/how-swarm-mode-works/nodes/#manager-nodes). In the event of a loss of manager nodes, Docker provides documentation on [disaster recovery](https://docs.docker.com/engine/swarm/admin_guide/#recover-from-disaster).
+
