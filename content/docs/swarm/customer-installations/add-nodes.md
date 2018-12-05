@@ -38,5 +38,7 @@ Using the same "Add Node" button on the Cluster page of the Admin Console, you c
 Swarm provides an easy way to promote existing worker nodes to manager nodes. See [this guide](https://docs.docker.com/engine/swarm/manage-nodes/#promote-or-demote-a-node) on how to promote a worker node to a manager node.
 
 ### Additional Info/Resources
-When a Swarm has multiple manager nodes, the Swarm [must have a quorum](https://docs.docker.com/engine/swarm/admin_guide/#maintain-the-quorum-of-managers); if that quorum is lost, management tasks cannot be performed. Docker recommends no more than 7 manager nodes for a Swarm, and additional info on this constraint can be found [here](https://docs.docker.com/engine/swarm/how-swarm-mode-works/nodes/#manager-nodes). In the event of a loss of manager nodes, Docker provides documentation on [disaster recovery](https://docs.docker.com/engine/swarm/admin_guide/#recover-from-disaster).
+Docker recommends you have an odd number of manager nodes and no more than 7 managers for a Swarm. Additional info on this constraint can be found [here](https://docs.docker.com/engine/swarm/how-swarm-mode-works/nodes/#manager-nodes). When a Swarm has multiple manager nodes, the Swarm [must have a quorum](https://docs.docker.com/engine/swarm/admin_guide/#maintain-the-quorum-of-managers); if that quorum is lost, management tasks cannot be performed.
+
+In the event of a loss of manager nodes, Docker provides documentation on [disaster recovery](https://docs.docker.com/engine/swarm/admin_guide/#recover-from-disaster).
 
