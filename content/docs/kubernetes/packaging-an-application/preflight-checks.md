@@ -34,7 +34,7 @@ Use the `server_vesion` property to pin your application to a range of Kubernete
 ```yaml
 kubernetes:
   requirements:
-    server_version: ">=1.11.1"
+    server_version: ">=1.11.5"
 ```
 
 {{< linked_headline "API Versions" >}}

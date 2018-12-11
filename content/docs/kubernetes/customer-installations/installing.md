@@ -34,32 +34,33 @@ curl -sSL https://get.replicated.com/kubernetes-init | sudo bash
 
 The install script can take flags to help your customers with specialized enterprise setups.
 
-| Flag                          | Usage                                                                                              |
-| ----------------------------- | -------------------------------------------------------------------------------------------------- |
-| airgap                        | airgap implies "no proxy" and "skip docker"                                                        |
-| bypass-storagedriver-warnings | Bypass the storagedriver warning                                                                   |
-| bootstrap-token               | Authentication token used by kubernetes when adding additional nodes                               |
-| bootstrap-token-ttl           | TTL of the `bootstrap-token`                                                                       |
-| disable-contour               | If present, disables the deployment of the Contour ingress controller                              |
-| encrypt-network               | Disable network encryption with `encrypt-network=0`                                                |
-| hard-fail-on-loopback         | If present, aborts the installation if devicemapper on loopback mode is detected                   |
-| http-proxy                    | If present, then use proxy                                                                         |
-| ip-alloc-range                | Customize the range of IPs assigned to pods                                                        |
-| service-cidr                  | Customize the range of virtual IPs assigned to services                                            |
-| log-level                     | If present, this will be the log level of the Replicated daemon (debug, info, or error).           |
-| no-docker                     | Skip docker installation                                                                           |
-| no-proxy                      | If present, do not use a proxy                                                                     |
-| no-clear                      | If present, the terminal will not be cleared after the completion of the installation              |
-| public-address                | The public IP address                                                                              |
-| private-address               | The private IP address                                                                             |
-| release-sequence              | The release of your app to install                                                                 |
-| ui-bind-port                  | The port to bind the UI to                                                                         |
-| no-ce-on-ee                   | Disable installation of Docker CE onto platforms it does not support - RHEL, SLES and Oracle Linux |
-| reset                         | Uninstall Kubernetes                                                                               |
-| force-reset                   | If present, suppress all prompts and warning messages before uninstalling Kubernetes               |
-| storage-provisioner           | Disable automatically provisioning storage for PersistentVolumeClaims on the host                  |
-| storage-class                 | The name of an alternative StorageClass that will provision storage for PVCs                       |
-| service-type                  | Enable Service type of LoadBalancer for the Replicated Admin console                               |
+| Flag                             | Usage                                                                                              |
+| -------------------------------- | -------------------------------------------------------------------------------------------------- |
+| airgap                           | airgap implies "no proxy" and "skip docker"                                                        |
+| bypass-storagedriver-warnings    | Bypass the storagedriver warning                                                                   |
+| bootstrap-token                  | Authentication token used by kubernetes when adding additional nodes                               |
+| bootstrap-token-ttl              | TTL of the `bootstrap-token`                                                                       |
+| disable-contour                  | If present, disables the deployment of the Contour ingress controller                              |
+| encrypt-network                  | Disable network encryption with `encrypt-network=0`                                                |
+| hard-fail-on-loopback            | If present, aborts the installation if devicemapper on loopback mode is detected                   |
+| http-proxy                       | If present, then use proxy                                                                         |
+| ip-alloc-range                   | Customize the range of IPs assigned to pods                                                        |
+| service-cidr                     | Customize the range of virtual IPs assigned to services                                            |
+| log-level                        | If present, this will be the log level of the Replicated daemon (debug, info, or error).           |
+| no-docker                        | Skip docker installation                                                                           |
+| no-proxy                         | If present, do not use a proxy                                                                     |
+| no-clear                         | If present, the terminal will not be cleared after the completion of the installation              |
+| public-address                   | The public IP address                                                                              |
+| private-address                  | The private IP address                                                                             |
+| release-sequence                 | The release of your app to install                                                                 |
+| ui-bind-port                     | The port to bind the UI to                                                                         |
+| no-ce-on-ee                      | Disable installation of Docker CE onto platforms it does not support - RHEL, SLES and Oracle Linux |
+| reset                            | Uninstall Kubernetes                                                                               |
+| force-reset                      | If present, suppress all prompts and warning messages before uninstalling Kubernetes               |
+| storage-provisioner              | Disable automatically provisioning storage for PersistentVolumeClaims on the host                  |
+| storage-class                    | The name of an alternative StorageClass that will provision storage for PVCs                       |
+| service-type                     | Enable Service type of LoadBalancer for the Replicated Admin console                               |
+| kubernetes-upgrade-patch-version | Upgrade to the latest available patch release of Kubernetes                                        |
 
 Example quick install with flags:
 
@@ -74,7 +75,10 @@ Every release of Replicated is pinned to a version of Kubernetes, which will be 
 | Replicated Version | Kubernetes Version |
 | ------------------ | ------------------ |
 | < 2.26.0           | 1.9.3              |
-| >= 2.26.0          | 1.11.1             |
+| >= 2.26.0          | 1.11.5             |
+
+Replicated 2.26.0 to 2.30.2 were pinned to Kubernetes 1.11.1 when released but were updated on December 7, 2018 to 1.11.5.
+Re-running the `kubernetes-init` install script will not update 1.11.1 installs to 1.11.5 by default, but the upgrade can be forced by passing the `kubernetes-upgrade-patch-version` flag to the script.
 
 {{< linked_headline "Upgrading" >}}
 
