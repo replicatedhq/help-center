@@ -28,6 +28,7 @@ Optional properties:
 - `options` {{< version version="2.3.0" >}} optional volume settings in an array of strings, a `ro` entry puts the volume into read-only mode.
 - `is_ephemeral` {{< version version="2.3.5" >}} Ephemeral volumes do not prevent containers from being re-allocated across nodes. Ephemeral volumes will also be excluded from snapshots.
 - `is_excluded_from_backup` exclude this volume from backup if Snapshots enabled.
+- `when` {{< version version="2.31.0" >}} exclude this volume when the template evaluates to false
 
 ```yaml
     volumes:
@@ -38,6 +39,7 @@ Optional properties:
       is_ephemeral: false
       is_excluded_from_backup: true
       options: ["rw"]
+      when: '{{repl ConfigOptionEquals "has_local_db_data" "1"}}'
 ```
 
 Note: Replicated will only set the permissions and owner when the directory is created. If the directory already exists on the server, then these keys will not be respected.
