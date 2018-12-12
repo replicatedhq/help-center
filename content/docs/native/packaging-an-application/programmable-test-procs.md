@@ -83,5 +83,6 @@ The test_proc resource is a sub-resource of a config group or item. When specifi
 | display_name | string | yes | The text to show in the button in the ui. |
 | run_on_save | string or boolean | no | When true this test will run on saving the configuration. |
 | timeout | int | no | Timeout in seconds, default 15 seconds, -1 denotes no timeout |
+| when | string | no | Will determine if the test procedure is runnable (evaluated to a boolean value) |
 | custom_command | [Command](/docs/native/packaging-an-application/commands-reference/#command) | yes | The command that will be run |
 | results | array\[[Result](/docs/native/packaging-an-application/commands-reference/#result)\] | yes | An array of result objects that when evaluated will determine success or failure |
