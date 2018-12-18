@@ -131,8 +131,16 @@ wrapperCSSClass: "scheduler-types-section"
                 <div class='flex1 flex-column u-paddingLeft--most flex-verticalCenter right-content'>
                     <ul class="pros-list">
                         <li class="u-commandPromptBlue">
-                            <h6>Portable</h6>
-                            <p>The contour ingress controller is compatible anywhere the cluster is installed; cloud providers and bare metal incldued.</p>
+                            <h6>Built On Envoy</h6>
+                            <p>Built on the mature, battle-tested Envoy proxy that powers dynamic infrastructure at massive scale.</p>
+                        </li>
+                        <li class="u-commandPromptBlue">
+                            <h6>Cloud native, on prem</h6>
+                            <p>Instant reconfiguration, dynamic ingress routes, and native WebSocket support</p>
+                        </li>
+                        <li class="u-commandPromptBlue">
+                            <h6>Next Generation Ingress</h6>
+                            <p>Leverage next-generation Ingress features like route inheritance and upstream health checking.</p>
                         </li>
                     </ul>
                 </div>
