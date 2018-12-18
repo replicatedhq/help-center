@@ -74,7 +74,7 @@ wrapperCSSClass: "scheduler-types-section"
                         </li>
                         <li class="u-dockerRed">
                             <h6>Relocatable Volumes</h6>
-                            <p>Automatic support for persistent volumes, which enables Kubernetes to reschedule Pods anywhere in the cluster, and the data will stioll be available.</p>
+                            <p>Automatic support for persistent volumes, which enables Kubernetes to reschedule Pods anywhere in the cluster while ensuring data moves with your workloads.</p>
                         </li>
                         <li class="u-containersRed">
                             <h6>Block and Blob Store</h6>
