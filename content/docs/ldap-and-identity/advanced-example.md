@@ -8,7 +8,7 @@ index: "other"
 aliases : [docs/ldap-and-identity/multi-domains/]
 ---
 
-The followind example shows the use of some of the more powerful features of the Replicated [Advanced LDAP identity integration](/docs/ldap-and-identity/advanced/) including multiple domains and multiple organizational units.
+The following example shows the use of some of the more powerful features of the Replicated [Advanced LDAP identity integration](/docs/ldap-and-identity/advanced/) including multiple domains and multiple organizational units.
 
 See the [Advanced LDAP Specification](/docs/ldap-and-identity/advanced-spec/) for more details.
 
