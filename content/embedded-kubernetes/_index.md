@@ -132,7 +132,7 @@ wrapperCSSClass: "scheduler-types-section"
                     <ul class="pros-list">
                         <li class="u-commandPromptBlue">
                             <h6>Portable</h6>
-                            <p>The contour ingress controller is compatible anywhere the cluster is installed; cloud providers and care metal incldued.</p>
+                            <p>The contour ingress controller is compatible anywhere the cluster is installed; cloud providers and bare metal incldued.</p>
                         </li>
                     </ul>
                 </div>
