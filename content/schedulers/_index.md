@@ -33,7 +33,7 @@ aliases: [/docs/getting-started/schedulers/,/categories/getting-started/,/docs/g
                     <ul class="pros-list">
                         <li class="u-commandPromptBlueDark">
                             <h6>One-line Installation</h6>
-                            <p>Customers require zero knowledge of Kubernetes to install your application into their enterprise environment. Replicated will automatically install Kubernetes 1.9.3 and your application.</p>
+                            <p>Customers require zero knowledge of Kubernetes to install your application into their enterprise environment. Replicated will automatically install Kubernetes {{< kubernetes_version >}} and your application.</p>
                         </li>
                         <li class="u-ymlBlueDark">
                             <h6>Reuse your existing k8s specs</h6>
@@ -57,7 +57,7 @@ aliases: [/docs/getting-started/schedulers/,/categories/getting-started/,/docs/g
                 <div class='flex1 flex-column flex-verticalCenter u-lineHeight--normal left-content'>
                     <span class="logo dockerSwarmLogo-combo"></span>
                     <h5>Docker Swarm + Replicated</h5>
-                    <p>Docker Swarm is great if you have existing docker-compose files and want to target servers running Docker 1.13.1 or newer.</p><p>Replicated supports deploying Swarm services to a swarm cluster. On operating systems supporting Docker 1.13.1 or later, you can provide an appliance-like enterprise experience using the Swarm scheduler, using your existing docker-compose.yml.</p>
+                    <p>Docker Swarm is great if you have existing docker-compose files and want to target servers running Docker {{< swarm_docker_version_minimum >}} or newer.</p><p>Replicated supports deploying Swarm services to a swarm cluster. On operating systems supporting Docker {{< swarm_docker_version_minimum >}} or later, you can provide an appliance-like enterprise experience using the Swarm scheduler, using your existing docker-compose.yml.</p>
                     <div class="u-marginTop--small">
                         <a href="/guides/ship-with-docker-swarm/" class="Button secondary">Get Started</a>
                     </div>
@@ -66,11 +66,11 @@ aliases: [/docs/getting-started/schedulers/,/categories/getting-started/,/docs/g
                     <ul class="pros-list">
                         <li class="u-commandPromptBlue">
                             <h6>One-Line installation</h6>
-                            <p>The only requirement to use Swarm is Docker 1.13.1 or later. Replicated will automatically provision the Swarm cluster.</p>
+                            <p>The only requirement to use Swarm is Docker {{< swarm_docker_version_minimum >}} or later. Replicated will automatically provision the Swarm cluster.</p>
                         </li>
                         <li class="u-ymlBlueLight">
                             <h6>Reuse your docker-compose.yml</h6>
-                            <p>Existing docker-compose yml (v3 or later) is compatible with Replicated.</p>
+                            <p>Existing docker-compose.yaml (v3 or later) is compatible with Replicated.</p>
                         </li>
                         <li class="u-refreshBlue">
                             <h6>Rolling updates</h6>
@@ -90,7 +90,7 @@ aliases: [/docs/getting-started/schedulers/,/categories/getting-started/,/docs/g
                 <div class='flex1 flex-column flex-verticalCenter u-lineHeight--normal left-content'>
                     <span class="logo replicatedLogo"></span>
                     <h5>Replicated + built-in scheduler</h5>
-                    <p>The Replicated scheduler is a mature container orchestration runtime that supports Docker 1.7.1 and newer.</p>
+                    <p>The Replicated scheduler is a mature container orchestration runtime that supports Docker {{< docker_version_minimum >}} and newer.</p>
                     <p>Used by over 500 enterprises in production systems today. This scheduler is a good choice if you want to maximize compatibility with enterprise systems and want to provide a simple, appliance-like experience.</p>
                     <div class="u-marginTop--small">
                         <a href="/guides/native-scheduler" class="Button secondary">Get Started</a>
@@ -103,8 +103,8 @@ aliases: [/docs/getting-started/schedulers/,/categories/getting-started/,/docs/g
                             <p>Built into the platform, other than Docker, there are no additional dependencies required.</p>
                         </li>
                         <li class="u-dockerRed">
-                            <h6>Supports Docker 1.7.1 and later</h6>
-                            <p>Compatible with Docker 1.7.1 and above, the Replicated Scheduler is a good solution for customers using legacy operating systems such as CentOS 6 and RHEL 6.</p>
+                            <h6>Supports Docker {{< docker_version_minimum >}} and later</h6>
+                            <p>Compatible with Docker {{< docker_version_minimum >}} and above, the Replicated Scheduler is a good solution for customers using legacy operating systems such as CentOS 6 and RHEL 6.</p>
                         </li>
                         <li class="u-containersRed">
                             <h6>Easy to run and manage</h6>
