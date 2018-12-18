@@ -70,7 +70,7 @@ wrapperCSSClass: "scheduler-types-section"
                     <ul class="pros-list">
                         <li class="u-commandPromptRed">
                             <h6>Highly available storage</h6>
-                            <p>Rook provisions and operates a Ceph cluster to manage storage, a battle tested, mature storage system.</p>
+                            <p>Rook provisions and operates Ceph, a battle tested, mature system for distributed fault-tolerant storage.</p>
                         </li>
                         <li class="u-dockerRed">
                             <h6>Relocatable Volumes</h6>
