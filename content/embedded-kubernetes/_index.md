@@ -94,7 +94,7 @@ wrapperCSSClass: "scheduler-types-section"
                 <div class='flex1 flex-column flex-verticalCenter u-lineHeight--normal left-content'>
                     <span class="logo dockerSwarmLogo-combo"></span>
                     <h5>Weave Networking</h5>
-                    <p>Every Replicated Embedded Kubernetes cluster comes with Weave overlay networking configured and CoreDNS.</p>
+                    <p>Every Replicated Embedded Kubernetes cluster comes with secure-by-default Weave overlay networking for inter-container communication</p>
                     <div class="u-marginTop--small">
                         <a href="/guides/ship-with-docker-swarm/" class="Button secondary">Get Started</a>
                     </div>
