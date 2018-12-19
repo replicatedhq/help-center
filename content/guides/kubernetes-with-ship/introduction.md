@@ -3,7 +3,7 @@ date: "2018-05-01T19:00:00Z"
 title: "Introduction to Ship"
 description: "An introduction to Ship"
 weight: "30001"
-categories: [ "Ship Guide" ]
+categories: [ "Ship Hello World" ]
 index: "guides/ship"
 type: "chapter"
 gradient: "console"
@@ -17,7 +17,7 @@ This guide will walk you through the process of taking an existing Kubernetes ap
 
 ### Looking for Ship Open Source?
 
-This guide is for aimed at application vendors looking to distribute a [proprietary](#features-for-app-maintainers) application. If you are looking for an easier way to distribute your free and/or open source Kubernetes- or Helm-based application, you may want to check out [Ship for Open Source](https://github.com/replicatedhq/ship)
+This guide is for aimed at application vendors looking to distribute a [proprietary](#features-for-app-maintainers) application. If you are looking for an easier way to distribute your publicly available Kubernetes- or Helm-based application, you may want to check out [Ship for Open Source](https://github.com/replicatedhq/ship)
 
 
 {{< linked_headline "Introduction to Replicated Ship" >}}
