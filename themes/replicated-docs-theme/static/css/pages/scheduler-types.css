@@ -44,7 +44,9 @@
   background-size: initial;
   display: inline-block;
 }
-
+.scheduler-type.main-section {
+  padding: 85px 0;
+}
 /* icon class names */
 
 .scheduler-type li.u-commandPromptRed::before {
@@ -117,6 +119,62 @@
   height: 26px;
   top: 1px;
   left: 1px;
+}
+.scheduler-type li.u-envoyLogoBlue::before {
+  background-position: -119px -161px;
+  width: 29px;
+  height: 32px;
+  top: 1px;
+  left: 1px;
+}
+.scheduler-type li.u-cloudNativeBlue::before {
+  background-position: -34px -227px;
+  width: 33px;
+  height: 32px;
+  top: 1px;
+  left: 1px;
+}
+.scheduler-type li.u-ingressBlue::before {
+  background-position: -475px -253px;
+  width: 35px;
+  height: 30px;
+  top: 1px;
+  left: 1px;
+}
+.scheduler-type li.u-coreDNSDarkBlue::before {
+  background-position: -119px -199px;
+  width: 32px;
+  height: 32px;
+  top: 1px;
+  left: 1px;
+}
+.scheduler-type li.u-firewallDarkBlue::before {
+  background-position: -129px -232px;
+  width: 35px;
+  height: 30px;
+  top: 1px;
+  left: 1px;
+}
+.scheduler-type li.u-volumesRed::before {
+  background-position: -475px -292px;
+  width: 40px;
+  height: 30px;
+  top: 1px;
+  left: -3px;
+}
+.scheduler-type li.u-storageRed::before {
+  background-position: -207px -228px;
+  width: 30px;
+  height: 30px;
+  top: 1px;
+  left: 1px;
+}
+.scheduler-type li.u-cloudGrayBlue::before {
+  background-position: -165px -232px;
+  width: 33px;
+  height: 21px;
+  top: 1px;
+  left: -2px;
 }
 
 
