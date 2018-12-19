@@ -202,7 +202,9 @@ Please note that statsd-config.js cannot be customized at this time.
 ### storage-aggregation.conf
 ```text
 [default] pattern = .* aggregationMethod = average xFilesFactor = 0.5
-storage-schemas.conf
+```
 
+### storage-schemas.conf
+```text
 [default] pattern = .* retentions = 2s:20m
 ```
