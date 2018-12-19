@@ -3,7 +3,7 @@ date: "2018-05-01T19:00:00Z"
 title: "Testing The Customer Installation"
 description: "A step-by-step guide of what the experience will be like installing the application"
 weight: "30003"
-categories: [ "Ship Hello World" ]
+categories: [ "Get Started with Ship" ]
 index: "guides/ship"
 type: "chapter"
 gradient: "console"

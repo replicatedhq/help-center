@@ -3,7 +3,7 @@ date: "2018-05-01T19:00:00Z"
 title: "Introduction to Ship"
 description: "An introduction to Ship"
 weight: "30001"
-categories: [ "Ship Hello World" ]
+categories: [ "Get Started with Ship" ]
 index: "guides/ship"
 type: "chapter"
 gradient: "console"
