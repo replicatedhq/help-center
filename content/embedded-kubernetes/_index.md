@@ -27,10 +27,7 @@ wrapperCSSClass: "scheduler-types-section"
                 <div class='flex1 flex-column flex-verticalCenter u-lineHeight--normal right-content'>
                     <span class="logo kubernetesLogo-combo"></span>
                     <h5>Kubernetes from Kubeadm</h5>
-                    <p>To start, the Embedded Kubernetes cluster is bootstrapped and managed using <a href="https://kubernetes.io/docs/reference/setup-tools/kubeadm/implementation-details/">Kubeadm</a>. </p>
-                    <div class="u-marginTop--small">
-                        <a href="/guides/ship-with-kubernetes" class="Button secondary">Get Started</a>
-                    </div>
+                    <p>To start, the Embedded Kubernetes cluster is bootstrapped and managed using <a href="https://kubernetes.io/docs/reference/setup-tools/kubeadm/implementation-details/" class="u-color--curiousBlue u-fontWeight--medium">Kubeadm</a>. </p>
                 </div>
                 <div class='flex1 flex-column u-paddingLeft--most flex-verticalCenter left-content'>
                     <ul class="pros-list">
@@ -60,10 +57,7 @@ wrapperCSSClass: "scheduler-types-section"
                 <div class='flex1 flex-column flex-verticalCenter u-lineHeight--normal left-content'>
                     <span class="logo rookCephLogos-combo"></span>
                     <h5>Rook and Ceph Storage</h5>
-                    <p>The Replicated Embedded Kubernetes cluster is installed with Rook and Ceph, and the installer manages the state of the system. </p>
-                    <div class="u-marginTop--small">
-                        <a href="/guides/native-scheduler" class="Button secondary">Get Started</a>
-                    </div>
+                    <p>The Replicated Embedded Kubernetes cluster is installed with <a href="https://rook.io/" class="u-color--curiousBlue u-fontWeight--medium" target="_blank" rel="noopener noreferrer">Rook</a> and <a href="https://ceph.com/ceph-storage/" class="u-color--curiousBlue u-fontWeight--medium" target="_blank" rel="noopener noreferrer">Ceph</a>, and the installer manages the state of the system. </p>
                 </div>
                 <div class='flex1 flex-column u-paddingLeft--most flex-verticalCenter right-content'>
                     <ul class="pros-list">
@@ -105,10 +99,7 @@ wrapperCSSClass: "scheduler-types-section"
                 <div class='flex1 flex-column flex-verticalCenter u-lineHeight--normal right-content'>
                     <span class="logo weaveworks-logo"></span>
                     <h5>Weave Networking</h5>
-                    <p>Every Replicated Embedded Kubernetes cluster comes with secure-by-default Weave overlay networking for inter-container communication</p>
-                    <div class="u-marginTop--small">
-                        <a href="/guides/ship-with-docker-swarm/" class="Button secondary">Get Started</a>
-                    </div>
+                    <p>Every Replicated Embedded Kubernetes cluster comes with secure-by-default <a href="https://www.weave.works/docs/net/latest/overview/" class="u-color--curiousBlue u-fontWeight--medium" target="_blank" rel="noopener noreferrer">Weave overlay networking</a> for inter-container communication</p>
                 </div>
             </div>
         </div>
@@ -122,10 +113,7 @@ wrapperCSSClass: "scheduler-types-section"
                 <div class='flex1 flex-column flex-verticalCenter u-lineHeight--normal left-content'>
                     <span class="logo heptioContour-logo"></span>
                     <h5>Contour Ingress</h5>
-                    <p>Contour is a portable ingress controller from Heptio.</p>
-                    <div class="u-marginTop--small">
-                        <a href="/guides/ship-with-docker-swarm/" class="Button secondary">Get Started</a>
-                    </div>
+                    <p><a href="https://heptio.com/community/contour/" class="u-color--curiousBlue u-fontWeight--medium" target="_blank" rel="noopener noreferrer">Contour</a> is a portable ingress controller from Heptio.</p>
                 </div>
                 <div class='flex1 flex-column u-paddingLeft--most flex-verticalCenter right-content'>
                     <ul class="pros-list">
