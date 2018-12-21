@@ -25,7 +25,8 @@ If a scripted install is not possible, additionally a docker CLI command is prov
 
 ![Add Node Docker](/images/post-screens/add-node-swarm-docker.png)
 
-## Configure a Swarm for HA (High Availability)
+{{< linked_headline "Configure a Swarm for HA (High Availability)" >}}
+
 Replicated allows for configuring your Swarm to have multiple manager nodes for high availability. See [Docker's website](https://docs.docker.com/engine/swarm/admin_guide/) for additional documentation on high availability in Swarm.
 
 
