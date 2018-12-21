@@ -75,7 +75,8 @@ Every release of Replicated is pinned to a version of Kubernetes, which will be 
 | Replicated Version | Kubernetes Version |
 | ------------------ | ------------------ |
 | < 2.26.0           | 1.9.3              |
-| >= 2.26.0          | 1.11.5             |
+| 2.26.0 to 2.30.2   | 1.11.5             |
+| >= 2.31.0          | 1.13.0             |
 
 Replicated 2.26.0 to 2.30.2 were pinned to Kubernetes 1.11.1 when released but were updated on December 7, 2018 to 1.11.5.
 Re-running the `kubernetes-init` install script will not update 1.11.1 installs to 1.11.5 by default, but the upgrade can be forced by passing the `kubernetes-upgrade-patch-version` flag to the script.
