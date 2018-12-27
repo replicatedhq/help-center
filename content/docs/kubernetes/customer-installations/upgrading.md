@@ -22,7 +22,7 @@ Applications will have a few minutes of downtime when Kubernetes upgrades are pe
 
 ## Upgrading Airgap Installs
 Airgap installations can be upgraded by downloading a newer version of the Replicated release, uncompressing it and re-running the install script using the airgap flag.  The latest Replicated release can be found at
-https://s3.amazonaws.com/replicated-airgap-work/replicated.tar.gz.
+https://s3.amazonaws.com/replicated-airgap-work/replicated__docker__kubernetes.tar.gz.
 
 ```shell
 tar xzvf replicated__docker__kubernetes.tar.gz
