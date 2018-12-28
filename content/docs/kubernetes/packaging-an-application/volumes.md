@@ -15,12 +15,6 @@ Kubernetes applications often rely on persistent volumes (PVs) and persistent vo
 When Replicated creates a Kubernetes appliance, a custom storage class named `default` is automatically created that will be available to the application for persistent volumes provisioned by [Rook](https://rook.io).
 Replicated will set the `storageClassName` on all PersistentVolumeClaims in your application, allowing customers to use an alternative provisioner, such as `standard` on GKE.
 
-{{< linked_headline "Fine-Grained Provisioniong" >}}
-
-Add the `replicated.com/no-rewrite-storage-class` annotation to any PVC or StatefulSet's volumeClaimTemplate to prevent Replicated from rewriting the storageClassName of that volume. You will need to ensure that an alternative storageClassName is set and a provisioner for that class is running in the customer's environment.
-
-{{< linked_headline "Resources" >}}
-
 For more information on using Persistent Volumes with Kubernetes, see the [Kubernetes Documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/).
 
 For information on snapshotting Kubernetes volumes, see the [Replicated snapshots documentation for Kubernetes](/docs/snapshots/kubernetes/).
