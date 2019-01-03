@@ -28,6 +28,7 @@ replicatedctl cluster node-join-script [flags]
 ```
       --advanced                 Advanced install option
   -h, --help                     help for node-join-script
+      --master                   Generates a master node join script
       --private-address string   The public address of the node
       --public-address string    The public address of the node
       --tags stringArray         Tags to apply to the node
