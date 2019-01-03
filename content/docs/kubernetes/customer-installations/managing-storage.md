@@ -56,6 +56,6 @@ curl -sSL https://get.replicated.com/kubernetes-init | sudo bash -s storage-prov
 
 {{< linked_headline "Troubleshooting" >}}
 
-The [Ceph Dashboard](https://github.com/rook/rook/blob/master/Documentation/ceph-dashboard.md) is included in the `rook-ceph-mgr` pod of the `rook-ceph` namespace. Follow the instructions for creating an external service to view the dashboard.
+The [Ceph Dashboard](https://github.com/rook/rook/blob/master/Documentation/ceph-dashboard.md) is included in the `rook-ceph-mgr` pod of the `rook-ceph` namespace and proxied through the `/ceph` path of the Replicated console.
 
 The [Rook toolbox](https://rook.io/docs/rook/master/ceph-toolbox.html) provides a convenient image for monitoring and debugging your Rook cluster. You can run it as a pod in the `rook-ceph` namespace and have access to commands such as `ceph status` to check the health of your storage cluster.

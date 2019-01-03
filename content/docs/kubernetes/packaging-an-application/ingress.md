@@ -19,7 +19,7 @@ When running Kubernetes in a cloud provider or in a managed Kubernetes stack suc
 
 {{< linked_headline "Ingress in the Replicated Appliance" >}}
 
-Replicated ships with the [Contour](https://github.com/heptio/contour) ingress controller, which runs as a DaemonSet in the `heptio-contour` namespace.
+Replicated ships with the [Contour](https://github.com/heptio/contour) ingress controller, which runs in the `heptio-contour` namespace.
 A NodePort service forwards incoming traffic on ports 80 and 443 to Contour through every node in your cluster.
 
 The Contour ingress controller supports a variety of [options through annotations](https://github.com/heptio/contour/blob/master/docs/annotations.md).
@@ -83,6 +83,9 @@ spec:
   - secretName: tls
     hosts:
     - newbravo.replicated.com
+  backend:
+    serviceName: frontend
+    servicePort: 80
   rules:
   - host: newbravo.replicated.com
     http:
