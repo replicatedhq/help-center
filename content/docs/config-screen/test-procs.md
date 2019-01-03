@@ -20,6 +20,7 @@ Following is a detailed list of YAML properties of the `test_proc` object:
 | command | string | yes | The command that will be run. See the list below for a list of [available commands](/docs/config-screen/test-procs/#commands). |
 | arg_fields | []string | no | A list of config item names for which to pass values to the test procedure. |
 | args | []string | no | A list of static arguments to pass to the test procedure. |
+| when | string | no | Will determine if the test procedure is runnable (evaluated to a boolean value) |
 
 {{< linked_headline "Arguments" >}}
 
