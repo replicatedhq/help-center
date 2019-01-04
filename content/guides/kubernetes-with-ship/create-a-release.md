@@ -2,7 +2,7 @@
 date: "2018-05-01T19:00:00Z"
 title: "Packaging A Kubernetes Application"
 description: "A walkthrough of taking an example Kubernetes application and packaging it in Replicated Ship"
-weight: "30002"
+weight: "30102"
 categories: [ "Get Started with Ship" ]
 index: "guides/ship"
 type: "chapter"
