@@ -23,10 +23,10 @@ You'll want to follow the steps in the [Project Readme](https://github.com/repli
 
 Once you have the project set up, you should test your outputs in a real Kubernetes cluster. The easiest and fastest way to iterate is to run [Docker for Desktop](https://www.docker.com/products/docker-desktop) and use the built-in Kubernetes cluster option. [GKE](https://cloud.google.com/kubernetes-engine/) or other cloud-based managed clusters should also work. 
 
-You can use the following to test deploying your rendered Kubernets Assets to the cluster:
+You can use the following to test deploying your rendered Kubernetes Assets to the cluster:
 
 ```bash
-made deploy
+make deploy
 ```
 
 {{< linked_headline "Iterating Quickly" >}}
