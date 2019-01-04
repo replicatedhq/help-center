@@ -21,8 +21,8 @@ Now we can produce an installation script for our test customer.
 ![Install A Release](/images/guides/ship/install-script.png)
 
 {{< note title="Installing Ship" >}}
-This guide assumes you'll run Ship with  Homebrew using 
-`brew install replicatedhq/ship/ship`, or [downloading the binary](https://github.com/replicatedhq/ship#installation), but you can also run Ship with the `replicated/ship` docker container.
+This guide assumes you'll run Ship with Homebrew using 
+`brew install ship`, or [downloading the binary](https://github.com/replicatedhq/ship#installation), but you can also run Ship with the `replicated/ship` docker container.
 {{< /note >}}
 
 Copy the command from this screen, and take it to a workstation that has [ship installed](), and run it. This is how you can distribute software that's packaged in Ship. 
@@ -86,4 +86,4 @@ and we're off to the races. If you're on Docker for Desktop, the `LoadBalancer` 
 
 ### Next Steps
 
-Now that we've shipped our first release, its time to work through [Shipping an Update](../iterate)
+Now that we've shipped our first release, its time to work through [Shipping an Update](../iterate).
