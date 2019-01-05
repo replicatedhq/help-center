@@ -24,7 +24,6 @@ you should complete those guide sections first. You'll also need:
 
 First, clone [the starter repo](https://github.com/replicatedhq/replicated-starter-swarm), and re-initialize it
 
-
 ```sh
 git clone github.com/replicatedhq/replicated-starter-swarm.git
 cd replicated-starter-swarm
