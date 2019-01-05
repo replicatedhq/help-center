@@ -20,8 +20,8 @@ guides:
     description: "Get started creating and managing support bundles using Replicated Troubleshoot."
     level: "replicatedTroubleshoot"
     slug: "troubleshoot"
-  - title: "Iterating With Replicated Studio"
-    description: "A step-by-step guide to setting up Replicated Studio as a prototyping environment for your Replicated releases."
-    level: "replicatedCircle"
-    slug: "iterate-with-replicated-studio"
+  - title: "Deliver Kubernetes Applications with Ship"
+    description: "Use Replicated Ship to deliver a Kubernetes application into your end customer's existing Kubernetes cluster."
+    level: "replicatedKubernetes"
+    slug: "kubernetes-with-ship"
 ---

@@ -21,7 +21,7 @@
     - title: "Iterate Locally"
       description: "Develop ship applications locally"
       slug: "iterate-locally"
-    - title: "Collaborate with GitHub"
+    - title: "Collaborate in GitHub"
       description: "Recommended workflows for using a GitHub repository to collaborate with team members."
       slug: "manage-with-github"
     - title: "Explore Ship Features"
