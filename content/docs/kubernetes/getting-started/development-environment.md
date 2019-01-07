@@ -9,77 +9,90 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-Once your application is working in Kubernetes, you'll want to set up a simple environment to iterate on your Replicated YAML. Our Replicated Studio is designed to shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.
+Once your application is working in Kubernetes, you'll want to set up a simple environment to iterate on your Replicated YAML. Our Starter Repo is designed to shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.
 
-{{< linked_headline "Install Replicated Studio (with ngrok)" >}}
 
-### 1. Run Replicated Studio on your local dev machine
-You'll need [Docker installed](https://www.docker.com/community-edition) on your local development machine.
 
-```bash
-mkdir -p $HOME/replicated
+{{< linked_headline "Prerequisites " >}}
 
-docker run --name studio -d \
-    --restart always \
-    -v $HOME/replicated:/replicated \
-    -p 8006:8006 \
-    replicated/studio:latest
+This guide assumes you've already completed the steps in [create-release](/guides/ship-with-kubernetes/create-release) and [install](/guides/ship-with-kubernetes/install). If you haven't already, you should complete those guide sections first. You'll also need:
+
+- [node](https://nodejs.org/en/download/)
+- `make`
+- A git repository created to manage your Replicated YAML. We'll use github in this example.
+
+{{< linked_headline "Get started" >}}
+
+First, clone [the starter repo](https://github.com/replicatedhq/replicated-starter-kubernetes), and re-initialize it
+
+
+```sh
+git clone github.com/replicatedhq/replicated-starter-kubernetes.git
+cd replicated-starter-kubernetes
+rm -rf .git
+git init
+git remote add origin <your git repo>
 ```
 
-### 2. Install ngrok
+{{< linked_headline "Configure Environment" >}}
 
-Since we're developing locally, we'll need to expose our local development environment to the internet, so that changes you make to `current.yaml` in your `replicated` directory can be served to your development server.
+You'll need to set up two environment variables to interact with vendor.replicated.com,
+`REPLICATED_APP` and `REPLICATED_API_TOKEN`. `REPLICATED_APP` should be set to the
+app name in the URL path at [https://vendor.replicated.com/apps](https://vendor.replicated.com/apps):
 
-Download and install [ngrok from the official site](https://ngrok.com/download) (you'll need to create an account as well.)
+<p align="center"><img src="/images/guides/kubernetes/REPLICATED_APP.png" width=600></img></p>
 
-When you're done with that, you can expose your localhost by running `./ngrok http 8006` on the command line. You should see a line that looks something like this:
+Next, create an API token from the [Teams and Tokens](https://vendor.replicated.com/team/tokens) page:
 
-`Forwarding    https://a23glmnop.ngrok.io -> 127.0.0.1:8006`
-Copy that *.ngrok.io* URL, you'll need it when you install Replicated on the development server.
+<p align="center"><img src="/images/guides/kubernetes/REPLICATED_API_TOKEN.png" width=600></img></p>
 
-### 3. Install Replicated with Studio configuration on the dev server
+Ensure the token has "Write" access or you'll be unable create new releases. Once you have the values,
+set them in your environment.
 
-Finally, use our simple installation script (on a Linux server in your IaaS provider of choice, or in a local dev environment in Vagrant/VirtualBox) to install Replicated with Kubernetes. You'll be prompted for the `Replicated Studio URL` during setup, use the hostname that ngrok provided you (routing to port 8006 on your local machine).
-
-```bash
-curl -sSL https://get.replicated.com/studio/k8s | sudo bash
+```sh
+export REPLICATED_APP=...
+export REPLICATED_API_TOKEN=...
 ```
 
-#### Alternative: Use an existing cluster
+You can ensure this is working with
 
-If you already have [Replicated installed on an existing cluster](https://help.replicated.com/docs/kubernetes/customer-installations/existing-cluster/), instead of running the `https://get.replicated.com/studio/k8s` script, you can edit the `replicated` deployment and add an environment variable.
-The name of the environment variable should be `MARKET_BASE_URL` and the value should be your ngrok URL from step 2.
-
-
-{{< linked_headline "Iterate on your application YAML" >}}
-
-During Studio installation on your local development machine, a new directory named `replicated` is created in your home directory. Once your license is activated, Replicated Studio will set up the most recent release and save it to `~/replicated/current.yaml`. Any time this file is updated and saved, Replicated Studio will create a new release using the next available sequence number. To start you'll probably want to copy and paste your most recent yaml as the downloading process often adds in default `null` values.
-
-From there you can use your favorite editor locally (like Atom, Visual Studio Code, Vim, or Emacs) and saved changes will trigger new updates available to your development server.
-
-**_Note: In the directory `~/replicated/releases/` you can view a copy of each release Replicated Studio has created along the way._**
-If you supply an invalid yaml file that isn't recognized as a valid update in the on-prem UI, you can simply delete the invalid release iteration from the local directory `~/replicated/releases` and save a new version of `current.yaml`.
-
-### Applying updates to the dev server
-
-After you have saved your `current.yaml` changes, you can navigate to your on-prem Admin Console (`https://<YOUR SERVER ADDRESS>:8800`) and click the `Check for updates` button to see your new release.
-
-{{< linked_headline "Iterate on your Application Images" >}}
-
-As well as being able to iterate on your application YAML, you can also use Studio to iterate on your Docker images. This simplifies the development workflow when you need to make changes to your code base to support on-prem deployments.
-
-To do this, rebuild your Docker images on your Studio server reusing the existing tags. Once you restart the application from the on-prem Admin Console (`https://<YOUR SERVER ADDRESS>:8800`) or CLI, your updated images will be used by Replicated.
-
-**_Note: When iterating on Docker images in Studio, referencing local Docker images using the `latest` tag is not supported. Replicated will re-pull any images with the `latest` tag, thus overwriting any changes you are making locally._**
-
-**_Note: Pulling third-party private images is not supported with Replicated studio. If your app uses an external private registry, you'll need to pull the images down to the server where the on-prem Admin Console is running, and ensure your `imagePullPolicy` is set to `ifNotPresent` _**
-
-{{< linked_headline "Additional features" >}}
-
-The logs from Replicated Studio display any lint or syntax issues detected in your application yaml. You can also view all interactions the on-prem Replicated has with the Studio API.
-
-You can follow these logs in real time using:
-
-```bash
-docker logs -f studio
+```sh
+make deps list-releases
 ```
+
+{{< linked_headline "Iterating on Releases" >}}
+
+Once you've made changes to `replicated.yaml`, you can push a new release to a channel with
+
+```sh
+make release channel=Unstable
+```
+
+For an integrated development approach, you can use `make watch` to
+watch the `replicated.yaml` file, linting and releasing whenever changes are made.
+
+```sh
+make watch channel=my-dev-channel
+```
+
+{{< linked_headline "Integrating with CI" >}}
+
+Often teams will use one channel per developer, and then keep the `master` branch of this repo in sync with their `Unstable` branch.
+
+The project includes CI configs for [Travis CI](https://travis-ci.org) and [CircleCI](https://circleci.com).
+Both configs will:
+
+**On pull requests**:
+
+- Install dependencies
+- Lint yaml for syntax and logic errors
+
+**On merges to the github `master` branch**:
+
+- Install dependencies
+- Lint yaml for syntax and logic errors
+- Create a new release on the `Unstable` channel in Replicated
+
+These behaviors are documented and demonstrated in the [replicated-ci-demo](https://github.com/replicatedhq/replicated-ci-demo) project.
+
+

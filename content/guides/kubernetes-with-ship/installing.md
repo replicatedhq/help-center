@@ -25,7 +25,7 @@ This guide assumes you'll run Ship with Homebrew using
 `brew install ship`, or [downloading the binary](https://github.com/replicatedhq/ship#installation), but you can also run Ship with the `replicated/ship` docker container.
 {{< /note >}}
 
-Copy the command from this screen, and take it to a workstation that has [ship installed](), and run it. This is how you can distribute software that's packaged in Ship. 
+Copy the command from this screen, we'll run it in the next step. When your end customer installs your application, you'll give them this command to run on their workstation.
 
 
 {{< linked_headline "Run the command" >}}
@@ -34,7 +34,7 @@ Copy the command from this screen, and take it to a workstation that has [ship i
 ship init "replicated.app/init?customer_id=0WPn1Ng6xxxxxxxxxxxxxjpUW&installation_id=Oa4adGM5q3e24super-secretf3BQd"
 ```
 
-This command will read the release we created in https://console.replicated.com and then prompt us to open a browser:
+This command will read the release we created in [https://console.replicated.com](https://console.replicated.com) and then prompt us to open a browser:
 
 ```shell
 
