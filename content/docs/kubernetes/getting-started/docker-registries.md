@@ -68,7 +68,7 @@ To use private images from an external registry, you need to add the registry vi
 
 Images stored in the Replicated private registry or an external private registry can be accessed by adding a static `imagePullSecrets` to any container definition that references the image. Replicated will automatically create a secret named `replicatedregistrykey` and deploy it into your application namespace. Note that if you specify namespaces in your Kubernetes spec, the resource will not be deployed to the application namespace and the secret required to pull private images will not be available.
 
-Continuing the example above, if the application is using the image `registry.replicated.com/myapp/worker:1.0.1`, a minimal spec using an image in the Replicated registry could be:
+Continuing the example above, if the application is using the image `registry.replicated.com/myapp/worker:1.0.1`, a minimal spec using an image in the Replicated registry might be:
 
 ```yaml
 spec:
@@ -80,7 +80,7 @@ spec:
 ```
 
 Referencing an external private image requires an extra step of specifying the image and its source in the `images` section of your Replicated yaml.
-If you have a private image such as `quay.io/namespace/imagename:2.0.0` and you have configured your `quay.io/namespace` registry on the Vendor website as `mythirdpartyprivateregistry`, then you could specify the image in your Replicated yaml as:
+If you have a private image such as `quay.io/namespace/imagename:2.0.0` and you have configured your `quay.io/namespace` registry on the Vendor website as `mythirdpartyprivateregistry`, then you can specify the image in your Replicated yaml as:
 
 ```yaml
 images:
@@ -89,7 +89,7 @@ images:
   tag: 2.0.0
 ```
 
-You could then use the image in your Kubernetes specs:
+You can then use the image in your Kubernetes specs.
 
 ```yaml
 spec:
@@ -100,7 +100,10 @@ spec:
   - name: replicatedregistrykey
 ```
 
-Replicated would rewrite this spec to pull the image from registry.replicated.com, which would proxy the image from `quay.io/namespace`. Credentials for `quay.io/namespace` are never sent to customer installations.
+Note that the `imagePullSecrets` name will *always* be `replicatedregistrykey`, regardless of the repository used for `source` in the `images` section above.
+
+
+When starting the applicaiton, Replicated will rewrite this spec to pull the image from `registry.replicated.com`, which will in turn proxy the image from `quay.io/namespace`. Credentials for `quay.io/namespace` are never sent to customer installations.
 When configuring Docker Hub as your external private registry, always specify the endpoint as `index.docker.io`.
 Always use the latest API version of a resource to ensure that the images will be correctly rewritten by Replicated.
 Replicated will rewrite the images in an `apps/v1` Deployment, for example, but not an `apps/v1beta1` or `extensions/v1beta1` Deployment.
