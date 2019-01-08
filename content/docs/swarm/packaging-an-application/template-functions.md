@@ -179,7 +179,7 @@ environment:
 ```go
 func RunOffline() bool
 ```
-Returns whether or not we are running in airgap mode. In Swarm, this function returns false.
+Returns whether or not we are running in airgap mode.
 ```yaml
 environment:
 - IS_AIRGAP={{repl RunOffline }}
