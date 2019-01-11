@@ -18,6 +18,17 @@ defaults: &defaults
   docker:
     - image: circleci/node:8.9.4
 
+defaults_eks: &defaults_eks
+  docker:
+  - image: replicated/gitops-builder:node8-go11
+  working_directory: ~/repo
+  environment: &environment_eks
+    PROJECT_NAME: help-center
+    ECR_REPO: 923411875752.dkr.ecr.us-east-1.amazonaws.com
+    OVERLAY_PATH: kustomize/overlays/staging
+    GITOPS_BRANCH: master
+    DOCKERFILE: build/Dockerfile
+
 defaults_py: &defaults_py
   <<: *environment
   docker:
@@ -131,6 +142,20 @@ jobs:
                 tf-api-staging ${PROJECT_NAME}
             fi
 
+  deploy_staging_eks:
+    <<: *defaults_eks
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+          - "25:51:68:66:6d:12:c7:84:f4:18:97:6a:7c:2e:f8:3d"
+      - deploy:
+          name: Maybe deploy staging to eks
+          command: |
+            export WORKDIR=`pwd`
+            export CIRCLE_PROJECT_REPONAME=$PROJECT_NAME
+            deploy
+
   deploy_production:
     <<: *defaults_py
     steps:
@@ -157,6 +182,25 @@ jobs:
                 --region us-east-1 \
                 tf-api-production ${PROJECT_NAME}
             fi
+
+  deploy_production_eks:
+    <<: *defaults_eks
+    environment:
+      <<: *environment_eks
+      ECR_REPO: 799720048698.dkr.ecr.us-east-1.amazonaws.com
+      OVERLAY_PATH: kustomize/overlays/production
+      GITOPS_BRANCH: release
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+          - "25:51:68:66:6d:12:c7:84:f4:18:97:6a:7c:2e:f8:3d"
+      - deploy:
+          name: Maybe deploy production to eks
+          command: |
+            export WORKDIR=`pwd`
+            export CIRCLE_PROJECT_REPONAME=$PROJECT_NAME
+            deploy
 
   build_staging_index:
     <<: *defaults
@@ -210,7 +254,19 @@ workflows:
           filters:
             branches:
               only: master
+      - deploy_staging_eks:
+          requires:
+            - build_staging
+          filters:
+            branches:
+              only: master
       - deploy_production:
+          requires:
+            - build_production
+          filters:
+            branches:
+              only: master
+      - deploy_production_eks:
           requires:
             - build_production
           filters:
@@ -219,18 +275,21 @@ workflows:
       - build_staging_index:
           requires:
             - deploy_staging
+            - deploy_staging_eks
           filters:
             branches:
               only: master
       - build_prod_index:
           requires:
             - deploy_production
+            - deploy_production_eks
           filters:
             branches:
               only: master
       - linkcheck_prod:
           requires:
             - deploy_production
+            - deploy_production_eks
           filters:
             branches:
               only: master

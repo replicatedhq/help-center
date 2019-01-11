@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: help-center
+  labels:
+    app: help-center
+spec:
+  type: NodePort
+  ports:
+    - port: 3000
+      nodePort: 30050
+      name: help-center
+      targetPort: help-center
+  selector:
+    app: help-center
