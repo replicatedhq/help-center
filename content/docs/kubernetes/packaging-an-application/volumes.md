@@ -15,6 +15,63 @@ Kubernetes applications often rely on persistent volumes (PVs) and persistent vo
 When Replicated creates a Kubernetes appliance, a custom storage class named `default` is automatically created that will be available to the application for persistent volumes provisioned by [Rook](https://rook.io).
 Replicated will set the `storageClassName` on all PersistentVolumeClaims in your application, allowing customers to use an alternative provisioner, such as `standard` on GKE.
 
+{{< linked_headline "Shared Filesystem" >}}
+
+Rook is not able to provision PVCs with an access mode of `ReadWriteMany`, but it does support a shared filesystem that can be mounted as a flexVolume.
+This can be enabled in the `kubernetes` section of your yaml.
+
+```yaml
+kubernetes:
+  shared_fs:
+    enabled: true
+```
+
+Templating is support on the `enabled` property.
+
+Once enabled, you can mount the shared fileystem in any of your pods, either from the root or at a subpath as shown in this example:
+
+```yaml
+---
+#kind: scheduler-kubernetes
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-deployment
+  template:
+    metadata:
+      labels:
+        app: my-deployment
+    spec:
+      containers:
+      - name: ubuntu
+        image: index.docker.io/ubuntu:16.04
+        command:
+        - /bin/sh
+        - -c
+        - 'sleep 3600'
+        volumeMounts:
+        - name: shared
+          mountPath: /var/lib/shared
+      volumes:
+      - name: shared
+        flexVolume:
+          driver: ceph.rook.io/rook
+          fsType: ceph
+          options:
+            fsName: rook-shared-fs
+            clusterNamespace: rook-ceph
+            path: /subdir1 #optional
+```
+
+Paths within the shared filesystem can be included in snapshots by adding them to the [backup](/docs/snapshots/kubernetes/) section of your yaml.
+
+{{< linked_headline "Resources" >}}
+
 For more information on using Persistent Volumes with Kubernetes, see the [Kubernetes Documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/).
 
 For information on snapshotting Kubernetes volumes, see the [Replicated snapshots documentation for Kubernetes](/docs/snapshots/kubernetes/).

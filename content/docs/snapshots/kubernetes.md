@@ -12,6 +12,8 @@ nextPage: "ldap-and-identity/overview.md"
 Kubernetes Snapshots can be used to configure incremental backups for any Kubernetes resources
 that use a [Persistent Volume Claim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) (PVC)
 for persistent storage.
+If your application has [a Rook shared filesystem enabled](/docs/kubernetes/packaging-an-application/volumes/)
+any paths on the filesystem can be included in the snapshot.
 
 {{< linked_headline "Configuration" >}}
 
@@ -26,9 +28,19 @@ backup:
     pvc_names: [ "redis-data-volume" ]
 ```
 
+Paths in the shared filesystem must also be whitelisted.
+To backup the entire shared filesystem, use the root path.
+
+```yaml
+backup:
+  enabled: true
+  kubernetes:
+    shared_fs_paths: [ "/" ]
+```
+
 [Multi-strategy snapshots](/docs/snapshots/custom-scripts/#multi-strategy-backup) can also be used with Kubernetes.
 
-When configuring multi-strategy snapshots, all PVCs should be included under the same strategy.
+When configuring multi-strategy snapshots, all PVCs and shared filesystem paths should be included under the same strategy.
 
 ```yaml
 ...
@@ -38,6 +50,7 @@ backup:
     - name: full
       kubernetes:
         pvc_names: [ "redis-data-volume" ]
+        shared_fs: [ "/dump" ]
 ...
 ```
 
