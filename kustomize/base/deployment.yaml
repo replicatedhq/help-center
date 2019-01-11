@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: help-center
+spec:
+  selector:
+    matchLabels:
+      app: help-center
+  template:
+    metadata:
+      labels:
+        app: help-center
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 2
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app
+                  operator: In
+                  values:
+                  - help-center
+              topologyKey: "kubernetes.io/hostname"
+      containers:
+        - name: help-center
+          image: replicated/help-center
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: help-center
+              containerPort: 3000

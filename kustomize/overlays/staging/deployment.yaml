@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: help-center
+spec:
+  replicas: 3
+  template:
+    spec:
+      nodeSelector:
+        replicated/node-pool: untrusted
+      containers:
+        - name: help-center
+          image: 923411875752.dkr.ecr.us-east-1.amazonaws.com/help-center
