@@ -115,33 +115,6 @@ jobs:
             docker tag ${PROJECT_NAME}:${CIRCLE_SHA1:0:7} 799720048698.dkr.ecr.us-east-1.amazonaws.com/${PROJECT_NAME}:latest
             docker push 799720048698.dkr.ecr.us-east-1.amazonaws.com/${PROJECT_NAME}:latest
 
-  deploy_staging:
-    <<: *defaults_py
-    steps:
-      - setup_remote_docker
-      - deploy:
-          name: Maybe deploy staging
-          command: |
-            set -vu
-            if [ "${CIRCLE_PROJECT_USERNAME}" == "replicatedhq" ]; then
-              pip install awscli --upgrade --user
-
-              export AWS_ACCESS_KEY_ID=$STAGING_AWS_ACCESS_KEY_ID
-              export AWS_SECRET_ACCESS_KEY=$STAGING_AWS_SECRET_ACCESS_KEY
-              $(/home/circleci/.local/bin/aws ecr get-login --no-include-email --region us-east-1)
-
-              docker run -it \
-                -e AWS_ACCESS_KEY_ID=$STAGING_AWS_ACCESS_KEY_ID \
-                -e AWS_SECRET_ACCESS_KEY=$STAGING_AWS_SECRET_ACCESS_KEY \
-                923411875752.dkr.ecr.us-east-1.amazonaws.com/deployer:latest \
-                ecs \
-                deploy \
-                --timeout 1200 \
-                -i ${PROJECT_NAME} 923411875752.dkr.ecr.us-east-1.amazonaws.com/${PROJECT_NAME}:${CIRCLE_SHA1:0:7} \
-                --region us-east-1 \
-                tf-api-staging ${PROJECT_NAME}
-            fi
-
   deploy_staging_eks:
     <<: *defaults_eks
     steps:
@@ -155,33 +128,6 @@ jobs:
             export WORKDIR=`pwd`
             export CIRCLE_PROJECT_REPONAME=$PROJECT_NAME
             deploy
-
-  deploy_production:
-    <<: *defaults_py
-    steps:
-      - setup_remote_docker
-      - deploy:
-          name: Maybe deploy production
-          command: |
-            set -vu
-            if [ "${CIRCLE_PROJECT_USERNAME}" == "replicatedhq" ]; then
-              pip install awscli --upgrade --user
-
-              export AWS_ACCESS_KEY_ID=$PRODUCTION_AWS_ACCESS_KEY_ID
-              export AWS_SECRET_ACCESS_KEY=$PRODUCTION_AWS_SECRET_ACCESS_KEY
-              $(/home/circleci/.local/bin/aws ecr get-login --no-include-email --region us-east-1)
-
-              docker run -it \
-                -e AWS_ACCESS_KEY_ID=$PRODUCTION_AWS_ACCESS_KEY_ID \
-                -e AWS_SECRET_ACCESS_KEY=$PRODUCTION_AWS_SECRET_ACCESS_KEY \
-                799720048698.dkr.ecr.us-east-1.amazonaws.com/deployer:latest \
-                ecs \
-                deploy \
-                --timeout 1200 \
-                -i ${PROJECT_NAME} 799720048698.dkr.ecr.us-east-1.amazonaws.com/${PROJECT_NAME}:${CIRCLE_SHA1:0:7} \
-                --region us-east-1 \
-                tf-api-production ${PROJECT_NAME}
-            fi
 
   deploy_production_eks:
     <<: *defaults_eks
@@ -201,6 +147,17 @@ jobs:
             export WORKDIR=`pwd`
             export CIRCLE_PROJECT_REPONAME=$PROJECT_NAME
             deploy
+
+  deploy_sleep:
+    docker:
+      - image: alpine:3.8
+    working_directory: ~/repo
+    resource_class: small
+    steps:
+      - run:
+          name: sleep
+          command: |
+            sleep 3m
 
   build_staging_index:
     <<: *defaults
@@ -248,21 +205,9 @@ workflows:
           filters:
             branches:
               only: master
-      - deploy_staging:
-          requires:
-            - build_staging
-          filters:
-            branches:
-              only: master
       - deploy_staging_eks:
           requires:
             - build_staging
-          filters:
-            branches:
-              only: master
-      - deploy_production:
-          requires:
-            - build_production
           filters:
             branches:
               only: master
@@ -272,24 +217,25 @@ workflows:
           filters:
             branches:
               only: master
+      - deploy_sleep:
+          requires:
+            - deploy_staging_eks
+            - deploy_production_eks
       - build_staging_index:
           requires:
-            - deploy_staging
-            - deploy_staging_eks
+            - deploy_sleep
           filters:
             branches:
               only: master
       - build_prod_index:
           requires:
-            - deploy_production
-            - deploy_production_eks
+            - deploy_sleep
           filters:
             branches:
               only: master
       - linkcheck_prod:
           requires:
-            - deploy_production
-            - deploy_production_eks
+            - deploy_sleep
           filters:
             branches:
               only: master
