@@ -407,7 +407,7 @@ Trim returns a string with all leading and trailing spaces removed.
 ```yaml
 env_vars:
 - name: VALUE
-  value: '{{repl ConfigOption "str_value" | Trim }}
+  value: '{{repl ConfigOption "str_value" | TrimSpace }}'
 ```
 
 {{< template_function name="Trim" >}}
@@ -418,7 +418,7 @@ Trim returns a string with all leading and trailing string contained in the opti
 ```yaml
 env_vars:
 - name: VALUE
-  value: '{{repl ConfigOption "str_value" | Trim " " "." }}
+  value: '{{repl ConfigOption "str_value" | Trim " " "." }}'
 ```
 
 {{< template_function name="Split" >}}
@@ -472,7 +472,7 @@ HumanSize returns a human-readable approximation of a size in bytes capped at 4 
 ```yaml
 env_vars:
 - name: MIN_SIZE_HUMAN
-  value: '{{repl ConfigOption "min_size_bytes" | HumanSize }}
+  value: '{{repl ConfigOption "min_size_bytes" | HumanSize }}'
 ```
 
 {{< template_function name="UrlEncode" >}}

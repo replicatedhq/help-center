@@ -311,7 +311,7 @@ func TrimSpace(s string) string
 Trim returns a string with all leading and trailing spaces removed.
 ```yaml
 environment:
-- VALUE={{repl ConfigOption "str_value" | Trim }}
+- VALUE={{repl ConfigOption "str_value" | TrimSpace }}
 ```
 
 
