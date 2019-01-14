@@ -110,9 +110,7 @@ monitors:
 
 {{< linked_headline "Ports" >}}
 
-By default, Replicated will use dynamic ports for Graphite and StatsD.  These can be discovered by examining the
-graphite container. Static ports can be defined using the graphite and the statsd sections of app YAML.
-The graphite port can be accessed via web browser for a full Graphite dashboard.
+By default, Replicated will use dynamic ports for Graphite and StatsD as well as the Carbon plaintext and pickle protocol ports. These can be discovered by examining the graphite container. Static ports can be defined using the `graphite`, `statsd` and `carbon` sections of app YAML. The graphite port can be accessed via web browser for a full Graphite dashboard.
 
 Because Graphite uses TCP and StatsD uses UDP, the same port number can be used for both.
 
@@ -123,6 +121,9 @@ graphite:
   port: 8899
 statsd:
   port: 8899
+carbon:
+  plaintext_port: 22003
+  pickle_port: 22004
 ```
 
 {{< linked_headline "Custom CSS" >}}
