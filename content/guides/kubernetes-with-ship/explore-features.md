@@ -31,8 +31,8 @@ Learn about how to pull images from the Replicated Private Registry, and bundle 
 
 Learn about how to allow end customers to opt-in to a more black-box appliance experience by bundling [Terraform](https://terraform.io) manifests and having Ship manage infrastructure provisioning and state. Distribute a hands-off, managed instance of your application into a private cloud with the same workflow and manifests you use for delivering into opinionated, existing cluster environments.
 
-- [Using Integrated Terraform](/docs/ship/lifecycle/terraform/) 
-- [Using Integrated Kubectl](/docs/ship/lifecycle/kubectl/) 
+- [Using Integrated Terraform](/api/ship-lifecycle/terraform/)
+- [Using Integrated Kubectl](/api/ship-lifecycle/kubectlapply/)
 - [Ship Starter Repo (Terraform Branch)](https://github.com/replicatedhq/replicated-starter-ship/tree/terraform) 
 
 {{< linked_headline "Support and Troubleshoot your Application" >}}
