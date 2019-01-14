@@ -126,20 +126,7 @@ monitors:
 
 {{< linked_headline "Ports" >}}
 
-By default, Replicated will use dynamic ports for Graphite and StatsD.  These can be discovered by examining the
-graphite container. Static ports can be defined using the graphite and the statsd sections of app YAML.
-The graphite port can be accessed via web browser for a full Graphite dashboard.
-
-Because Graphite uses TCP and StatsD uses UDP, the same port number can be used for both.
-
-### Example
-
-```yaml
-graphite:
-  port: 8899
-statsd:
-  port: 8899
-```
+By default, Replicated will expose the ports for Graphite (2443), StatsD (8125) and the Carbon plaintext (2003) and pickle (2004) protocols. The address of these services can be accessed via the the Docker overlay network service discovery address at `statsd_replicated` on their standard ports or discovered through use of the template functions [StatsdAddress](https://help.replicated.com/docs/swarm/packaging-an-application/template-functions/#statsdaddress), [CarbonPlaintextAddress](https://help.replicated.com/docs/swarm/packaging-an-application/template-functions/#carbonplaintextaddress) and [CarbonPickleAddress](https://help.replicated.com/docs/swarm/packaging-an-application/template-functions/#carbonpickleaddress).
 
 {{< linked_headline "Custom CSS" >}}
 
