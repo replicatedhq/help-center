@@ -24,7 +24,7 @@ This guide is for aimed at application vendors looking to distribute a [propriet
 
 Replicated Ship is a set of tools (APIs, YAML spec, and distributable components) that make it easy to package and distribute a modern, cloud-native application for an enterprise customer to install, configure, and operate in their own private environment.
 
-Your customer will use the same tools to install and operate your application as you package into the release. One of the main goals of Replicated Ship is to package and deliver applications when the operator is unfamiliar with the software being installed.
+Your customer will use Ship to install and operate your application, and you can use Ship to test your release as your develop it. One of the main goals of Replicated Ship is to package and deliver applications when the operator is unfamiliar with the software being installed.
 
 {{< linked_headline "Prerequisites" >}}
 
