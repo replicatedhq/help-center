@@ -25,6 +25,7 @@ Replicated uses Go's [template engine](http://golang.org/pkg/text/template) to e
 func ConfigOption(optionName string) string
 ```
 Returns the value of the config option as a string.
+The config screen and associated options are described [here](/docs/config-screen/config-yaml/).
 ```yaml
 properties:
   app_url: http://{{repl ConfigOption "hostname" }}
