@@ -41,14 +41,19 @@ setup:
 	curl -o java/swagger2markup-1.3.1.jar http://central.maven.org/maven2/io/github/swagger2markup/swagger2markup/1.3.1/swagger2markup-1.3.1.jar
 
 
+deps_linkcheck:
+	npm install -g broken-link-checker@0.7.8
+
 # this skips *all* of community, but its a start
 # it only really works against prod right now, but with some more exclusions
 # it could probably work for staging as well. Notably, we have no community
 # in staging. For now just want to run this in prod and see how it feels,
 # not blocking any builds yet.
+#
+#  Will try to run deps_linkcheck unless `blc` is installed globally somewhere
 linkcheck:
-	npm install broken-link-checker@0.7.8
-	`npm bin`/blc https://help.replicated.com -r \
+	[[ -x "$(shell which blc)" ]] || $(MAKE) deps_linkcheck && \
+	blc https://help.replicated.com -r \
 		--host-requests 20 \
 		--requests 20 \
 		\

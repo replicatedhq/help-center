@@ -50,7 +50,7 @@ hugo_setup_steps: &hugo_setup_steps
 
 jobs:
   linkcheck_prod:
-    <<: *defaults
+    <<: *defaults_eks
     steps:
       - checkout
       - run:
