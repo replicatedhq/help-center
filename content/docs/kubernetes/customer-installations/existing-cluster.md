@@ -10,7 +10,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-Replicated can be installed to an existing Kubernetes 1.9 cluster. Use the `https://get.replicated.com/kubernetes-yml-generate` script to generate specs for the Deployments, Services, and PersistentVolumeClaims required by Replicated.
+Replicated can be installed to an existing Kubernetes 1.9, 1.11 or 1.13 cluster. Use the `https://get.replicated.com/kubernetes-yml-generate` script to generate specs for the Deployments, Services, and PersistentVolumeClaims required by Replicated.
 
 ## Persistent Volumes
 
