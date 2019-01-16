@@ -18,6 +18,8 @@ tar xzvf replicated.tar.gz
 cat ./swarm-init.sh | sudo bash -s airgap
 ```
 
+Previous versions can be downloaded from URLs following the pattern `https://s3.amazonaws.com/replicated-airgap-work/stable/replicated-<version>%2B<version>%2B<version>.tar.gz`, for example https://s3.amazonaws.com/replicated-airgap-work/stable/replicated-2.28.0%2B2.28.0%2B2.28.0.tar.gz for Replicated 2.28.0.
+
 {{< linked_headline "Download & Rename Airgap Package" >}}
 
 On the license properties page in the vendor portal, enable Airgap installations for this license and copy the
