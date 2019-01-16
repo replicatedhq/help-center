@@ -29,6 +29,8 @@ tar xzvf replicated.tar.gz
 cat ./install.sh | sudo bash -s airgap
 ```
 
+Previous versions can be downloaded from URLs following the pattern `https://s3.amazonaws.com/replicated-airgap-work/stable/replicated-<version>%2B<version>%2B<version>.tar.gz`, for example https://s3.amazonaws.com/replicated-airgap-work/stable/replicated-2.28.0%2B2.28.0%2B2.28.0.tar.gz for Replicated 2.28.0.
+
 {{< linked_headline "Download Airgap Package" >}}
 
 On the license properties page in the vendor portal, enable Airgap installations for this license and copy the download link. This URL is designed to be delivered to that customer. They will use this link to download current airgap packages when you promote a release. When they download new airgap packages to their server, it is important that your customer set the `--trust-server-names` and `--content-disposition` flags for `wget` or rename the file to something ending with `.airgap`.
