@@ -152,6 +152,7 @@ jobs:
     docker:
       - image: alpine:3.8
     working_directory: ~/repo
+    # todo we need to get `resource_class: small` enabled for our project before this will work. but its fine for now.
     resource_class: small
     steps:
       - run:
