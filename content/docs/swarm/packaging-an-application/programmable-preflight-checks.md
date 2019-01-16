@@ -48,9 +48,6 @@ custom_requirements:
     data:
       swarm:
         service: "license-checker" # matches the Service name below
-        placement:
-          constraints:
-            - node.labels.isPreflightNode==true
 ---
 # kind: preflight-swarm
 version: "3"
@@ -60,6 +57,45 @@ services:
     volumes:
       - "/etc:/host/etc"
     command: ["test", "-e", "/host/etc/vendor-license"]
+```
+
+{{< linked_headline "Example: Running checks on specific nodes" >}}
+
+In certain cases, you may want to limit which nodes certain requirements apply to. You can use `placement` to
+limit checks to only run on specific nodes. For example, you may only want to run performance checks on GPU-equipped nodes, but not on general web-app nodes.
+
+```yaml
+---
+# kind: replicated
+custom_requirements:
+- id: gpu-node-has-gpu-access
+  message: Nodes labeled with role=gpu have GPUs
+  details: Nodes labeled with role=gpu must have access to GPU functionality
+  results:
+    - status: success
+      message: GPU performance check succeeded
+      condition:
+        status_code: 0
+    - status: error
+      message: Unable to check for GPU on node
+      condition:
+        status_code: 1
+  command:
+    id: scheduler
+    timeout: 120
+    data:
+      swarm:
+        service: "gpu-checker" # matches the Service name below
+        placement:
+          constraints:
+            - node.labels.role==gpu
+---
+# kind: preflight-swarm
+version: "3"
+services:
+  gpu-checker:
+    image: registry.replicated.com/myapp/gpu_perf_checker:1.0.0
+    command: ["/scripts/ensure_gpu.sh"]
 ```
 
 {{< linked_headline "Resource Specification" >}}
