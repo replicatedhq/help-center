@@ -28,6 +28,8 @@ tar xzvf replicated__docker__kubernetes.tar.gz
 cat ./kubernetes-init.sh | sudo bash -s airgap
 ```
 
+Previous versions can be downloaded from URLs following the pattern `https://s3.amazonaws.com/replicated-airgap-work/stable/replicated-<version>%2B<version>%2B<version>__docker__kubernetes.tar.gz`, for example https://s3.amazonaws.com/replicated-airgap-work/stable/replicated-2.28.0%2B2.28.0%2B2.28.0__docker__kubernetes.tar.gz for Replicated 2.28.0.
+
 {{< linked_headline "Download the Application Airgap Bundle" >}}
 
 On the license properties page in the vendor portal, enable Airgap installations for this license and copy the download link. This URL is designed to be delivered to that customer. They will use this link to download
