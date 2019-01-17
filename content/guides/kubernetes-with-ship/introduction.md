@@ -13,11 +13,11 @@ previousPage: "/"
 
 {{< linked_headline "About This Guide" >}}
 
-This guide will walk you through the process of taking an existing Kubernetes application, package it and distribute it in Replicated using [Replicated Ship](https://www.replicated.com/ship). For this guide, we will package and deliver a simple nginx application. While this is a trivial example, Ship is designed to support large complex applications and has native support for [Helm charts](https://helm.sh) and [Kustomize](https://kustomize.io).
+This guide will walk you through the process of taking an existing Kubernetes application and packaging it so it can be distributed and managed with [Replicated Ship](https://www.replicated.com/ship). For this guide, we will walk through package and deliver a simple nginx application on Kubernetes. While this is a trivial example, Ship is designed to support large complex applications and has native support for [Helm charts](https://helm.sh) and [Kustomize](https://kustomize.io).
 
 ### Looking for Ship Open Source?
 
-This guide is for aimed at application vendors looking to distribute a [proprietary](#features-for-app-maintainers) application. If you are looking for an easier way to distribute or manage publicly available Kubernetes- or Helm-based applications, you may want to check out [Ship for Open Source](https://www.replicated.com/ship/oss).
+This guide is for aimed at application vendors looking to enable your end customers to manage a [proprietary](#features-for-app-maintainers) application with Ship. If you are looking for an easier way to distribute or manage publicly available Kubernetes- or Helm-based applications, you may want to check out [Ship for Open Source](https://www.replicated.com/ship/oss).
 
 
 {{< linked_headline "Introduction to Replicated Ship" >}}
@@ -33,9 +33,9 @@ Before you can distibute an application on Ship, you must be able to deploy all 
 - Kubernetes
 - Configuration Management tools like Chef and Ansible
 - Infrastructure as Code tools like Terraform and Cloudformation
-- Bash Scripts
+- Python, Ruby, or Bash scripts
 
-The most common use of Replicated Ship is to distribute a Kubernetes (or Helm) application to an enterprise customer. Ship provides tools for installation-time customization as well as primitives for operationalizing the application in an automation-driven enterprise workflow.
+The most common use of Replicated Ship is for distributing a Kubernetes (or Helm) application to an enterprise customer. Ship provides tools for installation-time customization as well as primitives for operationalizing the application in an automation-driven enterprise workflow.
 
 {{< linked_headline "Features for App Distributors" >}}
 
