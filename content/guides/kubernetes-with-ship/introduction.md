@@ -35,7 +35,7 @@ Before you can distibute an application on Ship, you must be able to deploy all 
 - Infrastructure as Code tools like Terraform and Cloudformation
 - Python, Ruby, or Bash scripts
 
-The most common use of Replicated Ship is for distributing a Kubernetes (or Helm) application to an enterprise customer. Ship provides tools for installation-time customization as well as primitives for operationalizing the application in an automation-driven enterprise workflow.
+The most common use of Replicated Ship is distributing a Kubernetes (or Helm) application to an enterprise customer. Ship provides tools for installation-time customization as well as primitives for operationalizing the application in an automation-driven enterprise workflow.
 
 {{< linked_headline "Features for App Distributors" >}}
 
