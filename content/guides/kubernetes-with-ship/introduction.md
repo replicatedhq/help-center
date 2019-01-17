@@ -13,7 +13,7 @@ previousPage: "/"
 
 {{< linked_headline "About This Guide" >}}
 
-This guide will walk you through the process of taking an existing Kubernetes application and packaging it so it can be distributed and managed with [Replicated Ship](https://www.replicated.com/ship). For this guide, we will walk through package and deliver a simple nginx application on Kubernetes. While this is a trivial example, Ship is designed to support large complex applications and has native support for [Helm charts](https://helm.sh) and [Kustomize](https://kustomize.io).
+This guide will walk you through the process of taking an existing Kubernetes application and packaging it so it can be distributed and managed with [Replicated Ship](https://www.replicated.com/ship). For this guide, we will package and deliver a simple nginx application on Kubernetes. While this is a trivial example, Ship is designed to support large complex applications and has native support for [Helm charts](https://helm.sh) and [Kustomize](https://kustomize.io).
 
 ### Looking for Ship Open Source?
 
