@@ -30,3 +30,13 @@ spec:
           ports:
             - name: help-center
               containerPort: 3000
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /healthz
+              port: 3000
+              scheme: HTTP
+            initialDelaySeconds: 5
+            periodSeconds: 2
+            successThreshold: 2
+            timeoutSeconds: 1
