@@ -17,7 +17,7 @@ This guide will walk you through the process of taking an existing Kubernetes ap
 
 ### Looking for Ship Open Source?
 
-This guide is for aimed at application vendors looking to enable your end customers to manage a [proprietary](#features-for-app-maintainers) application with Ship. If you are looking for an easier way to distribute or manage publicly available Kubernetes- or Helm-based applications, you may want to check out [Ship for Open Source](https://www.replicated.com/ship/oss).
+This guide is for application vendors looking to enable your end customers to manage a [proprietary](#features-for-app-maintainers) application with Ship. If you are looking for an easier way to distribute or manage publicly available Kubernetes- or Helm-based applications, you may want to check out [Ship for Open Source](https://www.replicated.com/ship/oss).
 
 
 {{< linked_headline "Introduction to Replicated Ship" >}}
