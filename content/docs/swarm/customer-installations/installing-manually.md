@@ -40,7 +40,7 @@ docker load < retraced.tar
 docker load < retraced-postgres.tar
 docker load < retraced-nsqd.tar
 docker swarm init
-curl -sSL -o docker-compose.yml "https://get.replicated.com/docker-compose.yml?airgap=1swarm_node_address=$(docker info --format '{{.Swarm.NodeAddr}}')"
+curl -sSL -o docker-compose.yml "https://get.replicated.com/docker-compose.yml?airgap=1&swarm_node_address=$(docker info --format '{{.Swarm.NodeAddr}}')"
 docker node update --label-add replicated-role=master "$(docker info --format '{{.Swarm.NodeID}}')"
 docker network create --driver=overlay --attachable --label=com.docker.stack.namespace=replicated replicated_default
 export LC_CTYPE=C;echo "$(head -c 128 /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)" | docker secret create daemon_token -
