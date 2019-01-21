@@ -23,7 +23,10 @@ export LC_CTYPE=C;echo "$(head -c 128 /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -
 docker stack deploy -c docker-compose.yml replicated
 ```
 
-For airgap installs, the Replicated images will also need to be loaded manually:
+### Airgap
+
+For airgapped installs, the Replicated images will need to be loaded from Docker first, and the `airgap` flag will need to be passed in when generating the compose yaml.
+
 ```shell
 docker load < replicated.tar
 docker load < replicated-ui.tar
@@ -36,12 +39,18 @@ docker load < support-bundle.tar
 docker load < retraced.tar
 docker load < retraced-postgres.tar
 docker load < retraced-nsqd.tar
+docker swarm init
+curl -sSL -o docker-compose.yml "https://get.replicated.com/docker-compose.yml?airgap=1swarm_node_address=$(docker info --format '{{.Swarm.NodeAddr}}')"
+docker node update --label-add replicated-role=master "$(docker info --format '{{.Swarm.NodeID}}')"
+docker network create --driver=overlay --attachable --label=com.docker.stack.namespace=replicated replicated_default
+export LC_CTYPE=C;echo "$(head -c 128 /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)" | docker secret create daemon_token -
+docker stack deploy -c docker-compose.yml replicated
 			 
 ```
 
 ### Limitations
 
-The `swarm-init` script includes additional steps to configure proxies, firewalls, the [replicatedctl CLI](/api/replicatedctl/), and aliases to [admin commands](/docs/swarm/packaging-an-application/admin-commands/).
+The `swarm-init` script includes additional steps to configure docker, proxies, firewalls, the [replicatedctl CLI](/api/replicatedctl/), and aliases to [admin commands](/docs/swarm/packaging-an-application/admin-commands/).
 
 {{< linked_headline "Uninstall Entire Swarm Stack" >}}
 
