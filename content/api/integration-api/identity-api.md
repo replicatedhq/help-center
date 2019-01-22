@@ -91,7 +91,7 @@ Response body
 | ---------- | ------ | ----------------------------------------------------------------------------------------------------------- |
 | DN         | String | LDAP DN for the user's entry                                                                                |
 | Username   | String | Username                                                                                                    |
-| Attributes | Array  | An array of available LDAP attributes for the user's entry, including any custom attributes for the user.   |
+| Attributes | Object | A map of available LDAP attributes for the user's entry, including any custom attributes for the user.   |
 | Groups     | Array  | Array of groups that the user belongs to. Each group contains group's DN and a list of its LDAP attributes. |
 
 #### Example
