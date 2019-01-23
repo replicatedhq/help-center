@@ -11,4 +11,4 @@ icon: "replicatedAuditLog"
 gradient: "console"
 ---
 
-The Replicated Audit Log is a self-hosted platform that provides an audit log for your application; one that meets all of the principles of what makes a good audit log. The Replicated Audit Log provides both an API to send audit events to, and several different methods for your customers to view and extract their events.
+The Replicated Audit Log is a self-hosted platform that provides an audit log for your application, meeting all of the principles of [what makes a good audit log](/docs/audit-logs/how-to/basics). At its core, the Replicated Audit Log powers several APIs to facilitate event logging and indexing events for your end customers to view and export, as well as embeddable components for exposing events in your application.

@@ -11,8 +11,8 @@ gradient: "console"
 
 At it's core, the Replicated Audit Log consists of 3 components:
 
-- The [Publisher API](/docs/audit-log/apis/publisher-api), which is used by a vendor application to report audit events to Retraced.
+- The [Publisher API](/docs/audit-log/apis/publisher-api), which is used by a vendor application to report audit events.
 - A [Logs Viewer](/docs/audit-log/getting-started/embedded-viewer) which can be embedded in the frontend of a vendor application to allow end customers to view, search, and export logs.
-- The [Enterprise IT Integration API](/docs/audit-log/apis/enterprise-api) which be used by end customers to consume audit log events programmatically.
+- The [Enterprise IT Integration API](/docs/audit-log/apis/enterprise-api) which be used by end customers to retrieve audit log events programmatically.
 
-The first step in any Retraced integration is [sending an event to the Publisher API](/docs/audit-log/getting-started/first-event). Once events have been published to Retraced, they can be consumed either by embedding the logs viewer or by accessing the Enterprise IT Integration API.
+The audit log is designed to run in your production infrastructure. Once it is [deployed](/docs/audit-log/getting-started/deploying), the first step in the Audit Log integration is [sending an event to the Publisher API](/docs/audit-log/getting-started/first-event). Once events have been published, they can be accessed either by embedding the logs viewer or by accessing the Enterprise IT Integration API.
