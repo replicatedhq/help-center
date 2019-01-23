@@ -9,4 +9,11 @@ icon: "replicatedAuditLog"
 gradient: "console"
 ---
 
-Most users of audit logs will want to connect it into systems that aggregate audit logs from different systems (such as Splunk).
+The activity should be exportable to a CSV format and API accessible so that it can be centralized into an organization wide SIEM logging system like Splunk. It’s advisable to offer both the ability to poll for new events and to be able to push new events to the remote system. When polling, use standards such as `etag` headers to prevent duplicate events from being received. When pushing, use standards such as webhooks to minimize the amount of custom work required to ingest these events.
+
+The Replicated Audit Log Service provides CSV export with custom saved searches for easy repeatability of common export actions.
+<img class="mask-img" src="/images/audit-log/export-csv.png">
+
+Additionally, the Enterprise API is designed to enable the IT admins to retrieve the events with support for `etag` headers for resuming retrieval on a regular interval without overlapping or excluding events.
+
+<img class="mask-img" src="/images/audit-log/api-tokens.png">
