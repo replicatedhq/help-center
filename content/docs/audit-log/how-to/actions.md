@@ -1,6 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Actions"
+pageTitle: "Audit Log Actions"
 description: ""
 weight: "1708"
 categories: [ "Audit Logging Basics" ]
