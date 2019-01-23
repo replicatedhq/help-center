@@ -41,7 +41,7 @@ There are five things to pay attention to here:
 
 - We send our Enterpise API Token in a header of the form `Authorization: token=...`
 - `variables.last` is the number of events we're requesting, in this case we only want the last 3 events
-- `variables.query` is a free-text or structured search query, as you'd use in [The Embedded Viewer](/docs/audit-log/exposing-events/using-viewer/#search).
+- `variables.query` is a free-text or structured search query, as you'd use in [The Embedded Viewer](/docs/audit-log/exposing-events/viewer/#search).
 - `variables.before` allows us to specify a cursor for paging through events. Since we just want the most recent events, we'll leave this blank for now.
 - In the `query` field, we describe the structure and parameters of the GraphQL query.
 
@@ -131,10 +131,10 @@ query Search($query: String!, $last: Int, $before: String) {
 ```
 
 
-This example only requests a few event fields: `id`, `action`, `crud`, `created`, and `actor.name`, but there are many other fields available, as described in the [Event Schema](/documentation/apis/graphql/#event).
+This example only requests a few event fields: `id`, `action`, `crud`, `created`, and `actor.name`, but there are many other fields available, as described in the [Event Schema](/docs/audit-log/apis/graphql/#event).
 
 
-The GraphQL APIs for consuming events are specified fully in [GraphQL API Guide](/documentation/apis/graphql/). There are example queries and usage in the [Golang SDK](https://github.com/retracedhq/retraced-go/blob/master/graphql.go#L216) and the [Javascript SDK](https://github.com/retracedhq/retraced-js/blob/master/src/graphql.ts#L334)
+The GraphQL APIs for consuming events are specified fully in [GraphQL API Guide](/docs/audit-log/apis/graphql/). There are example queries and usage in the [Golang SDK](https://github.com/retracedhq/retraced-go/blob/master/graphql.go#L216) and the [Javascript SDK](https://github.com/retracedhq/retraced-js/blob/master/src/graphql.ts#L334)
 
 
 ## SSH Event Stream
@@ -161,7 +161,7 @@ Events will continue to appear as long as the ssh session is open. These events 
 
 **Note**: SSH Streaming may not be available in all Audit Log environments.
 
-For more information, check out [SSH Streaming](/documentation/advanced-retraced/ssh-streaming/).
+For more information, check out [SSH Streaming](/docs/audit-log/advanced/ssh-streaming/).
 
 
 ## Saved Searches
@@ -177,7 +177,7 @@ The general workflow is:
 
 **Note**: Saved Search functionality may not be available in all Audit Log environments.
 
-The endpoints for managing Saved Searches are described in the [Enterprise API Guide](/documentation/apis/enterprise/). There's also an [OpenAPI/Swagger  specification](https://api.replicated.com/auditlog/enterprise/v1/swagger.json) and [interactive API console](https://retraced.readme.io/reference#searchactive).
+The endpoints for managing Saved Searches are described in the [Enterprise API Guide](/docs/audit-log/apis/enterprise/). There's also an [OpenAPI/Swagger  specification](https://api.replicated.com/auditlog/enterprise/v1/swagger.json) and [interactive API console](https://retraced.readme.io/reference#searchactive).
 
 
 

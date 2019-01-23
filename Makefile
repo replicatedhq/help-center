@@ -68,6 +68,7 @@ linkcheck:
 		--exclude 'registry-data.replicated.com' \
 		--exclude 'api.replicated.com' \
 		--exclude 'get.replicated.com' \
+		--exclude 'www.replicated.com/ship' \
 		\
 		--exclude 'help.replicated.com/community' \
 		--exclude 'help.replicated.com/tos'  \

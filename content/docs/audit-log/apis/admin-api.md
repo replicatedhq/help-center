@@ -20,4 +20,4 @@ Authorization: WU9VUl9TSUdORURfSldUX1RPS0VOX18K...
 This token is generated at install time and can be retrieved via `kubectl`.
 
 ## Swagger JSON
-https://api.{yourdomain}.io/admin/v1/swagger.json
+https://api.replicated.com/auditlog/admin/v1/swagger.json

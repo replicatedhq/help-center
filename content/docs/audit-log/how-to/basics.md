@@ -38,4 +38,5 @@ Most of the time, it is useful to filter audit event by whether the audited acti
 
 ### Raw view
 In addition to a human readable view of the data, the UI should be able to display the raw data of every event in the system. The Replicated Audit Log Service implements this in the embedded viewers.
+
 <img class="mask-img" src="/images/audit-log/raw-view.png">

@@ -13,10 +13,10 @@ The recommended way to search events using an API is to POST your query and vari
 
 | API | Endpoint |
 | --- | -------- |
-| Publisher | https://api.{yourdomain}.io/publisher/v1/project/{projectId}/graphql |
-| Admin | https://api.{yourdomain}.io/admin/v1/project/{projectId}/environment/{environmentId}/graphql |
-| Enterprise | https://api.{yourdomain}.io/enterprise/v1/graphql |
-| Viewer | https://api.{yourdomain}.io/viewer/v1/graphql |
+| Publisher | https://auditlog.mycompany.com/publisher/v1/project/{projectId}/graphql |
+| Admin | https://auditlog.mycompany.com/admin/v1/project/{projectId}/environment/{environmentId}/graphql |
+| Enterprise | https://auditlog.mycompany.com/enterprise/v1/graphql |
+| Viewer | https://auditlog.mycompany.com/viewer/v1/graphql |
 
 
 ## Search
@@ -77,7 +77,7 @@ const vars = {
   last: 50,
   before: "opaquecursor",
 };
-const res = fetch("https://api.{yourdomain}.io/publisher/v1/project/3hf140713bn302/graphql", {
+const res = fetch("https://auditlog.mycompany.com/publisher/v1/project/3hf140713bn302/graphql", {
   method: "POST",
   headers: {
     "Accept": "application/json",
@@ -146,7 +146,7 @@ Run an advanced search for events.
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-The <a href=/documentation/getting-started/searching-for-events/#structured-advanced-search>structured search operators</a> used to filter events.
+The <a href=/docs/audit-log/getting-started/searching-for-events/#structured-advanced-search>structured search operators</a> used to filter events.
 
 </td>
 </tr>

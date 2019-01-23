@@ -26,8 +26,8 @@ Authorization: token=YOUR_ENTERPRISE_TOKEN
 
 There are currently two ways to manage Enterprise API tokens.
 
-- Most often, end customers create and manage Enterprise IT tokens using the UI in the [Embedded Viewer](/documentation/getting-started/embedded-viewer)
-- There are also endpoints in the [Publisher API](/documentation/apis/publisher-api) that
+- Most often, end customers create and manage Enterprise IT tokens using the UI in the [Embedded Viewer](/docs/audit-log/getting-started/embedded-viewer)
+- There are also endpoints in the [Publisher API](/docs/audit-log/apis/publisher-api) that
 allow a vendor to create, edit, and delete Enterprise API tokens
 
 
@@ -35,4 +35,4 @@ Note that to allow end customers to manage Enterprise API tokens in the embedded
 the `is_admin` query parameter must be set to `true` when [requesting a token to initialize the embedded viewer](https://retraced.readme.io/reference#publisherv1projectprojectidviewertoken)
 
 ## Swagger JSON
-https://api.{yourdomain}.io/enterprise/v1/swagger.json
+https://api.replicated.com/auditlog/enterprise/v1/swagger.json
