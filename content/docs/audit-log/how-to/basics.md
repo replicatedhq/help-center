@@ -12,7 +12,7 @@ hideFromList: true
 
 ## Basics
 
-This section explores some of the feature requirements of a good audit log, and how the Replicated Audit Log APIs and data model implement these requirements. 
+This section explores some of the feature requirements of a good audit log, and how the Replicated Audit Log APIs and data model implement these requirements.
 
 ## What is an Audit Log
 
@@ -22,7 +22,7 @@ An audit log event is a single line that represents an [action](/docs/audit-log/
 
 Sometimes it's easiest to think about this with a concrete example. Let's consider a multi-user, collaborative spreadsheet application.
 
-## The Audit Event 
+## The Audit Event
 
 ### Actors
 An actor in the spreadsheet application is any authenticated identity that's interacting with the spreadsheet. This includes the users who are logged in and editing, deleting, and creating new spreadsheets. It also includes any API tokens that are performing operations on the spreadsheets programatically.
@@ -35,4 +35,8 @@ Targets are the objects in a system that have an action taken on them. In the sp
 
 ### CRUD
 
-Most of the time, it is useful to filter audit event by whether the audited action was a Create, Read, Update, or Delete event (CRUD). In fact, the Replicated Audit Log filters "Read" events by default. These read events tend to be less interesting than the Cread, Update and Delete events that represent modification of information. Because these sort of event categories are so useful, they are built into the data model by default, and supported as first-class filtering keys.
+Most of the time, it is useful to filter audit event by whether the audited action was a Create, Read, Update, or Delete event (CRUD). In fact, the Replicated Audit Log filters out "Read" events by default. These read events tend to be less interesting than the Create, Update and Delete events that represent modification of information. Because these sort of event categories are so useful, they are built into the data model by default, and supported as first-class filtering keys.
+
+### Raw view
+In addition to a human readable view of the data, the UI should be able to display the raw data of every event in the system. The Replicated Audit Log Service implements this in the embedded viewers.
+<img class="mask-img" src="/images/audit-log/raw-view.png">
