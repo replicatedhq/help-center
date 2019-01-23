@@ -16,20 +16,19 @@ Note: Currently, a React-based site is required to embed the viewer, but support
 ## Installing
 There are a few short steps to getting the embedded viewer integrated into your site.
 
-<!-- todo add a swimlane diagram or something here -->
-
 1. Install the `retraced-logs-viewer` package from npm and include in your site.
 1. Request a viewer token from the Publisher API to identify which group/scope the viewer should be limited to. 
 1. Render the `<RetracedEventsBrowser/>` React component as part of your application.
 
+<img src="/images/audit-log/viewer-swimlane.png"/>
 
-An example of this workflow can be found in the [retraced-demo-react](https://github.com/retracedhq/retraced-demo-react) project.
+An end-to-end example of this workflow can be found in the [retraced-demo-react](https://github.com/retracedhq/retraced-demo-react) project.
 
 ### Obtain a viewer token from the Publisher API
 
+
 When using the embedded viewer component, the browser will communicate directly with the Audit Log API to search and show audit log events. Before that happens though, you need to create a short-lived "viewer token" to authenticate the user to the audit log API and ensure the shown events are scoped properly. While you can use a Publisher API token to retrieve a viewer token, the publisher token should never be sent down to the client. The retrieval of the viewer token should happen on the backend. A basic workflow might look like:
 
-<!-- todo add a swimlane diagram or something here if not above -->
 
 - A user loads or navigates to an audit log page in your app
 - Your frontend makes a request to your backend to retrieve the viewer token
@@ -49,7 +48,7 @@ Inside a React Component
     function render() {
         return (
             <RetracedEventsBrowser
-              auditLogToken=<YOUR_VIEWER_TOKEN>
+              auditLogToken=YOUR_VIEWER_TOKEN
               header="My Audit Log"
               mount={true} />
         )
@@ -57,11 +56,11 @@ Inside a React Component
 ```
 
 or, without JSX:
-```html
+```javascript
 ReactDOM.render(
   React.createElement(
     RetracedEventsBrowser,
-    { auditLogToken: <VIEWER_TOKEN>, mount: true },
+    { auditLogToken: YOUR_VIEWER_TOKEN, mount: true },
   ),
   document.getElementById('main')
 );
