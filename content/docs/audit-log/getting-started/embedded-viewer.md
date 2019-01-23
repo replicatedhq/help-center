@@ -1,29 +1,48 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Embedded Viewer"
-description: "Events in an audit log must be ordered"
-weight: "1608"
+description: "Embed the log viewer component into your frontend web app"
+weight: "1605"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
 icon: "replicatedAuditLog"
 gradient: "console"
 ---
 
-Now that you've sent some events into Retraced, it's time to expose them to your end users. Retraced has an advanced, highly customizable log viewer that you can embed on your own site.
+Now that you've reported some audit events, it's time to expose them to your end users. The Replicated Audit Log has an advanced, customizable log viewer that you can embed into your own site. While APIs are available as well, the quickest way to expose events to your users is to embed the log viewer.
 
 Note: Currently, a React-based site is required to embed the viewer, but support for embedding without React will be available soon.
 
 ## Installing
 There are a few short steps to getting the embedded viewer integrated into your site.
 
-1. Install the `retraced-logs-viewer` package from npm and include in your site.
-1. Request a token from the Retraced API to identify which group/scope the viewer should be limited to. This should be initiated from your backend server, not the browser.
-1. Render the `<RetracedEventsBrowser/>` React component as part of your application
+<!-- todo add a swimlane diagram or something here -->
 
-### Obtain a viewer token from the Retraced API
-The browser will communicate directly with the Retraced API to search and show audit logs. Your backend server is the only trusted source to identify who the browser is. To identify the user, your site's backend should request a viewer token using the appropriate [Retraced SDK](/docs/audit-log/sdks/available-sdks) or directly with the [Retraced API](/docs/audit-log/apis/overview). Once you have obtained a temporary viewer token from the Retraced API, send it to the browser where it can be used in the next and final step.
+1. Install the `retraced-logs-viewer` package from npm and include in your site.
+1. Request a viewer token from the Publisher API to identify which group/scope the viewer should be limited to. 
+1. Render the `<RetracedEventsBrowser/>` React component as part of your application.
+
+
+An example of this workflow can be found in the [retraced-demo-react](https://github.com/retracedhq/retraced-demo-react) project.
+
+### Obtain a viewer token from the Publisher API
+
+When using the embedded viewer component, the browser will communicate directly with the Audit Log API to search and show audit log events. Before that happens though, you need to create a short-lived "viewer token" to authenticate the user to the audit log API and ensure the shown events are scoped properly. While you can use a Publisher API token to retrieve a viewer token, the publisher token should never be sent down to the client. The retrieval of the viewer token should happen on the backend. A basic workflow might look like:
+
+<!-- todo add a swimlane diagram or something here if not above -->
+
+- A user loads or navigates to an audit log page in your app
+- Your frontend makes a request to your backend to retrieve the viewer token
+- Your backend verifies the identity of the user triggering the request 
+- Your backend makes a request to retrieve a viewer token from the Publisher API (using your long-lived Publisher token)
+- Your backend sends down the viewer token to the frontend
+- Your frontend passes the viewer token to the Events Browser component
+
+This is one example--depending on your architecture you may end up tweaking or expanding this workflow.
 
 ### Render the component
+
+With a viewer token, you can render the events viewer:
 
 Inside a React Component
 ```javascript
@@ -48,6 +67,11 @@ ReactDOM.render(
 );
 ```
 
+Provided you've already [published some audit events](/docs/audit-log/getting-started/first-event), if everything is working, you should see something like 
+
+
+![](/images/audit-log/embedded-viewer.png) 
+
 #### Options
 The embedded viewer supports quite a few options, but they all have defaults. The table below describes the keys that are possible to override in the component properties.
 
@@ -61,6 +85,6 @@ The embedded viewer supports quite a few options, but they all have defaults. Th
 | apiTokenHelpURL | https://preview.retraced.io/documentation/exposing-retraced-data/enterprise-api/ | `string`  | A help link for the "How to Use Audit Log API Tokens" text in the API tokens modal. |
 | searchHelpURL   | https://preview.retraced.io/documentation/exposing-retraced-data/viewer/#search  | `string`  | A help link for the "Get Help With Search" text in search filters modal. |
 | customClass   | ``  | `string`  | One or more space-separated CSS classes to apply to the outermost viewer `<div/>`
-| host   | `https://api.retraced.io`  | `string`  | Retraced API host to use. Only needs to change for on-premise Retraced instances.
+| host   | `https://api.retraced.io`  | `string`  | Viewer API host to use. Usually the same as your Publisher API base URL.
 | mount   | `false`  | `boolean`  | Determines whether to mount the component. Handy if you need to wait until a token is returned from your backend.
 

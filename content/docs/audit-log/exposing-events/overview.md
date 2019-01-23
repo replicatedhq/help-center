@@ -15,7 +15,7 @@ There are two main way to expose your audit log data to your application's users
 
 ## Using the embedded viewer
 
-As a vendor, you can [embed the event viewer](/docs/audit-log/getting-started/embedded-viewer/) into frontend site. For a guide to viewer features, see [Using the Embedded Viewer](/docs/audit-log/exposing-events/using-viewer/)
+As a vendor, you can [embed the event viewer](/docs/audit-log/getting-started/embedded-viewer/) into frontend site. For a guide to viewer features, see [Using the Embedded Viewer](/docs/audit-log/exposing-events/viewer/)
 
 ## Using Enterprise IT Integration API Tokens
 

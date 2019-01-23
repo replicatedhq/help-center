@@ -15,7 +15,7 @@ gradient: "console"
 
 ## Installation
 
-The Retraced NodeJS SDK can be installed with npm:
+The Replicated Audit Log NodeJS SDK can be installed with npm:
 
 ```sh
 npm install -s retraced

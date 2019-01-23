@@ -29,7 +29,7 @@ Initialize a client
 ```
 import "github.com/retracedhq/retraced-go"
 
-client, _ := retraced.NewClient("You Retraced project id goes here", "Your Retraced Publisher API token goes here")
+client, _ := retraced.NewClient("Your Replicated Audit Log project id goes here", "Your Replicated Audit Log Publisher API token goes here")
 ```
 
 Create an event
