@@ -9,8 +9,6 @@ icon: "replicatedAuditLog"
 gradient: "console"
 ---
 
-### [Swagger JSON](https://api.retraced.io/admin/v1/swagger.json) | [API Console](https://retraced.readme.io/v1.0/reference)
-
 ## Authentication
 
 The Admin API expects a base64-ecoded hmac-signed [JSON Web Token](https://tools.ietf.org/html/rfc7519) in an `Authorization` header:
@@ -18,3 +16,8 @@ The Admin API expects a base64-ecoded hmac-signed [JSON Web Token](https://tools
 ```
 Authorization: WU9VUl9TSUdORURfSldUX1RPS0VOX18K...
 ```
+
+This token is generated at install time and can be retrieved via `kubectl`.
+
+## Swagger JSON
+https://api.{yourdomain}.io/admin/v1/swagger.json

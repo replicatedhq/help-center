@@ -13,10 +13,10 @@ The recommended way to search events using an API is to POST your query and vari
 
 | API | Endpoint |
 | --- | -------- |
-| Publisher | https://api.retraced.io/publisher/v1/project/{projectId}/graphql |
-| Admin | https://api.retraced.io/admin/v1/project/{projectId}/environment/{environmentId}/graphql |
-| Enterprise | https://api.retraced.io/enterprise/v1/graphql |
-| Viewer | https://api.retraced.io/viewer/v1/graphql |
+| Publisher | https://api.{yourdomain}.io/publisher/v1/project/{projectId}/graphql |
+| Admin | https://api.{yourdomain}.io/admin/v1/project/{projectId}/environment/{environmentId}/graphql |
+| Enterprise | https://api.{yourdomain}.io/enterprise/v1/graphql |
+| Viewer | https://api.{yourdomain}.io/viewer/v1/graphql |
 
 
 ## Search
@@ -77,7 +77,7 @@ const vars = {
   last: 50,
   before: "opaquecursor",
 };
-const res = fetch("https://api.retraced.io/publisher/v1/project/3hf140713bn302/graphql", {
+const res = fetch("https://api.{yourdomain}.io/publisher/v1/project/3hf140713bn302/graphql", {
   method: "POST",
   headers: {
     "Accept": "application/json",
@@ -805,4 +805,3 @@ The `String` scalar type represents textual data, represented as UTF-8 character
 
 
 ## Interfaces
-

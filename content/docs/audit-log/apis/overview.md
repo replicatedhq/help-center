@@ -21,8 +21,3 @@ The [Enterprise API](/docs/audit-log/apis/enterprise-api) is the API that the en
 
 ## Admin API
 The [Admin API](/docs/audit-log/apis/admin-api) is an optional API that can be used in place of the Admin site. The Admin site uses this API. It's useful to managing your account and API tokens and pulling reports.
-
-
-## Swagger Documentation
-
-### [Retraced API Console](https://retraced.readme.io) | [Publisher API Swagger JSON](https://api.retraced.io/publisher/v1/swagger.json) | [Enterprise API Swagger JSON](https://api.retraced.io/enterprise/v1/swagger.json) | [Admin API Swagger JSON](https://api.retraced.io/admin/v1/swagger.json)
