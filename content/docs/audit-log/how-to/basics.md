@@ -1,6 +1,6 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Audit Logging Basics"
+title: "Feature Overview"
 description: "Learn the basic ideas of the Replicated Audit Log design and data model"
 weight: "1702"
 categories: [ "Audit Logging Basics" ]
