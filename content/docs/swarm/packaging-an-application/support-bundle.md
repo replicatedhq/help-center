@@ -129,16 +129,16 @@ By default the Support Bundle will include the following files in the master fol
 | /replicated/internal/replicated-versions.txt | Replicated version information |
 | /replicated/internal/tasks.txt | Replicated current tasks (queued, executing, or sleeping) |
 | /replicated/logs/\*.journald.log/logs.raw | Replicated journald logs when running with the systemd init system. Result of the command `journalctl -u <unit> -r` |
-| /retraced/containers/\*.json | Docker inspect results for all Retraced containers. Result of the command `docker inspect <container>` |
-| /retraced/logs/\*.json | Docker logs for all Retraced containers. Result of the command `docker logs <container>` |
+| /retraced/containers/\*.json | Docker inspect results for all Audit Log containers. Result of the command `docker inspect <container>` |
+| /retraced/logs/\*.json | Docker logs for all Audit Log containers. Result of the command `docker logs <container>` |
 | /scheduler/swarm/replicated/logs/\<task_id\>.stderr | The logs of all Replicated tasks |
 | /scheduler/swarm/replicated/logs/\<service_name\>.stderr | The logs of all Replicated services |
 | /scheduler/swarm/replicated/service_ls.json | The list of Replicated services. Equivalent to `docker service ls --filter label=com.docker.stack.namespace=replicated` |
 | /scheduler/swarm/replicated/service_ps.json | The list of Replicated tasks. Equivalent to `docker service ps <servicename>` for all Replicated services |
-| /scheduler/swarm/retraced/logs/\<task_id\>.stderr | The logs for all Retraced tasks |
-| /scheduler/swarm/retraced/logs/\<service_name\>.stderr | The logs for all Retraced services |
-| /scheduler/swarm/retraced/service_ls.json | The list of Retraced services. Equivalent to `docker service ls --filter label=com.docker.stack.namespace=retraced` |
-| /scheduler/swarm/retraced/service_ps.json | The list of Replicated tasks. Equivalent to `docker service ps <servicename>` for all Retraced services |
+| /scheduler/swarm/retraced/logs/\<task_id\>.stderr | The logs for all Audit Log tasks |
+| /scheduler/swarm/retraced/logs/\<service_name\>.stderr | The logs for all Audit Log services |
+| /scheduler/swarm/retraced/service_ls.json | The list of Audit Log services. Equivalent to `docker service ls --filter label=com.docker.stack.namespace=retraced` |
+| /scheduler/swarm/retraced/service_ps.json | The list of Replicated tasks. Equivalent to `docker service ps <servicename>` for all Audit Log services |
 | /scheduler/swarm/stack/logs/\<task_id\>.stderr | The stderr logs of all app tasks |
 | /scheduler/swarm/stack/logs/\<task_id\>.stdout | The stdout logs of all app tasks |
 | /scheduler/swarm/stack/logs/\<service_name\>.stderr | The stderr logs of all app services |

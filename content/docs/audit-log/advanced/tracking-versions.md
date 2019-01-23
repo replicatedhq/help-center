@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Tracking Publisher Versions"
-description: "Events in an audit log must be ordered"
+description: "Track versions for stronger event guarantees"
 weight: "1805"
 categories: [ "Advanced Audit Logging" ]
 index: ["docs/audit-log", "docs"]

@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Enterprise API"
-description: "Events in an audit log must be ordered"
+description: "Export and stream data to other systems"
 weight: "2203"
 categories: [ "APIs" ]
 index: ["docs/audit-log", "docs"]

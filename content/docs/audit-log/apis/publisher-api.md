@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Publisher API"
-description: "Events in an audit log must be ordered"
+description: "Publish events and managing viewer tokens"
 weight: "2202"
 categories: [ "APIs" ]
 index: ["docs/audit-log", "docs"]

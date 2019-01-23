@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Go"
-description: "Events in an audit log must be ordered"
+description: "Install and use the golang SDK"
 weight: "2102"
 categories: [ "SDKs" ]
 index: ["docs/audit-log", "docs"]
@@ -29,7 +29,7 @@ Initialize a client
 ```
 import "github.com/retracedhq/retraced-go"
 
-client, _ := retraced.NewClient("Your Replicated Audit Log project id goes here", "Your Replicated Audit Log Publisher API token goes here")
+client, _ := retraced.NewClient("<project id>", "<api token>")
 ```
 
 Create an event

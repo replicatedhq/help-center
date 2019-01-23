@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Enterprise API"
-description: "Events in an audit log must be ordered"
+description: "Export events programatically"
 weight: "1903"
 categories: [ "Exposing Events" ]
 index: ["docs/audit-log", "docs"]
@@ -9,7 +9,7 @@ icon: "replicatedAuditLog"
 gradient: "console"
 ---
 
-The Retraced Enterprise API enables users to consume audit log data programmatically and integrate it with an external monitoring or security system.
+The Enterprise API enables users to consume audit log data programmatically and integrate it with an external monitoring or security system.
 
 
 ## Creating and Managing Enterprise Tokens
@@ -17,7 +17,7 @@ The Retraced Enterprise API enables users to consume audit log data programmatic
 Enterprise Tokens can be created and managed via the [Embedded Viewer](/docs/audit-log/exposing-events/viewer/)
 
 
-**Note**: If you're a vendor integrating Retraced as your audit log, you can also manage and distribute Enterprise Tokens using the [Publisher API](/docs/audit-log/apis/publisher-api/).
+**Note**: If you're a vendor integrating the Audit Log, you can also manage and distribute Enterprise Tokens using the [Publisher API](/docs/audit-log/apis/publisher-api/).
 
 ## Graphql
 
@@ -159,7 +159,7 @@ PTY allocation request failed on channel 0
 
 Events will continue to appear as long as the ssh session is open. These events can now be piped to a file, or to any other program to ingest them into your monitoring or security systems.
 
-**Note**: SSH Streaming may not be available in all Retraced environments.
+**Note**: SSH Streaming may not be available in all Audit Log environments.
 
 For more information, check out [SSH Streaming](/documentation/advanced-retraced/ssh-streaming/).
 
@@ -175,7 +175,7 @@ The general workflow is:
 - Use the "Pump Active Search" endpoint whenever you want to get more events from your search.
     - Pump active search will always return only the events that occurred since the last time it was queried, so it can be called as often as every few seconds, or as infrequently as every few months
 
-**Note**: Saved Search functionality may not be available in all Retraced environments.
+**Note**: Saved Search functionality may not be available in all Audit Log environments.
 
 The endpoints for managing Saved Searches are described in the [Enterprise API Guide](/documentation/apis/enterprise/). There's also an [OpenAPI/Swagger  specification](https://api.retraced.io/enterprise/v1/swagger.json) and [interactive API console](https://retraced.readme.io/reference#searchactive).
 

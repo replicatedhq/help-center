@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Using The Retraced Viewer"
-description: "Events in an audit log must be ordered"
+title: "Using The Audit Log Viewer"
+description: "Easily search and export events"
 weight: "1902"
 categories: [ "Exposing Events" ]
 index: ["docs/audit-log", "docs"]
@@ -9,7 +9,7 @@ icon: "replicatedAuditLog"
 gradient: "console"
 ---
 
-The Retraced embedded viewer is the easiest way consume and understand your audit log data. This guide will walk you through the viewer's features.
+The Audit Log viewer is the easiest way consume and understand your audit log data. This guide will walk you through the viewer's features.
 
 Note -- if you're a Software Vendor and you're looking to embed the viewer into your site, see the [Embedded Viewer Guide](/docs/audit-log/getting-started/embedded-viewer/)
 

@@ -135,7 +135,7 @@ By default the Support Bundle will include the following files in the master fol
 | /replicated/var/lib/replicated-operator/replicated-operator.conf | Replicated operator configuration file. A copy of the `/var/lib/replicated-operator/replicated-operator.conf` file                              |
 | /replicated/var/log/upstart/\*.log                               | Replicated upstart logs when running with the upstart init system                                                                               |
 | /retraced/containers/\*.json                                     | Retraced low-level container information. Result of the command `docker inspect <container>`                                                    |
-| /retraced/logs/\*.log                                            | Retraced container logs. Result of the command `docker logs <container>`                                                                        |
+| /retraced/logs/\*.log                                            | Audit Log container logs. Result of the command `docker logs <container>`                                                                        |
 | /VERSION.json                                                    | Support-bundle command version information                                                                                                      |
 
 The master folder will also include any custom support bundle commands specified via Replicated Console, if that has
@@ -193,6 +193,6 @@ the private IP of the instance. It will contain the following files:
 | /replicated/var/log/upstart/\*.log                               | Replicated upstart logs when running with the upstart init system                                                                               |
 | /replicated-operator/internal/goroutines.txt                     | Replicated Operator thread dump                                                                                                                 |
 | /replicated-operator/internal/params.json                        | Replicated Operator runtime configuration                                                                                                       |
-| /retraced/containers/\*.json                                     | Retraced low-level container information. Result of the command `docker inspect <container>`                                                    |
-| /retraced/logs/\*.log                                            | Retraced container logs. Result of the command `docker logs <container>`                                                                        |
+| /retraced/containers/\*.json                                     | Audit Log low-level container information. Result of the command `docker inspect <container>`                                                    |
+| /retraced/logs/\*.log                                            | Audit Log container logs. Result of the command `docker logs <container>`                                                                        |
 | /VERSION.json                                                    | Support-bundle command version information                                                                                                      |

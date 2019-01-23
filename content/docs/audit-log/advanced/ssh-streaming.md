@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "SSH Event Streaming"
-description: "Events in an audit log must be ordered"
+description: "Stream events in real time"
 weight: "1804"
 categories: [ "Advanced Audit Logging" ]
 index: ["docs/audit-log", "docs"]
