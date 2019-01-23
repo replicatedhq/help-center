@@ -60,9 +60,10 @@ linkcheck:
 		--exclude 'server:8800' \
 		--exclude '10.128.0.4' \
 		--exclude 'get.company.com/docker' \
+		--exclude 'auditlog.mycompany.com' \
+		--exclude 'registry.mycompany.com' \
+		--exclude 'tail.mycompany.com' \
 		\
-		--exclude 'golang.org' \
-		--exclude 'circleci.com' \
 		--exclude 'registry.replicated.com' \
 		--exclude 'registry-data.replicated.com' \
 		--exclude 'api.replicated.com' \
@@ -73,6 +74,9 @@ linkcheck:
 		--exlcude 'help.replicated.com/faq' \
 		--exclude 'help.replicated.com/privacy' \
 		--exclude 'help.replicated.com/guidelines' \
+		\
 		--exclude 'microsoft.com' \
+		--exclude 'golang.org' \
+		--exclude 'circleci.com' \
 		\
 		--color=always  | grep -E 'Getting|Finished|BROKEN|^$$'

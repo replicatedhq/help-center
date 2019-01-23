@@ -24,7 +24,7 @@ Enterprise Tokens can be created and managed via the [Embedded Viewer](/docs/aud
 The quickest way to start getting events is using the GraphQL API. Below is an example request:
 
 ```sh
-curl -sSL 'https://api.retraced.io/enterprise/v1/graphql' \
+curl -sSL 'https://auditlog.mycompany.com/enterprise/v1/graphql' \
   -H 'Authorization: token=<YOUR_ENTERPRISE_TOKEN>' \
   -H 'Content-Type: application/json' \
   --data-binary '{
@@ -139,10 +139,10 @@ The GraphQL APIs for consuming events are specified fully in [GraphQL API Guide]
 
 ## SSH Event Stream
 
-You can also use your Enterprise API Token to stream events over SSH in real time. You can use your token as the username, and ssh `tail.retraced.io`:
+You can also use your Enterprise API Token to stream events over SSH in real time. You can use your token as the username, and ssh `tail.mycompany.com`:
 
 ```sh
-$ ssh <YOUR_ENTERPRISE_TOKEN>@tail.retraced.io
+$ ssh <YOUR_ENTERPRISE_TOKEN>@tail.mycompany.com
 PTY allocation request failed on channel 0
 584fad6b2a204326857c9eef7704d31f,,1510939272892,POST /viewer/v1/graphql,35.186.223.140,audit.log.view,r,"{""action"":""audit.log.view"",""crud"":""r"",""actor"":{""id"":""27c92eb3f5ce849b9866edd12f8fdef8""},""group"":{""id"":""1ff0ab86bcb8f9fcd67936db08b80600""},""description"":""POST /viewer/v1/graphql"",""source_ip"":""35.186.223.140""}",1ff0ab86bcb8f9fcd67936db08b80600,51e79795f89b4454a883a3a49d03d6ea,7a691d01114a494ba9d77eb302edce6a,Replicated QA,16132,1494456302651,1510939272911,27c92eb3f5ce849b9866edd12f8fdef8,dexter+qa@replicated.com,51e79795f89b4454a883a3a49d03d6ea,7a691d01114a494ba9d77eb302edce6a,,1498682746392,1498682746393,1510939272927,,,,,,,,,
 20e3371bb3ab4b7c8e0dfdda4b86de11,,1510939274311,POST /viewer/v1/graphql,35.186.223.140,audit.log.view,r,"{""action"":""audit.log.view"",""crud"":""r"",""actor"":{""id"":""27c92eb3f5ce849b9866edd12f8fdef8""},""group"":{""id"":""1ff0ab86bcb8f9fcd67936db08b80600""},""description"":""POST /viewer/v1/graphql"",""source_ip"":""35.186.223.140""}",1ff0ab86bcb8f9fcd67936db08b80600,51e79795f89b4454a883a3a49d03d6ea,7a691d01114a494ba9d77eb302edce6a,Replicated QA,16133,1494456302651,1510939274324,27c92eb3f5ce849b9866edd12f8fdef8,dexter+qa@replicated.com,51e79795f89b4454a883a3a49d03d6ea,7a691d01114a494ba9d77eb302edce6a,,1498682746392,1498682746393,1510939274334,,,,,,,,,
@@ -151,7 +151,7 @@ PTY allocation request failed on channel 0
 The default format is csv, but JSON is also available, by appending `?format=json` to the token:
 
 ```sh
-$ ssh f66bfe98f22648ae94b08c6c38e9ba7f?format=json@tail.retraced.io
+$ ssh f66bfe98f22648ae94b08c6c38e9ba7f?format=json@tail.mycompany.com
 PTY allocation request failed on channel 0
 {"action":"audit.log.view","actor":{"created":1498682746392,"environment_id":"7a691d01114a494ba9d77eb302edce6a","first_active":1498682746393,"id":"27c92eb3f5ce849b9866edd12f8fdef8","last_active":1510939425326,"name":"dexter+qa@replicated.com","project_id":"51e79795f89b4454a883a3a49d03d6ea"},"crud":"r","description":"POST /viewer/v1/graphql","group":{"created_at":1494456302651,"environment_id":"7a691d01114a494ba9d77eb302edce6a","event_count":"16134","id":"1ff0ab86bcb8f9fcd67936db08b80600","last_active":1510939425315,"name":"Replicated QA","project_id":"51e79795f89b4454a883a3a49d03d6ea"},"id":"8d14443a55dc4b7d87939917019a520d","raw":"{\"action\":\"audit.log.view\",\"crud\":\"r\",\"actor\":{\"id\":\"27c92eb3f5ce849b9866edd12f8fdef8\"},\"group\":{\"id\":\"1ff0ab86bcb8f9fcd67936db08b80600\"},\"description\":\"POST /viewer/v1/graphql\",\"source_ip\":\"35.186.223.140\"}","received":1510939425299,"source_ip":"35.186.223.140","target":{}}
 ```
@@ -177,7 +177,7 @@ The general workflow is:
 
 **Note**: Saved Search functionality may not be available in all Audit Log environments.
 
-The endpoints for managing Saved Searches are described in the [Enterprise API Guide](/documentation/apis/enterprise/). There's also an [OpenAPI/Swagger  specification](https://api.retraced.io/enterprise/v1/swagger.json) and [interactive API console](https://retraced.readme.io/reference#searchactive).
+The endpoints for managing Saved Searches are described in the [Enterprise API Guide](/documentation/apis/enterprise/). There's also an [OpenAPI/Swagger  specification](https://api.replicated.com/auditlog/enterprise/v1/swagger.json) and [interactive API console](https://retraced.readme.io/reference#searchactive).
 
 
 

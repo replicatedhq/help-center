@@ -10,15 +10,14 @@ gradient: "console"
 hideFromList: true
 ---
 
-## Basics
 
 This section explores some of the feature requirements of a good audit log, and how the Replicated Audit Log APIs and data model implement these requirements.
 
-## What is an Audit Log
+## Core Concepts
 
-An audit log is a centralized stream of all user activity in an application.
+An "audit log event" is a single log item that represents an [action](/docs/audit-log/how-to/actions) that an [actor](/docs/audit-log/how-to/actors) took, most often on a [target](/docs/audit-log/how-to/targets).
 
-An audit log event is a single line that represents an [action](/docs/audit-log/how-to/actions) that an [actor](/docs/audit-log/how-to/actors) took, most often on a [target](/docs/audit-log/how-to/targets).
+An "audit log" is a collection of events--a centralized stream of all user activity in an application. 
 
 Sometimes it's easiest to think about this with a concrete example. Let's consider a multi-user, collaborative spreadsheet application.
 
