@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Display Templates"
-description: "Events in an audit log must be ordered"
+description: "Customize how audit events are displayed"
 weight: "1803"
 categories: [ "Advanced Audit Logging" ]
 index: ["docs/audit-log", "docs"]

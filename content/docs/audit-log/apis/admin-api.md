@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Admin API"
-description: "Events in an audit log must be ordered"
+description: "Manage segments and global properties"
 weight: "2204"
 categories: [ "APIs" ]
 index: ["docs/audit-log", "docs"]

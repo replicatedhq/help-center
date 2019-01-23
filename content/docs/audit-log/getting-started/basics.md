@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Replicated Audit Log Basics"
-description: "Events in an audit log must be ordered"
+description: "Overview of key components"
 weight: "1603"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]

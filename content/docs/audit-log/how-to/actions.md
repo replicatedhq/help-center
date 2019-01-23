@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Actions"
-description: "Events in an audit log must be ordered"
+description: ""
 weight: "1708"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]

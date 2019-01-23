@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Renaming Properties"
-description: "Events in an audit log must be ordered"
+description: "Explore immutability guarantees and normalized fields"
 weight: "1607"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
@@ -10,6 +10,7 @@ gradient: "console"
 ---
 
 ### Most Event Properties are immutable
+
 Some properties of an audit event can be renamed after the event is received. There is a limited amount of these and the original event is still [immutable](/docs/audit-log/how-to/immutable/). But data can change over time, and it's important to be able to link to and find events later.
 
 ### Certain properties are normalized

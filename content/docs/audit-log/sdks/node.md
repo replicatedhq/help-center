@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Node.js"
-description: "Events in an audit log must be ordered"
+description: "Install and use the NodeJS sdk"
 weight: "2103"
 categories: [ "SDKs" ]
 index: ["docs/audit-log", "docs"]

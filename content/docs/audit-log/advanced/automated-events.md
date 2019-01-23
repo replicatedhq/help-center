@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Automated Events"
-description: "Events in an audit log must be ordered"
+description: "Overview of the events generated automatically during queries"
 weight: "1806"
 categories: [ "Advanced Audit Logging" ]
 index: ["docs/audit-log", "docs"]

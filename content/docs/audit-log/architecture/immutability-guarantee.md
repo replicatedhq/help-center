@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Immutability Guarantee"
-description: "Events in an audit log must be ordered"
+description: "Events in an audit log are immutable"
 weight: "2002"
 categories: [ "Architecture" ]
 index: ["docs/audit-log", "docs"]

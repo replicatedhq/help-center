@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Time Synchronization"
-description: "Events in an audit log must be ordered"
+description: "Event timing requirements in an audit log"
 weight: "1704"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]

@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "GraphQL Endpoint"
-description: "Events in an audit log must be ordered"
+description: "Querying events from Audit Log APIs"
 weight: "2205"
 categories: [ "APIs" ]
 index: ["docs/audit-log", "docs"]

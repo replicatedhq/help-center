@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Template Comparators"
-description: "Events in an audit log must be ordered"
+description: "Deep dive on the Display Template JSON DSL"
 weight: "1804"
 categories: [ "Advanced Audit Logging" ]
 index: ["docs/audit-log", "docs"]
