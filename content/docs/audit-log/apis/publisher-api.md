@@ -9,9 +9,9 @@ icon: "replicatedAuditLog"
 gradient: "console"
 ---
 
-The Publisher API is the API that most applications will embed into a production system. This API contains the methods necessary to send new events into the Audit Log, create [viewer tokens](/documentation/getting-started/embedded-viewer) and to programatically search events when the embedded viewer is not being used.
+The Publisher API is the API that most applications will embed into a production system. This API contains the methods necessary to send new events into the Audit Log, create [viewer tokens](/docs/audit-log/getting-started/embedded-viewer) and to programatically search events when the embedded viewer is not being used.
 
-When possible, it's recommended to use one of the supported [SDKs](/documentation/sdks/available-sdks) as these provide an easier way to get started.
+When possible, it's recommended to use one of the supported [SDKs](/docs/audit-log/sdks/available-sdks) as these provide an easier way to get started.
 
 To consume the Publisher API directly, we publish a Swagger spec that is both [documented](https://retraced.readme.io/reference) and available in a [raw json object](https://api.replicated.com/auditlog/publisher/v1/swagger.json).
 The endpoints for reporting events are `/project/{project_id}/event` and `/project/{project_id}/event/bulk`. The bulk endpoint is for reporting multiple events in a single call. Clients using the bulk endpoint should expect longer response times when submitting large numbers of events.
@@ -29,4 +29,4 @@ Authorization: token=YOUR_PUBLISHER_TOKEN
 Your Publisher API token can be managed from `kubectl`.
 
 ## Swagger JSON
-https://api.{yourdomain}.io/publisher/v1/swagger.json
+https://auditlog.mycompany.com/publisher/v1/swagger.json

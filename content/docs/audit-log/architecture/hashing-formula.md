@@ -19,7 +19,7 @@ The order of the fields is important, and is defined as:
 1. `ACTION`: The [action](/docs/audit-log/how-to/actions/) parameter provided when creating an event.
 1. `TARGET_ID`: The ID of the [target](/docs/audit-log/how-to/targets/) parameter provided when creating an event. If no target was provided, this is an empty string.
 1. `ACTOR_ID`: The ID of the [actor](/docs/audit-log/how-to/actors/) parameter provided when creating an event. If no actor was provided, this is an empty string.
-1. `GROUP_ID`: The ID of the [group]/(/documentation/architecture/groups/) parameter provided when creating an event. If no group was provided, this is an empty string.
+1. `GROUP_ID`: The ID of the [group]/(/docs/audit-log/how-to/segments/) parameter provided when creating an event. If no group was provided, this is an empty string.
 1. `SOURCE_IP`: The IP address sent with the event. If no IP address was known, this is an empty string.
 1. `IS_FAILURE`: An integer ("1" or "0") representation of the is_failure parameter provided when creating an event. This is required, and will default to "0".
 1. `IS_ANONYMOUS`: An integer ("1" or "0") representation of the is_anonymous parameter provided when creating an event. This is required, and will default to "0".

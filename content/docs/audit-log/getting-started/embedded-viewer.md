@@ -81,8 +81,8 @@ The embedded viewer supports quite a few options, but they all have defaults. Th
 | crud   | `cud`  | `string`  | The default search filter options to enable. By default, read items are not shown. |
 | theme  | `light`| `string`  | The theme to use. Supports `dark` and `light`. |
 | header | `Audit Log` | `string`  | A header to show beside the search box. |
-| apiTokenHelpURL | https://preview.retraced.io/documentation/exposing-retraced-data/enterprise-api/ | `string`  | A help link for the "How to Use Audit Log API Tokens" text in the API tokens modal. |
-| searchHelpURL   | https://preview.retraced.io/documentation/exposing-retraced-data/viewer/#search  | `string`  | A help link for the "Get Help With Search" text in search filters modal. |
+| apiTokenHelpURL | https://help.replicated.com/docs/audit-log/exposing-events/enterprise-api/ | `string`  | A help link for the "How to Use Audit Log API Tokens" text in the API tokens modal. |
+| searchHelpURL   | https://help.replicated.com/docs/audit-log/exposing-events/viewer/#search  | `string`  | A help link for the "Get Help With Search" text in search filters modal. |
 | customClass   | ``  | `string`  | One or more space-separated CSS classes to apply to the outermost viewer `<div/>`
 | host   | `https://api.retraced.io`  | `string`  | Viewer API host to use. Usually the same as your Publisher API base URL.
 | mount   | `false`  | `boolean`  | Determines whether to mount the component. Handy if you need to wait until a token is returned from your backend.
