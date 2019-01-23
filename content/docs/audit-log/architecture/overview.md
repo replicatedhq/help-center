@@ -11,7 +11,7 @@ icon: "replicatedAuditLog"
 gradient: "console"
 ---
 
-Retraced is more than a traditional database to store and retrieve objects. The "Architecture" documentation provides an overview of some of the features that Retraced provides to provide immutability and verifiability of your audit log data.
+The Replicated Audit Log is more than a traditional database to store and retrieve objects. The "Architecture" documentation provides an overview of some of the features that the Audit Log provides to provide immutability and verifiability of your audit log data.
 
 ## Cryptographically Guarantee Immutability
-Retraced implements industry standard and provable digest algorithms to ensure the data you send into an audit log is the data that was received. The same algorithms can be used in the future to verify that none of the data has changed since it was written. This works automatically when using our [SDKs](/docs/audit-log/sdks/available-sdks), and can be implemented manually if you use the API directly. Details of how we guarantee immutability are discussed in detail on the [immutability guarantee](/docs/audit-log/architecture/immutability-guarantee) page.
+The Audit Log implements industry standard and provable digest algorithms to ensure the data you send into an audit log is the data that was received. The same algorithms can be used in the future to verify that none of the data has changed since it was written. This works automatically when using our [SDKs](/docs/audit-log/sdks/available-sdks), and can be implemented manually if you use the API directly. Details of how we guarantee immutability are discussed in detail on the [immutability guarantee](/docs/audit-log/architecture/immutability-guarantee) page.

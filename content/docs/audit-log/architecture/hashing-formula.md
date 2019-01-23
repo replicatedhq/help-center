@@ -11,11 +11,11 @@ gradient: "console"
 
 When both the sender and the receiver of a message independently calculate a digest of the message, it's a proven way to ensure that both sides have the same content. But both sides needs to have a reference that describes how to calculate the digest. This document describes the specification that the Replicated API uses to calculate a message digest.
 
-To calculate the digest, Retraced will build a colon (:) delimited string of all the fields, and then calculate a SHA256 digest. Empty or missing fields are not ignored, but are included in the digest as empty strings. Individual fields are percent-escaped before being added to the string.
+To calculate the digest, the Audit Log will build a colon (:) delimited string of all the fields, and then calculate a SHA256 digest. Empty or missing fields are not ignored, but are included in the digest as empty strings. Individual fields are percent-escaped before being added to the string.
 
 The order of the fields is important, and is defined as:
 
-1. `EVENT_ID`: The string ID that is returned from the Retraced API when calling create event.
+1. `EVENT_ID`: The string ID that is returned from the Publisher API when calling create event.
 1. `ACTION`: The [action](/docs/audit-log/how-to/actions/) parameter provided when creating an event.
 1. `TARGET_ID`: The ID of the [target](/docs/audit-log/how-to/targets/) parameter provided when creating an event. If no target was provided, this is an empty string.
 1. `ACTOR_ID`: The ID of the [actor](/docs/audit-log/how-to/actors/) parameter provided when creating an event. If no actor was provided, this is an empty string.

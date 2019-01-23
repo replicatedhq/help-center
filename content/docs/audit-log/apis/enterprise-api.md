@@ -9,11 +9,9 @@ icon: "replicatedAuditLog"
 gradient: "console"
 ---
 
-### [Swagger JSON](https://api.retraced.io/enterprise/v1/swagger.json) | [API Console](https://retraced.readme.io/v1.0/reference)
-
 ## Overview
 
-The Enterprise API is the API that the end customer (the enterprise IT administrator) will consume to pull their organization events and ingest it into their own internal systems.
+The Enterprise API is the API that the end customer (the enterprise IT administrator) will use to retrieve their organization's events and ingest it into their own internal systems.
 
 ## Authentication
 
@@ -35,3 +33,6 @@ allow a vendor to create, edit, and delete Enterprise API tokens
 
 Note that to allow end customers to manage Enterprise API tokens in the embedded viewer,
 the `is_admin` query parameter must be set to `true` when [requesting a token to initialize the embedded viewer](https://retraced.readme.io/reference#publisherv1projectprojectidviewertoken)
+
+## Swagger JSON
+https://api.{yourdomain}.io/enterprise/v1/swagger.json
