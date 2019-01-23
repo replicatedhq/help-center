@@ -1,15 +1,15 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Searching For Events"
-description: "Events in an audit log must be ordered"
-weight: "1605"
+description: "Advanced search for the embedded viewer"
+weight: "1606"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
 icon: "replicatedAuditLog"
 gradient: "console"
 ---
 
-The Retraced interface supports searching for events. While it's presented as a single, simple input field, the Retraced search interface supports complex structured queries.
+The [embedded viewer](/docs/audit-log/getting-started/embedded-viewer) interface supports searching for events. While it's presented as a single, simple input field, the Audit Log search interface supports complex structured queries.
 
 ## Free Text Search
 By default, the search query you type in the search box will seach all fields for this value.
