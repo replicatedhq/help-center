@@ -13,12 +13,12 @@ The activity should be exportable to a CSV format and API accessible so that it 
 
 The Replicated Audit Log Service provides CSV export with custom saved searches for easy repeatability of common export actions.
 
-<div style="text-align: center">
+<div>
   <img width="450" class="mask-img" src="/images/audit-log/export-csv.png">
 </div>
 
 Additionally, the Enterprise API is designed to enable the IT admins to retrieve the events with support for persistent cursors for resuming retrieval on a regular interval without overlapping or excluding events.
 
-<div style="text-align: center">
+<div>
   <img width="450" class="mask-img" src="/images/audit-log/api-tokens.png">
 </div>
