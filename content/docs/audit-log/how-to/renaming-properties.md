@@ -1,13 +1,18 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Renaming Properties"
-description: "Explore immutability guarantees and normalized fields"
-weight: "1607"
+title: "Single Endpoint"
+description: "Reduce integration overhead with a single simple endpoint"
+weight: "1705"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
 icon: "replicatedAuditLog"
 gradient: "console"
 ---
+
+
+Even though the Replicated Audit Log has first-class support for fields like [actions](../actions), [actors](../actors),
+[targets](../targets) and [groups](../segments)
+
 
 ### Most Event Properties are immutable
 
@@ -28,4 +33,5 @@ When requesting the [original events](/docs/audit-log/architecture/immutability-
 ### Actors, targets and groups are mutable
  
 The same property renaming is possible with [targets](/docs/audit-log/how-to/targets/) and [groups](/docs/audit-log/how-to/segments#group).
+
 

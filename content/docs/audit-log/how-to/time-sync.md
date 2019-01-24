@@ -1,8 +1,8 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Time Synchronization"
+title: "Causal Ordering"
 description: "Event timing requirements in an audit log"
-weight: "1704"
+weight: "1709"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
 icon: "replicatedAuditLog"

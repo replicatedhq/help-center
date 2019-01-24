@@ -9,7 +9,7 @@ icon: "replicatedAuditLog"
 gradient: "console"
 ---
 
-Display templates is an important part of controlling how the events are rendered in the browser, exports or over any other stream.
+Display templates is an important part of controlling how the events are rendered in the browser, exports or over any other stream. Display Templates cause an additional field to be returned on event objects from the Audit Log APIs.
 
 A display template has the following components:
 

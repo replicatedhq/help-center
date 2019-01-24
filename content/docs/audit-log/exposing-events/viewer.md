@@ -11,8 +11,6 @@ gradient: "console"
 
 The Audit Log viewer is the easiest way consume and understand your audit log data. This guide will walk you through the viewer's features.
 
-Note -- if you're a Software Vendor and you're looking to embed the viewer into your site, see the [Embedded Viewer Guide](/docs/audit-log/getting-started/embedded-viewer/)
-
 ## Overview
 
 The viewer exposes four core features:

@@ -1,6 +1,6 @@
 ---
 date: "2018-03-03T04:02:20Z"
-title: "Audit Log Overview"
+title: "Getting Started"
 description: "The Replicated Audit Log is a self-hosted, embedded audit log for your application."
 weight: "1601"
 categories: [ "Replicated Audit Log" ]
