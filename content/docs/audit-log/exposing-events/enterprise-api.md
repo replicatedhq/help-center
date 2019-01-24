@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Enterprise API"
-description: "Export events programatically"
+title: "Enterprise Audit Log Retrieval API"
+description: "Export events programmatically"
 weight: "1903"
 categories: [ "Exposing Events" ]
 index: ["docs/audit-log", "docs"]
@@ -9,12 +9,12 @@ icon: "replicatedAuditLog"
 gradient: "console"
 ---
 
-The Enterprise API enables users to consume audit log data programmatically and integrate it with an external monitoring or security system.
+The Enterprise Audit Log Retrieval API enables admins to consume audit log data programmatically and integrate it with an external monitoring or security system.
 
 
 ## Creating and Managing Enterprise Tokens
 
-Enterprise Tokens can be created and managed via the [Embedded Viewer](/docs/audit-log/exposing-events/viewer/)
+Enterprise Tokens can be created and managed via the [Audit Log Viewer](/docs/audit-log/exposing-events/viewer/)
 
 
 **Note**: If you're a vendor integrating the Audit Log, you can also manage and distribute Enterprise Tokens using the [Publisher API](/docs/audit-log/apis/publisher-api/).
@@ -41,7 +41,7 @@ There are five things to pay attention to here:
 
 - We send our Enterpise API Token in a header of the form `Authorization: token=...`
 - `variables.last` is the number of events we're requesting, in this case we only want the last 3 events
-- `variables.query` is a free-text or structured search query, as you'd use in [The Embedded Viewer](/docs/audit-log/exposing-events/viewer/#search).
+- `variables.query` is a free-text or structured search query, as you'd use in [The Audit Log Viewer](/docs/audit-log/exposing-events/viewer/#search).
 - `variables.before` allows us to specify a cursor for paging through events. Since we just want the most recent events, we'll leave this blank for now.
 - In the `query` field, we describe the structure and parameters of the GraphQL query.
 
@@ -139,7 +139,7 @@ The GraphQL APIs for consuming events are specified fully in [GraphQL API Guide]
 
 ## SSH Event Stream
 
-You can also use your Enterprise API Token to stream events over SSH in real time. You can use your token as the username, and ssh `tail.mycompany.com`:
+You can also use your Enterprise Audit Log Retrieval API Token to stream events over SSH in real time. You can use your token as the username, and ssh `tail.mycompany.com`:
 
 ```sh
 $ ssh <YOUR_ENTERPRISE_TOKEN>@tail.mycompany.com
@@ -166,7 +166,7 @@ For more information, check out [SSH Streaming](/docs/audit-log/advanced/ssh-str
 
 ## Saved Searches
 
-The Enterprise API includes several endpoints for saving a search and maintaining a persistent cursor across search queries.
+The Enterprise Audit Log Retrieval API includes several endpoints for saving a search and maintaining a persistent cursor across search queries (an `etag`).
 
 The general workflow is:
 
@@ -178,8 +178,3 @@ The general workflow is:
 **Note**: Saved Search functionality may not be available in all Audit Log environments.
 
 The endpoints for managing Saved Searches are described in the [Enterprise API Guide](/docs/audit-log/apis/enterprise/). There's also an [OpenAPI/Swagger  specification](https://api.replicated.com/auditlog/enterprise/v1/swagger.json) and [interactive API console](https://retraced.readme.io/reference#searchactive).
-
-
-
-
-

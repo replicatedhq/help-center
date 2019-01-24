@@ -1,6 +1,6 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Using The Audit Log Viewer"
+title: "Using the Audit Log Viewer"
 description: "Easily search and export events"
 weight: "1902"
 categories: [ "Exposing Events" ]
@@ -42,7 +42,6 @@ Save searches and export them to CSV using the "Exports" section.
 
 ### API Tokens
 
-Create and Manage Enterprise API tokens using the "API Tokens" section.
+Create and Manage Enterprise Audit Log Retrieval API tokens using the "API Tokens" section.
 
-For a guide on using API Tokens, see [Using The Enterprise API](/docs/audit-log/exposing-events/enterprise-api)
-
+For a guide on using API Tokens, see [Using the Enterprise Audit Log Retrieval API](/docs/audit-log/exposing-events/enterprise-api)
