@@ -14,12 +14,16 @@ A good Audit log needs to be searchable. Proper indexing on actors, actions, and
 ## Filters
 Generally, actors, event names, IPs are all linked to filter down to related activity. The viewer should allow the account admin to specify a date range to filter in conjunction with other filters and searches.
 
-<img class="mask-img" src="/images/audit-log/filter-options.png">
+<div>
+  <img height="300" class="mask-img" src="/images/audit-log/filter-options.png">
+</div>
 
 ## Search operators
 In order to effectively search over the data it is helpful to implement search operators that allow the end user to specify which fields they'd like to match. The Replicated Audit Log Service implements this in the Embedded Viewers.
 
-<img class="mask-img" src="/images/audit-log/search-operators.png">
+<div>
+  <img height="50" class="mask-img" src="/images/audit-log/search-operators.png">
+</div>
 
 ## Structured (Advanced) Search
 If you use the advanced search syntax, you can perform very specific and exact searches to find the data you are looking for. The syntax for this is `key:value`. For example, to search for all events that have an action that starts with `user.` you could enter the following query: `action:user.*`
