@@ -1,6 +1,6 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Flexible Event Model"
+title: "Powerful Event Model"
 pageTitle: "Audit Log Event Model"
 description: ""
 weight: "1701"
@@ -11,6 +11,8 @@ gradient: "console"
 ---
 
 The Replicated Audit Log uses a sophisticated event model that is opinionated yet flexible. First-class support for the core objects like Actors, Targets, and Groups allows for deep integrations in [search](../searchable), [export](../exportable), and [normalization](../renaming-properties).
+
+## Core event model
 
 ### Actors
 An actor in the spreadsheet application is any authenticated identity that's interacting with the spreadsheet. This includes the users who are logged in and editing, deleting, and creating new spreadsheets. It also includes any API tokens that are performing operations on the spreadsheets programatically.
@@ -34,6 +36,6 @@ In addition to a human readable view of the data, the UI should be able to displ
 </div>
 
 
-### Custom Fields
+## Extending the model with custom fields
 
 While the core data model has proven to be very effective, a good Audit Log should also allow for custom fields and extending the base API. The image above shows an example of using custom fields on a `target` via the `fields` key to include data like `expiration_date` and `channel_name`.
