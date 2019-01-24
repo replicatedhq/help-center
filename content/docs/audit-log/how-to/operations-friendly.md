@@ -41,7 +41,7 @@ Further, the Audit Log guarantees that if it returns a 200 status code on a "pub
 
 ## Failure Modes and Retries
 
-As with many distributed system, it is impossible to provide 100% uptime guarantees in the face of failures across the stack. The best way to ensure all events are delivered is to configure clients to retry on timeouts and failures. 
+As with any distributed system, it is impossible to provide 100% uptime guarantees in the face of failures across the stack. The best way to ensure all events are delivered is to configure clients to retry on timeouts and failures. 
 
 A unique, client-generated request ID can be sent in a `x-request-uuid` header to ensure idempotency across retries. If multiple events are received with the same UUID, only of the event will be logged.
 
