@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Hashing Formula"
 description: "Hashing received events gives clients a guarantee of what was written"
-weight: "2003"
+weight: "1715"
 categories: [ "Architecture" ]
 index: ["docs/audit-log", "docs"]
 icon: "replicatedAuditLog"

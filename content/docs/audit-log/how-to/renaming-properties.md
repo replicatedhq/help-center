@@ -10,8 +10,7 @@ gradient: "console"
 ---
 
 
-Even though the Replicated Audit Log has first-class support for fields like [actions](../actions), [actors](../actors),
-[targets](../targets) and [groups](../segments)
+Even though the Replicated Audit Log has first-class support for fields like [actions](../event-model), [actors](../event-model), [targets](../event-model) and [groups](../segments), this 
 
 
 ### Most Event Properties are immutable

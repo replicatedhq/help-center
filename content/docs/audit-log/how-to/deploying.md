@@ -20,7 +20,7 @@ Audit log components export hundred of operational and application-level metrics
 
 - Aggregate service level indicators like end-to-end event processing latency
 - Throughput, latency, and error rates for all internal client operations, API endpoints, and async processors
-- Connection pool utilization and Queue depths 
+- Connection pool utilization and queue depths 
 
 Metrics can be reported to any Statsd-compliant monitoring system, and native support for [statuspage.io](https://statuspage.io) is also included. A  detailed runbook with metric descriptions, details, and recommended alerting thresholds can be provided upon request.
 
