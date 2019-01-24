@@ -1,7 +1,7 @@
 ---
 date: "2018-03-03T04:02:20Z"
-title: "Exposing Event Data"
-description: "An overview of the Replicated Audit Log product."
+title: "End User Docs"
+description: "A starting point for your user-facing audit log documentation."
 weight: "1901"
 categories: [ "Replicated Audit Log" ]
 index: ["docs/audit-log", "docs"]
@@ -14,7 +14,7 @@ gradient: "console"
 There are two main way to expose your audit log data to your application's users. Users can browse and search events using an embeddable viewer UI, or they can access data programmatically using API tokens.
 
 {{<note title="User facing documentation" >}}
-The goal of the articles in this section is to serve as example documentation that can be copied, modified, or white-labeled to serve as customer-facing documentation for your end users. These articles are intentionally light on links and details about the vendor-side of the audit log integration. 
+The goal of the articles in this section is to serve as example documentation that can be copied, modified, or white-labeled to serve as customer-facing documentation for your end users. These articles are intentionally light on links and details about the vendor-side of the audit log integration.
 {{</note>}}
 
 ## Using the embedded viewer
