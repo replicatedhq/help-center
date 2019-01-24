@@ -1,8 +1,8 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Single Endpoint"
-description: "Reduce integration overhead with a single simple endpoint"
-weight: "1705"
+title: "Normalization"
+description: "Reduce integration complexity with a single, simple endpoint"
+weight: "1605"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
 icon: "replicatedAuditLog"
