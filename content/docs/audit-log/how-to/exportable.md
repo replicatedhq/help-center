@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Exportability"
 description: ""
-weight: "1706"
+weight: "1707"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
 icon: "replicatedAuditLog"

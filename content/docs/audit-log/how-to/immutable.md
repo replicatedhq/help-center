@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Immutability"
 description: ""
-weight: "1703"
+weight: "1708"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
 icon: "replicatedAuditLog"

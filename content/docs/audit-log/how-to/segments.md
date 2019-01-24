@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Segments"
 description: "Use built-in segments to organize your events"
-weight: "1707"
+weight: "1704"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
 icon: "replicatedAuditLog"
@@ -19,7 +19,7 @@ Groups are dynamically created as you send events into the Audit Log.
 
 ## Segmenting with multiple instances
 
-When you run the Audit Log in your own infrastructure, you may also use multiple instances to segment your data. For example, if you run separate "staging" and "production" instance of the audit logging stack (e.g. one instance in each of two separate Kubernetes clusters), you probably wont need to create separate environments in either one of those instances.
+When you run the Audit Log in your own infrastructure, you'll likely use multiple instances to segment your data. For example, if you run separate "staging" and "production" instances of the audit logging stack (e.g. one instance in each of two separate Kubernetes clusters), you probably wont need to create separate environments in either one of those instances.
 
 For this reason, a default project and environment are created during the on-prem installation, and most apps will be able to integrate the audit log using just these default segments.
 

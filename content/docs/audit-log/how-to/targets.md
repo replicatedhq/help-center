@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Targets"
 description: ""
-weight: "1710"
+weight: "1703"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
 icon: "replicatedAuditLog"
