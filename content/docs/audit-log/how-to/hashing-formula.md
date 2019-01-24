@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Hashing Formula"
 description: "Hashing received events gives clients a guarantee of what was written"
-weight: "2003"
+weight: "1715"
 categories: [ "Architecture" ]
 index: ["docs/audit-log", "docs"]
 icon: "replicatedAuditLog"
@@ -16,9 +16,9 @@ To calculate the digest, the Audit Log will build a colon (:) delimited string o
 The order of the fields is important, and is defined as:
 
 1. `EVENT_ID`: The string ID that is returned from the Publisher API when calling create event.
-1. `ACTION`: The [action](/docs/audit-log/how-to/actions/) parameter provided when creating an event.
-1. `TARGET_ID`: The ID of the [target](/docs/audit-log/how-to/targets/) parameter provided when creating an event. If no target was provided, this is an empty string.
-1. `ACTOR_ID`: The ID of the [actor](/docs/audit-log/how-to/actors/) parameter provided when creating an event. If no actor was provided, this is an empty string.
+1. `ACTION`: The [action](/docs/audit-log/how-to/event-model) parameter provided when creating an event.
+1. `TARGET_ID`: The ID of the [target](/docs/audit-log/how-to/event-model/) parameter provided when creating an event. If no target was provided, this is an empty string.
+1. `ACTOR_ID`: The ID of the [actor](/docs/audit-log/how-to/event-model/) parameter provided when creating an event. If no actor was provided, this is an empty string.
 1. `GROUP_ID`: The ID of the [group]/(/docs/audit-log/how-to/segments/) parameter provided when creating an event. If no group was provided, this is an empty string.
 1. `SOURCE_IP`: The IP address sent with the event. If no IP address was known, this is an empty string.
 1. `IS_FAILURE`: An integer ("1" or "0") representation of the is_failure parameter provided when creating an event. This is required, and will default to "0".
