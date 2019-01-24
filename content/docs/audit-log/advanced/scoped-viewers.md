@@ -14,3 +14,14 @@ It is possible to create scoped viewer tokens or scope the embedded viewer to on
 This is useful for embedding a subset of the audit log data into a user profile, or on to a specific item. In the spreadsheet example, this feature could enable an audit log of events associated with that specific spreadsheet. If a user searches over this scoped audit log data will only return matches from this scoped subset of events.
 
 With scoped viewers, it is possible to provide administrators with a centralized, global audit log while exposing non-admins (users) to audit logs for resources they have access to without compromising access to the larger event stream.
+
+### Example scoped viewer
+```go
+  token, err := retracedClient.GetViewerToken(team.Id, !user.ReadOnly, user.ID, targetID)
+	if err != nil {
+		log.Error(err)
+		return "", err
+	}
+  return token.Token, nil
+
+```

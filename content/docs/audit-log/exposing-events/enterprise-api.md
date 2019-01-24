@@ -166,7 +166,7 @@ For more information, check out [SSH Streaming](/docs/audit-log/advanced/ssh-str
 
 ## Saved Searches
 
-The Enterprise Audit Log Retrieval API includes several endpoints for saving a search and maintaining a persistent cursor across search queries (an `etag`).
+The Enterprise Audit Log Retrieval API includes several endpoints for saving a search and maintaining a persistent cursor across search queries.
 
 The general workflow is:
 
