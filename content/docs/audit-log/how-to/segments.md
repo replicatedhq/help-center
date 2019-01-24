@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Segments"
 description: "Use built-in segments to organize your events"
-weight: "1704"
+weight: "1604"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
 icon: "replicatedAuditLog"
@@ -12,7 +12,7 @@ gradient: "console"
 Segmentation is a powerful concept that helps you organize your audit events. Segments enable you to scope event queries to end-customer organizations when displaying them.
 
 ## Groups
-For multi-tenant SaaS applications, a group is the most important unit of segmentation as it identifies the various organizations, teams or customers (i.e. groups of users). You can segment your audit log into groups by adding a `group.id` to each event. Then you may provide your end customers read access to their segment with the [Enterprise API](/docs/audit-log/apis/enterprise-api/).
+For multi-tenant SaaS applications, a group is the most important unit of segmentation as it identifies the various organizations, teams or customers (i.e. groups of users). You can segment your audit log into groups by adding a `group.id` to each event. Then you may provide your end customers read access to their segment with the [Enterprise API](/docs/audit-log/apis/enterprise-api/) and the [embedded viewer](/docs/audit-log/getting-started/embedded-viewer).
 
 Groups are dynamically created as you send events into the Audit Log.
 

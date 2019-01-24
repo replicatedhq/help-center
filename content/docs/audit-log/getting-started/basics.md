@@ -2,14 +2,14 @@
 date: "2016-07-03T04:02:20Z"
 title: "Replicated Audit Log Basics"
 description: "Overview of key components"
-weight: "1603"
+weight: "1703"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
 icon: "replicatedAuditLog"
 gradient: "console"
 ---
 
-At it's core, the Replicated Audit Log consists of 3 components:
+At its core, the Replicated Audit Log consists of 3 components:
 
 - The [Publisher API](/docs/audit-log/apis/publisher-api), which is used by a vendor application to report audit events.
 - A [Logs Viewer](/docs/audit-log/getting-started/embedded-viewer) which can be embedded in the frontend of a vendor application to allow end customers to view, search, and export logs.

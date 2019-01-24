@@ -9,7 +9,7 @@ gradient: "purpleToPink"
 aliases : [docs/reference/integration-api/status-api]
 ---
 
-The Status API provides a method for user applications to update the status of an application during it's startup lifecycle. For applications with multiple startup steps, this can be used to inform users of long-running actions such as migrations and bootstrapping. The Status API can also aid in debugging by giving users insight into the application startup phase they experienced an issue with.
+The Status API provides a method for user applications to update the status of an application during its startup lifecycle. For applications with multiple startup steps, this can be used to inform users of long-running actions such as migrations and bootstrapping. The Status API can also aid in debugging by giving users insight into the application startup phase they experienced an issue with.
 
 ## Status API Endpoint
 

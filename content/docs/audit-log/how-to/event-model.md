@@ -1,9 +1,9 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Powerful Event Model"
+title: "Flexible Event Model"
 pageTitle: "Audit Log Event Model"
-description: ""
-weight: "1701"
+description: "Event structure is opinionated yet flexible"
+weight: "1601"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
 icon: "replicatedAuditLog"
@@ -21,7 +21,7 @@ An actor in the spreadsheet application is any authenticated identity that's int
 Actions are the events that the actors performed that should be audited. In the spreadsheet example application, some of the most obvious actions might include `sheet.create` and `sheet.delete`. Sometimes it's important to create new objects to wrap events. For example, if a user is editing a spreadsheet and the sheet saves every second, you don't want to create a `sheet.update` event each second. Wrap these events into a session and create a single `sheet.update` event for the entire edit session.
 
 ### Targets
-Targets are the objects in a system that have an action taken on them. In the spreadsheet example application, the primary target is the sheets themselves. But there are additional, less obvious targets. If the sheet application has implemented it's own authentication system, another target is the user accounts. For example, when a user changes their password, it should create an audit event for `password.update`.
+Targets are the objects in a system that have an action taken on them. In the spreadsheet example application, the primary target is the sheets themselves. But there are additional, less obvious targets. If the sheet application has implemented its own authentication system, another target is the user accounts. For example, when a user changes their password, it should create an audit event for `password.update`.
 
 ### CRUD
 

@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "First Audit Log Event"
 description: "Instrument your application to audit login events"
-weight: "1604"
+weight: "1704"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
 icon: "replicatedAuditLog"
@@ -22,7 +22,7 @@ kubectl get secret auditlog -o json | jq -r .data.BOOTSTRAP_PUBLISHER_TOKEN | ba
 kubectl get secret auditlog -o json | jq -r .data.BOOTSTRAP_PUBLISHER_PROJECT | base64 --decode
 ```
 
-You may have to modify the above. For example, depending on where you deployed it, you' may want a `--namespace` parameter.
+You may have to modify the above. For example, depending on where you deployed it, you may want to add a `--namespace` parameter.
 
 ### Publishing an event
 

@@ -2,7 +2,7 @@
 date: "2018-03-03T04:02:20Z"
 title: "Audit Log Overview"
 description: "An overview of the Replicated Audit Log product."
-weight: "1602"
+weight: "1702"
 categories: [ "Replicated Audit Log" ]
 index: ["docs/audit-log", "docs"]
 aliases: [ /docs/audit-log/, /docs/audit-log/getting-started ]

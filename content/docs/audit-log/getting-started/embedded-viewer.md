@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Embedded Viewer"
 description: "Embed the log viewer component into your frontend web app"
-weight: "1605"
+weight: "1705"
 categories: [ "Audit Logging Basics" ]
 index: ["docs/audit-log", "docs"]
 icon: "replicatedAuditLog"
