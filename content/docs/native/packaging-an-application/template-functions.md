@@ -277,6 +277,7 @@ Returns customer defined console settings for the TLS data or proxy settings. Va
 |tls.key.data|TLS key contents|
 |tls.cert.name|TLS cert filename|
 |tls.cert.data|TLS cert contents|
+|tls.authority.cert|TLS certificate authority contents|
 |tls.hostname|Hostname used to secure Replicated TLS traffic|
 |tls.source|Source of the TLS cert, either "self-signed", "key-cert" or "server-path"|
 |http.proxy|Proxy http address (e.g. http://10.128.0.4:3128)|
