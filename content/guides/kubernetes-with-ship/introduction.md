@@ -43,11 +43,25 @@ The most common use of Replicated Ship is distributing a Kubernetes (or Helm) ap
 
 When the end customer installs a Ship application, Ship will launch a branded and customizable web-based setup console. It's here that customized [config options](/docs/ship/config/overview) can generate data such as keys, certs, random strings, etc. The console also shows an interactive form for the operator to input data that's required to start the application.
 
+### Focus on "Day 2" Operations
+
 The web-based console is a nice, user friendly way to set up the application, but automation is a big part of Ship. When an application is distributed on Ship, it's easy for the operator to automate the configuration and update process so any updates can be applied to a change management process and then staged for deployment. This can even be used to create a continuous delivery process for your on-prem software.
+
+### Release Channels
+
+Application Vendors can iterate continuously by publishing releases to the Replicated 'Unstable' Channel multiple times per day, test release candidates by promoting to 'Beta' and finally release to customers via the 'Stable' channel when a release has been vetted and is ready for customers. By creating additional channels and assigning customer licenses to channels based on release cadence or other customer preferences.
 
 ### Private Asset Delivery
 
-Most enterprise software includes private assets including Docker images, license data and more. When using Ship, the license key (and installation script) provided to your customer grants them read-only, audited access to these resources for the duration of the license. The entitlement to download these resources can be revoked at any time.
+Most enterprise software includes private assets including Docker images, license data and more. When using Ship, the license key (and installation script) provided to your customer grants them read-only, audited access to these resources for the duration of the license. The license/entitlement to download these resources can be revoked at any time.
+
+### Tooling for Supportability
+
+Deploying to customers environments will always be more challenging than deploying to servers that your team has direct access to. However, Ship applications can be distributed with [Replicated Troubleshoot](/guides/troubleshoot/) to collect environment and application specific information from the customer's private instance. Custom analyzers and collectors empower support teams to solve common problems quickly without engaging the DevOps/engineering team to solve every on-prem customer problem.
+
+### Advanced features
+
+Our strong focus on solving the problems surrounding 3rd-party application delivery and maintenance for some of the best enterprise software companies in the world gives us Replicated a unique position to [continuously introduce industry leading features](../explore-features/).
 
 {{< linked_headline "Next Steps" >}}
 
