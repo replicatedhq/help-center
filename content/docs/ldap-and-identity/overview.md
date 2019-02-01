@@ -30,7 +30,7 @@ identity:
 |-------|-------------|
 | enabled | Boolean indicating if LDAP authentication is enabled on this installation. |
 | provisioner | (Optional) Host that provides provisioning API for synchronization with LDAP. This is required if using directory sync, and can be omiitted if only using LDAP authentication. |
-| sources | `ldap` and `ldap_advanced` sources are supported. |
+| sources | `ldap` and `ldap_advanced` sources are supported. At least one source must be enabled for Identity API to work. |
 | filter | (Optional) filter to pass to the LDAP server during the sync operation |
 
 Additionally, before your application containers can use the Replicated LDAP integration, you'll need to collect some LDAP settings from your enterprise customer. We recommend you include our suggested configuration items in your application yaml to start.
