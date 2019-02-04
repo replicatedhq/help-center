@@ -2,7 +2,7 @@
 categories:
 - support-bundle-yaml-specs
 date: 2018-01-17T23:51:55Z
-description: Collect Audit Log events from a running Retraced instance
+description: Collect Audit Log events from a running Audit Log instance
 index: docs
 title: retraced.events
 weight: "100"
@@ -11,7 +11,7 @@ gradient: "purpleToPink"
 
 ## retraced.events
 
-Collect Audit Log events from a running Retraced instance
+Collect Audit Log events from a running Audit Log instance
 
 
 ```yaml
