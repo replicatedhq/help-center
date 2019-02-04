@@ -31,10 +31,17 @@ collect:
 ### Required Parameters
 
 
-- `container` - The container name
-
-
 - `exec_config` - Config options as would be passed to `docker exec`, as in [The Docker API](https://github.com/moby/moby/blob/master/api/types/configs.go)
+
+
+
+### Optional Parameters
+
+
+- `container` - The name of the container to run the command in
+
+
+- `labels` - Labels shared by the container(s) to run the command in
 
 
 

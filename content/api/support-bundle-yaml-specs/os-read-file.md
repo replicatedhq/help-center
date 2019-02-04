@@ -2,7 +2,7 @@
 categories:
 - support-bundle-yaml-specs
 date: 2018-01-17T23:51:55Z
-description: Read a file from the filesystem
+description: Read a file or a directory from the filesystem
 index: docs
 title: os.read-file
 weight: "100"
@@ -11,7 +11,7 @@ gradient: "purpleToPink"
 
 ## os.read-file
 
-Read a file from the filesystem
+Read a file or a directory from the filesystem
 
 
 ```yaml

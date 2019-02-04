@@ -30,10 +30,17 @@ collect:
 ### Required Parameters
 
 
+- `exec_config` - Same as would be passed to `docker exec`, as in [The Docker API](https://github.com/moby/moby/blob/master/api/types/configs.go#L43)
+
+
+
+### Optional Parameters
+
+
 - `container` - The name of the container to run the command in
 
 
-- `exec_config` - Same as would be passed to `docker exec`, as in [The Docker API](https://github.com/moby/moby/blob/master/api/types/configs.go#L43)
+- `labels` - Labels shared by the container(s) to run the command in
 
 
 
