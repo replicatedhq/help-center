@@ -218,7 +218,7 @@ func ConsoleSettingNotEquals(name string, value string) bool
 ```
 Returns a bool indicating if the value is not the currently applied value for ConsoleSetting with name.
 
-{{< template_function name="LDAPCopyAuthFrom" replicated="true" kubernetes="true" swarm="true" >}}
+{{< template_function name="LdapCopyAuthFrom" replicated="true" kubernetes="true" swarm="true" >}}
 ```go
 func LdapCopyAuthFrom(keyName string) interface{}
 ```

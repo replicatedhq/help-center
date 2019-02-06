@@ -350,7 +350,7 @@ func ThisNodeDockerAddress() string
 Returns the docker0 address on the host on which the current container instance is deployed.
 For a clustered application this value will be different for each host.
 
-{{< template_function name="LDAPCopyAuthFrom" >}}
+{{< template_function name="LdapCopyAuthFrom" >}}
 ```go
 func LdapCopyAuthFrom(keyName string) interface{}
 ```
