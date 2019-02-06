@@ -255,7 +255,7 @@ func ConsoleSettingNotEquals(name string, value string) bool
 Returns a bool indicating if the value is not the currently applied value for ConsoleSetting with name.
 
 
-{{< linked_headline "LDAPCopyAuthFrom" >}}
+{{< linked_headline "LdapCopyAuthFrom" >}}
 ```go
 func LdapCopyAuthFrom(keyName string) interface{}
 ```
