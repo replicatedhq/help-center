@@ -57,7 +57,7 @@ components:
   - source: public
     image_name: debian
     version: stretch
-    when: false # indicate to Replicated that it should not run this container as part of your startup sequnce
+    when: false # indicate to Replicated that it should not run this container as part of your startup sequence
     cmd: '["/password-strength.sh", "{{repl ConfigOption \"password\"}}"]'
     config_files:
     - filename: /password-strength.sh
@@ -85,4 +85,4 @@ The test_proc resource is a sub-resource of a config group or item. When specifi
 | timeout | int | no | Timeout in seconds, default 15 seconds, -1 denotes no timeout |
 | when | string | no | Will determine if the test procedure is runnable (evaluated to a boolean value) |
 | custom_command | [Command](/docs/native/packaging-an-application/commands-reference/#command) | yes | The command that will be run |
-| results | array\[[Result](/docs/native/packaging-an-application/commands-reference/#result)\] | yes | An array of result objects that when evaluated will determine success or failure |
+| results | array of \[[Result](/docs/native/packaging-an-application/commands-reference/#result)\] | yes | An array of result objects that when evaluated will determine success or failure |
