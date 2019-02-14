@@ -20,6 +20,12 @@ The script will install the latest release from the license's default channel fo
 curl -sSL https://get.replicated.com/kubernetes-migrate | sudo bash
 ```
 
+Or if your Kubernetes app is pinnd to a specific version of Replicated use the channel install script:
+
+```shell
+curl -sSL https://get.replicated.com/appslug/appchannel/kubernetes-migrate | sudo bash
+```
+
 This script will delegate to the [kubernetes-init](/docs/kubernetes/customer-installations/installing/) script to bring up a Kubernetes installation then import settings from the native installation and install the Kubernetes app.
 
 {{< linked_headline "Flags" >}}
