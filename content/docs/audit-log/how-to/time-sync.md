@@ -21,7 +21,7 @@ It's not always possible to have both a human-readable "wall time" and a causall
 
 ## Recording Time in the Audit Log
 
-The Replicated Audit Log allows clients to specify a `created` time for any event. In addition to allowing clients to report event timing, the Audit Log Publisher API will record a system `received` timestamp for all events. 
+The Replicated Audit Log allows clients to specify a `created` time for any event. In addition to allowing clients to report event timing, the Audit Log Publisher API will record a system `received` timestamp for all events.
 
 A `canonical_time` field will exist on all events, which will be the client-reported `created` field if the client sent it, otherwise it will be the `received` time recorded on the server side.
 

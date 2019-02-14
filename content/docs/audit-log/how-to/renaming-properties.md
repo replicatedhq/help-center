@@ -20,7 +20,7 @@ Even though the Replicated Audit Log has first-class support for fields like [ac
     "id": "abc",
     "name": "Actor McActorson",
     "fields": {
-      "size": "100" 
+      "size": "100"
     }
   },
   // ... etc
@@ -50,7 +50,7 @@ Some properties of an audit event can be renamed after the event is received. Th
 
 ### Certain properties are normalized
 
-For example, when sending an event, an [actor](/docs/audit-log/how-to/event-model/) is a required field. The `id` property of the actor is immutable and is linked and cross referenced in the Audit Log to make it possible to search for and find all events that a specific actor performed. 
+For example, when sending an event, an [actor](/docs/audit-log/how-to/event-model/) is a required field. The `id` property of the actor is immutable and is linked and cross referenced in the Audit Log to make it possible to search for and find all events that a specific actor performed.
 
 ### Some fields on normalized properties are mutable
 
@@ -61,7 +61,7 @@ An actor object has additional fields including name, url and any other data you
 When requesting the [original events](/docs/audit-log/architecture/immutability-guarantee/#future-verification-of-immutability), the original values sent when the event was created will be returned.
 
 ### Actors, targets and groups are mutable
- 
+
 The same property renaming is possible with [targets](/docs/audit-log/how-to/event-model/) and [groups](/docs/audit-log/how-to/segments#group).
 
 

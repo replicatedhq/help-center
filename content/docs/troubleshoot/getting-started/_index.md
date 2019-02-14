@@ -1,9 +1,9 @@
 ---
 date: "2018-03-03T04:02:20Z"
-title: "Troubleshoot Overview"
+title: "Getting Started"
 description: "Replicated Troubleshoot overview"
 weight: "1601"
-categories: [ "Replicated Audit Log" ]
+categories: [ "Replicated Troubleshoot" ]
 index: false
 icon: "replicatedCircle"
 ---

@@ -22,7 +22,7 @@ When validating immutability for audit events, it's important to both verify tha
 
 Audited events are not always displayed with every field originally sent. Also, it's possible for an [actor or item to be renamed](../renaming-properties) at some point in the future. The Audit Log will always store the original event received, and it's possible to retrieve that source. In fact, this source is used to dynamically calculate value to show when displaying an event in the browser or other source.
 
-The Audit Log implements industry standard and provable digest algorithms to ensure the data you send into an audit log is the data that was received. The same algorithms can be used in the future to verify that none of the data has changed since it was written. This works automatically when using our [SDKs](/docs/audit-log/sdks/available-sdks), and can be implemented manually if you use the API directly. 
+The Audit Log implements industry standard and provable digest algorithms to ensure the data you send into an audit log is the data that was received. The same algorithms can be used in the future to verify that none of the data has changed since it was written. This works automatically when using our [SDKs](/docs/audit-log/sdks/available-sdks), and can be implemented manually if you use the API directly.
 
 ## Digest of Events
 
