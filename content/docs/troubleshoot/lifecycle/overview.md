@@ -22,6 +22,7 @@ You can change this default behavior to avoid prompting and have custom messages
 ```yaml
 lifecycle:
   v1:
+    - generate: {}
     - message: |
         A support bundle has been created at {{.BundlePath}}.
         Please take a look at this bundle contents, remove

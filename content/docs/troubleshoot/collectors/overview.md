@@ -13,9 +13,9 @@ hideFromList: true
 
 # Collectors
 
-A Troubleshoot spec defines one or more (often many) collectors that to run when a support bundle is being generated. Collectors can be a single file, a directory of files, or a command to run and capture the output of.
+A Troubleshoot spec defines one or more (often many) collectors that to run when a support bundle is being generated. A collector target can be a single file, a directory of files, or a command to run and capture the output of.
 
-When a support bundle is generated, the collectors may be executed concurrently, and the results are all gathered into a single support bundle.
+When a support bundle is generated, the collectors are executed concurrently, and the results are all gathered into a single tar.gz bundle.
 
 Collectors can come from various sources at generation time. If multiple inputs are provided, they are combined into a single set of collectors to run.
 

@@ -13,4 +13,4 @@ hideFromList: true
 
 # Analyzers
 
-Analyzers define what will be extracted and displayed when looking at a support bundle analysis.
+Analyzers define what will be extraced from the collected support bundle and then displayed when looking at a support bundle analysis.
