@@ -27,8 +27,8 @@ Targets are the objects in a system that have an action taken on them. In the sp
 
 Most of the time, it is useful to filter audit event by whether the audited action was a Create, Read, Update, or Delete event (CRUD). In fact, the Replicated Audit Log filters out "Read" events by default. These read events tend to be less interesting than the Create, Update and Delete events that represent modification of information. Because these sort of event categories are so useful, they are built into the data model by default, and supported as first-class filtering keys.
 
-### Raw view 
-In addition to a human readable view of the data, the UI should be able to display the raw data of every event in the system. The Replicated Audit Log Service implements this in the embedded viewers. 
+### Raw view
+In addition to a human readable view of the data, the UI should be able to display the raw data of every event in the system. The Replicated Audit Log Service implements this in the embedded viewers.
 
 
 <div style="text-align: center">

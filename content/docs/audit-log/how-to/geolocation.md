@@ -13,7 +13,7 @@ In addition to deep insight into [when](../time-sync) events occurred, A good au
 
 ### GeoIP lookups
 
-If configured, the Audit Log can use recorded IPs to determine the geographic location from which an audit event originated. This is especially useful for detecting activity anomalies and identifying potential bad actors or compromised user accounts. 
+If configured, the Audit Log can use recorded IPs to determine the geographic location from which an audit event originated. This is especially useful for detecting activity anomalies and identifying potential bad actors or compromised user accounts.
 
 
 ### Defense in depth
