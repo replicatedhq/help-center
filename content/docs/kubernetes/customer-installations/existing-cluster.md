@@ -9,8 +9,19 @@ index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
+{{< note title="Airgap Not Supported" >}}
+While a Replicated-managed Kubernetes cluster can support airgappe installations, airgapped installs are not supported on existing cluster installations.  If you are looking to deploy your Kubernetes application to primarily existing-cluster environments, we recommend using [Replicated Ship](https://help.replicated.com/guides/kubernetes-with-ship/) instead.
+{{</note>}}
 
 Replicated can be installed to an existing Kubernetes 1.9, 1.11 or 1.13 cluster. Use the `https://get.replicated.com/kubernetes-yml-generate` script to generate specs for the Deployments, Services, and PersistentVolumeClaims required by Replicated.
+
+
+{{< note title="Your Mileage May Vary" >}}
+While the Replicated Kubernetes Appliance supports installation into
+existing clusters, the wide variations across Kubernetes clusters found
+in cloud providers and on-prem datacenters make it impossible to guarantee out-of-the-box compatibility on every Kubernetes cluster.  As mentioned above, if you are primarily tagetting existing cluster environments, consider using [Replicated Ship](https://help.replicated.com/guides/kubernetes-with-ship/) instead.
+{{</note>}}
+
 
 ## Persistent Volumes
 
