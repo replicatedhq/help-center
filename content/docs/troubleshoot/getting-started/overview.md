@@ -13,8 +13,6 @@ hideFromList: true
 
 The Replicated Troubleshoot utility is designed to enable identification, collection, delivery and analysis of remotely-operated distributed systems.
 
-## Terms
-
 To get started, there are a couple of terms to know:
 
 ### Support Bundle
