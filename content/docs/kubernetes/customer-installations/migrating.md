@@ -72,6 +72,7 @@ The Kubernetes airgap app package must not be in the same directory as the nativ
 
 Worker nodes in your native cluster will not be automatically joined to the Kubernetes cluster.
 You will need to run the [kubernetes-node-join script](/docs/kubernetes/customer-installations/add-nodes/) on each node separately.
+That script will also uninstall any native components found on the node.
 
 {{< linked_headline "Config Items" >}}
 
