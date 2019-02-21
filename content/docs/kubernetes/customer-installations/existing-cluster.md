@@ -10,6 +10,22 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
+{{< warning title="Cluster Prerequisites" >}}
+While the Replicated Kubernetes Appliance supports installation into
+existing clusters, the wide variations across Kubernetes clusters found
+in cloud providers and on-prem datacenters make it impossible to guarantee out-of-the-box compatibility on every Kubernetes cluster.  As mentioned above, if you are primarily targeting existing cluster environments, consider using [Replicated Ship](https://help.replicated.com/guides/kubernetes-with-ship/) instead.
+We have a short list of [Prerequisites](#prerequisites) that will evolve as more managed Kuberentes offerings are made available.
+{{</warning>}}
+
+<p/>
+
+{{< warning title="Airgap Not Supported" >}}
+While a Replicated-managed Kubernetes cluster can support airgapped installations, airgapped installs are not supported on existing cluster installations.  If you are looking to deploy your Kubernetes application to primarily existing-cluster environments, we recommend using [Replicated Ship](https://help.replicated.com/guides/kubernetes-with-ship/) instead.
+{{</warning>}}
+
+
+
+
 Replicated can be installed to an existing Kubernetes 1.9, 1.11 or 1.13 cluster. Use the `https://get.replicated.com/kubernetes-yml-generate` script to generate specs for the Deployments, Services, and PersistentVolumeClaims required by Replicated.
 
 ## Persistent Volumes
@@ -59,3 +75,11 @@ For a single-node cluster 4 CPUs are required to meet the resource requests of a
 ### Kubernetes Version
 
 Ensure the major and minor version of your cluster's server match what is [expected by the version of Replicated being installed](/docs/kubernetes/customer-installations/installing/#compatible-kubernetes-versions)
+
+## Prerequisites
+
+These are the prerequisites that we know are required of a target cluster. This list is not guaranteed to be complete, and will evolve as users install Replicated into additional varieties of managed Kubernetes.
+
+- Cluster must include at least one Node labeled with `replicated.com/daemon`, as in [the appliance installer](https://github.com/replicatedhq/replicated-installer/blob/79b89b5349cd49afc6ed8e4b5d3c03b3f533caef/install_scripts/templates/common/kubernetes.sh#L22).
+- Cluster must include a dynamic volume provisioner, and the `storage_class` param [must be provided](#persistent-volumes) to the `kubernetes-yml-generate` script.
+
