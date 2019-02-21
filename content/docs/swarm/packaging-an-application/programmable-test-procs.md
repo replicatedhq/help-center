@@ -69,10 +69,10 @@ version: '3.3'
 services:
   password-checker:
     image: debian:stretch
+    command: ['/password-strength.sh', '{{repl ConfigOption "password"}}']
     deploy:
       restart_policy:
         condition: none
-      command: ['/password-strength.sh', '{{repl ConfigOption "password"}}']
     configs:
     - source: password_strength_check
       target: /password-strength.sh
