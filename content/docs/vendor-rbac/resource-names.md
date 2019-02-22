@@ -52,6 +52,7 @@ index: "other"
 | [platform/team/member/invite](#platform-team-member-invite) |
 | [platform/team/member/[:memberId]/delete](#platform-team-member-memberid-delete) |
 | [platform/team/member/[:memberId]/update](#platform-team-member-memberid-update) |
+| [platform/team/token/list](#platform-team-token-list) |
 | [platform/team/token/[:tokenName]/read](#platform-team-token-tokenname-read) |
 | [platform/team/token/create](#platform-team-token-create) |
 | [platform/team/token/[:tokenName]/delete](#platform-team-token-tokenname-delete) |
@@ -230,6 +231,10 @@ Grants the holder permission to delete the team member(s) specified by ID.
 ### platform/team/member/[:memberId]/update
 
 Grants the holder permission to update the team member(s) specified by ID.
+
+### platform/team/token/list
+
+Grants the holder permission to list API tokens.
 
 ### platform/team/token/[:tokenName]/read
 
