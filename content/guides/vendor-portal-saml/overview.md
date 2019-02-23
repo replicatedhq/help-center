@@ -24,6 +24,6 @@ Replicated does not implement [SCIM])(http://www.simplecloud.info/). Instead, we
 
 ## RBAC
 
-Replicated supports [Role Based Access Control](/docs/vendor-rbac/overview/) in the Vendor Portal. To use RBAC with SAML, you have to configure policies and add users to the policies. Usernames will be the identity of the user in your IdP (generally this is the full email address).
+Replicated supports [Role Based Access Control](/docs/vendor-rbac/overview/) in the Vendor Portal. To use RBAC with SAML, you have to configure policies and add users to the policies by their username. Usernames will be the identity of the user in your IdP (generally this is the full email address).
 
 
