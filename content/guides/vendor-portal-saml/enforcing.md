@@ -12,7 +12,7 @@ icon: "replicatedCircle"
 
 # SAML Enforcement Options
 
-Once you have SAML configured, Replicated provides 2 options that can be enabvled or disabled at any time.
+Once you have SAML configured, Replicated provides 2 options that can be enabled or disabled at any time.
 
 ![SAML Enforcement Options](/images/guides/vendor-portal-saml/enforcement-options.png)
 
