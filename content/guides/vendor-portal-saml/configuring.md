@@ -22,4 +22,4 @@ To start, log in to the Vendor Portal and navigate to the [Teams & Tokens page](
 
 Your SAML provider will provide an XML Metadata file and their x.509 Public Cert. For more information on supported SAML providers and how to find these files, please visit the [supported SAML providers guide](../tested-providers).
 
-In this guide, I'll use configure Replicated to use Okta for authentication. I've downloaded these two files from Okta and upload them into each of the fields provided.
+In this guide, I'll configure Replicated to use Okta for authentication. I've downloaded these two files from Okta and upload them into each of the fields provided.
