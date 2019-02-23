@@ -18,7 +18,7 @@ Once you have SAML configured, Replicated provides 2 options that can be enabvle
 
 ## Enable SAML for team logins
 
-Turning on the "Enable SAML for team logins" toggle will allow members of your team to log in to the Vendor Portal from your SSO provider. This will not remove, change or restrict any other authentication methods you have configured on Replicated. If your team already is logging in with accounts provisioned in Replicated, they will be able to continue logging in this way, if you enable this option. This is a good way to test SAML without risking any interruption for the rest of your team.
+Turning on the "Enable SAML for team logins" toggle will allow members of your team to log in to the Vendor Portal from your SSO provider. This will not remove, change or restrict any other authentication methods you have configured on Replicated. If you enable SAML and your team already is logging in with accounts provisioned in Replicated, they will be able to continue logging in with those accounts. Allowing both login methods is a good way to test SAML without risking any interruption for the rest of your team.
 
 ## Only allow SAML logins
 
