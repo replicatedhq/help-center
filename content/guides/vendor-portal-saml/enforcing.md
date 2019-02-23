@@ -22,6 +22,6 @@ Turning on the "Enable SAML for team logins" toggle will allow members of your t
 
 ## Only allow SAML logins
 
-Once you've enabled SAML and validated it, you can then turn this feature on. Selecting this will prevent any non-SAML accounts from logging in.
+Once you've enabled SAML and validated it, you can toggle on "Only allow SAML logins". Selecting this will prevent any non-SAML accounts from logging in.
 
 We don't delete the existing accounts. If you turn this on and then later disable it, accounts that never logged in via SAML will be able to log in again. If an account exists outside of SAML, and if then authenticated with SAML, the account is converted and will not be able to authenticate using a password again.
