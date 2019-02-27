@@ -87,8 +87,10 @@ Please refer to our docs on upgrading [here](../upgrading)
 
 {{< linked_headline "Uninstalling" >}}
 
-Use the `reset` flag to uninstall Kubernetes and Replicated:
+Use the `reset` flag to uninstall Kubernetes and Replicated.  Please note that this flag is not recommended to be used on production systems.
 
 ```shell
 curl -sSL https://get.replicated.com/kubernetes-init | sudo bash -s reset
 ```
+
+The procedure described in [this post](https://help.replicated.com/community/t/uninstall-a-kubernetes-replicated-application/295) can be used to reset Replicated back to the state where license can be uploaded again without removing Kubernetes.  This is a safer option.
