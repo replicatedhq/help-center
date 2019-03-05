@@ -75,7 +75,7 @@ stringData:
 ```
 
 This example uses additional `Installation` template functions to pull in the customer and installation IDs, which
-serve to authenticate your end customer to your images.
+serve to authenticate your end customer to the registry.
 
 {{< linked_headline "Pull Private Images" >}}
 
