@@ -15,7 +15,7 @@ This is the documentation for the pre-2.0 version of the Support Bundle. If you 
 
 {{< linked_headline "Custom Files and Commands" >}}
 
-In addition to the [default support files](/docs/kubernetes/packaging-an-application/support-bundle/#default-support-files) included in the support bundle, addtional files can be added via the `support` section of your yaml. Files from within the application’s containers can be included, as well as output of commands executed in the container. For more complex support commands it is possible to create a [config file](/docs/kubernetes/packaging-an-application/config-files/) and execute that file from a support command. 
+In addition to the [default support files](/docs/kubernetes/packaging-an-application/support-bundle/#default-support-files) included in the support bundle, addtional files can be added via the `support` section of your yaml. Files from within the application’s containers can be included, as well as output of commands executed in the container. For more complex support commands it is possible to create a script in a Config Map and execute that script from a support command. 
 
 ```yaml
 support:

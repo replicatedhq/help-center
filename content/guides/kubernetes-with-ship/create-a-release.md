@@ -42,6 +42,7 @@ There are three sections to the Ship yaml - assets, config, and lifecycle. The y
 
 {{< linked_headline "Assets" >}}
 
+  The `assets` section describes the files that ship will create when run. There are [many types of assets](/api/ship-assets/assets) currently supported in Ship, though we'll only be using `inline` here. `inline` assets create templated files at the destination location, while `docker` assets do the same with exported Docker images. For the purposes of this demo, we'll be using public Docker images with no allowance for airgapped installations, but if we wanted to support airgapped installations, we would explicitly include all the Docker images within the Ship yaml.
 
 ```yaml
 assets:
@@ -87,10 +88,11 @@ assets:
       mode: 0644
 ```
 
-  The `assets` section describes the files that ship will create when run. There are [many types of assets](/api/ship-assets/assets) currently supported in Ship, though we'll only be using `inline` here. `inline` assets create templated files at the destination location, while `docker` assets do the same with exported Docker images. For the purposes of this demo, we'll be using public Docker images with no allowance for airgapped installations, but if we wanted to support airgapped installations, we would explicitly include all the Docker images within the Ship yaml.
   
 
 {{< linked_headline "Config" >}}
+
+The `config` section can be used to collect application-specific config from your end user at installation time. It is greatly expanded upon [here](https://help.replicated.com/docs/config-screen/config-yaml/). There are a few exceptions to the core configuration DSL when using Ship, but these docs serve as a good starting point.
 
 ```yaml
 config:
@@ -110,9 +112,10 @@ config:
         default: 100Mi
 ```
 
-The `config` section can be used to collect application-specific config from your end user at installation time. It is greatly expanded upon [here](https://help.replicated.com/docs/config-screen/config-yaml/). There are a few exceptions to the core configuration DSL when using Ship, but these docs serve as a good starting point.
 
 {{< linked_headline "Lifecycle" >}}
+
+  The `lifecycle` section is the messaging that will be seen by the end user. Contents will be printed to the screen in order during execution, with `render: {}` being replaced with the configuration options. Message levels change the color of the rendered text, and can be `debug`, `info` (the default), `warn` or `error`.
 
 ```yaml
 lifecycle:
@@ -147,7 +150,7 @@ lifecycle:
               kubectl apply -f installer/k8s/
 ```
 
-  The `lifecycle` section is the messaging that will be seen by the end user. Contents will be printed to the screen in order during execution, with `render: {}` being replaced with the configuration options. Message levels change the color of the rendered text, and can be `debug`, `info` (the default), `warn` or `error`.
+{{< linked_headline "Create Release" >}}
 
 Once we've finished editing our yaml, we can create a release from it.
 
