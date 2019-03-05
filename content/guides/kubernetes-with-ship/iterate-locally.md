@@ -21,7 +21,7 @@ You'll want to follow the steps in the [Project Readme](https://github.com/repli
 
 {{< linked_headline "Running your  Application" >}}
 
-Once you have the project set up, you should test your outputs in a real Kubernetes cluster. The easiest and fastest way to iterate is to run [Docker for Desktop](https://www.docker.com/products/docker-desktop) and use the built-in Kubernetes cluster option. [GKE](https://cloud.google.com/kubernetes-engine/) or other cloud-based managed clusters should also work. 
+Once you have the project set up, you should test your outputs in a real Kubernetes cluster. The easiest and fastest way to iterate is to run [Docker for Desktop](https://www.docker.com/products/docker-desktop) and use the built-in Kubernetes cluster option. [GKE](https://cloud.google.com/kubernetes-engine/) or other cloud-based managed clusters should also work.
 
 You can use the following to test deploying your rendered Kubernetes Assets to the cluster:
 
@@ -39,7 +39,15 @@ make run-local-headless deploy
 
 to quickly re-render your outputs and deploy them to a `kubectl` configured Kubernetes cluster.
 
+{{< linked_headline "Creating Releases" >}}
+
+Once you've got a version of your app you like, you can [promote releases with the CLI](https://github.com/replicatedhq/replicated-starter-ship#create-releases):
+
+```bash
+make release-ship
+```
+
 {{< linked_headline "Next Steps" >}}
 
-Now that you're set up with a development environment, its time to 
-[automate releases with github](../manage-with-github).
+Now that you're set up with a development environment, its time to
+[deliver a private docker image](../private-image).

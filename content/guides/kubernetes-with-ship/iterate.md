@@ -51,7 +51,7 @@ This makes use of the `Installation` template function to inject metadata about 
 
 {{< linked_headline "Re-running the installation" >}}
 
-Next, lets pull the updated release using `ship update`. This will assume you've already been through the instructions in [Testing the installation](../installing), and that you have an existing `.ship/state.json` in your working directory. 
+Next, lets pull the updated release using `ship update`. This will assume you've already been through the instructions in [Testing the installation](../installing), and that you have an existing `.ship/state.json` in your working directory.
 
 If don't have a `.ship/state.json` from the previous step, or if you just want to start from scratch, then you can re-run the same `ship init` command from [Testing the installation](../installing#run-the-command), and skip ahead to [headless updates](#using-headless-mode).
 
@@ -97,8 +97,8 @@ When iterating on your application assets, you can usually move more quickly by 
 ship update
 ```
 
-If you'd like, you can experiment with making changes to the the Kubernetes YAML in your release YAML, and seeing updates reflected in the `installer/k8s` directory after a headless update 
+If you'd like, you can experiment with making changes to the the Kubernetes YAML in your release YAML, and seeing updates reflected in the `installer/k8s` directory after a headless update
 
 ### Next steps
 
-Now that we have a feel for how managing releases works, its time to get set up with [a ship development environment](../iterate-locally) for offline iteration or [automate releases with github](../manage-with-github).
+Now that we have a feel for how managing releases works, its time to get set up with [a ship development environment](../iterate-locally) for offline iteration or [deliver a private image](../private-image) with ship.
