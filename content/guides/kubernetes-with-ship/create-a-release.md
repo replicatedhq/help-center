@@ -92,7 +92,7 @@ assets:
 
 {{< linked_headline "Config" >}}
 
-The `config` section can be used to collect application-specific config from your end user at installation time. It is greatly expanded upon [here](https://help.replicated.com/docs/config-screen/config-yaml/). There are a few exceptions to the core configuration DSL when using Ship, but these docs serve as a good starting point.
+The `config` section can be used to collect application-specific config from your end user at installation time. It is greatly expanded upon [here](/docs/config-screen/config-yaml/). There are a few exceptions to the core configuration DSL when using Ship, but these docs serve as a good starting point.
 
 ```yaml
 config:
