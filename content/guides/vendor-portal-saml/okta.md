@@ -20,7 +20,7 @@ Create a new application as a SAML 2.0 application.
 
 ![Okta New Application](/images/guides/vendor-portal-saml/okta-new-application.png)
 
-Provide a name and icon for the application. We like using the name "Replicated Vendor Portal" and you can download a high quality icon here: [https://help.replicated.com/images/guides/vendor-portal-saml/replicated-application.icon.png](https://help.replicated.com/images/guides/vendor-portal-saml/replicated-application.icon.png).
+Provide a name and icon for the application. We like using the name "Replicated Vendor Portal" and you can download a high quality icon here: [https://help.replicated.com/images/guides/vendor-portal-saml/replicated-application.icon.png](https://help.replicated.com/images/guides/vendor-portal-saml/replicated-application-icon.png).
 
 ![Application Name](/images/guides/vendor-portal-saml/application-name.png)
 
