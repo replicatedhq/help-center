@@ -20,7 +20,7 @@ To enable SAML on your account, you must have an [Enterprise](https://www.replic
 
 ## SCIM
 
-Replicated does not implement [SCIM])(http://www.simplecloud.info/). Instead, we use SAML to authenticate, and create one-time use identities in our system. We do resolve the username (email address) as the actor and use this to ensure that audit log events follow these dynamically provisioned and deprovisioned users.
+Replicated does not implement [SCIM](http://www.simplecloud.info/). Instead, we use SAML to authenticate, and create one-time use identities in our system. We do resolve the username (email address) as the actor and use this to ensure that audit log events follow these dynamically provisioned and deprovisioned users.
 
 ## RBAC
 
