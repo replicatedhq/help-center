@@ -31,23 +31,14 @@ support:
 
 {{< linked_headline "Custom Files and Commands" >}}
 
-<!-- TODO this next paragraph assumes/implies v1, and we ought to figure out the best way to convey v1/v2 differences -->
+{{< note title="Support Bundle 2.0" >}}
+The remainder of this document is specific to the current default Support Bundle in Replicated. If you are looking for the v1 version of this document, it is available at <a href="/docs/swarm/packaging-an-application/support-bundle-v1/">{{< baseurl >}}/docs/swarm/packaging-an-application/support-bundle-v1/</a>
+{{< /note >}}
 
-In addition to the [default support files](/docs/swarm/packaging-an-application/support-bundle/#default-support-files) included in the support bundle, addtional files can be added via the `support` section of your yaml. Files from within the application’s containers can be included, as well as output of commands executed in the container. Support files and commands are supported by both the native and kubernetes schedulers. For more complex support commands it is possible to create a [config file](/docs/packaging-an-application/components-and-containers/#config-files) and execute that file from a support command. These files will be available withing the */scheduler* directory of the support bundle.
+{{< linked_headline "Custom Files and Commands" >}}
 
-```yaml
-support:
-  files:
-    - filename: /var/log/nginx/access.log
-      swarm:
-        service: my-nginx-service
-  commands:
-    - filename: access_last_1000.log
-      command: [tail, -n1000, /var/log/nginx/access.log]
-      swarm:
-        service: my-nginx-service
+In addition to the [default support files](/docs/swarm/packaging-an-application/support-bundle/#default-support-files) included in the support bundle, addtional files can be added via A [custom troubleshoot spec](/docs/troubleshoot/collectors/overview). Files from within the application’s containers can be included, as well as output of commands executed in any of your app's containers.
 
-```
 
 {{< linked_headline "Excluding Logs From Support Bundles" >}}
 
@@ -62,10 +53,6 @@ services:
 ```
 
 {{< linked_headline "Default Support Files" >}}
-
-{{< note title="Legacy Support Bundle" >}}
-The content in this document is specific to the current default Support Bundle in Replicated. If you are looking for the legacy Support Bundle version of this document, it is available at <a href="/docs/swarm/packaging-an-application/support-bundle-v1/">{{< baseurl >}}/docs/swarm/packaging-an-application/support-bundle-v1/</a>
-{{< /note >}}
 
 By default the Support Bundle will include the following files in the master folder:
 
@@ -87,7 +74,7 @@ By default the Support Bundle will include the following files in the master fol
 | /default/commands/ps/stdout | Report a snapshot of the current processes. Result of the command `ps fauxwww` |
 | /default/commands/uptime/uptime | Tell how long the system has been running. Result of the command `uptime` |
 | /default/docker/container_ls.json | List all containers. Result of the command `docker ps -a` |
-| /default/docker/docker_info.json | Display system-wide information | 
+| /default/docker/docker_info.json | Display system-wide information |
 | /default/docker/docker_version.json | Docker version output |
 | /default/docker/image_ls.json | List all images. Result of the command `docker images`|
 | /default/etc/centos-release | Operating system identification data for centos distributions. A copy of the `/etc/centos-release` file. |
@@ -171,7 +158,7 @@ the private IP of the instance. It will contain the following files:
 | /default/commands/ip_route_show/stdout | Show routing table entries. Result of the command `ip -o route show` |
 | /default/commands/ps/stdout | Report a snapshot of the current processes. Result of the command `ps fauxwww` |
 | /default/commands/uptime/uptime | Tell how long the system has been running. Result of the command `uptime` |
-| /default/docker/docker_info.json | Display system-wide information | 
+| /default/docker/docker_info.json | Display system-wide information |
 | /default/docker/docker_version.json | Docker version output |
 | /default/docker/container_ls.json | List all containers. Result of the command `docker ps -a` |
 | /default/etc/centos-release | Operating system identification data for centos distributions. A copy of the `/etc/centos-release` file. |
