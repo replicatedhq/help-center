@@ -79,7 +79,7 @@ serve to authenticate your end customer to the registry.
 
 {{< linked_headline "Pull Private Images" >}}
 
-Now that you have an image pull secret, you can schedule your private images by referencing the Replicated Registry tag directly, and adding a referene to the `imagePullSecret` we created above.
+Now that you have an image pull secret, you can schedule your private images by referencing the Replicated Registry tag directly, and adding a reference to the `imagePullSecret` we created above.
 
 ```yaml
 apiVersion: v1
