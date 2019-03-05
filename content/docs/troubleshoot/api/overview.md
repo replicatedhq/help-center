@@ -13,7 +13,7 @@ hideFromList: true
 
 # Troubleshoot API
 
-The Replicated Troubleshoot API is implemented as a YAML spec. We currently support a single YAML file that defines both [collectors](../../collectors) and [lifecycle](../../lifecycle) elements.
+The Replicated Troubleshoot API is implemented as a YAML spec. We currently support a single YAML file that defines both [collectors](../../collectors) and [lifecycle](../../lifecycle/overview) elements.
 
 An short example spec that conforms to the latest Troubleshoot API is:
 
