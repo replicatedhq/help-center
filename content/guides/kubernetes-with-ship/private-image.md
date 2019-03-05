@@ -59,7 +59,6 @@ kind: Secret
 type: kubernetes.io/dockerconfigjson
 metadata:
   name: imagepullsecret-example
-  namespace: {{repl ConfigOption "namespace"}}
 stringData:
   .dockerconfigjson: |
     {
@@ -94,8 +93,41 @@ spec:
       image: registry.replicated.com/superci/superci-enterprise-api:1.0.1
 ```
 
-Note that this example uses a `Pod` for brevity, in production you'll probably want a `Deployment`, as used [elsewhere in this guide](/guides/kubernetes-with-ship/create-a-release#assets).
+Note that this example uses a `Pod` for brevity, in production you'll probably want a `Deployment`, as demonstrated [elsewhere in this guide](/guides/kubernetes-with-ship/create-a-release#assets).
 
+{{< linked_headline "Test your release" >}}
+
+Next, its time to test this and make sure everything is working. Since we'll be interacting with the Ship Vendor SaaS services, we'll need to add a few parameters to our Makefile to properly template in the `customer_id` and `installation_id` license keys. You can grab these fields from the install script you got in [console.replicated.com](https://console.replicated.com), and add them to the `run-local` and `run-local-headless` tasks. The lines to add are
+
+```makefile
+	    --customer-id <your customer id> \
+	    --installation-id <your installation id> \
+```
+
+For example, `run-local` might look like:
+
+```makefile
+run-local: clean-assets lint-ship
+	mkdir -p tmp
+	cd tmp && \
+	$(SHIP) app \
+	    --runbook $(PATH)/ship.yaml  \
+	    --set-github-contents $(REPO):/base:master:$(PATH) \
+	    --set-github-contents $(REPO):/scripts:master:$(PATH) \
+	    --set-channel-icon $(ICON) \
+	    --set-channel-name $(APP_NAME) \
+	    --customer-id <your customer id> \
+	    --installation-id <your installation id> \
+	    --log-level=off
+	@$(MAKE) print-generated-assets
+```
+
+When you `kubectl apply -f` your output YAML, you should see the new `api` pod created and--assuming your image works--it should be running. If you see an `ImagePullBackoff` in the `kubectl get pods` output, you should double check the example resources.
+
+#### Note 
+
+If you're not using the [starter repo to iterate locally](../iterate-locally), you can ignore this section and
+promote the release normally, adding `inline` assets for the `Secret` and `Pod`.
 
 {{< linked_headline "Next Steps" >}}
 
