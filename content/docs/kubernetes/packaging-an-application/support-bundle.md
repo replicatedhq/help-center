@@ -9,7 +9,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-A support bundle is an archive that is available for the customer to download via the Support tab of the On-Prem Console or the [Replicated CLI](/api/replicatedctl/replicatedctl_support-bundle/).
+A support bundle is an archive that is available for the customer to download via the Support tab of the Admin Console or the [Replicated CLI](/api/replicatedctl/replicatedctl_support-bundle/).
 
 Contents of the support page can be customized by including markdown in the top-level of the YAML.
 
@@ -31,8 +31,11 @@ support:
 
 {{< linked_headline "Custom Files and Commands" >}}
 
-Custom support bundle files and commands can be included by setting a default troubleshoot spec in [Replicated Console](https://console.replicated.com/troubleshoot/specs). The support bundle task definitions can be found [here](/api/support-bundle-yaml-specs/shared).
+{{< note title="Support Bundle 2.0" >}}
+The remainder of this document is specific to the current default Support Bundle in Replicated. If you are looking for the v1 version of this document, it is available at <a href="/docs/kubernetes/packaging-an-application/support-bundle-v1/">Support Bundle (Older Instances)</a>
+{{< /note >}}
 
+In addition to the [default support files](/docs/kubernetes/packaging-an-application/support-bundle/#default-support-files) included in the support bundle, addtional files can be added via A [custom troubleshoot spec](/docs/troubleshoot/collectors/overview). Files from within the application’s containers can be included, as well as output of commands executed in any of your app's containers.
 
 {{< linked_headline "Excluding Logs From Support Bundles" >}}
 
