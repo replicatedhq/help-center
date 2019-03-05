@@ -618,3 +618,14 @@ env_vars:
 ## Notes
 
 When referencing another container in a template object, you must make sure the referenced container is started first.  Please see the [Events and Orchestration](/docs/native/packaging-an-application/events-and-orchestration/) section for more information on orchestrating container startup.
+
+
+## Sprig
+
+[Sprig 2.19.0 template functions](https://github.com/Masterminds/sprig) can be used with the `repl` prefix.
+
+```yaml
+env_vars:
+- name: HELLO
+  value: '{{repl "hello!" | upper | repeat 5 }}'
+```
