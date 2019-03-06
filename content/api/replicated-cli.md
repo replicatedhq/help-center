@@ -55,14 +55,13 @@ replicated app <appid>
 
 Show and modify app state
 ```shell
-replicated app <appid> status|components|rm|start|stop|pause|unpause|settings
+replicated app <appid> status|components|start|stop|pause|unpause|settings
 ```
 
 | Command | Description |
 |---------|-------------------|
 | {{< version version="2.0" >}} status | Show app status (`Started`, `Paused`, etc) |
 | components | List app components |
-| rm | Delete app |
 | start &#124; stop &#124; pause &#124; unpause | Transition app into the specified state |
 | {{< version version="2.1" >}} settings | Export app settings in JSON format |
 
