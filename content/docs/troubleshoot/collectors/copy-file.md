@@ -9,3 +9,25 @@ aliases: [ /docs/troubleshoot/collectors ]
 icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
+
+# Copy File Collector
+
+A commonly used, general purpose collector is the `os.read-file` collector. This copies the contents of a file from the filesystem, and includes the copy in the support bundle.
+
+This collector is fully documented in the [reference docs](/api/support-bundle-yaml-specs/os-read-file/).
+
+### Example
+
+To illustrate how to use this collector, consider a support bundle that we'd like to collect some application specific log files from /var/log/application.log.
+
+```yaml
+collect:
+  v1:
+    - os.read-file:
+        output_dir: /logs/application.log
+        filepath: /var/log/application.log
+        include_empty: true
+```
+
+The above collector definition will include the log file in the support bundle at `/logs/application.log`, even if empty.
+
