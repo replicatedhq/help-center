@@ -14,5 +14,5 @@ gradient: "orangeToOrange"
 
 Some installations of Docker will disable inter-container communication, preventing containers on the server from communicating with each other over the host networking stack. This is a default setting for enterprise distrubutions such as RedHat Enterprise Linux.
 
-When debugging problems, this might be be obvious, and if ICC is disabled, a message will be displayed in the support bundle analyzers to help make the engineer aware of the fact that inter-container communication will be blocked.
+When debugging problems, this might not be obvious, and if ICC is disabled, a message will be displayed in the support bundle analyzers to help make the engineer aware of the fact that inter-container communication will be blocked.
 

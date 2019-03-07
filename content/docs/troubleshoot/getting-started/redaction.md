@@ -36,7 +36,7 @@ collect:
         output_dir: /app/main/
         scrub:
           regex: (DB_PASSWORD ?=)(.*)
-          replace: $1=REDACTED
+          replace: ${1}=REDACTED
 ```
 
 Then, when copying the file, `hunter2` would be replaced with `REDACTED`.
@@ -61,6 +61,6 @@ collect:
     - meta.redact:
         scrubs:
           - regex: (DB_PASSWORD ?=)(.*)
-            replace: $1=REDACTED
+            replace: ${1}=REDACTED
         output_dir: redact/
 ```

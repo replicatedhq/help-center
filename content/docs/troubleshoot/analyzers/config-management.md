@@ -12,9 +12,9 @@ gradient: "orangeToOrange"
 
 # Configuration Management Software
 
-Popular configuration management tools such as Chef, Puppet and Ansible are used to help mamangement large numbers of servers using automation.
+Popular configuration management tools such as Chef, Puppet and Ansible are used to help management large numbers of servers using automation.
 
-When setting up a server, especially a black box, appliance, it's important to have the server running with known-compatible software and dependencies. When an appliance is provisioned in an environment, occaisionally these configuration management tools will run and attempt to bring all of the software to known versions to match other servers in the environment. This can sometimes cause changes made locally to be reverted later.
+When setting up a server, especially an appliance, it's important to have the server running with known-compatible software and dependencies. When an appliance is provisioned in an environment, occaisionally these configuration management tools will run and attempt to bring all of the software to known versions to match other servers in the environment. This can sometimes cause changes made locally to be reverted later.
 
 The support bundle analyzers will detect if Chef or Puppet agents are installed and configured, and surface this as informational. It's important to know this when troubleshooting a server becasuse manual changes may not be possible.
 
