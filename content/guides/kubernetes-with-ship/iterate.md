@@ -18,15 +18,15 @@ This is part 4 of a guide that walks through creating a sample application in Re
 
 Now that you've run through your first installation, its time to get a feel for what updates feel like. This will take two steps:
 
-- Modifying the Ship YAML in [console.replicated.com](https://console.replicated.com) and promoting a new release
+- Modifying the Ship YAML in [vendor.replicated.com](https://vendor.replicated.com) and promoting a new release
 - Running `ship update` on a workstation to pull the latest release
 
 {{< linked_headline "Step 1: Updating your release" >}}
 
 For this example, we'll add some custom messaging to our end customer's workflow to explain the prerequisites for our example application.
-To update the release, head over to [Ship Channels](https://console.replicated.com/ship), find your Nightly channel, and click "View release". From here, you can find the "Update release" button to start drafting your next version:
+To update the release, head over to [Ship Releases](https://vendor.replicated.com/releases), and create a new release:
 
-![update release](/images/guides/ship/update-release.png)
+![update release](/images/guides/ship/create-another-release.png)
 
 
 Since releases are immutable, this creates a new "Draft" on the channel, which we can promote when we're ready. Lets update the `lifecycle` section to include a page with the app version and release notes. We'll add the following `message` step in between the first and second steps:
@@ -43,7 +43,9 @@ Your entire lifecycle should look like [the example here](https://github.com/rep
 
 Once you've updated your YAML, you can promote a new release, give it a version of `0.2.0`, and add some release notes:
 
-![release-notes](/images/guides/ship/release-notes.png)
+![release-notes](/images/guides/ship/promote-another-release.png)
+
+![release-notes](/images/guides/ship/promote-another-release-2.png)
 
 {{< note title="Injecting Metadata" >}}
 This makes use of the `Installation` template function to inject metadata about the application release. To learn more, you can review the [metadata fields available](https://github.com/replicatedhq/ship/blob/15dacf959485ffd8e9681220c2c6cf5fa5e97559/pkg/templates/installation_context.go#L37).
@@ -97,7 +99,11 @@ When iterating on your application assets, you can usually move more quickly by 
 ship update
 ```
 
-If you'd like, you can experiment with making changes to the the Kubernetes YAML in your release YAML, and seeing updates reflected in the `installer/k8s` directory after a headless update
+If you'd like, you can experiment with making changes to the the Kubernetes YAML in your release YAML, and seeing updates reflected in the `installer/k8s` directory after a headless update. Again, to do an update with the UI, you can use 
+
+```shell
+ship update --headed
+```
 
 ### Next steps
 
