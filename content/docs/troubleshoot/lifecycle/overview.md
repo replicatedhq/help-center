@@ -17,6 +17,8 @@ When writing a Troubleshoot custom collector, it's possible to add custom messag
 
 A default lifecycle spec is applied, if a different one is not provided. The default lifecycle simply collects a support bundle and writes it to disk.
 
+Replicated provides additional options in the lifecycle section, all of them are [documented in reference section](/api/support-bundle-yaml-lifecycle/root/).
+
 You can change this default behavior to avoid prompting and have custom messages, if desired by passing a custom lifecycle spec like this:
 
 ```yaml
