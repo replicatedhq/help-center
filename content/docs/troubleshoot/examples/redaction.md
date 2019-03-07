@@ -12,3 +12,5 @@ gradient: "orangeToOrange"
 # Redaction
 
 It's often required to redact sensitive information from a support bundle before delivering it for analysis.
+Redactors can be specified for an individual collector or for every collector at once.
+
