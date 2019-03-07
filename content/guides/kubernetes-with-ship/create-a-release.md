@@ -10,35 +10,44 @@ gradient: "console"
 icon: "replicatedShip"
 ---
 
-{{< linked_headline "Create a Customer" >}}
+{{< linked_headline "Create an Application" >}}
 
-To begin, log in (or create an account) on [console.replicated.com](https://console.replicated.com). If you already have an account on [vendor.replicated.com](https://vendor.replicated.com), you can use it here too. After signing up and activating your account, you'll be presented with the opportunity to create a new customer. Here we'll be using 'ATestCustomer'.
+To begin, log in (or create an account) on [vendor.replicated.com](https://vendor.replicated.com). If you already have an account on [console.replicated.com](https://console.replicated.com), you can use it here too. 
 
-![Create Customer](/images/guides/ship/created-customer.png)
+If this is your first time logging in, you'll be presented with a "Create your Application" page. If not, you'll need to click `Create new app` in the top-left application selector.
 
-{{< linked_headline "Navigate To Ship" >}}
+![shipvendor-create-app-1](/images/guides/ship/create-app-1.png)
 
-The Ship product page can be found through the 'Products' dropdown.
+You'll want to select `Replicated + Kubernetes`, and then select `Kubernetes + Replicated Ship`.
 
-![Products Dropdown](/images/guides/ship/products-dropdown.png)
+![shipvendor-create-app-2](/images/guides/ship/create-app-2.png)
 
-If you haven't visited before, you'll see a prompt to get started with Release Channels.
-
-![Release Channels](/images/guides/ship/release-channels.png)
+{{< note title="Ship for Non-Kubernetes Applications" >}}
+As noted in the [introduction](../introduction), Ship has deep Kubernetes integration, but it is not 
+limited to Kubernetes. If you are distributing other assets like Terraform, Ansible, or Bash Scripts,
+you should still choose the "Kubernetes + Replicated Ship" option.
+{{< /note >}}
 
 {{< linked_headline "Get Started With Release Channels" >}}
 
-By default, three release channels are created - Stable, Beta and Nightly. We'll start with a release on the Nightly channel. Once we've done some testing, we'll promote it to Beta.
+By default, three release channels are created - Stable, Beta and Nightly. We'll start with a release on the Nightly channel. Once we've done some testing, we'll promote it to Beta. You'll generally use the "Stable" channel for releasing new versions of your app to end customers' production environments. 
 
-![Create Release Channel](/images/guides/ship/stable-beta-nightly.png)
+![Default Channels](/images/guides/ship/default-channels.png)
+
+{{< linked_headline "Create a Release" >}}
+
+Next, you'll want to navigate to "Releases" and create a new release.
+
+![Create Release](/images/guides/ship/create-release-vw.png)
+
 
 {{< linked_headline "Editing a Release" >}}
 
 A Ship release is a yaml file describing the assets to include, the configuration options to present to the installer, and what text to display at runtime. We'll use the builtin editor on console to get started.
 
-![Edit Yaml](/images/guides/ship/edit-release.png)
+![Edit Yaml](/images/guides/ship/edit-release-vw.png)
 
-There are three sections to the Ship yaml - assets, config, and lifecycle. The yaml here can also be found [in the ship repo](https://github.com/replicatedhq/ship/blob/nginx-example/fixtures/just-nginx/ship.yaml)
+There are three sections to the Ship yaml - assets, config, and lifecycle. We'll cover each YAML section separately, but the full YAML used here can also be found [in the ship repo](https://github.com/replicatedhq/ship/blob/nginx-example/fixtures/just-nginx/ship.yaml). 
 
 {{< linked_headline "Assets" >}}
 
@@ -150,17 +159,26 @@ lifecycle:
               kubectl apply -f installer/k8s/
 ```
 
-{{< linked_headline "Create Release" >}}
+{{< linked_headline "Promote Release" >}}
 
-Once we've finished editing our yaml, we can create a release from it.
+Once we've finished editing our yaml, we can promote a release from it. Head back to the Releases tab and click "Promote".
 
-![Create Release](/images/guides/ship/create-release.png)
+![Promote Release](/images/guides/ship/promote-release-1.png)
 
-{{< linked_headline "Add Customer To Channel" >}}
+Next, give this release a version, and promote to the "Nightly" channel.
 
-Before we can test our app, we need to add a customer to the channel. Since Nightly releases shouldn't be going to production, we'll add ATestCustomer.
+![Promote Release](/images/guides/ship/promote-release-2.png)
 
-![Add Customer To Channel](/images/guides/ship/channel-details-withcust.png)
+{{< linked_headline "Create a Customer" >}}
+
+Before we can test our app, we need to create a customer and add them to the Nightly channel. 
+
+![Create Customer](/images/guides/ship/create-customer-1.png)
+
+Since Nightly releases shouldn't be going to production, we'll call our customer `A Test Customer` and set the license type to "Development". You can also set an expiration date if you'd like.
+
+![Create Customer](/images/guides/ship/create-customer-2.png)
+
 
 {{< linked_headline "Next Steps" >}}
 

@@ -16,9 +16,14 @@ This is part 3 of a guide that walks through creating a sample application in Re
 
 {{< linked_headline "Installing the Release" >}}
 
-Now we can produce an installation script for our test customer.
+Now that we've created a customer and a release, we can produce an installation script for our test customer.
 
-![Install A Release](/images/guides/ship/install-script.png)
+![Get Install Script](/images/guides/ship/customer-install-script.png)
+
+In the modal, you'll want to navigate to "Ship OSS".
+
+![Get Install Script](/images/guides/ship/copy-install-script.png)
+
 
 {{< note title="Installing Ship" >}}
 This guide assumes you'll run Ship with Homebrew using 
@@ -30,15 +35,17 @@ Copy the command from this screen, we'll run it in the next step. When your end 
 
 {{< linked_headline "Run the command" >}}
 
+Run the command from the modal. It should look something like:
+
 ```shell
-ship init "replicated.app/init?customer_id=0WPn1Ng6xxxxxxxxxxxxxjpUW&installation_id=Oa4adGM5q3e24super-secretf3BQd"
+ship init "replicated.app/superci-enterprise?license_id=MoYBbdP4sy6qomD9WdAWjAsWPsKF3YZ1"
 ```
 
-This command will read the release we created in [https://console.replicated.com](https://console.replicated.com) and then prompt us to open a browser:
+This command will read the release we created in [https://vendor.replicated.com](https://vendor.replicated.com) and then prompt us to open a browser:
 
 ```shell
 
-Reading replicated.app/init?customer_id=0WPn1Ng6dfxxxxxxxxxx4ENWfxjpUW&installation_id=Oa4adGM5q3e2super-secretBQd ...
+Reading replicated.app/superci-enterprise?license_id=MoYBbdP4sy6qomD9WdAWjAsWPsKF3YZ1 ...
 Determining application type ...
 Detected application type replicated.app
 
