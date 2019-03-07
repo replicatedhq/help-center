@@ -6,7 +6,7 @@ weight: "2103"
 categories: [ "Replicated Troubleshoot" ]
 index: ["docs/troubleshoot", "docs"]
 icon: "replicatedTroubleshoot"
-gradient: "console"
+gradient: "orangeToOrange"
 ---
 
 # Traceroute
