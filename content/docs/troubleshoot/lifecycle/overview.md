@@ -7,7 +7,7 @@ categories: [ "Replicated Troubleshoot" ]
 index: ["docs/troubleshoot", "docs"]
 aliases: [ /docs/troubleshoot/lifecyle ]
 icon: "replicatedTroubleshoot"
-gradient: "console"
+gradient: "orangeToOrange"
 hideFromList: true
 ---
 
@@ -16,6 +16,8 @@ hideFromList: true
 When writing a Troubleshoot custom collector, it's possible to add custom messaging and to add or remove upload prompts from the generation process.
 
 A default lifecycle spec is applied, if a different one is not provided. The default lifecycle simply collects a support bundle and writes it to disk.
+
+Replicated provides additional options in the lifecycle section, all of them are [documented in reference section](/api/support-bundle-yaml-lifecycle/root/).
 
 You can change this default behavior to avoid prompting and have custom messages, if desired by passing a custom lifecycle spec like this:
 

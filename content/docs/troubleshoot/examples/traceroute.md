@@ -6,9 +6,25 @@ weight: "2103"
 categories: [ "Replicated Troubleshoot" ]
 index: ["docs/troubleshoot", "docs"]
 icon: "replicatedTroubleshoot"
-gradient: "console"
+gradient: "orangeToOrange"
 ---
 
 # Traceroute
 
-Initiating a traceroute from the remote server to anothre rmote serverduring support bundle generation is a good way to check on the outbound route used.
+Initiating a traceroute from the remote server to another remote server during support bundle generation is a good way to check on the outbound route used.
+
+```yaml
+- docker.run:
+    description: Trace route to 1.1.1.1
+    output_dir: /commands/traceroute/
+    enable_pull: true
+    container_create_config:
+      Config:
+        Cmd:
+          - traceroute
+          - 1.1.1.1
+        Image: 'alpine:latest'
+      HostConfig:
+        AutoRemove: true
+        NetworkMode: host
+```

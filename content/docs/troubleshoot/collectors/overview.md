@@ -7,7 +7,7 @@ categories: [ "Replicated Troubleshoot" ]
 index: ["docs/troubleshoot", "docs"]
 aliases: [ /docs/troubleshoot/collectors ]
 icon: "replicatedTroubleshoot"
-gradient: "console"
+gradient: "orangeToOrange"
 hideFromList: true
 ---
 

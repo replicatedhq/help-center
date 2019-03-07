@@ -5,5 +5,5 @@ description: "Replicated Troubleshoot Collectors"
 weight: "1701"
 categories: [ "Troubleshoot" ]
 index: false
-icon: "replicatedCircle"
+icon: "replicatedTroubleshoot"
 ---
