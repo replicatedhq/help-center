@@ -15,6 +15,7 @@ aliases:
   - /guides/troubleshoot/generate/
   - /guides/troubleshoot/iterating/
   - /guides/troubleshoot/github/
+  - /guides/support-bundle
 icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 hideFromList: true
