@@ -5,7 +5,16 @@ description: "An overview of Troubleshoot"
 weight: "1602"
 categories: [ "Replicated Audit Log" ]
 index: ["docs/audit-log", "docs"]
-aliases: [ /docs/troubleshoot/, /docs/troubleshoot/getting-started, /docs/troubleshoot/analyzers, /docs/troubleshoot/api/ ]
+aliases:
+  - /docs/troubleshoot/
+  - /docs/troubleshoot/getting-started
+  - /docs/troubleshoot/analyzers
+  - /docs/troubleshoot/api/
+  - /guides/troubleshoot/
+  - /guides/troubleshoot/spec/
+  - /guides/troubleshoot/generate/
+  - /guides/troubleshoot/iterating/
+  - /guides/troubleshoot/github/
 icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 hideFromList: true
