@@ -50,7 +50,7 @@ collect:
 In this example, we're using a couple more advanced features.
 First, `(?i)` at the beginning of the regex sets case-insensitive mode.
 We're also using yaml's multiline string formatting to avoid having to escape quotes or other special characters.
-It's also far easier to develop a regular expression like by experimenting with various inputs and outputs - [regex101](https://regex101.com/r/uu7Jkz/1) can be used to develop the matching string and [The Go Playground](https://play.golang.org/p/vB8XfahaXDj) is useful to validate that the entire replace sequence worked as expected.
+It's also far easier to develop a regular expression by experimenting with various inputs and outputs - [regex101](https://regex101.com/r/uu7Jkz/1) can be used to develop the matching string and [The Go Playground](https://play.golang.org/p/vB8XfahaXDj) is useful to validate that the entire replace sequence worked as expected.
 
 
 # Redacting all collectors
