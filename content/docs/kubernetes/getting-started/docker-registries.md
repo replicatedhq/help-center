@@ -62,7 +62,7 @@ Replicated supports pulling public, unauthenticated images from any Docker regis
 
 Additionally, Replicated supports private images hosted in other registries including Docker Hub, Quay.io and more.
 
-To use private images from an external registry, you need to add the registry via the Vendor website. The guide for [integrating a third party registry](https://help.replicated.com/community/t/using-third-party-registries/45/2) explains this in further detail.
+To use private images from an external registry, you need to add the registry via the Vendor website. The guide for [integrating a third party registry](https://help.replicated.com/community/t/using-third-party-registries/45) explains this in further detail.
 
 {{< linked_headline "Referencing Images from the Replicated Registry and Private Registries" >}}
 
