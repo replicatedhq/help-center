@@ -1,0 +1,21 @@
+[
+  "server:8800",
+  "10.128.0.4",
+  "get.company.com/docker",
+  "auditlog.mycompany.com",
+  "registry.mycompany.com",
+  "tail.mycompany.com",
+  "registry.replicated.com",
+  "registry-data.replicated.com",
+  "api.replicated.com",
+  "get.replicated.com",
+  "www.replicated.com/ship",
+  "help.replicated.com/community",
+  "help.replicated.com/tos",
+  "help.replicated.com/faq",
+  "help.replicated.com/privacy",
+  "help.replicated.com/guidelines",
+  "microsoft.com",
+  "golang.org",
+  "circleci.com"
+]
