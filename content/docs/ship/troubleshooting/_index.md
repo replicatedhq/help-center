@@ -6,5 +6,6 @@ weight: "45001"
 categories: [ "Ship Troubleshooting" ]
 icon: "ship"
 hideFromList: true
+draft: true
 index: false
 ---

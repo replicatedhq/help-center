@@ -1,11 +1,12 @@
 ---
 date: "2018-05-02T01:19:20Z"
-title: "Lifecycle Overview"
+title: "Lifecycle"
 description: "Introduction to the Ship lifecycle definition"
 weight: "42002"
 categories: [ "Ship Lifecycle" ]
 index: ["docs/products", "docs"]
 icon: "replicatedShip"
+hideFromList: true
 gradient: "console"
 ---
 

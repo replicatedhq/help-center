@@ -1,11 +1,12 @@
 ---
 date: "2018-05-02T01:19:20Z"
-title: "Config Overview"
+title: "Config"
 description: "Introduction to the Ship Config syntax"
 weight: "43002"
 categories: [ "Ship Config" ]
 index: ["docs/products", "docs"]
 icon: "replicatedShip"
+hideFromList: true
 gradient: "console"
 ---
 

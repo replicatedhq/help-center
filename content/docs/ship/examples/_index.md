@@ -7,4 +7,5 @@ categories: [ "Ship Examples" ]
 icon: "ship"
 hideFromList: true
 index: false
+draft: true
 ---
