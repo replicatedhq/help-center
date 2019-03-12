@@ -39,7 +39,6 @@ replicatedctl
 * [replicatedctl console-auth](/api/replicatedctl/replicatedctl_console-auth/)	 - Manage UI console authentication settings
 * [replicatedctl license](/api/replicatedctl/replicatedctl_license/)	 - Manage the license
 * [replicatedctl license-load](/api/replicatedctl/replicatedctl_license-load/)	 - Load the license from stdin
-* [replicatedctl migration](/api/replicatedctl/replicatedctl_migration/)	 - Migrate installation to the Kubernetes scheduler
 * [replicatedctl params](/api/replicatedctl/replicatedctl_params/)	 - Manage Replicated daemon parameters. Provides the ability to import, export, set and unset parameters.
 * [replicatedctl preflight](/api/replicatedctl/replicatedctl_preflight/)	 - View or manage preflight checks
 * [replicatedctl snapshot](/api/replicatedctl/replicatedctl_snapshot/)	 - Manage snapshots
