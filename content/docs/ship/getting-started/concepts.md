@@ -3,7 +3,7 @@ date: "2018-03-03T04:02:20Z"
 title: "Concepts and Terminology"
 description: "The core concepts and terms used in these documents to describe the Replicated functionality."
 weight: "40003"
-categories:  [ "Shipping with Ship" ]
+categories:  [ "Ship" ]
 index: ["docs/ship", "docs"]
 gradient: "console"
 icon: "replicatedShip"
@@ -15,13 +15,10 @@ Before shipping your application, there are a few terms to learn, as they are us
 An application (or app) is the software package you are installing onto your customer's servers. It isn't a single binary, rather it's all of the individual components which make your product.
 
 ### Channel
-Channels are used to stage out releases for customers or customer segments. By default there are Stable, Beta and Unstable channels.
+Channels are used to stage out releases for customers or customer segments. By default there are Stable, Beta and Nightly channels.
 
 ### Release
 A release is a shipped version of the application, complete with release notes & version number.
-
-### Admin Console
-The Admin Console is the on-prem UI that is used to install, license, configure and update an application delivered by Replicated.
 
 ### Ship OSS / Ship CLI
 

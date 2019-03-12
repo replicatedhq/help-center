@@ -3,7 +3,7 @@ date: "2018-03-03T04:02:20Z"
 title: "Create Customers & Licenses"
 description: "Details on the options available to vendors when creating a license for an end customer's upcoming installation."
 weight: "40008"
-categories: [ "Shipping with Ship" ]
+categories: [ "Ship" ]
 index: ["docs/ship", "docs"]
 gradient: "console"
 icon: "replicatedShip"
@@ -19,11 +19,7 @@ The name of the customer to whom this license is assigned.
 
 {{< linked_headline "Assigned Channel (Required)" >}}
 
-When you create a license you'll need to assign it to a release channel.  Stable channel is intended to be used for production installations.  Unstable and Beta channels are intended for internal testing. [More about release channel management](/docs/getting-started/manage-releases/).
-
-{{< linked_headline "Expiration Policy" >}}
-
-When you create a license you can specify how the license will behave when it expires.  The policy can ignore expiration, allow a running application to continue but prevent updates, or stop the running application and prevent updates.
+When you create a license you'll need to assign it to a release channel.  Stable channel is intended to be used for production installations.  Nightly and Beta channels are intended for internal testing. [More about release channel management](/docs/getting-started/manage-releases/).
 
 {{< linked_headline "Customer Type (Required)" >}}
 
