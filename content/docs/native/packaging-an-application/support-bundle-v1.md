@@ -9,6 +9,33 @@ icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/support-bundle-v1/]
 ---
 
+{{< linked_headline "Custom Files and Commands" >}}
+
+In addition to the [default support files](/docs/native/packaging-an-application/support-bundle-v1/#default-support-files) included in the support bundle, additional files can be added via the `support` section of your yaml. Files from within the application’s containers can be included, as well as output of commands executed in the container. Support files and commands are supported by both the native and kubernetes schedulers. For more complex support commands it is possible to create a [config file](/docs/native/packaging-an-application/config-files) and execute that file from a support command. These files will be available within the _/scheduler_ directory of the support bundle.
+
+```yaml
+support:
+  files:
+    - filename: /var/log/nginx/access.log
+      source:
+        replicated:
+          component: Nginx
+          container: my-nginx
+        kubernetes:
+          selector:
+            run: my-nginx
+  commands:
+    - filename: access_last_1000.log
+      command: [tail, -n1000, /var/log/nginx/access.log]
+      source:
+        replicated:
+          component: Nginx
+          container: my-nginx
+        kubernetes:
+          selector:
+            run: my-nginx
+```
+
 {{< linked_headline "Default Support Files" >}}
 
 By default the Support Bundle V1 will include the following files:

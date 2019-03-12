@@ -31,39 +31,18 @@ support:
 
 {{< linked_headline "Custom Files and Commands" >}}
 
-In addition to the [default support files](/docs/native/packaging-an-application/support-bundle/#default-support-files) included in the support bundle, additional files can be added via the `support` section of your yaml. Files from within the application’s containers can be included, as well as output of commands executed in the container. Support files and commands are supported by both the native and kubernetes schedulers. For more complex support commands it is possible to create a [config file](/docs/native/packaging-an-application/config-files) and execute that file from a support command. These files will be available within the _/scheduler_ directory of the support bundle.
+{{< note title="Older Replicated Instances" >}}
+The content in this document is specific to the current default Support Bundle in Replicated. If you are looking for information pertaining to previous releases of Replicated, it is available at <a href="/docs/native/packaging-an-application/support-bundle-v1/">{{< baseurl >}}native/packaging-an-application/support-bundle-v1/</a>
+{{< /note >}}
 
-```yaml
-support:
-  files:
-    - filename: /var/log/nginx/access.log
-      source:
-        replicated:
-          component: Nginx
-          container: my-nginx
-        kubernetes:
-          selector:
-            run: my-nginx
-  commands:
-    - filename: access_last_1000.log
-      command: [tail, -n1000, /var/log/nginx/access.log]
-      source:
-        replicated:
-          component: Nginx
-          container: my-nginx
-        kubernetes:
-          selector:
-            run: my-nginx
-```
+In addition to the [default support files](/docs/native/packaging-an-application/support-bundle/#default-support-files) included in the support bundle, additional files can be included by configuring a [custom troubleshoot spec](/docs/troubleshoot/collectors/overview) for the desired app channel.
+This custom troubleshoot spec will be included with the default replicated specs when a support bundle is generated.
 
 {{< linked_headline "Excluding Logs From Support Bundles" >}}
+
 If a container's logs may contain sensitive information or are simply large and not useful for your debugging processes, you can exclude that container's logs from support bundles and disk persistance. To do this, [add the label](/docs/native/packaging-an-application/docker-options/#labels) `com.replicated.excludelogs=true` to the container in question.
 
 {{< linked_headline "Default Support Files" >}}
-
-{{< note title="Older Replicated Instances" >}}
-The content in this document is specific to the current default Support Bundle in Replicated. If you are looking for the list of files included in previous releases of Replicated, it is available at <a href="/docs/native/packaging-an-application/support-bundle-v1/">{{< baseurl >}}native/packaging-an-application/support-bundle-v1/</a>
-{{< /note >}}
 
 By default the Support Bundle will include the following files in the master folder:
 
