@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-release_ls
 categories:
 - replicatedctl
-date: 2018-11-02T12:45:57-07:00
+date: "2019-03-11T17:10:05-07:00"
 description: List app releases
 gradient: purpleToPink
 index: docs

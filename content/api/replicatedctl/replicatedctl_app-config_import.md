@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-config_import
 categories:
 - replicatedctl
-date: 2018-11-02T12:45:57-07:00
+date: "2019-03-11T17:10:05-07:00"
 description: Import app config settings from stdin
 gradient: purpleToPink
 index: docs
@@ -26,8 +26,9 @@ replicatedctl app-config import [flags]
 ### Options
 
 ```
-      --format string   Input format. One of: json|yaml (default "json")
-  -h, --help            help for import
+      --format string     Input format. One of: json|yaml (default "json")
+  -h, --help              help for import
+      --skip-validation   Save without validating
 ```
 
 ### Options inherited from parent commands

@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_snapshot_restore
 categories:
 - replicatedctl
-date: 2018-11-02T12:45:57-07:00
+date: "2019-03-11T17:10:06-07:00"
 description: Restore installation from the specified spanshot
 gradient: purpleToPink
 index: docs
@@ -35,7 +35,7 @@ replicatedctl snapshot restore ID [flags]
 
 ```
       --host string                        Replicated API host (default "unix:///var/run/replicated/replicated-cli.sock")
-      --path string                        Snapshot location path. The value should be an absolute path. This option is only used with local and sftp backends.
+      --path string                        Snapshot location path. The value should be an absolute path.
       --s3-bucket string                   S3 bucket name. This option is only used with s3 backend.
       --s3-compatible-endpoint string      AWS compatible S3 endpoint. This option is only used with s3 backend.
       --s3-key-id string                   ID of the secret key that has write access to the specified S3 bucket. This option is only used with s3 backend.

@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-release_apply
 categories:
 - replicatedctl
-date: 2018-11-02T12:45:57-07:00
+date: "2019-03-11T17:10:05-07:00"
 description: Applies pending app releases
 gradient: purpleToPink
 index: docs
@@ -27,7 +27,7 @@ replicatedctl app-release apply [flags]
 
 ```
   -a, --attach               Attach to task
-      --fetch-timeout uint   Fetch timeout in seconds (default 60)
+      --fetch-timeout uint   Fetch timeout in seconds (default 300)
   -h, --help                 help for apply
   -q, --quiet                Only display task ID
       --raw                  Raw JSON stream

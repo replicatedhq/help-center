@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_support-bundle
 categories:
 - replicatedctl
-date: 2018-11-02T12:45:57-07:00
+date: "2019-03-11T17:10:06-07:00"
 description: Generate a support bundle
 gradient: purpleToPink
 index: docs
