@@ -36,6 +36,10 @@ support:
             run: my-nginx
 ```
 
+{{< linked_headline "Excluding Logs From Support Bundles" >}}
+
+If a container's logs may contain sensitive information or are simply large and not useful for your debugging processes, you can exclude that container's logs from support bundles and disk persistance. To do this, [add the label](/docs/native/packaging-an-application/docker-options/#labels) `com.replicated.excludelogs=true` to the container in question.
+
 {{< linked_headline "Default Support Files" >}}
 
 By default the Support Bundle V1 will include the following files:
