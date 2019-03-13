@@ -9,7 +9,7 @@ weight: "100"
 gradient: "purpleToPink"
 ---
 
-[Assets](/api/ship-assets/assets) | [Config](/api/ship-config/config) | [Lifecycle](/api/ship-lifecycle/lifecycle)
+[Assets](/api/ship-assets/overview) | [Config](/api/ship-config/overview) | [Lifecycle](/api/ship-lifecycle/overview)
 
 ## terraform
 
@@ -23,6 +23,9 @@ A `terraform` step will deploy terraform resources.
 
 
 - `path` - the directory within `installer` within which to run terraform.
+
+
+- `when` - If 'when' is not empty and evaluates to false, the terraform lifecycle step will be skipped.
 
 
 ### Examples

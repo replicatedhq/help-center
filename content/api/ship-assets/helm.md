@@ -9,7 +9,7 @@ weight: "100"
 gradient: "purpleToPink"
 ---
 
-[Assets](/api/ship-assets/assets) | [Config](/api/ship-config/config) | [Lifecycle](/api/ship-lifecycle/lifecycle)
+[Assets](/api/ship-assets/overview) | [Config](/api/ship-config/overview) | [Lifecycle](/api/ship-lifecycle/overview)
 
 ## helm
 
@@ -41,7 +41,9 @@ A `helm` asset will template and render an existing helm chart. You can either r
 
     optional:
 
-  - `source` - One of `public` or `private`, if `private`, access to the repo can be validated on release creation
+  - `proxy` - Boolean true or false, determines whether a repository is fetched via the Replicated API. Should be used for private repos.
+
+  - `source` - Deprecated
 
 
 - `helm_fetch` - Configuration for indicating a chart hosted somewhere that would be accessible to the `helm fetch` function.
@@ -86,7 +88,7 @@ assets:
           repo: github.com/replicatedhq/superbigtool-k8s
           ref: 8fcaebe55af67fe6789fa678faaa76fa867fbc
           path: k8s-yamls/
-          source: private
+          proxy: true
         dest: charts/rendered/
 ```
 
