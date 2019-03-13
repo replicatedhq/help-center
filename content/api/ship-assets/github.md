@@ -31,9 +31,6 @@ A `github` asset is created from files downloaded from either a public or a link
 - `repo` - The GitHub repository to pull from, formated as `owner`/`repo` e.g. `replicatedhq/ship`
 
 
-- `source` - One of `public` or `private`, if `private`, access to the repo can be validated on release creation
-
-
 
 ### Optional Parameters
 
@@ -41,7 +38,13 @@ A `github` asset is created from files downloaded from either a public or a link
 - `mode` - If present, overrides the file mode of all files included by this asset.
 
 
+- `proxy` - Boolean true or false, determines whether a repository is fetched via the Replicated API. Should be used for private repos.
+
+
 - `ref` - Reference to a github commit to pull, usually a SHA or a tag -- usage of branches is supported but discouraged as content could change within a single Ship release
+
+
+- `source` - Deprecated
 
 
 - `strip_path` - If true, the github directory will not be included in the filepath of the generated files. For instance, when outputting all files within 'source/' in the repository to the 'dest/' directory, the file 'source/a/file.txt' would be placed at 'dest/source/a/file.txt' when this is false and 'dest/a/file.txt' when this is true.
@@ -60,7 +63,7 @@ assets:
         ref: 8fcaebe55af67fe6789fa678faaa76fa867fbc
         path: k8s-yamls/
         dest: ./k8s/
-        source: private
+        proxy: true
         strip_path: ''
 ```
 
@@ -72,7 +75,7 @@ assets:
         ref: master
         path: hack/docs/
         dest: './docs{{repl Add 1 1}}/'
-        source: public
+        proxy: false
         mode: 644
         strip_path: '{{repl ParseBool "true"}}'
 ```

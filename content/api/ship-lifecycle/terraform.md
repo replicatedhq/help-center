@@ -25,6 +25,9 @@ A `terraform` step will deploy terraform resources.
 - `path` - the directory within `installer` within which to run terraform.
 
 
+- `when` - If 'when' is not empty and evaluates to false, the terraform lifecycle step will be skipped.
+
+
 ### Examples
 
 ```yaml
