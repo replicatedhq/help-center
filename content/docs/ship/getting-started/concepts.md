@@ -22,7 +22,7 @@ A release is a shipped version of the application, complete with release notes &
 
 ### Ship OSS / Ship CLI
 
-Replicated Ship is an Open Source Software tool that customers run locally, like an installer, to configure the initial site-specific options for a Replicated application.  It also provides a way to integrate updates of that application into a customer's existing continuous integration & deployment pipeline, and to make update releases available as Pull Requests into infrastructure-as-code respositories.
+Replicated Ship is an Open Source Software tool that customers run locally, like an installer, to configure the initial site-specific options for a Replicated application. It also provides a way to integrate updates of that application into a customer's existing continuous integration & deployment pipeline, and to make update releases available as Pull Requests into infrastructure-as-code respositories.
 
 Replicated Ship can also be used to manage off-the-shelf commercial or open source applications packaged as raw Kubernetes YAML or Helm Charts.
 

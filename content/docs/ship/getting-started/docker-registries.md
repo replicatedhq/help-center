@@ -72,4 +72,4 @@ Images stored in the Replicated private registry or an external private registry
 
 {{< linked_headline "Working with existing Docker Registries for Airgap Scenarios" >}}
 
-Ship applications can be configured to work with a customer's existing registry, in order to install into an airgap cluster.  See [this playbook](/docs/ship/playbooks/airgap-kubernetes) for details.
+Ship applications can be configured to work with a customer's existing registry, in order to install into an airgap cluster. See [this playbook](/docs/ship/playbooks/airgap-kubernetes) for details.

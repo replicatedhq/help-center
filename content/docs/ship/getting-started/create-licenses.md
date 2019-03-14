@@ -19,7 +19,7 @@ The name of the customer to whom this license is assigned.
 
 {{< linked_headline "Assigned Channel (Required)" >}}
 
-When you create a license you'll need to assign it to a release channel.  Stable channel is intended to be used for production installations.  Nightly and Beta channels are intended for internal testing. [More about release channel management](/docs/getting-started/manage-releases/).
+When you create a license you'll need to assign it to a release channel. Stable channel is intended to be used for production installations. Nightly and Beta channels are intended for internal testing. [More about release channel management](/docs/getting-started/manage-releases/).
 
 {{< linked_headline "Customer Type (Required)" >}}
 
