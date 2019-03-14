@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_license
 categories:
 - replicatedctl
-date: "2019-03-11T17:10:06-07:00"
+date: "2019-03-12T12:19:48-07:00"
 description: Manage the license
 gradient: purpleToPink
 index: docs
