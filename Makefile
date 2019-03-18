@@ -2,6 +2,7 @@ VENDOR_SWAGGER_SOURCE ?= "https://api.replicated.com/vendor"
 
 SHELL := /bin/bash -o pipefail
 install:
+	if command -v "brew" > /dev/null 2>&1; then brew install hugo; fi
 	yarn
 
 build:

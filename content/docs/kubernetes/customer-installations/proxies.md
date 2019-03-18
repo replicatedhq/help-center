@@ -2,7 +2,7 @@
 date: "2018-07-18T04:02:20Z"
 title: "Proxies"
 description: "Configuring Replicated to work with an HTTP proxy"
-weight: "2705"
+weight: "2706"
 categories: [ "Manage Customer Installations" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
