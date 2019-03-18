@@ -29,11 +29,3 @@ The load balancer can be reconfigured later by rerunning the init script on one 
 Once Replicated is installed on the first master, it is possible to add additional master nodes. On the Cluster page on the On-Prem Console an "Add Node" button will be visible with the option to generate a script to add an additional master or worker node. Additionally, the master node join script can be generated using the CLI command [`replicatedctl cluster node-join-script --master`](https://help.replicated.com/api/replicatedctl/replicatedctl_cluster_node-join-script/).
 
 ![Add Node Script](/images/post-screens/add-node-k8s-master.png)
-
-{{< linked_headline "Ingress" >}}
-
-TODO
-
-{{< linked_headline "Certificate Rotation" >}}
-
-TODO
