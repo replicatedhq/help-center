@@ -11,7 +11,7 @@ icon: "replicatedShip"
 ---
 
 {{< note title="Part 6 Of A Series" >}}
-This is part 6 of a guide that walks through creating a sample application in Replicated Ship. If you haven't followed the previous sections of this guide, go back to [iterating locally](../iterate-locally) before following this guide. 
+This is part 6 of a guide that walks through creating a sample application in Replicated Ship. If you haven't followed the previous sections of this guide, go back to [iterating locally](../iterate-locally) before following this guide.
 {{< /note >}}
 
 With the [recommended repository layout](../iterate-locally) set up, the next step is to push a private image to the [Replicated Registry](/docs/registry/security) and use Ship's built-in licensing to give your end customers access.
@@ -20,7 +20,7 @@ With the [recommended repository layout](../iterate-locally) set up, the next st
 {{< linked_headline "Logging in to the Registry" >}}
 
 {{< note title="Replicated Registry Only" >}}
-Ship supports pulling images from other registries like ECR, GCR, Docker Hub, Quay, etc. For the 
+Ship supports pulling images from other registries like ECR, GCR, Docker Hub, Quay, etc. For the
 sake of simplicity, this guide is limited to pushing and pulling directly to and from the Replicated Registry
 (registry.replicated.com). Furthermore, while Ship supports delivering image archive bundles for airgapped installations,
 we'll only cover online installations here.
@@ -31,20 +31,20 @@ You can log to the registry using your username and password you to log into [co
 ```bash
 $ docker login registry.replicated.com
 Username: ...
-Password: 
+Password:
 ```
 
 The docker CLI will prompt you for your username and password.
 
 {{< linked_headline "Tag and Push" >}}
 
-You'll want tag your images using your ship app "slug" as the registry namespace. For example, if your app is called `Super CI`, then your app slug might be something like `superci`. You can find the app slug under the "Settings" tab in [the vendor console](https://vendor.replicated.com). 
+You'll want tag your images using your ship app "slug" as the registry namespace. For example, if your app is called `Super CI`, then your app slug might be something like `superci`. You can find the app slug under the "Settings" tab in [the vendor console](https://vendor.replicated.com).
 
-Assuming you've already got an image in a private Docker Hub (or ECR, GCR, etc.) repo at `superci/superci-enterprise-api:1.0.1`, you'lll want to retag it and push it to the registry. 
+Assuming you've already got an image in a private Docker Hub (or ECR, GCR, etc.) repo at `superci/superci-enterprise-api:1.0.1`, you'lll want to retag it and push it to the registry.
 
 ```bash
 docker pull superci/superci-enterprise-api:1.0.1
-docker tag superci/superci-enterprise-api:1.0.1 registry.replicated.com/superci/api:1.0.1 
+docker tag superci/superci-enterprise-api:1.0.1 registry.replicated.com/superci/api:1.0.1
 docker push registry.replicated.com/superci/api:1.0.1
 ```
 
@@ -64,10 +64,10 @@ stringData:
     {
       "auths": {
         "registry.replicated.com": {
-          "auth": "{{repl (Base64Encode (print (Installation "customer_id") ":" (Installation "installation_id")))}}",
+          "auth": "{{repl (Base64Encode (print (Installation "license_id") ":" (Installation "license_id")))}}",
           "email": "fake@fake.com",
-          "username": "{{repl Installation "customer_id"}}",
-          "password": "{{repl Installation "installation_id"}}"
+          "username": "{{repl Installation "license_id"}}",
+          "password": "{{repl Installation "license_id"}}"
         }
       }
     }
@@ -124,7 +124,7 @@ run-local: clean-assets lint-ship
 
 When you `kubectl apply -f` your output YAML, you should see the new `api` pod created and--assuming your image works--it should be running. If you see an `ImagePullBackoff` in the `kubectl get pods` output, you should double check the example resources.
 
-#### Note 
+#### Note
 
 If you're not using the [starter repo to iterate locally](../iterate-locally), you can ignore this section and
 promote the release normally, adding `inline` assets for the `Secret` and `Pod`.
@@ -134,4 +134,3 @@ promote the release normally, adding `inline` assets for the `Secret` and `Pod`.
 You can now transparently deliver your private images alongside your Kubernetes YAML. End Customers will only have access to pull your images until their license keys expire.
 
 Now that you've got a feel for Ship basics, its time to take [a deep dive into Ship features](../explore-features).
-
