@@ -11,7 +11,7 @@ gradient: "console"
 
 {{< linked_headline "Pulling images from Replicated registry" >}}
 
-When installing an application on a server that has internet access, private images can be served from Replicated registry. Authentication will be performed with `customer_id` and `installation_id` as the username and the password respectively. These can be used with the `docker login` command or as Kubernetes registry secrets. In the following example, a Kubernetes secret is created in order to pull a private image from Replicated registry.
+When installing an application on a server that has internet access, private images can be served from Replicated registry. Authentication will be performed with `license_id`. This can be used with the `docker login` command or as Kubernetes registry secrets. In the following example, a Kubernetes secret is created in order to pull a private image from Replicated registry.
 
 ```yaml
 ---
@@ -42,7 +42,7 @@ assets:
             name: replicatedregistrykey
           type: kubernetes.io/dockerconfigjson
           data:
-            .dockerconfigjson: {{repl print "{\"auths\": {\"registry.replicated.com\":{\"username\":\"" (Installation "customer_id") "\",\"password\":\"" (Installation "installation_id") "\" } } } " | Base64Encode }}
+            dockerconfigjson: {{repl print "{\"auths\": .dockerconfigjson: {{repl print "{\"auths\": {\"registry.replicated.com\":{\"username\":\"" (Installation "license_id") "\",\"password\":\"" (Installation "license_id") "\" } } } " | Base64Encode }}
   ```
 
 {{< linked_headline "Shipping a Docker Registry for airgap installations" >}}

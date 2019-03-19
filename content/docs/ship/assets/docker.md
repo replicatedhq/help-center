@@ -35,10 +35,10 @@ assets:
               {
                 "auths": {
                   "registry.replicated.com": {
-                    "auth": "{{repl (Base64Encode (print (Installation "customer_id") ":" (Installation "installation_id")))}}",
+                    "auth": "{{repl (Base64Encode (print (Installation "license_id") ":" (Installation "license_id")))}}",
                     "email": "fake@fake.com",
-                    "username": "{{repl Installation "customer_id"}}",
-                    "password": "{{repl Installation "installation_id"}}"
+                    "username": "{{repl Installation "license_id"}}",
+                    "password": "{{repl Installation "license_id"}}"
                   }
                 }
               }
