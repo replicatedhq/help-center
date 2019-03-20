@@ -16,7 +16,7 @@ It's possible to override the `CMD` and/or `ENTRYPOINT` in a container, when usi
   - source: public
     image_name: redis
     ...
-    entrypoint: '["redis-server"]'
+    entrypoint: ["redis-server"]
     cmd: '["--appendonly", "yes"]'
 ```
 
