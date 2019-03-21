@@ -23,7 +23,7 @@ Snapshots include customer console configuration, data from bind mounted volumes
 
 `script`: A shell script that will run on the server at the time of backup. _Note: The designated executable must be `/bin/sh`. `/bin/bash` is not available in the container that executes the script._
 
-`restore_script`: A shell script that will run on the server at the time of restore.  This script will be executed after all other data has been restored and the application has entered the Started state.
+`restore_script`: A shell script that will run on the server at the time of restore.  This script will be executed after all other data has been restored and the application has entered the Started state. *NOTE: this feature is not yet supported when running with the Kubernetes scheduler.*
 
 ```yaml
 backup:
@@ -53,7 +53,7 @@ The multi-strategy snapshot functionality in Replicated Platform supports differ
 
 `script`: A shell script that will run on the server at the time of backup. _Note: The designated executable must be `/bin/sh`. `/bin/bash` is not available in the container that executes the script._
 
-`restore_script`: A shell script that will run on the server at the time of restore.  This script will be executed after all other data has been restored and the application has entered the Started state.  Only the script defined for the strategy whose snapshot is being restored will be executed.
+`restore_script`: A shell script that will run on the server at the time of restore.  This script will be executed after all other data has been restored and the application has entered the Started state.  Only the script defined for the strategy whose snapshot is being restored will be executed. *NOTE: this feature is not yet supported when running with the Kubernetes scheduler.*
 
 ```yaml
 backup:
