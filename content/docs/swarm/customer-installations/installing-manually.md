@@ -27,7 +27,7 @@ docker stack deploy -c docker-compose.yml replicated
 
 | Flag | Default | Usage |
 | ---- | ------- | ----- |
-| user_id               |  | User ID that will be used to create Replicated containers. If specified, `group_id` mayb need to be specified as well. |
+| user_id               |  | User ID that will be used to create Replicated containers. If specified, `group_id` may need to be specified as well. |
 | group_id              |  | Group ID that will be used to create Replicted containers. If specified, `user_id` must be specified as well. |
 | log_level             | info | Log level for Replicated container.  Possible values are `debug`, `info`, `warn`, `error` |
 | public_address        | | The public IP address for stack.  This parameter is optional, but if it is not specified, `NodePublicIP...` template functions will return empty strings. |
