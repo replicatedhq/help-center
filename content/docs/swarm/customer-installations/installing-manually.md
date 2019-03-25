@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Installing to an Existing Cluster"
-description: "Instructions for installing Replicated to an existing Docker Swarm cluster"
+title: "Installing Manually"
+description: "Instructions for installing Replicated without the quick install script"
 keywords: "installing, removing, migrating"
 weight: "705"
 categories: [ "Distributing a Swarm Application" ]
@@ -22,6 +22,21 @@ docker network create --driver=overlay --attachable --label=com.docker.stack.nam
 export LC_CTYPE=C;echo "$(head -c 128 /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)" | docker secret create daemon_token -
 docker stack deploy -c docker-compose.yml replicated
 ```
+
+`docker-compose.yml` accepts arguments listed below.  Note that if `user_id` and `group_id` are not specified, Replicated containers will run with root privileges.
+
+| Flag | Default | Usage |
+| ---- | ------- | ----- |
+| user_id               |  | User ID that will be used to create Replicated containers. If specified, `group_id` mayb need to be specified as well. |
+| group_id              |  | Group ID that will be used to create Replicted containers. If specified, `user_id` must be specified as well. |
+| log_level             | info | Log level for Replicated container.  Possible values are `debug`, `info`, `warn`, `error` |
+| public_address        | | The public IP address for stack.  This parameter is optional, but if it is not specified, `NodePublicIP...` template functions will return empty strings. |
+| registry_bind_port    | 9874 | Local Replicated registry port. This parameter is usually not specified. |
+| swarm_node_address    | | The IP address that will be used as this install's private address. This is a required parameter. |
+| swarm_stack_namespace | replicated | Namespace where application stack will be deployed. This parameter is usually not specified. |
+| tls_cert_path         | | The location of the trusted CA bundle on the host. |
+| ui_bind_port          | 8800 | Replicated UI port.  This parameter is usually not specified. |
+| airgap                | 0 | Indicates that this is an airgap install. |
 
 ### Airgap
 
@@ -45,7 +60,7 @@ docker node update --label-add replicated-role=master "$(docker info --format '{
 docker network create --driver=overlay --attachable --label=com.docker.stack.namespace=replicated replicated_default
 export LC_CTYPE=C;echo "$(head -c 128 /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)" | docker secret create daemon_token -
 docker stack deploy -c docker-compose.yml replicated
-			 
+
 ```
 
 ### Limitations
