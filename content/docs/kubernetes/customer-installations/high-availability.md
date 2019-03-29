@@ -29,3 +29,12 @@ The load balancer can be reconfigured later by rerunning the init script on one 
 Once Replicated is installed on the first master, it is possible to add additional master nodes. On the Cluster page on the On-Prem Console an "Add Node" button will be visible with the option to generate a script to add an additional master or worker node. Additionally, the master node join script can be generated using the CLI command [`replicatedctl cluster node-join-script --master`](https://help.replicated.com/api/replicatedctl/replicatedctl_cluster_node-join-script/).
 
 ![Add Node Script](/images/post-screens/add-node-k8s-master.png)
+
+{{< linked_headline "Known Issues" >}}
+
+- It is not possible to lose the primary master node on an airgapped installation, as the on-prem registry address is advertised as the host IP address of this node. It is possible to recover from a server failure manually.
+- Airgapped bundles, as well as the airgapped license must be available on the node on which the Replicated pod is scheduled.
+- Support for upgrading the control plane endpoint ("load balancer address") is limited to changing from a single master IP address to a true load balancer. When changing from one load balancer to another it is possible to get certificate errors due to incorrect SANs.
+- When a node is lost, it is possible that Rook may lose quorum, leading to pods with PVCs stuck in creating or terminating states.
+- The [application shell alias](https://help.replicated.com/docs/kubernetes/packaging-an-application/application-properties/#shell-alias) will only work on the node on which the Replicated pod is scheduled.
+- When two masters are joined simultaneously, Etcd can fail due to not enough started members.
