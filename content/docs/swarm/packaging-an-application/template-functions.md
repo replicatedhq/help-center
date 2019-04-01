@@ -584,3 +584,15 @@ StatsdNetworkName() string
 ```
 
 StatsdNetworkName returns the name of the Statsd docker network.
+
+## Sprig
+
+[Sprig 2.19.0 template functions](https://github.com/Masterminds/sprig) can be used with the `repl` prefix.
+
+```yaml
+services:
+  api:
+    image: mycompany/myapp:1.0
+    environment:
+    - HELLO={{repl "hello!" | upper | repeat 5 }}
+```
