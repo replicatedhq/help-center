@@ -1,0 +1,40 @@
+---
+date: "2019-03-18T12:00:00Z"
+title: "High Availability"
+description: "Instructions for installing Replicated Embedded Kubernetes in high availability mode."
+keywords: "installing, ha, high availability"
+weight: "2705"
+categories: [ "Manage Customer Installations" ]
+index: ["docs/kubernetes", "docs"]
+aliases: [docs/distributing-an-application/high-availability]
+gradient: "kubernetes"
+icon: "replicatedKubernetes"
+---
+
+Replicated Embedded Kubernetes has the ability to run in highly available mode with multiple Kubernetes master control plane nodes. The addition of the `ha` flag when running the Kubernetes easy-install script signals to Replicated that this cluster should be run in HA mode. In addition to the cluster, the only other requirement is an external load balancer, which is necessary to expose the kube-apiserver to worker nodes. In order to upgrade an existing cluster to HA, just rerun the installation script with the addition of the `ha` flag.
+
+```shell
+curl -sSL -o install.sh  https://get.replicated.com/kubernetes-init
+sudo bash ./install.sh ha
+```
+
+{{< linked_headline "Load Balancer" >}}
+
+When installing a highly available cluster, the script will prompt for a load balancer address. The load balancer can be preconfigured by passing in the `load-balancer-address=<host:port>` flag. This load balancer should be configured to distribute traffic to all healthy control plane nodes in its target list. This should be a TCP forwarding load balancer. The health check for an apiserver is a TCP check on the port the kube-apiserver listens on (default value :6443). For more information on the kube-apiserver load balancer see https://kubernetes.io/docs/setup/independent/high-availability/#create-load-balancer-for-kube-apiserver. In the absence of a load balancer, all traffic will be routed to the first master.
+
+The load balancer can be reconfigured later by rerunning the init script on one of the masters with the `load-balancer-address=<host:port>` flag. The script will prompt you to rerun the node join scripts on all other nodes. This is necessary to distribute the regenerated certificate files with the new load balancer address to the rest of the cluster.
+
+{{< linked_headline "Adding Additional Masters" >}}
+
+Once Replicated is installed on the first master, it is possible to add additional master nodes. On the Cluster page on the On-Prem Console an "Add Node" button will be visible with the option to generate a script to add an additional master or worker node. Additionally, the master node join script can be generated using the CLI command [`replicatedctl cluster node-join-script --master`](https://help.replicated.com/api/replicatedctl/replicatedctl_cluster_node-join-script/).
+
+![Add Node Script](/images/post-screens/add-node-k8s-master.png)
+
+{{< linked_headline "Known Issues" >}}
+
+- It is not possible to lose the primary master node on an airgapped installation, as the on-prem registry address is advertised as the host IP address of this node. It is possible to recover from a server failure manually.
+- Airgapped bundles, as well as the airgapped license must be available on the node on which the Replicated pod is scheduled.
+- Support for upgrading the control plane endpoint ("load balancer address") is limited to changing from a single master IP address to a true load balancer. When changing from one load balancer to another it is possible to get certificate errors due to incorrect SANs.
+- When a node is lost, it is possible that Rook may lose quorum, leading to pods with PVCs stuck in creating or terminating states.
+- The [application shell alias](https://help.replicated.com/docs/kubernetes/packaging-an-application/application-properties/#shell-alias) will only work on the node on which the Replicated pod is scheduled.
+- When two masters are joined simultaneously, Etcd can fail due to not enough started members.

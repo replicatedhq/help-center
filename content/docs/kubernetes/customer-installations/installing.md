@@ -85,6 +85,15 @@ Re-running the `kubernetes-init` install script will not update 1.11.1 installs 
 
 Please refer to our docs on upgrading [here](../upgrading)
 
+{{< linked_headline "High Availability" >}}
+
+Replicated Embedded Kubernetes has the ability to run in highly available mode with multiple Kubernetes master control plane nodes. The addition of the `ha` flag when running the Kubernetes easy-install script signals to Replicated that this cluster should be run in HA mode. For more information please refer to our docs on high availability clusters [here](../high-availability).
+
+```shell
+curl -sSL -o install.sh  https://get.replicated.com/kubernetes-init
+sudo bash ./install.sh ha
+```
+
 {{< linked_headline "Uninstalling" >}}
 
 Use the `reset` flag to uninstall Kubernetes and Replicated.  Please note that this flag is not recommended to be used on production systems.
