@@ -29,6 +29,7 @@ Items map to input fields and belong to a single group. All items should have `n
 and `type` properties. Specific item types can including new types.
 
 ### Available Item Types
+> `heading`
 > `label`
 > `text`
 > `password`
@@ -54,7 +55,7 @@ The `bool` input type should use a "0" or "1" to set the value
 ```
 
 ### `label`
-The `label` input type allows you to display an input label.
+The `label` type allows you to display an input label.
 ```yaml
 - name: Email
   items:
@@ -64,7 +65,24 @@ The `label` input type allows you to display an input label.
   - name: description
     type: label
     title: "Note: The system will send you an email every hour."
+```
 
+### `heading`
+The `heading` type allows you to display a group heading as a subelement within a group. This is useful when you would like to group items all in one config group but would like to separate the items visually, for instance when using a config group test proc.
+```yaml
+- name: ldap_settings
+  title: LDAP Server Settings
+  test_proc:
+    display_name: Test Credentials
+    command: ldap_auth
+    arg_fields:
+    - ...
+  items:
+  ...
+  - name: ldap_schema
+    type: heading
+    title: LDAP schema
+  ...
 ```
 
 ### `select`
@@ -104,7 +122,7 @@ At this time these two control types do not support the `title` field.
 ```
 
 ### `textarea`
-A `textarea` can specify a `props` that will map into the HTML element directly.
+A `textarea` can specify a `props` that will map into the HTML element directly. Examples of available properties are `rows`, `cols` and `wrap`. See https://www.w3schools.com/tags/tag_textarea.asp for reference.
 
 ```yaml
 - name: custom_key
