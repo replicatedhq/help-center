@@ -29,16 +29,16 @@ Items map to input fields and belong to a single group. All items should have `n
 and `type` properties. Specific item types can including new types.
 
 ### Available Item Types
+> `bool`
+> `file`
 > `heading`
 > `label`
-> `text`
 > `password`
-> `file`
-> `bool`
-> `select_one`
-> `select_many`
+> `text`
 > `textarea`
 > `select`
+> `select_many`
+> `select_one`
 
 {{< linked_headline "Examples" >}}
 
