@@ -81,7 +81,7 @@ assets:
               labels:
                 app: titled
             spec:
-              type: LoadBalancer
+              type: ClusterIP
               ports:
               - name: titled
                 port: 3000
