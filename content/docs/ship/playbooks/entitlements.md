@@ -13,7 +13,7 @@ gradient: "console"
 
 A Replicated Ship application can deliver customer-specific license fields (entitlements), that can be read and consumed in an application.
 
-Note that this requires Ship v0.39.0 or later.
+Note that this requires Ship v0.40.0 or later.
 
 ## Defining License Fields
 
@@ -59,7 +59,7 @@ assets:
                     app: titled
                 spec:
                   containers:
-                    - image: replicated/titled:0.2.0
+                    - image: replicated/titled:0.2.2
                       name: titled
                       args: ["serve", "--serve_from_file", "/titled/entitlements.conf"]
                       ports:
