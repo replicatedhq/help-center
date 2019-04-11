@@ -1,5 +1,6 @@
 [
   "server:8800",
+  "titled:3000",
   "10.128.0.4",
   "get.company.com/docker",
   "auditlog.mycompany.com",
