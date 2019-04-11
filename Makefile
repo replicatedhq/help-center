@@ -59,6 +59,7 @@ linkcheck:
 		--requests 20 \
 		\
 		--exclude 'server:8800' \
+		--exclude 'titled:3000' \
 		--exclude '10.128.0.4' \
 		--exclude 'get.company.com/docker' \
 		--exclude 'auditlog.mycompany.com' \
