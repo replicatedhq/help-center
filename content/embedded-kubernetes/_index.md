@@ -12,7 +12,7 @@ wrapperCSSClass: "scheduler-types-section"
                 <h6>What is Embedded Kubernetes?</h6>
                 <p>Some applications require Kubernetes - either because of architecture decisions or for access to Kubernetes services like CoreDNS or RBAC. Other applications work best on Kubernetes because the hosted, multi-tenant
                 version of the application is running on Kubernetes, and therefore it's the tested, validated and supportable platform.</p>
-                <p>Replicated's Embedded Kubernetes platform is a portable, predictable and supportable installation of Kubernetes that is crafted from commonly used upstream component. It's designed to be embedded right into an application
+                <p>Replicated's Embedded Kubernetes platform is a portable, predictable and supportable installation of Kubernetes that is crafted from commonly used upstream components. It's designed to be embedded right into an application
                 distribution. An entire Embedded Kubernetes installation can be included in a Replicated airgap package to be run offline, and includes the same types of services expected when launching a managed Kubernetes
                 cluster on a cloud provider.</p>
             </div>
