@@ -9,7 +9,7 @@ aliases: [docs/distributing-an-application/airgapped-installations,/docs/kb/supp
 icon: "replicatedCircle"
 ---
 
-An "airgapped" environment is a network that has no path to inbound or outbound internet traffic at all. Some enterprise customers require that you ship a package they can install in their airgapped environment.
+An "airgapped" environment is a network that has no path to inbound or outbound internet traffic at all. Some enterprise customers require that you deliver a package they can install in their airgapped environment.
 
 Replicated supports this type of installation, using the following steps:
 

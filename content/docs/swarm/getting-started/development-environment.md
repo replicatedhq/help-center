@@ -1,9 +1,9 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Development Environment"
-description: "How to set up an environment to ship with Replicated and Docker Swarm"
+description: "How to set up an environment to deploy with Replicated and Docker Swarm"
 weight: "502"
-categories: [ "Shipping with Docker Swarm" ]
+categories: [ "Delivering with Docker Swarm" ]
 index: ["docs/swarm", "docs"]
 gradient: "swarm"
 icon: "replicatedDockerSwarm"
@@ -92,5 +92,3 @@ Both configs will:
 - Create a new release on the `Unstable` channel in Replicated
 
 These behaviors are documented and demonstrated in the [replicated-ci-demo](https://github.com/replicatedhq/replicated-ci-demo) project.
-
-

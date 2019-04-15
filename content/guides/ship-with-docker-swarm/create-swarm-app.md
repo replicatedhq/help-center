@@ -21,7 +21,7 @@ To finish this section, you will need:
 
 {{< linked_headline "Create a Docker Compose App" >}}
 
-Docker Compose is a tool for shipping a suite of services and containers as a single stack. Docker Swarm uses stacks and services defined as Docker Compose specs to deploy to a clustered environment. In this example, we will deploy a simple Redis service, but the specification can large scale, enterprise stacks.
+Docker Compose is a tool for deploying a suite of services and containers as a single stack. Docker Swarm uses stacks and services defined as Docker Compose specs to deploy to a clustered environment. In this example, we will deploy a simple Redis service, but the specification can large scale, enterprise stacks.
 
 Create a file called `docker-compose.yaml` and add a basic Redis stack:
 
@@ -32,7 +32,7 @@ services:
     image: redis:3.2-alpine
 ```
 
-This is a minimal example that will create a Redis service with the `redis:3.2-alpine` image. On a computer with Docker running, we can start this by running: `docker-compose up`. 
+This is a minimal example that will create a Redis service with the `redis:3.2-alpine` image. On a computer with Docker running, we can start this by running: `docker-compose up`.
 
 After running this, you'll have a Redis service running in the foreground. Type `ctrl-C` into the terminal to exit. This is a great example, but runs locally in Docker (as opposed to Docker Swarm), and is a single instance in the foreground. To move this into something ready for production, let's launch it as a Docker Swarm Service.
 
@@ -59,13 +59,13 @@ Creating network my-redis_default
 Creating service my-redis_redis
 ```
 
-In the next part of this guide, we will create a Replicated release with our Docker Compose specification. After this, we will license and ship an on-premise version of our software to end customers.
+In the next part of this guide, we will create a Replicated release with our Docker Compose specification. After this, we will create a license and deploy an on-premise version of our software to end customers.
 
 {{< linked_headline "The Replicated Vendor Portal" >}}
 
 The Replicated Vendor Portal offers tooling necessary to create and deploy software services, license software to customers, and iterate upon our software via releases. In this section, we will take the Redis service we created in the prior section and turn it into a licensable Replicated release. In the next sections, we will create a customer license, install Replicated on Swarm, and run our software in an on-premise environment.
 
-If you require help at any time with these steps, help is available through the [Replicated community](https://help.replicated.com/community/) or via email at [contact@replicated.com](mailto:contact@replicated.com). 
+If you require help at any time with these steps, help is available through the [Replicated community](https://help.replicated.com/community/) or via email at [contact@replicated.com](mailto:contact@replicated.com).
 
 {{< linked_headline "Create a New Application" >}}
 
@@ -98,7 +98,7 @@ services:
     image: redis:3.2-alpine
 ```
 
-Save the release to return to the Releases page with our new release listed. 
+Save the release to return to the Releases page with our new release listed.
 
 ![](/images/guides/swarm/release-list.png)
 

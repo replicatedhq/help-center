@@ -1,6 +1,6 @@
 ---
-  title: "Shipping A Swarm Application"
-  description: "A step-by-step guide to shipping a Docker Swarm application using Replicated."
+  title: "Distribute a Swarm Application"
+  description: "A step-by-step guide to delivering a Docker Swarm application using Replicated."
   level: "replicatedDockerSwarm"
   gradient: "swarm"
   icon: "replicatedDockerSwarm"

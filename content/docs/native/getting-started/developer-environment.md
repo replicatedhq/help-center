@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Developer Environment"
-description: "How to set up an environment to ship a Replicated application"
+description: "How to set up an environment to deliver a Replicated application"
 weight: "104"
 categories: [ "Replicated Scheduler" ]
 index: ["docs/native", "docs"]

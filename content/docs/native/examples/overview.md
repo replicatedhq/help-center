@@ -10,7 +10,7 @@ icon: "replicatedCircle"
 hideFromList: true
 ---
 
-This section contains examples of shipping an application in Replicated using the Native Scheduler.
+This section contains examples of deploying an application in Replicated using the Native Scheduler.
 
 - [Counter App](/docs/native/examples/counter-app): A simple example of an app that has nginx and redis using the Native Scheduler
 - [Load Balancer](/docs/native/examples/load-balancer): Adding a load balancer to the [counter app example](../counter-app)

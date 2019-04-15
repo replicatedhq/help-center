@@ -1,15 +1,15 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Concepts and Terminology"
-description: "The core concepts required to ship an application on Replicated using Docker Swarm."
+description: "The core concepts required to deliver an application on Replicated using Docker Swarm."
 weight: "501"
-categories:  [ "Shipping With Docker Swarm" ]
+categories:  [ "Deploying With Docker Swarm" ]
 index: ["docs/swarm", "docs"]
 icon: "replicatedDockerSwarm"
 gradient: "swarm"
 ---
 
-Before shipping your application, there are a few terms to learn, as they are used throughout this guide.
+Before deploying your application, there are a few terms to learn, as they are used throughout this guide.
 
 ### Application
 An application is the software package you are installing onto your customer's servers. It isn't a single binary, rather it's all of the individual components and containers that are required to get a functional version of your product.

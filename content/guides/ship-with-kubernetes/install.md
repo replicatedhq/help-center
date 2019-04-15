@@ -12,7 +12,7 @@ icon: "replicatedKubernetes"
 
 # Installing and Testing a Kubernetes Release
 
-This guide will give you first-hand experience installing a Replicated Kubernetes appliance and the Guestbook application. If you haven't yet created the Guestbook application, head back to the [Create and Ship as Release](../create-release) guide and complete that first.
+This guide will give you first-hand experience installing a Replicated Kubernetes appliance and the Guestbook application. If you haven't yet created the Guestbook application, head back to the [Create and Promote as Release](../create-release) guide and complete that first.
 
 Now that we've created a release and promoted it to the Unstable channel, the next step is to create a customer license and use this this license to install the application on a test server.
 
@@ -97,11 +97,11 @@ Because this server is on the public Internet, we should put a password on the a
 
 ![Secure The Console](/images/guides/native/secure-console.png)
 
-Preflight checks are designed to ensure this server has the minimum requirements and environment to run the application. We didn't choose any additional requirements when shipping the Guestbook, so this is the default Replicated requirements. Everything should pass, so click Continue to proceed.
+Preflight checks are designed to ensure this server has the minimum requirements and environment to run the application. We didn't choose any additional requirements when deploying the Guestbook, so this is the default Replicated requirements. Everything should pass, so click Continue to proceed.
 
 ![Preflight Checks](/images/guides/kubernetes/preflight.png)
 
-Finally, the settings page is here with default configuration items. These can all be changed when we ship updates, but nothing is required.
+Finally, the settings page is here with default configuration items. These can all be changed when we deliver updates, but nothing is required.
 
 ![Settings Page](/images/guides/kubernetes/settings.png)
 
@@ -113,4 +113,4 @@ On the top nav, there's a link to the /cluster page. Clicking that will show you
 
 ![Cluster](/images/guides/kubernetes/cluster.png)
 
-In the [next guide](../iterate), we'll walk through creating and shipping an update to the application we just installed.
+In the [next guide](../iterate), we'll walk through creating and delivering an update to the application we just installed.

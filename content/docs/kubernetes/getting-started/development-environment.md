@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Development Environment"
-description: "How to set up an environment to ship with Replicated and Kubernetes"
+description: "How to set up an environment to deliver with Replicated and Kubernetes"
 weight: "2503"
 categories:  [ "Shipping With Kubernetes" ]
 index: ["docs/kubernetes", "docs"]
@@ -94,5 +94,3 @@ Both configs will:
 - Create a new release on the `Unstable` channel in Replicated
 
 These behaviors are documented and demonstrated in the [replicated-ci-demo](https://github.com/replicatedhq/replicated-ci-demo) project.
-
-

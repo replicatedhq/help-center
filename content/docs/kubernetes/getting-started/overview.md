@@ -1,9 +1,9 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Shipping With Kubernetes on Replicated"
+title: "Delivering with Kubernetes on Replicated"
 description: "A quick overview of how to get started with Kubernetes and Replicated."
 weight: "2501"
-categories: [ "Shipping With Kubernetes" ]
+categories: [ "Delivering with Kubernetes" ]
 index: ["docs/kubernetes", "docs"]
 aliases : [docs/kubernetes/getting-started/,/tags/kubernetes/]
 gradient: "kubernetes"
@@ -17,7 +17,7 @@ Replicated can be used with a Kubernetes application to deploy an enterprise-ins
 
 Compared to other schedulers supported by Replicated, Kubernetes offers:
 
-* Native Kubernetes experience, including the ability to ship and reuse existing Kubernetes specs
+* Native Kubernetes experience, including the ability to deliver and reuse existing Kubernetes specs
 * Automatic provisioning of a Kubernetes cluster on any supported operating system
 * Standard Kubernetes functionality including cluster-wide DNS resolution and load balancing
 
@@ -29,7 +29,7 @@ There are cases where using other schedulers, such as the Replicated Native sche
 * If existing Kubernetes specs are not available, writing them only to support an enterprise installation might take extra time. In this case, the learning curve of Docker Swarm could be a good choice.
 
 ## Overview
-The process to ship your application in Replicated consists of the following steps:
+The process to distribute your application in Replicated consists of the following steps:
 
 1. Create a vendor account on the [Replicated Vendor Portal](https://vendor.replicated.com/signup).
 1. Prepare the images required by your app. You can either:

@@ -1,7 +1,7 @@
 ---
 date: "2018-01-30T04:02:20Z"
-title: "Create And Ship A Release"
-description: "A guide to walk you through creating and shipping a release in Replicated"
+title: "Create and Promote a Release"
+description: "A guide to walk you through creating and delivering a release in Replicated"
 weight: "9001"
 categories: [ "Replicated Scheduler Guide" ]
 index: "guides/native"
@@ -11,9 +11,9 @@ icon: "replicatedCircle"
 aliases: [/guides/getting-started]
 ---
 
-# Create And Ship A Release
+# Create and Promote a Release
 
-When starting out with Replicated, the [Vendor Portal](https://vendor.replicated.com) will be the place you spend most of your time. Going through this guide will help you become familiar with the concepts and ideas that are important to be successful shipping on Replicated using the Vendor Portal. If you get stuck or need help with any of these steps, head to our [community](https://help.replicated.com/community/) or send us an email to [contact@replicated.com](mailto:contact@replicated.com) and we'll be happy to help.
+When starting out with Replicated, the [Vendor Portal](https://vendor.replicated.com) will be the place you spend most of your time. Going through this guide will help you become familiar with the concepts and ideas that are important to be successful deploying on Replicated using the Vendor Portal. If you get stuck or need help with any of these steps, head to our [community](https://help.replicated.com/community/) or send us an email to [contact@replicated.com](mailto:contact@replicated.com) and we'll be happy to help.
 
 {{< linked_headline "Create A New Application" >}}
 
@@ -33,7 +33,7 @@ Now, you'll see a YAML editor where you can define your application and how Repl
 
 ![Default YAML](/images/guides/native/default-yaml.png)
 
-Replicated runs Docker containers, and you are responsible for building and pushing Docker images to any registry (including [one that we created for you](/docs/native/getting-started/docker-registries) when you signed up). For this guide, our application is going to be just a redis container. When done, we'll ship a license file that can be used to install redis (and support and update it).
+Replicated runs Docker containers, and you are responsible for building and pushing Docker images to any registry (including [one that we created for you](/docs/native/getting-started/docker-registries) when you signed up). For this guide, our application is going to be just a redis container. When done, we'll deliver a license file that can be used to install redis (and support and update it).
 
 Find the line in the YAML document that says `components: []`. This is the section you will need to edit to define your containers and all options needed to start and run them. Let's add the public redis container image to our application. Replace the `components: []` line with this block ([here's a copy of what the full YAML document should look like](https://gist.github.com/marccampbell/3c05d46e85ccbc3cf6dfa884431515e6))
 
@@ -53,4 +53,3 @@ Next, click the Save Release button. Once the release is saved, we should promot
 That's all there is to creating and promoting a release in Replicated.
 
 In the [next guide](../install), we'll walk through creating a license and installing the redis application on a test server.
-
