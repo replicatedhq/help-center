@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Managing Swarm Installations"
-description: "Ship it to your customer"
+description: "Deliver it to your customer"
 weight: "701"
 categories: [ "Distributing a Swarm Application" ]
 index: ["docs/swarm", "docs"]
@@ -16,5 +16,3 @@ Once you have packaged your application for Replicated on Swarm, it is time to d
 The [Installing](/docs/swarm/customer-installations/installing) section contains all of the documentation for provisioning Docker Swarm clusters and installing Replicated, whether it is through the easy install script, a manual installation, or an airgapped installation.
 
 Increasing capacity in your Swarm cluster is easy, and the [Add Nodes](/docs/swarm/customer-installations/add-nodes) is a useful resource for increasing the size of your Swarm cluster. When packaging your application, Swarm labels can be used to control cluster topology in multi-node environments.
-
-

@@ -28,7 +28,7 @@ The Replicated Platform is a better fit for distributing to customers that don't
 
 Once an application has been packaged for deployment with Replicated Ship, customers can deploy instances of the application via the Ship Command Line OSS tool, or the Replicated Ship Cloud service. Ship also handles Helm Charts and plain Kubernetes yaml, and can be a complete solution for organizations that wish to integrate third party software into their CI/CD systems, for pull-request-driven deployments.
 
-The process to ship your application in Replicated consists of the following steps:
+The process to distribute your application in Replicated consists of the following steps:
 
 1. Create a vendor account on the [Replicated Vendor Portal](https://vendor.replicated.com/signup).
 1. Prepare the images required by your app. You can either:

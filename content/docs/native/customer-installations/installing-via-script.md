@@ -63,7 +63,7 @@ curl -sSL https://get.replicated.com/docker | sudo bash -s no-auto ui-bind-port=
 ```
 
 {{< note title="Best practices with the easy-install script" >}}
-When you're ready to start shipping to customers we recommend that you proxy this install script with a TLS cert matching your domain name.  The script should always be served with TLS.
+When you're ready to start delivering to customers we recommend that you proxy this install script with a TLS cert matching your domain name.  The script should always be served with TLS.
 {{< /note >}}
 
 {{< linked_headline "Installing Behind A Proxy" >}}

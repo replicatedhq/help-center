@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Replicated and Docker Swarm"
 description: "A quick overview of how to get started with the Replicated Docker Swarm scheduler."
 weight: "500"
-categories: [ "Shipping With Docker Swarm" ]
+categories: [ "Distribute a Swarm Application" ]
 index: ["docs/swarm", "docs"]
 aliases: [docs/swarm/getting-started/]
 gradient: "swarm"
@@ -28,9 +28,9 @@ There are a few cases where using other schedulers, such as the Replicated Nativ
 
 * Some enterprises require the use of Long Term Support Operating Systems in the 2.x kernel series such as RedHat Enterprise Linux 6. Replicated with Docker Swarm requires Docker 17.03 or later, while RHEL6 only supports Docker 1.7.1. To support RHEL 6 and older versions of Docker, consider the [Replicated Native Scheduler](/docs/native/getting-started).
 
-## Shipping on Docker Swarm
+## Distribute a Swarm Application
 
-The process to ship your application in Replicated consists of the following steps:
+The process to distribute your Swarm application in Replicated consists of the following steps:
 
 1. Create a vendor account on the [Replicated Vendor Portal](https://vendor.replicated.com/signup).
 1. Prepare the images required by your app. You can either:

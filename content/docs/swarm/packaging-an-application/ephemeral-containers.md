@@ -11,7 +11,7 @@ icon: "replicatedDockerSwarm"
 
 Replicated monitors the status of the Docker Swarm services deployed in an application, and if any stop, the Admin Console will report the application as stopped. Sometimes, it's desirable to have a container stop after it runs. One common scenario where this is required is running database migrations at startup. In Replicated, an ephemeral container is one that Replicated will start, but not monitor the lifecycle of.
 
-When shipping a Docker Swarm application, to set a service as ephemeral in Replicated, you can [label the stack service](https://docs.docker.com/compose/compose-file/#labels-1) with `com.replicated.ephemeral=true`.
+When deploying a Docker Swarm application, to set a service as ephemeral in Replicated, you can [label the stack service](https://docs.docker.com/compose/compose-file/#labels-1) with `com.replicated.ephemeral=true`.
 
 {{< linked_headline "Example" >}}
 

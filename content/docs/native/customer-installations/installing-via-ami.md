@@ -1,7 +1,7 @@
 ---
 date: "2016-07-03T04:02:20Z"
 title: "Installing Replicated via AMI"
-description: "Instructions for shipping a pre-built VM for a release"
+description: "Instructions for delivering a pre-built VM for a release"
 keywords: "installing"
 weight: "304"
 categories: [ "Managing Customer Installation" ]
@@ -10,7 +10,7 @@ aliases: [docs/distributing-an-application/installing-via-ami,/docs/native/packa
 icon: "replicatedCircle"
 ---
 
-At times, it can be desirable to ship an a preconfigured, generic VM to allow customers a familiar installation path. While Replicated does not provide an official machine image, understanding which Replicated-specific files are needed - and which are not needed - is sufficient for shipping a pre-built AMI for a release
+At times, it can be desirable to deliver an a preconfigured, generic VM to allow customers a familiar installation path. While Replicated does not provide an official machine image, understanding which Replicated-specific files are needed - and which are not needed - is sufficient for delivering a pre-built AMI for a release
 
 ## Required images
 

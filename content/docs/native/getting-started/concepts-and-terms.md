@@ -9,7 +9,7 @@ icon: "replicatedCircle"
 aliases: [/docs/getting-started/concepts-and-terms/]
 ---
 
-Before shipping your application, there are a few terms to learn, as they are used throughout this guide.
+Before deploying your application, there are a few terms to learn, as they are used throughout this guide.
 
 ### Application
 An application is the software package you are installing onto your customer's servers. It isn't a single binary, rather it's all of the individual components and containers that are required to get a functional version of your product.

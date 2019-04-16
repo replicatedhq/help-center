@@ -9,7 +9,7 @@ gradient: "console"
 icon: "replicatedShip"
 ---
 
-Before shipping your application, there are a few terms to learn, as they are used throughout this guide.
+Before deploying your application, there are a few terms to learn, as they are used throughout this guide.
 
 ### Application
 An application (or app) is the software package you are installing onto your customer's servers. It isn't a single binary, rather it's all of the individual components which make your product.
@@ -18,7 +18,7 @@ An application (or app) is the software package you are installing onto your cus
 Channels are used to stage out releases for customers or customer segments. By default there are Stable, Beta and Nightly channels.
 
 ### Release
-A release is a shipped version of the application, complete with release notes & version number.
+A release is a version of the application, complete with release notes & version number.
 
 ### Ship OSS / Ship CLI
 
@@ -29,4 +29,3 @@ Replicated Ship can also be used to manage off-the-shelf commercial or open sour
 ### Ship Cloud / Ship Hosted
 
 Ship Cloud is a hosted solution that enables individuals or teams to collaborate and manage multiple applications with Ship, without the overhead of operating and maintaining a fleet of Ship instances.
-

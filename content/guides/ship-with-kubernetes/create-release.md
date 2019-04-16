@@ -1,7 +1,7 @@
 ---
 date: "2018-01-30T04:02:20Z"
 title: "Create a Kubernetes Release"
-description: "An overview of why it makes sense to ship Replicated with your Kubernetes application"
+description: "An overview of why it makes sense to deploy Replicated with your Kubernetes application"
 weight: "11001"
 categories: [ "Kubernetes Guide" ]
 index: "guides/kubernetes"
@@ -10,11 +10,11 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-# Create and Ship a Release
+# Create and Promote a Release
 
-When starting and learning the Replicated platform, the [Vendor Portal](https://vendor.replicated.com) will be the place you spend most of your time. This guide is designed to help you get familiar with the concepts and ideas that are important to successfully ship your application on Replicated. If you get stuck or need help, head to our [community](https://help.replicated.com/community/).
+When starting and learning the Replicated platform, the [Vendor Portal](https://vendor.replicated.com) will be the place you spend most of your time. This guide is designed to help you get familiar with the concepts and ideas that are important to successfully deploy your application with Replicated. If you get stuck or need help, head to our [community](https://help.replicated.com/community/).
 
-This guide will deploy one of the canonical Kubernetes applications using Replicated, and then iterate on it to ship an update. The guide isn't going to teach Kubernetes, but will start with a working Kubernetes application ([Guestbook all-in-one example](https://raw.githubusercontent.com/kubernetes/examples/12cff4b7a59334080958469052bf9cde80e75618/guestbook/all-in-one/guestbook-all-in-one.yaml)).
+This guide will deploy one of the canonical Kubernetes applications using Replicated, and then iterate on it to deliver an update. The guide isn't going to teach Kubernetes, but will start with a working Kubernetes application ([Guestbook all-in-one example](https://raw.githubusercontent.com/kubernetes/examples/12cff4b7a59334080958469052bf9cde80e75618/guestbook/all-in-one/guestbook-all-in-one.yaml)).
 
 {{< linked_headline "Create a New Application" >}}
 

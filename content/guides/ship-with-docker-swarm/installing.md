@@ -12,7 +12,7 @@ icon: "replicatedDockerSwarm"
 
 {{< linked_headline "Installing a Release" >}}
 
-In this guide, we will take the application we created in our [last guide](../create-swarm-app) and install it onto a test customer server. If you do not currently have an application with a release promoted to the Unstable channel, go back to [Create and Ship a Release](../create-swarm-app) to setup a Replicated account and create this application.
+In this guide, we will take the application we created in our [last guide](../create-swarm-app) and install it onto a test customer server. If you do not currently have an application with a release promoted to the Unstable channel, go back to [Create a Release](../create-swarm-app) to setup a Replicated account and create this application.
 
 Start by navigating to the Replicated [Vendor Portal](https://vendor.replicated.com)
 
@@ -67,7 +67,7 @@ When this command finishes, you will get a prompt with a URL to continue the Rep
 
 ![](/images/guides/swarm/configure_https.png)
 
-Before installing a license, Replicated's dashboard will walk you through the steps of securing the dashboard with a TLS certificate. For now, click the Self-Signed Certificate option and click "Continue". In production environments, you will want to use your organization's PKI infrastructure to issue a certificate specific to Replicated. 
+Before installing a license, Replicated's dashboard will walk you through the steps of securing the dashboard with a TLS certificate. For now, click the Self-Signed Certificate option and click "Continue". In production environments, you will want to use your organization's PKI infrastructure to issue a certificate specific to Replicated.
 
 {{< linked_headline "Install License" >}}
 
