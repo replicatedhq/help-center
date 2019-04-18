@@ -85,3 +85,18 @@ images:
   name: app
   tag: v1
 ```
+
+{{< linked_headline "Referencing Images" >}}
+
+Private and third-party images should always be referenced by their full name in the Swarm yaml.
+
+```yaml
+service:
+  app:
+    # private image
+    image: registry.replicated.com/myapp/myimage:v1
+
+  server:
+    # third party image
+    image: quay.io/example/myserver:v1
+```
