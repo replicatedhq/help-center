@@ -49,7 +49,7 @@ The web-based console is a nice, user friendly way to set up the application, bu
 
 ### Release Channels
 
-Application Vendors can iterate continuously by publishing releases to the Replicated 'Unstable' Channel multiple times per day, test release candidates by promoting to 'Beta' and finally release to customers via the 'Stable' channel when a release has been vetted and is ready for customers. By creating additional channels and assigning customer licenses to channels based on release cadence or other customer preferences.
+Application Vendors can iterate continuously by publishing releases to the Replicated 'Unstable' Channel multiple times per day, test release candidates by promoting to 'Beta' and finally release to customers via the 'Stable' channel when a release has been vetted and is ready for customers. End customers will be licensed against one or more channels, and additional custom channels can be created, giving your team flexibility in how and when you roll out to your users.
 
 ### Private Asset Delivery
 
