@@ -3,8 +3,8 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_snapshot_restore
 categories:
 - replicatedctl
-date: "2019-03-12T12:19:48-07:00"
-description: Restore installation from the specified spanshot
+date: "2019-05-01T10:46:28-07:00"
+description: Restore installation from the specified snapshot
 gradient: purpleToPink
 index: docs
 title: replicatedctl snapshot restore
@@ -13,11 +13,11 @@ weight: "551"
 
 ## replicatedctl snapshot restore
 
-Restore installation from the specified spanshot
+Restore installation from the specified snapshot
 
 ### Synopsis
 
-Restore installation from the specified spanshot
+Restore installation from the specified snapshot
 
 ```
 replicatedctl snapshot restore ID [flags]
