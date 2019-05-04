@@ -30,11 +30,16 @@ Once Replicated is installed on the first master, it is possible to add addition
 
 ![Add Node Script](/images/post-screens/add-node-k8s-master.png)
 
+{{< linked_headline "Loss of Node" >}}
+
+When a node is unavailable for one hour, Replicated will automatically purge the node when running in HA mode.
+The purge is required in order to reschedule any pods with PVCs that were running on the lost node.
+For faster recovery users may click the purge node button on the cluster page of the Replicated UI.
+
 {{< linked_headline "Known Issues" >}}
 
 - It is not possible to lose the primary master node on an airgapped installation, as the on-prem registry address is advertised as the host IP address of this node. It is possible to recover from a server failure manually.
 - Airgapped bundles, as well as the airgapped license must be available on the node on which the Replicated pod is scheduled.
 - Support for upgrading the control plane endpoint ("load balancer address") is limited to changing from a single master IP address to a true load balancer. When changing from one load balancer to another it is possible to get certificate errors due to incorrect SANs.
-- When a node is lost, it is possible that Rook may lose quorum, leading to pods with PVCs stuck in creating or terminating states.
 - The [application shell alias](https://help.replicated.com/docs/kubernetes/packaging-an-application/application-properties/#shell-alias) will only work on the node on which the Replicated pod is scheduled.
 - When two masters are joined simultaneously, Etcd can fail due to not enough started members.
