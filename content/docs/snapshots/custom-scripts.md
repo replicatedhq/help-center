@@ -9,13 +9,13 @@ index: "other"
 
 {{< linked_headline "Custom Backup Commands" >}}
 
-Snapshots will always include customer console configuration and replicated settings.
+Snapshots will always include customer console configuration.
 When not excluded with `exclude_registry_data: true`, docker registry data will be backed up as well.
 On the Native scheduler, all bind mounts will be backed up.
 For the [Swarm](/docs/snapshots/swarm) and [Kubernetes](/docs/snapshots/kubernetes/) schedulers, any desired volumes must be specified in your application yaml.
-You also have the ability to specify a custom script that will be run at the time of a backup.
-This script will run on the host that is running the primary Replicated container, not inside any of your containers.
-If you need this script to execute something within a container, you can call [Admin Commands](/docs/packaging-an-application/admin-commands/).
+Custom scripts to be run during a backup and restore can also be specified.
+These scripts will run in the primary Replicated container or pod, not inside any of your containers.
+To execute something within a container, you can call [Admin Commands](/docs/packaging-an-application/admin-commands/).
 
 {{< linked_headline "YAML Properties" >}}
 
