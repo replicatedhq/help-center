@@ -21,12 +21,12 @@ All Ship template functions must begin with `{{repl`, rather than the standard `
 
 The many template functions available within Ship can be thought of as belonging to several categories.
 
-{< linked_headline "Sprig" >}}
+{{< linked_headline "Sprig" >}}
 
 Many of the utility functions provided come from Sprig, a third-party library of Go template functions. 
 The Sprig documentation can be found [here](https://masterminds.github.io/sprig/).
 
-{< linked_headline "Static Functions" >}}
+{{< linked_headline "Static Functions" >}}
 
 Additional utility functions, shared with Replicated Vendor.
 Implementations of these functions can be found [here](https://github.com/replicatedhq/ship/blob/master/pkg/templates/static_context.go).
@@ -247,7 +247,7 @@ HumanSize returns a human-readable approximation of a size in bytes capped at 4 
 func KubeSeal(certData string, namespace string, name string, value string) string
 ```
 
-{< linked_headline "Installation Context Functions" >}}
+{{< linked_headline "Installation Context Functions" >}}
 
 Functions that refer to properties of the running ship installation, such as the license ID or app release notes.
 Implementations of these functions can be found [here](https://github.com/replicatedhq/ship/blob/master/pkg/templates/installation_context.go).
@@ -303,7 +303,7 @@ Installation returns the value of the property with the provided key.
 '{{repl Installation "license_id" }}'
 ```
 
-{< linked_headline "Config Context Functions" >}}
+{{< linked_headline "Config Context Functions" >}}
 
 Functions that refer to 
 Implementations of these functions can be found [here](https://github.com/replicatedhq/ship/blob/master/pkg/templates/config_context.go).
@@ -346,7 +346,7 @@ Returns true if the configuration option value is not equal to the supplied valu
 '{{repl ConfigOptionNotEquals "http_enabled" "1" }}'
 ```
 
-{< linked_headline "Ship Context Functions" >}}
+{{< linked_headline "Ship Context Functions" >}}
 
 Functions that refer to parts of Ship's state.
 This includes paths to generated kubeconfigs and utilities to generate public key infrastructure.
