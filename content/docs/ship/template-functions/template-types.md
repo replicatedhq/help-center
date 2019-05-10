@@ -422,7 +422,7 @@ If a CA with the desired name has not been requested before, one will be generat
 The type can be RSA or ECDSA, with acceptable values being `rsa-2048`, `rsa-4096`, `rsa-8192`, `P256` or `P521`.
 If no type is provided, `rsa-2048` will be used.
 ```yaml
-'{{repl GetKey "my_certificate_authority" "P521"}}'
+'{{repl GetKey "my_cert" "my_certificate_authority" "example.com,myexampleapp.io,help.replicated.com" "P521"}}'
 ```
 
 {{< template_function name="GetCert" >}}
@@ -433,5 +433,5 @@ func GetCert(caName string) string
 Returns a cert for a previously generated key.
 Must be called after `GetKey` has been called for the desired cert name.
 ```yaml
-'{{repl GetCert "my_certificate_authority"}}'
+'{{repl GetCert "my_cert"}}'
 ```
