@@ -12,21 +12,21 @@ gradient: "console"
 {{< linked_headline "Replicated Ship Template Functions" >}}
 
 Template functions are the key to providing dynamic contents or behavior within a Ship application.
-They can be used to generated the contents of rendered files, skip unneeded steps, and provide more relevant messaging to users, along with a multitude of other things.
+They can be used to generate the contents of rendered files, skip unneeded steps, and provide more relevant messaging to users, along with a multitude of other things.
 Ship template functions extend those available within the [text/template](https://golang.org/pkg/text/template/) package of Go.
 
-All Ship template functions must be escaped with `{{repl`, rather than the standard `{{`.
+All Ship template functions must begin with `{{repl`, rather than the standard `{{`. See [Static Functions](#static-functions) for some examples.
 
 {{< linked_headline "Template Function List" >}}
 
 The many template functions available within Ship can be thought of as belonging to several categories.
 
-# Sprig
+{< linked_headline "Sprig" >}}
 
 Many of the utility functions provided come from Sprig, a third-party library of Go template functions. 
 The Sprig documentation can be found [here](https://masterminds.github.io/sprig/).
 
-# Static functions
+{< linked_headline "Static Functions" >}}
 
 Additional utility functions, shared with Replicated Vendor.
 Implementations of these functions can be found [here](https://github.com/replicatedhq/ship/blob/master/pkg/templates/static_context.go).
@@ -247,7 +247,7 @@ HumanSize returns a human-readable approximation of a size in bytes capped at 4 
 func KubeSeal(certData string, namespace string, name string, value string) string
 ```
 
-# Installation Context Functions
+{< linked_headline "Installation Context Functions" >}}
 
 Functions that refer to properties of the running ship installation, such as the license ID or app release notes.
 Implementations of these functions can be found [here](https://github.com/replicatedhq/ship/blob/master/pkg/templates/installation_context.go).
@@ -303,7 +303,7 @@ Installation returns the value of the property with the provided key.
 '{{repl Installation "license_id" }}'
 ```
 
-# Config Context Functions
+{< linked_headline "Config Context Functions" >}}
 
 Functions that refer to 
 Implementations of these functions can be found [here](https://github.com/replicatedhq/ship/blob/master/pkg/templates/config_context.go).
@@ -346,7 +346,7 @@ Returns true if the configuration option value is not equal to the supplied valu
 '{{repl ConfigOptionNotEquals "http_enabled" "1" }}'
 ```
 
-# Ship Context Functions
+{< linked_headline "Ship Context Functions" >}}
 
 Functions that refer to parts of Ship's state.
 This includes paths to generated kubeconfigs and utilities to generate public key infrastructure.
