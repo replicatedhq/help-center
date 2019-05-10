@@ -394,7 +394,7 @@ env_vars:
 ```go
 func NowFmt(format string) string
 ```
-Returns the current timestamp as a formatted string. See Go's time formatting guidelines [here](https://golang.org/pkg/time/#pkg-constants.
+Returns the current timestamp as a formatted string. See Go's time formatting guidelines [here](https://golang.org/pkg/time/#pkg-constants).
 ```yaml
 env_vars:
 - name: START_DATE

@@ -44,7 +44,7 @@ Returns the current timestamp as an RFC3339 formatted string.
 ```go
 func NowFmt(format string) string
 ```
-Returns the current timestamp as a formatted string. See Go's time formatting guidelines [here](https://golang.org/pkg/time/#pkg-constants.
+Returns the current timestamp as a formatted string. See Go's time formatting guidelines [here](https://golang.org/pkg/time/#pkg-constants).
 ```yaml
 '{{repl Now "20060102" }}'
 ```
