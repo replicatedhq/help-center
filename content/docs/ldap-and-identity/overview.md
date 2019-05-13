@@ -13,7 +13,7 @@ Replicated can be integrated with LDAP servers to sync users and/or authenticate
 
 {{< linked_headline "Configuration" >}}
 
-To enable the identity services in your application, a top level key in your release yaml must be present:
+To enable the identity services in your application, a top level `identity.enabled` key in your release yaml must be present:
 
 ```yaml
 
@@ -30,8 +30,11 @@ identity:
 |-------|-------------|
 | enabled | Boolean indicating if LDAP authentication is enabled on this installation. |
 | provisioner | (Optional) Host that provides provisioning API for synchronization with LDAP. This is required if using directory sync, and can be omiitted if only using LDAP authentication. |
+| enable_reset_request | (Optional) Boolean indicating that the LDAP provisioning API supports the [POST /v1/reset](/api/integration-api/provisioning-api/#post-v1-reset) request. |
 | sources | `ldap` and `ldap_advanced` sources are supported. At least one source must be enabled for Identity API to work. |
-| filter | (Optional) filter to pass to the LDAP server during the sync operation |
+| source.source | `ldap` or `ldap_advanced`. A reference to the LDAP authentication type from the `config` section of your application YAML. |
+| source.enabled | Boolean indicating if this source is enabled. |
+| source.filter | (Optional) Filter to pass to the LDAP server during the sync operation |
 
 Additionally, before your application containers can use the Replicated LDAP integration, you'll need to collect some LDAP settings from your enterprise customer. We recommend you include our suggested configuration items in your application yaml to start.
 
@@ -49,6 +52,7 @@ At the root level, configure the identity object
 identity:
   enabled: '{{repl if ConfigOptionNotEquals "auth_source" "auth_type_internal"}}true{{repl else}}false{{repl end}}'
   provisioner: 'http://{{repl NodePrivateIPAddress "MyContainerName" "Container Image Name"}}:6006'
+  enable_reset_request: true
   sources:
   - source: ldap
     filter: '{{repl ConfigOption "ldap_sync_filter"}}'
@@ -56,6 +60,7 @@ identity:
 ```
 
 ```yaml
+config:
 - name: auth
   title: Authentication
   description: Where will user accounts be provisioned
