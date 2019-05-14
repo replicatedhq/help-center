@@ -1,7 +1,7 @@
 ---
 date: "2019-03-05T04:02:20Z"
 title: "Replicated GitHub Actions"
-description: "List of supported Actions in the Replicated GitHubn Action."
+description: "List of supported Actions in the Replicated GitHub Action."
 weight: "2902"
 categories: [ "GitHub Actions" ]
 index: "other"
