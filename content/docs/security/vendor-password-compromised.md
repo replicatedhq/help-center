@@ -9,7 +9,7 @@ index: "other"
 
 {{< linked_headline "Vendor Password Integrity" >}}
 
-Replicated stores your account password as a bcrypt hashes with a cost parameter of 10. This is a non-reversible method that ensures that nobody can view your plain text password.
+Replicated stores your account password as a bcrypt hash with a cost parameter of 10. This is a non-reversible method that ensures that nobody can view your plain text password.
 
 When you log in, your password is sent to our servers where we calculate a bcrypt hash of the entered password and compare that to the hash we have stored in our database. If these match, access to your account is granted and you are logged in. 
 
