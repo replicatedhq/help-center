@@ -9,8 +9,8 @@ gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---
 
-The Replicated [install script](/docs/swarm/customer-installations/installing/) provides several configuration options for working with an HTTP proxy. 
-Passing either the `airgap` or `no-proxy` flags to the install script will disable all proxy discovery and configuration.
+The Replicated [install script](/docs/swarm/customer-installations/installing/) provides several configuration options for working with an HTTP proxy.
+Passing the `no-proxy` flag to the install script will disable all proxy discovery and configuration.
 
 ## Proxy Discovery
 
@@ -20,7 +20,7 @@ Replicated attempts to discover an HTTP proxy by checking the following environm
 * http_proxy
 * HTTPS_PROXY
 * https_proxy
- 
+
 If none of these is set, Replicated will prompt the user to enter a proxy address or confirm that no proxy is required.
 
 ## Proxy Configuration
