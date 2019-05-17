@@ -14,7 +14,7 @@ aliases: [/guides/setup-studio]
 {{< linked_headline "Install Replicated Studio (with ngrok)" >}}
 
 ### 1. Run Replicated Studio on your local dev machine
-You'll need [Docker installed](https://www.docker.com/community-edition) on your local development machine.
+You'll need [Docker installed](https://docs.docker.com/install/) on your local development machine.
 
 ```bash
 mkdir -p $HOME/replicated
@@ -36,4 +36,3 @@ When you're done with that, you can expose your localhost by running `./ngrok ht
 
 `Forwarding    https://a23glmnop.ngrok.io -> 127.0.0.1:8006`
 Copy that *.ngrok.io* URL, you'll need it when you install Replicated on the development server.
-

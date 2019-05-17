@@ -15,7 +15,7 @@ In order to get your application working with Replicated, you'll want to set up 
 {{< linked_headline "Install Replicated Studio (with ngrok)" >}}
 
 ### 1. Run Replicated Studio on your local dev machine
-You'll need [Docker installed](https://www.docker.com/community-edition) on your local development machine.
+You'll need [Docker installed](https://docs.docker.com/install/) on your local development machine.
 
 ```bash
 mkdir -p $HOME/replicated
