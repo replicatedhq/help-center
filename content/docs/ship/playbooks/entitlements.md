@@ -17,11 +17,11 @@ Note that this requires Ship v0.40.0 or later.
 
 ## Defining License Fields
 
-See: https://github.com/replicatedhq/replicated/tree/entitlements/client/entitlements
+This is currently available via CLI/API (The UI will is estimated to be released with Replicated 2.37.0) See https://github.com/replicatedhq/replicated/tree/entitlements/client/entitlements for a detailed walkthrough.
 
 ## Setting Customer Values
 
-See: https://github.com/replicatedhq/replicated/tree/entitlements/client/entitlements
+Once you've defined your entitlements fields, you can set per-customer values on the Customers page in [vendor.replicated.com](https://vendor.replicated.com).
 
 ## Retrieving Values at Runtime
 
