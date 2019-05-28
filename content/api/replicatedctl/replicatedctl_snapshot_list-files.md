@@ -1,28 +1,42 @@
 ---
 aliases:
-- docs/reference/replicatedctl/replicatedctl_snapshot
+- docs/reference/replicatedctl/replicatedctl_snapshot_list-files
 categories:
 - replicatedctl
 date: "2019-05-01T10:46:28-07:00"
-description: Manage snapshots
+description: List snapshot files
 gradient: purpleToPink
 index: docs
-title: replicatedctl snapshot
+title: replicatedctl snapshot list-files
 weight: "551"
 ---
 
-## replicatedctl snapshot
+## replicatedctl snapshot list-files
 
-Manage snapshots
+List snapshot files
 
 ### Synopsis
 
-Manage snapshots
+List snapshot files
+
+```
+replicatedctl snapshot list-files ID [flags]
+```
 
 ### Options
 
 ```
-  -h, --help                               help for snapshot
+      --force-reload      Force snapshot server to restart and recover snapshot database
+  -h, --help              help for list-files
+  -o, --output string     Output format. One of: json|yaml
+  -q, --quiet             Only display file names
+      --template string   Format the output using the given Go template
+```
+
+### Options inherited from parent commands
+
+```
+      --host string                        Replicated API host (default "unix:///var/run/replicated/replicated-cli.sock")
       --path string                        Snapshot location path. The value should be an absolute path. This option is only used with local and sftp backends.
       --s3-bucket string                   S3 bucket name. This option is only used with s3 backend.
       --s3-compatible-endpoint string      AWS compatible S3 endpoint. This option is only used with s3 backend.
@@ -38,17 +52,7 @@ Manage snapshots
       --store string                       Backend store. Valid values are s3, sftp, and local.
 ```
 
-### Options inherited from parent commands
-
-```
-      --host string   Replicated API host (default "unix:///var/run/replicated/replicated-cli.sock")
-```
-
 ### SEE ALSO
 
-* [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
-* [replicatedctl snapshot list-files](/api/replicatedctl/replicatedctl_snapshot_list-files/)	 - List snapshot files
-* [replicatedctl snapshot ls](/api/replicatedctl/replicatedctl_snapshot_ls/)	 - List snapshots
-* [replicatedctl snapshot restore](/api/replicatedctl/replicatedctl_snapshot_restore/)	 - Restore installation from the specified snapshot
-* [replicatedctl snapshot start](/api/replicatedctl/replicatedctl_snapshot_start/)	 - Start a snapshot
+* [replicatedctl snapshot](/api/replicatedctl/replicatedctl_snapshot/)	 - Manage snapshots
 
