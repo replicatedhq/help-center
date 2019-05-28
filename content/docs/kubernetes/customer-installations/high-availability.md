@@ -34,7 +34,6 @@ Once Replicated is installed on the first master, it is possible to add addition
 
 When a node is unavailable for one hour, Replicated will automatically purge the node when running in HA mode.
 The purge is required in order to reschedule any pods with PVCs that were running on the lost node.
-For faster recovery users may click the purge node button on the cluster page of the Replicated UI.
 
 {{< linked_headline "Known Issues" >}}
 
