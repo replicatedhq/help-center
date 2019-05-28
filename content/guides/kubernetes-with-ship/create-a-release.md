@@ -47,7 +47,7 @@ A Ship release is a yaml file describing the assets to include, the configuratio
 
 ![Edit Yaml](/images/guides/ship/edit-release-vw.png)
 
-There are three sections to the Ship yaml - assets, config, and lifecycle. We'll cover each YAML section separately, but the full YAML used here can also be found [in the ship repo](https://github.com/replicatedhq/ship/blob/nginx-example/fixtures/just-nginx/ship.yaml). 
+There are three sections to the Ship yaml - assets, config, and lifecycle. We'll cover each YAML section separately, but the full YAML used here can also be found [in the ship repo](https://github.com/replicatedhq/ship/blob/master/fixtures/just-nginx/ship.yaml). 
 
 {{< linked_headline "Assets" >}}
 
