@@ -102,3 +102,17 @@ None
 HTTP status on success: 204
 
 All other status codes will be interpreted as errors and sync will not continue.
+
+### POST /v1/reset
+
+This endpoint is called when updates to the YAML configuration in the Replicated Admin Console are made by the end-user. This message will be followed by full re-sync from the LDAP server. To enable this feature you must set the `identity.enable_reset_request` property in your YAML to `true`. This property is a string and can be templated.
+
+#### Request Payload
+
+None
+
+#### Response
+
+HTTP status on success: 204
+
+All other status codes will be interpreted as errors and sync will not continue.
