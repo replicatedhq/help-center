@@ -29,7 +29,7 @@ All traffic between hosts is [encrypted by default](/docs/kubernetes/customer-in
 
 Replicated installs the [Rook Operator](https://rook.io/) in the `rook-ceph-system` namespace, which manages the ceph storage system. Replicated creates a Ceph cluster by creating a [Cluster](https://rook.io/docs/rook/v1.0/ceph-cluster-crd.html) config in the `rook-ceph` namespace and configures the cluster to use the `/opt/replicated/rook` directory on all nodes automatically. A [Pool](https://rook.io/docs/rook/v1.0/ceph-pool-crd.html) is created to provide block storage backed by the cluster for PersistentVolumeClaims. Replicated will automatically increase the replication level of this Pool as nodes are added to the cluster, up to a maximum replication factor of 3.
 
-Previous versions of Replicated were bundled with [Rook version 0.8](https://rook.github.io/docs/rook/v0.8/). Replicated will not attempt to upgrade Rook to the current version 1.0.
+Previous versions of Replicated were bundled with [Rook version 0.8](https://rook.github.io/docs/rook/v0.8/). When upgrading Replicated the Rook Operator will not be upgraded to the current version. Manual steps can be followed using [this guide](https://rook.github.io/docs/rook/v1.0/ceph-upgrade.html).
 
 ## Ingress
 
