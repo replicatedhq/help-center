@@ -11,6 +11,8 @@ gradient: "orangeToOrange"
 
 # Custom Analyzers
 
+**For access to this alpha feature, please [contact us](https://vendor.replicated.com/support).**
+
 Fully programmable analyzers can be written to extract insights specific to your application.
 
 # Analyze CLI

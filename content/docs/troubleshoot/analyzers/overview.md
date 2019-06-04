@@ -22,3 +22,5 @@ Many different analyzers are run, and attempt to find known incompatibilities, m
 This section of the documentation lists some of the analyzers that might be displayed and an explanation of why it was added. The list of analyzers here is not a complete list of every analyer run, rather it's a look into some of the commonly reported insights.
 
 Additionally, [custom analyzers](/docs/troubleshoot/analyzers/custom/) can be written to extract insights specific to your application.
+
+For access to this alpha feature, please [contact us](https://vendor.replicated.com/support).
