@@ -11,7 +11,7 @@ gradient: "orangeToOrange"
 
 # Docker Container Count
 
-TODO
+Below is an example of an analyzer that will parse the output of the `docker info` command and display the number of containers running.
 
 ```yaml
 analyze:

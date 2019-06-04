@@ -13,6 +13,8 @@ gradient: "orangeToOrange"
 
 It can be strategic to configure Docker with inter-container communication disabled, so that iptables will protect other containers and the main host having arbitrary ports probed or accessed by a container that gets compromised. Depending on how your application is configured, this can prevent your containers from communicating. In the case where icc is required to run your application it may be useful to include this insight.
 
+Below is an example of an analyzer that will parse the output of `docker info` to determine if icc is disabled.
+
 ```yaml
 analyze:
   v1:

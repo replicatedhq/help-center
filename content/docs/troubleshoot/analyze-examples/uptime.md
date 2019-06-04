@@ -11,7 +11,7 @@ gradient: "orangeToOrange"
 
 # Uptime
 
-TODO
+Below is an example of an analyzer that will parse the `/proc/uptime` file and display uptime of the host in human readable format.
 
 ```yaml
 analyze:

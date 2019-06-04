@@ -13,7 +13,7 @@ gradient: "orangeToOrange"
 
 The loop-lvm mode makes use of a ‘loopback’ mechanism that allows files on the local disk to be read from and written to as if they were an actual physical disk or block device. However, the addition of the loopback mechanism, and interaction with the OS filesystem layer, means that IO operations can be slow and resource-intensive. Use of loopback devices can also introduce race conditions. For this reason this configuration is only appropriate for testing.
 
-Below is an example of an anlyzer that can detect when Docker is running with the Devicemapper storage driver in loop-lvm mode.
+Below is an example of an analyzer that will parse the output of `docker info` to determine if Docker is running with the Devicemapper storage driver in loop-lvm mode.
 
 ```yaml
 analyze:

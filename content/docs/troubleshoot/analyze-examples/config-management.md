@@ -17,6 +17,8 @@ When setting up a server, especially an appliance, it is important to have the s
 
 The support bundle analyzers will detect if Chef or Puppet agents are installed and configured, and surface this as informational. It's important to know this when troubleshooting a server because manual changes may not be possible.
 
+Below is an example of a list of analyzers that will parse the output of the command `ps aux` to detect if chef or puppet is running.
+
 ```yaml
 analyze:
   v1:

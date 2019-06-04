@@ -11,7 +11,7 @@ gradient: "orangeToOrange"
 
 # Load Average
 
-TODO
+High load average can often be the cause of your application behaving improperly or performing poorly. Below is an example of an analyzer that will parse the `/proc/loadavg` file and display the load average of the host over 1, 5 and 15 minutes in human readable format.
 
 ```yaml
 analyze:

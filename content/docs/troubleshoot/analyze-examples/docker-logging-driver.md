@@ -11,7 +11,7 @@ gradient: "orangeToOrange"
 
 # Docker Logging Driver
 
-TODO
+The `docker logs` command is quite useful for debugging purposes and is also required for the Replicated Troubleshoot product to collect logs from Docker containers. The `docker logs` command is only supported when the logging driver is configured as `json-file` or `journald`. Below is an example of an analyzer that will parse the output of the `docker info` command warn if the Docker logging driver is configured to be anything other than those two.
 
 ```yaml
 analyze:
