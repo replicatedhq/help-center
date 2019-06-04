@@ -5,7 +5,6 @@ description: "The Run Command Custom Collector"
 weight: "1704"
 categories: [ "Replicated Troubleshoot" ]
 index: ["docs/troubleshoot", "docs"]
-aliases: [ /docs/troubleshoot/collectors ]
 icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---

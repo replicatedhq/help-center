@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Promoting Collectors"
 description: "Promoting Troubleshoot Collectors"
 weight: "1604"
-categories: [ "Troubleshoot" ]
+categories: [ "Replicated Troubleshoot" ]
 index: ["docs/troubleshoot", "docs"]
 icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"

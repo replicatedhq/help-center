@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Creating Collectors"
 description: "Creating Custom Troubleshoot Collectors"
 weight: "1603"
-categories: [ "Troubleshoot" ]
+categories: [ "Replicated Troubleshoot" ]
 index: ["docs/troubleshoot", "docs"]
 icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
@@ -28,7 +28,7 @@ collect:
 
 To add custom collectors, start by appending each collector to the v1 array in the document above. A [full list of available collector types is documented in the reference docs](/api/support-bundle-yaml-specs/shared/). Each collector supports various attributes, and these are documented on the collector reference page.
 
-To illustrate how to use thisl let's add a custom collector spec that will include the logs from an api pod running in Kubernetes. This isn't a single pod, but it's a deployment with a label, and the support bundle should contain the logs from all replicas.
+To illustrate how to use this, let's add a custom collector spec that will include the logs from an api pod running in Kubernetes. This isn't a single pod, but it's a deployment with a label, and the support bundle should contain the logs from all replicas.
 
 The command that could be executed manually to retrieve these logs is:
 

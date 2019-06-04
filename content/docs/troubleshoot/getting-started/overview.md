@@ -49,7 +49,6 @@ When a support bundle is uploaded to the [Replicated Vendor Portal](https://vend
 
 Insights are specific items that the analyzer process found and surfaced. Insights can contain custom messages and levels, and are specific to the output of the analysis step on each support bundle.
 
-
 ## How to read these docs
 
 With the exception of the reference sections around APIs and YAML definitions, this documentation is designed to be read in order. Certain concepts and examples that are introduced early will be built upon in later sections.

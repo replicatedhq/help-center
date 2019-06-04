@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "How To Run"
 description: "Generating a Support Bundle"
 weight: "1602"
-categories: [ "Troubleshoot" ]
+categories: [ "Replicated Troubleshoot" ]
 index: ["docs/troubleshoot", "docs"]
 icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
@@ -17,7 +17,7 @@ The collection components Replicated Troubleshoot utility are distributed in a D
 
 For a server that's running Replicated, the Admin Console has a "Support" tab. On this page, a server admin can click "Download Support Bundle" to collect and download the support bundle locally.
 
-![Support Tab in Admin Console](/images/troubleshoot/support-tab.png).
+![Support Tab in Admin Console](/images/troubleshoot/support-tab.png)
 
 When downloading a support bundle from the Admin Console, the most released Collectors will define what's included in the bundle. For a full description of how the support bundle determines the set of collectors to use, read our page on [promoting collectors](../promoting-collectors).
 

@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Release Versions"
 description: "Troubleshoot Container Versions"
 weight: "1606"
-categories: [ "Troubleshoot" ]
+categories: [ "Replicated Troubleshoot" ]
 index: ["docs/troubleshoot", "docs"]
 icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
@@ -11,7 +11,7 @@ gradient: "orangeToOrange"
 
 # Troubleshoot Container Tags
 
-When running the suopport bundle container as a docker run command, we often provide a command that includes the ":latest" tag. This is recommended because it's a one time process and generally demands the latest troubleshooting tools. If you ware automating part of this process or packaging a reproducible deployment, you can use a named tag to guarantee the same image will be used. The following table documents our tagging and release strategy for the support bundle image.
+When running the [replicated/support-bundle](https://hub.docker.com/r/replicated/support-bundle) container as a docker run command, we often provide a command that includes the ":latest" tag. This is recommended because it's a one time process and generally demands the latest troubleshooting tools. If you ware automating part of this process or packaging a reproducible deployment, you can use a named tag to guarantee the same image will be used. The following table documents our tagging and release strategy for the [replicated/support-bundle](https://hub.docker.com/r/replicated/support-bundle) image.
 
 Note, We publish multiple tags with each release of the image.
 
