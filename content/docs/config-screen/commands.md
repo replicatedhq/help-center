@@ -8,11 +8,18 @@ index: "docs/config"
 aliases: [/docs/packaging-an-application/commands/,/docs/swarm/packaging-an-application/commands/]
 ---
 
-The `cmds` section of the YAML allows you to leverage the power of external commands within your configuration. The sole purpose of these `cmds` is to generate data for input in the configuration screen.
+The `cmds` section of the YAML allows you to leverage the power of external commands within your configuration.
+The sole purpose of these `cmds` is to generate data for input in the configuration screen.
 
-A command takes a variable number of string arguments and returns an array of strings. We have created an API with some useful commands. There is also the option to run the command raw. This command will take any `raw` string input and run the command in an [Ubuntu Trusty container](https://hub.docker.com/r/replicated/cmd/).
+A command takes a variable number of string arguments and returns an array of strings.
+We have created an API with some useful commands.
+There is also the option to run the command raw.
+This command will take any `raw` string input and run the command in an [Ubuntu Trusty container](https://hub.docker.com/r/replicated/cmd/).
 
 The command is run at YAML import time only (during app installation & during app updates).
+Data imported with `value_cmd` or `data_cmd` will not be overwritten upon updating the app, but `default_cmd` will.
+(For all three import methods the command is rerun during app update, but the results will only be used to overwrite prior values in the case of `default_cmd`)
+Modifying the name of a config item will cause it to be recognized as a new item and a new value will be generated.
 
 Below is an example of a command that will generate a private key, a x509 certificate, and a random admin password that are used as configuration for our app.
 
@@ -158,4 +165,58 @@ Runs command from a bash shell inside an "ubuntu:trusty" docker container. The d
   args:
   - echo
   - Hello World!
+```
+
+
+# Example Usage
+{{< linked_headline "persistent password" >}}
+
+This example generates a 64 character password for use with a database that will be held constant across updates.
+A checkbox is also used to allow the customer to view this password, but not edit it.
+A second checkbox allows the customer to edit the password.
+
+```yaml
+cmds:
+- name: gen_db_password
+  cmd: random
+  args:
+  - "64"
+
+config:
+- name: generated
+  title: Generated Internal Passwords
+  items:
+  # the db_password_init item should not be used by anything besides db_password_persist
+  - type: password
+    name: db_password_init
+    hidden: true
+    value_cmd:
+      name: gen_db_password
+      value_at: 0
+
+  - type: password
+    name: db_password_persist
+    title: Persistent DB Password
+    value: '{{repl ConfigOption "db_password_init"}}'
+    when: edit_switch=1
+
+  - type: text
+    name: db_password_view
+    title: "Persistent DB Password"
+    readonly: true
+    value: '{{repl ConfigOption "db_password_persist"}}'
+    when: view_switch=1
+
+  - name: view_switch
+    title: View Internal Passwords
+    type: bool
+    value: 0
+    affix: left
+
+  - name: edit_switch
+    title: Edit Internal Passwords
+    type: bool
+    value: 0
+    affix: right
+
 ```
