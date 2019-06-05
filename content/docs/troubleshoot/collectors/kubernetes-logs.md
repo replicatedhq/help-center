@@ -5,7 +5,6 @@ description: "The Kubernetes Logs Custom Collector"
 weight: "1706"
 categories: [ "Replicated Troubleshoot" ]
 index: ["docs/troubleshoot", "docs"]
-aliases: [ /docs/troubleshoot/collectors ]
 icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---

@@ -1,7 +1,7 @@
 ---
-date: "2019-05-07T12:00:00Z"
-title: "Custom Analyzers"
-description: "An explanation of Custom Troubleshoot Analyzers"
+date: "2019-06-04T12:00:00Z"
+title: "Reference Doc"
+description: "Analyzer spec reference documentation"
 weight: "1910"
 categories: [ "Replicated Troubleshoot" ]
 index: ["docs/troubleshoot", "docs"]
@@ -9,38 +9,7 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
-# Custom Analyzers
-
-**For access to this alpha feature, please [contact us](https://vendor.replicated.com/support).**
-
-Fully programmable analyzers can be written to extract insights specific to your application.
-
-# Analyze CLI
-
-The analyze CLI can be useful in debugging custom analyzers. The CLI is available as a Docker image at `replicated/analyze`.
-
-```bash
-$ cat ~/Downloads/supportbundle.tar.gz | \
-    docker run --rm -i -v `pwd`:/wrk \
-    replicated/analyze run --skip-default -o yaml -f /wrk/custom-analyze-spec.yml -
-- name: os.ubuntu
-  labels:
-    iconKey: os_ubuntu
-  insight:
-    primary: OS is not Ubuntu
-    detail: Operating System is not Ubuntu
-    severity: debug
-  severity: debug
-  analyzerSpec: '{"v1":[{"name":"os.ubuntu","labels":{"iconKey":"os_ubuntu"},"insight":{"primary":"OS is Ubuntu","detail":"Operating System is Ubuntu","severity":"info"},"registerVariables":[{"name":"os","os":{}}],"evaluateConditions":[{"condition":{"variableRef":"os","stringCompare":{"eq":"ubuntu"}},"insightOnFalse":{"primary":"OS is not Ubuntu","detail":"Operating System is not Ubuntu","severity":"debug"}}]}]}'
-  variables:
-    os: null
-```
-
-# Examples
-
-Custom analyzer examples can be seen [here](/docs/troubleshoot/analyzers/custom-examples/).
-
-# Spec
+# Analyzer Reference Documentation
 
 ## Analyzer
 

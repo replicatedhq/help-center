@@ -5,7 +5,6 @@ description: "Documentation for all Custom Collectors"
 weight: "1707"
 categories: [ "Replicated Troubleshoot" ]
 index: ["docs/troubleshoot", "docs"]
-aliases: [ /docs/troubleshoot/collectors ]
 icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---

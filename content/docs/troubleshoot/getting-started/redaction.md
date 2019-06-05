@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Redaction"
 description: "Redacting Sensitive Information"
 weight: "1605"
-categories: [ "Troubleshoot" ]
+categories: [ "Replicated Troubleshoot" ]
 index: ["docs/troubleshoot", "docs"]
 icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
