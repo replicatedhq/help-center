@@ -17,8 +17,9 @@ There is also the option to run the command raw.
 This command will take any `raw` string input and run the command in an [Ubuntu Trusty container](https://hub.docker.com/r/replicated/cmd/).
 
 The command is run at YAML import time only (during app installation & during app updates).
-Data imported with `value_cmd` or `data_cmd` will not be regenerated upon updating the app, but `default_cmd` will.
-Modifying the calling config item can also cause commands to be rerun, if it is no longer recognized as the same config item.
+Data imported with `value_cmd` or `data_cmd` will not be overwritten upon updating the app, but `default_cmd` will.
+(For all three import methods the command is rerun during app update, but the results will only be used to overwrite prior values in the case of `default_cmd`)
+Modifying the name of a config item will cause it to be recognized as a new item and a new value will be generated.
 
 Below is an example of a command that will generate a private key, a x509 certificate, and a random admin password that are used as configuration for our app.
 
