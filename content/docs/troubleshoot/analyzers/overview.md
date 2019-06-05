@@ -29,6 +29,6 @@ Some analyzers have been pre-configured for common use cases. The [Built-In Anal
 
 ### Custom Analyzers
 
-Additionally, [fully programmable analyzers](/docs/troubleshoot/analyzers/custom/) can be written to extract insights specific to your application.
+Additionally, [fully programmable analyzers](/docs/troubleshoot/analyzers/creating-analyzers/) can be written to extract insights specific to your application.
 
 **For access to this alpha feature, please [contact us](https://vendor.replicated.com/support).**
