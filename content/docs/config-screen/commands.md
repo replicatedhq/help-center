@@ -37,7 +37,8 @@ cmds:
 
 ```yaml
 config:
-  ...
+- name: keys
+  title: Generated Internal Certificates, Keys and Passwords
   items:
   - name: server_private_key
     title: Private key file
