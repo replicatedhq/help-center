@@ -10,7 +10,7 @@ googleAnalytics: ""
 
 # Hugo configuration
 pygmentsCodeFences: true
-pygmentsstyle: "monokai"
+pygmentsStyle: "monokai"
 
 Params:
   author: "Replicated"
