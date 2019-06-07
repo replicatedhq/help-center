@@ -8,6 +8,10 @@ canonifyurls: true
 description: "Documentation and knowledgebase for Replicated."
 googleAnalytics: ""
 
+# Hugo configuration
+pygmentsCodeFences: true
+pygmentsstyle: "monokai"
+
 Params:
   author: "Replicated"
   copyright: "Replicated, Inc"
