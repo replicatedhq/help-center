@@ -29,7 +29,7 @@
 	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 	<link rel="stylesheet" href='{{ .Site.BaseURL }}css/{{ index .Site.Data.manifest "style.css" }}'>
 	<link rel="stylesheet" href='{{ .Site.BaseURL }}css/featherlight.min.css'>
-	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight/prism.css">
+	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight/monokai.css">
 	{{ if .RSSLink -}}<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }}
 	{{ .Hugo.Generator }}
 	<!-- Autocomplete Library -->
