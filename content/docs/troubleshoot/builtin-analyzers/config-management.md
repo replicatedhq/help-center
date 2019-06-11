@@ -5,6 +5,8 @@ description: "Config Management custom Troubleshoot Analyzer example"
 weight: "2153"
 categories: [ "Replicated Troubleshoot" ]
 index: ["docs/troubleshoot", "docs"]
+aliases:
+  - /docs/troubleshoot/analyzers/config-management/
 icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
