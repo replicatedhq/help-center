@@ -24,7 +24,7 @@ Manual steps for upgrading from a 0.8 release to a 0.9 release can be followed u
 
 ### Amendments (v0.9)
 
-1. The 0.9.3 release can be downloaded [here](https://github.com/rook/rook/archive/v0.9.3.tar.gz).
+1. The 0.9.3 release can be downloaded with the link [https://github.com/rook/rook/archive/v0.9.3.tar.gz](https://github.com/rook/rook/archive/v0.9.3.tar.gz).
 1. In the "Upgrade Process" [2. Update modifed/added resources](https://rook.github.io/docs/rook/v0.9/ceph-upgrade.html#2-update-modifedadded-resources) section there are no pod security policies enabled.
 1. In the "Upgrade Process" [8. Update optional components](https://rook.github.io/docs/rook/v0.9/ceph-upgrade.html#8-update-optional-components) section there are no ancillary components to be updated.
 1. The [Ceph Daemon Upgrades](https://rook.github.io/docs/rook/v0.9/ceph-upgrade.html#ceph-daemon-upgrades) section can be skipped as we will upgrade to Nautilus directly following the upgrade from [release 0.9 to 1.0](#upgrading-from-release-0-9-to-1-0).
@@ -37,7 +37,7 @@ Manual steps for upgrading from a 0.9 release to a 1.0 release can be followed u
 
 ### Amendments (v1.0)
 
-1. The 1.0.2 release can be downloaded [here](https://github.com/rook/rook/archive/v1.0.2.tar.gz).
+1. The 1.0.2 release can be downloaded with the link [https://github.com/rook/rook/archive/v1.0.2.tar.gz](https://github.com/rook/rook/archive/v1.0.2.tar.gz).
 1. In "Upgrade Process" [4. Wait for the upgrade to complete](https://rook.github.io/docs/rook/v1.0/ceph-upgrade.html#4-wait-for-the-upgrade-to-complete) the tools pod will not get the `rook-version` label.
 1. In "Upgrade Process" [6. Update the Mon Ports](https://rook.github.io/docs/rook/v1.0/ceph-upgrade.html#6-update-the-mon-ports) you must follow steps 1-5 for each mon waiting the full 5+ minutes for each mon failover before moving on to the next. The mons will follow the pattern `rook-ceph-mon0` rather than `rook-ceph-mon-a` as stated in the guide.
 1. The [Ceph Version Upgrades](https://rook.github.io/docs/rook/v1.0/ceph-upgrade.html#ceph-version-upgrades) section must be completed. Replicated recommends the Ceph version `NEW_CEPH_IMAGE='ceph/ceph:v14.2.0-20190410'`.
