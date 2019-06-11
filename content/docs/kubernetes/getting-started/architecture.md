@@ -34,7 +34,7 @@ Replicated will automatically increase the replication level of this Pool as nod
 
 Previous versions of Replicated were bundled with [Rook version 0.8](https://rook.github.io/docs/rook/v0.8/).
 When upgrading Replicated the Rook Operator will not be upgraded to the current version.
-Manual steps can be followed using [this guide](https://rook.github.io/docs/rook/v1.0/ceph-upgrade.html).
+Manual steps can be followed using [this guide](/docs/kubernetes/customer-installations/upgrading-rook/).
 
 ## Ingress
 
