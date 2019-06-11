@@ -1,7 +1,7 @@
 ---
 date: "2019-06-04T12:00:00Z"
-title: "Analyze Examples"
-description: "Replicated Troubleshoot Analyze Examples"
+title: "Built-in Analyzers"
+description: "Replicated Troubleshoot built-in analyzer examples"
 weight: "2151"
 categories: [ "Replicated Troubleshoot" ]
 index: false

@@ -1,7 +1,7 @@
 ---
 date: "2018-03-03T04:02:20Z"
-title: "Analyze Examples"
-description: "Replicated Troubleshoot Analyze Examples"
+title: "Built-in Analyzers"
+description: "Replicated Troubleshoot built-in analyzer examples"
 weight: "2152"
 categories: [ "Replicated Troubleshoot" ]
 index: ["docs/troubleshoot", "docs"]
@@ -11,6 +11,6 @@ gradient: "orangeToOrange"
 hideFromList: true
 ---
 
-# Analyze Examples
+# Built-in Analyzers
 
-This section contains some examples of analyzer specs from built-in analyzers.
+This section contains the built-in analyzer specs.
