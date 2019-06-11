@@ -19,7 +19,7 @@ The basic install will install Docker, Kubernetes by pulling the scripts and res
 
 ```shell
 curl -sSL -o install.sh  https://get.replicated.com/kubernetes-init
-sudo bash ./install.sh -s kubernetes-only
+sudo bash ./install.sh kubernetes-only
 ```
 
 {{< linked_headline "Quick Install" >}}
