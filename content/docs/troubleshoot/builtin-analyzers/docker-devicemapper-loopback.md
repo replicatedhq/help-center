@@ -5,6 +5,8 @@ description: "Docker Devicemapper in loop-lvm Mode custom Troubleshoot Analyzer 
 weight: "2156"
 categories: [ "Replicated Troubleshoot" ]
 index: ["docs/troubleshoot", "docs"]
+aliases:
+  - /docs/troubleshoot/analyzers/docker-storage-driver/
 icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---

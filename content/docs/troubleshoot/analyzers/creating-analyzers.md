@@ -26,7 +26,7 @@ analyze:
 
 ## Adding Analyzers
 
-To add custom analyzers, start by appending each analyzer to the v1 array in the document above. Custom analyzer examples can be seen [here](/docs/troubleshoot/analyze-examples/overview/). Each analyzer supports various attributes, and these are documented on the [analyzer reference page](/docs/troubleshoot/analyzers/reference/).
+To add custom analyzers, start by appending each analyzer to the v1 array in the document above. Custom analyzer examples can be seen [here](/docs/troubleshoot/builtin-analyzers/overview/). Each analyzer supports various attributes, and these are documented on the [analyzer reference page](/docs/troubleshoot/analyzers/reference/).
 
 Custom analyzers can be a nice complement to custom collectors. In the [Adding Custom Collectors example](/docs/troubleshoot/getting-started/creating-collectors/#adding-collectors), we added a collector to gather the logs from an api pod running in Kubernetes. To illustrate how to use write a custom analyzers, let's add a custom spec that will analyze the logs from the api pod. 
 

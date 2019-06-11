@@ -5,6 +5,8 @@ description: "Docker ICC custom Troubleshoot Analyzer example"
 weight: "2157"
 categories: [ "Replicated Troubleshoot" ]
 index: ["docs/troubleshoot", "docs"]
+aliases:
+  - /docs/troubleshoot/analyzers/docker-icc/
 icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
