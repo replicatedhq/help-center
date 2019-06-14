@@ -17,9 +17,7 @@ values during initial installation.
 
 ## Configure Replicated Automatically
 
-During installation, Replicated will create a config file in `/etc/replicated.conf`. If this file
-exists, the installer will not overwrite it. To configure Replicated, create this file before installation,
-using any or all of the following options:
+During installation, Replicated will check for a config file at `/etc/replicated.conf`. To configure Replicated, create this file before installation, using any or all of the following options:
 
 ```json
 {
@@ -38,6 +36,12 @@ using any or all of the following options:
   "TlsBootstrapKey": "/etc/server.key"
 }
 ```
+
+{{< note title="Initial Install Only" >}}
+A file at `/etc/replicated.conf` will only be read on initial startup. It will never be written to, and once initial setup is complete and a license is installed, it will never be read again. (There are some exceptions to this rule, like changing the `DaemonAuthenticationPassword`, but in general it is not recommended to use `/etc/replicated.conf` after initial install).
+{{< /note >}}
+
+
 
 These settings are explained in the following table:
 
