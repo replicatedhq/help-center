@@ -197,7 +197,7 @@ The when property can be configured in two different formats. The legacy format 
   - name: database_password
     title: Database Password
     type: password
-    when: '{{repl or (ConfigOptionEquals "select_one" "external") (ConfigOptionEquals "select_one" "embedded")}}'
+    when: '{{repl or (ConfigOptionEquals "db_type" "external") (ConfigOptionEquals "db_type" "embedded")}}'
 ```
 
 ### `recommended`
