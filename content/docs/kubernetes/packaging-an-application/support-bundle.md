@@ -38,10 +38,6 @@ The remainder of this document is specific to the current default Support Bundle
 In addition to the [default support files](/docs/kubernetes/packaging-an-application/support-bundle/#default-support-files) included in the support bundle, addtional files can be included by configuring a [custom troubleshoot spec](/docs/troubleshoot/collectors/overview) for the desired app channel. 
 This custom troubleshoot spec will be included with the default replicated specs when a support bundle is generated.
 
-{{< linked_headline "Excluding Logs From Support Bundles" >}}
-
-If a pod's logs may contain sensitive information or are simply large and not useful for your debugging processes, you can exclude that pod's logs from support bundles. To do this, add the label `com.replicated.excludelogs=true` to the pod in question.
-
 {{< linked_headline "Default Support Files" >}}
 
 By default the Support Bundle will include the following files:
