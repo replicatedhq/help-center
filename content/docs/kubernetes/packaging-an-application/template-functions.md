@@ -142,7 +142,7 @@ env:
 ```go
 func RunOffline() bool
 ```
-Returns whether or not we are running in airgap mode. This is available in the Kubernetes and Swarm implementations, but will always return false.
+Returns whether or not we are running in airgap mode.
 ```yaml
 env:
 - name: IS_AIRGAP
