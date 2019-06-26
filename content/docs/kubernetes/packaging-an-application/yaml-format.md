@@ -53,7 +53,7 @@ console_support_markdown: |
 
 {{< linked_headline "Snapshots (Backups)" >}}
 
-The snapshots key is available to to enable and configure [Snapshots](/docs/snapshots/overview). The following example will allow your customer to enable snapshots and create a script to run the snapshot.
+The snapshots key is available to to enable and configure [Snapshots](/docs/snapshots/overview). The following example will allow your customer to enable snapshots. You can customize which volumes should be backed up and specify a script to be run before the snapshot is collected.
 
 ```yaml
 backup:
