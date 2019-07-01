@@ -18,7 +18,7 @@ This guide will deploy one of the canonical Kubernetes applications using Replic
 
 {{< linked_headline "Create a New Application" >}}
 
-To start, log in (or create an account) on [vendor.replicated.com](https://vendor.replicated.com) and create a new application. After signing up and activating your account, you will be prompted to create a new application. Give it a name like "Kubernetes Guestbook Example", select the "Kubernetes + Replicated" option, and click "Create application".
+To start, log in (or create a new team) on [vendor.replicated.com](https://vendor.replicated.com) and create a new application. After signing up and activating your account, you will be prompted to create a new application. Give it a name like "Kubernetes Guestbook Example", select the "Kubernetes + Replicated" option, and click "Create application".
 
 ![Create Application](/images/guides/kubernetes/create-application.png)
 

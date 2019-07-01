@@ -17,7 +17,7 @@ When starting out with Replicated, the [Vendor Portal](https://vendor.replicated
 
 {{< linked_headline "Create A New Application" >}}
 
-To start, log in (or create an account) on [vendor.replicated.com](https://vendor.replicated.com) and create a new application. After signing up and activating your account, you will be prompted to create a new application. Give it a name like "Learning Replicated", select the "Replicated + built-in scheduler" option, and click "Create application".
+To start, log in (or create a new team) on [vendor.replicated.com](https://vendor.replicated.com) and create a new application. After signing up and activating your account, you will be prompted to create a new application. Give it a name like "Learning Replicated", select the "Replicated + built-in scheduler" option, and click "Create application".
 
 ![Create Application](/images/guides/native/create-app.png)
 
