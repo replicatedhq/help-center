@@ -32,7 +32,7 @@ There are a few cases where using other schedulers, such as the Replicated Nativ
 
 The process to distribute your Swarm application in Replicated consists of the following steps:
 
-1. Create a vendor account on the [Replicated Vendor Portal](https://vendor.replicated.com/signup).
+1. Create a new team on the [Replicated Vendor Portal](https://vendor.replicated.com/signup).
 1. Prepare the images required by your app. You can either:
    * Tag and push your images to the Replicated Private Registry. Or
    * Select images from a public registry ie Docker Hub. Or
