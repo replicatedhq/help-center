@@ -17,7 +17,7 @@ In this section, we will start by building a Redis service that can run on any D
 To finish this section, you will need:
 
 * A machine with Docker (version 1.13.1 and above) installed
-* A Replicated account (sign up at [https://vendor.replicated.com/](https://vendor.replicated.com/))
+* A Replicated account (sign up at [https://vendor.replicated.com/signup](https://vendor.replicated.com/signup))
 
 {{< linked_headline "Create a Docker Compose App" >}}
 
@@ -69,7 +69,7 @@ If you require help at any time with these steps, help is available through the 
 
 {{< linked_headline "Create a New Application" >}}
 
-The first step in porting our software to a Replicated release is to create a new application in the [Vendor Portal](https://vendor.replicated.com). Sign up and activate your account to access the primary dashboard, which prompts you to create a new application. Fill in an application name, select the `Docker Swarm + Replicated` option, and click "Create application" to continue.
+The first step in porting our software to a Replicated release is to create a new application in the [Vendor Portal](https://vendor.replicated.com/signup). Sign up and activate your account to access the primary dashboard, which prompts you to create a new application. Fill in an application name, select the `Docker Swarm + Replicated` option, and click "Create application" to continue.
 
 ![](/images/guides/swarm/create-app.png)
 

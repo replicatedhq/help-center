@@ -12,7 +12,7 @@ icon: "replicatedShip"
 
 {{< linked_headline "Create an Application" >}}
 
-To begin, log in (or create an account) on [vendor.replicated.com](https://vendor.replicated.com). If you already have an account on [console.replicated.com](https://console.replicated.com), you can use it here too. 
+To begin, log in (or create a new team) on [vendor.replicated.com](https://vendor.replicated.com). If you already have an account on [console.replicated.com](https://console.replicated.com), you can use it here too. 
 
 If this is your first time logging in, you'll be presented with a "Create your Application" page. If not, you'll need to click `Create new app` in the top-left application selector.
 
