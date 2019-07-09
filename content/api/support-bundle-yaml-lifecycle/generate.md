@@ -1,7 +1,7 @@
 ---
 categories:
 - support-bundle-yaml-lifecycle
-date: 2018-01-17T23:51:55Z
+date: 2019-05-07T12:00:00Z
 description: Adds a step that will generate a support bundle. It has one argument, use_defaults
 index: docs
 title: generate
@@ -11,13 +11,16 @@ gradient: "purpleToPink"
 
 ## generate
 
+**type object**
+
 Adds a step that will generate a support bundle. It has one argument, use_defaults
 
 
 ```yaml
 lifecycle:
-  - generate:
-      use_defaults: true
+  v1:
+    - generate:
+        use_defaults: true
 ```
 
 
