@@ -15,7 +15,7 @@ icon: "replicatedShip"
 Now that you have deployed the Troubleshoot app and your Collect Spec alongside your Replicated Ship application, generating a support bundle is as simple as running the following command:
 
 ```bash
-POD="$(kubectl get pod -l run=troubleshoot | grep Running | awk '{print $1}')" ; \
+POD="$(kubectl get pod -l run=troubleshoot --field-selector=status.phase=Running -o jsonpath='{.items[*].metadata.name}')" ; \
     kubectl exec -it $POD -- support-bundle generate --skip-default --no-upload -f /opt/collect.yml && \
     kubectl cp $POD:/out/supportbundle.tar.gz ./supportbundle.tar.gz
 ```
@@ -36,7 +36,7 @@ lifecycle:
 
           You can later generate a troubleshoot support bundle by running the following command:
 
-            POD="$(kubectl get pod -l run=troubleshoot | grep Running | awk '{print $1}')" ; \
+            POD="$(kubectl get pod -l run=troubleshoot --field-selector=status.phase=Running -o jsonpath='{.items[*].metadata.name}')" ; \
                 kubectl exec -it $POD -- support-bundle generate --skip-default --no-upload -f /opt/collect.yml && \
                 kubectl cp $POD:/out/supportbundle.tar.gz ./supportbundle.tar.gz
 ```
