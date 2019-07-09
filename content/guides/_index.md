@@ -25,4 +25,8 @@ guides:
     description: "Get started creating and managing support bundles using Replicated Troubleshoot."
     level: "replicatedTroubleshoot"
     slug: "troubleshoot"
+  - title: "Troubleshooting a Ship Application"
+    description: "Troubleshooting simplifies debugging issues with your Ship application in your customer's environment."
+    level: "replicatedShip"
+    slug: "ship-and-troubleshoot"
 ---

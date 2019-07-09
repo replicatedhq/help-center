@@ -279,6 +279,24 @@ LicenseFieldValue returns the value of the entitlement with the provided name. I
 '{{repl LicenseFieldValue "numSeats" }}'
 ```
 
+{{< template_function name="CollectSpec" >}}
+```go
+func CollectSpec() string
+```
+CollectSpec returns the Collect Spec currently promoted to the channel to which your license is associated.
+```yaml
+'{{repl CollectSpec }}'
+```
+
+{{< template_function name="AnalyzeSpec" >}}
+```go
+func AnalyzeSpec() string
+```
+AnalyzeSpec returns the Analyze Spec currently promoted to the channel to which your license is associated.
+```yaml
+'{{repl AnalyzeSpec }}'
+```
+
 {{< template_function name="Installation" >}}
 ```go
 func Installation(field string) string
