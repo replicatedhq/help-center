@@ -30,6 +30,68 @@ collect:
         output_dir: /k8s/version
     - kubernetes.cluster-info:
         output_dir: /k8s/cluster
+    - kubernetes.api-versions:
+        output_dir: /k8s/api_versions
+
+    - kubernetes.resource-list:
+        kind: cronjobs
+        output_dir: /k8s/resources/cronjobs
+    - kubernetes.resource-list:
+        kind: daemonsets
+        output_dir: /k8s/resources/daemonsets
+    - kubernetes.resource-list:
+        kind: deployments
+        output_dir: /k8s/resources/deployments
+    - kubernetes.resource-list:
+        kind: endpoints
+        output_dir: /k8s/resources/endpoints
+    - kubernetes.resource-list:
+        kind: events
+        output_dir: /k8s/resources/events
+    - kubernetes.resource-list:
+        kind: ingresses
+        output_dir: /k8s/resources/ingresses
+    - kubernetes.resource-list:
+        kind: jobs
+        output_dir: /k8s/resources/jobs
+    - kubernetes.resource-list:
+        kind: namespaces
+        output_dir: /k8s/resources/namespaces
+    - kubernetes.resource-list:
+        kind: nodes
+        output_dir: /k8s/resources/nodes
+    - kubernetes.resource-list:
+        kind: persistentvolumeclaims
+        output_dir: /k8s/resources/persistentvolumeclaims
+    - kubernetes.resource-list:
+        kind: persistentvolumes
+        output_dir: /k8s/resources/persistentvolumes
+    - kubernetes.resource-list:
+        kind: pods
+        output_dir: /k8s/resources/pods
+    - kubernetes.resource-list:
+        kind: replicasets
+        output_dir: /k8s/resources/replicasets
+    - kubernetes.resource-list:
+        kind: replicationcontrollers
+        output_dir: /k8s/resources/replicationcontrollers
+    - kubernetes.resource-list:
+        kind: services
+        output_dir: /k8s/resources/services
+    - kubernetes.resource-list:
+        kind: statefulsets
+        output_dir: /k8s/resources/statefulsets
+    - kubernetes.resource-list:
+        kind: storageclasses
+        output_dir: /k8s/resources/storageclasses
+
+    - kubernetes.logs:
+        namespace: kube-system
+        pod_log_options:
+          timestamps: true
+          limitBytes: 10000000
+        list_options: {}
+        output_dir: /k8s/logs/kube-system
 ```
 
 Navigate back to the collectors screen and click the "Promote" button. Select the "Nightly" channel and click "Promote".
