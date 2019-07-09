@@ -16,6 +16,7 @@ If you do not specify a lifecycle in your YAML spec, the following default lifec
 
 ```yaml
 lifecycle:
+  v1:
     - message: 
         contents: "Starting support bundle collection..."
     - generate:
