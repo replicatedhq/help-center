@@ -22,7 +22,7 @@ POD="$(kubectl get pod -l run=troubleshoot | grep Running | awk '{print $1}')" ;
 
 Running the command will generate a file `supportbundle.tar.gz` in the current directory which includes helpful debugging information from your customer's cluster.
 
-It is recommended to include messaging in your "lifecycle" step to help guide your customer in deploying the Troubleshoot app and collecting a Support Bundle.
+It is recommended to include messaging in your Ship "lifecycle" step to help guide your customer in deploying the Troubleshoot app and collecting a Support Bundle.
 
 ```yaml
 lifecycle:
