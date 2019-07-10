@@ -12,7 +12,7 @@ icon: "replicatedShip"
 
 {{< linked_headline "Distributing your Troubleshoot Spec" >}}
 
-In order to allow for easy troubleshooting of your Replicated Ship application, the Troubleshoot app can be included alongside your Ship app. Following is an example of inline Ship assets to distribute Kubernetes resources for a Troubleshoot Deployment. In addition to the Deployment, a ConfigMap will be deployed and mounted into the Troubleshoot container. This ConfigMap includes the Collect Spec that is currently promoted to your Ship release channel.
+In order to allow for easy troubleshooting of your Replicated Ship application, the Troubleshoot component can be included alongside your Ship app. Following is an example of inline Ship assets to distribute Kubernetes resources for a Troubleshoot Deployment. In addition to the Deployment, a ConfigMap will be deployed and mounted into the Troubleshoot container. This ConfigMap includes the Collect Spec that is currently promoted to your Ship release channel.
 
 ```yaml
 assets:

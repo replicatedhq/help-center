@@ -98,4 +98,4 @@ Navigate back to the collectors screen and click the "Promote" button. Select th
 
 ![promote release](/images/guides/ship-and-troubleshoot/promote-release.png)
 
-When running Replicated Ship, the Collect Spec will be made available in your Ship YAML via the [`CollectSpec`](/docs/ship/template-functions/template-types/#collectspec). The [next section](/guides/ship-and-troubleshoot/distribute-your-spec/) in this guide will show you how to include this spec as well as the Troubleshoot application along side your Ship application.
+When running Replicated Ship, the Collect Spec will be made available in your Ship YAML via the [`CollectSpec`](/docs/ship/template-functions/template-types/#collectspec). The [next section](/guides/ship-and-troubleshoot/distribute-your-spec/) in this guide will show you how to include this spec as well as the Troubleshoot component along side your Ship application.
