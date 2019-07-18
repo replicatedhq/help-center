@@ -35,8 +35,6 @@ The limits field can support one or both of `maxAge` and `maxLines`. This will l
 
 When this collector is executed, it will include the following files in a support bundle:
 
-### /logs/\<namespace\>/\<pod-name\>/sdout.txt
-This will will be created for each pod that matches the selector. The file will be the stdout from the pod.
+### /logs/\<namespace\>/\<pod-name\>.txt
+This will will be created for each pod that matches the selector.
 
-### /logs/\<namespace\>/\<pod-name\>/sderr.txt
-This will will be created for each pod that matches the selector. The file will be the stderr from the pod.
