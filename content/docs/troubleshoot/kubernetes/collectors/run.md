@@ -23,8 +23,11 @@ spec:
       image: ubuntu:latest
       command: ["ping"]
       args: ["www.google.com"]
+      timeout: 5s
 
 ```
+
+The timeout will be 30 seconds or the timeout specified, whichever is shorter.
 
 ## Included resources
 
