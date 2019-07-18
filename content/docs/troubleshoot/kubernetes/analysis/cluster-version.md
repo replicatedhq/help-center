@@ -10,13 +10,22 @@ gradient: "blueToBlue"
 ---
 
 ```yaml
-   - clusterVersion:
-       - fail:
-           when: "< 1.13.0"
-           message: You need more kubernetes
-       - warn:
-           when: "< 1.15.0"
-           message: You have barely enough kubernetes
-       - pass:
-           message: Good job keeping k8s current
+apiVersion: troubleshoot.replicated.com/v1beta1
+kind: Preflight
+metadata:
+  name: check-kubernetes-version
+spec:
+  analyzers:
+    - clusterVersion:
+        outcomes:
+          - fail:
+              when: "< 1.14.0"
+              message: The application requires at Kubernetes 1.14.0 or later, and recommends 1.15.0.
+              uri: https://www.kubernetes.io
+          - warn:
+              when: "< 1.15.0"
+              message: Your cluster meets the minimum version of Kubernetes, but we recommend you update to 1.15.0 or later.
+              uri: https://kubernetes.io
+          - pass:
+              message: Your cluster meets the recommended and required versions of Kubernetes.
 ```

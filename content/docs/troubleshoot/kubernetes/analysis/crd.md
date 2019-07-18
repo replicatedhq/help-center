@@ -10,10 +10,17 @@ gradient: "blueToBlue"
 ---
 
 ```yaml
-   - customResourceDefinitions:
-       name: rook
-       fail:
-         message: You don't have rook installed
-       pass:
-         message: Found rook!
+apiVersion: troubleshoot.replicated.com/v1beta1
+kind: Preflight
+metadata:
+  name: preflight-sample
+spec:
+  analyzers:
+    - customResourceDefinition:
+        customResourceDefinitionName: rook
+        outcomes:
+          - fail:
+              message: You don't have rook installed
+          - pass:
+              message: Found rook!
 ```

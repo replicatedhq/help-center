@@ -10,12 +10,18 @@ gradient: "blueToBlue"
 ---
 
 ```yaml
-   - manifests:
-       - ingress:
-           namespace: default
-           name: connect-to-me
-         fail:
-           message: The ingress isn't ingressing
-         pass:
-           message: All systems ok on ingress
+apiVersion: troubleshoot.replicated.com/v1beta1
+kind: Preflight
+metadata:
+  name: preflight-sample
+spec:
+  analyzers:
+    - ingress:
+        namespace: default
+        ingressName: connect-to-me
+        outcomes:
+          - fail:
+              message: The ingress isn't ingressing
+          - pass:
+              message: All systems ok on ingress
 ```

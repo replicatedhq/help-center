@@ -10,13 +10,18 @@ gradient: "blueToBlue"
 ---
 
 ```yaml
-   - clusterVersion:
-       - fail:
-           when: "< 1.13.0"
-           message: You need more kubernetes
-       - warn:
-           when: "< 1.15.0"
-           message: You have barely enough kubernetes
-       - pass:
-           message: Good job keeping k8s current
+apiVersion: troubleshoot.replicated.com/v1beta1
+kind: Preflight
+metadata:
+  name: preflight-sample
+spec:
+  analyzers:
+    - storageClass:
+        checkName: Required storage classes
+        storageClassName: "microk8s-hostpath"
+        outcomes:
+          - fail:
+              message: The microk8s storage class thing was not found
+          - pass:
+              message: All good on storage classes
 ```
