@@ -12,7 +12,7 @@ icon: "replicatedShip"
 
 {{< linked_headline "Introduction to Troubleshoot and Ship" >}}
 
-Replicated [Troubleshoot](/docs/troubleshoot/getting-started/overview/) is a tool designed to enable identification, collection, delivery and analysis of remotely-operated distributed systems. This guide will walk you through the process of packaging up the Troubleshoot component and deploying it alongside your Replicated Ship application to aid in debugging issues that arise in your customer's cluster.
+Replicated [Troubleshoot](/docs/troubleshoot/server/getting-started/overview/) is a tool designed to enable identification, collection, delivery and analysis of remotely-operated distributed systems. This guide will walk you through the process of packaging up the Troubleshoot component and deploying it alongside your Replicated Ship application to aid in debugging issues that arise in your customer's cluster.
 
 This guide assumes you have an application already bundled with Replicated Ship. To get started with Ship follow [this guide](/guides/kubernetes-with-ship/).
 

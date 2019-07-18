@@ -35,7 +35,7 @@ support:
 The remainder of this document is specific to the current default Support Bundle in Replicated. If you are looking for the v1 version of this document, it is available at <a href="/docs/swarm/packaging-an-application/support-bundle-v1/">{{< baseurl >}}/docs/swarm/packaging-an-application/support-bundle-v1/</a>
 {{< /note >}}
 
-In addition to the [default support files](/docs/swarm/packaging-an-application/support-bundle/#default-support-files) included in the support bundle, addtional files can be included by configuring a [custom troubleshoot spec](/docs/troubleshoot/collectors/overview) for the desired app channel. 
+In addition to the [default support files](/docs/swarm/packaging-an-application/support-bundle/#default-support-files) included in the support bundle, addtional files can be included by configuring a [custom troubleshoot spec](/docs/troubleshoot/server/collectors/overview) for the desired app channel.
 This custom troubleshoot spec will be included with the default replicated specs when a support bundle is generated.
 
 
