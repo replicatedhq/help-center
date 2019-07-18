@@ -17,9 +17,9 @@ To this point, a debugging session with Troubleshoot is broken into two distinct
 
 ## Collection
 
-The collection step always runs in-cluster. This process is controlled by the Replicated Troubleshoot Operator.
+The collection step always runs in-cluster. This process is controlled by the Replicated Troubleshoot utility.
 
-An application vendor can write a set of collectors, which is a YAML file that defines the resources, data, commands, and more to collect when generating a support bundle. If no collectors are present, a default set will run that collect a wide variety of information about the cluster and the resources running in the cluster. The custom YAML definition can be used to limit the scope of what’s collected or ro add additional items to the collection.
+An application vendor can write a set of collectors, which is a YAML file that defines the resources, data, commands, and more to collect when generating a support bundle. If no collectors are present, a default set will run that collect a wide variety of information about the cluster and the resources running in the cluster. The custom YAML definition can be used to limit the scope of what’s collected or to add additional items to the collection.
 
 The basic format of a collector definition  is a Kubernetes YAML that can be distributed with the application. The YAML will look like:
 
@@ -33,4 +33,4 @@ spec:
  - cluster-resources: {}
 ```
 
-The “spec” field is the defintion. The v1beta1 implementation currently supports the following collector.
+
