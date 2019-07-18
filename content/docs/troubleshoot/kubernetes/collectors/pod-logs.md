@@ -8,4 +8,35 @@ icon: "replicatedTroubleshoot"
 gradient: "blueToBlue"
 ---
 
-... Content coming
+The pod logs collector is not automatically included. You need to specify it in your spec to include pod logs. You can include this spec multiple times.
+
+
+```yaml
+apiVersion: troubleshoot.replicated.com/v1beta1
+kind: Collector
+metadata:
+  name: sample
+spec:
+  - logs:
+      selector:
+        - app=api
+      namespace: default
+      limits:
+        maxAge: 30d
+        maxLines: 1000
+
+```
+
+The selector attribute is a standard Kubernetes selector. It can match any labels.
+
+The limits field can support one or both of `maxAge` and `maxLines`. This will limit the output to the constraints provided. If not supplied, the `maxAge` will be unset (all), and the `maxLines` will be set to 10000 lines.
+
+## Included resources
+
+When this collector is executed, it will include the following files in a support bundle:
+
+### /logs/\<namespace\>/\<pod-name\>/sdout.txt
+This will will be created for each pod that matches the selector. The file will be the stdout from the pod.
+
+### /logs/\<namespace\>/\<pod-name\>/sderr.txt
+This will will be created for each pod that matches the selector. The file will be the stderr from the pod.
