@@ -13,7 +13,9 @@ Programmable Test Procedures enable you to run an arbitrary Services to validate
 
 {{< linked_headline "Example" >}}
 
-The following example will check the validity of the password entered by the end-user. The `test_proc.custom_command` property of the YAML will instruct Replicated to run a service defined in a special YAML file defined with kind `test-proc-swarm`. The `test_proc.results` property can be utilized to interpret output from the Service and format it for display to the end-user. Note the reference to the Service spec that has been added to the release yaml with kind `test-proc-swarm`.
+The following example will check the validity of the password entered by the end-user. The `test_proc.custom_command` property of the YAML will instruct Replicated to run a service defined in a special YAML file defined with kind `test-proc-swarm`.
+The `test_proc.results` property can be used to interpret output from the container and format any errors for display to the end-user.
+Note the reference to the Service spec that has been added to the release yaml with kind `test-proc-swarm`.
 
 ```yaml
 ---
