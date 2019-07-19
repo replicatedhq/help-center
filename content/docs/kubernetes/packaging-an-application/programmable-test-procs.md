@@ -15,6 +15,7 @@ Programmable Test Procedures enable you to run an arbitrary Pods to validate the
 
 The following example will check the validity of the password entered by the end-user. The `test_proc.custom_command` property of the YAML will instruct Replicated to run a service defined in a special YAML file defined with kind `test-proc-kubernetes`. The `test_proc.results` property can be utilized to interpret output from the Pod and format it for display to the end-user.
 The `test_proc.results` property can be used to interpret output from the container and format any errors for display to the end-user.
+Note the reference to the Service spec that has been added to the release yaml with kind `test-proc-kubernetes`.
 
 ```yaml
 ---
