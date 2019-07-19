@@ -20,14 +20,17 @@ spec:
   - run:
       name: ping-google
       namespace: default
-      image: ubuntu:latest
+      image: flungo/netutils
       command: ["ping"]
       args: ["www.google.com"]
       timeout: 5s
+      imagePullPolicy: IfNotPresent
 
 ```
 
-The timeout will be 30 seconds or the timeout specified, whichever is shorter.
+The timeout will be 20 seconds or the timeout specified, whichever is shorter.
+
+The imagePullPolicy will be "IfNotPresent" if not specified.
 
 ## Included resources
 
