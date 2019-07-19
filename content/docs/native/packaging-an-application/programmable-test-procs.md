@@ -12,7 +12,8 @@ Programmable Test Procedures enable you to run an arbitrary containers to valida
 
 {{< linked_headline "Example" >}}
 
-The following example will check the validity of the password entered by the end-user. The `test_proc.custom_command` property of the YAML will instruct Replicated to run a container defined in the components section of the YAML. The `test_proc.results` property can be utilized to interpret output from the container and format it for display to the end-user.
+The following example will check the validity of the password entered by the end-user. The `test_proc.custom_command` property of the YAML will instruct Replicated to run a container defined in the components section of the YAML.
+The `test_proc.results` property can be used to interpret output from the container and format any errors for display to the end-user.
 
 ```yaml
 config:
