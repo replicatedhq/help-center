@@ -9,4 +9,14 @@ icon: "replicatedTroubleshoot"
 gradient: "blueToBlue"
 ---
 
-By default troubleshoot will apply redactions to some (TODO: which ones?) collectors.  These can be turned of by passing `--redact=false` to the troubleshoot command
+By default troubleshoot will redact sensitive information from all collectors. This includes
+
+- passwords
+- tokens
+- AWS secrets
+- IP addresses
+- Database connection strings
+- URLs that include user names and passwords
+
+
+This functionality can be turned off by passing `--redact=false` to the troubleshoot command.
