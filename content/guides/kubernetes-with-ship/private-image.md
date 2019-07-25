@@ -87,7 +87,7 @@ metadata:
   name: superci-api
 spec:
   imagePullSecrets:
-    - imagepullsecret-example
+    - name: imagepullsecret-example
   containers:
     - name: api
       image: registry.replicated.com/superci/superci-enterprise-api:1.0.1
