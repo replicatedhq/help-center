@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_console-auth_import
 categories:
 - replicatedctl
-date: "2019-03-12T12:19:48-07:00"
+date: "2019-07-31T18:16:51-07:00"
 description: Import console authentication config from stdin
 gradient: purpleToPink
 index: docs

@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_snapshot
 categories:
 - replicatedctl
-date: "2019-05-01T10:46:28-07:00"
+date: "2019-07-31T18:16:51-07:00"
 description: Manage snapshots
 gradient: purpleToPink
 index: docs
