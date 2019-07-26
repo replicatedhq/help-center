@@ -21,7 +21,7 @@ kubectl troubleshoot <uri/path>
 Once it's installed, you can test it by generating and downloading a sample support bundle:
 
 ```shell
-kubectl troubleshoot https://troubleshoot.replicated.com/sample
+kubectl troubleshoot https://troubleshoot.replicated.com
 ```
 
 This will connect to the cluster defined in your local kubecontext, and collect some basic information about the cluster. After it's finished, it will write a file named "support-bundle.tar.gz" to the current working directory.

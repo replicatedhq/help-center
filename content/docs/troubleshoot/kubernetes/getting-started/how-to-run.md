@@ -18,7 +18,7 @@ Preflight Checks are designed to be run before the application is installed. The
 Once the plugin is installed, you can run a set of sample Preflight Checks with:
 
 ```shell
-kubectl preflight https://preflight.replicated.com/sample
+kubectl preflight https://preflight.replicated.com
 ```
 
 ## Support Bundles
@@ -28,5 +28,5 @@ Suppor t Bundles are designed be be run when something is wrong with an applicat
 Once the plugin is installed, you can generate a sample Support Bundle with:
 
 ```shell
-kubectl troubleshoot https://troubleshoot.replicated.com/sample
+kubectl troubleshoot https://troubleshoot.replicated.com
 ```

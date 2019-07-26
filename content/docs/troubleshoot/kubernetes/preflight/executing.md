@@ -23,7 +23,7 @@ kubectl preflight <uri/path>
 Once it's installed, you can test it by running a set of sample preflight checks against your cluster:
 
 ```shell
-kubectl preflight https://preflight.replicated.com/sample
+kubectl preflight https://preflight.replicated.com
 ```
 
 This will connect to the cluster defined in your local kubecontext, and collect some basic information about the cluster. After it's finished, it will show the results in a terminal based UI, highlighting the passed checks in green, the warning checks in yellow and the failed checks in red. The up and down arrow keys will select different checks, showing information messages and URLs to click for more information.
