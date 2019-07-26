@@ -139,6 +139,33 @@ A `textarea` can specify a `props` that will map into the HTML element directly.
     type: text
 ```
 
+### `file`
+A `file` is a special type of form field that renders an [`<input type="file" />`](https://www.w3schools.com/tags/tag_input.asp) HTML element. It has both a value, which holds the file name, and data, the contents of the file. See the [`ConfigOptionData`](https://help.replicated.com/docs/native/packaging-an-application/template-functions/#configoptiondata) template function for examples on how to use the file contents in your application.
+
+```yaml
+- name: certs
+  title: TLS Configuration
+  items:
+  - name: tls_private_key_file
+    title: Private Key
+    when: use_tls=tls_custom
+    value: Use self-signed certificate
+    data_cmd:
+      name: ssl_cert
+      value_at: 0
+    type: file
+    affix: left
+  - name: tls_certificate_file
+    title: Certificate
+    when: use_tls=tls_custom
+    value: Use self-signed certificate
+    data_cmd:
+      name: ssl_cert
+      value_at: 1
+    type: file
+    affix: right
+```
+
 {{< linked_headline "Properties" >}}
 
 ### `default` and `value`
