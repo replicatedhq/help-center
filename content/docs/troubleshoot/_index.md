@@ -13,6 +13,7 @@ aliases:
   - /guides/troubleshoot/iterating/
   - /guides/troubleshoot/github/
   - /guides/support-bundle
+  - /docs/troubleshoot/getting-started/overview/
 
 icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"

@@ -10,6 +10,8 @@ aliases:
   - /docs/troubleshoot/examples/
   - /docs/troubleshoot/analyzers/builtin/
   - /docs/troubleshoot/analyzers/disk-space/
+  - /docs/troubleshoot/server/analyzers/builtin/
+  - /docs/troubleshoot/server/analyzers/disk-space/
 icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 hideFromList: true
