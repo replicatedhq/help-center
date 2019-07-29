@@ -20,7 +20,7 @@ You will be presented with a YAML editor with defaults included.
 
 ![release yaml](/images/guides/ship-and-troubleshoot/release-yaml.png)
 
-Paste the following YAML in the editor and click the "Save" button. For more detailed documentation on creating Custom Collectors, see our [Troubleshoot docs](/docs/troubleshoot/getting-started/creating-collectors/).
+Paste the following YAML in the editor and click the "Save" button. For more detailed documentation on creating Custom Collectors, see our [Troubleshoot docs](/docs/troubleshoot/server/getting-started/creating-collectors/).
 
 
 ```yaml
