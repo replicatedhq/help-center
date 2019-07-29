@@ -14,7 +14,7 @@ gradient: "blueToBlue"
 Replicated Troubleshoot is a collection of utilities that can be used for preflight checks and remotely diagnosing a server.
 
 ## Kubernetes Apps
-Our [Kubernetes Troubleshoot](/docs/troubleshoot/kubernetes/getting-started/overview/) is designed to run [preflight checks](/docs/troubleshoot/kubernetes/preflight/overview/) and generate [support bundles](/docs/troubleshoot/kubernetes/support-bundle/overview/) to assist with envirrnment conformance testing and post-installation diagnostics. Choose this option if you plan to install a Kubernetes application into an existing cluster.
+Our [Kubernetes Troubleshoot](/docs/troubleshoot/kubernetes/getting-started/overview/) is designed to run [preflight checks](/docs/troubleshoot/kubernetes/preflight/overview/) and generate [support bundles](/docs/troubleshoot/kubernetes/support-bundle/overview/) to assist with environment conformance testing and post-installation diagnostics. Choose this option if you plan to install a Kubernetes application into an existing cluster.
 
 
 ## Server Troubleshoot

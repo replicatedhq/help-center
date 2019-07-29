@@ -13,6 +13,12 @@ gradient: "blueToBlue"
 
 Before you can run preflight checks, you need to have a client-only component available. Nothing needs to be installed in the cluster. The Preflight client utility is packaged as a kubectl plugin, and can be installed using [krew](https://krew.dev). For instructions on how to install krew, visit [https://github.com/kubernetes-sigs/krew/#installation](https://github.com/kubernetes-sigs/krew/#installation).
 
+{{< note title="krew plugin pending" >}}
+The plugin is not yet merged. For the latest status of the krew plugin, please visit https://github.com/kubernetes-sigs/krew-index/pull/188.
+<br /><br />
+Until this plugin has been accepted, the plugin installation instructions on this page will not work.
+{{< /note >}}
+
 If you have krew installed, the next step is to install the Preflight plugin:
 
 ```shell

@@ -13,6 +13,12 @@ Both Troubleshoot and Preflight are built and packaged to be run by the cluster 
 
 ## Preflight Checks
 
+{{< note title="krew plugin pending" >}}
+The plugin is not yet merged. For the latest status of the krew plugin, please visit https://github.com/kubernetes-sigs/krew-index/pull/188.
+<br /><br />
+Until this plugin has been accepted, the plugin installation instructions on this page will not work.
+{{< /note >}}
+
 Preflight Checks are designed to be run before the application is installed. There are no in-cluster prerequisites, but there's a client side kubectl plugin that's required. To install the preflight client-side functionality, run `kubectl krew install preflight`. For instructions on how to get krew or for additional installation options, see the [Running Preflights](/docs/troubleshoot/kubernetes/preflight/executing/) document.
 
 Once the plugin is installed, you can run a set of sample Preflight Checks with:
@@ -23,7 +29,7 @@ kubectl preflight https://preflight.replicated.com
 
 ## Support Bundles
 
-Suppor t Bundles are designed be be run when something is wrong with an application. There are no in-cluster prerequisites, but again, there's a client side kubectl plugin that's required. To install, run `kubectl krew install troubleshoot`. For instructions on how to get krew or for additional installation options, see thte [Collecting Support Bundles](/docs/troubleshoot/kubernetes/preflight/executing/) document.
+Support Bundles are designed to be run when something is wrong with an application. There are no in-cluster prerequisites, but again, there's a client side kubectl plugin that's required. To install, run `kubectl krew install troubleshoot`. For instructions on how to get krew or for additional installation options, see the [Collecting Support Bundles](/docs/troubleshoot/kubernetes/preflight/executing/) document.
 
 Once the plugin is installed, you can generate a sample Support Bundle with:
 

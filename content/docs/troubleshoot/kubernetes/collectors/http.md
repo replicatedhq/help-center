@@ -79,7 +79,7 @@ Response received from the server will be stored in the `"response"` key of the 
 }
 ```
 
-In case a client side error occurs and no respose is received, the error text will be stored  in the error key:
+In case a client side error occurs and no respose is received, the error text will be stored in the error key:
 
 ```json
 {

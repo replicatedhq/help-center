@@ -23,7 +23,7 @@ spec:
 
 ## Included resources
 
-WHen the cluster resources collector is executed it will include the following files in a support bundle:
+When the cluster resources collector is executed it will include the following files in a support bundle:
 
 ### /cluster-resources/namespaces.json
 This file contains information about all known namespaces in the cluster
