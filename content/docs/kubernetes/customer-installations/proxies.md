@@ -28,8 +28,13 @@ If none of these is set, Replicated will prompt the user to enter a proxy addres
 If a proxy address is discovered or set, Replicated will assemble a default list of NO_PROXY addresses including localhost, the address of the `docker0` interface, and the address of the server running the Replicated daemon. Additional addresses can be added with the `additional-no-proxy` parameter, which can be specified multiple times.
 Note that this parameter does not accept an IP range in CIDR notation.
 
+{{< warning title="Clusters" >}}
+For clustered installations where remote nodes should be accessed without the proxy, each node's IP must be specified separately with the `additional-no-proxy` flag.
+{{</warning>}}
+
+
 ```bash
-cat kubernetes-init.sh | sudo bash -s additional-no-proxy=corporate.internal additional-no-proxy=10.128.0.9
+cat kubernetes-init.sh | sudo bash -s additional-no-proxy=corporate.internal additional-no-proxy=10.128.0.9 additional-no-proxy=10.128.0.10
 ```
 
 To prevent errors during image pulls, Replicated will add the `HTTP_PROXY` and `NO_PROXY` environment variables to docker and restart it.
