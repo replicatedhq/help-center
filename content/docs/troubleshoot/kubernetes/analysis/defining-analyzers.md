@@ -69,7 +69,7 @@ spec:
               message: Expected to find an ingress named "my-app-ingress".
           - pass:
               message: Expected ingress was found.
-    - customResourceDefinitionName:
+    - customResourceDefinition:
         customResourceDefinitionName: rook
         outcomes:
           - fail:
