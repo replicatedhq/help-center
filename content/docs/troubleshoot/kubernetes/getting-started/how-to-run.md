@@ -13,12 +13,6 @@ Both Troubleshoot and Preflight are built and packaged to be run by the cluster 
 
 ## Preflight Checks
 
-{{< note title="krew plugin pending" >}}
-The plugin is not yet merged. For the latest status of the krew plugin, please visit https://github.com/kubernetes-sigs/krew-index/pull/188.
-<br /><br />
-Until this plugin has been accepted, the plugin installation instructions on this page will not work.
-{{< /note >}}
-
 Preflight Checks are designed to be run before the application is installed. There are no in-cluster prerequisites, but there's a client side kubectl plugin that's required. To install the preflight client-side functionality, run `kubectl krew install preflight`. For instructions on how to get krew or for additional installation options, see the [Running Preflights](/docs/troubleshoot/kubernetes/preflight/executing/) document.
 
 Once the plugin is installed, you can run a set of sample Preflight Checks with:
