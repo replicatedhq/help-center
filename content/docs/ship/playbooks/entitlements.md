@@ -11,9 +11,11 @@ gradient: "console"
 
 {{< linked_headline "Ship and Entitlements" >}}
 
-A Replicated Ship application can deliver customer-specific license fields (entitlements), that can be read and consumed in an application.
+{{< note title="Guide" >}}
+For a more comprehensive guide to running Titled alongside your Replicated Ship application see [this guide](/guides/ship-and-entitlements/).
+{{< /note >}}
 
-Note that this requires Ship v0.40.0 or later.
+A Replicated Ship application can deliver customer-specific license fields (entitlements), that can be read and consumed in an application.
 
 ## Defining License Fields
 
@@ -27,7 +29,7 @@ Once you've defined your entitlements fields, you can set per-customer values on
 
 The final step to delivering license fields to an on-prem instance of a Ship application is to run the `replicated/titled` container and provide it a template function to initialize the values.
 
-Defining the following Ship asset (copy & paste) will render a Kubernetes YAML file that will make the `titled` service availabe to the cluster:
+Defining the following Ship asset (copy & paste) will render a Kubernetes YAML file that will make the `titled` service available to the cluster:
 
 ```yaml
 assets:
@@ -59,13 +61,16 @@ assets:
                     app: titled
                 spec:
                   containers:
-                    - image: replicated/titled:0.2.2
+                    - image: replicated/titled:latest
                       name: titled
                       args: ["serve", "--serve_from_file", "/titled/entitlements.conf"]
                       ports:
                         - containerPort: 3000
                           name: titled
                           protocol: TCP
+                      env:
+                        - name: RELEASE_CHECKSUM
+                          value: '{{repl ShipCustomerRelease | Base64Encode }}'
                       volumeMounts:
                         - mountPath: /titled
                           name: titled
@@ -93,4 +98,4 @@ assets:
         mode: 0777
 ```
 
-Once the service is running, License API will be accessible at http://titled:3000/.  For example, `curl http://titled:3000/license/v1/license` or `curl http://titled:3000/license/v1/field/<field-name>`. For more documentation, refer to the [Integration API](https://help.replicated.com/api/integration-api/license-api/) reference.
+Once the service is running, License API will be accessible at http://titled:3000/.  For example, `curl http://titled:3000/license/v1/license` or `curl http://titled:3000/license/v1/field/<field-name>`. For more documentation, refer to the [Integration API](/api/integration-api/license-api/) reference.

@@ -29,4 +29,8 @@ guides:
     description: "Troubleshooting simplifies debugging issues with your Ship application in your customer's environment."
     level: "replicatedShip"
     slug: "ship-and-troubleshoot"
+  - title: "Entitlements and Ship"
+    description: "Entitlements can be used to enforce privileges in your Ship application."
+    level: "replicatedShip"
+    slug: "ship-and-entitlements"
 ---
