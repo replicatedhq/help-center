@@ -27,7 +27,16 @@ If your app has [configured PVCs for snapshotting](/docs/snapshots/kubernetes/),
 The `kubernetes.requirements` section of your Replicated yaml can be used to specify preflight checks against your customers' Kubernetes cluster as a whole.
 For more flexibility, [raw commands](/docs/kubernetes/packaging-an-application/programmable-preflight-checks/#raw-command) may be run in a Pod on any node.
 
-{{< linked_headline "Server Version" >}}
+{{< linked_headline "Replicated Version" >}}
+
+Use the `replicated_vesion` property to pin both your Replicated version and Kubernetes version. The Kubernetes [compatibility table](/docs/kubernetes/customer-installations/installing/#compatible-kubernetes-versions) will show the specific version of Kubernetes used by Replicated.
+
+```yaml
+host_requirements:
+  replicated_version: ">=2.3.0 <2.4.1"
+```
+
+{{< linked_headline "Kubernetes Server Version" >}}
 
 Use the `server_vesion` property to pin your application to a range of Kubernetes versions.
 
@@ -36,6 +45,10 @@ kubernetes:
   requirements:
     server_version: ">=1.11.5"
 ```
+
+{{< warning title="Version Compatibility" >}}
+The `replicated_version` supersedes Kubernetes `server_version`, a preflight check ensures the Kubernetes version matches the [compatibility table](/docs/kubernetes/customer-installations/installing/#compatible-kubernetes-versions).
+{{</warning>}}
 
 {{< linked_headline "API Versions" >}}
 
