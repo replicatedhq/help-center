@@ -76,6 +76,33 @@ watch the `replicated.yaml` file, linting and releasing whenever changes are mad
 make watch channel=my-dev-channel
 ```
 
+{{< linked_headline "CLI with Docker" >}}
+
+Use `replicated/vendor-cli` Docker image to execute the CLI inside a container. This is useful in environments where `make` and `replicated` vendor CLI are unsupported, such as Windows OS.
+
+The example below shows `replicated` vendor cli help, this can be used as a scaffold to build other commands.
+```sh
+docker run \
+  -e REPLICATED_APP='${REPLICATED_APP}' \
+  -e REPLICATED_API_TOKEN='${REPLICATED_API_TOKEN}' \
+  replicated/vendor-cli --help
+```
+
+Few of these have been added to the `Makefile`. Run the following to list releases and verify Docker vendor CLI works.
+```sh
+make docker-list-releases
+```
+
+Push new release to a channel with Docker vendor CLI.
+```sh
+make docker-release channel=Unstable
+```
+
+{{< warning title="Operating Systems Compatibility" >}}
+If `make` is unavailable, for example Windows OS, copy the respective `docker run` commands from `Makefile` and run them discretely.
+{{</warning>}}
+
+
 {{< linked_headline "Integrating with CI" >}}
 
 Often teams will use one channel per developer, and then keep the `master` branch of this repo in sync with their `Unstable` branch.
