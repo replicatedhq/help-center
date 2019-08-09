@@ -83,32 +83,32 @@ Use `replicated/vendor-cli` Docker image to execute the CLI inside a container. 
 The example below shows `replicated` vendor cli help, this can be used as a scaffold to build other commands.
 ```sh
 docker run \
-  -e REPLICATED_APP='${REPLICATED_APP}' \
-  -e REPLICATED_API_TOKEN='${REPLICATED_API_TOKEN}' \
+  -e REPLICATED_APP \
+  -e REPLICATED_API_TOKEN \
   replicated/vendor-cli --help
 ```
 
-Few of these have been added to the `Makefile`. Run the following to list releases and verify Docker vendor CLI works.
+Run the following to list releases and verify Docker vendor CLI works.
 ```sh
 make docker-list-releases
 ```
 
 Push new release to a channel with Docker vendor CLI.
 ```sh
-make docker-release channel=Unstable
+make docker-release channel=Unstable working_dir=/path/to/git/repo
 ```
 
 {{< warning title="Operating Systems Compatibility" >}}
-If `make` is unavailable, for example Windows OS, copy the respective `docker run` commands from `Makefile` and run them discretely.
+On Windows OS ensure the `working_dir` is shared and available in Docker (Settings -> Shared Drives).
 {{</warning>}}
-
 
 {{< linked_headline "Integrating with CI" >}}
 
 Often teams will use one channel per developer, and then keep the `master` branch of this repo in sync with their `Unstable` branch.
 
-The project includes CI configs for [Travis CI](https://travis-ci.org) and [CircleCI](https://circleci.com).
-Both configs will:
+The project includes CI configs for [Travis CI](https://travis-ci.org), [CircleCI](https://circleci.com), [Jenkins CI](https://jenkins.io) and [GitLab CI](https://gitlab.com).
+
+The configs will:
 
 **On pull requests**:
 
