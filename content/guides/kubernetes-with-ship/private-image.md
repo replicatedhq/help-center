@@ -97,11 +97,10 @@ Note that this example uses a `Pod` for brevity, in production you'll probably w
 
 {{< linked_headline "Test your release" >}}
 
-Next, its time to test this and make sure everything is working. Since we'll be interacting with the Ship Vendor SaaS services, we'll need to add a few parameters to our Makefile to properly template in the `customer_id` and `installation_id` license keys. You can grab these fields from the install script you got in [console.replicated.com](https://console.replicated.com), and add them to the `run-local` and `run-local-headless` tasks. The lines to add are
+Next, its time to test this and make sure everything is working. Since we'll be interacting with the Ship Vendor SaaS services, we'll need to add a few parameters to our Makefile to properly template in the `license_id` and key. You can grab this field from the install script you got in [console.replicated.com](https://console.replicated.com), and add it to the `run-local` and `run-local-headless` tasks. The line to add is
 
 ```makefile
-	    --customer-id <your customer id> \
-	    --installation-id <your installation id> \
+	    --installation-id <your license id> \
 ```
 
 For example, `run-local` might look like:
@@ -116,8 +115,7 @@ run-local: clean-assets lint-ship
 	    --set-github-contents $(REPO):/scripts:master:$(PATH) \
 	    --set-channel-icon $(ICON) \
 	    --set-channel-name $(APP_NAME) \
-	    --customer-id <your customer id> \
-	    --installation-id <your installation id> \
+	    --installation-id <your license id> \
 	    --log-level=off
 	@$(MAKE) print-generated-assets
 ```
