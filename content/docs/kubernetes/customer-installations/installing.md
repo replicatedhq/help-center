@@ -77,10 +77,11 @@ Every release of Replicated is pinned to a version of Kubernetes, which will be 
 | < 2.26.0           | 1.9.3              |
 | 2.26.0 to 2.30.2   | 1.11.5             |
 | 2.31.0 to 2.37.1   | 1.13.5             |
-| >= 2.38.0          | 1.15.0             |
+| >= 2.38.0          | 1.15.2             |
 
 Replicated 2.26.0 to 2.30.2 were pinned to Kubernetes 1.11.1 when released but were updated on December 7, 2018 to 1.11.5.
 Replicated 2.31.0 to 2.34.1 were pinned to Kubernetes 1.13.0 when released, and airgap bundles from 2.31.0 to 2.34.1 include 1.13.0.
+Replicated 2.38.0 was pinned to Kubernetes 1.15.0 when released and the 2.38.0 airgap bundle includes 1.15.0.
 Re-running the `kubernetes-init` install script will not update patch versions by default, but the upgrade can be forced by passing the `kubernetes-upgrade-patch-version` flag to the script.
 
 {{< linked_headline "Upgrading" >}}
