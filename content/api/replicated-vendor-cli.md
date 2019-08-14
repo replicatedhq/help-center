@@ -130,7 +130,7 @@ replicated release update SEQUENCE --yaml "$(< yournewyaml.yaml)"
 ### Collector Create
 Create a new collector by providing a YAML configuration and name.
 ```shell
-replicated collector create --name "$(<your collector name)" --yaml "$(< youryaml.yaml)"
+replicated collector create --name NAME --yaml "$(< youryaml.yaml)"
 ```
 
 ### Collector Inspect
