@@ -152,7 +152,7 @@ replicated collector promote SPEC_ID CHANNEL_ID
 ```
 
 ### Collector Update
-Update a collectors's name and/or yaml config file.
+Update a collector's name and/or yaml config file.
 ```shell
 replicated collector update SPEC_ID --yaml "$(< yournewyaml.yaml)"
 ```
