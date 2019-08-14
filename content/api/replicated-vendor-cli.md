@@ -126,6 +126,37 @@ Update a release's yaml config file.
 replicated release update SEQUENCE --yaml "$(< yournewyaml.yaml)"
 ```
 
+## Collector
+### Collector Create
+Create a new collector by providing a YAML configuration and name.
+```shell
+replicated collector create --name "$(<your collector name)" --yaml "$(< youryaml.yaml)"
+```
+
+### Collector Inspect
+Print the YAML config for a collector.
+```shell
+replicated collector inspect SPEC_ID
+```
+
+### Collector ls
+List all of an app's collectors.
+```shell
+replicated collector ls
+```
+
+### Collector Promote
+Promote a collector to a channel.
+```shell
+replicated collector promote SPEC_ID CHANNEL_ID
+```
+
+### Collector Update
+Update a collectors's name and/or yaml config file.
+```shell
+replicated collector update SPEC_ID --yaml "$(< yournewyaml.yaml)"
+```
+
 # CI Example
 A common use of the replicated command is to create a new release for every tagged build.
 
