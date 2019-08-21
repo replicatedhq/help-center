@@ -36,7 +36,7 @@ Params:
 
   kubernetes_docker_version_minimum: "1.13.1"
   kubernetes_docker_version_default: "18.09.7"
-  kubernetes_version: "1.15.2"
+  kubernetes_version: "1.15.3"
 
 taxonomies:
   category: "categories"

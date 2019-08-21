@@ -77,7 +77,7 @@ Every release of Replicated is pinned to a version of Kubernetes, which will be 
 | < 2.26.0           | 1.9.3              |
 | 2.26.0 to 2.30.2   | 1.11.5             |
 | 2.31.0 to 2.37.1   | 1.13.5             |
-| >= 2.38.0          | 1.15.2             |
+| >= 2.38.0          | 1.15.3             |
 
 Replicated 2.26.0 to 2.30.2 were pinned to Kubernetes 1.11.1 when released but were updated on December 7, 2018 to 1.11.5.
 Replicated 2.31.0 to 2.34.1 were pinned to Kubernetes 1.13.0 when released, and airgap bundles from 2.31.0 to 2.34.1 include 1.13.0.
