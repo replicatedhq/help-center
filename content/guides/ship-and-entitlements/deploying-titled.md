@@ -114,9 +114,6 @@ assets:
                   - containerPort: 3000
                     name: titled
                     protocol: TCP
-                  env:
-                  - name: RELEASE_CHECKSUM
-                    value: '{{repl ShipCustomerRelease | Base64Encode }}'
                   volumeMounts:
                   - mountPath: /titled
                     name: titled
