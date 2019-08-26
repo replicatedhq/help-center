@@ -32,7 +32,7 @@ A `terraform` asset is text specified directly in your Ship application's spec.
 - `dest` - A path to which the file should be written when generating assets. Defaults to `main.tf`
 
 
-- `mode` - Specifies file mode of the created asset, defaults to `0644`
+- `mode` - Specifies file mode of the created asset, defaults to `0644`. Make sure to include a leading `0` if specifying an octal value
 
 
 - `when` - This asset will be included when 'when' is omitted or true

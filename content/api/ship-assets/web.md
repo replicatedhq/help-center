@@ -44,7 +44,7 @@ A `web` asset delivers web content from a private or public URL
 - `method` - Defaults to `GET` if not present, supports `POST`
 
 
-- `mode` - Unix file permissions to set on the asset
+- `mode` - Unix file permissions to set on the asset. Make sure to include a leading `0` if specifying an octal value
 
 
 - `when` - This asset will be included when 'when' is omitted or true

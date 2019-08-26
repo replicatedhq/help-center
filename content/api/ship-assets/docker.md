@@ -35,7 +35,7 @@ A `docker` asset will pull an image from a public docker registry, registry.repl
 ### Optional Parameters
 
 
-- `mode` - The unix file permissions to be set on the image tar archive, e.g `600`.
+- `mode` - The unix file permissions to be set on the image tar archive, e.g `0600`. Make sure to include a leading `0` if specifying an octal value
 
 
 - `when` - This asset will be included when 'when' is omitted or true
