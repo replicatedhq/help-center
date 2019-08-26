@@ -32,7 +32,7 @@ An `inline` asset is one that is specified directly in your Ship application's s
 ### Optional Parameters
 
 
-- `mode` - Specifies file mode of the created asset, defaults to `0644`
+- `mode` - Specifies file mode of the created asset, defaults to `0644`. Make sure to include a leading `0` if specifying an octal value
 
 
 - `when` - This asset will be included when 'when' is omitted or true
@@ -45,7 +45,6 @@ assets:
   v1:
     - inline:
         dest: install.sh
-        mode: 755
         contents: >-
           #!/bin/sh
 

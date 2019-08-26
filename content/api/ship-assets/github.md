@@ -35,7 +35,7 @@ A `github` asset is created from files downloaded from either a public or a link
 ### Optional Parameters
 
 
-- `mode` - If present, overrides the file mode of all files included by this asset.
+- `mode` - If present, overrides the file mode of all files included by this asset. Make sure to include a leading `0` if specifying an octal value
 
 
 - `proxy` - Boolean true or false, determines whether a repository is fetched via the Replicated API. Should be used for private repos.
