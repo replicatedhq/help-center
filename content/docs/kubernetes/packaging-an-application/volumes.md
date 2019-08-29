@@ -21,6 +21,13 @@ Add the `replicated.com/no-rewrite-storage-class` annotation to any PVC or State
 
 {{< linked_headline "Shared Filesystem" >}}
 
+{{< warning title="Known Issues" >}}
+
+Replicated 2.36.0 to 2.38.2 had a race condition that could cause Pods to run after failing to mount the shared filesystem.
+Affected Pods would be writing to the ephemeral container filesystem rather than the shared filesystem.
+
+{{< /warning >}}
+
 Rook is not able to provision PVCs with an access mode of `ReadWriteMany`, but it does support a shared filesystem that can be mounted as a flexVolume.
 This can be enabled in the `kubernetes` section of your yaml.
 
