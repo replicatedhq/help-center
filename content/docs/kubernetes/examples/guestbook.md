@@ -1,6 +1,6 @@
 ---
 date: "2018-05-03T04:02:20Z"
-title: "Kubernetes Guestbook"
+title: "Kubernetes Kuard"
 description: "A quick Kubernetes application on Replicated."
 weight: "4402"
 categories: [ "Kubernetes Examples" ]
@@ -18,25 +18,15 @@ A very simple application that runs with Replicated and Kubernetes.
 # kind: replicated
 
 replicated_api_version: 2.23.0
-name: "Kubernetes Guestbook Example"
+name: "Kubernetes Kuard Example"
 
-#
-# https://help.replicated.com/docs/packaging-an-application/application-properties/
-#
 properties:
   app_url: http://{{repl ConfigOption "hostname" }}
-  console_title: "Kubernetes Guestbook Example"
+  console_title: "Kubernetes Kuard Example"
 
-#
-# https://help.replicated.com/docs/kb/supporting-your-customers/install-known-versions/
-#
 host_requirements:
-  replicated_version: ">=2.30.0"
+  replicated_version: ">=2.38.0"
 
-#
-# Settings screen
-# https://help.replicated.com/docs/packaging-an-application/config-screen/
-#
 config:
 - name: hostname
   title: Hostname
@@ -44,182 +34,57 @@ config:
   items:
   - name: hostname
     title: Hostname
-    value: '{{repl ConsoleSetting "tls.hostname" }}'
+    default: '{{repl ConsoleSetting "tls.hostname" }}'
+    required: true
     type: text
     test_proc:
       display_name: Check DNS
       command: resolve_host
 
-images:
-# Image pushed to registry.replicated.com/k8shelpexample/redis.
-# Only needs to be specified here for inclusion in airgap installs.
-- name: redis
-  source: replicated
-  tag: e2e
-
-# External image in private docker hub registry index.docker.io/replicated/examples.
-# Configured in vendor.replicated.com as "dockerhub" with endpoint "index.docker.io".
-# Needs to be specified here for both online and airgap installs.
-- name: replicated/examples
-  source: dockerhub
-  tag: redisreplica-v1
-
-# Public image, only needs to be specified here for inclusion in airgap installs.
-- name: gcr.io/google-samples/gb-frontend
-  source: public
-  tag: v4
-
 ---
 # kind: scheduler-kubernetes
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: redis-master
-  labels:
-    app: redis
-    tier: backend
-    role: master
-spec:
-  ports:
-  - port: 6379
-    targetPort: 6379
-  selector:
-    app: redis
-    tier: backend
-    role: master
----
-# kind: scheduler-kubernetes
-
-apiVersion: apps/v1
+apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: redis-master
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: redis
-      role: master
-      tier: backend
-  template:
-    metadata:
-      labels:
-        app: redis
-        role: master
-        tier: backend
-    spec:
-      containers:
-      - name: master
-        image: registry.replicated.com/k8shelpexample/redis:e2e
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
-        ports:
-        - containerPort: 6379
-      imagePullSecrets:
-      - name: replicatedregistrykey
----
-# kind: scheduler-kubernetes
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: redis-replica
+  name: kuard-deployment
   labels:
-    app: redis
-    tier: backend
-    role: replica
-spec:
-  ports:
-  - port: 6379
-  selector:
-    app: redis
-    tier: backend
-    role: replica
----
-# kind: scheduler-kubernetes
-
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: redis-replica
-spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app: redis
-      role: replica
-      tier: backend
-  template:
-    metadata:
-      labels:
-        app: redis
-        role: replica
-        tier: backend
-    spec:
-      containers:
-      - name: replica
-        image: index.docker.io/replicated/examples:redisreplica-v1
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
-        env:
-        - name: GET_HOSTS_FROM
-          value: dns
-        ports:
-        - containerPort: 6379
-      imagePullSecrets:
-      - name: replicatedregistrykey
----
-# kind: scheduler-kubernetes
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: frontend
-  labels:
-    app: guestbook
-    tier: frontend
-spec:
-  ports:
-  - port: 80
-  selector:
-    app: guestbook
-    tier: frontend
----
-# kind: scheduler-kubernetes
-
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: frontend
+    app: kuard
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: guestbook
-      tier: frontend
+      app: kuard
   template:
     metadata:
       labels:
-        app: guestbook
-        tier: frontend
+        app: kuard
     spec:
       containers:
-      - name: php-redis
-        image: gcr.io/google-samples/gb-frontend:v4
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
-        env:
-        - name: GET_HOSTS_FROM
-          value: dns
-        ports:
-        - containerPort: 80
-      imagePullSecrets:
-      - name: replicatedregistrykey
+        - image: gcr.io/kuar-demo/kuard-amd64:1
+          name: kuard
+          ports:
+            - containerPort: 8080
+              name: http
+---
+# kind: scheduler-kubernetes
+apiVersion: v1
+kind: Service
+metadata:
+  name: kuard-service
+spec:
+  selector:
+    app: kuard
+  ports:
+  - port: 80
+    targetPort: 8080
+---
+# kind: scheduler-kubernetes
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: kuard-ingress
+spec:
+  backend:
+    serviceName: kuard-service
+    servicePort: 80
 ```
