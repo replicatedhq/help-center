@@ -90,8 +90,19 @@ Trim returns a string with all leading and trailing string contained in the opti
 func UrlEncode(stringToEncode string) string
 ```
 Returns the string, url encoded.
+Equivalent to the [`QueryEscape`](https://godoc.org/net/url#QueryEscape) function within the golang `net/url` library.
 ```yaml
 '{{repl ConfigOption "smtp_email" | UrlEncode }}:{{repl ConfigOption "smtp_password" | UrlEncode }}@smtp.example.com:587'
+```
+
+{{< template_function name="UrlEncode" >}}
+```go
+func UrlPathEscape(stringToEncode string) string
+```
+Returns the string, url *path* encoded.
+Equivalent to the [`PathEscape`](https://godoc.org/net/url#PathEscape) function within the golang `net/url` library.
+```yaml
+'{{repl ConfigOption "smtp_email" | UrlPathEscape }}:{{repl ConfigOption "smtp_password" | UrlPathEscape }}@smtp.example.com:587'
 ```
 
 {{< template_function name="Base64Encode" >}}
