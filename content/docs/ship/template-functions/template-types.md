@@ -95,7 +95,7 @@ Equivalent to the [`QueryEscape`](https://godoc.org/net/url#QueryEscape) functio
 '{{repl ConfigOption "smtp_email" | UrlEncode }}:{{repl ConfigOption "smtp_password" | UrlEncode }}@smtp.example.com:587'
 ```
 
-{{< template_function name="UrlEncode" >}}
+{{< template_function name="UrlPathEscape" >}}
 ```go
 func UrlPathEscape(stringToEncode string) string
 ```
