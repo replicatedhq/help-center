@@ -177,4 +177,4 @@ The general workflow is:
 
 **Note**: Saved Search functionality may not be available in all Audit Log environments.
 
-The endpoints for managing Saved Searches are described in the [Enterprise API Guide](/docs/audit-log/apis/enterprise/). There's also an [OpenAPI/Swagger  specification](https://api.replicated.com/auditlog/enterprise/v1/swagger.json) and [interactive API console](https://retraced.readme.io/reference#searchactive).
+The endpoints for managing Saved Searches are described in the [Enterprise API Guide](/docs/audit-log/apis/enterprise-api/). There's also an [OpenAPI/Swagger  specification](https://api.replicated.com/auditlog/enterprise/v1/swagger.json) and [interactive API console](https://retraced.readme.io/reference#searchactive).
