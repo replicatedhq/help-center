@@ -1,6 +1,6 @@
 ---
 date: "2016-07-03T04:02:20Z"
-title: "Upgrading"
+title: "Upgrading Replicated"
 description: "Instructions for upgrading Replicated"
 keywords:  "upgrading, auto-upgrading"
 weight: "704"
