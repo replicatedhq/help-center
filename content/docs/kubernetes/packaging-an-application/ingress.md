@@ -25,7 +25,7 @@ A NodePort service forwards incoming traffic on ports 80 and 443 to Contour thro
 The Contour ingress controller supports a variety of [options through annotations](https://github.com/heptio/contour/blob/master/docs/annotations.md).
 These options may not be supported in all your customers' cloud environments with different ingress controller implementations.
 
-{{< linked_headline "Ingress with TLS on Contour" >}}
+{{< linked_headline "Ingress with TLS Termination on Contour" >}}
 
 To configure Contour to serve HTTPS requests on port 443, first define a Secret in your yaml that contains a certificate and private key.
 This certificate may come from a file uploaded on the customer's config screen or can be generated with the `cert_out` command as shown below.
@@ -67,6 +67,7 @@ config:
 # kind: scheduler-kubernetes
 apiVersion: v1
 kind: Secret
+type: kubernetes.io/tls
 metadata:
   name: tls
 data:
@@ -94,4 +95,136 @@ spec:
         backend:
           serviceName: frontend
           servicePort: 80
+```
+
+{{< linked_headline "Ingress with Upstream TLS on Contour" >}}
+
+Add the `contour.heptio.com/upstream-protocol.tls` annotation to the Service specified in your Ingress to enable TLS on requests from Envoy to your application.
+
+```yaml
+---
+# kind: replicated
+cmds:
+- name: cert_out
+  cmd: cert
+  args:
+  - "2048"
+  - "newbravo.replicated.com"
+config:
+- name: HiddenCertValues
+  items:
+  - type: file
+    name: newcert_privatekey
+    hidden: true
+    data_cmd:
+      name: cert_out
+      value_at: 0
+  - type: file
+    name: newcert_cert
+    hidden: true
+    data_cmd:
+      name: cert_out
+      value_at: 1
+  - type: file
+    name: newcert_ca
+    hidden: true
+    data_cmd:
+      name: cert_out
+      value_at: 2
+---
+# kind: scheduler-kubernetes
+apiVersion: v1
+kind: Secret
+type: kubernetes.io/tls
+metadata:
+  name: tls
+  annotations:
+    contour.heptio.com/upstream-protocol.tls: "443"
+data:
+  tls.crt: '{{repl ConfigOptionData "newcert_cert" | Base64Encode }}'
+  tls.key: '{{repl ConfigOptionData "newcert_privatekey" | Base64Encode }}'
+---
+# kind: scheduler-kubernetes
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: backend
+spec:
+  tls:
+  - secretName: tls
+    hosts:
+    - newbravo.replicated.com
+  backend:
+    serviceName: nginx
+    servicePort: 443
+  rules:
+  - host: newbravo.replicated.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: nginx
+          servicePort: 443
+---
+#kind: scheduler-kubernetes
+apiVersion: "v1"
+kind: ConfigMap
+metadata:
+  name: nginx-conf
+data:
+  default.conf: |
+    server {
+      listen 0.0.0.0:443;
+      server_name nginx;
+
+      ssl on;
+      ssl_certificate /opt/certs/server.cert;
+      ssl_certificate_key /opt/certs/server.key;
+
+      location / {
+        return 200 'OK';
+      }
+    }
+---
+#kind: scheduler-kubernetes
+apiVersion: "apps/v1"
+kind: Deployment
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - name: https
+          containerPort: 443
+          protocol: TCP
+        volumeMounts:
+        - name: tls
+          mountPath: /opt/certs
+          readOnly: true
+        - name: nginx-conf
+          mountPath: /etc/nginx/conf.d
+      volumes:
+      - name: tls
+        secret:
+          secretName: tls
+          items:
+          - key: tls.crt
+            path: server.cert
+          - key: tls.key
+            path: server.key
+      - name: nginx-conf
+        configMap:
+          name: nginx-conf
 ```
