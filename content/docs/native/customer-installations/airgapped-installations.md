@@ -45,7 +45,7 @@ Once this screen is completed, Replicated runs as normal.
 
 {{< linked_headline "Updating License and Application" >}}
 
-In the Console Settings page of the Admin Console (/console/settings), there is a section entitled "Airgapped Settings". Updates to your application can be installed by downloading the new version and placing it on the server in the directory specified under "Update Path". The extension of the file must be `.airgap`. Your license can be synced by placing a new license `.rli` file in place of the existing one at the path specified under "License Path".
+In the Console Settings page of the Admin Console (/console/settings), there is a section entitled "Airgapped Settings". Updates to your application can be installed by downloading the new version and placing it on the server in the directory specified under "Update Path" or by uploading the bundle directly via the releases page in the Admin Console (/releases). The extension of the file must be `.airgap`. Your license can be synced by placing a new license `.rli` file in place of the existing one at the path specified under "License Path".
 
 ![Airgapped Settings](/images/post-screens/console-settings-airgapped.png)
 
