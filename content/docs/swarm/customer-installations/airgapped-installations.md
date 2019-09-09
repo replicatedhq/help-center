@@ -35,9 +35,9 @@ non-airgap licenses cannot be used to install in airgap mode.
 
 {{< linked_headline "Install Airgap Package" >}}
 
-Next, navigate to the management console at https://<server_ip>:8800. Accept the self signed certificate, pass
+Next, navigate to the management console at https://<server_ip>:8800. Accept the self-signed certificate, pass
 the preflight checks, and you will see the license upload screen. Upload the [airgap enabled license](/docs/swarm/getting-started/create-licenses/#airgap-download-enabled) and then select the airgapped install option.
-You will have to provide a path to the .airgap file and upload the .rli file here.
+You can choose to provide a path to the .airgap file or upload it directly.
 
 Once this screen is completed, Replicated runs as normal.
 
