@@ -14,11 +14,11 @@ You may also limit the resources used by your containers with the memory, cpusha
 
 {{< linked_headline "Memory and Swap Limit" >}}
 
-The amount of memory or swap for your container.  The format is number|unit where unit may be one of b, k, m or g.  By default there is no memory or swap limit and your container can use as much as needed.  You can learn more at [User Memory Constraints documentation](https://docs.docker.com/engine/reference/run/#/user-memory-constraints).
+The amount of memory or swap in bytes for your container.  By default there is no memory or swap limit and your container can use as much as needed.  You can learn more at [User Memory Constraints documentation](https://docs.docker.com/engine/reference/run/#/user-memory-constraints).
 
 ```yaml
-  memory_limit: 500m
-  memory_swap_limit: 1g
+  memory_limit: 500000000
+  memory_swap_limit: 1000000000
 ```
 
 {{< linked_headline "CPU Shares" >}}

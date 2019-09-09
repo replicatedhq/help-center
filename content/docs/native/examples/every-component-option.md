@@ -104,8 +104,8 @@ components:
         logs:
           max_files: "3"
           max_size: "10m"
-        memory_limit: 500m
-        memory_swap_limit: 1g
+        memory_limit: 500000000
+        memory_swap_limit: 1000000000
         ports:
           - interface: "docker0"
             port_type: tcp
