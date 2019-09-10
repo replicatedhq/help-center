@@ -76,10 +76,12 @@ spec:
           options:
             fsName: rook-shared-fs
             clusterNamespace: rook-ceph
-            path: /subdir1 #optional
 ```
 
-Paths within the shared filesystem can be included in snapshots by adding them to the [backup](/docs/snapshots/kubernetes/) section of your yaml.
+{{< warning title="Using the path option" >}}
+Due to an open bug in Rook/Ceph, custom `path` for `flexVolume` should be avoided, if its ommitted the `path` defaults to `/`. For snapshots the `path` (in this case `/`) also needs to be included in the [backup](/docs/snapshots/kubernetes/) section of your yaml.
+{{</warning>}}
+
 
 {{< linked_headline "Resources" >}}
 
