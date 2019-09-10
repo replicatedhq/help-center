@@ -489,29 +489,6 @@ func Namespace() string
 
 Namespace returns the value of the namespace the vendor application is installed in.
 
-{{< template_function name="ServiceAddress" replicated="false" kubernetes="true" swarm="false" >}}
-```go
-ServiceAddress(name string, port int32) string
-```
-
-ServiceAddress returns the address of the ingress.
-
-```yaml
-properties:
-  app_url: '{{repl ServiceAddress "frontend" 80 }}'
-```
-
-{{< template_function name="IngressAddress" replicated="false" kubernetes="true" swarm="false" >}}
-```go
-IngressAddress(name string, port int32) string
-```
-
-IngressAddress returns the address of the ingress.
-
-```yaml
-properties:
-  app_url: '{{repl IngressAddress "frontend" 80 }}'
-```
 
 {{< template_function name="PremkitAPIAddress" replicated="false" kubernetes="true" swarm="true" >}}
 ```go

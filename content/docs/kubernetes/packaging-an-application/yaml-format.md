@@ -34,7 +34,7 @@ The properties section includes definitions of some optional (but recommended) a
 
 ```yaml
 properties:
-  app_url: http://{{repl ServiceAddress nginx }}
+  app_url: http://{{repl ConsoleSetting "tls.hostname" }}
   console_title: My Enterprise Application
 ```
 
