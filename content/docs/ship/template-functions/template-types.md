@@ -268,8 +268,18 @@ Implementations of these functions can be found [here](https://github.com/replic
 func ShipCustomerRelease() string
 ```
 ShipCustomerRelease returns a copy of the release metadata struct, marshalled as yaml.
+Config specs, collect specs, analyze specs, github contents and images are not included.
 ```yaml
 '{{repl ShipCustomerRelease }}'
+```
+
+{{< template_function name="ShipCustomerReleaseFull" >}}
+```go
+func ShipCustomerReleaseFull() string
+```
+ShipCustomerReleaseFull returns a copy of the release metadata struct, marshalled as yaml.
+```yaml
+'{{repl ShipCustomerReleaseFull }}'
 ```
 
 {{< template_function name="EntitlementValue" >}}
@@ -297,6 +307,15 @@ func CollectSpec() string
 CollectSpec returns the Collect Spec currently promoted to the channel to which your license is associated.
 ```yaml
 '{{repl CollectSpec }}'
+```
+
+{{< template_function name="ConfigSpec" >}}
+```go
+func ConfigSpec() string
+```
+ConfigSpec returns the Config Spec for the current ship release.
+```yaml
+'{{repl ConfigSpec }}'
 ```
 
 {{< template_function name="AnalyzeSpec" >}}
