@@ -41,7 +41,7 @@ cmds:
   cmd: cert
   args:
   - "2048"
-  - "newbravo.replicated.com"
+  - "myapp.somebigbank.internal"
 config:
 - name: HiddenCertValues
   items:
@@ -83,12 +83,12 @@ spec:
   tls:
   - secretName: tls
     hosts:
-    - newbravo.replicated.com
+    - myapp.somebigbank.internal
   backend:
     serviceName: frontend
     servicePort: 80
   rules:
-  - host: newbravo.replicated.com
+  - host: myapp.somebigbank.internal
     http:
       paths:
       - path: /
@@ -109,7 +109,7 @@ cmds:
   cmd: cert
   args:
   - "2048"
-  - "newbravo.replicated.com"
+  - "myapp.somebigbank.internal"
 config:
 - name: HiddenCertValues
   items:
@@ -138,8 +138,6 @@ kind: Secret
 type: kubernetes.io/tls
 metadata:
   name: tls
-  annotations:
-    contour.heptio.com/upstream-protocol.tls: "443"
 data:
   tls.crt: '{{repl ConfigOptionData "newcert_cert" | Base64Encode }}'
   tls.key: '{{repl ConfigOptionData "newcert_privatekey" | Base64Encode }}'
@@ -153,12 +151,12 @@ spec:
   tls:
   - secretName: tls
     hosts:
-    - newbravo.replicated.com
+    - myapp.somebigbank.internal
   backend:
     serviceName: nginx
     servicePort: 443
   rules:
-  - host: newbravo.replicated.com
+  - host: myapp.somebigbank.internal
     http:
       paths:
       - path: /
@@ -185,6 +183,23 @@ data:
         return 200 'OK';
       }
     }
+---
+# kind: scheduler-kubernetes
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+  annotations:
+    contour.heptio.com/upstream-protocol.tls: "443"
+spec:
+  ports:
+  - name: https
+    port: 443
+    protocol: TCP
+  selector:
+    app: nginx
 ---
 #kind: scheduler-kubernetes
 apiVersion: "apps/v1"
