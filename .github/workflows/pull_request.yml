@@ -1,0 +1,16 @@
+on: pull_request
+name: Hugo Link Check
+jobs:
+  filter-to-pr-open-synced:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: filter-to-pr-open-synced
+      uses: actions/bin/filter@master
+      with:
+        args: action 'opened|synchronize'
+    - name: linkcheck
+      uses: marccampbell/hugo-linkcheck-action@v0.1.2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        HUGO_FINAL_URL: https://help.replicated.com
