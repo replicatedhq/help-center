@@ -52,11 +52,18 @@ func ConfigOptionEquals(optionName string, expectedValue string) bool
 ```
 Returns true if the configuration option value is equal to the supplied value.
 ```yaml
-ports:
-   - private_port: "80"
-     public_port: "80"
-     port_type: tcp
-     when: '{{repl ConfigOptionEquals "http_enabled" "1" }}'
+---
+# kind: scheduler-kubernetes
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: backend
+  annotations:
+    ingress.kubernetes.io/force-ssl-redirect: “{{repl if ConfigOptionEquals "http_enabled" "1" }}false{{repl else}}true{{repl end}}”
+spec:
+  backend:
+    serviceName: frontend
+    servicePort: 80
 ```
 
 {{< template_function name="ConfigOptionNotEquals" replicated="true" kubernetes="true" swarm="true" >}}
@@ -65,11 +72,18 @@ func ConfigOptionNotEquals(optionName string, expectedValue string) bool
 ```
 Returns true if the configuration option value is not equal to the supplied value.
 ```yaml
-ports:
-   - private_port: "443"
-     public_port: "443"
-     port_type: tcp
-     when: '{{repl ConfigOptionNotEquals "http_enabled" "1" }}'
+---
+# kind: scheduler-kubernetes
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: backend
+  annotations:
+    ingress.kubernetes.io/force-ssl-redirect: “{{repl if ConfigOptionNotEquals "http_enabled" "1" }}true{{repl else}}false{{repl end}}”
+spec:
+  backend:
+    serviceName: frontend
+    servicePort: 80
 ```
 
 {{< template_function name="LicenseFieldValue" replicated="true" kubernetes="true" swarm="true" >}}
@@ -513,7 +527,7 @@ When referencing another container in a template object, you must make sure the 
 [Sprig 2.19.0 template functions](https://github.com/Masterminds/sprig) can be used with the `repl` prefix.
 
 ```yaml
-env_vars:
+env:
 - name: HELLO
   value: '{{repl "hello!" | upper | repeat 5 }}'
 ```
