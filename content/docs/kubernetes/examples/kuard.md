@@ -7,11 +7,12 @@ categories: [ "Kubernetes Examples" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
+aliases: [ docs/kubernetes/examples/guestbook ]
 ---
 
-## Kubernetes Guestbook on Replicated
+## Kubernetes Kuard on Replicated
 
-A very simple application that runs with Replicated and Kubernetes.
+A very simple application that runs with Replicated and Kubernetes. Uses the `kuard` service from [Kubernetes up and Running](https://github.com/kubernetes-up-and-running/kuard).
 
 ```yaml
 ---
