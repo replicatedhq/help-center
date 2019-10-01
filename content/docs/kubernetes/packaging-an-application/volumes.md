@@ -35,9 +35,11 @@ This can be enabled in the `kubernetes` section of your yaml.
 kubernetes:
   shared_fs:
     enabled: true
+    mount_paths:
+    - /subdir1
 ```
 
-Templating is support on the `enabled` property.
+Templating is supported on the `enabled` and `mount_paths` properties.
 
 Once enabled, you can mount the shared fileystem in any of your pods, either from the root or at a subpath as shown in this example:
 
@@ -79,6 +81,7 @@ spec:
             path: /subdir1 #optional
 ```
 
+When mounting a subdirectory as shown in the example above, you must add the path you are mounting to `kubernetes.shared_fs.mount_paths`.
 Paths within the shared filesystem can be included in snapshots by adding them to the [backup](/docs/snapshots/kubernetes/) section of your yaml.
 
 {{< linked_headline "Resources" >}}
