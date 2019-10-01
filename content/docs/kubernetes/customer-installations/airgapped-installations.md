@@ -39,12 +39,12 @@ Your customer will need the `.airgap` package and the normal Replicated license 
 
 {{< linked_headline "Install Application" >}}
 
-Next, navigate to the management console at https://\<server_ip\>:8800. Accept the self signed certificate, pass the preflight checks, and you will see the license upload screen. Upload the [airgap enabled license](/docs/kubernetes/getting-started/create-licenses/#airgap-download-enabled) and then select the airgapped install option. You will have to provide a path to the .airgap file and upload the .rli file here.
+Next, navigate to the management console at https://\<server_ip\>:8800. Accept the self-signed certificate, pass the preflight checks, and you will see the license upload screen. Upload the [airgap enabled license](/docs/kubernetes/getting-started/create-licenses/#airgap-download-enabled) and then select the airgapped install option. You can choose to provide a path to the .airgap file or upload it directly.
 
 Once this screen is completed, Replicated runs as normal.
 
 {{< linked_headline "Updating License and Application" >}}
 
-In the Console Settings page of the Admin Console (/console/settings), there is a section entitled "Airgapped Settings". Updates to your application can be installed by downloading the new version and placing it on the server in the directory specified under "Update Path". The extension of the file must be `.airgap`. Your license can be synced by placing a new license `.rli` file in place of the existing one at the path specified under "License Path".
+In the Console Settings page of the Admin Console (/console/settings), there is a section entitled "Airgapped Settings". Updates to your application can be installed by downloading the new version and placing it on the server in the directory specified under "Update Path" or by uploading the bundle directly via the releases page in the Admin Console (/releases). The extension of the file must be `.airgap`. Your license can be synced by placing a new license `.rli` file in place of the existing one at the path specified under "License Path".
 
 ![Airgapped Settings](/images/post-screens/console-settings-airgapped.png)
