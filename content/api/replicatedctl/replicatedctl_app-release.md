@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-release
 categories:
 - replicatedctl
-date: "2019-03-12T12:19:48-07:00"
+date: "2019-07-31T18:16:51-07:00"
 description: Manage app releases
 gradient: purpleToPink
 index: docs
@@ -38,4 +38,5 @@ Manage app releases
 * [replicatedctl app-release inspect](/api/replicatedctl/replicatedctl_app-release_inspect/)	 - Display detailed information on one or more app releases
 * [replicatedctl app-release ls](/api/replicatedctl/replicatedctl_app-release_ls/)	 - List app releases
 * [replicatedctl app-release notes](/api/replicatedctl/replicatedctl_app-release_notes/)	 - Display release notes for an app releases
+* [replicatedctl app-release render-scheduler-spec](/api/replicatedctl/replicatedctl_app-release_render-scheduler-spec/)	 - Render application scheduler spec
 

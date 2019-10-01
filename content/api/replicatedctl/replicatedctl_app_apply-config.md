@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app_apply-config
 categories:
 - replicatedctl
-date: "2019-03-12T12:19:48-07:00"
+date: "2019-07-31T18:16:51-07:00"
 description: Apply the changed configuration to the app
 gradient: purpleToPink
 index: docs

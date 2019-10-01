@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_terms_accept
 categories:
 - replicatedctl
-date: "2019-03-12T12:19:48-07:00"
+date: "2019-07-31T18:16:51-07:00"
 description: Accept terms of service
 gradient: purpleToPink
 index: docs
