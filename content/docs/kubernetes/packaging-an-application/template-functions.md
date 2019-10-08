@@ -91,7 +91,7 @@ Returns a property from the License as a string.  Valid propertyNames are "assig
 ```yaml
 env:
 - name: LICENSE_ID
-  value: '{{repl LicenseFieldValue "license.id" }}'
+  value: '{{repl LicenseProperty "license.id" }}'
 ```
 
 {{< template_function name="AppID" replicated="true" kubernetes="true" swarm="true" >}}
