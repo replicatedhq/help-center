@@ -10,6 +10,10 @@ icon: "replicatedCircle"
 
 Programmable Test Procedures enable you to run an arbitrary containers to validate the same input from the configuration screen and show a friendly error message to the end-user. You can use runtime configuration as input to your container command and capture the result code and message and format it for display to the end-user.
 
+{{< warning title="Password" >}}
+This feature is currently unavailable for use with config options of type password.
+{{</warning>}}
+
 {{< linked_headline "Example" >}}
 
 The following example will check the validity of the password entered by the end-user. The `test_proc.custom_command` property of the YAML will instruct Replicated to run a container defined in the components section of the YAML.
