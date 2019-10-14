@@ -45,5 +45,6 @@ Replicated adds a [Contour](https://github.com/heptio/contour) [ingress controll
 After a Kubernetes cluster has been brought up, a Deployment is created in the default namespace for Replicated. When a license is uploaded, Replicated will generate a namespace for the application and apply the release yaml to it. There are three cases in which Replicated will directly modify application config yaml:
 
 1. If running in airgap mode, all Pod images will be rewritten to pull from the registry running in the Replicated daemon pod.
-2. If a pod mounts a Persistent Volume that is included in snapshots, Replicated will add a sidecar to the pod to backup the contents.
-3. All PersistentVolumeClaims will receive the `storageClassName` property to ensure they are automatically provisioned by Rook.
+1. If a pod mounts a Persistent Volume that is included in snapshots, Replicated will add a sidecar to the pod to backup the contents.
+1. All PersistentVolumeClaims will receive the `storageClassName` property to ensure they are automatically provisioned by Rook.
+1. All Deployments, ReplicaSets, ReplicationControllers and StatefulSets without the `replicas` property explicitly set will implicitly scale to 1 replica when started.
