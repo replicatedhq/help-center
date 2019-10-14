@@ -11,7 +11,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-Replicated Embedded Kubernetes has the ability to run in highly available mode with multiple Kubernetes master control plane nodes. The addition of the `ha` flag when running the Kubernetes easy-install script signals to Replicated that this cluster should be run in HA mode. In addition to the cluster, the only other requirement is an external load balancer, which is necessary to expose the kube-apiserver to worker nodes. In order to upgrade an existing cluster to HA, just rerun the installation script with the addition of the `ha` flag.
+Replicated Embedded Kubernetes has the ability to run in highly available (multi-master) mode with multiple Kubernetes master control plane nodes. The addition of the `ha` flag when running the Kubernetes easy-install script signals to Replicated that this cluster should be run in HA mode. In addition to the cluster, the only other requirement is an external load balancer, which is necessary to expose the kube-apiserver to worker nodes. In order to upgrade an existing cluster to HA, just rerun the installation script with the addition of the `ha` flag.
 
 ```shell
 curl -sSL -o install.sh  https://get.replicated.com/kubernetes-init
