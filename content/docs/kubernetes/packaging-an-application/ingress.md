@@ -22,7 +22,7 @@ When running Kubernetes in a cloud provider or in a managed Kubernetes stack suc
 Replicated deploys with the [Contour](https://github.com/heptio/contour) ingress controller, which runs in the `heptio-contour` namespace.
 A NodePort service forwards incoming traffic on ports 80 and 443 to Contour through every node in your cluster.
 
-The Contour ingress controller supports a variety of [options through annotations](https://github.com/heptio/contour/blob/master/docs/annotations.md).
+The Contour ingress controller supports a variety of [options through annotations](https://github.com/heptio/contour/blob/v0.14.0/docs/annotations.md).
 These options may not be supported in all your customers' cloud environments with different ingress controller implementations.
 
 {{< linked_headline "Ingress with TLS Termination on Contour" >}}
