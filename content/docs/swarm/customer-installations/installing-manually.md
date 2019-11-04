@@ -82,9 +82,9 @@ sleep 5; docker volume rm replicated-premkit-data-volume
 sleep 5; docker volume ls | grep statsd | awk '{print $2}' | xargs docker volume rm
 sleep 5; docker network rm statsd_replicated premkit_replicated
 sleep 5; docker stack rm replicated
+sleep 5; docker stack rm retraced
 sleep 5; docker ps -a | grep piper | awk '{print $1}' | xargs docker rm
 sleep 10; docker volume ls | grep replicated | awk '{print $2}' | xargs docker volume rm
 sleep 5; docker images | grep 'replicated\|premkit' | awk '{print $3}' | xargs docker rmi
 sleep 5; docker secret ls | grep 'replicated\daemon_token' | awk '{print $1}' | xargs docker secret rm
-sleep 5; docker stack rm retraced
 ```
