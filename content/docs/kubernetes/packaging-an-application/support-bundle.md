@@ -79,6 +79,8 @@ By default the Support Bundle will include the following files:
 | /default/proc/version | The kernel version. A copy of the `/proc/version` file |
 | /default/proc/vmstat | Detailed virtual memory statistics from the kernel. A copy of the `/proc/vmstat` file |
 | /default/var/log/upstart/docker.log | Docker upstart logs when running with the upstart init system |
+| /replicated/internal/app-config.json | Application configuration and values excluding passwords |
+| /replicated/internal/app-releases.txt | Application releases list with installation time |
 | /replicated/internal/audit_events.csv | Replicated audit log events dump |
 | /replicated/internal/config-commands.txt | Replicated config command results |
 | /replicated/internal/daemon.json | Replicated daemon information |

@@ -101,6 +101,8 @@ By default the Support Bundle will include the following files in the master fol
 | /replicated/etc/replicated.conf | Replicated configuration file. A copy of the `/etc/replicated.conf` file |
 | /replicated/etc/sysconfig/replicated | Replicated configuration file. A copy of the `/etc/sysconfig/replicated` file |
 | /replicated/etc/sysconfig/replicated-operator | Replicated operator configuration file. A copy of the `/etc/sysconfig/replicated-operator` file |
+| /replicated/internal/app-config.json | Application configuration and values excluding passwords |
+| /replicated/internal/app-releases.txt | Application releases list with installation time |
 | /replicated/internal/audit_events.csv | Replicated audit log events dump |
 | /replicated/internal/config-commands.txt | Replicated config command results |
 | /replicated/internal/daemon.json | Replicated daemon information |
