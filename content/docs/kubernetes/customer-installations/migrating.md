@@ -93,7 +93,7 @@ Multi-strategy snapshot settings will not be migrated.
 
 {{< linked_headline "Activation" >}}
 
-The migration script will detect if [activation is required](https://replicated.com/community/t/2-factor-authentication-for-customer-licenses/73) and automatically request a new activation code be sent to the activation email address on the license.
+The migration script will detect if [activation is required](https://help.replicated.com/community/t/2-factor-authentication-for-customer-licenses/73) and automatically request a new activation code be sent to the activation email address on the license.
 The script will prompt the user to enter the activation code before proceeding.
 
 {{< linked_headline "Terms of Service" >}}
