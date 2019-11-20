@@ -6,20 +6,22 @@ install:
 	yarn
 
 build:
-	`npm bin`/browserify static/js/supportBundleUpload.js > static/js/supportBundleUpload.bundled.js
-	yarn gulp
 	hugo -v
 
-build_staging:
-	`npm bin`/browserify static/js/supportBundleUpload.js > static/js/supportBundleUpload.bundled.js
-	yarn gulp
+build-staging:
 	hugo -v --config config.staging.yaml
+
+build-prod:
+	hugo -v --config config.prod.yaml
 
 serve:
 	hugo serve --disableFastRender
 
-serve_staging:
+serve-staging:
 	hugo serve --config config.staging.yaml
+
+serve-prod:
+	hugo serve --config config.prod.yaml
 
 index-site:
 	yarn index-site
@@ -42,7 +44,7 @@ setup:
 	curl -o java/swagger2markup-1.3.1.jar http://central.maven.org/maven2/io/github/swagger2markup/swagger2markup/1.3.1/swagger2markup-1.3.1.jar
 
 
-deps_linkcheck:
+deps-linkcheck:
 	npm install -g broken-link-checker@0.7.8
 
 # this skips *all* of community, but its a start
@@ -53,7 +55,7 @@ deps_linkcheck:
 #
 #  Will try to run deps_linkcheck unless `blc` is installed globally somewhere
 linkcheck:
-	[[ -x "$(shell which blc)" ]] || $(MAKE) deps_linkcheck && \
+	[[ -x "$(shell which blc)" ]] || $(MAKE) deps-linkcheck && \
 	blc https://help.replicated.com -r \
 		--host-requests 20 \
 		--requests 20 \
