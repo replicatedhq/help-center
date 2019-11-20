@@ -25,20 +25,20 @@ Help center can be built for either staging or prod via:
 
 #### Prod
 ```bash
- make build
+ make build-prod
 ```
 
 ```bash
- make serve
+ make serve-prod
 ```
 
 #### Staging
 ```bash
- make build_staging
+ make build-staging
 ```
 
 ```bash
- make serve_staging
+ make serve-staging
 ```
 
 ### Indexing Content
