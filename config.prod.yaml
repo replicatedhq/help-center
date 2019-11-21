@@ -1,5 +1,5 @@
 ---
-baseURL: "https://help.replicated.com"
+baseURL: "https://help.replicated.com/"
 languageCode: "en-us"
 title: "Replicated Help Center"
 theme: "replicated-docs-theme"
