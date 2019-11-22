@@ -7,7 +7,6 @@ categories: [ "Shipping With Kubernetes on Replicated" ]
 index: ["docs/kubernetes", "docs"]
 icon: "replicatedKubernetes"
 gradient: "kubernetes"
-nextPage: "kubernetes/packaging-an-application/yaml-format.md"
 ---
 
 The Replicated Kubernetes installer builds on [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/), adding support for Pod networking, relocatable Persistent Volumes, and Ingress.
