@@ -23,7 +23,7 @@ config:
   items:
   - name: password
     title: Password
-    type: text
+    type: password
     test_proc:
       display_name: Check Password Strength
       run_on_save: true
@@ -32,7 +32,7 @@ config:
         timeout: 15
         data:
           replicated: # this section is scheduler specific
-            component: password-strength
+            component: password-checker
             container: debian
       results:
       - status: success
@@ -53,6 +53,54 @@ config:
           args:
             error: '{{repl .Error }}'
             result: '{{repl .Result }}'
+```
+
+{{< linked_headline title="Password Fields" >}}
+
+The server will never return the plain text value of fields of type password back to the frontend. In order to make password fields work with Programmable Test Procs the password field names must be included in the property `arg_fields` when using a Test Proc nested under a Config Group. This behavior is implicit when a Test Proc is nested under a Config Item like in the example above. See below for an example. Note the "password" item in the list `test_proc.arg_fields`.
+
+```yaml
+config:
+- name: credentials
+  title: Credentials
+  test_proc:
+    display_name: Check Credentials
+    run_on_save: true
+    arg_fields:
+    - password
+    custom_command:
+      id: scheduler
+      timeout: 15
+      data:
+        replicated: # this section is scheduler specific
+          component: credentials-checker
+          container: debian
+    results:
+    - status: success
+      message: Success!
+      condition:
+        status_code: 0
+        error: false
+    - status: error
+      message:
+        default_message: '{{.result}}'
+        args:
+          result: '{{repl .Result }}'
+      condition:
+        status_code: 123 # custom exit code from the container command
+    - status: error # this is a catch-all case
+      message:
+        default_message: '{{if .error}}{{.error}}{{else}}{{.result}}{{end}}'
+        args:
+          error: '{{repl .Error }}'
+          result: '{{repl .Result }}'
+  items:
+  - name: username
+    title: Username
+    type: text
+  - name: password
+    title: Password
+    type: password
 ```
 
 {{< linked_headline "Native" >}}

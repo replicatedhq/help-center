@@ -11,10 +11,6 @@ gradient: "swarm"
 
 Programmable Test Procedures enable you to run an arbitrary Services to validate the same input from the configuration screen and show a friendly error message to the end-user. You can use runtime configuration as input to your Service command and capture the result code and message and format it for display to the end-user.
 
-{{< warning title="Password" >}}
-This feature is currently unavailable for use with config options of type password.
-{{</warning>}}
-
 {{< linked_headline "Example" >}}
 
 The following example will check the validity of the password entered by the end-user. The `test_proc.custom_command` property of the YAML will instruct Replicated to run a service defined in a special YAML file defined with kind `test-proc-swarm`.
@@ -30,7 +26,7 @@ config:
   items:
   - name: password
     title: Password
-    type: text
+    type: password
     test_proc:
       display_name: Check Password Strength
       run_on_save: true
@@ -88,6 +84,55 @@ configs:
     external: true
 ```
 
+{{< linked_headline title="Password Fields" >}}
+
+The server will never return the plain text value of fields of type password back to the frontend. In order to make password fields work with Programmable Test Procs the password field names must be included in the property `arg_fields` when using a Test Proc nested under a Config Group. This behavior is implicit when a Test Proc is nested under a Config Item like in the example above. See below for an example. Note the "password" item in the list `test_proc.arg_fields`.
+
+```yaml
+---
+# kind: replicated
+config:
+- name: credentials
+  title: Credentials
+  test_proc:
+    display_name: Check Credentials
+    run_on_save: true
+    arg_fields:
+    - password
+    custom_command:
+      id: scheduler
+      timeout: 15
+      data:
+        swarm: # this section is scheduler specific
+          service: credentials-checker
+    results:
+    - status: success
+      message: Success!
+      condition:
+        status_code: 0
+        error: false
+    - status: error
+      message:
+        default_message: '{{.result}}'
+        args:
+          result: '{{repl .Result }}'
+      condition:
+        status_code: 123 # custom exit code from the container command
+    - status: error # this is a catch-all case
+      message:
+        default_message: '{{if .error}}{{.error}}{{else}}{{.result}}{{end}}'
+        args:
+          error: '{{repl .Error }}'
+          result: '{{repl .Result }}'
+  items:
+  - name: username
+    title: Username
+    type: text
+  - name: password
+    title: Password
+    type: password
+```
+
 {{< linked_headline "Resource Specification" >}}
 
 Programmable Test Procedures are represented with the following properties.
@@ -102,5 +147,6 @@ The test_proc resource is a sub-resource of a config group or item. When specifi
 | run_on_save | string or boolean | no | When true this test will run on saving the configuration. |
 | timeout | int | no | Timeout in seconds, default 15 seconds, -1 denotes no timeout |
 | when | string | no | Will determine if the test procedure is runnable (evaluated to a boolean value) |
+| arg_fields | []string | no | A list of config item names for which to pass values to the test procedure. This is required for password fields. |
 | custom_command | [Command](/docs/swarm/packaging-an-application/commands-reference/#command) | yes | The command that will be run |
 | results | array\[[Result](/docs/swarm/packaging-an-application/commands-reference/#result)\] | yes | An array of result objects that when evaluated will determine success or failure |
