@@ -91,7 +91,7 @@ spec:
       name: password-checker-configmap
 ```
 
-{{< linked_headline title="Password Fields" >}}
+{{< linked_headline "Password Fields" >}}
 
 The server will never return the plain text value of fields of type password back to the frontend. In order to make password fields work with Programmable Test Procs the password field names must be included in the property `arg_fields` when using a Test Proc nested under a Config Group. This behavior is implicit when a Test Proc is nested under a Config Item like in the example above. See below for an example. Note the "password" item in the list `test_proc.arg_fields`.
 
