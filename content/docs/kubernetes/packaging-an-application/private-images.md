@@ -11,7 +11,7 @@ icon: "replicatedKubernetes"
 
 Replicated is capable of delivering private images from the Replicated registry or any supported 3rd party registry into a private cluster.  These images will be hosted on the local network, in the registry distributed with Replicated, and application objects will be re-written to use this registry.
 
-The following object will be rewritten:
+The following objects will be rewritten:
 
  - apps/v1.DaemonSet
  - apps/v1.Deployment
