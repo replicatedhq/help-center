@@ -92,9 +92,16 @@ service replicated-ui restart
 service replicated-operator restart
 ```
 
-### CentOS/RHEL/Fedora
+### CentOS/RHEL/Fedora/Amazon Linux 2
 ```shell
 sudo systemctl restart replicated replicated-ui replicated-operator
+```
+
+### Amazon Linux 2018.03
+```shell
+restart replicated
+restart replicated-ui
+restart replicated-operator
 ```
 
 {{< linked_headline "Removing Replicated" >}}
