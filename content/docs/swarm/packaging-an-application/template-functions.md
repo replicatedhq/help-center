@@ -72,9 +72,13 @@ func ConfigOptionData(fileName string) string
 Returns the contents of the file uploaded for a configuration option as a string.
 
 ```yaml
-config_files:
-- filename: /opt/certs/server.key
-  contents: {{repl ConfigOptionData "ssl_key"}}
+swarm:
+  secrets:
+  - name: key
+    value: '{{repl ConfigOptionData "ssl_key" }}'
+  configs:
+  - name: conf
+    value: '{{repl ConfigOptionData "nginx_conf" }}'
 ```
 
 
