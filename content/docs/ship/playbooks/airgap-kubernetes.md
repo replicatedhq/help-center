@@ -11,11 +11,27 @@ gradient: "console"
 
 {{< linked_headline "Kubernetes and Airgap" >}}
 
-When distributing a Kubernetes (or Helm) application using Replicated Ship, there will be a running Kubernetes cluster to deploy to. Enterprise Kubernetes clusters that are used for internal applications can be installed and operated in airgapped environments. An airgap cluster is any cluster that doesn't have outbound Internet access, and therefore cannot pull the application images from a Docker registry.
+An airgap cluster is any cluster that doesn't have outbound internet access, and therefore cannot pull application images from a Docker registry. This can make it difficult to set up and to manage.
+
+Replicated [kURL](https://kurl.sh) is an [open source Kubernetes distro creator](https://github.com/replicatedhq/kurl) that enables anyone to customize their own airgap installable Kubernetes cluster. Through kURL, Replicated also provides a full airgap Kubernetes installer with several popular components that is freely [available for download & use](http://kurl.sh/bundle/latest.tar.gz). Once download or move the `tar.gz` to a [compatible airgapped Linux server](https://kurl.sh/docs/install-with-kurl/system-requirements) and untar the directory, which will include these contents:
+![air gap Kubernetes installer](/images/guides/kubernetes/airgap-k8s-installer.png)
+Once you have untarred the installer you can run the `install.sh` from the Linux server that you want to install K8s on.
+```bash
+tar xvf latest.tar.gz
+cat install.sh | sudo bash
+```
+Or run the installer with any of the [advanced install options](https://kurl.sh/docs/install-with-kurl/advanced-options) (such as HA mode):
+```bash
+tar xvf latest.tar.gz
+cat install.sh | sudo bash -s ha
+```
+From there you should be able to follow the instructions printed at the end of the install process to [add nodes](https://kurl.sh/docs/install-with-kurl/adding-nodes) or [connect remotely via kubectl](https://kurl.sh/docs/install-with-kurl/connecting-remotely).
+
+If you or your customer already has an airgap cluster ready for your installation you can use [Replicated KOTS to deliver](https://kots.io/kotsadm/installing/airgap-packages/) and manage the application.
 
 The recommended way to deploy applications to airgap clusters is to require a Docker registry that's already running in the customer environment.
 
-When requiring an existing Docker registry to use, the images will have to be retagged and pushed to the registry at install time. Replicated Ship supports this workflow from the workstation that's performing the installation:
+When requiring an existing Docker registry to use, the images will have to be retagged and pushed to the registry at install time. Both Replicated Kots & Replicated Ship supports this workflow from the workstation that's performing the installation:
 
 1. Require that the installer provide the registry name and namespace in the registry
 1. Require that the workstation running the installation be logged in to the registry
