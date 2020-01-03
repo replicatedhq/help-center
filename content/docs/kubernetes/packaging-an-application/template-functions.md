@@ -518,6 +518,63 @@ StatsdAddress() string
 
 StatsdAddress returns the address of the Statsd service in the cluster.
 
+
+{{< template_function name="ObjectStoreHost" replicated="false" kubernetes="true" swarm="false" >}}
+```go
+ObjectStoreHost() string
+```
+
+ObjectStoreHost returns the hostname of the [Rook Ceph object store](https://rook.io/docs/rook/v1.0/ceph-object.html) deployed to the cluster.
+
+```yaml
+env:
+- name: AWS_HOST
+  value: '{{repl ObjectStoreHost }}'
+```
+
+
+{{< template_function name="ObjectStoreEndpoint" replicated="false" kubernetes="true" swarm="false" >}}
+```go
+ObjectStoreEndpoint() string
+```
+
+ObjectStoreEndpoint returns the endpoint of the [Rook Ceph object store](https://rook.io/docs/rook/v1.0/ceph-object.html) deployed to the cluster.
+
+```yaml
+env:
+- name: AWS_ENDPOINT
+  value: '{{repl ObjectStoreEndpoint }}'
+```
+
+
+{{< template_function name="ObjectStoreAccessKey" replicated="false" kubernetes="true" swarm="false" >}}
+```go
+ObjectStoreAccessKey() string
+```
+
+ObjectStoreAccessKey returns an access key to the [Rook Ceph object store](https://rook.io/docs/rook/v1.0/ceph-object.html) deployed to the cluster.
+
+```yaml
+env:
+- name: AWS_ACCESS_KEY_ID
+  value: '{{repl ObjectStoreAccessKey }}'
+```
+
+
+{{< template_function name="ObjectStoreSecretKey" replicated="false" kubernetes="true" swarm="false" >}}
+```go
+ObjectStoreSecretKey() string
+```
+
+ObjectStoreSecretKey returns a secret key to the [Rook Ceph object store](https://rook.io/docs/rook/v1.0/ceph-object.html) deployed to the cluster.
+
+```yaml
+env:
+- name: AWS_SECRET_ACCESS_KEY
+  value: '{{repl ObjectStoreSecretKey }}'
+```
+
+
 ## Notes
 
 When referencing another container in a template object, you must make sure the referenced container is started first.  Please see the [Events and Orchestration](/docs/packaging-an-application/events-and-orchestration/) section for more information on orchestrating container startup.
