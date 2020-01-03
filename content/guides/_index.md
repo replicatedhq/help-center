@@ -5,10 +5,10 @@ description: "Guides for all things Replicated for beginners and experienced use
 index: "guides"
 guides:
 
-  - title: "Distribute a Kubernetes Appliance"
-    description: "If you are building a Kubernetes application and want to keep the same deployments, but your customers don't have a cluster, start here."
+  - title: "Distribute a Kubernetes Application with KOTS"
+    description: "If you are building a Kubernetes application and want to re-use your YAML, start here. KOTS will allow you to deliver to both existing clusters and to your end customer's plain VMs if they don't have a Kubernetes Cluster."
     level: "replicatedKubernetes"
-    slug: "ship-with-kubernetes"
+    slug: "https://kots.io/vendor/packaging/packaging-an-app/"
   - title: "Distribute to a Kubernetes Cluster with Ship"
     description: "If you are trying to deliver your Kubernetes application to a customer's existing Kubernetes cluster, start here with Replicated Ship."
     level: "replicatedKubernetes"
