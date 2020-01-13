@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_cluster_node-join-script
 categories:
 - replicatedctl
-date: "2019-07-31T18:16:51-07:00"
+date: "2020-01-13T14:48:27-08:00"
 description: Outputs the script to run to join a node to the cluster
 gradient: purpleToPink
 index: docs
@@ -26,12 +26,13 @@ replicatedctl cluster node-join-script [flags]
 ### Options
 
 ```
-      --advanced                 Advanced install option
-  -h, --help                     help for node-join-script
-      --master                   Generates a master node join script
-      --private-address string   The public address of the node
-      --public-address string    The public address of the node
-      --tags stringArray         Tags to apply to the node
+      --advanced                      Advanced install option
+  -h, --help                          help for node-join-script
+      --master                        Generates a master node join script
+      --private-address string        The public address of the node
+      --public-address string         The public address of the node
+      --tags stringArray              Tags to apply to the node
+      --unsafe-skip-ca-verification   Disable CA public key verification (kubernetes only)
 ```
 
 ### Options inherited from parent commands
