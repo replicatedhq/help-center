@@ -63,6 +63,7 @@ The install script can take flags to help your customers with specialized enterp
 | kubernetes-upgrade-patch-version | Upgrade to the latest available patch release of Kubernetes                                        |
 | ha | Installs Replicated in ["high availability"](/docs/kubernetes/customer-installations/high-availability/) mode. The script will prompt for a load balancer address if not specified in the `load-balancer-address` flag. |
 | load-balancer-address | Installs Replicated in ["high availability"](/docs/kubernetes/customer-installations/high-availability/) mode with the load balancer address specified as the control plane endpoint. |
+| unsafe-skip-ca-verification | Disable CA public key verification (kubernetes only) |
 
 Example quick install with flags:
 
