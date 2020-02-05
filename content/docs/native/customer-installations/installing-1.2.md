@@ -25,7 +25,7 @@ We support the server versions of the following OS's
 - Ubuntu 14.04 / 15.10
 - Fedora 21 / 22
 - Red Hat Enterprise Linux 7.1
-- CentOS 7+
+- CentOS 7.4 - 7.7
 - Amazon AMI 2014.03 / 2014.09 / 2015.03 / 2015.09
 
 *Please note your machine must support **docker-engine {{< docker_version_minimum >}} - {{< docker_version_default >}} (with{{< docker_version_default >}} being the

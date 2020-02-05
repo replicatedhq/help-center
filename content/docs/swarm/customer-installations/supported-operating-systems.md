@@ -19,8 +19,8 @@ Replicated provides an easy install script for Swarm that works with the followi
 
 - Debian 7.7+
 - Ubuntu 14.04.5 / 16.04 / 18.04
-- Red Hat Enterprise Linux 7+
-- CentOS 7+
+- Red Hat Enterprise Linux 7.4 - 7.7
+- CentOS 7.4 - 7.7
 - Oracle Linux 7+
 
 As new operating systems start to support Docker we extend our install script and QA process to include them.  Operating
