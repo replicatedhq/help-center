@@ -12,102 +12,107 @@ icon: "replicatedKubernetes"
 
 # Installing and Testing a Kubernetes Release
 
-This guide will give you first-hand experience installing a Replicated Kubernetes appliance and the Guestbook application. If you haven't yet created the Guestbook application, head back to the [Create and Promote as Release](../create-release) guide and complete that first.
+This guide will give you first-hand experience installing a Replicated Kubernetes appliance. If you haven't yet created a release, head back to the [Create and Promote as Release](../create-release) guide and complete that first.
 
 Now that we've created a release and promoted it to the Unstable channel, the next step is to create a customer license and use this this license to install the application on a test server.
 
 {{< linked_headline "Create License" >}}
 
-A customer license (`.rli` file) is required to install any Replicated application. To create a customer license, log in to the [Vendor Portal](https://vendor.replicated.com) and select the Customers link on the left. You will see a screen that says you haven't created any customers. Click the "Create a customer" button to continue.
+A customer license (downloadable as a `.yaml` file) is required to install any Replicated application. To create a customer license, log in to the [Vendor Portal](https://vendor.replicated.com) and select the Customers link on the left. You will see a screen that says you haven't created any customers. Click the "Create a customer" button to continue.
 
 ![Customers](/images/guides/native/customers.png)
 
-On the Create a new customer page, fill in your name for the Customer name field, and click Create customer. The defaults in all other fields will be fine -- the license will be assigned to the Unstable channel because that's the only channel with a release in it.
+On the Create a new customer page, fill in your name for the Customer name field, select the Unstable channel on the right hand side, and click Create customer. The defaults in all other fields will be fine.
 
-![Create Customer](/images/guides/native/create-customer.png)
+[CHANGE SCREENSHOT]![Create Customer](/images/guides/native/create-customer.png)
 
-After creating the customer, click the "Download license" link in the upper right corner. This will download file file with your customer name and a `.rli` extension. This is the license file you would deliver to your customer, if this was a real customer.
+After creating the customer, click the "Download license" link in the upper right corner. This will download file file with your customer name and a `.yaml` extension. This is the license file your customer will need to install your application. When a customer is installing your software you need to send them two things: the KOTS install script and the license file.
 
 {{< linked_headline "Create Test Server and Install Replicated" >}}
 
-To test this installation, we need a server. I'm going to create a test EC2 instance in AWS to try this out, but you can use any cloud provider or Vagrant box you'd like. For this guide, let's create a server with
+KOTS can be installed either into an existing Kubernetes cluster or as an embedded cluster.
 
-- Ubuntu 16.04
-- at least 4 GB of RAM
-- 2 CPU cores
+We're going to use the embedded cluster option for this guide. First we will need a server. We use Google Cloud a lot but any cloud provider or local virtual machine will suffice. For this guide, let's create a server with:
+
+- Ubuntu 18.04
+- at least 8 GB of RAM
+- 4 CPU cores
 - at least 50GB of disk space
 
 Next, ssh into the server we just created, and run the install script:
 
 ```shell
-$ curl -sSL https://get.replicated.com/kubernetes-init | sudo bash
+$ curl -sSL https://kurl.sh/<your-app-name> | sudo bash
 ```
 
-You should be able to select the defaults for any prompts that are presented.
+This script will install Docker, Kubernetes, and the Replicated management containers.
 
-Once the installation script is completed, it will show the URL you can connect to in order to continue the installation. This install script will install Docker, Kubernetes and prepare the server for your application (the Guestbook in this case).
+Installation should take about 10-15 minutes.
+
+Once the installation script is completed, it will show the URL you can connect to in order to continue the installation.
 
 Once the installer is completed, you'll see:
 
 ```shell
-		Installation Complete ✔
+
+		Installation
+		  Complete ✔
+
+
+The UIs of Prometheus, Grafana and Alertmanager have been exposed on NodePorts 30900, 30902 and 30903 respectively.
+
+
+
+
+Kotsadm: http://[server-ip-address]:8800
+Password not regenerated. Run kubectl kots reset-password default to reset it
+
+
 
 To access the cluster with kubectl, reload your shell:
 
     bash -l
 
-To continue the installation, visit the following URL in your browser:
 
-    https://35.226.70.55:8800
-
-
-ubuntu@server1:~$
+To add worker nodes to this installation, run the following script on your other nodes
+    curl -sSL https://kurl.sh/[application-name]/join.sh | sudo bash -s kubernetes-master-address=[ip-address]:6443 kubeadm-token=[token] kubeadm-token-ca-hash=sha256:[token] kubernetes-version=1.16.4 docker-registry-ip=[ip-address]
 ```
 
 Following the instructions on the screen, you can reload the shell and `kubectl` will now work:
 
 ```bash
-$ bash -l
-$ kubectl get pods
-NAME                                                    READY     STATUS    RESTARTS   AGE
-replicated-5d9d6b9bd7-smhwv                             2/2       Running   0          13m
-replicated-hostpath-provisioner-5d86c6dd7d-kk9v2        1/1       Running   0          13m
-replicated-premkit-7b9f7bcd84-8fj2t                     2/2       Running   0          12m
-replicated-sidecar-controller-default-fdccc454f-ssslq   1/1       Running   0          12m
-retraced-api-5b78bdbf99-jwpct                           1/1       Running   0          12m
-retraced-cron-6664b675b6-5lc29                          1/1       Running   0          12m
-retraced-nsqd-6b5bb788d6-vfn67                          1/1       Running   0          12m
-retraced-postgres-f5bf6cd5-s8hhc                        1/1       Running   0          12m
-retraced-processor-b86668d48-m6lgr                      1/1       Running   0          12m
+dmichaels@david-daxterity-baked:~$ kubectl get pods
+NAME                                  READY   STATUS              RESTARTS   AGE
+kotsadm-api-559c9757f9-5hpgj          1/1     Running             2          27h
+kotsadm-df5bc9bb5-6vbs7               1/1     Running             0          27h
+kotsadm-migrations                    0/1     Completed           0          8m30s
+kotsadm-operator-74b88669cb-6z2kw     1/1     Running             0          27h
+kotsadm-postgres-7b98649878-gmhmj     1/1     Running             0          27h
 ```
 
 {{< linked_headline "Install License" >}}
 
-At this point, Replicated and Kubernetes are running, but the Guestbook app isn't yet. To complete the installation, visit the URL that the installation script displayed when completed. Replicated automatically provisions a self-signed certificate on every installation, so you'll have to accept this cert to continue. We recommend that every installation change this to a trusted cert, and that can be completed in the browser, at the next step.
+At this point, Replicated and Kubernetes are running, but the application isn't yet. To complete the installation, visit the URL that the installation script displayed when completed. Replicated automatically provisions a self-signed certificate on every installation and shows how to bypass this.
 
-On the next screen, you have the option of uploading a trusted cert and key. For this demo, let's continue with the Replicated-generated self-signed cert. Click the orange button to continue, and then Proceed Anyway in the popup.
+On the next screen, you have the option of uploading a trusted cert and key. For customer installations we recommend using a trusted cert. For this demo let's continue with the Replicated-generated self-signed cert. Click the "skip this step" button.
 
-![Console TLS](/images/guides/native/admin-console-tls.png)
+![Console TLS](/images/guides/native/admin-console-tls.png) [CHANGE THIS SCREENSHOT]
 
-Now we are on the screen that expected a license file. Until this point, this server is the same as any Replicated server. Once we put a license file on it, the server will become our test application (redis). Click the Choose License button and select your `.rli` file to continue.
+Now the installation needs a license file to continue. Until this point, this server is just running docker, kubernetes, and the Replicated containers. Once we put a license file on it the server will install our application. Click the Upload button and select your `.yaml` file to continue.
 
-![Upload License](/images/guides/native/upload-license.png)
+![Upload License](/images/guides/native/upload-license.png)  [CHANGE THIS SCREENSHOT]
 
-Because this server is on the public Internet, we should put a password on the admin console. This will prevent unauthorized changes from being applied to our test application. Go ahead and enter any password you'd like, confirm it and click Continue.
+Preflight checks are designed to ensure this server has the minimum system and software requirements to run the application. We haven't created any additional preflight checks so this is the default preflight checks. Everything should pass, so click Continue to proceed.
 
-![Secure The Console](/images/guides/native/secure-console.png)
+![Preflight Checks](/images/guides/kubernetes/preflight.png)  [CHANGE THIS SCREENSHOT]
 
-Preflight checks are designed to ensure this server has the minimum requirements and environment to run the application. We didn't choose any additional requirements when deploying the Guestbook, so this is the default Replicated requirements. Everything should pass, so click Continue to proceed.
+Finally, the settings page is here with default configuration items. These can be specified in the `config.yaml` file.
 
-![Preflight Checks](/images/guides/kubernetes/preflight.png)
+![Settings Page](/images/guides/kubernetes/settings.png) [CHANGE THIS SCREENSHOT]
 
-Finally, the settings page is here with default configuration items. These can all be changed when we deliver updates, but nothing is required.
+Click the Dashboard link on the top to see the application running. If you are still connected to this server over ssh, `kubectl get pods` will show a few pods, including the example nginx services we just deployed.
 
-![Settings Page](/images/guides/kubernetes/settings.png)
-
-Click the Dashboard link on the top to see the default, most basic Replicated installation with Kubernetes possible running. If you are still connected to this server over ssh, `kubectl get pods --all-namespaces` will show a few pods, including the Guestbook services we just deployed.
-
-![Dashboard](/images/guides/kubernetes/dashboard.png)
+![Dashboard](/images/guides/kubernetes/dashboard.png) [CHANGE THIS SCREENSHOT]
 
 On the top nav, there's a link to the /cluster page. Clicking that will show you the Kubernetes services that we just deployed.
 
