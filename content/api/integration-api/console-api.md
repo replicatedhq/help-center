@@ -101,7 +101,7 @@ $ curl -k $REPLICATED_INTEGRATIONAPI/console/v1/option?name=app.update.check.sch
 
 ### GET /console/v1/auth
 
-Retrieves the console auth type and form fields for the `POST /console/v1/auth` route.
+Retrieves the console auth type and form object to be sent as a request to the `POST /console/v1/auth` route.
 
 #### Response Status
 
@@ -114,7 +114,7 @@ Retrieves the console auth type and form fields for the `POST /console/v1/auth` 
 | Name      | Type   | Description                                                         |
 | --------- | ------ | ------------------------------------------------------------------- |
 | authType  | String | Console auth type (one of anonymous, password, ldap, ldap_advanced) |
-| form      | Object | Console auth form fields for the `POST /console/v1/auth` route      |
+| form      | Object | Console auth object to be sent to the `POST /console/v1/auth` route |
 
 #### Example
 
