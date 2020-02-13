@@ -96,7 +96,37 @@ Option value (string)
 
 ```
 $ curl -k $REPLICATED_INTEGRATIONAPI/console/v1/option?name=app.update.check.schedule
-# @every 5h
+@every 5h
+```
+
+### GET /console/v1/auth
+
+Retrieves the console auth type and form fields for the `POST /console/v1/auth` route.
+
+#### Response Status
+
+| Status | Description |
+| ------ | ----------- |
+| 200    | Success     |
+
+#### Response body
+
+| Name      | Type   | Description                                                         |
+| --------- | ------ | ------------------------------------------------------------------- |
+| authType  | String | Console auth type (one of anonymous, password, ldap, ldap_advanced) |
+| form      | Object | Console auth form fields for the `POST /console/v1/auth` route      |
+
+#### Example
+
+```
+$ curl -k $REPLICATED_INTEGRATIONAPI/console/v1/auth | jq
+{
+  "authType": "ldap",
+  "form": {
+    "password": "",
+    "username": ""
+  }
+}
 ```
 
 ### POST /console/v1/auth
@@ -121,3 +151,13 @@ Authenticates against the console authentication settings.
 #### Response body
 
 no content
+
+#### Example
+
+```
+$ curl -ik -X POST -H 'content-type:application/json' $REPLICATED_INTEGRATIONAPI/console/v1/auth -d '{"password":"mysupersecretpassword"}'
+HTTP/2 200
+content-type: text/plain; charset=utf-8
+date: Thu, 13 Feb 2020 00:38:40 GMT
+content-length: 0
+```
