@@ -18,7 +18,13 @@ sudo bash ./install.sh
 
 If an upgrade of Kubernetes is required, the script will begin the upgrade and prompt to run upgrade scripts on each node in the cluster.
 When upgrading only the Replicated version, the install script will be required to be re-run on only the master.
-Applications will have a few minutes of downtime when Kubernetes upgrades are performed.
+Because not all nodes are upgraded at the same time, application developers can ensure that downtime is minimized or eliminated.
+This can be achieved by ensuring that multiple replicas of a deployment/statefulset are not scheduled on the same node (via pod anti-affinity rules) and also by setting [pod disruption budgets](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/#pdb-example) to ensure that the minimum number of replicas required for the application to function are always running. 
+There are networking considerations as well.
+While a node is being upgraded it will not be able to properly route network connections.
+This should be handled by load balancers or application level failover.
+
+For a single-node 'cluster', downtime when upgrading Kubernetes is unfortunately unavoidable.
 
 ## Upgrading Airgap Installs
 Airgap installations can be upgraded by downloading a newer version of the Replicated release, uncompressing it and re-running the install script using the airgap flag.  The latest Replicated release can be found at
