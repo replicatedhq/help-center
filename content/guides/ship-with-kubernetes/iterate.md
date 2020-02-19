@@ -14,40 +14,36 @@ icon: "replicatedKubernetes"
 
 This guide will walk you through making a change and delivering an update to an application after it's been deployed. It's assumed you have the environment from parts 1 and 2 of this guide ([creating a release](../create-release) and [installing](../install)). If you haven't completed these guides, head back and finish them first.
 
-Now that we have a Kubernetes cluster running, a common task is to deliver updates. The default Kubernetes example we used isn't using the standard Redis image from Docker Hub. Let's update this application to use it.
+Now that we have a Kubernetes cluster running, a common task is to deliver updates. Let's change the number of nginx replicas to show how to deliver an update.
 
 {{< linked_headline "Create a New Release" >}}
 
-On the Releases page of the [Vendor Portal](https://vendor.replicated.com), click the Create Release link on top. Once again, you'll be taken to a YAML editor that shows the contents of the most recently created release. This gives us everything we've done so far, and our task now is to only write the changes needed to update Redis.
+On the Releases page of the [Vendor Portal](https://vendor.replicated.com), click the Create Release link on top. Once again, you'll be taken to a YAML editor that shows the contents of the most recently created release. This gives us everything we've done so far, and our task now is to only write the changes needed to increase the number of nginx replicas.
 
-{{< linked_headline "Change Redis Tag" >}}
+{{< linked_headline "Change Nginx Replicas" >}}
 
-In the release YAML, find the redis image to change. The line in the YAML looks like:
-
-```yaml
-image: k8s.gcr.io/redis:e2e  # or just image: redis
-```
-
-To change this to a known, official Redis image:
+In the release YAML, find the nginx image to change. The line is in the `deployment.yaml` file and looks like:
 
 ```yaml
-image: redis:3.2.11
+replicas: 1
 ```
 
-Just replace the `k8s.gcr.io` reference with the `redis` reference to continue.
+Change the number to `2` or more and that is all you have to do. For there to be a new release there needs to be some change, no matter now small.
 
-{{< linked_headline "Save and Promote The Release" >}}
+{{< linked_headline "Save and Promote the Release" >}}
 
-Following the same process we did before, click the Save Release button, go back one screen and click Promote. Choose the Unstable branch again to promote release 2 to this branch. That's all that's needed to deliver an update to a channel. Now, any license installed from the "Unstable" channel will start with this new release, and any installation already running will be prompted to update to the new release.
+Following the same process we did before, click the Save Release button, go back one screen and click Promote next to the newly created Sequence 2. Choose the Unstable branch again to promote this new release. That's all that's needed to deliver an update to a channel. Now, any license installed from the "Unstable" channel will start with this new release, and any installation already running will be prompted to update to the new release.
 
 {{< linked_headline "Update the Test Server" >}}
 
-To install and test this new release, we need to connect to the Admin Console dashboard on port :8800 using a web browser. At this point, it will likely show that our test application is Up To Date and that No Updates Are Available. Replicated will periodically check for new updates and this message will change. But we can force Replicated to check now and not wait for the next interval.
+To install and test this new release, we need to connect to the Admin Console dashboard on port :8800 using a web browser. At this point, it will likely show that our test application is Up To Date and that No Updates Are Available. Replicated will  check for new updates about every five hours but we can force Replicated to check now and not wait for the next interval.
 
-Click on the Check Now button. A popup should appear stating that there's an update available with a single button titled "View Update".
+In the Application or Version History tab click on the Check For Updates button. On the version history page the faded "Deployed" button should become active and say "Deploy." In addition it should say how many files were changed and how many lines are different. You can click on that to view what has changed in the yaml.
 
-![View Update](/images/guides/native/view-update.png)
 
-Click the View Update button and the Admin Console will show the release history of your application, including the new release we just promoted. Clicking the Install Update button on this still will apply the new YAML which will change the Redis image. When it's finished, navigate back to the dashboard and you should see that the application is up to date again.
+![View Update](/images/guides/kubernetes/view-update.png)
+[CHANGE THIS]
+
+Clicking the Deploy button will apply the new YAML which will change the number of nginx replicas. This should only take a few seconds to deploy.
 
 Next, head to the [Kubernetes scheduler documentation](/docs/kubernetes/getting-started) to learn how to prepare your application to deploy on Replicated with Kubernetes.
