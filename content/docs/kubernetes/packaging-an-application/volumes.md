@@ -84,6 +84,15 @@ spec:
 When mounting a subdirectory as shown in the example above, you must add the path you are mounting to `kubernetes.shared_fs.mount_paths`.
 Paths within the shared filesystem can be included in snapshots by adding them to the [backup](/docs/snapshots/kubernetes/) section of your yaml.
 
+{{< linked_headline "Shared Filesystem InitContainer" >}}
+
+Replicated injects an initContainer into any pods that mount the shared filesystem to verify the mount succeeded.
+This will be the first initContainer in the pod.
+This container will cause the pod to enter the state Init:CrashLoopBackoff in case of a failed mount.
+This will prevent the application from losing data by inadvertently writing to the ephemeral container filesystem instead of the shared filesystem.
+When a pod is found in this state, it should be force deleted with `kubectl -n <namespace> delete pod <pod> --force --grace-period=0`.
+This will cause kubelet to rebuild the pod sandbox and retry the mount.
+
 {{< linked_headline "Resources" >}}
 
 For more information on using Persistent Volumes with Kubernetes, see the [Kubernetes Documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/).
