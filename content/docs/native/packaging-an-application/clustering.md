@@ -64,6 +64,8 @@ components:
 
 In the example above at least 2 hosts are required. 3 instances of the freighter/worker container will be started on each of these 2 hosts.
 
+NOTE: When `cluster_instance_count.initial` is greater than one and a [`port.public_port`](/docs/native/packaging-an-application/ports-and-networking/) is exposed explicitly on the host, Replicated will bind the full range of ports from `port.public_port` to `port.public_port + (cluster_instance_count.initial - 1)`. The [ContainerExposedPortAll](/docs/native/packaging-an-application/template-functions/#containerexposedportall) template function can be used to access the list of ports exposed on the host.
+
 {{< linked_headline "Templates" >}}
 
 The cluster property for both components and containers can be templated. The template function must be parsable as a boolean. In addition, each of the properties of *cluster_host_count* and *cluster_instance_count* can be templated. In this case the template function must be parsable as an unsigned integer. This was introduced in Replicated {{< version version="2.8.0" >}}.
