@@ -25,6 +25,10 @@ For online installs, images required for running Replicated and your application
 Airgap installs require that a copy of every image be imported to Docker under `/var/lib/docker` on the master node and a separate copy to Replicated's local registry, also on the master node.
 Unpacking your application airgap bundle will require five times as much storage space as the size of the bundle download.
 
+{{< linked_headline "Replicated Ephemeral Data" >}}
+
+Replicated containers will mount the directory `/opt/replicated/data` from the host for all temporary data needs. Replicated requires that this directory has a sufficient amount of disk space (10 GB for online and 50 GB for airgapped installations).
+
 {{< linked_headline "Preventing Disk Shortages" >}}
 
 Customers that provide insufficient disk space will see `DiskPressure` warnings on the Clusters page of the Replicated Admin UI and in the output of `kubectl get nodes`.
