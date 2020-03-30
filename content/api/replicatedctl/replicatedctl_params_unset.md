@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_params_unset
 categories:
 - replicatedctl
-date: "2019-07-31T18:16:51-07:00"
+date: "2020-03-30T08:05:16-07:00"
 description: Unsets a runtime overridden Replicated daemon parameter value
 gradient: purpleToPink
 index: docs
@@ -26,7 +26,9 @@ replicatedctl params unset KEY [flags]
 ### Examples
 
 ```
-replicatedctl params unset AppUpdateCheckSchedule
+
+  # Unset a single overridden parameter
+  replicatedctl params unset AppUpdateCheckSchedule
 ```
 
 ### Options

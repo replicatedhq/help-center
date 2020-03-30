@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-config_set
 categories:
 - replicatedctl
-date: "2019-07-31T18:16:51-07:00"
+date: "2020-03-30T08:05:16-07:00"
 description: Sets an individual app config value
 gradient: purpleToPink
 index: docs
@@ -28,6 +28,7 @@ replicatedctl app-config set NAME [flags]
 ```
       --data stringArray    Sets the item data
   -h, --help                help for set
+      --skip-validation     Save without validating
       --value stringArray   Sets the item value
 ```
 

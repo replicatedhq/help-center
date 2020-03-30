@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_params_export
 categories:
 - replicatedctl
-date: "2019-07-31T18:16:51-07:00"
+date: "2020-03-30T08:05:16-07:00"
 description: Export Replicated daemon parameters to stdout
 gradient: purpleToPink
 index: docs
@@ -26,8 +26,12 @@ replicatedctl params export [flags]
 ### Examples
 
 ```
-replicatedctl params export --output yaml > params.yaml
-replicatedctl params export --template '{{.AppUpdateCheckSchedule}}'
+
+  # Export all params to a file
+  replicatedctl params export --output yaml > params.yaml
+
+  # Output a single param
+  replicatedctl params export --template '{{.AppUpdateCheckSchedule}}'
 ```
 
 ### Options

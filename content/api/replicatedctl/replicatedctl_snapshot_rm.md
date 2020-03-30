@@ -1,34 +1,32 @@
 ---
 aliases:
-- docs/reference/replicatedctl/replicatedctl_snapshot_start
+- docs/reference/replicatedctl/replicatedctl_snapshot_rm
 categories:
 - replicatedctl
 date: "2020-03-30T08:05:16-07:00"
-description: Start a snapshot
+description: Remove snapshot
 gradient: purpleToPink
 index: docs
-title: replicatedctl snapshot start
+title: replicatedctl snapshot rm
 weight: "551"
 ---
 
-## replicatedctl snapshot start
+## replicatedctl snapshot rm
 
-Start a snapshot
+Remove snapshot
 
 ### Synopsis
 
-Start a snapshot
+Remove snapshot
 
 ```
-replicatedctl snapshot start [flags]
+replicatedctl snapshot rm ID [flags]
 ```
 
 ### Options
 
 ```
-      --exclude-app-data   Only backup Replicated data and exclude app data
-  -h, --help               help for start
-      --wait               Block until snapshot is complete
+  -h, --help   help for rm
 ```
 
 ### Options inherited from parent commands

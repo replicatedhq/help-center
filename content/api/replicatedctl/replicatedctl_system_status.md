@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_system_status
 categories:
 - replicatedctl
-date: "2019-07-31T18:16:51-07:00"
+date: "2020-03-30T08:05:16-07:00"
 description: Gets the Replicated system status
 gradient: purpleToPink
 index: docs
@@ -26,8 +26,12 @@ replicatedctl system status [flags]
 ### Examples
 
 ```
-replicatedctl system status --template '{{.SystemStatus}}'
-replicatedctl system status -q
+
+  # Output only system statuses
+  replicatedctl system status --template '{{.SystemStatus}}'
+
+  # Output the max system status from all statuses, failed > initializing > ready
+  replicatedctl system status -q
 ```
 
 ### Options

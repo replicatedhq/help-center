@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_params_set
 categories:
 - replicatedctl
-date: "2019-07-31T18:16:51-07:00"
+date: "2020-03-30T08:05:16-07:00"
 description: Sets an individual Replicated daemon parameter value
 gradient: purpleToPink
 index: docs
@@ -26,7 +26,9 @@ replicatedctl params set KEY [flags]
 ### Examples
 
 ```
-replicatedctl params set AppUpdateCheckSchedule --value '@every 5h'
+
+  # Override a single parameter with value
+  replicatedctl params set AppUpdateCheckSchedule --value '@every 5h'
 ```
 
 ### Options

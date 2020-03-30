@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_terms_inspect
 categories:
 - replicatedctl
-date: "2019-07-31T18:16:51-07:00"
+date: "2020-03-30T08:05:16-07:00"
 description: Gets the terms of service
 gradient: purpleToPink
 index: docs
@@ -26,8 +26,12 @@ replicatedctl terms inspect [flags]
 ### Examples
 
 ```
-replicatedctl terms inspect --template '{{.Markdown}}'
-replicatedctl terms inspect -q
+
+  # Output the terms markdown
+  replicatedctl terms inspect --template '{{.Markdown}}'
+
+  # Output true or false if the terms have been accepted
+  replicatedctl terms inspect -q
 ```
 
 ### Options

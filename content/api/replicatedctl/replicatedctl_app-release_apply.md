@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_app-release_apply
 categories:
 - replicatedctl
-date: "2019-07-31T18:16:51-07:00"
+date: "2020-03-30T08:05:16-07:00"
 description: Applies pending app releases
 gradient: purpleToPink
 index: docs
@@ -31,7 +31,7 @@ replicatedctl app-release apply [flags]
   -h, --help                 help for apply
   -q, --quiet                Only display task ID
       --raw                  Raw JSON stream
-      --sequence int         Apply releases up to and including specified sequence (0 for all)
+      --sequence string      Apply releases up to and including specified sequence. Leave empty for all.
       --template string      Format the output using the given Go template
 ```
 
