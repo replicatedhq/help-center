@@ -50,6 +50,5 @@ Manage snapshots
 * [replicatedctl snapshot list-files](/api/replicatedctl/replicatedctl_snapshot_list-files/)	 - List snapshot files
 * [replicatedctl snapshot ls](/api/replicatedctl/replicatedctl_snapshot_ls/)	 - List snapshots
 * [replicatedctl snapshot restore](/api/replicatedctl/replicatedctl_snapshot_restore/)	 - Restore installation from the specified snapshot
-* [replicatedctl snapshot rm](/api/replicatedctl/replicatedctl_snapshot_rm/)	 - Remove snapshot
 * [replicatedctl snapshot start](/api/replicatedctl/replicatedctl_snapshot_start/)	 - Start a snapshot
 
