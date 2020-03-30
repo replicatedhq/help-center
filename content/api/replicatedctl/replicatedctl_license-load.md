@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_license-load
 categories:
 - replicatedctl
-date: "2019-07-31T18:16:51-07:00"
+date: "2020-03-30T08:05:16-07:00"
 description: Load the license from stdin
 gradient: purpleToPink
 index: docs
@@ -21,6 +21,17 @@ Load the license from stdin
 
 ```
 replicatedctl license-load [flags]
+```
+
+### Examples
+
+```
+
+  # Load an online license
+  replicatedctl license-load < /home/ubuntu/license.rli
+
+  # Load an airgapped license
+  replicatedctl license-load --airgap-package /home/ubuntu/bundle.airgap < /home/ubuntu/license.rli
 ```
 
 ### Options

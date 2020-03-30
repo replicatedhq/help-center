@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_preflight_dismiss
 categories:
 - replicatedctl
-date: "2019-07-31T18:16:51-07:00"
+date: "2020-03-30T08:05:16-07:00"
 description: Dismiss preflight check warnings
 gradient: purpleToPink
 index: docs
