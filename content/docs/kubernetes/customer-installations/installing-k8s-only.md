@@ -11,7 +11,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-The Replicated installation script can be used to install Docker and Kubernetes in an airgapped environment, and not install Replicated to the cluster. This is useful when you want to use another method to distribute your application, such as [Kots](https://kots.io).
+The Replicated installation script can be used to install Docker and Kubernetes in an airgapped environment, and not install Replicated to the cluster. This is useful when you want to use another method to distribute your application, such as [Kots](https://kots.io/kotsadm).
 
 {{< linked_headline "Basic install (recommended):" >}}
 
