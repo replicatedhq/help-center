@@ -64,7 +64,7 @@ The install script can take flags to help your customers with specialized enterp
 | ha | Installs Replicated in ["high availability"](/docs/kubernetes/customer-installations/high-availability/) mode. The script will prompt for a load balancer address if not specified in the `load-balancer-address` flag. |
 | load-balancer-address | Installs Replicated in ["high availability"](/docs/kubernetes/customer-installations/high-availability/) mode with the load balancer address specified as the control plane endpoint. |
 | unsafe-skip-ca-verification | Disable CA public key verification (kubernetes only) |
-| kubernetes-only | Only install Kubernetes - don't install Replicated. See the 'installing Kubernetes only' [page](docs/kubernetes/customer-installations/installing-k8s-only/). |
+| kubernetes-only | Only install Kubernetes - don't install Replicated. See the 'installing Kubernetes only' [page](/docs/kubernetes/customer-installations/installing-k8s-only/). |
 
 Example quick install with flags:
 
