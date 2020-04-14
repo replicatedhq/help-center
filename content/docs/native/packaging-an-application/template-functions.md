@@ -153,7 +153,7 @@ env_vars:
 
 {{< template_function name="ContainerExposedPortAll" >}}
 ```go
-func ContainerExposedPortAll(componentName string, imageName string, internalPort string) string
+func ContainerExposedPortAll(componentName string, imageName string, internalPort string) []string
 ```
 Returns the node public port mapped to the supplied exposed container port for all instances of a given Component as an array of strings.
 
