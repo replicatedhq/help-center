@@ -1,10 +1,26 @@
   <div class="search u-gradient--redToRed main-section">
     <div class="container">
-      <h1 class="u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--center">Help Center</h1>
+      <div class="hero u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--center">
+        <img src="{{ .Site.BaseURL }}images/lifebuoy.svg" width="50" style="vertical-align: middle; margin-right: 15px;"/> 
+        <h1 style="display: inline;">Replicated Help Center</h1>
+      </div>
       <div class="search-wrapper">
         <div class="paddingContainer">
           <div class="input-wrap u-position--relative">
             <input type="text" class="search-box Input" id="autocompletesearch-box" placeholder="Search support topics, questions, etc…" />
+          </div>
+        </div>
+      </div>
+      <div class="kots-doc-wrapper">
+        <div class="search-wrapper kots-doc">
+          <div style="flex-grow: 1">
+            <img src="{{ .Site.BaseURL }}images/kots-doc.svg" width="50" class="kots-doc-icon" />
+          </div>
+          <div style="flex-grow: 4">
+            <span class="u-fontWeight--bold u-fontSize--largest u-color--tuna">Looking for</span> 
+            <span class="pad-top-25"><img src="{{ .Site.BaseURL }}images/kots.svg" width="50" style="margin: 0 5px;"/></span>
+            <span class="u-fontWeight--bold u-fontSize--largest u-color--tuna">documentation?</span>
+            <p class="margin-top-10">Head over to <strong><a href="https://kots.io/vendor">https://kots.io/vendor</a></strong> to get started.</p>
           </div>
         </div>
       </div>
