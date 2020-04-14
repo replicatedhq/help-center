@@ -1,5 +1,5 @@
 .search.main-section {
-  min-height: 490px;
+  min-height: 520px;
 }
 .search-wrapper {
   width: 100%;
@@ -157,6 +157,11 @@
   min-height: 70px; 
 }
 
+.kots-doc a, .kots-doc-a:visited {
+  color: #326DE6;
+  text-decoration: underline;
+}
+
 .kots-doc-icon {
   vertical-align: middle; 
   margin-right: 15px;
@@ -164,14 +169,21 @@
 
 @media screen and (max-width: 900px) {
   .kots-doc {
-    width: 65% !important; 
-    min-height: 80px !important; 
+    width: 55% !important; 
+    min-height: 60px !important;
+    padding-bottom: 30px;
+  }
+  .kots-doc-wrapper {
+    margin: 40px 0 80px 0;
   }
 }
 
 @media screen and (max-width: 600px) {
   .kots-doc {
-    width: 85% !important; 
-    min-height: 90px !important; 
+    width: 83% !important; 
+    padding-bottom: 30px; 
+  }
+  .kots-doc-wrapper {
+    margin: 40px 0 70px 0;
   }
 }
