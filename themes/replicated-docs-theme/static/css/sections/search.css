@@ -151,7 +151,7 @@
   border-radius: 10px; 
   border-bottom: 4px solid rgb(172, 41, 41); 
   width: 50%; 
-  padding:20px 0 0 30px;
+  padding:20px 10px 0 30px;
   display: flex; 
   justify-content: center; 
   min-height: 70px; 
@@ -160,4 +160,18 @@
 .kots-doc-icon {
   vertical-align: middle; 
   margin-right: 15px;
+}
+
+@media screen and (max-width: 900px) {
+  .kots-doc {
+    width: 65% !important; 
+    min-height: 80px !important; 
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .kots-doc {
+    width: 85% !important; 
+    min-height: 90px !important; 
+  }
 }
