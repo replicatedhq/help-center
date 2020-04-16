@@ -1,3 +1,3 @@
 ---
-title: "Help Center"
+title: "Replicated Help Center"
 ---

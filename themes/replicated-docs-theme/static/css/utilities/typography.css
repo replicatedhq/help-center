@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 /* Font sizes */
 
 .u-fontSize--small   { font-size: 12px; }
 .u-fontSize--normal  { font-size: 14px; }
 .u-fontSize--large   { font-size: 16px; }
 .u-fontSize--larger  { font-size: 18px; }
-.u-fontSize--largest { font-size: 20px; }
-.u-fontSize--jumbo   { font-size: 24px; }
-.u-fontSize--header  { font-size: 32px; }
+.u-fontSize--largest { font-size: 20px; font-family: 'Montserrat', sans-serif; }
+.u-fontSize--jumbo   { font-size: 24px; font-family: 'Montserrat', sans-serif; }
+.u-fontSize--header  { font-size: 32px; font-family: 'Montserrat', sans-serif; }
 
 /* Line height */
 

@@ -1,9 +1,5 @@
 .search.main-section {
-  min-height: 250px;
-}
-.search.main-section h1 {
-  margin-top: 50px;
-  margin-bottom: 30px;
+  min-height: 520px;
 }
 .search-wrapper {
   width: 100%;
@@ -12,7 +8,8 @@
 }
 .search-wrapper input {
   width: 100%;
-  padding: 0 15px 0 40px;
+  padding: 0 15px 0 70px;
+  font-size: 22px;
 }
 .search-wrapper input:focus {
   border-color: #863333;
@@ -128,7 +125,7 @@
 
 .search-box {
   width: 100%;
-  height: 40px;
+  height: 70px;
   max-width: 100%;
 }
 .input-wrap::before {
@@ -140,7 +137,55 @@
   background-position: -71px -175px;
   width: 20px;
   height: 20px;
-  top: 10px;
-  left: 10px;
+  top: 25px;
+  left: 25px;
   z-index: 2;
+}
+
+/* Kots Documentation notice */
+
+.kots-doc-wrapper {
+  margin: 30px 0;
+}
+
+.kots-doc {
+  background: rgb(255, 255, 255, 85%); 
+  border-radius: 10px; 
+  border-bottom: 4px solid rgb(172, 41, 41); 
+  width: 48%; 
+  padding:20px 10px 0 30px;
+  display: flex; 
+  justify-content: center; 
+  padding-bottom: 30px;
+}
+
+.kots-doc a, .kots-doc-a:visited {
+  color: #326DE6;
+  text-decoration: underline;
+}
+
+.kots-doc-icon {
+  vertical-align: middle; 
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 900px) {
+  .kots-doc {
+    width: 55% !important; 
+    min-height: 60px !important;
+    padding-bottom: 30px;
+  }
+  .kots-doc-wrapper {
+    margin: 40px 0 100px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .kots-doc {
+    width: 83% !important; 
+    padding-bottom: 30px; 
+  }
+  .kots-doc-wrapper {
+    margin: 40px 0 100px 0;
+  }
 }

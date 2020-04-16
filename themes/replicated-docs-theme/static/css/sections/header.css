@@ -3,8 +3,18 @@ nav {
   padding: 15px 0 13px;
   position: fixed;
   width: 100%;
-  top: 0;
+  top: 50px;
   z-index: 200;
+}
+
+@media screen and (max-width: 544px) {
+  nav {
+    top: 81px;
+  }
+
+  .hero {
+    margin-top: 120px;
+  }
 }
 
 nav ul li {

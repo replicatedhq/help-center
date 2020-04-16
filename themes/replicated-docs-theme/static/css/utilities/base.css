@@ -39,6 +39,7 @@ pre code {
   max-width: 1040px;
   margin: 0 auto;
 }
+
 .paddingContainer {
   padding: 0 20px;
 }
@@ -46,6 +47,86 @@ pre code {
   padding: 30px 20px 60px;
   max-width: 560px;
   margin: 0 auto;
+}
+
+.hero {
+  margin: 100px 0 50px 0 !important;
+}
+
+/* Suite Banner */
+
+.banner-flex {
+  display: flex;
+}
+
+.suite-banner {
+  padding: 0 30px 17px 30px;
+  background-color: transparent;
+  color: #ffffff;
+  position: absolute;
+  width: 93%;
+  z-index: 500;
+}
+
+.suite-banner p {
+  padding-top: 17px;
+}
+
+.suite-banner .repl-logo-white {
+  width: 83px;
+  height: 20px;
+  margin-right: 20px;
+  margin-top: 13px;
+  background-image: url("../../images/repl-white.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.suite-banner a {
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.suite-banner .banner-arrow {
+  position: relative;
+  margin-left: 6px;
+  top: 2px;
+  right: 0;
+  width: 6px;
+  height: 11px;
+  background-image: url("../../images/banner-arrow.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.suite-banner a.banner-arrow:hover .banner-arrow {
+  right: -4px;
+}
+
+.pull-right {
+  right: 0;
+  position: absolute; 
+}
+
+@media screen and (max-width: 900px) {
+
+  .pull-right {
+    display: block !important;
+    position: inherit !important; 
+    right: 0 !important;
+  }
+
+  .banner-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .main-section {
@@ -58,6 +139,14 @@ pre code {
   margin: 0 auto;
   width: 100%;
   max-width: 600px;
+}
+
+.pad-top-25 {
+  padding-top: 25px;
+}
+
+.margin-top-10 {
+  margin-top: 10px;
 }
 
 input::-webkit-input-placeholder,
