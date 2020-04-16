@@ -28,6 +28,15 @@ The load balancer can be reconfigured later by rerunning the init script on one 
 
 Once Replicated is installed on the first master, it is possible to add additional master nodes. On the Cluster page on the On-Prem Console an "Add Node" button will be visible with the option to generate a script to add an additional master or worker node. Additionally, the master node join script can be generated using the CLI command [`replicatedctl cluster node-join-script --master`](https://help.replicated.com/api/replicatedctl/replicatedctl_cluster_node-join-script/).
 
+{{< linked_headline "Control Plane Node Isolation" >}}
+
+On a standard HA cluster, application Pods will run on master nodes, alongside the control plane, as well as worker nodes. An additional flag `taint-control-plane` has been provided to prevent Pods from running on master nodes. This will add the `node-role.kubernetes.io/master: NoSchedule` taint to all master nodes. In this configuration, is it necessary to add worker nodes before the application can be scheduled.
+
+```shell
+curl -sSL -o install.sh  https://get.replicated.com/kubernetes-init
+sudo bash ./install.sh ha taint-control-plane
+```
+
 ![Add Node Script](/images/post-screens/add-node-k8s-master.png)
 
 {{< linked_headline "Loss of Node" >}}
