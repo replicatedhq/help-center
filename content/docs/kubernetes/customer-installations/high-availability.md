@@ -30,6 +30,15 @@ Once Replicated is installed on the first master, it is possible to add addition
 
 ![Add Node Script](/images/post-screens/add-node-k8s-master.png)
 
+{{< linked_headline "Control Plane Node Isolation" >}}
+
+On a standard HA cluster application Pods will run on master nodes as well as worker nodes. An additional flag `taint-control-plane` has been provided to prevent Pods from running on master nodes alongside the control plane. This will add the `node-role.kubernetes.io/master: NoSchedule` taint to all master nodes. In this configuration, it is necessary to add worker nodes before the application can be scheduled.
+
+```shell
+curl -sSL -o install.sh  https://get.replicated.com/kubernetes-init
+sudo bash ./install.sh ha taint-control-plane
+```
+
 {{< linked_headline "Loss of Node" >}}
 
 When a node is unavailable for one hour, Replicated will automatically purge the node when running in HA mode.
