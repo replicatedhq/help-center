@@ -1,7 +1,7 @@
 ---
 categories:
 - support-bundle-yaml-specs
-date: 2018-01-17T23:51:55Z
+date: 2019-05-07T12:00:00Z
 description: Collect the stdout/stderr logs from one or more docker containers. One of `container` or `container_list_options` is required.
 index: docs
 title: docker.container-logs
@@ -10,6 +10,8 @@ gradient: "purpleToPink"
 ---
 
 ## docker.container-logs
+
+**type object**
 
 Collect the stdout/stderr logs from one or more docker containers. One of `container` or `container_list_options` is required.
 

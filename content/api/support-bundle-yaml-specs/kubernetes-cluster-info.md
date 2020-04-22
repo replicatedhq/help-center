@@ -1,7 +1,7 @@
 ---
 categories:
 - support-bundle-yaml-specs
-date: 2018-01-17T23:51:55Z
+date: 2019-05-07T12:00:00Z
 description: Get the Kubernetes cluster info
 index: docs
 title: kubernetes.cluster-info
@@ -10,6 +10,8 @@ gradient: "purpleToPink"
 ---
 
 ## kubernetes.cluster-info
+
+**type object**
 
 Get the Kubernetes cluster info
 

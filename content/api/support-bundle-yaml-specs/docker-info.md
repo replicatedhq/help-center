@@ -1,7 +1,7 @@
 ---
 categories:
 - support-bundle-yaml-specs
-date: 2018-01-17T23:51:55Z
+date: 2019-05-07T12:00:00Z
 description: Collect info about the Docker daemon
 index: docs
 title: docker.info
@@ -10,6 +10,8 @@ gradient: "purpleToPink"
 ---
 
 ## docker.info
+
+**type object**
 
 Collect info about the Docker daemon
 

@@ -51,3 +51,4 @@ analyze:
 
 
 - `selector` - Selector to reference the meta.labels of a collect spec
+

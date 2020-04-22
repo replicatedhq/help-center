@@ -1,7 +1,7 @@
 ---
 categories:
 - support-bundle-yaml-specs
-date: 2018-01-17T23:51:55Z
+date: 2019-05-07T12:00:00Z
 description: Collect the stdout/stderr of executing a command in an already running docker container
 index: docs
 title: docker.exec
@@ -10,6 +10,8 @@ gradient: "purpleToPink"
 ---
 
 ## docker.exec
+
+**type object**
 
 Collect the stdout/stderr of executing a command in an already running docker container
 

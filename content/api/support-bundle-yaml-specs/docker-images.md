@@ -1,7 +1,7 @@
 ---
 categories:
 - support-bundle-yaml-specs
-date: 2018-01-17T23:51:55Z
+date: 2019-05-07T12:00:00Z
 description: Collect a list of docker images present on the server
 index: docs
 title: docker.images
@@ -10,6 +10,8 @@ gradient: "purpleToPink"
 ---
 
 ## docker.images
+
+**type object**
 
 Collect a list of docker images present on the server
 

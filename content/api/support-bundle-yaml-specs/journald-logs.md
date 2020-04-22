@@ -1,7 +1,7 @@
 ---
 categories:
 - support-bundle-yaml-specs
-date: 2018-01-17T23:51:55Z
+date: 2019-05-07T12:00:00Z
 description: Collect logs from journald
 index: docs
 title: journald.logs
@@ -10,6 +10,8 @@ gradient: "purpleToPink"
 ---
 
 ## journald.logs
+
+**type object**
 
 Collect logs from journald
 
