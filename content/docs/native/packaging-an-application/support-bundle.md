@@ -84,6 +84,7 @@ By default the Support Bundle will include the following files in the master fol
 | /default/journald/docker/logs.raw                                | The Docker Journald logs                                                                                                                        |
 | /default/os-release/os-release                                   | Operating system identification data. A copy of the `/etc/os-release` file                                                                      |
 | /default/proc/cpuinfo                                            | Information about the processor, such as its type, make, model, and performance. A copy of the `/proc/cpuinfo` file                             |
+| /default/proc/loadavg                                            | The system load average. A copy of the `/proc/loadavg` file                                                                              |
 | /default/proc/meminfo                                            | Information about memory usage, both physical and swap. A copy of the `/proc/meminfo` file                                                      |
 | /default/proc/mounts                                             | Mounted filesystems. A copy of the `/proc/mounts` file                                                                                          |
 | /default/proc/uptime                                             | The time the system has been up. A copy of the `/proc/uptime` file                                                                              |
@@ -156,6 +157,7 @@ the private IP of the instance. It will contain the following files:
 | /default/etc/timezone                                            | The system's timezone. A copy of the `/etc/timezone` file                                                                                       |
 | /default/os-release/os-release                                   | Operating system identification data. A copy of the `/etc/os-release` file                                                                      |
 | /default/proc/cpuinfo                                            | Information about the processor, such as its type, make, model, and performance. A copy of the `/proc/cpuinfo` file                             |
+| /default/proc/loadavg                                            | The system load average. A copy of the `/proc/loadavg` file                                                                              |
 | /default/proc/meminfo                                            | Information about memory usage, both physical and swap. A copy of the `/proc/meminfo` file                                                      |
 | /default/proc/mounts                                             | Mounted filesystems. A copy of the `/proc/mounts` file                                                                                          |
 | /default/proc/uptime                                             | The time the system has been up. A copy of the `/proc/uptime` file                                                                              |

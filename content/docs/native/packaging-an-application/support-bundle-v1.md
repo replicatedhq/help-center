@@ -78,6 +78,7 @@ By default the Support Bundle V1 will include the following files:
 | /daemon/journald/replicated-operator.log | Result of the command `journalctl -u replicated-operator` file. Journald replicated-operator logs. |
 | /daemon/journald/replicated-ui.log | Result of the command `journalctl -u replicated-ui` file. Journald replicated-ui logs. |
 | /daemon/proc/cpuinfo | A copy of the `/proc/cpuinfo` file. Information about the processor, such as its type, make, model, and performance. |
+| /daemon/proc/loadavg | The system load average. A copy of the `/proc/loadavg` file |
 | /daemon/proc/meminfo | A copy of the `/proc/meminfo` file. Information about memory usage, both physical and swap. |
 | /daemon/proc/mounts | A copy of the `/proc/mounts` file. Mounted filesystems. |
 | /daemon/proc/uptime | A copy of the `/proc/uptime` file. The time the system has been up. |
