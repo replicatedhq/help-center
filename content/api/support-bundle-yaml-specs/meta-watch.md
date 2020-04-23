@@ -2,32 +2,19 @@
 categories:
 - support-bundle-yaml-specs
 date: 2019-05-07T12:00:00Z
-description: Get the version of the docker server
+description: 
 index: docs
-title: docker.version
+title: meta.watch
 weight: "100"
 gradient: "purpleToPink"
 ---
 
-## docker.version
+## meta.watch
 
 **type object**
 
-Get the version of the docker server
 
 
-```yaml
-collect:
-  v1:
-    - docker.version:
-        output_dir: /docker/version
-```
-
-
-### Outputs
-
-    
-- `docker_version.json` - JSON output
 
 
 <br>

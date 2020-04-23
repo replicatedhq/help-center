@@ -1,7 +1,7 @@
 ---
 categories:
 - support-bundle-yaml-specs
-date: 2018-01-17T23:51:55Z
+date: 2019-05-07T12:00:00Z
 description: Collect information about the response from making an HTTP request
 index: docs
 title: os.http-request
@@ -10,6 +10,8 @@ gradient: "purpleToPink"
 ---
 
 ## os.http-request
+
+**type object**
 
 Collect information about the response from making an HTTP request
 

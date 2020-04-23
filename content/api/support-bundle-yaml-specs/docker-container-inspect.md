@@ -1,7 +1,7 @@
 ---
 categories:
 - support-bundle-yaml-specs
-date: 2018-01-17T23:51:55Z
+date: 2019-05-07T12:00:00Z
 description: Collect the `docker inspect` output for one or more running or stopped containers. One of `container` or `container_list_options` is required.
 index: docs
 title: docker.container-inspect
@@ -10,6 +10,8 @@ gradient: "purpleToPink"
 ---
 
 ## docker.container-inspect
+
+**type object**
 
 Collect the `docker inspect` output for one or more running or stopped containers. One of `container` or `container_list_options` is required.
 

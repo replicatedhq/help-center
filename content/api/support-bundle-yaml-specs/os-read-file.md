@@ -1,7 +1,7 @@
 ---
 categories:
 - support-bundle-yaml-specs
-date: 2018-01-17T23:51:55Z
+date: 2019-05-07T12:00:00Z
 description: Read a file or a directory from the filesystem
 index: docs
 title: os.read-file
@@ -10,6 +10,8 @@ gradient: "purpleToPink"
 ---
 
 ## os.read-file
+
+**type object**
 
 Read a file or a directory from the filesystem
 

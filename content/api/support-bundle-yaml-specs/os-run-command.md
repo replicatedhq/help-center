@@ -1,7 +1,7 @@
 ---
 categories:
 - support-bundle-yaml-specs
-date: 2018-01-17T23:51:55Z
+date: 2019-05-07T12:00:00Z
 description: Run a command. Will be run in the support bundle container if `docker run replicated/support-bundle` is used. To run in a custom container, use `docker.run` instead
 index: docs
 title: os.run-command
@@ -10,6 +10,8 @@ gradient: "purpleToPink"
 ---
 
 ## os.run-command
+
+**type object**
 
 Run a command. Will be run in the support bundle container if `docker run replicated/support-bundle` is used. To run in a custom container, use `docker.run` instead
 
