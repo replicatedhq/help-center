@@ -1,7 +1,7 @@
 ---
 categories:
 - support-bundle-yaml-specs
-date: 2018-01-17T23:51:55Z
+date: 2019-05-07T12:00:00Z
 description: Collect logs from a docker swarm service. One of `service` or `service_list_options` is required.
 index: docs
 title: docker.service-logs
@@ -10,6 +10,8 @@ gradient: "purpleToPink"
 ---
 
 ## docker.service-logs
+
+**type object**
 
 Collect logs from a docker swarm service. One of `service` or `service_list_options` is required.
 

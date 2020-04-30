@@ -1,7 +1,7 @@
 ---
 categories:
 - support-bundle-yaml-specs
-date: 2018-01-17T23:51:55Z
+date: 2019-05-07T12:00:00Z
 description: Collect the stderr/stdout of running a single docker container
 index: docs
 title: docker.container-run
@@ -10,6 +10,8 @@ gradient: "purpleToPink"
 ---
 
 ## docker.container-run
+
+**type object**
 
 Collect the stderr/stdout of running a single docker container
 

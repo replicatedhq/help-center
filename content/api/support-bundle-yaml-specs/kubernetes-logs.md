@@ -1,7 +1,7 @@
 ---
 categories:
 - support-bundle-yaml-specs
-date: 2018-01-17T23:51:55Z
+date: 2019-05-07T12:00:00Z
 description: Collect the logs for one or more kubernetes pods
 index: docs
 title: kubernetes.logs
@@ -10,6 +10,8 @@ gradient: "purpleToPink"
 ---
 
 ## kubernetes.logs
+
+**type object**
 
 Collect the logs for one or more kubernetes pods
 

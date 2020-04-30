@@ -1,7 +1,7 @@
 ---
 categories:
 - support-bundle-yaml-specs
-date: 2018-01-17T23:51:55Z
+date: 2019-05-07T12:00:00Z
 description: Collect logs from one or more services in a stack
 index: docs
 title: docker.stack-service-logs
@@ -10,6 +10,8 @@ gradient: "purpleToPink"
 ---
 
 ## docker.stack-service-logs
+
+**type object**
 
 Collect logs from one or more services in a stack
 

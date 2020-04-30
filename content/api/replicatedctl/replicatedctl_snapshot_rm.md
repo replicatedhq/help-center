@@ -1,28 +1,38 @@
 ---
 aliases:
-- docs/reference/replicatedctl/replicatedctl_snapshot
+- docs/reference/replicatedctl/replicatedctl_snapshot_rm
 categories:
 - replicatedctl
 date: "2020-03-30T08:05:16-07:00"
-description: Manage snapshots
+description: Remove snapshot
 gradient: purpleToPink
 index: docs
-title: replicatedctl snapshot
+title: replicatedctl snapshot rm
 weight: "551"
 ---
 
-## replicatedctl snapshot
+## replicatedctl snapshot rm
 
-Manage snapshots
+Remove snapshot
 
 ### Synopsis
 
-Manage snapshots
+Remove snapshot
+
+```
+replicatedctl snapshot rm ID [flags]
+```
 
 ### Options
 
 ```
-  -h, --help                               help for snapshot
+  -h, --help   help for rm
+```
+
+### Options inherited from parent commands
+
+```
+      --host string                        Replicated API host (default "unix:///var/run/replicated/replicated-cli.sock")
       --path string                        Snapshot location path. The value should be an absolute path. This option is only used with local and sftp backends.
       --s3-bucket string                   S3 bucket name. This option is only used with s3 backend.
       --s3-compatible-endpoint string      AWS compatible S3 endpoint. This option is only used with s3 backend.
@@ -38,18 +48,7 @@ Manage snapshots
       --store string                       Backend store. Valid values are s3, sftp, and local.
 ```
 
-### Options inherited from parent commands
-
-```
-      --host string   Replicated API host (default "unix:///var/run/replicated/replicated-cli.sock")
-```
-
 ### SEE ALSO
 
-* [replicatedctl](/api/replicatedctl/)	 - Replicated CLI
-* [replicatedctl snapshot list-files](/api/replicatedctl/replicatedctl_snapshot_list-files/)	 - List snapshot files
-* [replicatedctl snapshot ls](/api/replicatedctl/replicatedctl_snapshot_ls/)	 - List snapshots
-* [replicatedctl snapshot restore](/api/replicatedctl/replicatedctl_snapshot_restore/)	 - Restore installation from the specified snapshot
-* [replicatedctl snapshot rm](/api/replicatedctl/replicatedctl_snapshot_rm/)	 - Remove snapshot
-* [replicatedctl snapshot start](/api/replicatedctl/replicatedctl_snapshot_start/)	 - Start a snapshot
+* [replicatedctl snapshot](/api/replicatedctl/replicatedctl_snapshot/)	 - Manage snapshots
 
