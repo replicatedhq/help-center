@@ -1,7 +1,7 @@
 ---
 categories:
 - support-bundle-yaml-specs
-date: 2018-01-17T23:51:55Z
+date: 2019-05-07T12:00:00Z
 description: The API versions of the Kubernetes cluster
 index: docs
 title: kubernetes.api-versions
@@ -10,6 +10,8 @@ gradient: "purpleToPink"
 ---
 
 ## kubernetes.api-versions
+
+**type object**
 
 The API versions of the Kubernetes cluster
 

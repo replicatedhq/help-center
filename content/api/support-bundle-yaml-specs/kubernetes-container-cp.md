@@ -1,7 +1,7 @@
 ---
 categories:
 - support-bundle-yaml-specs
-date: 2018-01-17T23:51:55Z
+date: 2019-05-07T12:00:00Z
 description: Collect a file or directory from one or more kubernetes pods and containers. If the container name is not specified, files will be collected from all containers within the pods.
 index: docs
 title: kubernetes.container-cp
@@ -10,6 +10,8 @@ gradient: "purpleToPink"
 ---
 
 ## kubernetes.container-cp
+
+**type object**
 
 Collect a file or directory from one or more kubernetes pods and containers. If the container name is not specified, files will be collected from all containers within the pods.
 

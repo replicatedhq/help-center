@@ -1,7 +1,7 @@
 ---
 categories:
 - support-bundle-yaml-specs
-date: 2018-01-17T23:51:55Z
+date: 2019-05-07T12:00:00Z
 description: List docker swarm tasks
 index: docs
 title: docker.task-ls
@@ -10,6 +10,8 @@ gradient: "purpleToPink"
 ---
 
 ## docker.task-ls
+
+**type object**
 
 List docker swarm tasks
 

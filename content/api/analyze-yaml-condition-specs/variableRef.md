@@ -14,3 +14,4 @@ gradient: "purpleToPink"
 **type string**
 
 The input variable
+
