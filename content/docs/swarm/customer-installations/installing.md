@@ -36,7 +36,7 @@ The install script can take flags to help your customers with specialized enterp
 
 | Flag                          | Usage                                                                                              |
 | ----------------------------- | -------------------------------------------------------------------------------------------------- |
-|additional-no-proxy            | Address that can be reached without the HTTP proxy                                                 |
+| additional-no-proxy            | Address that can be reached without the HTTP proxy                                                |
 | airgap                        | airgap implies "no proxy" and "skip docker"                                                        |
 | bypass-storagedriver-warnings | Bypass the storagedriver warning                                                                   |
 | daemon-token                  | Authentication token used by operators for automating a cluster installation                       |
@@ -50,10 +50,12 @@ The install script can take flags to help your customers with specialized enterp
 | public-address                | The public IP address for stack                                                                    |
 | swarm-advertise-addr          | The swarm advertise address                                                                        |
 | swarm-listen-addr             | The swarm listen address                                                                           |
+| swarm-default-address-pool    | A custom default address pool for swarm networks                                                   |
 | swarm-stack-namespace         | The swarm stack namespace to use                                                                   |
 | ui-bind-port                  | The port to bind the UI to                                                                         |
 | no-ce-on-ee                   | Disable installation of Docker CE onto platforms it does not support - RHEL, SLES and Oracle Linux |
-| tls-cert-path                 | An absolute path to the trusted CA certificates file on the host |
+| tls-cert-path                 | An absolute path to the trusted CA certificates file on the host                                   |
+| ----------------------------- | -------------------------------------------------------------------------------------------------- |
 
 Example quick install with flags:
 
