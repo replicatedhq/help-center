@@ -70,6 +70,7 @@ identity:
     # In order to use Provisioning API, the LDAP server (AD being an exception) must support the Content Sync feature.
     title: LDAP Server Type
     type: select_one
+    value: '{{repl LdapCopyAuthFrom "ServerType"}}'
     default: ldap_type_openldap
     items:
     - name: ldap_type_openldap
