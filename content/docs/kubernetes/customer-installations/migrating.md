@@ -3,7 +3,7 @@ date: "2019-02-14T04:02:20Z"
 title: "Migrating from Native Scheduler Installations"
 description: "Instructions for migrating native installations to Kubernetes"
 keywords: "installing, removing, migrating"
-weight: "2716"
+weight: "2717"
 categories: [ "Manage Customer Installations" ]
 index: ["docs/kubernetes", "docs"]
 aliases: [docs/distributing-an-application/installing-on-kubernetes]

@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Installing Kubernetes Only"
 description: "Instructions for installing a Kubernetes cluster using the Replicated installation script."
 keywords: "installing, removing, migrating"
-weight: "2708"
+weight: "2713"
 categories: [ "Manage Customer Installations" ]
 index: ["docs/kubernetes", "docs"]
 aliases: [docs/distributing-an-application/installing-on-kubernetes]

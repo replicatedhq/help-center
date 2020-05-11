@@ -3,7 +3,7 @@ date: "2016-07-03T04:02:20Z"
 title: "Install into an Existing Cluster"
 description: "Instructions for installing Replicated via the easy install script, manually or behind a proxy. Also includes instructions for uninstalling Replicated."
 keywords: "installing, cluster, kubernetes"
-weight: "2707"
+weight: "2711"
 categories: [ "Manage Customer Installations" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
@@ -13,7 +13,7 @@ icon: "replicatedKubernetes"
 {{< warning title="Cluster Prerequisites" >}}
 While the Replicated Kubernetes Appliance supports installation into
 existing clusters, the wide variations across Kubernetes clusters found
-in cloud providers and on-prem datacenters make it impossible to guarantee out-of-the-box compatibility on every Kubernetes cluster.  As mentioned above, if you are primarily targeting existing cluster environments, consider using [Replicated Ship](https://help.replicated.com/guides/kubernetes-with-ship/) instead.
+in cloud providers and on-prem datacenters make it impossible to guarantee out-of-the-box compatibility on every Kubernetes cluster.  As mentioned above, if you are primarily targeting existing cluster environments, consider using [Replicated Kots](https://kots.io) instead.
 We have a short list of [Prerequisites](#prerequisites) that will evolve as more managed Kuberentes offerings are made available.
 {{</warning>}}
 
