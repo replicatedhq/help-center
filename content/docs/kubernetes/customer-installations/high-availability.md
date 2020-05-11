@@ -3,7 +3,7 @@ date: "2019-03-18T12:00:00Z"
 title: "High Availability"
 description: "Instructions for installing Replicated Embedded Kubernetes in high availability mode."
 keywords: "installing, ha, high availability"
-weight: "2705"
+weight: "2707"
 categories: [ "Manage Customer Installations" ]
 index: ["docs/kubernetes", "docs"]
 aliases: [docs/distributing-an-application/high-availability]

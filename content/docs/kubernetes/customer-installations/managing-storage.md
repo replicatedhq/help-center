@@ -3,7 +3,7 @@ date: "2018-08-14T04:02:20Z"
 title: "Managing Storage"
 description: "Instructions for managing the storage needs of Kubernetes in customer environments"
 keywords: "storage, kubernetes"
-weight: "2710"
+weight: "2717"
 categories: [ "Manage Customer Installations" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"

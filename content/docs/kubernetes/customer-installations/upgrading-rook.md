@@ -2,7 +2,7 @@
 date: "2019-06-10T12:00:00Z"
 title: "Upgrading Rook Ceph"
 description: "Notes on manually upgrading the Rook Operator and Ceph"
-weight: "2714"
+weight: "2725"
 categories: [ "Manage Customer Installation" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"

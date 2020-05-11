@@ -3,7 +3,7 @@ date: "2020-04-17T12:00:00Z"
 title: "Managing Certificates for Kubernetes Components"
 description: "Details on how certs are generated and rotated"
 keywords: "installing, certifcates"
-weight: "2717"
+weight: "2718"
 categories: [ "Manage Customer Installations" ]
 index: ["docs/kubernetes", "docs"]
 aliases: [docs/distributing-an-application/installing-on-kubernetes]

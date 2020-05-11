@@ -2,7 +2,7 @@
 date: "2018-06-27T23:02:20Z"
 title: "Networking"
 description: "Managing networking in your Kubernetes cluster"
-weight: "2712"
+weight: "2721"
 categories: [ "Manage Customer Installations" ]
 index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
