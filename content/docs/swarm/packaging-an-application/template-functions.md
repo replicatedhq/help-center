@@ -267,6 +267,7 @@ Possible Options:
 
 | Key | Type |
 | --- | ---- |
+| ServerType | string |
 | Hostname | string |
 | Port | string |
 | SearchUsername | string |
