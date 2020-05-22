@@ -20,7 +20,7 @@ By default, Replicated automatically adds preflight checks for:
 | OS | Linux |
 | Linux Kernel | 3.10 or greater |
 | Memory | 1 GB |
-| Docker Version | {{< docker_version_minimum >}} - {{< docker_version_default >}} |
+| Docker Version | {{< docker_version_minimum >}} or greater |
 | Disk Space | /tmp 1 GB <br /> /var/lib/replicated 250 MB <br /> /var/lib/docker 1 GB (docker root directory) |
 | TCP Ports (Replicated services) | 9870-9880 on docker0 |
 | Outbound internet access (if required) | Replicated APIs, external registries |
