@@ -30,7 +30,7 @@ Unpacking your application airgap bundle will require five times as much storage
 Customers that provide insufficient disk space will see `DiskPressure` warnings on the Clusters page of the Replicated Admin UI and in the output of `kubectl get nodes`.
 If Kubernetes is not able to reclaim more storage space by deleting pods and deleting unused images, it will begin to evict running pods.
 This can begin when a customer's disk is only 85% full.
-It is critical to benchmark your app's storage requirements and enforce them with a [preflight check](https://help.replicated.com/docs/kubernetes/packaging-an-application/programmable-preflight-checks/).
+It is critical to benchmark your app's storage requirements and enforce them with a [preflight check](/docs/kubernetes/packaging-an-application/programmable-preflight-checks/).
 
 
 {{< linked_headline "Storage Requirements Example" >}}

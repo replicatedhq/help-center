@@ -47,5 +47,5 @@ The purge is required in order to reschedule any pods with PVCs that were runnin
 {{< linked_headline "Known Issues" >}}
 
 - Airgapped bundles and licenses are synced to all master nodes every hour. If the first master is lost before the sync completes, some release management features of the Replicated console will be unavailable.
-- The [application shell alias](https://help.replicated.com/docs/kubernetes/packaging-an-application/application-properties/#shell-alias) will only work on the node on which the Replicated pod is scheduled.
+- The [application shell alias](/docs/kubernetes/packaging-an-application/application-properties/#shell-alias) will only work on the node on which the Replicated pod is scheduled.
 - When two masters are joined simultaneously, Etcd can fail due to not enough started members.
