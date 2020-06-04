@@ -110,7 +110,7 @@ monitors:
 
 {{< linked_headline "Ports" >}}
 
-By default, Replicated will expose the ports for Graphite (2443), StatsD (8125) and the Carbon plaintext (2003) and pickle (2004) protocols. The address of these services can be accessed via the `cluster.local` address on their standard ports or discovered through use of the template functions [StatsdAddress](https://help.replicated.com/docs/kubernetes/packaging-an-application/template-functions/#statsdaddress), [CarbonPlaintextAddress](https://help.replicated.com/docs/kubernetes/packaging-an-application/template-functions/#carbonplaintextaddress) and [CarbonPickleAddress](https://help.replicated.com/docs/kubernetes/packaging-an-application/template-functions/#carbonpickleaddress).
+By default, Replicated will expose the ports for Graphite (2443), StatsD (8125) and the Carbon plaintext (2003) and pickle (2004) protocols. The address of these services can be accessed via the `cluster.local` address on their standard ports or discovered through use of the template functions [StatsdAddress](/docs/kubernetes/packaging-an-application/template-functions/#statsdaddress), [CarbonPlaintextAddress](/docs/kubernetes/packaging-an-application/template-functions/#carbonplaintextaddress) and [CarbonPickleAddress](/docs/kubernetes/packaging-an-application/template-functions/#carbonpickleaddress).
 
 {{< linked_headline "Custom CSS" >}}
 

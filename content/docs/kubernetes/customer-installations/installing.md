@@ -66,11 +66,13 @@ The install script can take flags to help your customers with specialized enterp
 | taint-control-plane | Taints master nodes with `node-role.kubernetes.io/master: NoSchedule`. With this flag application Pods will only run on worker nodes. This flag is to be used in conjunction with the `ha` flag. |
 | unsafe-skip-ca-verification | Disable CA public key verification (kubernetes only) |
 | kubernetes-only | Only install Kubernetes - don't install Replicated. See the 'installing Kubernetes only' [page](/docs/kubernetes/customer-installations/installing-k8s-only/). |
+| nodelocal-dnscache | Enable Kubernetes [NodeLocal DNSCache](https://kubernetes.io/docs/tasks/administer-cluster/nodelocaldns/). More info [here](/docs/kubernetes/customer-installations/networking/#nodelocal-dnscache) |
 
 Example quick install with flags:
 
 ```shell
-curl -sSL https://get.replicated.com/kubernetes-init | sudo bash -s no-proxy ui-bind-port=8000
+curl -sSL https://get.replicated.com/kubernetes-init | \
+    sudo bash -s no-proxy ui-bind-port=8000
 ```
 
 {{< linked_headline "Compatible Kubernetes Versions" >}}

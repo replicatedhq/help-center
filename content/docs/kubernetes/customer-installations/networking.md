@@ -37,3 +37,12 @@ You can use the `weave status connections` command to determine whether connecti
 WEAVE_POD=$(kubectl -n kube-system get pods | grep weave-net | awk '{ print $1 }' | head -1)
 kubectl -n kube-system exec $WEAVE_POD -c weave -- /home/weave/weave --local status connections
 ```
+
+{{< linked_headline "NodeLocal DNSCache" >}}
+
+Due to a bug in the conntrack Linux kernel module, it is possible to experience DNS lookup timeouts resulting in lookup delays of 5 or more seconds. This issue is described in more detail [here](https://github.com/kubernetes/kubernetes/issues/56903) and [here](https://www.weave.works/blog/racy-conntrack-and-dns-lookup-timeouts). As a workaround, Kubernetes [NodeLocal DNSCache](https://kubernetes.io/docs/tasks/administer-cluster/nodelocaldns/) can be enabled by passing the `nodelocal-dnscache` flag to the [install scripts](/docs/kubernetes/customer-installations/installing/#quick-install) or by including the query parameter `?nodelocal_dnscache=1` in the install script URL.
+
+```bash
+curl -sSL https://get.replicated.com/kubernetes-init | \
+    sudo bash -s nodelocal-dnscache
+```

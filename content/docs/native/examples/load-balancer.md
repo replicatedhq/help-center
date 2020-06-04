@@ -10,7 +10,7 @@ aliases: [/docs/examples/load-balancer-example/,/tags/load-balancer/]
 ---
 
 ## Load-Balanced Counter App
-This example runs multiple instances of the [counter app](https://help.replicated.com/docs/examples/counter-app/) on separate nodes.
+This example runs multiple instances of the [counter app](/docs/examples/counter-app/) on separate nodes.
 An nginx container serves as a load balancer to the backend counter containers.
 
 ```yaml
