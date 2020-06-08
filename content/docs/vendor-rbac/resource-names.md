@@ -69,6 +69,25 @@ index: "other"
 | [customer/upload_avatar](#customer-uploadAvatar) |
 | [customer/[:customerId]/update](#customer-customerId-update) |
 | [customer/[:customerId]/delete](#customer-customerId-delete) |
+| [kots/app/create](#kots-app-create) |
+| [kots/app/[:appId]/read](#kots-app-appid-read) |
+| [kots/externalregistry/list](#kots-app-appid-registry-list) |
+| [kots/externalregistry/create](#kots-app-appid-externalregistry-create) |
+| [kots/externalregistry/[:registryName]/delete](#kots-app-appid-externalregistry-registryname-delete) |
+| [kots/app/[:appId]/channel/create](#kots-app-appid-channel-create) |
+| [kots/app/[:appId]/channel/[:channelId]/promote](#kots-app-appid-channel-channelid-promote) |
+| [kots/app/[:appId]/channel/[:channelId]/update](#kots-app-appid-channel-channelid-update ) |
+| [kots/app/[:appId]/channel/[:channelId]/read](#kots-app-appid-channel-channelid-read) |
+| [kots/app/[:appId]/enterprisechannel/[:channelId]/read](#kots-app-appid-enterprisechannel-channelid-read) |
+| [kots/app/[:appId]/airgap/build](#kots-app-appid-airgap-build) |
+| [kots/app/[:appId]/license/create](#kots-app-appid-license.create) |
+| [kots/app/[:appId]/license/[:licenseId]/update](#kots-app-appid-license-licenseid-update) |
+| [kots/app/[:appId]/license/[:licenseId]/read](#kots-app-appid-license-licenseid-read) |
+| [kots/license/[:licenseId]/archive](#kots-license-licenseid-archive) |
+| [kots/license/[:licenseId]/unarchive](#kots-license-licenseid-unarchive) |
+| [kots/app/[:appId]/release/create](#kots-app-appid-release-create) |
+| [kots/app/[:appId]/release/[:sequence]/update](#kots-app-appid-release-sequence-update) |
+| [kots/app/[:appId]/release/[:sequence]/read](#kots-app-appid-release-sequence-read) |
 
 
 #### platform/app/[:appId]/delete
@@ -299,3 +318,77 @@ Grants the holder poermission to update customer informations, specified by cust
 ### customer/[:customerId]/delete
 
 Grants the holder permission to remove customer.
+
+### kots/app/create
+
+When allowed, the holder will be allowed to create new kots applications.
+
+### kots/app/[:appId]/read
+Grants the holder permission to view the kots application. If the holder does not have permissions to view an application, it will not appear in lists.
+
+### kots/externalregistry/list
+Grants the holder the ability to list external docker registry for kots application(s).
+
+### kots/externalregistry/create
+
+Grants the holder the ability to link a new external docker registry to kots application(s).
+
+### kots/externalregistry/[:registryName]/delete
+
+Grants the holder the ability to delete the specified linked external docker registry in kots application(s).
+
+### kots/app/[:appId]/channel/create
+
+Grants the holder the ability to create a new channel in the specified application(s).
+
+### kots/app/[:appId]/channel/[:sequence]/promote
+
+Grants the holder the ability to promote a new release to the specified channel(s) of the specified application(s).
+
+### kots/app/[:appId]/channel/[:sequence]/update
+
+Grants the holder permission to update the specified channel of the specified application(s).
+
+### kots/app/[:appId]/channel/[:channelId]/read
+
+Grants the holder the permission to view information about the specified channel of the specified application(s).
+
+### kots/app/[:appId]/enterprisechannel/[:channelId]/read
+
+Grants the holder the permission to view information about the specified enterprise channel of the specified application(s).
+
+### kots/app/[:appId]/airgap/build
+
+Grants the holder permission to trigger airgap builds.
+
+### kots/app/[:appId]/license/create
+
+Grants the holder permission to create a new license in the specified application(s).
+
+### kots/app/[:appId]/license/[:licenseId]/read
+
+Grants the holder permission to view the license specified by ID. If this is denied, the licenses will not show up in search, CSV export or on the Vendor Portal.
+
+### kots/app/[:appId]/license/[:licenseId]/update
+
+Grants the holder permission to edit the license specified (by ID) for the specified application(s).
+
+### kots/license/[:licenseId]/archive
+
+Grants the holder permission to archive the specified license (by ID) in the specified application(s).
+
+### kots/license/[:licenseId]/unarchive
+
+Grants the holder permissions to unarchive the specified license (by ID) in the specified application(s).
+
+### koots/app/[:appId]/release/create
+
+Grants the holder permission to create a new release in the specified application(s).
+
+### koots/app/[:appId]/release/[:sequence]/update
+
+Grants the holder permission to update the files saved in release sequence `[:sequence]` in the specified application(s). Once a release is promoted to a channel, it's not editable by anyone.
+
+### koots/app/[:appId]/release/[:sequence]/read
+
+Grants the holder permission to read the files at release sequence `[:sequence]` in the specified application(s).
