@@ -71,16 +71,16 @@ index: "other"
 | [customer/[:customerId]/delete](#customer-customerId-delete) |
 | [kots/app/create](#kots-app-create) |
 | [kots/app/[:appId]/read](#kots-app-appid-read) |
-| [kots/externalregistry/list](#kots-app-appid-registry-list) |
-| [kots/externalregistry/create](#kots-app-appid-externalregistry-create) |
-| [kots/externalregistry/[:registryName]/delete](#kots-app-appid-externalregistry-registryname-delete) |
+| [kots/externalregistry/list](#kots-externalregistry-list) |
+| [kots/externalregistry/create](#kots-externalregistry-create) |
+| [kots/externalregistry/[:registryName]/delete](#kots-externalregistry-registryname-delete) |
 | [kots/app/[:appId]/channel/create](#kots-app-appid-channel-create) |
 | [kots/app/[:appId]/channel/[:channelId]/promote](#kots-app-appid-channel-channelid-promote) |
 | [kots/app/[:appId]/channel/[:channelId]/update](#kots-app-appid-channel-channelid-update ) |
 | [kots/app/[:appId]/channel/[:channelId]/read](#kots-app-appid-channel-channelid-read) |
 | [kots/app/[:appId]/enterprisechannel/[:channelId]/read](#kots-app-appid-enterprisechannel-channelid-read) |
 | [kots/app/[:appId]/airgap/build](#kots-app-appid-airgap-build) |
-| [kots/app/[:appId]/license/create](#kots-app-appid-license.create) |
+| [kots/app/[:appId]/license/create](#kots-app-appid-license-create) |
 | [kots/app/[:appId]/license/[:licenseId]/update](#kots-app-appid-license-licenseid-update) |
 | [kots/app/[:appId]/license/[:licenseId]/read](#kots-app-appid-license-licenseid-read) |
 | [kots/license/[:licenseId]/archive](#kots-license-licenseid-archive) |
@@ -341,11 +341,11 @@ Grants the holder the ability to delete the specified linked external docker reg
 
 Grants the holder the ability to create a new channel in the specified application(s).
 
-### kots/app/[:appId]/channel/[:sequence]/promote
+### kots/app/[:appId]/channel/[:channelId]/promote
 
 Grants the holder the ability to promote a new release to the specified channel(s) of the specified application(s).
 
-### kots/app/[:appId]/channel/[:sequence]/update
+### kots/app/[:appId]/channel/[:channelId]/update
 
 Grants the holder permission to update the specified channel of the specified application(s).
 
@@ -381,14 +381,14 @@ Grants the holder permission to archive the specified license (by ID) in the spe
 
 Grants the holder permissions to unarchive the specified license (by ID) in the specified application(s).
 
-### koots/app/[:appId]/release/create
+### kots/app/[:appId]/release/create
 
 Grants the holder permission to create a new release in the specified application(s).
 
-### koots/app/[:appId]/release/[:sequence]/update
+### kots/app/[:appId]/release/[:sequence]/update
 
 Grants the holder permission to update the files saved in release sequence `[:sequence]` in the specified application(s). Once a release is promoted to a channel, it's not editable by anyone.
 
-### koots/app/[:appId]/release/[:sequence]/read
+### kots/app/[:appId]/release/[:sequence]/read
 
 Grants the holder permission to read the files at release sequence `[:sequence]` in the specified application(s).
