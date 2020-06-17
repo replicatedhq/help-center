@@ -17,7 +17,7 @@ any paths on the filesystem can be included in the snapshot.
 
 {{< linked_headline "Configuration" >}}
 
-In addition to storing your application data in a PVC, you'll need to whitelist it
+In addition to storing your application data in a PVC, you'll need to enable it
 in your Replicated application yaml's `backup` section. For example, to back up a PVC named
 `redis-data-volume`, use the following `backup` config.
 
@@ -28,7 +28,7 @@ backup:
     pvc_names: [ "redis-data-volume" ]
 ```
 
-Paths in the shared filesystem must also be whitelisted.
+Paths in the shared filesystem must also be listed.
 To backup the entire shared filesystem, use the root path.
 
 ```yaml
@@ -56,10 +56,10 @@ backup:
 
 {{< linked_headline "StatefulSets" >}}
 
-All PersistentVolumeClaims generated from a [StatefulSet's volumeClaimTemplates](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) will be included in a snapshot if the name in the `volumeClaimTemplate` matches a name in your backup whitelist.
+All PersistentVolumeClaims generated from a [StatefulSet's volumeClaimTemplates](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) will be included in a snapshot if the name in the `volumeClaimTemplate` matches a name in the backup list of PVCs.
 
 For example, with the following yaml two PersistentVolumeClaims would be generated: `www-web-0` and `www-web-1`.
-Both would be included in your snapshots because the whitelist includes `www`.
+Both would be included in your snapshots because both include `www`.
 
 ```yaml
 backup:
