@@ -49,6 +49,14 @@ This can cause applications using PVCs to be unavailable longer than the five mi
 
 For this reason, the `rek-operator` deployment on HA installations will watch for nodes in the Unknown state for more than five minutes and force delete all pods on them that have been terminating for at least thirty seconds.
 
+If a node is lost, the cluster will be degraded until the node is cleaned up.
+In a degraded state new nodes will not be able to join the cluster, the cluster cannot be upgraded, and cluster components will report health warnings.
+Use this command to permanently remove a node that will not be rejoining the cluster:
+
+```bash
+replicatedctl cluster delete-node <node>
+```
+
 {{< linked_headline "Known Issues" >}}
 
 - Airgapped bundles and licenses are synced to all master nodes every hour. If the first master is lost before the sync completes, some release management features of the Replicated console will be unavailable.
