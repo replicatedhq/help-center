@@ -67,6 +67,7 @@ The install script can take flags to help your customers with specialized enterp
 | unsafe-skip-ca-verification | Disable CA public key verification (kubernetes only) |
 | kubernetes-only | Only install Kubernetes - don't install Replicated. See the 'installing Kubernetes only' [page](/docs/kubernetes/customer-installations/installing-k8s-only/). |
 | nodelocal-dnscache | Enable Kubernetes [NodeLocal DNSCache](https://kubernetes.io/docs/tasks/administer-cluster/nodelocaldns/). More info [here](/docs/kubernetes/customer-installations/networking/#nodelocal-dnscache) |
+| use-rook-nodes-label | Only provision storage on nodes which include the label `node-role.kubernetes.io/rook=true`. More info [here](/docs/kubernetes/customer-installations/managing-storage/#opt-in-storage-nodes) |
 
 Example quick install with flags:
 
