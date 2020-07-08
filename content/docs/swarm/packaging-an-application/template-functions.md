@@ -521,6 +521,18 @@ environment:
 ```
 
 
+{{< template_function name="DockerInfo" >}}
+```go
+func DockerInfo(format string) string
+```
+DockerInfo takes a format string similar to the [docker info](https://docs.docker.com/engine/reference/commandline/info/) cli `--format` flag and returns the result.
+```yaml
+env_vars:
+- name: DOCKER_ROOT_DIR
+  value: '{{repl DockerInfo ".DockerRootDir" }}'
+```
+
+
 {{< linked_headline "Namespace" >}}
 ```go
 func Namespace() string
