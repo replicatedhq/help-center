@@ -19,6 +19,12 @@ Other factors that affect disk usage are container logging, the size of your app
 Replicated will create four Persistent Volume Claims in addition to any defined by your application.
 Storage for all PVCs will be provisioned from `/opt/replicated/rook` across all nodes in the cluster.
 
+### Opt-In Storage Nodes
+
+Optionally, Replicated can be configured to provision storage on only specific nodes which include the label `node-role.kubernetes.io/rook=true`.
+The flag `use-rook-nodes-label` (or the query parameter `?use_rook_nodes_label=1`) can be passed to the [install scripts](/docs/kubernetes/customer-installations/installing/#quick-install) to enable this feature.
+Once enabled, passing the flag `rook-storage-node` to the [node join](/docs/kubernetes/customer-installations/add-nodes/) script will automatically add the `node-role.kubernetes.io/rook=true` label to the additional node and provision that node as a storage node.
+
 {{< linked_headline "Docker Images" >}}
 
 For online installs, images required for running Replicated and your application will only be pulled to nodes where they are scheduled to run.
