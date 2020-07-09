@@ -41,8 +41,21 @@ sudo bash ./install.sh ha taint-control-plane
 
 {{< linked_headline "Loss of Node" >}}
 
-When a node is unavailable for one hour, Replicated will automatically purge the node when running in HA mode.
-The purge is required in order to reschedule any pods with PVCs that were running on the lost node.
+When a node is unreachable for more than forty seconds, Kubernetes will change the node's ready status to `Unknown`.
+After five minutes in the Unknown state, Kubernetes will delete all pods on the unreachable node so they can be rescheduled on healthy nodes.
+The deleted pods are likely to remain in the Terminating state since kubelet will not be reachable to confirm the pods have stopped.
+If a pod mounts a PVC it will maintain its lock on the PVC while stuck in the Terminating state and replacement pods will not be able to start.
+This can cause applications using PVCs to be unavailable longer than the five minute grace period applied by Kubernetes.
+
+For this reason, the `rek-operator` deployment on HA installations will watch for nodes in the Unknown state for more than five minutes and force delete all pods on them that have been terminating for at least thirty seconds.
+
+If a node is lost, the cluster will be degraded until the node is cleaned up.
+In a degraded state new nodes will not be able to join the cluster, the cluster cannot be upgraded, and cluster components will report health warnings.
+Use this command to permanently remove a node that will not be rejoining the cluster:
+
+```bash
+replicatedctl cluster delete-node <node>
+```
 
 {{< linked_headline "Known Issues" >}}
 
