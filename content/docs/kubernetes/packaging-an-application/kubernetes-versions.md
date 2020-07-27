@@ -20,3 +20,5 @@ host_requirements:
 
 If configured, Replicated will attempt to auto-upgrade itself every time your app is updated to a new version.
 This feature is not enabled on airgap installs.
+
+Auto-upgrades can be disabled by setting the `DisableReplicatedAutoUpdates` parameter from the [cli](https://help.replicated.com/api/replicatedctl/replicatedctl_params_set/).

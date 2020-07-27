@@ -56,3 +56,4 @@ Replicated enforces these requirements and will not allow the customer to start 
 
 The application level `host_requirements` key can be used to automatically upgrade Replicated.  This feature can be enabled by specifying a version range in the `replicated_version` key.  Version range syntax is similar to that used by [npm](https://docs.npmjs.com/misc/semver).  Versions that don't support this feature will simply ignore the value.  This key is also ignored by the pre-flight checks.
 
+Auto-upgrades can be disabled by setting the `DisableReplicatedAutoUpdates` parameter from the [cli](https://help.replicated.com/api/replicatedctl/replicatedctl_params_set/).
