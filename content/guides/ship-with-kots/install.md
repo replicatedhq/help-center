@@ -73,7 +73,7 @@ To access the cluster with kubectl, reload your shell:
     bash -l
 
 
-To add worker nodes to this installation, run the following script on your other nodes
+To add secondary nodes to this installation, run the following script on your other nodes
     curl -sSL https://kurl.sh/starter-kots-demo-unstable/join.sh | sudo bash -s kubernetes-master-address=[ip-address]:6443 kubeadm-token=[token] kubeadm-token-ca-hash=sha256:[sha] kubernetes-version=1.16.4 docker-registry-ip=[ip-address]
 
 ```

@@ -16,6 +16,6 @@ On the Cluster page on the On-Prem Console an "Add Node" button will be visible.
 
 Additionally, the node join script can be generated using the CLI command `replicatedctl cluster node-join-script`. For more information please refer to the documentation [here](https://help.replicated.com/api/replicatedctl/replicatedctl_cluster_node-join-script/).
 
-The join script will add Docker and all dependencies for a worker node in a Kubernetes cluster, then join the cluster through the master node.
+The join script will add Docker and all dependencies for a secondary node in a Kubernetes cluster, then join the cluster through the primary node.
 
 ![Add Node Script](/images/post-screens/add-node-k8s.png)

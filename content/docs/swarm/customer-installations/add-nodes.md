@@ -11,7 +11,7 @@ icon: "replicatedDockerSwarm"
 nextPage: "swarm/examples/overview.md"
 ---
 
-When it is necessary to add additional nodes to satisfy the scheduling requirements of an application, Replicated makes it easy for the end customer to add additional Swarm worker nodes on remote instances to run a distributed application.
+When it is necessary to add additional nodes to satisfy the scheduling requirements of an application, Replicated makes it easy for the end customer to add additional Swarm secondary nodes on remote instances to run a distributed application.
 
 On the Cluster page on the Admin Console an "Add Node" button will be visible. This will prompt the end customer with two simple options for adding a node.
 
@@ -35,8 +35,8 @@ Using the same "Add Node" button on the Cluster page of the Admin Console, you c
 
 ![Add Node Select Type](/images/post-screens/add-node-swarm-select-type.png)
 
-### Convert Existing Worker Nodes to Manager Nodes
-Swarm provides an easy way to promote existing worker nodes to manager nodes. See [this guide](https://docs.docker.com/engine/swarm/manage-nodes/#promote-or-demote-a-node) on how to promote a worker node to a manager node.
+### Convert Existing Secondary Nodes to Manager Nodes
+Swarm provides an easy way to promote existing secondary nodes to manager nodes. See [this guide](https://docs.docker.com/engine/swarm/manage-nodes/#promote-or-demote-a-node) on how to promote a secondary node to a manager node.
 
 ### Additional Info/Resources
 Docker recommends you have an odd number of manager nodes and no more than 7 managers for a Swarm. Additional info on this constraint can be found [here](https://docs.docker.com/engine/swarm/how-swarm-mode-works/nodes/#manager-nodes). When a Swarm has multiple manager nodes, the Swarm [must have a quorum](https://docs.docker.com/engine/swarm/admin_guide/#maintain-the-quorum-of-managers); if that quorum is lost, management tasks cannot be performed.

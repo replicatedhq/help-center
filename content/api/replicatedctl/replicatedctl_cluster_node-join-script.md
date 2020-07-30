@@ -3,7 +3,7 @@ aliases:
 - docs/reference/replicatedctl/replicatedctl_cluster_node-join-script
 categories:
 - replicatedctl
-date: "2020-03-30T08:05:16-07:00"
+date: "2020-07-30T11:08:25-07:00"
 description: Outputs the script to run to join a node to the cluster
 gradient: purpleToPink
 index: docs
@@ -28,7 +28,7 @@ replicatedctl cluster node-join-script [flags]
 ```
       --advanced                      Advanced install option
   -h, --help                          help for node-join-script
-      --master                        Generates a master node join script
+      --primary                       Generates a primary node join script
       --private-address string        The public address of the node
       --public-address string         The public address of the node
       --tags stringArray              Tags to apply to the node

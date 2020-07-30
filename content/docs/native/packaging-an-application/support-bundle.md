@@ -44,7 +44,7 @@ If a container's logs may contain sensitive information or are simply large and 
 
 {{< linked_headline "Default Support Files" >}}
 
-By default the Support Bundle will include the following files in the master folder:
+By default the Support Bundle will include the following files in the primary folder:
 
 | File                                                             | Description                                                                                                                                     |
 | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -120,7 +120,7 @@ By default the Support Bundle will include the following files in the master fol
 | /retraced/logs/\*.log                                            | Audit Log container logs. Result of the command `docker logs <container>`                                                                        |
 | /VERSION.json                                                    | Support-bundle command version information                                                                                                      |
 
-The master folder will also include any custom support bundle commands specified via Replicated Console, if that has
+The primary folder will also include any custom support bundle commands specified via Replicated Console, if that has
 been enabled for this license via vendor web.
 
 Support Bundle will also include a folder for each instance of Replicated Operator that is running, with the name being

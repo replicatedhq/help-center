@@ -72,7 +72,7 @@ config:
 # Available Commands
 {{< linked_headline "cert" >}}
 
-Generates a private key and x509 certificate pair. The resulting certificate is signed by the master authority belonging to the local instance of the Replicated management container. The authority certificate is also returned by this command so that clients can verify the full X.509 chain.
+Generates a private key and x509 certificate pair. The resulting certificate is signed by the certificate authority belonging to the local instance of the Replicated management container. The authority certificate is also returned by this command so that clients can verify the full X.509 chain.
 
 *Note 1*: The authority certificate is generated the first time the management container is run on a system.
 
