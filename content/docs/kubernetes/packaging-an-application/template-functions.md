@@ -497,6 +497,17 @@ env:
   value: '{{repl Div (LicenseFieldValue "maximum_users") 2.0}}'
 ```
 
+{{< template_function name="DockerInfo" >}}
+```go
+func DockerInfo(format string) string
+```
+DockerInfo takes a format string similar to the [docker info](https://docs.docker.com/engine/reference/commandline/info/) cli `--format` flag and returns the result.
+```yaml
+env_vars:
+- name: DOCKER_ROOT_DIR
+  value: '{{repl DockerInfo ".DockerRootDir" }}'
+```
+
 {{< template_function name="Namespace" replicated="false" kubernetes="true" swarm="true" >}}
 ```go
 func Namespace() string
