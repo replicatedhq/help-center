@@ -53,13 +53,13 @@ services:
 
 {{< linked_headline "Default Support Files" >}}
 
-By default the Support Bundle will include the following files in the master folder:
+By default the Support Bundle will include the following files in the primary folder:
 
 | File | Description |
 |------|-------------|
-| /app/containers/\*.json | Vendor application low-level container information. Result of the command `docker inspect <container>` for containers on the master node |
-| /app/logs/\*.stderr | Vendor application container stderr logs. Result of the command `docker logs <container>` for containers on the master node |
-| /app/logs/\*.stdout | Vendor application container stdout logs. Result of the command `docker logs <container>` for containers on the master node |
+| /app/containers/\*.json | Vendor application low-level container information. Result of the command `docker inspect <container>` for containers on the primary node |
+| /app/logs/\*.stderr | Vendor application container stderr logs. Result of the command `docker logs <container>` for containers on the primary node |
+| /app/logs/\*.stdout | Vendor application container stdout logs. Result of the command `docker logs <container>` for containers on the primary node |
 | /default/commands/date/stdout | Print the system date and time. Result of the command `date` |
 | /default/commands/df/stdout | Report file system disk space usage for the local file systems. Result of the command `df -al` |
 | /default/commands/df_inodes/stdout | Report file system inode usage for the local file systems. Result of the command `df -ali` |
@@ -138,7 +138,7 @@ By default the Support Bundle will include the following files in the master fol
 | /scheduler/swarm/system/swarm-tasks/task_ls.json | The list of tasks in the cluster. Equivalent to `docker service ps <servicename>` for all services |
 | /VERSION.json | Support-bundle command version information |
 
-The master folder will also include any custom support bundle commands specified via Replicated Console, if that has
+The primary folder will also include any custom support bundle commands specified via Replicated Console, if that has
 been enabled for this license via vendor web.
 
 Support Bundle will also include a folder for each instance of Replicated Operator that is running, with the name being

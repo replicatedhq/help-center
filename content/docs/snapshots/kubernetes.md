@@ -165,7 +165,7 @@ spec:
 ### Configuring Snapshot Storage
 
 When installing Replicated, application backup archives will be stored on the
-replicated master's PVC by default (`local` mode). This is not recommended for production deployments, and end users of replicated are encouraged to customize the
+replicated primary's PVC by default (`local` mode). This is not recommended for production deployments, and end users of replicated are encouraged to customize the
 backup implementation in the Replicated Admin Console under "Console Settings". Options include using either SFTP or Amazon S3 for snapshot storage.
 
 See the [Snapshots](/docs/packaging-an-application/snapshots/) documentation for more information on configuring snapshot storage.

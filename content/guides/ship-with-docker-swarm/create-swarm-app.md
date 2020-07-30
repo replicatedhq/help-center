@@ -43,7 +43,7 @@ $ docker swarm init
 
 Swarm initialized: current node (x1js134wd5td2ast6d3yixoq0) is now a manager.
 
-To add a worker to this swarm, run the following command:
+To add a secondary to this swarm, run the following command:
 
     docker swarm join --token SWMTKN-1-2fhvhgsummkv3ryq0721wdw53347wega00re637h4x1zrhpl53-72y223dujrw7ikm64wag2i509 192.168.65.3:2377
 

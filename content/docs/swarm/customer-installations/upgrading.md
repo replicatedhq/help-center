@@ -10,17 +10,17 @@ icon: "replicatedDockerSwarm"
 gradient: "swarm"
 ---
 
-Re-run the install script on your master node to upgrade Replicated to the latest version.
+Re-run the install script on your primary node to upgrade Replicated to the latest version.
 
 ```shell
 curl -sSL https://get.replicated.com/swarm-init | sudo bash
 ```
 
-No script needs to be run on your worker nodes.
+No script needs to be run on your secondary nodes.
 
 {{< linked_headline "Upgrading Airgap Installs" >}}
 
-Airgap installations can be upgraded by downloading a newer version of the Replicated release, uncompressing it on your master node, and re-running the install script using the airgap flag. The latest Replicated release can be found at https://s3.amazonaws.com/replicated-airgap-work/replicated.tar.gz.
+Airgap installations can be upgraded by downloading a newer version of the Replicated release, uncompressing it on your primary node, and re-running the install script using the airgap flag. The latest Replicated release can be found at https://s3.amazonaws.com/replicated-airgap-work/replicated.tar.gz.
 
 ```shell
 tar xzvf replicated.tar.gz

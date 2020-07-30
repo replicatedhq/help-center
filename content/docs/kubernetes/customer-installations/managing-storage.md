@@ -28,7 +28,7 @@ Once enabled, passing the flag `rook-storage-node` to the [node join](/docs/kube
 {{< linked_headline "Docker Images" >}}
 
 For online installs, images required for running Replicated and your application will only be pulled to nodes where they are scheduled to run.
-Airgap installs require that a copy of every image be imported to Docker under `/var/lib/docker` on the master node and a separate copy to Replicated's local registry, also on the master node.
+Airgap installs require that a copy of every image be imported to Docker under `/var/lib/docker` on the primary node and a separate copy to Replicated's local registry, also on the primary node.
 Unpacking your application airgap bundle will require five times as much storage space as the size of the bundle download.
 
 {{< linked_headline "Preventing Disk Shortages" >}}

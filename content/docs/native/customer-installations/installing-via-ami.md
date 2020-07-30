@@ -14,7 +14,7 @@ At times, it can be desirable to deliver an a preconfigured, generic VM to allow
 
 ## Required images
 
-Images listed in this section can be loaded from Replicated airgap bundles and have to be present on the master node.
+Images listed in this section can be loaded from Replicated airgap bundles and have to be present on the primary node.
 
 ### Replicated images
 

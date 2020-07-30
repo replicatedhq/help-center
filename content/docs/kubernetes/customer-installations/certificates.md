@@ -17,10 +17,10 @@ Replicated has several mechanisms to ensure these certificates are rotated befor
 {{< linked_headline "Automatic Rotation" >}}
 
 Replicated 2.43+ provides automatic certificate rotation for the Kubernetes control plane.
-Replicated will schedule a Job on each master Node once a week to check the expiry of certificates in `/etc/kubernetes`.
+Replicated will schedule a Job on each primary Node once a week to check the expiry of certificates in `/etc/kubernetes`.
 If a Node is found to have any certificate expiring in less than 100 days, all certificates on that Node will be rotated.
-No Job is scheduled on worker Nodes because the kubelet is able to automatically rotate its own certificate before it expires.
-(The kubelet is the only Kubernetes component running on workers that uses a certificate.)
+No Job is scheduled on secondary nodes because the kubelet is able to automatically rotate its own certificate before it expires.
+(The kubelet is the only Kubernetes component running on secondary nodes that uses a certificate.)
 These weekly certificate rotation Jobs and their Pods will be automatically deleted after completion unless there is a failure or the Replicated log level is set to "debug".
 The default weekly schedule can be changed by setting the `KubernetesCertRotationSchedule` param to a different cron expression and restarting the Replicated pod.
 
@@ -35,7 +35,7 @@ For example, upgrading Replicated from 2.37.1 to 2.38.0 would upgrade Kubernetes
 
 {{< linked_headline "Manual Rotation" >}}
 
-Use the following commands on all master nodes to monitor and rotate certificates as needed:
+Use the following commands on all primary nodes to monitor and rotate certificates as needed:
 
 ```bash
 kubeadm alpha certs check-expiration

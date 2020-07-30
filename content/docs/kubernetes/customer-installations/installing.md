@@ -63,7 +63,7 @@ The install script can take flags to help your customers with specialized enterp
 | kubernetes-upgrade-patch-version | Upgrade to the latest available patch release of Kubernetes                                        |
 | ha | Installs Replicated in ["high availability"](/docs/kubernetes/customer-installations/high-availability/) mode. The script will prompt for a load balancer address if not specified in the `load-balancer-address` flag. |
 | load-balancer-address | Installs Replicated in ["high availability"](/docs/kubernetes/customer-installations/high-availability/) mode with the load balancer address specified as the control plane endpoint. |
-| taint-control-plane | Taints master nodes with `node-role.kubernetes.io/master: NoSchedule`. With this flag application Pods will only run on worker nodes. This flag is to be used in conjunction with the `ha` flag. |
+| taint-control-plane | Taints control plane nodes with `node-role.kubernetes.io/master: NoSchedule`. With this flag application Pods will only run on secondary nodes. This flag is to be used in conjunction with the `ha` flag. |
 | unsafe-skip-ca-verification | Disable CA public key verification (kubernetes only) |
 | kubernetes-only | Only install Kubernetes - don't install Replicated. See the 'installing Kubernetes only' [page](/docs/kubernetes/customer-installations/installing-k8s-only/). |
 | nodelocal-dnscache | Enable Kubernetes [NodeLocal DNSCache](https://kubernetes.io/docs/tasks/administer-cluster/nodelocaldns/). More info [here](/docs/kubernetes/customer-installations/networking/#nodelocal-dnscache) |
@@ -98,7 +98,7 @@ Please refer to our docs on upgrading [here](../upgrading)
 
 {{< linked_headline "High Availability" >}}
 
-Replicated Embedded Kubernetes has the ability to run in highly available mode with multiple Kubernetes master control plane nodes. The addition of the `ha` flag when running the Kubernetes easy-install script signals to Replicated that this cluster should be run in HA mode. For more information please refer to our docs on high availability clusters [here](../high-availability).
+Replicated Embedded Kubernetes has the ability to run in highly available mode with multiple Kubernetes control plane nodes. The addition of the `ha` flag when running the Kubernetes easy-install script signals to Replicated that this cluster should be run in HA mode. For more information please refer to our docs on high availability clusters [here](../high-availability).
 
 ```shell
 curl -sSL -o install.sh  https://get.replicated.com/kubernetes-init

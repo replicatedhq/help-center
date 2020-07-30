@@ -27,7 +27,7 @@ Airgap installations can be upgraded by downloading a newer version of the Repli
 
 ```shell
 tar xzvf replicated.tar.gz
-# master node
+# primary node
 cat ./install.sh | sudo bash -s airgap
 # worker nodes
 cat ./operator_install.sh | sudo bash -s airgap
