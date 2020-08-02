@@ -65,7 +65,6 @@ index: "other"
 | [registry/namespace/:namespace/push](#registry-namespace-namespace-push) |
 | [customer/list](#customer-list) |
 | [customer/[:customerId]/read](#customer-customerId-read)|
-| [customer/create](#customer-create) |
 | [customer/upload_avatar](#customer-uploadAvatar) |
 | [customer/[:customerId]/update](#customer-customerId-update) |
 | [customer/[:customerId]/delete](#customer-customerId-delete) |
@@ -136,27 +135,23 @@ Grants the holder the ability to edit the specified linked external docker regis
 
 Grants the holder the ability to delete the specified linked external docker registry in the specified application(s).
 
-### platform/app/[:appId]/channel/create
-
-Grants the holder the ability to create a new channel in the specified application(s).
-
-### platform/app/[:appId]/channel/[:sequence]/archive
+### platform/app/[:appId]/channel/[:channelId]/archive
 
 Grants the holder the ability the archive the specified channel(s) of the specified application(s).
 
-### platform/app/[:appId]/channel/[:sequence]/promote
+### platform/app/[:appId]/channel/[:channelId]/promote
 
 Grants the holder the ability to promote a new release to the specified channel(s) of the specified application(s).
 
-### platform/app/[:appId]/channel/[:sequence]/update
+### platform/app/[:appId]/channel/[:channelId]/update
 
 Grants the holder permission to update the specified channel of the specified application(s).
 
-### platform/app/[:appId]/channel/[:sequence]/releases/read
+### platform/app/[:appId]/channel/[:channelId]/releases/read
 
 Grants the holder permission to view the release history for the specified channel in the specified application(s).
 
-### platform/app/[:appId]/channel/[:sequence]/releases/update
+### platform/app/[:appId]/channel/[:channelId]/releases/update
 
 Grants the holder permission to update the channel release in the channel specified of the application specified. This policy allows the holder to update the "Required"/"Optional" status, the release notes and the version number.
 
