@@ -11,8 +11,6 @@ hideFromList: true
 icon: "replicatedKubernetes"
 ---
 
-{{< kotsdocs "https://kots.io" >}}
-
 Replicated can be used with a Kubernetes application to deploy an enterprise-installable version of your application. Replicated is a platform that adds functionality to an application to allow for easy behind-the-firewall installation and integration into enterprise systems. When using Replicated with Kubernetes, developers have the ability to reuse most of the existing Kubernetes specs and Replicated will be responsible for installing and maintaining a Kubernetes cluster for the enterprise installation.
 
 ## When to use the Kubernetes Scheduler
