@@ -208,6 +208,7 @@
 .kots-doc-alt img {
   border: none !important;
   border-radius: 0 !important;
+  margin-right: 25px;
 }
 
 .kots-doc-alt a, .kots-doc-alt a:visited {

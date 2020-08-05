@@ -66,8 +66,8 @@ make index-and-send-staging
 
 ### Adding the KOTS documentaion alert
 
-Simply put the following shortcode after the front matter and before the main page content
+Simply put the following shortcode after the front matter and before the main page content (or wherever you want the alert to appear) and replace the URL with the URL to the desired article.
 
 ```bash
-{{< kotsdocs >}}
+{{< kotsdocs "https://kots.io" >}}
 ```
