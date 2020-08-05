@@ -63,3 +63,11 @@ You can index and send content to our staging indices via:
 ```bash
 make index-and-send-staging
 ```
+
+### Adding the KOTS documentaion alert
+
+Simply put the following shortcode after the front matter and before the main page content
+
+```bash
+{{< kotsdocs >}}
+```

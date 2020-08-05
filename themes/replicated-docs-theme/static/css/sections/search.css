@@ -142,7 +142,7 @@
   z-index: 2;
 }
 
-/* Kots Documentation notice */
+/* Kots Documentation notice home */
 
 .kots-doc-wrapper {
   margin: 30px 0;
@@ -187,5 +187,39 @@
   }
   .kots-doc-wrapper {
     margin: 40px 0 100px 0;
+  }
+}
+
+/* Kots Documentation notice other pages */
+
+.kots-doc-wrapper-alt {
+  margin: 10px 0 40px 0;
+}
+
+.kots-doc-alt {
+  background: rgba(224, 232, 240, 0.85); 
+  border-radius: 10px; 
+  border: none; 
+  width: 80%; 
+  padding: 12px 10px 12px 30px;
+  display: flex; 
+}
+
+.kots-doc-alt img {
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.kots-doc-alt a, .kots-doc-alt a:visited {
+  color: #326DE6;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  .kots-doc-alt {
+    width: 90% !important; 
+  }
+  .kots-doc-alt img {
+    margin-right: 10px;
   }
 }
