@@ -10,6 +10,10 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
+{{<kotsdocs>}}
+For the operating systems supported for KOTS embedded-cluster installations, check out the *[kurl.sh system requirements](https://kurl.sh/docs/install-with-kurl/system-requirements)*.
+{{</kotsdocs>}}
+
 Replicated supports Linux-based servers that can run current versions of Docker and Kubernetes.
 
 Your machine must support Docker {{< kubernetes_docker_version_minimum >}} - {{< kubernetes_docker_version_default >}}. The install script will install Docker {{< kubernetes_docker_version_default >}} and Kubernetes {{< kubernetes_version >}}.
