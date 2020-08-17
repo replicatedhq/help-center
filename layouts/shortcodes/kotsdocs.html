@@ -1,10 +1,10 @@
 <div class="kots-doc-wrapper-alt">
     <div class="kots-doc-alt">
-        <div style="flex-grow: 1">
-            <img src="{{ .Site.BaseURL }}images/kots-doc.svg" width="40px" class="kots-doc-icon" />
+        <div style="margin-right: 10px; width: 50px !important;min-width: 50px !important;">
+            <img src="{{ .Site.BaseURL }}images/kots-doc.svg" width="100%" class="kots-doc-icon" />
         </div>
-        <div style="flex-grow: 4; margin-top: 10px;">
-            <span class="u-fontSize--largest u-color--tuna">Looking for</span><span class="pad-top-25"><img src="{{ .Site.BaseURL }}images/kots.svg" width="40px" style="margin: 0 5px;"/></span>
+        <div style="padding: 20px 20px 5px 10px;">
+            <span class="u-fontSize--largest u-color--tuna">Looking for</span><span class="pad-top-25"><img src="{{ .Site.BaseURL }}images/kots.svg" width="40px" style="margin: 0 2px 0 8px;"/></span>
             <span class="u-fontSize--largest u-color--tuna">documentation?</span>
             <p class="margin-top-10">{{ printf "%s" .Inner | markdownify }}</p>
         </div>

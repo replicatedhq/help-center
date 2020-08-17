@@ -201,14 +201,13 @@
   border-radius: 10px; 
   border: none; 
   width: 80%; 
-  padding: 12px 10px 12px 30px;
+  padding: 20px 30px 15px 30px;
   display: flex; 
 }
 
 .kots-doc-alt img {
   border: none !important;
   border-radius: 0 !important;
-  margin-right: 25px;
 }
 
 .kots-doc-alt a, .kots-doc-alt a:visited {
