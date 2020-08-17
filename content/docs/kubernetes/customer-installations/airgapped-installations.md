@@ -9,6 +9,11 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
+
+{{<kotsdocs>}}
+To use Airgapped Installations with KOTS, check out the *[Airgapped Cluster](https://kots.io/vendor/guides/airgapped-cluster/)* guide.
+{{</kotsdocs>}}
+
 An "airgapped" environment is a network that has no path to inbound or outbound internet traffic at all. Some enterprise customers require that you deliver a package they can install in their airgapped environment.
 
 Replicated supports this type of installation, using the following steps:
