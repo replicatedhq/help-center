@@ -21,6 +21,14 @@ The amount of memory or swap in bytes for your container.  By default there is n
   memory_swap_limit: 1000000000
 ```
 
+{{< linked_headline "OOM Kill Disable" >}}
+
+By default, kernel kills processes in a container if an out-of-memory (OOM) error occurs. Only disable the OOM killer on containers where you have also set the `memory_limit` option. If memory limit is not set, this can result in the host running out of memory and require killing the host's system processes to free memory.
+
+```yaml
+    oom_kill_disable: true
+```
+
 {{< linked_headline "CPU Shares" >}}
 
 Using CPU shares you can change the access to the servers CPU at busy times.  When non CPU-intensive processes are other containers may use extra CPU time.  The default is 1024 and by increasing or decreasing the value on a container you change how the weighted CPU access is granted across all running containers.  You can learn more at [CPU Share Constraints documentation](https://docs.docker.com/engine/reference/run/#/cpu-share-constraint).
