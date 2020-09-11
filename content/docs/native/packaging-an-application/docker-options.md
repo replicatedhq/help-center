@@ -174,7 +174,7 @@ For example, `my.container.label` would become a label with a key of `my.contain
 
 {{< linked_headline "Disable Publish All Ports" >}}
 
-By default, Replicated will bind each exposed port to a random port on the host. Use this option to disabled publishing all the ports to the host interfaces.
+By default, Replicated will bind each exposed port to a random port on the host. Use this option to disable publishing all the ports to the host interfaces.
 
 ```yaml
     disable_publish_all_ports: true
