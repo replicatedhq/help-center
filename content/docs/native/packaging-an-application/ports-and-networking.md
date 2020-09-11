@@ -12,7 +12,7 @@ icon: "replicatedCircle"
 
 The Replicated Native Scheduler does not deploy with an overlay network. All container-to-container communication has to occur on the host networking stack.
 
-All ports listed in the Dockerfile with the EXPOSE directive will be automatically exposed when started. The Docker runtime will choose a random port, ensuring that there are no conflicts. If you need to specify a specific public (host) port, you can list it here. It is possible to specify the [`disable_publish_all_ports`](/docs/native/packaging-an-application/docker-options/#disable-publish-all-ports) option to disabled publishing all the ports to the host interfaces.
+All ports listed in the Dockerfile with the EXPOSE directive will be automatically exposed when started. The Docker runtime will choose a random port, ensuring that there are no conflicts. If you need to specify a specific public (host) port, you can list it here. If the [`disable_publish_all_ports`](/docs/native/packaging-an-application/docker-options/#disable-publish-all-ports) option is specified, ports not specified here will not be exposed.
 
 Common examples of when it is necessary to list an exposed port are for web server containers, or servers which have clients that are incapable of discovering dynamic port mappings.
 
