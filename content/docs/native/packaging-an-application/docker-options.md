@@ -23,7 +23,7 @@ The amount of memory or swap in bytes for your container.  By default there is n
 
 {{< linked_headline "OOM Kill Disable" >}}
 
-By default, kernel kills processes in a container if an out-of-memory (OOM) error occurs. Only disable the OOM killer on containers where you have also set the `memory_limit` option. If memory limit is not set, this can result in the host running out of memory and require killing the host's system processes to free memory.
+By default, the kernel kills processes in a container if an out-of-memory (OOM) error occurs. Only disable the OOM killer on containers where you have also set the `memory_limit` option. If memory limit is not set, this can result in the host running out of memory and require killing the host's system processes to free memory, which is likely to cause system instability.
 
 ```yaml
     oom_kill_disable: true
