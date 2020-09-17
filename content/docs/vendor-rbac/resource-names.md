@@ -84,6 +84,7 @@ index: "other"
 | [kots/app/[:appId]/license/[:licenseId]/read](#kots-app-appid-license-licenseid-read) |
 | [kots/license/[:licenseId]/archive](#kots-license-licenseid-archive) |
 | [kots/license/[:licenseId]/unarchive](#kots-license-licenseid-unarchive) |
+| [kots/license/[:licenseId]/airgap/password](#kots-license-licenseid-unarchive) |
 | [kots/app/[:appId]/release/create](#kots-app-appid-release-create) |
 | [kots/app/[:appId]/release/[:sequence]/update](#kots-app-appid-release-sequence-update) |
 | [kots/app/[:appId]/release/[:sequence]/read](#kots-app-appid-release-sequence-read) |
