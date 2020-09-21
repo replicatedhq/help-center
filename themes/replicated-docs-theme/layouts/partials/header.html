@@ -7,26 +7,12 @@
 	<title>{{ if .Page.Params.pageTitle }}{{ .Page.Params.pageTitle }}{{ else }}{{ .Title }}{{ end }}</title>
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ .Site.BaseURL }}favicons/apple-touch-icon-57x57.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ .Site.BaseURL }}favicons/apple-touch-icon-114x114.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ .Site.BaseURL }}favicons/apple-touch-icon-72x72.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ .Site.BaseURL }}favicons/apple-touch-icon-144x144.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ .Site.BaseURL }}favicons/apple-touch-icon-60x60.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ .Site.BaseURL }}favicons/apple-touch-icon-120x120.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ .Site.BaseURL }}favicons/apple-touch-icon-76x76.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ .Site.BaseURL }}favicons/apple-touch-icon-152x152.png" />
-	<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}favicons/favicon-196x196.png" sizes="196x196" />
-	<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}favicons/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}favicons/favicon-32x32.png" sizes="32x32" />
-	<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}favicons/favicon-16x16.png" sizes="16x16" />
-	<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}favicons/favicon-128.png" sizes="128x128" />
-	<meta name="application-name" content="&nbsp;"/>
-	<meta name="msapplication-TileColor" content="#FFFFFF" />
-	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
-	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
-	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
-	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
-	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}favicons/favicon-16x16.png">
+	<meta name="msapplication-TileColor" content="#F44247">
+	<meta name="theme-color" content="#F44247">
+	<meta name="application-name" content="Replicated Help Center"/>
 	<link rel="stylesheet" href='{{ .Site.BaseURL }}css/{{ index .Site.Data.manifest "style.css" }}'>
 	<link rel="stylesheet" href='{{ .Site.BaseURL }}css/featherlight.min.css'>
 	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight/monokai.css">
@@ -45,7 +31,7 @@
 				<ul class="nav-list paddingContainer u-position--relative">
 					<li>
 						<a class="logo-link" href="{{ .Site.BaseURL }}">
-							<img width="109" src="{{ .Site.BaseURL }}images/logo@2x.png"/>
+							<img width="153px" src="{{ .Site.BaseURL }}images/logo@2x.png"/>
 						</a>
 					</li>
 					<li>
