@@ -172,7 +172,15 @@ For example, `my.container.label` would become a label with a key of `my.contain
       - 'my.template.value={{repl ConfigOption "labelValue" }}'
 ```
 
-{{< linked_headline "Stop-Timeout" >}}
+{{< linked_headline "Disable Publish All Ports" >}}
+
+By default, Replicated will bind each exposed port to a random port on the host. Use this option to disable publishing all the ports to the host interfaces.
+
+```yaml
+    disable_publish_all_ports: true
+```
+
+{{< linked_headline "Stop Timeout" >}}
 
 Stop Timeout is used to specify the number of seconds to wait after stopping an application container before killing it. By default this value is set to 10.
 
