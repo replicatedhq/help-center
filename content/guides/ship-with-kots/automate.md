@@ -40,13 +40,13 @@ export REPLICATED_API_TOKEN=...
 
 `REPLICATED_APP` should be set to the app slug from the Settings page:
 
-![Replicated App](https://github.com/replicatedhq/replicated-starter-kots/raw/master/doc/REPLICATED_APP.png)
+![Replicated App](https://github.com/replicatedhq/replicated-starter-kots/raw/main/doc/REPLICATED_APP.png)
 
 
 
 Next, create an API token from the [Teams and Tokens](https://vendor.replicated.com/team/tokens) page:
 
-![Replicated App](https://github.com/replicatedhq/replicated-starter-kots/raw/master/doc/REPLICATED_API_TOKEN.png)
+![Replicated App](https://github.com/replicatedhq/replicated-starter-kots/raw/main/doc/REPLICATED_API_TOKEN.png)
 
 
 
