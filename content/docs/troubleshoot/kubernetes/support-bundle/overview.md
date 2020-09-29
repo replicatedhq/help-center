@@ -24,14 +24,14 @@ An application vendor can write a set of collectors, which is a YAML file that d
 The basic format of a collector definition  is a Kubernetes YAML that can be distributed with the application. The YAML will look like:
 
 ```yaml
-apiVersion: troubleshoot.replicated.com/v1beta1
-kind: Collector
+apiVersion: troubleshoot.sh/v1beta2
+kind: SupportBundle
 metadata:
  name: application-name
 spec:
- - cluster-info: {}
- - cluster-resources: {}
+  collectors:
+    - cluster-info: {}
+    - cluster-resources: {}
 ```
 
 For a full list of options that can be included in a Kubernetes support bundle, visit the [Collectors](/docs/troubleshoot/kubernetes/collectors/collector-phase/) section.
-

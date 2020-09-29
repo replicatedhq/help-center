@@ -13,19 +13,20 @@ Optional `exec` collectors can be defined to collect output from commands execut
 For example:
 
 ```yaml
-apiVersion: troubleshoot.replicated.com/v1beta1
-kind: Collector
+apiVersion: troubleshoot.sh/v1beta2
+kind: SupportBundle
 metadata:
   name: sample
 spec:
-  - exec:
-      name: mysql-version
-      selector:
-        - app=mysql
-      namespace: default
-      command: ["mysql"]
-      args: ["-V"]
-      timeout: 5s
+  colectors:
+    - exec:
+        name: mysql-version
+        selector:
+          - app=mysql
+        namespace: default
+        command: ["mysql"]
+        args: ["-V"]
+        timeout: 5s
 ```
 
 ## Response

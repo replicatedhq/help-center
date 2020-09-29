@@ -13,12 +13,13 @@ The cluster info collector is a default collector-- it will be automatically inc
 This collector does not accept any parameters.
 
 ```yaml
-apiVersion: troubleshoot.replicated.com/v1beta1
-kind: Collector
+apiVersion: troubleshoot.sh/v1beta2
+kind: SupportBundle
 metadata:
   name: sample
 spec:
-  - clusterInfo: {}
+  collectors:
+    - clusterInfo: {}
 ```
 
 ## Included resources

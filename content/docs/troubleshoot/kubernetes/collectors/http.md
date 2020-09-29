@@ -15,15 +15,16 @@ Optional `http` collectors can be defined to collect output from HTTP requests.
 The `GET` collector will issue an HTTP or HTTPS request to the specified URL.  For example:
 
 ```yaml
-apiVersion: troubleshoot.replicated.com/v1beta1
-kind: Collector
+apiVersion: troubleshoot.sh/v1beta2
+kind: SupportBundle
 metadata:
   name: sample
 spec:
-  - http:
-      name: healthz
-      get:
-        url: http://api:3000/healthz
+  colectors:
+    - http:
+        name: healthz
+        get:
+          url: http://api:3000/healthz
 ```
 
 Fields supported in `GET` requests:
@@ -36,19 +37,20 @@ Fields supported in `GET` requests:
 
 
 ```yaml
-apiVersion: troubleshoot.replicated.com/v1beta1
-kind: Collector
+apiVersion: troubleshoot.sh/v1beta2
+kind: SupportBundle
 metadata:
   name: sample
 spec:
-  - http:
-      name: service-control
-      post:
-        url: https://api:3000/service-control
-        insecureSkipVerify: true
-        body: '{"disable-service": true}'
-        headers:
-          Content-Type: "application/json"
+  collectors:
+    - http:
+        name: service-control
+        post:
+          url: https://api:3000/service-control
+          insecureSkipVerify: true
+          body: '{"disable-service": true}'
+          headers:
+            Content-Type: "application/json"
 ```
 
 - url

@@ -12,17 +12,18 @@ The copy file collector is not automatically included. You need to specify it in
 
 
 ```yaml
-apiVersion: troubleshoot.replicated.com/v1beta1
-kind: Collector
+apiVersion: troubleshoot.sh/v1beta2
+kind: SupportBundle
 metadata:
   name: sample
 spec:
-  - copy:
-      selector:
-        - app=api
-      namespace: default
-      containerPath: /etc/hosts
-      containerName: sidecar
+  collectors:
+    - copy:
+        selector:
+          - app=api
+        namespace: default
+        containerPath: /etc/hosts
+        containerName: sidecar
 ```
 
 If containerName is not specified, the first container in the pod will be used.
@@ -35,5 +36,3 @@ When this collector is executed, it will include the following files in a suppor
 
 ### /copy/\<namespace\>/\<pod-name\>/\<path\>
 This will contain the pod output (up to 10000 lines).
-
-

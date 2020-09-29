@@ -10,8 +10,8 @@ gradient: "blueToBlue"
 ---
 
 ```yaml
-apiVersion: troubleshoot.replicated.com/v1beta1
-kind: Preflight
+apiVersion: troubleshoot.sh/v1beta2
+kind: SupportBundle
 metadata:
   name: check-kubernetes-version
 spec:

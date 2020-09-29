@@ -14,15 +14,14 @@ Before you can collect a support bundle, you need to have a client-only componen
 If you have krew installed, the next step is to install the Troubleshoot plugin:
 
 ```shell
-kubectl krew install troubleshoot
-kubectl troubleshoot <uri/path>
+kubectl krew install support-bundle
+kubectl support-bundle <uri/path>
 ```
 
 Once it's installed, you can test it by generating and downloading a sample support bundle:
 
 ```shell
-kubectl troubleshoot https://troubleshoot.replicated.com
+kubectl support-bundle https://support-bundle.replicated.com
 ```
 
 This will connect to the cluster defined in your local kubecontext, and collect some basic information about the cluster. After it's finished, it will write a file named "support-bundle.tar.gz" to the current working directory.
-
