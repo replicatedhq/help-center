@@ -9,6 +9,9 @@ index: ["docs/native", "docs"]
 aliases: [docs/distributing-an-application/supported-operating-systems,/docs/native/packaging-an-application/supported-operating-systems/]
 icon: "replicatedCircle"
 ---
+{{<kotsdocs>}}
+For the operating systems supported for KOTS embedded-cluster installations, check out the *[KOTS system requirements](https://kots.io/kotsadm/installing/system-requirements/)*.
+{{</kotsdocs>}}
 
 Replicated supports Linux-based servers that can run current versions of Docker.
 
