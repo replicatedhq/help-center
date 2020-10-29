@@ -55,6 +55,8 @@ The install script takes optional flags to configure Replicated for your environ
 |bypass-storagedriver-warnings|For automation bypasses the warning for devicemapper with loopback|
 |log-level|Set the log level for Replicated. Can be `error`, `warn`, `info` or `debug`|
 |no-ce-on-ee|Disable installation of Docker CE onto platforms it does not support - RHEL, SLES and Oracle Linux|
+|disable-replicated-ui|Disable the Replicated Browser UI (Only the CLI will be available)|
+|disable-replicated-host-networking|Disables exposing most Replicated ports on the host network (excludes Replicated UI, Replicated Registry, and Graphite ports). Multi-node installations not supported.|
 
 Example call with flags:
 
