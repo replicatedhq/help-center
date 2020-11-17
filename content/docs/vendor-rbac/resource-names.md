@@ -49,8 +49,8 @@ index: "other"
 | [team/integration/[:integrationId]/delete](#team-integration-integrationid-delete) |
 | [team/integration/[:integrationId]/update](#team-integration-integrationid-update) |
 | [platform/team/member/[:memberId]/read](#platform-team-member-memberid-read) |
-| [platform/team/member/invite](#platform-team-member-invite) |
-| [platform/team/member/[:memberId]/delete](#platform-team-member-memberid-delete) |
+| [team/member/invite](#team-member-invite) |
+| [team/members/delete](#team-members-delete) |
 | [platform/team/member/[:memberId]/update](#platform-team-member-memberid-update) |
 | [platform/team/token/list](#platform-team-token-list) |
 | [platform/team/token/[:tokenName]/read](#platform-team-token-tokenname-read) |
@@ -235,13 +235,13 @@ Grants the holder permission to delete specified integration(s).
 
 Grants the holder permission to update specified integration(s).
 
-### platform/team/member/invite
+### team/member/invite
 
 Grants the holder permission to invite additional people to the team.
 
-### platform/team/member/[:memberId]/delete
+### team/members/delete
 
-Grants the holder permission to delete the team member(s) specified by ID.
+Grants the holder permission to delete other team members.
 
 ### platform/team/member/[:memberId]/update
 
