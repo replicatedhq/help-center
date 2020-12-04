@@ -23,7 +23,7 @@ There are several factors to consider when deciding which scheduler to deliver y
 - Support for your end-customers environment
 - Features of the scheduler
 
-The Replicated Native Scheduler focuses on the broadest possible support for end-customer environments by including support for Docker 1.7.1, which includes support back to RedHat Enterprise Linux 6.x and CentOS 6.x. Modern container orchestrators such as Kubernetes and Docker Swarm require a newer kernel and more updated version of Docker than is available for these operating systems. In short, if your end customer requires that you support RHEL 6 or the 2.x Linux kernel, then the Replicated Native Scheduler is the best platform to deploy a modern, enterprise installable version of your application.
+The Replicated Native Scheduler focuses on the broadest possible support for end-customer environments by including support for Docker {{< docker_version_minimum >}}.
 
 {{< linked_headline "Tradeoffs with the Replicated Native Scheduler" >}}
 

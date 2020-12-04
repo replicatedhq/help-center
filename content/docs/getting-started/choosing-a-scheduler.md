@@ -12,7 +12,7 @@ Your application is deployed in Docker containers, and likely needs a scheduler 
 
 {{< linked_headline "Replicated Scheduler" >}}
 
-The Replicated scheduler is a mature container orchestration runtime that supports Docker 1.7.1 and newer. It's actively deployed in many large enterprises and supports all of the features of Replicated. If supporting Docker versions older than 1.13.1 or supporting a one-line installation option is important, the Replicated scheduler is the best choice.
+The Replicated scheduler is a mature container orchestration runtime that supports Docker {{< docker_version_minimum >}} and newer. It's actively deployed in many large enterprises and supports all of the features of Replicated. If supporting Docker versions older than 1.13.1 or supporting a one-line installation option is important, the Replicated scheduler is the best choice.
 
 {{< linked_headline "Docker Swarm" >}}
 

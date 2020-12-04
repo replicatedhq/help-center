@@ -23,10 +23,8 @@ Compared to other schedulers supported by Replicated, Kubernetes offers:
 
 ## When to Use Other Schedulers
 
-There are cases where using other schedulers, such as the Replicated Native scheduler or Docker Swarm provides a better experience.
-
-* Some enterprises require the use of Long Term Support Operating Systems in the 2.x kernel series such as RedHat Enterprise Linux 6. Replicated with Kubernetes requires Docker 1.12 or 1.13, RHEL6 only supports Docker 1.7.1. To support RHEL 6 and older versions of Docker, consider the [Replicated Native Scheduler](/docs/native/getting-started).
-* If existing Kubernetes specs are not available, writing them only to support an enterprise installation might take extra time. In this case, the learning curve of Docker Swarm could be a good choice.
+There are cases where using other schedulers, such as Docker Swarm provides a better experience.
+If existing Kubernetes specs are not available, writing them only to support an enterprise installation might take extra time. In this case, the learning curve of Docker Swarm could be a good choice.
 
 ## Overview
 The process to distribute your application in Replicated consists of the following steps:

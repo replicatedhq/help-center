@@ -29,5 +29,5 @@ using the [manual install instructions](/docs/swarm/customer-installations/insta
 
 {{< linked_headline "Swarm and RHEL 6.x / CentOS 6.x" >}}
 
-Replicated on Swarm is unsupported on operating systems that depend on Linux 2.x series kernels, such as Red Hat Enterprise Linux 6.5 or CentOS 6.5. To use these operating systems, consider using the [Replicated Scheduler](/guides/native-scheduler), which has a wider range of Docker version and operating system support.
+Replicated on Swarm is unsupported on operating systems that depend on Linux 2.x series kernels, such as Red Hat Enterprise Linux 6.5 or CentOS 6.5.
 
