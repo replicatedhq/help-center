@@ -22,12 +22,6 @@ Compared to other schedulers supported by Replicated, Docker Swarm offers:
 * Built-in overlay networking and DNS-based service discovery
 * Cluster-wide service load balancing
 
-## When to Use Other Schedulers
-
-There are a few cases where using other schedulers, such as the Replicated Native scheduler or Kubernetes scheduler, provide a better experience.
-
-* Some enterprises require the use of Long Term Support Operating Systems in the 2.x kernel series such as RedHat Enterprise Linux 6. Replicated with Docker Swarm requires Docker 17.03 or later, while RHEL6 only supports Docker 1.7.1. To support RHEL 6 and older versions of Docker, consider the [Replicated Native Scheduler](/docs/native/getting-started).
-
 ## Distribute a Swarm Application
 
 The process to distribute your Swarm application in Replicated consists of the following steps:

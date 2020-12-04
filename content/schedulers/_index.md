@@ -104,7 +104,7 @@ aliases: [/docs/getting-started/schedulers/,/categories/getting-started/,/docs/g
                         </li>
                         <li class="u-dockerRed">
                             <h6>Supports Docker {{< docker_version_minimum >}} and later</h6>
-                            <p>Compatible with Docker {{< docker_version_minimum >}} and above, the Replicated Scheduler is a good solution for customers using legacy operating systems such as CentOS 6 and RHEL 6.</p>
+                            <p>Compatible with Docker {{< docker_version_minimum >}} and above, the Replicated Scheduler is a good solution for customers using legacy operating systems.</p>
                         </li>
                         <li class="u-containersRed">
                             <h6>Easy to run and manage</h6>

@@ -18,7 +18,7 @@ guides:
     level: "replicatedDockerSwarm"
     slug: "ship-with-docker-swarm"    
   - title: "Replicated Native Scheduler"
-    description: "When you have to support older operating systems such as RHEL 6 and CentOS 6, the Replicated Native Scheduler is a good choice."
+    description: "When you have to support a wider range of operating systems, the Replicated Native Scheduler is a good choice."
     level: "replicatedCircle"
     slug: "native-scheduler"
   - title: "Supporting Enterprise Installations"
