@@ -27,9 +27,9 @@ Params:
 
   docker_version_default: "19.03.8-ce"
   docker_version_minimum: "1.10.3"
-  replicated_api_version_current: "2.49.0"
-  replicated_latest_version: "2.49.0"
-  replicated_latest_release_date: "October 29, 2020"
+  replicated_api_version_current: "2.49.1"
+  replicated_latest_version: "2.49.1"
+  replicated_latest_release_date: "January 5, 2021"
 
   swarm_docker_version_minimum: "1.13.1"
   swarm_docker_version_default: "19.03.8-ce"
