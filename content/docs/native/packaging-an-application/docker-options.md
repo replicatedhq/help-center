@@ -39,11 +39,33 @@ Using CPU shares you can change the access to the servers CPU at busy times.  Wh
 
 {{< linked_headline "Network Mode" >}}
 
-Network mode supports bridge, host, container or none.  Learn more about Docker's network modes at [Network Settings](https://docs.docker.com/engine/reference/run/#/network-settings).
+Network mode supports `bridge`, `host`, `container` or `none`.
+Learn more about Docker's network modes at [Network Settings](https://docs.docker.com/engine/reference/run/#/network-settings).
 
 ```yaml
   network_mode: host
 ```
+
+
+{{< linked_headline "Network" >}}
+
+Connect a container to a network.
+In addition to `bridge`, `host` and `none`, the `network` property supports specifying a network name or id to connect to an existing user-defined network.
+Learn more about Docker's network settings at [Network Settings](https://docs.docker.com/engine/reference/run/#/network-settings).
+
+```yaml
+    network: user-net
+```
+
+{{< linked_headline "Network Aliases" >}}
+
+Add network-scoped alias for the container.
+Learn more about Docker's network settings at [Network Settings](https://docs.docker.com/engine/reference/run/#/network-settings).
+
+```yaml
+    network_aliases: ["my-service"]
+```
+
 
 {{< linked_headline "Security Options" >}}
 
