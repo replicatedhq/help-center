@@ -12,3 +12,5 @@ A Replicated installation connects to a Replicated-hosted endpoint periodically 
 - Information about the installation (version of the app, version of Replicated components, version of Kubernetes, version of Kubernetes addons, etc.).</li>
 
 This data is required to provide the expected update and license services. No additional data is collected and transmitted by default from the instance to external servers.
+
+<i>Last modified October 16, 2020</i>
