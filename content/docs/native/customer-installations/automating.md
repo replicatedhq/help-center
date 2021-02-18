@@ -2,7 +2,7 @@
 date: "2016-07-03T04:02:20Z"
 title: "Automated Installations"
 description: "How to automate installation of Replicated and an application"
-weight: "308"
+weight: "309"
 categories: [ "Managing Customer Installation" ]
 index: ["docs/native", "docs"]
 icon: "replicatedCircle"
