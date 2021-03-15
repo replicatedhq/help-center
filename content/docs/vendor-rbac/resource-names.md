@@ -63,11 +63,6 @@ index: "other"
 | [team/policy/create](#team-policy-create) |
 | [registry/namespace/:namespace/pull](#registry-namespace-namespace-pull) |
 | [registry/namespace/:namespace/push](#registry-namespace-namespace-push) |
-| [customer/list](#customer-list) |
-| [customer/[:customerId]/read](#customer-customerId-read)|
-| [customer/upload_avatar](#customer-uploadAvatar) |
-| [customer/[:customerId]/update](#customer-customerId-update) |
-| [customer/[:customerId]/delete](#customer-customerId-delete) |
 | [kots/app/create](#kots-app-create) |
 | [kots/app/[:appId]/read](#kots-app-appid-read) |
 | [kots/externalregistry/list](#kots-externalregistry-list) |
@@ -90,7 +85,7 @@ index: "other"
 | [kots/app/[:appId]/release/[:sequence]/read](#kots-app-appid-release-sequence-read) |
 
 
-#### platform/app/[:appId]/delete
+### platform/app/[:appId]/delete
 When allowed, the holder will be allowed to delete the application(s) specified.
 
 ### platform/app/create
@@ -291,30 +286,6 @@ Grants the holder permission to pull images from Replicated registry.
 
 Grants the holder permission to push images into Replicated registry.
 
-### customer/list
-
-Grants the holder the ability to see list of customers.
-
-### customer/[:customerId]/read
-
-Grants the holder permission to view the customer information, specified by customer ID.
-
-### customer/create
-
-Grants the holder permission to create a new customer.
-
-### customer/upload_avatar
-
-Grants the holder permission to upload a avatar.
-
-### customer/[:customerId]/update
-
-Grants the holder poermission to update customer informations, specified by customer ID.
-
-### customer/[:customerId]/delete
-
-Grants the holder permission to remove customer.
-
 ### kots/app/create
 
 When allowed, the holder will be allowed to create new kots applications.
@@ -371,11 +342,11 @@ Grants the holder permission to edit the license specified (by ID) for the speci
 
 ### kots/license/[:licenseId]/archive
 
-Grants the holder permission to archive the specified license (by ID) in the specified application(s).
+Grants the holder permission to archive the specified license (by ID).
 
 ### kots/license/[:licenseId]/unarchive
 
-Grants the holder permissions to unarchive the specified license (by ID) in the specified application(s).
+Grants the holder permissions to unarchive the specified license (by ID).
 
 ### kots/app/[:appId]/release/create
 
