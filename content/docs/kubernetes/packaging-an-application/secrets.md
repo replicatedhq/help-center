@@ -9,6 +9,10 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
+{{<kotsdocs>}}
+For KOTS documentation, check out [kots.io](https://kots.io/vendor).
+{{</kotsdocs>}}
+
 {{< linked_headline "Secrets" >}}
 
 Replicated does not externally manage secrets in Kubernetes clusters, instead being specified and used as part of the application specification. [Template functions](../template-functions) can be used to dynamically write secrets into a configuration item from [config items](/docs/config-screen/config-yaml) or [commands](/docs/config-screen/commands).

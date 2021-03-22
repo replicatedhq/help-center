@@ -9,6 +9,11 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
+{{<kotsdocs>}}
+This document outlines upgrading an older version of Rook/Ceph. 
+To use Rook with KOTS, check out the [kurl.sh Rook add-on docs](https://kurl.sh/docs/add-ons/rook).
+{{</kotsdocs>}}
+
 # Upgrading Rook Ceph
 
 Previous versions of Replicated were bundled with [Rook version 0.8](https://rook.github.io/docs/rook/v0.8/).

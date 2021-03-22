@@ -10,6 +10,10 @@ icon: "replicatedKubernetes"
 aliases: [/docs/packaging-an-application/preflight-checks-k8s/,/docs/kubernetes/packaging-an-application/preflight-checks]
 ---
 
+{{<kotsdocs>}}
+For KOTS preflight checks, check out [the kots.io Preflight CRD](https://kots.io/reference/v1beta1/preflight/) and the [troubleshoot.sh](https://troubleshoot.sh) project.
+{{</kotsdocs>}}
+
 The host requirements section of the yaml gives Replicated the ability to analyze system requirements and warn or prevent the user from proceeding with an installation or upgrade. In addition to host requirements, Replicated has the ability to define fully customizable preflight requirements as of version {{< version version="2.29.0" >}}. These programmable requirements provide flexibility to the point that an arbitrary command can be executed by a vendor provided image. See the [commands section](#commands) below for a full list of commands that may be run including examples.
 
 {{< linked_headline "Commands" >}}

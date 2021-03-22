@@ -11,6 +11,10 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
+{{<kotsdocs>}}
+For installing Kubernetes clusters with KOTS+kURL, check out [the KOTS Quickstart guide](https://kots.io/vendor/guides/quickstart/) or the [Install with kURL](https://kurl.sh/docs/install-with-kurl/).
+{{</kotsdocs>}}
+
 We distribute an installation script that can be used to install Docker, Kubernetes and Replicated. The cluster should not be created prior to running the install script. The Replicated install script will install a working Kubernetes cluster.
 
 {{< linked_headline "Basic install (recommended):" >}}

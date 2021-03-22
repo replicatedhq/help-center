@@ -10,6 +10,12 @@ icon: "replicatedKubernetes"
 nextPage: "kubernetes/customer-installations/overview.md"
 ---
 
+{{<kotsdocs>}}
+For upgrading KOTS, see [kubectl kots admin-console upgrade](https://kots.io/kots-cli/admin-console/).
+
+For upgrading kURL, see [kurl.sh/docs/install-with-kurl/upgrading](https://kurl.sh/docs/install-with-kurl/upgrading)
+{{</kotsdocs>}}
+
 Replicated is capable of auto-upgrading itself to any version that is [pinned to the same version of Kubernetes](/docs/kubernetes/customer-installations/installing/#compatible-kubernetes-versions).
 Set the `replicated_version` in the `host_requirements` section of your Replicated yaml to a range to enable this feature.
 

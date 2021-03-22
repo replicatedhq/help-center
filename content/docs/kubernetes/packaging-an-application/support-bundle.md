@@ -9,6 +9,10 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
+{{<kotsdocs>}}
+For KOTS support bundles, check out [the kots.io SupportBundle CRD](https://kots.io/reference/v1beta1/support-bundle/) and the [troubleshoot.sh](https://troubleshoot.sh) project.
+{{</kotsdocs>}}
+
 A support bundle is an archive that is available for the customer to download via the Support tab of the Admin Console or the [Replicated CLI](/api/replicatedctl/replicatedctl_support-bundle/).
 
 Contents of the support page can be customized by including markdown in the top-level of the YAML.

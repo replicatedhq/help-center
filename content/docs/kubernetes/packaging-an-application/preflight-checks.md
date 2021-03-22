@@ -10,6 +10,10 @@ icon: "replicatedKubernetes"
 aliases: [/docs/packaging-an-application/preflight-checks-k8s/,/docs/kubernetes/packaging-an-application/preflight-checks]
 ---
 
+{{<kotsdocs>}}
+For KOTS preflight checks, check out [the kots.io Preflight CRD](https://kots.io/reference/v1beta1/preflight/) and the [troubleshoot.sh](https://troubleshoot.sh) project.
+{{</kotsdocs>}}
+
 Replicated runs a [default](/docs/kubernetes/packaging-an-application/preflight-checks/#default-preflight-checks) set of preflight checks to ensure it can install an application.
 
 You can specify additional [cluster requirements](/docs/kubernetes/packaging-an-application/preflight-checks/#custom-preflight-checks) for your application in the `kubernetes.requirements` section of your release YAML.

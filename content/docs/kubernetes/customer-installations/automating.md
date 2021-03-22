@@ -10,6 +10,10 @@ icon: "replicatedKubernetes"
 aliases: []
 ---
 
+{{<kotsdocs>}}
+For KOTS installations, check out [Automating KOTS installs](https://kots.io/kotsadm/installing/automating/).
+{{</kotsdocs>}}
+
 Replicated has support for automated installation and configuration. This feature is built for bootstrapping new installations and not for managing existing installations.
 
 These steps must be run before installing Replicated. Replicated will only check for these

@@ -9,6 +9,10 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
+{{<kotsdocs>}}
+For a developer's power-user workflow in kots, check out our [CLI Quickstart](https://kots.io/vendor/guides/cli-quickstart).
+{{</kotsdocs>}}
+
 Once your application is working in Kubernetes, you'll want to set up a simple environment to iterate on your Replicated YAML. Our Starter Repo is designed to shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.
 
 

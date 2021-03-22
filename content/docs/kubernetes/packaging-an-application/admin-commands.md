@@ -9,6 +9,10 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
+{{<kotsdocs>}}
+For KOTS documentation, check out [kots.io](https://kots.io/vendor).
+{{</kotsdocs>}}
+
 The `admin_commands` section allows you to define ad-hoc commands that can be executed inside a running container from the shell.
 
 _Note: If you are calling admin commands from a script use the `--no-tty` flag._

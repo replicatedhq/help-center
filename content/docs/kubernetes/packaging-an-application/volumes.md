@@ -9,6 +9,10 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
+{{<kotsdocs>}}
+To manage stateful services in KOTS, check out [the KOTS persistent datastores guide](https://kots.io/vendor/guides/persistent-datastores).
+{{</kotsdocs>}}
+
 {{< linked_headline "Persistent Volumes" >}}
 
 Kubernetes applications often rely on persistent volumes (PVs) and persistent volume claims (PVCs) to manage data.
