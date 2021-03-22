@@ -10,18 +10,21 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-{{< warning title="Cluster Prerequisites" >}}
+{{<kotsdocs>}}
+For existing-cluster installations with KOTS, check out the [KOTS Documentation](https://kots.io/kotsadm/installing/installing-a-kots-app/).
+{{</kotsdocs>}}
+
+## Existing Cluster Installation
+{{< warning title="Airgap Not Supported" >}}
+While a Replicated-managed Kubernetes cluster can support airgapped installations, airgapped installs are not supported on existing cluster installations.  If you are looking to deploy your Kubernetes application to primarily existing-cluster environments, we recommend using [Replicated KOTS](https://kots.io) instead.
+{{</warning>}}
+
+## Prerequisites
+
 While the Replicated Kubernetes Appliance supports installation into
 existing clusters, the wide variations across Kubernetes clusters found
 in cloud providers and on-prem datacenters make it impossible to guarantee out-of-the-box compatibility on every Kubernetes cluster.  As mentioned above, if you are primarily targeting existing cluster environments, consider using [Replicated Kots](https://kots.io) instead.
 We have a short list of [Prerequisites](#prerequisites) that will evolve as more managed Kuberentes offerings are made available.
-{{</warning>}}
-
-<p/>
-
-{{< warning title="Airgap Not Supported" >}}
-While a Replicated-managed Kubernetes cluster can support airgapped installations, airgapped installs are not supported on existing cluster installations.  If you are looking to deploy your Kubernetes application to primarily existing-cluster environments, we recommend using [Replicated KOTS](https://kots.io) instead.
-{{</warning>}}
 
 
 

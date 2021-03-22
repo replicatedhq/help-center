@@ -9,6 +9,12 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
+{{<kotsdocs>}}
+For KOTS documentation, check out [kots.io](https://kots.io/vendor).
+
+The default KOTS contour ingress controller is documented at [kurl.sh/docs/add-ons/contour](https://kurl.sh/docs/add-ons/contour).
+{{</kotsdocs>}}
+
 {{< linked_headline "Ingress Controllers" >}}
 
 If your application contains [Kubernetes Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/), this may require some changes to be compatible with Replicated. Ingress resources are unique in Kubernetes because a cluster must have a functional ingress controller running before an ingress resource type can be deployed.

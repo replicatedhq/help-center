@@ -9,6 +9,10 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
+{{<kotsdocs>}}
+For KOTS documentation, check out [kots.io](https://kots.io/vendor).
+{{</kotsdocs>}}
+
 Once application YAML is applied to the cluster and the application is running, the user will have the ability to stop the application from the Replicated Admin dashboard or using the replicated CLI.  The application is stopped by scaling the number of replicas to 0 on certain Kubernetes objects and deleting others.
 
 The following objects will be scaled:

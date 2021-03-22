@@ -9,6 +9,10 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
+{{<kotsdocs>}}
+For Proxy installs with KOTS, check out [kurl.sh Proxy Installs](https://kurl.sh/docs/install-with-kurl/proxy-installs).
+{{</kotsdocs>}}
+
 The Replicated [install script](/docs/kubernetes/customer-installations/installing/) provides several configuration options for working with an HTTP proxy.
 Passing the `no-proxy` flag to the install script will disable all proxy discovery and configuration.
 

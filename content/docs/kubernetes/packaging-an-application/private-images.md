@@ -9,6 +9,10 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
+{{<kotsdocs>}}
+To learn about private images in KOTS, check out [Private Images and Registry Credentials](https://kots.io/vendor/packaging/private-images/).
+{{</kotsdocs>}}
+
 Replicated is capable of delivering private images from the Replicated registry or any supported 3rd party registry into a private cluster.  These images will be hosted on the local network, in the registry distributed with Replicated, and application objects will be re-written to use this registry.
 
 The following objects will be rewritten:
