@@ -20,7 +20,7 @@ We have a short list of [Prerequisites](#prerequisites) that will evolve as more
 <p/>
 
 {{< warning title="Airgap Not Supported" >}}
-While a Replicated-managed Kubernetes cluster can support airgapped installations, airgapped installs are not supported on existing cluster installations.  If you are looking to deploy your Kubernetes application to primarily existing-cluster environments, we recommend using [Replicated Ship](https://help.replicated.com/guides/kubernetes-with-ship/) instead.
+While a Replicated-managed Kubernetes cluster can support airgapped installations, airgapped installs are not supported on existing cluster installations.  If you are looking to deploy your Kubernetes application to primarily existing-cluster environments, we recommend using [Replicated KOTS](https://kots.io) instead.
 {{</warning>}}
 
 
