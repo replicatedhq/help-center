@@ -61,6 +61,8 @@ index: "other"
 | [team/policy/update](#team-policy-update) |
 | [team/policy/delete](#team-policy-delete) |
 | [team/policy/create](#team-policy-create) |
+| [team/authentication/update](#team-authentication-update) |
+| [team/security/update](#team-security-update) |
 | [registry/namespace/:namespace/pull](#registry-namespace-namespace-pull) |
 | [registry/namespace/:namespace/push](#registry-namespace-namespace-push) |
 | [kots/app/create](#kots-app-create) |
@@ -277,6 +279,14 @@ Grants the holder permission to delete RBAC policies for the team.
 ### team/policy/create
 
 Grants the holder permission to create RBAC policies for the team.
+
+### team/authentication/update
+
+Grants the holder permission to manage team authentication settings including SSO settings.
+
+### team/security/update
+
+Grants the holder permission to manage team password requirements including two-factor authentication and password complexity requirements.
 
 ### registry/namespace/:namespace/pull
 
