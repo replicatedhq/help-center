@@ -14,14 +14,14 @@ nextPage: "kubernetes/packaging-an-application/yaml-format.md"
 To use Rook with KOTS, check out the [kurl.sh Rook add-on docs](https://kurl.sh/docs/add-ons/rook).
 {{</kotsdocs>}}
 
-Replicated selected [Ceph](https://ceph.io) block storage managed by [Rook](https://rook.io) as the default provisioner for PersistentVolumeClaims in embedded Kubernetes clusters.
+Replicated selected [Ceph](https://ceph.io) block storage managed by [Rook](https://rook.io) as the default provisioner for `PersistentVolumeClaims` in embedded Kubernetes clusters.
 The reliability of Ceph along with the operational simplicity of Rook offers a number of advantages.
 
 ## Dynamic Cluster Scaling
 
 All Replicated embedded clusters begin with a single node, but users can add or delete nodes from the cluster at any time.
 Replicated requires a distributed storage system that can dynamically respond to these changes in the cluster topology.
-Ceph's [CRUSH map](https://access.redhat.com/documentation/en-us/red_hat_ceph_storage/3/html/storage_strategies_guide/crush_administration#introducing_crush) maintains a tree of all storage locations in the cluster and automatically re-balances data when these changed occur.
+Ceph's [CRUSH map](https://access.redhat.com/documentation/en-us/red_hat_ceph_storage/3/html/storage_strategies_guide/crush_administration#introducing_crush) maintains a tree of all storage locations in the cluster and automatically re-balances data when these changes occur.
 This re-balancing is proportional to the changes in the cluster - scaling from 10 nodes to 9 or 11 will only require moving ~10% of all data.
 
 ## Fault Tolerant
