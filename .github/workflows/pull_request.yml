@@ -5,10 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: filter-to-pr-open-synced
-      uses: actions/bin/filter@master
-      with:
-        args: action 'opened|synchronize'
     - name: linkcheck
       uses: marccampbell/hugo-linkcheck-action@v0.1.2
       env:
