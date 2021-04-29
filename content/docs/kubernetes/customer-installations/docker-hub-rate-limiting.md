@@ -31,3 +31,5 @@ The Replicated service must be restarted after adding credentials to this file.
 ```bash
 kubectl delete pod -l app=replicated -l tier=master
 ```
+
+*NOTE: This document pertains to Replicated version 2.51.0 or greater. Replicated must be first manually upgraded a supported version. To manually upgrade, first `docker login` and follow the steps in [this guide](/docs/swarm/customer-installations/upgrading/).*
