@@ -53,8 +53,10 @@ These settings are explained in the following table:
 |---------|-------------------|-------------|
 | BypassPreflightChecks | Boolean `true` or `false` | Allows application to start without preflight checks.  This setting is optional. The default is `false` |
 | DaemonAuthenticationType | `anonymous` or `password` | Replicated supports anonymous and password protected access. |
-| DaemonAuthenticationPassword | Any `string` | If DaemonAuthenticationType is set to `password` this value is required to access the Replicated console. |
+| DaemonAuthenticationPassword | Any `string` | If `DaemonAuthenticationType` is set to `password` this value is required to access the Replicated console. |
 | DaemonToken | Any `string` | Authentication token used by operators for automating a cluster installation.  This setting is optional.  If omitted, a random one will be generated. |
+| DockerHubUsername | Any `string` | Username that will be used to authenticate with DockerHub when pulling public images only.  This can be any valid username and is used to prevent rate limiting. |
+| DockerHubPassword | Any `string` | Password that will be used to authenticate with DockerHub when pulling public images only.  This has to be a valid password for the name specified in `DockerHubUsername`. |
 | ImportSettingsFrom | A file location as a `string` | If your application has any required config settings, you can supply custom values here. Replicated will read these and set them as if the user manually configured it ([see below](#configure-app-settings-automatically)). Replicated will only apply these settings on initial installation. This setting is optional. |
 | ForceUseImportedSettings | Boolean `true` or `false` | Force Replicated to apply settings from the `ImportSettingsFrom` file. Settings will be applied on installation as well as app upgrades. This setting is optional. |
 | RemoveImportSettingsFrom | Boolean `true` or `false` | Remove the `ImportSettingsFrom` file after use. This setting is optional. |
