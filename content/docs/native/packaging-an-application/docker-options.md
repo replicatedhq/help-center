@@ -247,6 +247,10 @@ Log config at the component level is inherited by the container and will be used
 ```yaml
 components:
   - name: sample-agent
+    log_config:
+      type: journald
+      config:
+        tag: sample-agent
     containers:
       - source: replicated
         log_config:
