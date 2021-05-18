@@ -221,7 +221,7 @@ Stop Timeout is used to specify the number of seconds to wait after stopping an 
 {{< linked_headline "Logs" >}}
 
 We can configure logs for containers by specifying the max number of logs files and the max size of the log files.
-This will configure log options only "json-file" is the configured [Docker logging driver](https://docs.docker.com/config/containers/logging/configure/).
+This will configure log options only if "json-file" is the configured [Docker logging driver](https://docs.docker.com/config/containers/logging/configure/).
 The max size string should include the size, k for kilobytes, m for megabytes or g for gigabytes.
 Log settings at the component level are inherited by the container and will be used unless overridden.
 
