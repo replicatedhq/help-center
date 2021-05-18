@@ -67,22 +67,3 @@ Replicated supports `volumes_from` to attach several mounts from a colocated con
 ```
 
 The container using `volumes_from` must start after any containers it mounts from. This can be controlled with the Replicated Native Scheduler [events and orchestration](/docs/native/packaging-an-application/events-and-orchestration/) controls. The `volumes_from` property takes an array of strings where each string identifies a named container running on the same server.
-
-{{< linked_headline "Logs" >}}
-
-We can configure logs for containers by specifying the max number of logs files and the max size of the log files. The max size string should include
-the size, k for kilobytes, m for megabytes or g for gigabytes. Log settings at the component level are inherited by the container and will be
-used unless overwritten.
-
-```yaml
-components:
-  - name: sample-agent
-    logs:
-      max_size: 200k
-      max_files: 2
-    containers:
-      - source: replicated
-        logs:
-          max_size: 500k
-          max_files: 5
-```

@@ -33,6 +33,10 @@ components:
     logs:
       max_size: "10m"
       max_files: "3"
+    log_config:
+      type: journald
+      config:
+        tag: "myapp-worker"
     host_volumes:
       - host_path: /tmp/worker
         owner: "0"

@@ -217,3 +217,40 @@ Stop Timeout is used to specify the number of seconds to wait after stopping an 
 ```yaml
     stop_timeout: 10
 ```
+
+{{< linked_headline "Logs" >}}
+
+We can configure logs for containers by specifying the max number of logs files and the max size of the log files.
+This will configure log options only "json-file" is the configured [Docker logging driver](https://docs.docker.com/config/containers/logging/configure/).
+The max size string should include the size, k for kilobytes, m for megabytes or g for gigabytes.
+Log settings at the component level are inherited by the container and will be used unless overridden.
+
+```yaml
+components:
+  - name: sample-agent
+    logs:
+      max_size: 200k
+      max_files: 2
+    containers:
+      - source: replicated
+        logs:
+          max_size: 500k
+          max_files: 5
+```
+
+For more advanced usage, it is possible to specify the `log_config` property of the component or container.
+Type is the logging driver name and config is a set of key-value pairs for configuring log-opts.
+For more details on configuring the logging driver, see the [Configure logging drivers](https://docs.docker.com/config/containers/logging/configure/) documentation.
+When specified, this will override configuration set in the `logs` property.
+Log config at the component level is inherited by the container and will be used unless overridden.
+
+```yaml
+components:
+  - name: sample-agent
+    containers:
+      - source: replicated
+        log_config:
+          type: journald
+          config:
+            tag: sample-agent
+```
