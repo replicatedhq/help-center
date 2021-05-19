@@ -21,7 +21,7 @@ There are three types of Programmable Preflight Checks:
 
 - Run a preflight check using your own container - see [scheduler](#scheduler)
 - Run a shell script using ubuntu trusty - see [raw](#raw)
-- Use a common preflight check - see [disk_space_available](#disk-space-available), [disk_space_total](#disk-space-total), [port_available](#port-available), [tcp_dial](#tcp-dial)
+- Use a common preflight check - see [disk_space_available](#disk-space-available), [disk_space_total](#disk-space-total), [port_available](#port-available), [tcp_dial](#tcp-dial), [http_request](#http-request)
 
 # Commands
 
@@ -254,6 +254,37 @@ custom_requirements:
     id: tcp_dial
     data:
       addr: 'github.com:443'
+      cluster: false
+```
+
+{{< linked_headline "HTTP Request" >}}
+
+[Resource spec](/docs/native/packaging-an-application/commands-reference/#http-request)
+
+### Example
+
+```yaml
+custom_requirements:
+- id: http-request-github
+  message: Can access github.com
+  details: Can connect to address https://github.com.
+  results:
+  - status: success
+    message: Successful connection to the address github.com.
+    condition:
+      status_code: 200
+  - status: error
+    message:
+      default_message: 'Invalid status code {{.status}}. ERROR: {{.error}}'
+      args:
+        status: '{{repl .StatusCode }}'
+        error: '{{repl .Error }}'
+    # else error
+  command:
+    id: http_request
+    data:
+      url: 'https://github.com'
+      method: 'HEAD'
       cluster: false
 ```
 
