@@ -196,6 +196,37 @@ data:
   cluster: false
 ```
 
+{{< linked_headline "HTTP Request" >}}
+
+The HTTP Request command will make an HTTP request to the URL specified.
+The [HTTP Status Code](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) will be returned upon a successful HTTP request.
+Status code 111 (connection refused) will be returned when unable to connect to the address.
+The clustering and tags properties will determine where the command is run.
+If cluster is *false* the command will run **only** on the local node.
+
+**Id:** `http_request`
+
+**Status Codes:** 1, 22, 62, 111 [*](#status-codes) and all [HTTP Status Codes](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+
+| **Name** | **Type** | **Required** | **Description** |
+|----------|----------|--------------|-----------------|
+| url | string | yes | The HTTP request URL |
+| method | string | no | The HTTP request method (default "GET") |
+| headers | map[string]array[string] | no | Additional HTTP request headers |
+| body | string | no | The HTTP request body |
+| insecureSkipVerify | boolean | no | Skip TLS certificate verification |
+| noProxy | boolean | no | Bypass any HTTP proxy |
+
+### Example
+
+```yaml
+id: http_request
+data:
+  url: 'https://github.com'
+  method: 'HEAD'
+  cluster: false
+```
+
 # Resource Specification
 
 {{< linked_headline "Command" >}}

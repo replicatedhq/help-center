@@ -16,7 +16,7 @@ The host requirements section of the yaml gives Replicated the ability to analyz
 
 Commands will be run to determine the status of a requirement. They return result messages, a status code and an error. Next we will look at examples. For details on the fields please see the [resource specification](#resource-specification) section at the bottom of the page.
 
-### Scheduler
+{{< linked_headline "Scheduler" >}}
 
 Run a preflight check using your own Service definition.
 
@@ -24,7 +24,7 @@ Run a preflight check using your own Service definition.
 
 To begin using custom raw preflight commands, add a Service spec to your release yaml with kind `preflight-swarm`, then configure a `scheduler` command to use it in the `custom_requirements` section of your Replicated yaml.
 
-{{< linked_headline "Example" >}}
+### Example
 
 ```yaml
 ---
@@ -96,6 +96,71 @@ services:
   gpu-checker:
     image: registry.replicated.com/myapp/gpu_perf_checker:1.0.0
     command: ["/scripts/ensure_gpu.sh"]
+```
+
+{{< linked_headline "TCP Dial" >}}
+
+[Resource spec](/docs/swarm/packaging-an-application/commands-reference/#tcp-dial)
+
+### Example
+
+```yaml
+custom_requirements:
+- id: tcp-dial-github
+  message: Can access github.com
+  details: Can connect to the address github.com:443.
+  results:
+  - status: success
+    message: Successful connection to the address github.com:443.
+    condition:
+      status_code: 0
+  - status: error
+    message: Failed to connect to the address github.com:443.
+    condition:
+      status_code: 111
+  - status: warn
+    message:
+      default_message: 'Invalid status code {{.status}}. ERROR: {{.error}}'
+      args:
+        status: '{{repl .StatusCode }}'
+        error: '{{repl .Error }}'
+    # else error
+  command:
+    id: tcp_dial
+    data:
+      addr: 'github.com:443'
+      cluster: false
+```
+
+{{< linked_headline "HTTP Request" >}}
+
+[Resource spec](/docs/swarm/packaging-an-application/commands-reference/#http-request)
+
+### Example
+
+```yaml
+custom_requirements:
+- id: http-request-github
+  message: Can access github.com
+  details: Can connect to address https://github.com.
+  results:
+  - status: success
+    message: Successful connection to the address github.com.
+    condition:
+      status_code: 200
+  - status: error
+    message:
+      default_message: 'Invalid status code {{.status}}. ERROR: {{.error}}'
+      args:
+        status: '{{repl .StatusCode }}'
+        error: '{{repl .Error }}'
+    # else error
+  command:
+    id: http_request
+    data:
+      url: 'https://github.com'
+      method: 'HEAD'
+      cluster: false
 ```
 
 {{< linked_headline "Resource Specification" >}}
