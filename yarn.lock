@@ -2889,8 +2889,9 @@ strip-indent@^1.0.1:
     get-stdin "^4.0.1"
 
 striptags@^3.0.1:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/striptags/-/striptags-3.1.0.tgz#763e534338d9cf542f004a4b1eb099e32d295e44"
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/striptags/-/striptags-3.2.0.tgz#cc74a137db2de8b0b9a370006334161f7dd67052"
+  integrity sha512-g45ZOGzHDMe2bdYMdIvdAfCQkCTDMGBazSw1ypMowwGIee7ZQ5dU0rBJ8Jqgl+jAKIv4dbeE1jscZq9wid1Tkw==
 
 subarg@^1.0.0:
   version "1.0.0"
