@@ -21,7 +21,7 @@ Before installing your app, you need to install Replicated on a compatible machi
 ## Supported Operating Systems
 We support the server versions of the following OS's
 
-- Debian 7.7+
+- Debian 7.7 - 10
 - Ubuntu 14.04 / 15.10
 - Fedora 21 / 22
 - Red Hat Enterprise Linux 7.1
