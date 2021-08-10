@@ -16,7 +16,7 @@ Your machine must support docker-engine {{< docker_version_minimum >}} - {{< doc
 
 Replicated provides an easy install script to work with the following list of operating system.
 
-- Debian 7.7+
+- Debian 7.7 - 10
 - Ubuntu 14.04.5 / 16.04 / 18.04 / 20.04
 - Red Hat Enterprise Linux 7.4 - 7.9
 - CentOS 7.4 - 7.9
