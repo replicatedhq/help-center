@@ -44,13 +44,13 @@ export REPLICATED_API_TOKEN=...
 
 
 
-Next, create an API token from the [Teams and Tokens](https://vendor.replicated.com/team/tokens) page:
+Next, create a Service Account API token at vendor portal under [Service Accounts](https://vendor.replicated.com/team/serviceaccounts):
 
 ![Replicated App](https://github.com/replicatedhq/replicated-starter-kots/raw/main/doc/REPLICATED_API_TOKEN.png)
 
 
 
-Ensure the token has "Write" access or you'll be unable create new releases. Once you have the values,
+Ensure the token has the appropriate "Write" access in the selected [RBAC policy](https://vendor.replicated.com/team/policies) assigned to the token. Once you have the values,
 set them in your environment.
 
 ```shell
