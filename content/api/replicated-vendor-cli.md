@@ -25,7 +25,7 @@ sudo bash ./install.sh
 ```
 
 ## Setup
-The Replicated Vendor CLI requires an App ID or app name and an API token. These can either be passed as arguments to each command
+The Replicated Vendor CLI requires an App ID or app name and a Service Account API token. These can either be passed as arguments to each command
 ```shell
 replicated channel ls --app my-app-name --token e8d7ce8e3d3278a8b1255237e6310069
 ```
@@ -38,7 +38,7 @@ replicated channel ls
 
 AppIDs are shown on the application settings page within the vendor web portal at [https://vendor.replicated.com/settings](https://vendor.replicated.com/settings). Alternatively, application names can be found within their vendor web URLs. For example, in `https://vendor.replicated.com/apps/ademoapp/releases` the application name is `ademoapp`.
 
-An API token can be created on the [Teams & Tokens](https://vendor.replicated.com/team/tokens) page. Most use of the Replicated Vendor CLI will require both read and write access.
+A Service Account API token can be created on the [Service Accounts](https://vendor.replicated.com/team/serviceaccounts) page. Most use of the Replicated Vendor CLI will require both read and write access.
 
 For more info on IDs and tokens, see [Finding your API Token and App ID](/docs/kb/developer-resources/finding-your-api-token-and-app-id).
 
