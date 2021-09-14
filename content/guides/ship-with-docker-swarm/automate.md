@@ -47,7 +47,7 @@ Next, login to [vendor portal](https://vendor.replicated.com/) and create a [Ser
 
 <p align="center"><img src="/images/guides/swarm/REPLICATED_API_TOKEN.png" width=600></img></p>
 
-Ensure the token has the appropriate "Write" access in the selected [RBAC policy](https://vendor.replicated.com/team/policies) or you'll be unable create new releases. Once you have the values,
+Ensure the token has the appropriate "Write" access in the selected [RBAC policy](https://vendor.replicated.com/team/policies) selected for the token or you'll be unable create new releases. Once you have the values,
 set them in your environment.
 
 ```sh
