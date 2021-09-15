@@ -16,7 +16,7 @@ environment: &environment
 defaults: &defaults
   <<: *environment
   docker:
-    - image: circleci/node:8.9.4
+    - image: cimg/node:8.9.4
 
 defaults_eks: &defaults_eks
   docker:
@@ -32,7 +32,7 @@ defaults_eks: &defaults_eks
 defaults_py: &defaults_py
   <<: *environment
   docker:
-    - image: circleci/python:2
+    - image: cimg/python:2
 
 setup_steps: &setup_steps
   command: |
