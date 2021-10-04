@@ -56,6 +56,12 @@ index: "other"
 | [platform/team/token/[:tokenName]/read](#platform-team-token-tokenname-read) |
 | [platform/team/token/create](#platform-team-token-create) |
 | [platform/team/token/[:tokenName]/delete](#platform-team-token-tokenname-delete) |
+| [user/token/list](#user-token-list) |
+| [user/token/create](#user-token-create) |
+| [user/token/delete](#user-token-delete) |
+| [team/serviceaccount/list](#team-serviceaccount-list) |
+| [team/serviceaccount/create](#team-serviceaccount-create) |
+| [team/serviceaccount/[:name]/delete](#team-serviceaccount-name-delete) |
 | [team/auditlog/read](#team-auditlog-read) |
 | [team/policy/read](#team-policy-read) |
 | [team/policy/update](#team-policy-update) |
@@ -259,6 +265,30 @@ Grants the holder permission to create new API tokens for the team.
 ### platform/team/token/[:tokenName]/delete
 
 Grants the holder permission to delete the token(s) identified by the names specified.
+
+### user/token/list
+
+Grants the holder permission to list user tokens.
+
+### user/token/create
+
+Grants the holder permission to create new user tokens.
+
+### user/token/delete
+
+Grants the holder permission to delete user tokens.
+
+### team/serviceaccount/list
+
+Grants the holder permission to list service accounts.
+
+### team/serviceaccount/create
+
+Grants the holder permission to create new service accounts.
+
+### team/serviceaccount/[:name]/delete
+
+Grants the holder permission to delete the service account identified by the name specified.
 
 ### team/auditlog/read
 
