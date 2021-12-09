@@ -49,14 +49,6 @@ hugo_setup_steps: &hugo_setup_steps
     sudo mv hugo /usr/bin/hugo
 
 jobs:
-  linkcheck_prod:
-    <<: *defaults_eks
-    steps:
-      - checkout
-      - run:
-          name: Link Check Production
-          command: |
-                  make linkcheck
   build_staging:
     <<: *defaults_py
     steps:
@@ -229,12 +221,6 @@ workflows:
             branches:
               only: master
       - build_prod_index:
-          requires:
-            - deploy_sleep
-          filters:
-            branches:
-              only: master
-      - linkcheck_prod:
           requires:
             - deploy_sleep
           filters:
