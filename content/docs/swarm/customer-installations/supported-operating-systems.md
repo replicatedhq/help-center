@@ -10,6 +10,10 @@ icon: "replicatedDockerSwarm"
 gradient: "swarm"
 ---
 
+{{<kotsdocs>}}
+For the operating systems supported for KOTS embedded-cluster installations, check out the *[KOTS system requirements](https://kots.io/kotsadm/installing/system-requirements/)*.
+{{</kotsdocs>}}
+
 Replicated supports Linux-based servers that can run current versions of Docker.
 
 Your machine must support docker-engine {{< swarm_docker_version_minimum >}} - {{< swarm_docker_version_default >}}
