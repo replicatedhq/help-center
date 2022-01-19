@@ -4,9 +4,9 @@ jobs:
   filter-to-pr-open-synced:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@main
     - name: filter-to-pr-open-synced
-      uses: actions/bin/filter@master
+      uses: actions/bin/filter@main
       with:
         args: action 'opened|synchronize'
     - name: linkcheck
