@@ -4,7 +4,7 @@ jobs:
   filter-to-pr-open-synced:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@main
+    - uses: actions/checkout@v2
     - name: filter-to-pr-open-synced
       uses: actions/bin/filter@main
       with:
