@@ -1,14 +1,13 @@
 on: pull_request
 name: Hugo Link Check
+on:
+  pull_request:
+    types: [opened, synchronized]
 jobs:
   filter-to-pr-open-synced:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: filter-to-pr-open-synced
-      uses: actions/bin/filter@main
-      with:
-        args: action 'opened|synchronize'
     - name: linkcheck
       uses: marccampbell/hugo-linkcheck-action@v0.1.2
       env:
