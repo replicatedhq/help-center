@@ -7,7 +7,10 @@
 	<title>{{ if .Page.Params.pageTitle }}{{ .Page.Params.pageTitle }}{{ else }}{{ .Title }}{{ end }}</title>
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-
+	{{ if not (in $.Permalink "api")}} 
+		<meta name="robots" content="noindex">
+		<meta name="googlebot" content="noindex">
+	{{ end }}
 	<link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}favicons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}favicons/favicon-16x16.png">
