@@ -3,7 +3,7 @@ experimental:
   notify:
     branches:
       only:
-      - master
+      - main
 
 environment: &environment
   environment:
@@ -26,7 +26,7 @@ defaults_eks: &defaults_eks
     PROJECT_NAME: help-center
     ECR_REPO: 923411875752.dkr.ecr.us-east-1.amazonaws.com
     OVERLAY_PATH: kustomize/overlays/staging
-    GITOPS_BRANCH: master
+    GITOPS_BRANCH: main
     DOCKERFILE: build/Dockerfile
 
 defaults_py: &defaults_py
@@ -201,23 +201,23 @@ workflows:
       - build_staging:
           filters:
             branches:
-              only: master
+              only: main
       - build_production:
           filters:
             branches:
-              only: master
+              only: main
       - deploy_staging_eks:
           requires:
             - build_staging
           filters:
             branches:
-              only: master
+              only: main
       - deploy_production_eks:
           requires:
             - build_production
           filters:
             branches:
-              only: master
+              only: main
       - deploy_sleep:
           requires:
             - deploy_staging_eks
@@ -227,16 +227,16 @@ workflows:
             - deploy_sleep
           filters:
             branches:
-              only: master
+              only: main
       - build_prod_index:
           requires:
             - deploy_sleep
           filters:
             branches:
-              only: master
+              only: main
       - linkcheck_prod:
           requires:
             - deploy_sleep
           filters:
             branches:
-              only: master
+              only: main
