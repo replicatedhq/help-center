@@ -7,7 +7,7 @@ categories: [ "Vendor RBAC" ]
 index: "other"
 ---
 
-| Resouce Name |
+| Resource Name |
 |----|
 | [platform/app/:appId/delete](#platform-app-appid-delete) |
 | [platform/app/create](#platform-app-create) |
