@@ -1,7 +1,6 @@
 const client = algoliasearch('5PHVQPX4AR', '92575152510e5cdaf7a0df17c446d879');
 const otherIndex = client.initIndex('help_center_staging_other');
 const docsIndex = client.initIndex('help_center_staging_docs_native');
-const guidesIndex = client.initIndex('help_center_staging_guides');
 const discourseIndex = client.initIndex('discourse-posts');
 
 autocomplete('#search-field', {
@@ -28,25 +27,6 @@ autocomplete('#search-field', {
             },
             empty: "<div class='aa-empty'>No results</div>"
         },
-    },
-    {
-        source: _.debounce(autocomplete.sources.hits(guidesIndex, {
-            hitsPerPage: 2
-        }), 200),
-        displayKey: 'title',
-        name: 'guides',
-        templates: {
-            header: '<h2 class="aa-header">Guides</h2>',
-            suggestion: function(suggestion) {
-                const hasDescription = (suggestion._highlightResult).hasOwnProperty("description");
-
-                return '<h3 class="aa-suggestion-header">' +
-                    suggestion._highlightResult.title.value + '</h3>' +
-                    '<p class="aa-suggestion-description">' + (hasDescription ? suggestion._highlightResult.description.value : "") + '</p>' +
-                    '<span class="icon u-guidesIcon"></span>'
-            },
-            empty: "<div class='aa-empty'>No results</div>"
-        }
     },
     {
         source: _.debounce(autocomplete.sources.hits(otherIndex, {

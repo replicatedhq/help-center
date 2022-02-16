@@ -31,7 +31,6 @@
   position: relative;
 }
 
-.aa-dataset-guides,
 .aa-dataset-other,
 .aa-dataset-docs {
   margin: 20px 0;
@@ -65,8 +64,7 @@
   border-bottom: none;
 }
 
-.aa-dataset-docs .aa-suggestion,
-.aa-dataset-guides .aa-suggestion  {
+.aa-dataset-docs .aa-suggestion  {
   padding-left: 60px;
   position: relative;
 }
