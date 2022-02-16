@@ -22,6 +22,7 @@ footer {
 }
 .footer-item li {
   font-size: 12px;
+  line-height: 20px;
   font-weight: 500;
   padding-bottom: 14px;
   position: relative;
