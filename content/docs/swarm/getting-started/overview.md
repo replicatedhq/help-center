@@ -11,6 +11,8 @@ icon: "replicatedDockerSwarm"
 hideFromList: true
 ---
 
+{{<legacynotice>}}
+
 Replicated can be used with a Docker Swarm application to deploy an enterprise-installable version of your application. Replicated provides developers with the ability to support their applications, allow users to configure it for their enterprise environment, and offer their application as an appliance. When using Docker Swarm with Replicated, developers continue to get all of the functionality of the Replicated platform while having access to all of the Docker Swarm functionality.
 
 ## When to Use the Docker Swarm Scheduler

@@ -10,9 +10,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-{{<kotsdocs>}}
-For KOTS documentation, check out [kots.io](https://kots.io/vendor).
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 {{< linked_headline "Replicated Data Transmission Policy" >}}
 

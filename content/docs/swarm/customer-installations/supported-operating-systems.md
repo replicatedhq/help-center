@@ -10,6 +10,8 @@ icon: "replicatedDockerSwarm"
 gradient: "swarm"
 ---
 
+{{<legacynotice>}}
+
 Replicated supports Linux-based servers that can run current versions of Docker.
 
 Your machine must support docker-engine {{< swarm_docker_version_minimum >}} - {{< swarm_docker_version_default >}}

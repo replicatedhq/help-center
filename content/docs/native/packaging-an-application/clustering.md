@@ -9,6 +9,8 @@ icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/clustering/]
 ---
 
+{{<legacynotice name="native">}}
+
 By default Replicated will start one instance per component and container in your application on a single host. With the addition of clustering your application can optionally leverage multiple hosts as well as multiple instances per host.
 
 *See an example of setting up a Cassandra Cluster with Replicated [here](/docs/kb/developer-resources/multi-node-cassandra/)*

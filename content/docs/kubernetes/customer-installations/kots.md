@@ -9,9 +9,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-{{<kotsdocs>}}
-For KOTS documentation, check out [kots.io](https://kots.io/vendor).
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 [Replicated KOTS](https://kots.io/vendor/packaging/packaging-an-app/) provides software vendors with the tools they need to operationalize and scale the distribution of their Kubernetes application into enterprise environments. Similar to Replicated Classic, these tools include Kubernetes-native versions of release channels, customer license management, automated troubleshooting and a next-generation end-customer admin experience. KOTS applications can be installed into various environments and Kubernetes clusters, from airgapped, bare metal Kubernetes installs to managed offering such as EKS, GKE and AKS, and many options in between.
 

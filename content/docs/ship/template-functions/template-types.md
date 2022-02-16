@@ -9,6 +9,8 @@ icon: "replicatedShip"
 gradient: "console"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Replicated Ship Template Functions" >}}
 
 Template functions are the key to providing dynamic contents or behavior within a Ship application.

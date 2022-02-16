@@ -9,11 +9,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-{{<kotsdocs>}}
-For KOTS documentation, check out [kots.io](https://kots.io/vendor).
-
-The default KOTS contour ingress controller is documented at [kurl.sh/docs/add-ons/contour](https://kurl.sh/docs/add-ons/contour).
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 {{< linked_headline "Ingress Controllers" >}}
 

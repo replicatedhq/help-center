@@ -9,6 +9,8 @@ icon: "replicatedShip"
 gradient: "console"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Pulling images from Replicated registry" >}}
 
 When installing an application on a server that has internet access, private images can be served from Replicated registry. Authentication will be performed with `license_id`. This can be used with the `docker login` command or as Kubernetes registry secrets. In the following example, a Kubernetes secret is created in order to pull a private image from Replicated registry.

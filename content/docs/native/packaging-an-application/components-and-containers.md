@@ -9,6 +9,8 @@ icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/components-and-containers/]
 ---
 
+{{<legacynotice name="native">}}
+
 The `components` section of the YAML defines how the containers will be created and started. A component is
 a group of one or more containers that are guaranteed to run on the same node.
 

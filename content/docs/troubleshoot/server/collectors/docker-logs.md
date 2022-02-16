@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # Docker Logs
 
 Because most applications deployed in Replicated are running in Docker containers, a commonly used collector spec is the `docker.logs` collector. This will copy the output (stdout/etderr) from a docker container and include it in a support bundle.

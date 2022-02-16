@@ -11,6 +11,8 @@ gradient: "orangeToOrange"
 hideFromList: true
 ---
 
+{{<legacynotice>}}
+
 # Troubleshoot Examples
 
 This section contains some examples of collectors and lifecycle specs that you can copy into your own custom collectors.

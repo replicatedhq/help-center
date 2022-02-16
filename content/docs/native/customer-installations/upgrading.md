@@ -9,6 +9,8 @@ aliases: [/docs/distributing-an-application/upgrading,/tags/upgrading-replicated
 icon: "replicatedCircle"
 ---
 
+{{<legacynotice name="native">}}
+
 You can update all Replicated component versions to latest by re-running the installation
 script.
 

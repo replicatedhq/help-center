@@ -10,9 +10,7 @@ gradient: "kubernetes"
 nextPage: "kubernetes/packaging-an-application/yaml-format.md"
 ---
 
-{{<kotsdocs>}}
-To use Rook with KOTS, check out the [kurl.sh Rook add-on docs](https://kurl.sh/docs/add-ons/rook).
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 Replicated selected [Ceph](https://ceph.io) block storage managed by [Rook](https://rook.io) as the default provisioner for `PersistentVolumeClaims` in embedded Kubernetes clusters.
 The reliability of Ceph along with the operational simplicity of Rook offers a number of advantages.

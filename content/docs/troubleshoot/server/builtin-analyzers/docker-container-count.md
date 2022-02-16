@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # Docker Container Count
 
 Below is an example of an analyzer that will parse the output of the `docker info` command and display the number of containers running.

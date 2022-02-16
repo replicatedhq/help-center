@@ -11,11 +11,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-{{<kotsdocs>}}
-This document is about migrating from the Replicated Native Scheduler to Replicated Airgapped Kubernetes Appliance (AKA). 
-AKA has since been replaced by [KOTS](https://kots.io) + [kURL](https://kurl.sh). 
-If you need help migrating your Native Scheduler installations to KOTS, please [contact us](https://vendor.replicated.com/support).
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 
 Replicated 2.33+ provides a Kubernetes migration script that can be used to import compatible apps from installations running with the native scheduler.

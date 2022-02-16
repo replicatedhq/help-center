@@ -10,6 +10,8 @@ aliases: []
 gradient: "swarm"
 ---
 
+{{<legacynotice>}}
+
 Replicated has support for automated installation and configuration. This feature is built for bootstrapping new installations and not for managing existing installations.
 
 These steps must be run before installing Replicated. Replicated will only check for these

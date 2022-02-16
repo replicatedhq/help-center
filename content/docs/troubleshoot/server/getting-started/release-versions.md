@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # Troubleshoot Container Tags
 
 When running the [replicated/support-bundle](https://hub.docker.com/r/replicated/support-bundle) container as a docker run command, we often provide a command that includes the ":latest" tag. This is recommended because it's a one time process and generally demands the latest troubleshooting tools. If you ware automating part of this process or packaging a reproducible deployment, you can use a named tag to guarantee the same image will be used. The following table documents our tagging and release strategy for the [replicated/support-bundle](https://hub.docker.com/r/replicated/support-bundle) image.

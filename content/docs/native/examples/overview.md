@@ -10,6 +10,8 @@ icon: "replicatedCircle"
 hideFromList: true
 ---
 
+{{<legacynotice name="native">}}
+
 This section contains examples of deploying an application in Replicated using the Native Scheduler.
 
 - [Counter App](/docs/native/examples/counter-app): A simple example of an app that has nginx and redis using the Native Scheduler

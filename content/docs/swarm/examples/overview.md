@@ -11,6 +11,8 @@ icon: "replicatedDockerSwarm"
 hideFromList: true
 ---
 
+{{<legacynotice>}}
+
 This section contains some examples of shipping an application in Replicated with Docker Swarm.
 
 - [Redis](/docs/swarm/examples/redis): An example of using user configuration with Swarm to template out a Redis config file

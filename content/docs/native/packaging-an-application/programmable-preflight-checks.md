@@ -9,6 +9,8 @@ icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/preflight-checks/,/tags/preflight-checks/,/docs/native/packaging-an-application/preflight-checks]
 ---
 
+{{<legacynotice name="native">}}
+
 The host requirements section of the YAML gives Replicated the ability to analyze system
 requirements and warn or prevent the user from proceeding with an installation or upgrade. In
 addition to host requirements, Replicated has the ability to define fully customizable preflight

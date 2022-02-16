@@ -10,6 +10,8 @@ aliases: [docs/distributing-an-application/supported-operating-systems,/docs/nat
 icon: "replicatedCircle"
 ---
 
+{{<legacynotice name="native">}}
+
 Replicated supports Linux-based servers that can run current versions of Docker.
 
 Your machine must support docker-engine {{< docker_version_minimum >}} - {{< docker_version_default >}} (with {{< docker_version_default >}} being the recommended version). This also requires a 64-bit distribution with a kernel minimum of 3.10.

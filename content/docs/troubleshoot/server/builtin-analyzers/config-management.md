@@ -12,6 +12,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # Config Management Software
 
 Popular configuration management tools such as Chef, Puppet and Ansible are used to help management large numbers of servers using automation.

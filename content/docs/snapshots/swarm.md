@@ -8,6 +8,8 @@ index: "other"
 aliases: [/docs/packaging-an-application/swarm-snapshots/,/docs/swarm/packaging-an-application/snapshots/]
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Snapshots with Docker Swarm" >}}
 
 Any volumes holding your application data can be included in snapshots by listing them under the `backup` section in your config. Replicated will check all nodes in your cluster for volumes with a matching name and include them in your snapshot.

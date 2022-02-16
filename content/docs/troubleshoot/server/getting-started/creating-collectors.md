@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # Creating Custom Collectors
 
 The contents of a support bundle is controlled by the list of custom collectors that are supplied. While there's a lot of defaults, it's recommended that you add to these and create a set of custom collectors to include application logs and specific data that's useful when troubleshooting application-level problems.

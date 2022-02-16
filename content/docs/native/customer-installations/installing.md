@@ -10,6 +10,8 @@ aliases: [docs/distributing-an-application/installing]
 icon: "replicatedCircle"
 ---
 
+{{<legacynotice name="native">}}
+
 ## Prerequisites
 Before installing Replicated review the list of
 [supported operating systems](/docs/native/packaging-an-application/supported-operating-systems/).

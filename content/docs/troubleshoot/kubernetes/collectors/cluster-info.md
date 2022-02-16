@@ -8,6 +8,8 @@ icon: "replicatedTroubleshoot"
 gradient: "blueToBlue"
 ---
 
+{{<legacynotice>}}
+
 The cluster info collector is a default collector-- it will be automatically included in your collector spec if you don't include it.
 
 This collector does not accept any parameters.

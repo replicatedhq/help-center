@@ -9,6 +9,8 @@ icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/application-properties/]
 ---
 
+{{<legacynotice name="native">}}
+
 The properties section of the YAML allows you to configure properties of the admin console.
 
 Below is an example of the properties section of an application config YAML.

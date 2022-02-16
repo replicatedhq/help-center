@@ -9,6 +9,7 @@ icon: "replicatedCircle"
 aliases: [/tags/studio/, /docs/kb/developer-resources/using-replicated-studio-to-quickly-iterate-on-your-yaml/]
 ---
 
+{{<legacynotice name="native">}}
 
 In order to get your application working with Replicated, you'll want to set up a simple environment to iterate on your Replicated YAML and images. Our Replicated Studio is designed to shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.
 

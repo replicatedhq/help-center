@@ -8,6 +8,8 @@ index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 ---
 
+{{<legacynotice name="native">}}
+
 {{< linked_headline "Ports" >}}
 
 The Replicated Native Scheduler does not deploy with an overlay network. All container-to-container communication has to occur on the host networking stack.

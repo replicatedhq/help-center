@@ -9,6 +9,8 @@ icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/custom-preflight-checks/]
 ---
 
+{{<legacynotice name="native">}}
+
 A programmable preflight check is a test that is run before installing and running an application.  The test will analyze the system to determine if the environment meets the minimum requirements.
 
 The preflight check may be manually run for an existing installation by visiting https://&lt;your server address&gt;:8800/run-checks

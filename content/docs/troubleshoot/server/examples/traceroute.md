@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # Traceroute
 
 Initiating a traceroute from the remote server to another remote server during support bundle generation is a good way to check on the outbound route used.

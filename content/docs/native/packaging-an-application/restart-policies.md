@@ -8,6 +8,8 @@ index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 ---
 
+{{<legacynotice name="native">}}
+
 {{< linked_headline "Restart Policies" >}}
 
 The Replicated Native Scheduler will warn if a container stops, but it doesn't take action to reschedule and/or restart a container, by default. You can rely on Docker's built-in restart policies to control this behavior when using the Replicated Native Scheduler.

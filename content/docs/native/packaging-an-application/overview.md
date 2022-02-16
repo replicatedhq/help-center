@@ -10,6 +10,8 @@ icon: "replicatedCircle"
 hideFromList: true
 ---
 
+{{<legacynotice name="native">}}
+
 This section will walk you through creating the first release, and will document all available options you can use when writing an application for the Replicated Native Scheduler.
 
 Replicated will deploy an application that is defined in a YAML manifest. There are several top level keys (sections) of a Replicated YAML. The YAML spec is defined at [https://github.com/replicatedhq/libyaml/](https://github.com/replicatedhq/libyaml/).

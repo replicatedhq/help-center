@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # Creating Custom Analyzers
 
 Custom analysis can be performed by creating an analyze document specifying a list of custom analyzers to be applied to a bundle. Although there are defaults, it is recommended that you add additional to create a set of custom analyzers to help when troubleshooting application-level problems.

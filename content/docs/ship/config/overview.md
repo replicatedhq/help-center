@@ -10,6 +10,8 @@ hideFromList: true
 gradient: "console"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Ship Config" >}}
 
 The config key is where you can define the dynamic values that end customers need to configure before they can use your application. It might include things like:

@@ -10,9 +10,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-{{<kotsdocs>}}
-For KOTS, check out [upgrading kurl.sh installs](https://kurl.sh/docs/install-with-kurl/upgrading).
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 Re-run the install script to upgrade Replicated to the latest version.
 ```shell

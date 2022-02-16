@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "blueToBlue"
 ---
 
+{{<legacynotice>}}
+
 Both Troubleshoot and Preflight are built and packaged to be run by the cluster administrator, with no knowledge of the application.
 
 ## Preflight Checks

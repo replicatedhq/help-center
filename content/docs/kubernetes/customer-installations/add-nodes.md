@@ -9,9 +9,7 @@ index: ["docs/kubernetes", "docs"]
 gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
-{{<kotsdocs>}}
-For information about adding nodes to a kURL cluster, check out the [kurl.sh docs](https://kurl.sh/docs/install-with-kurl/adding-nodes).
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 When an application is configured by the vendor with a clustering strategy, Replicated makes it possible for the end customer to install additional nodes on remote instances to run a distributed application.
 

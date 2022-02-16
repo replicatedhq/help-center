@@ -10,6 +10,8 @@ icon: "replicatedCircle"
 nextPage: "native/customer-installations/overview.md"
 ---
 
+{{<legacynotice name="native">}}
+
 Every Replicated license points to a Release Channel. When a license is installed, it will pull down and install the release that is currently at the top of its channel. It’s recommended to create customer licenses on the Stable channel, and only promote releases to Stable that are ready for all customers to install.
 
 Once an application is installed, the active instance can be updated by promoting a release to the channel that instance is licensed to (likely Stable).  Each instance will periodically check for new releases. When a new release is found, the Replicated installation will show a button that allows end customers managing the instance to read the release notes and install the update.

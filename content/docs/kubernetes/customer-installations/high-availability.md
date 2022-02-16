@@ -11,9 +11,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-{{<kotsdocs>}}
-For HA KOTS clusters with kURL, the kots.io site has a great [guide on HA clusters](https://kots.io/vendor/guides/ha-guide/).
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 Replicated Embedded Kubernetes has the ability to run in highly available mode with multiple Kubernetes control plane nodes. The addition of the `ha` flag when running the Kubernetes easy-install script signals to Replicated that this cluster should be run in HA mode. In addition to the cluster, the only other requirement is an external load balancer, which is necessary to expose the kube-apiserver to secondary nodes. In order to upgrade an existing cluster to HA, just rerun the installation script with the addition of the `ha` flag.
 

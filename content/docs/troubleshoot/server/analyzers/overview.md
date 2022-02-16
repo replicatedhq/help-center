@@ -11,6 +11,8 @@ gradient: "orangeToOrange"
 hideFromList: true
 ---
 
+{{<legacynotice>}}
+
 # Analyzers
 
 **For access to this alpha feature, please [contact us](https://vendor.replicated.com/support).**

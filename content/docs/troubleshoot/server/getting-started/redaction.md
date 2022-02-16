@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # Redacting Sensitive Information
 
 Production environments contain sensitive information (passwords, private keys, etc).

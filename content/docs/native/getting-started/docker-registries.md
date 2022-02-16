@@ -9,6 +9,8 @@ icon: "replicatedCircle"
 aliases: [/docs/getting-started/replicated-private-registry/,/docs/kb/supporting-your-customers/registries/]
 ---
 
+{{<legacynotice name="native">}}
+
 When building your application, you have the option to use the Replicated private registry, or any supported external private or public registry.
 
 {{< linked_headline "Replicated Registry" >}}

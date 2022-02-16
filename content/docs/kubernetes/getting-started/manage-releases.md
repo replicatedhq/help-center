@@ -9,9 +9,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-{{<kotsdocs>}}
-To get started with KOTS releases, check out [kots.io](https://kots.io/vendor/guides/quickstart).
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 {{< linked_headline "Create Releases" >}}
 

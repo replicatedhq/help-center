@@ -10,9 +10,7 @@ icon: "replicatedKubernetes"
 aliases: [/docs/kubernetes/packaging-an-application/overview/]
 ---
 
-{{<kotsdocs>}}
-For documentation on the KOTS YAML objects, check out [KOTS Custom Resources](https://kots.io/reference/v1beta1/)
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 Replicated will deploy an application that is defined in a YAML spec. We currently support deploying an application that uses the Replicated scheduler or deploying a Kubernetes application. Understanding how each of these will be installed and maintained is an important consideration when choosing the scheduler to use to deploy your application.
 

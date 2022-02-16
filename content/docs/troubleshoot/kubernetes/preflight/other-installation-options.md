@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "blueToBlue"
 ---
 
+{{<legacynotice>}}
+
 If krew plugins are not an option, it's still possible to run the same Preflight tool by installing a binary on your workstation, or by running preflights in a Docker container.
 
 ## Binary

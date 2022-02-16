@@ -9,6 +9,8 @@ icon: "replicatedDockerSwarm"
 gradient: "swarm"
 ---
 
+{{<legacynotice>}}
+
 ## Mounted Secrets Example
 This is an example of an Nginx application mounting certificates with Docker Swarm secrets.
 

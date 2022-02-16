@@ -7,6 +7,8 @@ categories: [ "LDAP And Identity Integration" ]
 index: "other"
 ---
 
+{{<legacynotice>}}
+
 Replicated currently supports LDAP Authentication and sync in the following directory servers:
 
 - [Microsoft Active Directory (2008 and 2012)](https://microsoft.com)

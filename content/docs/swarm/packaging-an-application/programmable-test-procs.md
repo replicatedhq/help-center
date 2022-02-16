@@ -9,6 +9,8 @@ icon: "replicatedDockerSwarm"
 gradient: "swarm"
 ---
 
+{{<legacynotice>}}
+
 Programmable Test Procedures enable you to run an arbitrary Services to validate the same input from the configuration screen and show a friendly error message to the end-user. You can use runtime configuration as input to your Service command and capture the result code and message and format it for display to the end-user.
 
 {{< linked_headline "Example" >}}

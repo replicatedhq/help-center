@@ -9,6 +9,8 @@ icon: "replicatedCircle"
 aliases: [/docs/examples/load-balancer-example/,/tags/load-balancer/]
 ---
 
+{{<legacynotice name="native">}}
+
 ## Load-Balanced Counter App
 This example runs multiple instances of the [counter app](/docs/examples/counter-app/) on separate nodes.
 An nginx container serves as a load balancer to the backend counter containers.

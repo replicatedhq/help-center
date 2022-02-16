@@ -9,6 +9,8 @@ aliases: [/docs/packaging-an-application/kubernetes-snapshots/]
 nextPage: "ldap-and-identity/overview.md"
 ---
 
+{{<legacynotice>}}
+
 Kubernetes Snapshots can be used to configure incremental backups for any Kubernetes resources
 that use a [Persistent Volume Claim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) (PVC)
 for persistent storage.

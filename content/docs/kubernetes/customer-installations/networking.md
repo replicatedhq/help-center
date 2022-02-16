@@ -9,9 +9,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-{{<kotsdocs>}}
-For an overview of networking in KOTS + kURL clusters, check out the [kurl.sh](https://kurl.sh) docs for [weave net](https://kurl.sh/docs/add-ons/weave). 
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 Replicated uses [Weave](https://www.weave.works/docs/net/latest/kubernetes/kube-addon/) to assign IP addresses to pods and connect them across multiple hosts.
 Weave runs as a DaemonSet in the `kube-system` namespace and includes a controller to support [Network Policy](https://kubernetes.io/docs/concepts/services-networking/network-policies/) resource types.

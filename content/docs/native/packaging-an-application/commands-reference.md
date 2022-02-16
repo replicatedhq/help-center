@@ -8,6 +8,8 @@ index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 ---
 
+{{<legacynotice name="native">}}
+
 # Commands
 
 Commands are a sub-specification of both [Programmable Preflight Checks](/docs/native/packaging-an-application/programmable-preflight-checks/) and [Test Procedures](/docs/native/packaging-an-application/programmable-test-procs/). They return result messages, a status code and an error. Next we will look at examples. For details on the properties please see the [resource specification](#resource-specification) section at the bottom of the page.

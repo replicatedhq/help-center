@@ -11,6 +11,8 @@ icon: "replicatedTroubleshoot"
 gradient: "blueToBlue"
 ---
 
+{{<legacynotice>}}
+
 All analyzers are specified in a single YAML file. To build a set of analyzers, start with a Kubernetes YAML file:
 
 ```yaml

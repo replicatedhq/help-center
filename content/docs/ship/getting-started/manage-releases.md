@@ -9,6 +9,8 @@ gradient: "console"
 icon: "replicatedShip"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Create Releases" >}}
 
 The [Replicated vendor portal](https://vendor.replicated.com) provides you with a location to create and release versions of your application to various release channels. The vendor portal hosts a built-in YAML editor and linter to help you write and validate YAML.

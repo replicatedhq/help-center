@@ -9,6 +9,8 @@ icon: "replicatedShip"
 gradient: "console"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Docker Asset Type" >}}
 
 Docker asset types are useful to deliver both private and public Docker images to an installation. It's recommended to build for airgapped environments, where images cannot be pulled directly from the upstream registry. Using the `docker` asset type, it's possible to pull and load images on the workstation running the installation. Once pulled, adding a [simple script to push these to a local registry](/docs/ship/playbooks/airgap-kubernetes/) will ensure that the cluster can bootstrap and run offline. The [YAML reference documentation](https://help.staging.replicated.com/api/ship-assets/docker/) is published that defines all available keys.

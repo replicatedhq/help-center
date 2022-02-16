@@ -9,9 +9,7 @@ icon: "replicatedKubernetes"
 gradient: "kubernetes"
 ---
 
-{{<kotsdocs>}}
-For KOTS documentation, check out [kots.io](https://kots.io/vendor).
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 The Replicated Kubernetes installer builds on [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/), adding support for Pod networking, relocatable Persistent Volumes, and Ingress.
 

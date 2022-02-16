@@ -9,6 +9,8 @@ gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---
 
+{{<legacynotice>}}
+
 Once your application is working in Docker, you'll want to set up a simple environment to iterate on your Replicated YAML. Our Starter Repo is designed to shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.
 
 {{< linked_headline "Prerequisites " >}}

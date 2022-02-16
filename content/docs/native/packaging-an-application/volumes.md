@@ -8,6 +8,8 @@ index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 ---
 
+{{<legacynotice name="native">}}
+
 {{< linked_headline "Container Volumes" >}}
 
 The `volumes` key defines an array of volumes to be created and mounted when using the Replicated Native Scheduler. Only the `host_path` and `container_path` keys are required for each volume. When new versions of your container are deployed, the volume will be mounted into the updated container.

@@ -9,6 +9,8 @@ gradient: "console"
 icon: "replicatedShip"
 ---
 
+{{<legacynotice>}}
+
 Each customer you deploy to via Replicated will need a separate license file for their installation. This license file identifies the customer & application during the installation and update processes. A customer license is created in the Customers section of the [vendor portal](https://vendor.replicated.com/customers). You can manage the values and properties of that customer and license by selecting an individual customer.
 
 ![](/images/post-screens/create-customer-ship.png)

@@ -7,6 +7,8 @@ categories: [ "Snapshots" ]
 index: "other"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Using the CLI to Restore Snapshots" >}}
 
 The Replicated CLI can be used to examine and restore snapshots. There are two ways to configure snapshots backend without accessing the UI. Configuration options can be added to the /etc/replicated.conf file or specified on the command line.

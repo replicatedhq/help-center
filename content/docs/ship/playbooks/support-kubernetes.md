@@ -9,6 +9,8 @@ icon: "replicatedShip"
 gradient: "console"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Troubleshooting a Kubernetes Application" >}}
 
 When distributing a Kubernetes (or Helm) application, things may sometimes go wrong with getting your app running in your end customer's installation environment. A few examples:

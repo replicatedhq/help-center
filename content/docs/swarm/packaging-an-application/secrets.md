@@ -9,6 +9,8 @@ gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Docker Secrets" >}}
 
 Docker introduced support for secret management in Docker 1.13. When running an application on Replicated and Docker Swarm, the minimum supported Docker version is {{< swarm_docker_version_minimum >}}, so this functionality will always be available to your application.

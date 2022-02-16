@@ -8,6 +8,8 @@ icon: "replicatedTroubleshoot"
 gradient: "blueToBlue"
 ---
 
+{{<legacynotice>}}
+
 The run pod collector is not automatically included. You need to specify it in your spec to include pod logs. You can include this spec multiple times.
 
 

@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "blueToBlue"
 ---
 
+{{<legacynotice>}}
+
 By default troubleshoot will redact sensitive information from all collectors. This includes
 
 - passwords

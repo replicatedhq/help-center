@@ -8,6 +8,9 @@ index: false
 icon: "replicatedShip"
 gradient: "console"
 ---
+
+{{<legacynotice>}}
+
 {{< linked_headline "Web Asset Type" >}}
 
 

@@ -9,6 +9,8 @@ gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---
 
+{{<legacynotice>}}
+
 ## Redis Example
 This is an example of Redis setup with templated configuration. This example will insert some configuration values into the Redis config via templating.
 

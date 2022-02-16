@@ -10,9 +10,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-{{<kotsdocs>}}
-For existing-cluster installations with KOTS, check out the [KOTS Documentation](https://kots.io/kotsadm/installing/installing-a-kots-app/).
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 ## Existing Cluster Installation
 {{< warning title="Airgap Not Supported" >}}

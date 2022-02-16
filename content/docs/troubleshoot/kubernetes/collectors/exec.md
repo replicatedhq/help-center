@@ -8,6 +8,8 @@ icon: "replicatedTroubleshoot"
 gradient: "blueToBlue"
 ---
 
+{{<legacynotice>}}
+
 Optional `exec` collectors can be defined to collect output from commands executed inside running containers.
 
 For example:

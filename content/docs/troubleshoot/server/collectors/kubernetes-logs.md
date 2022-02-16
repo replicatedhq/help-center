@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # Kubernetes Logs
 
 Collecting Kubernetes pod logs is a commonly used feature of a collector. This collector is the equivelent of `kubectl logs` and including the output in the support bundle.

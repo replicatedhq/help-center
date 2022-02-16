@@ -9,6 +9,8 @@ icon: "replicatedShip"
 gradient: "console"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Managing Persistent Random Strings" >}}
 
 When distributing an applications, it can be useful to generate passwords as part of the bootstrap process. For example, if your app bundles an SQL database, you'll want to set a password on this database, and allow other application components to use that password to access the data. This can be done through the use of a hidden, mutable string value and the `RandomString` template function.

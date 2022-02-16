@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # How to run Analyzers
 
 The Analyze Replicated Troubleshoot utility is distributed in a Docker container that's publicly available at [hub.docker.com/r/replicated/analyze](https://hub.docker.com/r/replicated/analyze).

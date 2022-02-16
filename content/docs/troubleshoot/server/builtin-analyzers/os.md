@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # OS
 
 Below is an example of a list of analyzers that will parse the `/etc/os-release` file and display the OS of the host for many common operating systems.

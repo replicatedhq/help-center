@@ -9,6 +9,8 @@ icon: "replicatedCircle"
 aliases: [/docs/examples/counter-app/]
 ---
 
+{{<legacynotice name="native">}}
+
 ## Counter App
 This is an example of a general-purpose Replicated app definition. You can use this app as a template for your own, as it covers the basic functionality of the Replicated platform.
 

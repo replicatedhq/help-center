@@ -9,6 +9,8 @@ gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---
 
+{{<legacynotice>}}
+
 The Replicated [install script](/docs/swarm/customer-installations/installing/) provides several configuration options for working with an HTTP proxy.
 Passing the `no-proxy` flag to the install script will disable all proxy discovery and configuration.
 

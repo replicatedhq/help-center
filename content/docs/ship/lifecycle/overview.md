@@ -10,6 +10,8 @@ hideFromList: true
 gradient: "console"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Ship Lifecycle" >}}
 
 The lifecycle key is where you can define and customize the end-user experience for customers installing your application. A lifecycle has several step types:

@@ -11,6 +11,8 @@ icon: "replicatedTroubleshoot"
 gradient: "blueToBlue"
 ---
 
+{{<legacynotice>}}
+
 Preflight checks are designed to be run against a target cluster before installing an application. Preflights are simply a different set of collectors + analyzers.
 
 To start, we recommend that you install the preflight tool on your workstation, where you have kubectl installed. The best and easiest way to do this is to use [krew](https://krew.dev/), the package manager for kubectl plugins.

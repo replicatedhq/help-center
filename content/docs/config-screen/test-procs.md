@@ -8,6 +8,8 @@ index: "other"
 aliases: [/docs/packaging-an-application/test-procs/,/docs/native/packaging-an-application/test-procs/,/docs/swarm/packaging-an-application/test-procs/]
 ---
 
+{{<legacynotice>}}
+
 The `test_proc` property in the configuration section of the YAML gives you the ability to easily test the validity of the unsaved configuration parameters entered by the end-user with minimal configuration.
 
 Following is a detailed list of YAML properties of the `test_proc` object:
