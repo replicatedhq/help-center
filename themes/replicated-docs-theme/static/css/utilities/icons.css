@@ -8,10 +8,15 @@
   width: 35px;
   height: 42px;
 }
-.icon.u-apiReferenceIcon {
-  background-position: -2px -93px;
-  width: 42px;
-  height: 49px;
+.icon.u-classicDocumentationIcon {
+  background-position: -2px -2px;
+  width: 36px;
+  height: 42px;
+}
+.icon.u-communityIcon {
+  background-position: -2px -98px;
+  width: 52px;
+  height: 31px;
 }
 .icon.u-chevronIcon {
   background-position: -58px -4px;

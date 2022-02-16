@@ -2,6 +2,7 @@
   position: relative;
   z-index: 1;
   margin-top: -120px;
+  margin-bottom: 100px;
 }
 .quicklink-block-wrapper {
   margin-top: 20px;
@@ -10,6 +11,7 @@
   background-color: #ffffff;
   padding: 22px 20px;
   border-radius: 6px;
+  min-height: 156px;
   border: 1px solid #C4C7CA;
   text-align: center;
   -webkit-transition: all .2s;
