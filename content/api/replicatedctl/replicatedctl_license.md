@@ -11,6 +11,8 @@ title: replicatedctl license
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl license
 
 Manage the license

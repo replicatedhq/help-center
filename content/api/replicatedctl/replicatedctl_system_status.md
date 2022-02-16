@@ -11,6 +11,8 @@ title: replicatedctl system status
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl system status
 
 Gets the Replicated system status

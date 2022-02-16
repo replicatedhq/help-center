@@ -11,6 +11,8 @@ title: replicatedctl snapshot rm
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl snapshot rm
 
 Remove snapshot

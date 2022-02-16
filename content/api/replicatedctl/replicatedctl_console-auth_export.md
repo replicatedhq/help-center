@@ -11,6 +11,8 @@ title: replicatedctl console-auth export
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl console-auth export
 
 Export console auth config for current auth type

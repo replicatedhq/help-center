@@ -12,6 +12,8 @@ title: replicatedctl params
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl params
 
 Manage Replicated daemon parameters. Provides the ability to import, export, set and unset parameters.

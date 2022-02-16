@@ -11,6 +11,8 @@ title: replicatedctl terms inspect
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl terms inspect
 
 Gets the terms of service

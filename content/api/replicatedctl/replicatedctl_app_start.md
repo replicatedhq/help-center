@@ -11,6 +11,8 @@ title: replicatedctl app start
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl app start
 
 Start the app

@@ -11,6 +11,8 @@ title: replicatedctl support-bundle
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl support-bundle
 
 Generate a support bundle

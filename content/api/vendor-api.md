@@ -10,8 +10,7 @@ gradient: "purpleToPink"
 aliases : [docs/reference/vendor-api,/categories/vendor-api/]
 ---
 
-{{<legacynotice>}}
-
+{{<legacynotice apiType="vendor">}}
 
 The Replicated Vendor API is available to create and manage applications, release, customers, licenses, and more.
 

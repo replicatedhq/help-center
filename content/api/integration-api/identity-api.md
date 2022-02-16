@@ -9,6 +9,8 @@ gradient: "purpleToPink"
 aliases : [docs/reference/integration-api/identity-api]
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "About the Identity API" >}}
 
 The Identity API provides synchronous authentication with an identity server, often a corporate LDAP or Active Directory (AD) service. In this model, login requests are made to the Replicated Integration API, which validates the credentials provided against the identity service. Applications using the Identity API rely on the upstream identity provider for local identity.

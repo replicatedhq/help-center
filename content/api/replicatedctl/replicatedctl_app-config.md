@@ -11,6 +11,8 @@ title: replicatedctl app-config
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl app-config
 
 Manage app config

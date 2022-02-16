@@ -9,6 +9,8 @@ gradient: "purpleToPink"
 aliases : [docs/reference/integration-api/console-api]
 ---
 
+{{<legacynotice>}}
+
 The Console API offers developers the ability to retrieve Replicated console settings.
 
 {{< callout >}}

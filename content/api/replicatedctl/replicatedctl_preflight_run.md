@@ -11,6 +11,8 @@ title: replicatedctl preflight run
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl preflight run
 
 Run the preflight checks

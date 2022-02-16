@@ -11,6 +11,8 @@ title: replicatedctl snapshot start
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl snapshot start
 
 Start a snapshot

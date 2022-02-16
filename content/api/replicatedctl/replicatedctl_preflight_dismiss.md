@@ -11,6 +11,8 @@ title: replicatedctl preflight dismiss
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl preflight dismiss
 
 Dismiss preflight check warnings

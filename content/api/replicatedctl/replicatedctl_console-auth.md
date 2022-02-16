@@ -11,6 +11,8 @@ title: replicatedctl console-auth
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl console-auth
 
 Manage UI console authentication settings

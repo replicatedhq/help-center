@@ -5,5 +5,8 @@
         {{ else }}
             <p class="margin-top-10">{{ printf "%s" .Site.Params.classic_product_notice | markdownify }}</p>
         {{ end }}
+        {{ if in (.Get "apiType") "vendor"}}
+            <p class="margin-top-10">For the vendor APIs relating to KOTS, you'll want to check out either our <a href="https://api.replicated.com/vendor/v3/spec/vendor-api-v3.json">V3 Swagger Spec</a> or the <a href="https://replicated-vendor-api.readme.io/v3/reference">V3 Interactive API Console</a>.</p>
+        {{ end }}
     </div>
 </div>

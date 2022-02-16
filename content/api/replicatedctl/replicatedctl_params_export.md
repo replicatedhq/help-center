@@ -11,6 +11,8 @@ title: replicatedctl params export
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl params export
 
 Export Replicated daemon parameters to stdout

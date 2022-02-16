@@ -9,6 +9,8 @@ gradient: "purpleToPink"
 aliases : [docs/reference/integration-api/provisioning-api]
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "About the Provisioning API" >}}
 
 The Provisioning API enables application developers to expose a set of API endpoints, which Replicated will sync to from the LDAP server.

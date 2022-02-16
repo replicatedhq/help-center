@@ -11,6 +11,8 @@ title: replicatedctl app status
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl app status
 
 Display detailed information on the app's status

@@ -11,6 +11,8 @@ title: replicatedctl migration export
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl migration export
 
 Export installation state

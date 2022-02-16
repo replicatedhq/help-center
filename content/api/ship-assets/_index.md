@@ -10,6 +10,8 @@ hideFromList: true
 gradient: "purpleToPink"
 ---
 
+{{<legacynotice>}}
+
 [Assets](/api/ship-assets/assets) | [Config](/api/ship-config/config) | [Lifecycle](/api/ship-lifecycle/lifecycle)
 
 ## Ship Assets

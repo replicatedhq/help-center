@@ -11,6 +11,8 @@ title: replicatedctl app apply-config
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl app apply-config
 
 Apply the changed configuration to the app

@@ -11,6 +11,8 @@ title: replicatedctl Reference
 weight: "505"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl
 
 Replicated CLI

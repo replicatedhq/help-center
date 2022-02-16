@@ -11,6 +11,8 @@ title: replicatedctl migration import
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl migration import
 
 Import installation state
