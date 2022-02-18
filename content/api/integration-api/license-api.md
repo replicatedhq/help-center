@@ -9,6 +9,8 @@ gradient: "purpleToPink"
 aliases : [docs/reference/integration-api/license-api]
 ---
 
+{{<legacynotice>}}
+
 ## License API
 
 The License API provides methods for your application to query properties of the installed license. This can be used in a variety of ways to provide multiple plans for an application. For example, the license API can be used to limit the number of secondary nodes that can run and be used in an application.

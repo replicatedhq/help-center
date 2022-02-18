@@ -9,6 +9,8 @@ gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---
 
+{{<legacynotice>}}
+
 Each customer you deploy to via Replicated will need a separate license file for their installation. This license file identifies the customer & application during the installation and update processes. A customer license is created in the Customers section of the [vendor portal](https://vendor.replicated.com/customers). You can manage the values and properties of that customer and license, including custom license fields, by selecting an individual customer.
 
 If you are looking to create or manage custom license fields you can do so in the License Fields section of the [vendor portal](https://vendor.replicated.com/) or via the [Vendor License API](https://replicated-vendor-api.readme.io/v1.0/reference#licenses). License values are used by Replicated to enable/disable various functionality, many of the values are also available in the on-prem instance via the [license integration API](https://replicated.readme.io/docs/license-api).

@@ -9,6 +9,8 @@ icon: "replicatedShip"
 gradient: "console"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "GitHub Asset Type" >}}
 
 GitHub assets can be used to pull content from private or public GitHub repositories. With a GitHub asset, you can deliver any or all of:

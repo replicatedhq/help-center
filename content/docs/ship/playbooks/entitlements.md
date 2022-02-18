@@ -9,6 +9,8 @@ icon: "replicatedShip"
 gradient: "console"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Ship and Entitlements" >}}
 
 {{< note title="Guide" >}}

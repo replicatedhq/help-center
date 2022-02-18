@@ -11,6 +11,8 @@ title: replicatedctl params unset
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl params unset
 
 Unsets a runtime overridden Replicated daemon parameter value

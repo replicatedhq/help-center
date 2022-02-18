@@ -9,6 +9,8 @@ weight: "100"
 gradient: "purpleToPink"
 ---
 
+{{<legacynotice>}}
+
 ## docker.image-ls
 
 **type object**

@@ -9,9 +9,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-{{<kotsdocs>}}
-To validate customer configuration in KOTS, check out [the kots.io Preflight CRD](https://kots.io/reference/v1beta1/preflight/) and the [troubleshoot.sh](https://troubleshoot.sh) project.
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 Programmable Test Procedures enable you to run an arbitrary Pods to validate the same input from the configuration screen and show a friendly error message to the end-user. You can use runtime configuration as input to your container command and capture the result code and message and format it for display to the end-user.
 

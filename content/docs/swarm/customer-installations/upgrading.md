@@ -10,6 +10,8 @@ icon: "replicatedDockerSwarm"
 gradient: "swarm"
 ---
 
+{{<legacynotice>}}
+
 Re-run the install script on your primary node to upgrade Replicated to the latest version.
 
 ```shell

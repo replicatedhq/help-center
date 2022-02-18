@@ -11,6 +11,8 @@ title: replicatedctl snapshot restore
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl snapshot restore
 
 Restore installation from the specified snapshot

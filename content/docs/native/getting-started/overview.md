@@ -10,6 +10,8 @@ hideFromList: true
 icon: "replicatedCircle"
 ---
 
+{{<legacynotice name="native">}}
+
 {{< linked_headline "About the Replicated Native Scheduler" >}}
 
 The Replicated Native Scheduler is a mature, proprietary runtime that's being used to manage single and multi-node clusters in many Replicated installations today.

@@ -8,6 +8,7 @@ index: "docs/config"
 aliases: []
 ---
 
+{{<legacynotice>}}
 
 This page includes a number of examples for integrating with common external tools like GitHub, SMTP, and various datastores.
 

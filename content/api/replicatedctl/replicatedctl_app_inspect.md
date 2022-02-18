@@ -11,6 +11,8 @@ title: replicatedctl app inspect
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl app inspect
 
 Display detailed information on the app

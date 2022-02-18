@@ -11,6 +11,8 @@ gradient: "orangeToOrange"
 hideFromList: true
 ---
 
+{{<legacynotice>}}
+
 # Collectors
 
 A Troubleshoot spec defines one or more (often many) collectors that to run when a support bundle is being generated. A collector target can be a single file, a directory of files, or a command to run and capture the output of.

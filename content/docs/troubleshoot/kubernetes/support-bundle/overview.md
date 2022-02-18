@@ -11,6 +11,8 @@ icon: "replicatedTroubleshoot"
 gradient: "blueToBlue"
 ---
 
+{{<legacynotice>}}
+
 Replicated Troubleshoot can provide an easy way to remotely diagnose an application in a Kubernetes cluster. Troubleshoot was built with the understanding that there are often two different people involved in diagnosing issues with third party software: the application developer/vendor and the cluster administrator . The vendor may not have direct access to the Kubernetes clusters, but the cluster administrator doesn’t have the internal knowledge of the software to read logs files or figure out what part of the architecture is failing.
 
 To this point, a debugging session with Troubleshoot is broken into two distinct phases: Collection and Analysis. The collection phase involves collecting diagnostic information (cluster info, application logs, etc) from the cluster into a redacted support bundle archive. The analysis phase involves automated and manual inspection of the files in the collected bundle, with anomaly and error detection.

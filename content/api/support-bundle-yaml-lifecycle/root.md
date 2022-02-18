@@ -9,6 +9,8 @@ weight: "1"
 gradient: "purpleToPink"
 ---
 
+{{<legacynotice>}}
+
 The Support Bundle spec allows for customizing the lifecycle of your bundle,
 including how and when it gets generated any uploaded, and the messaging provided to the end customer.
 

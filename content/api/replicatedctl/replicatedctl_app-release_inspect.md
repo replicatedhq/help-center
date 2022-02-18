@@ -11,6 +11,8 @@ title: replicatedctl app-release inspect
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl app-release inspect
 
 Display detailed information on one or more app releases

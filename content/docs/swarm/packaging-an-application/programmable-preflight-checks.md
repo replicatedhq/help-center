@@ -10,6 +10,8 @@ gradient: "swarm"
 aliases: [/docs/swarm/packaging-an-application/preflight-checks]
 ---
 
+{{<legacynotice>}}
+
 The host requirements section of the yaml gives Replicated the ability to analyze system requirements and warn or prevent the user from proceeding with an installation or upgrade. In addition to host requirements, Replicated has the ability to define fully customizable preflight requirements as of version {{< version version="2.30.0" >}}. These programmable requirements provide flexibility to the point that an arbitrary command can be executed by a vendor provided image. See the [commands section](#commands) below for a full list of commands that may be run including examples.
 
 {{< linked_headline "Commands" >}}

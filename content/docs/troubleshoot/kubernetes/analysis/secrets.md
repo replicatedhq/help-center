@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "blueToBlue"
 ---
 
+{{<legacynotice>}}
+
 By default, the collectors don't include secrets. This means that a preflight check or a support bundle will fail validate the presence of a secret. This is for security reasons. However, the existance of a secret can still be validated by adding a specific collector, defining the secret and which parts of the secret to collect.
 
 

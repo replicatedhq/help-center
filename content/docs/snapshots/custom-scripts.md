@@ -7,6 +7,8 @@ categories: [ "Snapshots" ]
 index: "other"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Custom Backup Commands" >}}
 
 Snapshots will always include customer console configuration.

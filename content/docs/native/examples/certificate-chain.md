@@ -9,6 +9,8 @@ icon: "replicatedCircle"
 aliases: [/docs/examples/certificate-chain/]
 ---
 
+{{<legacynotice name="native">}}
+
 ## Certificate Chain App
 
 This app is an example of some of the more advanced features of Replicated.

@@ -7,6 +7,8 @@ title: Analyze Reference
 weight: "12001"
 ---
 
+{{<legacynotice>}}
+
 ## Analyze
 
 Replicated's Analyze product allows you to surface insights from your troubleshoot bundles about your end-customer installations. This is the reference documentation for the Analyze YAML syntax.

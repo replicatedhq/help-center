@@ -14,6 +14,8 @@ gradient: "orangeToOrange"
 hideFromList: true
 ---
 
+{{<legacynotice>}}
+
 Replicated Troubleshoot is a tool designed to enable identification, collection, delivery and analysis of remotely-operated distributed systems.
 
 To get started, there are a couple of terms to know:

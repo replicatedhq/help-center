@@ -9,6 +9,8 @@ gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---
 
+{{<legacynotice>}}
+
 A preflight check is a test that is run before installing and running an application.  The test will analyze the system to determine if the environment meets the minimum requirements.
 
 The preflight check may be manually run for an existing installation by visiting:

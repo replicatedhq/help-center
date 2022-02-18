@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # CPU Cores
 
 It is often the case that there is a minimum number of processors required to run a software application. Below is an example of analyzing the `/proc/cpuinfo` file to determine the number of cores available on a single host.

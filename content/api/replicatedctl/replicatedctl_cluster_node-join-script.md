@@ -11,6 +11,8 @@ title: replicatedctl cluster node-join-script
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl cluster node-join-script
 
 Outputs the script to run to join a node to the cluster

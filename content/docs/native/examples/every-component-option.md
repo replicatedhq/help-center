@@ -8,6 +8,8 @@ index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 ---
 
+{{<legacynotice name="native">}}
+
 ## Every Component Option
 
 This is an example YAML using every possible option on the native components specification.

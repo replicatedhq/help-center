@@ -9,6 +9,8 @@ gradient: "purpleToPink"
 aliases : [docs/reference/yaml]
 ---
 
+{{<legacynotice>}}
+
 # Schema
 
 The schema is published as a [JSONSchema V4](http://json-schema.org/documentation.html) document in the [Replicated Lint Repository](https://github.com/replicatedhq/replicated-lint/blob/master/src/schemas/parsed.ts)

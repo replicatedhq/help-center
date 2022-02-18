@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # Run Command Collector
 
 Another commonly used, general purpose collector is the `os.run-command` collector. This collector will execute a command on the server, and can add the stderr and stdout to the support bundle.

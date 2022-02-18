@@ -9,9 +9,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-{{<kotsdocs>}}
-To learn about private images in KOTS, check out [Private Images and Registry Credentials](https://kots.io/vendor/packaging/private-images/).
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 When building your application, you have the option to use the Replicated private registry, or any supported external private or public registry.
 

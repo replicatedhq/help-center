@@ -11,6 +11,8 @@ title: replicatedctl app stop
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl app stop
 
 Stop the app

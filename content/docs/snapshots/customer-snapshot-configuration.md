@@ -7,6 +7,8 @@ categories: [ "Snapshots" ]
 index: "other"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Customer Snapshot Configuration Options" >}}
 
 If snapshots are enabled for an application, end customers can configure the destination, retention, timeout and schedule automated snapshots on the Console Settings screen.

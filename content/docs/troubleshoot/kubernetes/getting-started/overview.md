@@ -13,6 +13,8 @@ gradient: "blueToBlue"
 hideFromList: true
 ---
 
+{{<legacynotice>}}
+
 Replicated Kubernetes Troubleshoot is a tool designed to provide conformance and validation testing, and ongoing diagnostics and remediation of an application in a remotely-operator Kubnernetes cluster.
 
 To get started, there are a couple of terms to know:

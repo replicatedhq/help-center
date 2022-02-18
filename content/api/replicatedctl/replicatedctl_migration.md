@@ -11,6 +11,8 @@ title: replicatedctl migration
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl migration
 
 Migrate installation to the Kubernetes scheduler

@@ -7,6 +7,8 @@ categories: [ "LDAP And Identity Integration" ]
 index: "other"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Configuration" >}}
 
 At the root level, configure the identity object

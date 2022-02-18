@@ -9,6 +9,8 @@ aliases : [docs/reference/replicated-vendor-cli]
 gradient: "purpleToPink"
 ---
 
+{{<legacynotice>}}
+
 The [Replicated Vendor CLI](https://github.com/replicatedhq/replicated) provides a CLI for interacting with the Replicated Vendor API.
 
 # CLI Installation

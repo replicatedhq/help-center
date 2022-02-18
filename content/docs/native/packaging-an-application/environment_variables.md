@@ -8,6 +8,8 @@ index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 ---
 
+{{<legacynotice name="native">}}
+
 {{< linked_headline "Container Environment Variables" >}}
 
 The 12-factor app encourages the use of environment variables for configuration, and Replicated supports this design pattern. You can specify

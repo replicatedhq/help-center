@@ -11,6 +11,8 @@ title: replicatedctl app-config import
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl app-config import
 
 Import app config settings from stdin

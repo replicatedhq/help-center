@@ -17,6 +17,8 @@ gradient: "orangeToOrange"
 hideFromList: true
 ---
 
+{{<legacynotice>}}
+
 # Built-in Analyzers
 
 This section of the documentation lists the built-in analyzers that might be displayed with an explanation of why they were added and the corresponding spec.

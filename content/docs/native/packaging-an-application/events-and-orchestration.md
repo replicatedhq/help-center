@@ -9,6 +9,8 @@ icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/events-and-orchestration/]
 ---
 
+{{<legacynotice name="native">}}
+
 Events are provided to help with the startup, orchestration and service discovery between your containers. There are
 several reasons to use events in your application yaml:
 

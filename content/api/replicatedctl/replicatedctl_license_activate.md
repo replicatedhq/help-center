@@ -11,6 +11,8 @@ title: replicatedctl license activate
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl license activate
 
 Activate the license

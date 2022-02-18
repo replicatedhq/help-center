@@ -9,6 +9,8 @@ weight: "100"
 gradient: "purpleToPink"
 ---
 
+{{<legacynotice>}}
+
 [Assets](/api/ship-assets/assets) | [Config](/api/ship-config/config) | [Lifecycle](/api/ship-lifecycle/lifecycle)
 
 ## azure_aks

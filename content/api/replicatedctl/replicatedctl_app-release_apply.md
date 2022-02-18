@@ -11,6 +11,8 @@ title: replicatedctl app-release apply
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl app-release apply
 
 Applies pending app releases

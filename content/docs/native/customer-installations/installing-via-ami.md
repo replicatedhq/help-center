@@ -10,6 +10,8 @@ aliases: [docs/distributing-an-application/installing-via-ami,/docs/native/packa
 icon: "replicatedCircle"
 ---
 
+{{<legacynotice name="native">}}
+
 At times, it can be desirable to deliver an a preconfigured, generic VM to allow customers a familiar installation path. While Replicated does not provide an official machine image, understanding which Replicated-specific files are needed - and which are not needed - is sufficient for delivering a pre-built AMI for a release
 
 ## Required images

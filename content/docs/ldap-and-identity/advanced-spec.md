@@ -7,6 +7,8 @@ categories: [ "LDAP And Identity Integration" ]
 index: "other"
 ---
 
+{{<legacynotice>}}
+
 The following JSON schema defines the Advanced LDAP configuration specification. This is especially useful if you intend to support identity management via multiple LDAP domains or organizational units.
 
 ```json

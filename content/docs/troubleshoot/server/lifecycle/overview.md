@@ -11,6 +11,8 @@ gradient: "orangeToOrange"
 hideFromList: true
 ---
 
+{{<legacynotice>}}
+
 # Lifecycle
 
 When writing a Troubleshoot custom collector, it's possible to add custom messaging and to add or remove upload prompts from the generation process.

@@ -9,6 +9,8 @@ icon: "replicatedShip"
 gradient: "console"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Kubernetes and Airgap" >}}
 
 An airgap cluster is any cluster that doesn't have outbound internet access, and therefore cannot pull application images from a Docker registry. This can make it difficult to set up and to manage.

@@ -10,6 +10,8 @@ gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---
 
+{{<legacynotice>}}
+
 All Replicated installations come with a StatsD/Graphite/Carbon container that can be used by your application containers to report data. Optional custom monitors can be configured to display additional charts in the Replicated dashboard. Additionally, your own applications can query Graphite directly.
 
 {{< linked_headline "Configuring your services to use StatsD" >}}

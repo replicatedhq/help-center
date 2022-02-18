@@ -11,6 +11,8 @@ title: replicatedctl app-config export
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl app-config export
 
 Export app config settings

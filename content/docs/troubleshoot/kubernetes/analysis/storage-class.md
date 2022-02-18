@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "blueToBlue"
 ---
 
+{{<legacynotice>}}
+
 ```yaml
 apiVersion: troubleshoot.replicated.com/v1beta1
 kind: Preflight

@@ -9,6 +9,8 @@ icon: "replicatedShip"
 gradient: "console"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Kubernetes and Optional Secrets" >}}
 
 When distributing a Kubernetes application using Replicated Ship, it is almost certain that your application will require access to some form of secret, whether that be API keys, database information or something else.

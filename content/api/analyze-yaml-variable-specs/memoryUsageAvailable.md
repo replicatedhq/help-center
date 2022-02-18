@@ -9,6 +9,8 @@ weight: "100"
 gradient: "purpleToPink"
 ---
 
+{{<legacynotice>}}
+
 ## memoryUsageAvailable
 
 **type object**

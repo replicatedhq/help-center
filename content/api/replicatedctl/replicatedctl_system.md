@@ -11,6 +11,8 @@ title: replicatedctl system
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl system
 
 Get Replicated system information

@@ -11,6 +11,8 @@ title: replicatedctl cluster
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl cluster
 
 Manage the cluster

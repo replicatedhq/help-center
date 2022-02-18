@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # How to run the Support Bundle
 
 The collection components Replicated Troubleshoot utility are distributed in a Docker container that's publicly available at [hub.docker.com/r/replicated/support-bundle](https://hub.docker.com/r/replicated/support-bundle).

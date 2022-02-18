@@ -9,6 +9,8 @@ icon: "replicatedDockerSwarm"
 gradient: "swarm"
 ---
 
+{{<legacynotice>}}
+
 {{< note title="Support Bundle v1" >}}
 This is the documentation for the pre-2.0 version of the Support Bundle. If you signed up for Replicated during or after February 2018, you will have the 2.0 version by default. If you signed up before that date, you'll have the option to opt-in to the 2.0 support bundle on a per-customer basis. If you'd like to move all your customers to [version 2](../support-bundle), please contact support@replicated.com.
 {{< /note >}}

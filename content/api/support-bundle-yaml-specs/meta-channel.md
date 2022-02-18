@@ -9,6 +9,8 @@ weight: "100"
 gradient: "purpleToPink"
 ---
 
+{{<legacynotice>}}
+
 ## meta.channel
 
 **type object**

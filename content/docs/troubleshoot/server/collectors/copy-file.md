@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # Copy File Collector
 
 A commonly used, general purpose collector is the `os.read-file` collector. This copies the contents of a file from the filesystem, and includes the copy in the support bundle.

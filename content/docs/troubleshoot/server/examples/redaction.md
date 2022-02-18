@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # Redaction
 
 It's often required to redact sensitive information from a support bundle before delivering it for analysis.

@@ -9,4 +9,6 @@ icon: "replicatedCircle"
 nextPage: "native/packaging-an-application/overview.md"
 ---
 
+{{<legacynotice name="native">}}
+
 Now that we've gone over the basic concepts of deploying an application with the Replicated Native Scheduler, continue to the [Packaging An Application For the Replicated Native Scheduler](/docs/native/packaging-an-application) documentation.

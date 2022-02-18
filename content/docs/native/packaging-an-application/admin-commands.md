@@ -9,6 +9,8 @@ icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/admin-commands/]
 ---
 
+{{<legacynotice name="native">}}
+
 The `admin_commands` section allows you to define ad-hoc commands that can be executed inside a running container from the shell.
 
 _Note: If you are calling admin commands from a script use the `--no-tty` flag._

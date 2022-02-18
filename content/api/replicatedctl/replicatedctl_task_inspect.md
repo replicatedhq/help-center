@@ -11,6 +11,8 @@ title: replicatedctl task inspect
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl task inspect
 
 Display detailed information on one or more tasks

@@ -11,6 +11,8 @@ hideFromList: true
 icon: "replicatedShip"
 ---
 
+{{<legacynotice>}}
+
 Replicated Ship is a modern, composable way to define and package any application so that it can be configured, installed, updated and operated by someone with limited knowledge of how the software works. Vendors can distribute proprietary applications with Replicated Ship, for simple and flexible deployment to a variety of destinations, including existing Kubernetes clusters.
 
 ## When to use Replicated Ship

@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # Promoting Troubleshoot Collectors
 
 Troubleshoot Custom Collectors are versioned and released with your application. They use the same release channels, and can be promoted at the same time as an application release. This gives you the ability to include debugging and troubleshooting data specific to each release of your application.

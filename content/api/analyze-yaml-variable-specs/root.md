@@ -9,6 +9,8 @@ weight: "1"
 gradient: "purpleToPink"
 ---
 
+{{<legacynotice>}}
+
 The Analyze Spec allows for gathering insights from your troubleshoot bundles about your end-customer installations.
 
 Information gathered in troubleshoot bundle, collected from your customer's on-prem application, can be stored in variables and later used to make assertions via [conditions](/api/analyze-yaml-condition-specs/root/).

@@ -11,9 +11,7 @@ hideFromList: true
 icon: "replicatedKubernetes"
 ---
 
-{{<kotsdocs>}}
-To get started with installing clusters with KOTS, check out the docs on [kots.io](https://kots.io/vendor).
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 After building your application as a series of Kubernetes manifests, use this documentation to distribute it to your customers. Here, you will find all of the information necessary to setup and manage your application running on Kubernetes clusters.
 

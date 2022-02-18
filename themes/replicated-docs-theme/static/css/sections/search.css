@@ -1,5 +1,5 @@
 .search.main-section {
-  min-height: 520px;
+  min-height: 420px;
 }
 .search-wrapper {
   width: 100%;
@@ -31,7 +31,6 @@
   position: relative;
 }
 
-.aa-dataset-guides,
 .aa-dataset-other,
 .aa-dataset-docs {
   margin: 20px 0;
@@ -65,8 +64,7 @@
   border-bottom: none;
 }
 
-.aa-dataset-docs .aa-suggestion,
-.aa-dataset-guides .aa-suggestion  {
+.aa-dataset-docs .aa-suggestion  {
   padding-left: 60px;
   position: relative;
 }
@@ -192,34 +190,37 @@
 
 /* Kots Documentation notice other pages */
 
-.kots-doc-wrapper-alt {
+.legacy-notice-wrapper-alt {
   margin: 10px 0 40px 0;
 }
 
-.kots-doc-alt {
-  background: rgba(224, 232, 240, 0.85); 
-  border-radius: 10px; 
-  border: none; 
-  width: 80%; 
-  padding: 20px 30px 15px 30px;
-  display: flex; 
+.legacy-notice-alt {
+  background: #FEE7BD;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+}
+.legacy-notice-alt p {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
 }
 
-.kots-doc-alt img {
+.legacy-notice-alt img {
   border: none !important;
   border-radius: 0 !important;
 }
 
-.kots-doc-alt a, .kots-doc-alt a:visited {
+.legacy-notice-alt a, .legacy-notice-alt a:visited {
   color: #326DE6;
   text-decoration: underline;
 }
 
 @media screen and (max-width: 600px) {
-  .kots-doc-alt {
+  .legacy-notice-alt {
     width: 90% !important; 
   }
-  .kots-doc-alt img {
+  .legacy-notice-alt img {
     margin-right: 10px;
   }
 }

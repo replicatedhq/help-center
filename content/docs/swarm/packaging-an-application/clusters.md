@@ -10,6 +10,8 @@ icon: "replicatedDockerSwarm"
 nextPage: "swarm/customer-installations/overview.md"
 ---
 
+{{<legacynotice>}}
+
 In addition to managing [configs](/docs/swarm/packaging-an-application/config-files/) and [secrets](/docs/swarm/packaging-an-application/secrets/), The `swarm` section of the YAML can be used to specify node counts and labels that must be applied to the Swarm cluster where your app is running.
 
 Below is an example of the `swarm` section of an application config YAML.

@@ -11,6 +11,8 @@ title: replicatedctl task ls
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl task ls
 
 List tasks

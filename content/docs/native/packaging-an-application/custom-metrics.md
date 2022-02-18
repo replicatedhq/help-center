@@ -9,6 +9,8 @@ icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/custom-metrics/]
 ---
 
+{{<legacynotice name="native">}}
+
 All Replicated installations come with a StatsD/Graphite/Carbon container that can be used by the application to report data to StatsD. Application YAML can also include optional custom monitors that will be used to display additional charts in Replicated dashboard. Applications can also query Graphite directly.
 
 {{< linked_headline "Defining Metrics" >}}

@@ -11,6 +11,8 @@ title: replicatedctl app-release render-scheduler-spec
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl app-release render-scheduler-spec
 
 Render application scheduler spec

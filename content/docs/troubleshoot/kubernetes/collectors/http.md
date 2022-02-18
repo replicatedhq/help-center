@@ -8,6 +8,8 @@ icon: "replicatedTroubleshoot"
 gradient: "blueToBlue"
 ---
 
+{{<legacynotice>}}
+
 Optional `http` collectors can be defined to collect output from HTTP requests.
 
 ## GET

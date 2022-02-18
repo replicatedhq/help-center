@@ -11,6 +11,8 @@ title: replicatedctl license inspect
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl license inspect
 
 Display detailed information on the license

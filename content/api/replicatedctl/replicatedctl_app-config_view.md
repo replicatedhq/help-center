@@ -11,6 +11,8 @@ title: replicatedctl app-config view
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl app-config view
 
 View app config form

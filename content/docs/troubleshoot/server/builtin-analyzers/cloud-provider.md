@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # Cloud Provider
 
 It is often helpful for both debugging and analytics purposes to know the cloud provider in which your application is running. Below is a list of analyzers that will determine the cloud provider for some common use cases in which Replicated Platform is running.

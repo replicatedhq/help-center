@@ -11,6 +11,8 @@ title: replicatedctl preflight status
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl preflight status
 
 Get preflight status

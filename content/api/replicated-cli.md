@@ -11,6 +11,8 @@ hideFromList: true
 
 ---
 
+{{<legacynotice>}}
+
 After [installing replicated](/docs/distributing-an-application/installing/#section-easy-installation) onto a remote host a CLI is enabled
 that can be utilized for both management and maintenance. This tool can be especially helpful when debugging issues that can arise if the
 replicated-ui is not fully installed or working properly.

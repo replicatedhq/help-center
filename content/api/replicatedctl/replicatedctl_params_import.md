@@ -11,6 +11,8 @@ title: replicatedctl params import
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl params import
 
 Import Replicated parameters from stdin

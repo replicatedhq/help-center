@@ -9,6 +9,8 @@ gradient: "purpleToPink"
 aliases : [docs/reference/integration-api/version-api]
 ---
 
+{{<legacynotice>}}
+
 The Version API provides endpoints for your application to read the current application version, release notes, pending updates and apply updates. Applications that use automatic updates can use this to notify users of pending updates and apply them without having to visit the Replicated console.
 
 ## Version API

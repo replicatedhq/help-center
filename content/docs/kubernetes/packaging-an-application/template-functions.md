@@ -9,9 +9,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-{{<kotsdocs>}}
-For KOTS template functions, check out [the kots.io docs](https://kots.io/reference/template-functions/contexts/).
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 Template functions are marked by the double curly bracket + *"repl"* escape sequence. They allow for user input to be dynamically inserted into application configuration values. The sequence should be `{{repl`, not `{{ repl`.
 

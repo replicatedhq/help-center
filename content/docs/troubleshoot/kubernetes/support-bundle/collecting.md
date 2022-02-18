@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "blueToBlue"
 ---
 
+{{<legacynotice>}}
+
 Before you can collect a support bundle, you need to have a client-only component available. Nothing needs to be installed in the cluster. The Troubleshoot client utility is packaged as a kubectl plugin, and can be installed using [krew](https://krew.dev). For instructions on how to install krew, visit [https://github.com/kubernetes-sigs/krew/#installation](https://github.com/kubernetes-sigs/krew/#installation).
 
 If you have krew installed, the next step is to install the Troubleshoot plugin:

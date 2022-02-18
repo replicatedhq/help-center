@@ -8,6 +8,8 @@ index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 ---
 
+{{<legacynotice name="native">}}
+
 {{< linked_headline "Docker Options" >}}
 
 You may also limit the resources used by your containers with the memory, cpushares and network modes and further secure your containers with security options

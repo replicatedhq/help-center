@@ -9,6 +9,8 @@ gradient: "purpleToPink"
 aliases: [docs/reference/integration-api]
 ---
 
+{{<legacynotice>}}
+
 The Integration API is the primary mechanism for developers to integrate their applications with Replicated's management console and APIs.
 
 ## Accessing the Integration API

@@ -11,6 +11,8 @@ title: replicatedctl task attach
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl task attach
 
 Stream task progress

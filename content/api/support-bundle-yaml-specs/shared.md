@@ -9,6 +9,8 @@ weight: "1"
 gradient: "purpleToPink"
 ---
 
+{{<legacynotice>}}
+
 ## Support Bundle Collection Specs
 
 Support Bundle collection specs can be used to define and customize what kinds diagnostic

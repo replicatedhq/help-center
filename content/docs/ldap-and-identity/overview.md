@@ -9,6 +9,8 @@ previousPage: "snapshots/kubernetes.md"
 index: "other"
 ---
 
+{{<legacynotice>}}
+
 Replicated can be integrated with LDAP servers to sync users and/or authenticate users between the directory and your application.
 
 {{< linked_headline "Configuration" >}}

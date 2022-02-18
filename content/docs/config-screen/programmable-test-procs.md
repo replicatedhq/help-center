@@ -8,6 +8,8 @@ index: "other"
 nextPage: "snapshots/overview.md"
 ---
 
+{{<legacynotice>}}
+
 The `test_proc` property in the configuration section of the YAML gives you the ability to easily test the validity of the unsaved configuration parameters entered by the end-user with minimal configuration. Today there are many pre-configured commands that can be run including [host resolution](/docs/config-screen/test-procs/#resolve-host), [github auth](/docs/config-screen/test-procs/#github-app-auth), [aws auth](/docs/config-screen/test-procs/#aws-auth) and [certificate verification](/docs/config-screen/test-procs/#certificate-verification), among many others.
 
 The addition of Programmable Test Procedures enables you to run arbitrary containers to validate the same input from the configuration screen and show a friendly error message to the end-user. You can use runtime configuration as input to your container command and capture the result code and message and format it for display to the end-user.

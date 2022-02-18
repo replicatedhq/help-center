@@ -7,6 +7,8 @@ title: Support Bundle YAML Reference
 weight: "12000"
 ---
 
+{{<legacynotice>}}
+
 ## Support Bundle
 
 Replicated's standalone Support Bundle allows you to diagnose problems with any app, deployed any way, anywhere. This is the reference documentation for the Support Bundle YAML syntax.

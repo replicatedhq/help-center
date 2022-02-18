@@ -11,6 +11,8 @@ title: replicatedctl terms accept
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl terms accept
 
 Accept terms of service

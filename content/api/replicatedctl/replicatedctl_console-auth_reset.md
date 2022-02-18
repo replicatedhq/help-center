@@ -11,6 +11,8 @@ title: replicatedctl console-auth reset
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl console-auth reset
 
 Resets console authentication to type anonymous

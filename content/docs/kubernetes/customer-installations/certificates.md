@@ -11,9 +11,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-{{<kotsdocs>}}
-To learn about how KOTS and kURL handle certificate rotation, check out the [kurl.sh docs on TLS Certificates](https://kurl.sh/docs/install-with-kurl/setup-tls-certs#kubernetes-control-plane).
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 Certificates used by Kubernetes control plane components such as the Kubernetes API server have a lifetime of 1 year.
 Replicated has several mechanisms to ensure these certificates are rotated before they expire.

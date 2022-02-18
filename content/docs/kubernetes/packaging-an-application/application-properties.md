@@ -9,9 +9,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-{{<kotsdocs>}}
-For KOTS application properties, check out [the kots.io customization docs](https://kots.io/vendor/config/config-screen/).
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 The properties section of the YAML allows you to configure properties of the admin console.
 

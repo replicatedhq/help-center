@@ -7,6 +7,8 @@ categories: [ "LDAP And Identity Integration" ]
 index: "other"
 ---
 
+{{<legacynotice>}}
+
 Advanced LDAP integration can be used to integrate with more complicated LDAP models with multiple user search DNs or multiple organizational units. Additionally it can be configured to authenticate with [multiple domains](/docs/ldap-and-identity/advanced-example/).
 
 {{< linked_headline "Configuration" >}}

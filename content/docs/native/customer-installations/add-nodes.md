@@ -9,6 +9,8 @@ aliases: [docs/distributing-an-application/add-nodes-replicated,/docs/distributi
 icon: "replicatedCircle"
 ---
 
+{{<legacynotice name="native">}}
+
 When an application is configured by the vendor with a clustering strategy, Replicated makes it possible for the end customer to install additional nodes on remote instances to run a distributed application. Installations of Replicated using the [easy installation script](/docs/native/packaging-an-application/installing-via-script/) will install an operator on the local node automatically.
 
 On the Cluster page on the On-Prem Console an "Add Node" button will be visible. This will prompt the end customer with two simple options for adding a node.

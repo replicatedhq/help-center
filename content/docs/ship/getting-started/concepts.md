@@ -9,6 +9,8 @@ gradient: "console"
 icon: "replicatedShip"
 ---
 
+{{<legacynotice>}}
+
 Before deploying your application, there are a few terms to learn, as they are used throughout this guide.
 
 ### Application

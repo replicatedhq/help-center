@@ -9,6 +9,8 @@ gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Config Files" >}}
 
 Some applications and containers expect to have files mounted into the container with config data or other dynamically-generated contents. These can't be built into the container image because the contents are generated from the environment.

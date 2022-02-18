@@ -11,6 +11,8 @@ title: replicatedctl console-auth import
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl console-auth import
 
 Import console authentication config from stdin

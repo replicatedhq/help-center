@@ -11,6 +11,8 @@ icon: "replicatedTroubleshoot"
 gradient: "blueToBlue"
 ---
 
+{{<legacynotice>}}
+
 All collectors are specified in a single YAML file. To build a set of collectors, start with a Kubernetes YAML file:
 
 ```yaml

@@ -1,0 +1,9 @@
+<div class="legacy-notice-wrapper-alt">
+    <div class="legacy-notice-alt">
+        {{ if in (.Get "name") "native" }}
+            <p class="margin-top-10">{{ printf "%s" .Site.Params.native_classic_product_notice | markdownify }}</p>
+        {{ else }}
+            <p class="margin-top-10">{{ printf "%s" .Site.Params.classic_product_notice | markdownify }}</p>
+        {{ end }}
+    </div>
+</div>

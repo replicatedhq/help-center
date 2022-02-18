@@ -11,6 +11,8 @@ title: replicatedctl license-load
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl license-load
 
 Load the license from stdin

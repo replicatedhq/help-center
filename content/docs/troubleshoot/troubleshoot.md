@@ -11,6 +11,8 @@ icon: "replicatedTroubleshoot"
 gradient: "blueToBlue"
 ---
 
+{{<legacynotice>}}
+
 Replicated Troubleshoot is a collection of utilities that can be used for preflight checks and remotely diagnosing a server.
 
 ## Kubernetes Apps

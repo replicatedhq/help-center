@@ -9,6 +9,8 @@ icon: "replicatedCircle"
 aliases: [/docs/packaging-an-application/template-functions/]
 ---
 
+{{<legacynotice name="native">}}
+
 Template functions are marked by the double curly bracket + *"repl"* escape sequence. They allow for user input to be dynamically inserted into application configuration values. The sequence should be `{{repl`, not `{{ repl`.
 
 Template functions that refer to your containers are always addressed in pairs with "component name" and "image name".  You should use the full image name as it appears in your container definition.

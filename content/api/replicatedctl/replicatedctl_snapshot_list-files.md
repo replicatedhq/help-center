@@ -11,6 +11,8 @@ title: replicatedctl snapshot list-files
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl snapshot list-files
 
 List snapshot files

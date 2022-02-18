@@ -9,6 +9,8 @@ index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 ---
 
+{{<legacynotice name="native">}}
+
 {{< warning title="Old Version Warning" >}}
 The content in this document is for a previous version of Replicated. If you are looking
 for the current version, it is available at

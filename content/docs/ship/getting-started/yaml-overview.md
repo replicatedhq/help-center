@@ -9,6 +9,8 @@ icon: "replicatedShip"
 gradient: "console"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Replicated Ship YAML Overview" >}}
 
 There are many artifacts, assets, and configs that are required to install and configure a modern application. Replicated Ship requires a single YAML file that defines all of the objects that are needed to install an application.

@@ -9,6 +9,8 @@ icon: "replicatedShip"
 gradient: "console"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Inline Asset Type" >}}
 
 Inline asset types are useful to deliver text files such as Kubernetes manifests, application config files and shell scripts. The [YAML reference documentation](https://help.staging.replicated.com/api/ship-assets/inline/) is published that defines all available keys.

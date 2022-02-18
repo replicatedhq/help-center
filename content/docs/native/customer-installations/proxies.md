@@ -8,6 +8,8 @@ index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 ---
 
+{{<legacynotice name="native">}}
+
 The Replicated [easy install script](/docs/native/customer-installations/installing-via-script/) provides several configuration options for working with an HTTP proxy.
 Passing the `no-proxy` flag to the install script will disable all proxy discovery and configuration.
 

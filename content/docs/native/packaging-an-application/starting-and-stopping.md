@@ -8,6 +8,8 @@ index: ["docs/native", "docs"]
 icon: "replicatedCircle"
 ---
 
+{{<legacynotice name="native">}}
+
 {{< linked_headline "CMD" >}}
 
 It's possible to override the `CMD` and/or `ENTRYPOINT` in a container, when using the Replicated Native Scheduler:

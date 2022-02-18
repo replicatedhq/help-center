@@ -11,6 +11,8 @@ title: replicatedctl params set
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl params set
 
 Sets an individual Replicated daemon parameter value

@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # Docker Version
 
 It is often the case that there is some minumum Docker version that, possibly for reasons such as feature support or stability, is required to run your application. Below is an example of an analyzer that will parse the output of the `docker info` command and display the Docker server version.

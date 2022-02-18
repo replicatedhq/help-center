@@ -11,6 +11,8 @@ title: replicatedctl snapshot ls
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl snapshot ls
 
 List snapshots

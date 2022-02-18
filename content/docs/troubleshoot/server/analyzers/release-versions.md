@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # Troubleshoot Analyzer Container Tags
 
 When running the [replicated/analyze](https://hub.docker.com/r/replicated/analyze) container as a docker run command, we often provide a command that includes the ":latest" tag. This is recommended because it is a one time process and generally demands the latest troubleshooting tools. If you ware automating part of this process or packaging a reproducible deployment, you can use a named tag to guarantee the same image will be used. The following table documents our tagging and release strategy for the [replicated/analyze](https://hub.docker.com/r/replicated/analyze) image.

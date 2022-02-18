@@ -9,9 +9,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-{{<kotsdocs>}}
-To manage stateful services in KOTS, check out [the KOTS persistent datastores guide](https://kots.io/vendor/guides/persistent-datastores).
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 {{< linked_headline "Persistent Volumes" >}}
 

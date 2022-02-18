@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # Memory Utilization
 
 It is often the case that there is a minimum amount of total memory required to run a software application. Below is an example of an analyzer that will parse the `/proc/meminfo` file and display the available and total memory of the host.

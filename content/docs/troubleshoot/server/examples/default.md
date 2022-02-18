@@ -9,6 +9,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 ### Default Spec
 
 A good place to start is with our default spec, which is useful when troubleshooting a Replicated application. It's recommended to add your own application specs to this.

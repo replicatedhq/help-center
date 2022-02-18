@@ -11,6 +11,8 @@ title: replicatedctl version
 weight: "551"
 ---
 
+{{<legacynotice>}}
+
 ## replicatedctl version
 
 Get the Replicated CLI version information

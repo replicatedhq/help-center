@@ -8,6 +8,8 @@ index: "other"
 aliases: [/docs/packaging-an-application/config-screen/,/docs/config-screen/,/docs/native/packaging-an-application/config-screen/,/docs/swarm/packaging-an-application/config-screen/]
 ---
 
+{{<legacynotice>}}
+
 The admin console settings screen configuration is specified as an array configuration
 groups and items.
 

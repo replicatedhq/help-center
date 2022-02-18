@@ -9,6 +9,8 @@ gradient: "swarm"
 icon: "replicatedDockerSwarm"
 ---
 
+{{<legacynotice>}}
+
 {{< linked_headline "Install Replicated" >}}
 
 Replicated can be installed by downloading the latest release from https://s3.amazonaws.com/replicated-airgap-work/replicated.tar.gz and running the following commands:

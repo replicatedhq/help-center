@@ -10,6 +10,8 @@ aliases: [docs/distributing-an-application/installing-via-script,/docs/native/pa
 icon: "replicatedCircle"
 ---
 
+{{<legacynotice name="native">}}
+
 We provide an easy-to-use one-line installation process (via shell script) which will detect your OS, ask a few questions and install both docker-engine and the required Replicated components.
 
 If you want to always release your application with a specific version of Replicated you can read how to [always install a specific version of Replicated](/docs/kb/supporting-your-customers/install-known-versions/).

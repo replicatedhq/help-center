@@ -1,5 +1,5 @@
 ---
-baseURL: "https://help.replicated.com/"
+baseURL: "/"
 languageCode: "en-us"
 title: "Replicated Help Center"
 theme: "replicated-docs-theme"
@@ -37,6 +37,8 @@ Params:
   kubernetes_docker_version_minimum: "1.13.1"
   kubernetes_docker_version_default: "18.09.7"
   kubernetes_version: "1.15.12"
+  classic_product_notice: "This content is associated with a legacy version of the Replicated product. For the current Replicated product docs, [click here](https://kots.io/vendor)."
+  native_classic_product_notice: "This content is associated with a legacy version of the Replicated product. For the current Replicated product docs, [click here](https://kots.io/vendor)."
 
 taxonomies:
   category: "categories"
@@ -49,16 +51,16 @@ algolia:
 
 menu:
   main:
-    - Name: "Guides"
+    - Name: "Replicated Docs"
       Weight: 1
-      URL: "/guides/"
-    - Name: "Documentation"
+      URL: "https://kots.io/vendor/packaging/packaging-an-app/"
+    - Name: "Replicated Classic Docs "
       Weight: 2
       URL: "/docs/kubernetes/getting-started/overview/"
-    - Name: "API Reference"
-      Weight: 3
-      URL: "/api/"
     - Name: "Community"
       Weight: 3
       URL: "https://help.replicated.com/community/"
+    - Name: "Support"
+      Weight: 3
+      URL: "https://vendor.replicated.com/support"
 ---

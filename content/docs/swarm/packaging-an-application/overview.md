@@ -11,6 +11,8 @@ index: ["docs/swarm", "docs"]
 hideFromList: true
 ---
 
+{{<legacynotice>}}
+
 Using Replicated's built-in Docker Swarm support allows you to use your existing `docker-compose.yml` and Swarm Services to deploy your application using the Replicated platform.
 
 Deploying a Swarm application with Replicated involves creating a single YAML file that contains your Docker Swarm services and additional Replicated configuration data. This is packaged as a multi-document YAML file, with a special comment at the top of each included documented to describe it's structure.

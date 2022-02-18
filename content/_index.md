@@ -1,3 +1,31 @@
 ---
 title: "Replicated Help Center"
+aliases: 
+  - /guides/kubernetes-with-ship/
+  - /guides/kubernetes-with-ship/introduction/
+  - /guides/kubernetes-with-ship/installing/
+  - /guides/kubernetes-with-ship/iterate/
+  - /guides/kubernetes-with-ship/iterate/
+  - /guides/kubernetes-with-ship/private-image/
+  - /guides/kubernetes-with-ship/explore-features/
+  - /guides/ship-with-docker-swarm/
+  - /guides/ship-with-docker-swarm/create-swarm-app/
+  - /guides/ship-with-docker-swarm/installing/
+  - /guides/ship-with-docker-swarm/iterating/
+  - /guides/ship-with-docker-swarm/automate/
+  - /guides/native-scheduler/
+  - /guides/native-scheduler/create-release/
+  - /guides/native-scheduler/install/
+  - /guides/native-scheduler/iterate/
+  - /guides/ship-and-troubleshoot/
+  - /guides/ship-and-troubleshoot/introduction/
+  - /guides/ship-and-troubleshoot/troubleshoot-spec/
+  - /guides/ship-and-troubleshoot/distribute-your-spec/
+  - /guides/ship-and-troubleshoot/collect-support-bundle/
+  - /guides/ship-and-entitlements/
+  - /guides/ship-and-entitlements/introduction/
+  - /guides/ship-and-entitlements/license-fields/
+  - /guides/ship-and-entitlements/template-functions/
+  - /guides/ship-and-entitlements/deploying-titled/
+  - /guides/ship-and-entitlements/querying-titled/
 ---

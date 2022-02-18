@@ -10,9 +10,7 @@ gradient: "kubernetes"
 icon: "replicatedKubernetes"
 ---
 
-{{<kotsdocs>}}
-For details on storage for KOTS + kURL embedded clusters, consult the appropriate [kURL add-on docs](https://kurl.sh/docs/introduction/what-kurl-does#after-kubeadm-adding-add-ons).
-{{</kotsdocs>}}
+{{<legacynotice>}}
 
 Customers will generally need at least 40GB of free disk space to install and run Replicated.
 Online installs and applications with small airgap bundles may succeed with less than this amount, while airgap installs with a large application package may require more.

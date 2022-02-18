@@ -12,6 +12,8 @@ icon: "replicatedTroubleshoot"
 gradient: "orangeToOrange"
 ---
 
+{{<legacynotice>}}
+
 # Docker Devicemapper in Loop-LVM Mode
 
 The loop-lvm mode makes use of a ‘loopback’ mechanism that allows files on the local disk to be read from and written to as if they were an actual physical disk or block device. However, the addition of the loopback mechanism, and interaction with the OS filesystem layer, means that IO operations can be slow and resource-intensive. Use of loopback devices can also introduce race conditions. For this reason this configuration is only appropriate for testing.
