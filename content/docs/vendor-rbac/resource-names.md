@@ -334,9 +334,13 @@ Grants the holder the permission to view information about the specified channel
 
 Grants the holder the permission to view information about the specified enterprise channel of the specified application(s).
 
-### kots/app/[:appId]/airgap/build
+### kots/app/[:appId]/channel/[:channelId]/releases/airgap
 
-Grants the holder permission to trigger airgap builds.
+Grants the holder permission to trigger airgap builds for the specified channel.
+
+### kots/app/[:appId]/channel/[:channelId]/releases/airgap/download-url
+
+Grants the holder permission to get an airgap bundle download URL for any release on the specified channel.
 
 ### kots/app/[:appId]/license/create
 
