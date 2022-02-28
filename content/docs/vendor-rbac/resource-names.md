@@ -81,7 +81,8 @@ index: "other"
 | [kots/app/[:appId]/channel/[:channelId]/update](#kots-app-appid-channel-channelid-update ) |
 | [kots/app/[:appId]/channel/[:channelId]/read](#kots-app-appid-channel-channelid-read) |
 | [kots/app/[:appId]/enterprisechannel/[:channelId]/read](#kots-app-appid-enterprisechannel-channelid-read) |
-| [kots/app/[:appId]/airgap/build](#kots-app-appid-airgap-build) |
+| [kots/app/[:appId]/channel/[:channelId]/releases/airgap](#kots-app-appid-channel-channelid-releases-airgap) |
+| [kots/app/[:appId]/channel/[:channelId]/releases/airgap/download-url](#kots-app-appid-channel-channelid-releases-airgap-download-url) |
 | [kots/app/[:appId]/license/create](#kots-app-appid-license-create) |
 | [kots/app/[:appId]/license/[:licenseId]/update](#kots-app-appid-license-licenseid-update) |
 | [kots/app/[:appId]/license/[:licenseId]/read](#kots-app-appid-license-licenseid-read) |
@@ -364,9 +365,13 @@ Grants the holder the permission to view information about the specified channel
 
 Grants the holder the permission to view information about the specified enterprise channel of the specified application(s).
 
-### kots/app/[:appId]/airgap/build
+### kots/app/[:appId]/channel/[:channelId]/releases/airgap
 
-Grants the holder permission to trigger airgap builds.
+Grants the holder permission to trigger airgap builds for the specified channel.
+
+### kots/app/[:appId]/channel/[:channelId]/releases/airgap/download-url
+
+Grants the holder permission to get an airgap bundle download URL for any release on the specified channel.
 
 ### kots/app/[:appId]/license/create
 
