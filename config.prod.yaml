@@ -37,8 +37,8 @@ Params:
   kubernetes_docker_version_minimum: "1.13.1"
   kubernetes_docker_version_default: "18.09.7"
   kubernetes_version: "1.15.12"
-  classic_product_notice: "This content is associated with a legacy version of the Replicated product. For the current Replicated product docs, [click here](https://kots.io/vendor)."
-  native_classic_product_notice: "This content is associated with a legacy version of the Replicated product. For the current Replicated product docs, [click here](https://kots.io/vendor)."
+  classic_product_notice: "This content is associated with a legacy version of the Replicated product. For the current Replicated product documentation, see [docs.replicated.com](https://docs.replicated.com)."
+  native_classic_product_notice: "This content is associated with a legacy version of the Replicated product. For the current Replicated product documentation, see [docs.replicated.com](https://docs.replicated.com)."
 
 taxonomies:
   category: "categories"
@@ -53,7 +53,7 @@ menu:
   main:
     - Name: "Replicated Docs"
       Weight: 1
-      URL: "https://kots.io/vendor/packaging/packaging-an-app/"
+      URL: "https://docs.replicated.com/"
     - Name: "Replicated Classic Docs "
       Weight: 2
       URL: "/docs/kubernetes/getting-started/overview/"
