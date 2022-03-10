@@ -53,7 +53,7 @@ menu:
   main:
     - Name: "Replicated Docs"
       Weight: 1
-      URL: "https://kots.io/vendor/packaging/packaging-an-app/"
+      URL: "https://docs.replicated.com/"
     - Name: "Replicated Classic Docs "
       Weight: 2
       URL: "/docs/kubernetes/getting-started/overview/"
