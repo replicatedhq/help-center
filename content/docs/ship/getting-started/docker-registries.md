@@ -15,7 +15,7 @@ When building your application, you have the option to use the Replicated privat
 
 {{< linked_headline "Replicated Registry" >}}
 
-Every application created in Replicated has a private, [completely isolated](/docs/registry/security) private Docker registry available. You can push images to your private registry by finding the endpoint at (https://vendor.replicated.com/#/images) and using the Docker CLI to tag and push images. Replicated will automatically use the customer license file to authenticate and pull any images from the Replicated Registry.
+Every application created in Replicated has a private, [completely isolated](https://docs.replicated.com/vendor/packaging-private-registry-security) private Docker registry available. You can push images to your private registry by finding the endpoint at (https://vendor.replicated.com/#/images) and using the Docker CLI to tag and push images. Replicated will automatically use the customer license file to authenticate and pull any images from the Replicated Registry.
 
 {{< linked_headline "Tagging Images" >}}
 
