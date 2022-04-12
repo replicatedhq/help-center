@@ -111,7 +111,7 @@ config:
 
 {{< linked_headline "Delivering a Private Image" >}}
 
-The [Replicated Private Registry](/docs/registry/security/) is a good way to deliver private images to be used in Ship. Pushing images to this registry will ensure they are only available to be pulled by authorized customers when using valid licenses.
+The [Replicated Private Registry](https://docs.replicated.com/vendor/packaging-private-registry-security) is a good way to deliver private images to be used in Ship. Pushing images to this registry will ensure they are only available to be pulled by authorized customers when using valid licenses.
 
 The following example will download a private image from the Replicated Private Registry and will retag and push it to the local registry:
 
