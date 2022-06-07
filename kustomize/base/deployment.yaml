@@ -25,6 +25,13 @@ spec:
               topologyKey: "kubernetes.io/hostname"
       containers:
         - name: help-center
+          resources:
+            requests:
+              cpu: 7m
+              memory: 20Mi
+            limits:
+              cpu: 20m
+              memory: 35Mi
           image: replicated/help-center
           imagePullPolicy: IfNotPresent
           ports:
