@@ -27,7 +27,6 @@ you should complete those guide sections first. You'll also need:
 
 First, clone [the starter repo](https://github.com/replicatedhq/replicated-starter-kubernetes), and re-initialize it
 
-
 ```sh
 git clone github.com/replicatedhq/replicated-starter-kubernetes.git
 cd replicated-starter-kubernetes
