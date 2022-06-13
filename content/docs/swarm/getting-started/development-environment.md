@@ -92,3 +92,4 @@ Both configs will:
 - Create a new release on the `Unstable` channel in Replicated
 
 These behaviors are documented and demonstrated in the [replicated-ci-demo](https://github.com/replicatedhq/replicated-ci-demo) project.
+
