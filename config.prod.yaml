@@ -56,7 +56,7 @@ menu:
       URL: "https://docs.replicated.com/"
     - Name: "Replicated Classic Docs "
       Weight: 2
-      URL: "/docs/kubernetes/getting-started/overview/"
+      URL: "/docs/native/getting-started/overview/"
     - Name: "Community"
       Weight: 3
       URL: "https://help.replicated.com/community/"
