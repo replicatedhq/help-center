@@ -122,8 +122,6 @@ docker stop replicated-statsd
 docker rm -f replicated replicated-ui replicated-operator replicated-premkit replicated-statsd retraced-api retraced-processor retraced-cron retraced-nsqd retraced-postgres
 docker images | grep "quay\.io/replicated" | awk '{print $3}' | xargs sudo docker rmi -f
 docker images | grep "registry\.replicated\.com/library/retraced" | awk '{print $3}' | xargs sudo docker rmi -f
-apt-get remove -y replicated replicated-ui replicated-operator
-apt-get purge -y replicated replicated-ui replicated-operator
 rm -rf /var/lib/replicated* /etc/replicated* /etc/init/replicated* /etc/init.d/replicated* /etc/default/replicated* /var/log/upstart/replicated* /etc/systemd/system/replicated*
 ```
 
@@ -138,6 +136,5 @@ docker stop replicated-statsd
 docker rm -f replicated replicated-ui replicated-operator replicated-premkit replicated-statsd retraced-api retraced-processor retraced-cron retraced-nsqd retraced-postgres
 docker images | grep "quay\.io/replicated" | awk '{print $3}' | xargs sudo docker rmi -f
 docker images | grep "registry\.replicated\.com/library/retraced" | awk '{print $3}' | xargs sudo docker rmi -f
-yum remove -y replicated replicated-ui replicated-operator
 rm -rf /var/lib/replicated* /etc/replicated* /etc/init/replicated* /etc/default/replicated* /etc/systemd/system/replicated* /etc/sysconfig/replicated* /etc/systemd/system/multi-user.target.wants/replicated* /run/replicated*
 ```
