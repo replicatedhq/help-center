@@ -1,0 +1,28 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - algoliasearch > debug:
+        patched: '2020-01-24T18:37:48.922Z'
+    - hugo-algolia > algoliasearch > debug:
+        patched: '2020-01-24T18:37:48.922Z'
+  'npm:extend:20180424':
+    - gulp > liftoff > extend:
+        patched: '2020-01-24T18:37:48.922Z'
+    - gulp-useref > vinyl-fs > glob-stream > extend:
+        patched: '2020-01-24T18:37:48.922Z'
+  SNYK-JS-LODASH-450202:
+    - hugo-algolia > lodash:
+        patched: '2020-01-24T18:37:48.922Z'
+  'npm:minimatch:20160620':
+    - gulp > vinyl-fs > glob-stream > minimatch:
+        patched: '2020-01-24T18:37:48.922Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2020-01-24T18:37:48.922Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2020-01-24T18:37:48.922Z'
+  'npm:moment:20170905':
+    - support-bundle-upload > moment:
+        patched: '2020-01-24T18:37:48.922Z'
