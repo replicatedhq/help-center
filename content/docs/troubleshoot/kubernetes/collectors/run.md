@@ -14,20 +14,20 @@ The run pod collector is not automatically included. You need to specify it in y
 
 
 ```yaml
-apiVersion: troubleshoot.replicated.com/v1beta1
-kind: Collector
+apiVersion: troubleshoot.sh/v1beta2
+kind: SupportBundle
 metadata:
   name: sample
 spec:
-  - run:
-      name: ping-google
-      namespace: default
-      image: flungo/netutils
-      command: ["ping"]
-      args: ["www.google.com"]
-      timeout: 5s
-      imagePullPolicy: IfNotPresent
-
+  collectors:
+    - run:
+        name: ping-google
+        namespace: default
+        image: flungo/netutils
+        command: ["ping"]
+        args: ["www.google.com"]
+        timeout: 5s
+        imagePullPolicy: IfNotPresent
 ```
 
 The timeout will be 20 seconds or the timeout specified, whichever is shorter.
@@ -40,5 +40,3 @@ When this collector is executed, it will include the following files in a suppor
 
 ### /run/\<name\>.txt
 This will contain the pod output (up to 10000 lines).
-
-

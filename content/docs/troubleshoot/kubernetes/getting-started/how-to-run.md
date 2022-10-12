@@ -30,5 +30,5 @@ Support Bundles are designed to be run when something is wrong with an applicati
 Once the plugin is installed, you can generate a sample Support Bundle with:
 
 ```shell
-kubectl troubleshoot https://troubleshoot.replicated.com
+kubectl support-bundle https://support-bundle.replicated.com
 ```

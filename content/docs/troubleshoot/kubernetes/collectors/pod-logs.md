@@ -14,19 +14,19 @@ The pod logs collector is not automatically included. You need to specify it in 
 
 
 ```yaml
-apiVersion: troubleshoot.replicated.com/v1beta1
-kind: Collector
+apiVersion: troubleshoot.sh/v1beta2
+kind: SupportBundle
 metadata:
   name: sample
 spec:
-  - logs:
-      selector:
-        - app=api
-      namespace: default
-      limits:
-        maxAge: 30d
-        maxLines: 1000
-
+  collectors:
+    - logs:
+        selector:
+          - app=api
+        namespace: default
+        limits:
+          maxAge: 30d
+          maxLines: 1000
 ```
 
 The selector attribute is a standard Kubernetes selector. It can match any labels.
@@ -39,4 +39,3 @@ When this collector is executed, it will include the following files in a suppor
 
 ### /logs/\<namespace\>/\<pod-name\>.txt
 This will be created for each pod that matches the selector.
-

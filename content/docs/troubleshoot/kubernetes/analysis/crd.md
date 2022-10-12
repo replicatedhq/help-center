@@ -12,8 +12,8 @@ gradient: "blueToBlue"
 {{<legacynotice>}}
 
 ```yaml
-apiVersion: troubleshoot.replicated.com/v1beta1
-kind: Preflight
+apiVersion: troubleshoot.sh/v1beta2
+kind: SupportBundle
 metadata:
   name: preflight-sample
 spec:

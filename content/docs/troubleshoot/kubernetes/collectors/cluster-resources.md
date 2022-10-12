@@ -15,12 +15,13 @@ The cluster resources colector is a default collector-- it will be automatically
 This collector does not accept any parameters.
 
 ```yaml
-apiVersion: troubleshoot.replicated.com/v1beta1
-kind: Collector
+apiVersion: troubleshoot.sh/v1beta2
+kind: SupportBundle
 metadata:
   name: sample
 spec:
-  - clusterResources: {}
+  collectors:
+    - clusterResources: {}
 ```
 
 ## Included resources
@@ -228,4 +229,3 @@ This file contains information about all pods, separated by namespace.
 
 ### /cluster-resources/ingress/\<namespace\>/\<name\>.json
 This file contains information about all ingresses, separated by namespace.
-

@@ -15,8 +15,8 @@ By default, the collectors don't include secrets. This means that a preflight ch
 
 
 ```yaml
-apiVersion: troubleshoot.replicated.com/v1beta1
-kind: Preflight
+apiVersion: troubleshoot.sh/v1beta2
+kind: SupportBundle
 metadata:
   name: preflight-sample
 spec:
