@@ -15,19 +15,16 @@ On November 20, 2020, rate limits anonymous and free authenticated use of Docker
 
 For more information on rate limits, see [this article](https://www.docker.com/increase-rate-limits) from Docker.
 
-The properties `DockerHubUsername` and `DockerHubPassword` can be set in the `/etc/replicated.conf` file on the host to configure Replicated to authenticate when pulling images to avoid rate limits. These credentials are only used to increase limits and do not need access to any private repositories on Docker Hub.
+Replicated can be configured to authenticate when pulling images to avoid rate limits.
+These credentials are only used to increase limits and do not need access to any private repositories on Docker Hub.
 
-```json
-{
-    "DockerHubUsername": "solomonhykes",
-    "DockerHubPassword": "passw0rd1"
-}
-```
-
-The Replicated service must be restarted after adding credentials to this file.
+The properties `DockerHubUsername` and `DockerHubPassword` can be set using the following [`replicatedctl`](/api/replicatedctl/replicatedctl_params_set/) commands: 
 
 ```bash
-docker service update --force replicated_replicated
+replicatedctl params set DockerHubUsername --value solomonhykes
+```
+```bash
+replicatedctl params set DockerHubPassword --value passw0rd1
 ```
 
 *NOTE: This document pertains to Replicated version 2.51.0 or greater. Replicated must be first manually upgraded a supported version. To manually upgrade, first `docker login` and follow the steps in [this guide](/docs/swarm/customer-installations/upgrading/).*
