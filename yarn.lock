@@ -1463,7 +1463,7 @@ https-browserify@^1.0.0:
 
 hugo-algolia@^1.2.14:
   version "1.2.14"
-  resolved "https://registry.npmjs.org/hugo-algolia/-/hugo-algolia-1.2.14.tgz"
+  resolved "https://registry.yarnpkg.com/hugo-algolia/-/hugo-algolia-1.2.14.tgz#00ee21884d7da387e2e42a7b275d80a241fe1ece"
   integrity sha512-VHDnKmvWZRQ/MGgWFFDlEGO+8arfL4X3kP6xWCY637/GHuc9Y1dlZ1F5GrFa+LAJ/5JiFo0e8E002SKXVv9CNQ==
   dependencies:
     algoliasearch "^3.24.1"
