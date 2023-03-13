@@ -1,6 +1,4 @@
-{{ $currentPage := . }} {{ $currentSection := .CurrentSection }} {{ $scope := ""
-}} {{ if .CurrentSection.Parent }} {{ $scope = .CurrentSection.Parent.Title }}
-{{ end }} {{ $category := .CurrentSection.Title }}
+{{ $currentPage := . }} {{ $currentSection := .CurrentSection }} {{ $scope := "" }} {{ if .CurrentSection.Parent }} {{ $scope = .CurrentSection.Parent.Title }} {{ end }} {{ $category := .CurrentSection.Title }}
 <div class="sidebar">
   <div class="dropdown u-marginBottom--most">
     <p class="u-fontWeight--bold u-fontSize--largest u-color--tuna">
