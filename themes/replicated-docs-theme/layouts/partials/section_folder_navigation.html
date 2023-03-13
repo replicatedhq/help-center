@@ -1,510 +1,587 @@
-{{ $currentPage := . }}
-{{ $currentSection := .CurrentSection }}
-{{ $scope := "" }}
-{{ if .CurrentSection.Parent }}
-    {{ $scope = .CurrentSection.Parent.Title }}
-{{ end }}
-{{ $category := .CurrentSection.Title }}
+{{ $currentPage := . }} {{ $currentSection := .CurrentSection }} {{ $scope := ""
+}} {{ if .CurrentSection.Parent }} {{ $scope = .CurrentSection.Parent.Title }}
+{{ end }} {{ $category := .CurrentSection.Title }}
 <div class="sidebar">
-        <div class="dropdown u-marginBottom--most">
-            <p class="u-fontWeight--bold u-fontSize--largest u-color--tuna u-paddingBottom--normal">Documentation</p>
-            <p class="u-fontSize--large u-fontWeight--medium u-cursor--pointer flex justifyContent--spaceBetween alignItems--center" id="dropdown-link">
-                {{ if $scope }}
-                    <span>{{ $scope | title }}</span>
-                {{ else }}
-                    <span>{{ $category | title }}</span>
-                {{ end }}
-                <span class="icon u-chevronIcon u-margingRight--small"></span>
-            </p>
-            <div class="menu" id="scheduler-dropdown-menu" style="display: none">
-                <div class="u-paddingTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
-                    <a href="/docs/native/getting-started/overview" class="u-color--curiousBlue">Replicated Classic</a>
-                    <div class="u-marginTop--small">
-                        <a href="/docs/kubernetes/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
-                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Kubernetes</p>
-                        </a>
-                        <a href="/docs/swarm/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
-                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Docker Swarm</p>
-                        </a>
-                        <a href="/docs/native/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
-                          <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Native Scheduler</p>
-                        </a>
-                        <a href="/docs/ship/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
-                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Ship</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="u-borderTop--gray u-paddingTop--normal u-marginTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
-                    <a href="/docs/config-screen/config-yaml/" class="u-color--curiousBlue">Features</a>
-                    <div class="u-marginTop--small">
-                        <a href="/docs/config-screen/config-yaml/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
-                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Config Screen</p>
-                        </a>
-                        <a href="/docs/snapshots/overview/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
-                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Snapshots</p>
-                        </a>
-                        <a href="/docs/ldap-and-identity/overview/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
-                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">LDAP & Identity Integration</p>
-                        </a>
-                        <a href="/docs/vendor-rbac/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
-                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Vendor RBAC</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="u-borderTop--gray u-paddingTop--normal u-marginTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
-                  <a href="/docs/troubleshoot/" class="u-color--curiousBlue">Troubleshoot & Preflight</a>
-                  <div class="u-marginTop--small">
-                      <a href="/docs/troubleshoot/kubernetes/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
-                          <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Kubernetes Applications</p>
-                      </a>
-                      <a href="/docs/troubleshoot/server/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
-                          <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Server Troubleshoot</p>
-                      </a>
-                  </div>
-                </div>
-                <div class="u-borderTop--gray u-paddingTop--normal u-marginTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
-                    <a href="/docs/audit-log" class="u-fontWeight--medium u-color--tuna u-fontSize--normal">
-                        <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Audit Log</p>
-                    </a>
-                </div>
-                <div class="u-borderTop--gray u-paddingTop--normal u-marginTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
-                  <a href="/docs/github-actions" class="u-fontWeight--medium u-color--tuna u-fontSize--normal">
-                      <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">GitHub Actions</p>
-                  </a>
-                </div>
-            </div>
-        </div>
-        <div class="desktop-only">
-            {{ if eq $scope "Native Scheduler" }}
-            <div class="u-marginBottom--most">
-                <h3 class="u-fontWeight--bold u-fontSize--large u-lineHeight--normal u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Replicated Native Scheduler</h3>
-                {{ with .Site.GetPage "/docs/native" }}
-                    {{ range .Pages }}
-                        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                            <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                {{ .Title }}
-                            </a>
-                        </p>
-                    {{ end }}
-                    {{ range .Sections }}
-                        {{ $firstPage := index (first 1 .Pages) 0 }}
-                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
-                            <a href="{{ $firstPage.Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}">{{ .Title }}</a>
-                        </h3>
-                        {{ if .InSection $currentPage }}
-                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
-                                {{ range .Pages }}
-                                    {{ if not .Params.hideFromList }}
-                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                                        <a href="{{ .Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                            {{ .Title }}
-                                        </a>
-                                    </p>
-                                    {{ end }}
-                                {{ end }}
-                            </div>
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
-            </div>
-            {{ end }}
-            {{ if eq $scope "Docker Swarm" }}
-            <div class="u-marginBottom--most">
-                <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Swarm</h3>
-                {{ with .Site.GetPage "/docs/swarm" }}
-                    {{ range .Pages }}
-                        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                            <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                {{ .Title }}
-                            </a>
-                        </p>
-                    {{ end }}
-                    {{ range .Sections }}
-                        {{ $firstPage := index (first 1 .Pages) 0 }}
-                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
-                            <a href="{{ $firstPage.Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}">{{ .Title }}</a>
-                        </h3>
-                        {{ if .InSection $currentPage }}
-                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
-                                {{ range .Pages }}
-                                    {{ if not .Params.hideFromList }}
-                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                                        <a href="{{ .Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                            {{ .Title }}
-                                        </a>
-                                    </p>
-                                    {{ end }}
-                                {{ end }}
-                            </div>
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
-            </div>
-            {{ end }}
-            {{ if eq $scope "Kubernetes" }}
-            <div class="u-marginBottom--most">
-                <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Kubernetes</h3>
-                {{ with .Site.GetPage "/docs/kubernetes" }}
-                    {{ range .Pages }}
-                        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                            <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                {{ .Title }}
-                            </a>
-                        </p>
-                    {{ end }}
-                    {{ range .Sections }}
-                        {{ $firstPage := index (first 1 .Pages) 0 }}
-                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
-                            <a href="{{ $firstPage.Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}">{{ .Title }}</a>
-                        </h3>
-                        {{ if .InSection $currentPage }}
-                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
-                                {{ range .Pages }}
-                                    {{ if not .Params.hideFromList }}
-                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                                        <a href="{{ .Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                            {{ .Title }}
-                                        </a>
-                                    </p>
-                                    {{ end }}
-                                {{ end }}
-                            </div>
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
-            </div>
-            {{ end }}
-            {{ if eq $category "Config Screen" }}
-            <div class="u-marginBottom--most">
-              <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Config Screen</h3>
-              {{ with .Site.GetPage "docs/config-screen" }}
-                  {{ range .Pages }}
-                      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                          <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                              {{ .Title }}
-                          </a>
-                      </p>
-                  {{ end }}
-                  {{ range .Sections }}
-                      {{ $firstPage := index (first 1 .Pages) 0 }}
-                      <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
-                          <a href="{{ $firstPage.Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}">{{ .Title }}</a>
-                      </h3>
-                      {{ if .InSection $currentPage }}
-                          <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
-                              {{ range .Pages }}
-                                  {{ if not .Params.hideFromList }}
-                                  <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                                      <a href="{{ .Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                          {{ .Title }}
-                                      </a>
-                                  </p>
-                                  {{ end }}
-                              {{ end }}
-                          </div>
-                      {{ end }}
-                  {{ end }}
-              {{ end }}
-            </div>
-            {{ end }}
-            {{ if eq $category "Snapshots" }}
-            <div class="u-marginBottom--most">
-                <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Snapshots</h3>
-                {{ with .Site.GetPage "/docs/snapshots" }}
-                    {{ range .Pages }}
-                        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                            <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                {{ .Title }}
-                            </a>
-                        </p>
-                    {{ end }}
-                    {{ range .Sections }}
-                        {{ $firstPage := index (first 1 .Pages) 0 }}
-                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
-                            <a href="{{ $firstPage.Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}">{{ .Title }}</a>
-                        </h3>
-                        {{ if .InSection $currentPage }}
-                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
-                                {{ range .Pages }}
-                                    {{ if not .Params.hideFromList }}
-                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                                        <a href="{{ .Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                            {{ .Title }}
-                                        </a>
-                                    </p>
-                                    {{ end }}
-                                {{ end }}
-                            </div>
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
-            </div>
-            {{ end }}
-            {{ if eq $category "LDAP and Identity Integration" }}
-            <div class="u-marginBottom--most">
-                <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">LDAP & Identity</h3>
-                {{ with .Site.GetPage "/docs/ldap-and-identity" }}
-                    {{ range .Pages }}
-                        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                            <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                {{ .Title }}
-                            </a>
-                        </p>
-                    {{ end }}
-                    {{ range .Sections }}
-                        {{ $firstPage := index (first 1 .Pages) 0 }}
-                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
-                            <a href="{{ $firstPage.Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}">{{ .Title }}</a>
-                        </h3>
-                        {{ if .InSection $currentPage }}
-                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
-                                {{ range .Pages }}
-                                    {{ if not .Params.hideFromList }}
-                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                                        <a href="{{ .Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                            {{ .Title }}
-                                        </a>
-                                    </p>
-                                    {{ end }}
-                                {{ end }}
-                            </div>
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
-            </div>
-            {{ end }}
-            {{ if eq $category "Vendor RBAC" }}
-            <div class="u-marginBottom--most">
-                <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Vendor RBAC</h3>
-                {{ with .Site.GetPage "/docs/vendor-rbac" }}
-                    {{ range .Pages }}
-                        {{ if not .Params.hideFromList }}
-                            <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                                <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                    {{ .Title }}
-                                </a>
-                            </p>
-                        {{ end }}
-                    {{ end }}
-                    {{ range .Sections }}
-                        {{ $firstPage := index (first 1 .Pages) 0 }}
-                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
-                            <a href="{{ $firstPage.Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}">{{ .Title }}</a>
-                        </h3>
-                        {{ if .InSection $currentPage }}
-                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
-                                {{ range .Pages }}
-                                    {{ if not .Params.hideFromList }}
-                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                                        <a href="{{ .Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                            {{ .Title }}
-                                        </a>
-                                    </p>
-                                    {{ end }}
-                                {{ end }}
-                            </div>
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
-            </div>
-            {{ end }}
-            {{ if eq $scope "Audit Log" }}
-            <div class="u-marginBottom--most">
-                <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Replicated Audit Log</h3>
-                {{ with .Site.GetPage "/docs/audit-log" }}
-                    {{ range .Pages }}
-                        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                            <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                {{ .Title }}
-                            </a>
-                        </p>
-                    {{ end }}
-                    {{ range .Sections }}
-                        {{ $firstPage := index (first 1 .Pages) 0 }}
-                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
-                            <a href="{{ $firstPage.Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}">{{ .Title }}</a>
-                        </h3>
-                        {{ if .InSection $currentPage }}
-                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
-                                {{ range .Pages }}
-                                    {{ if not .Params.hideFromList }}
-                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                                        <a href="{{ .Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                            {{ .Title }}
-                                        </a>
-                                    </p>
-                                    {{ end }}
-                                {{ end }}
-                            </div>
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
-            </div>
-            {{ end }}
-            {{ if eq $scope "Ship" }}
-            <div class="u-marginBottom--most">
-                <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Replicated Ship</h3>
-                {{ with .Site.GetPage "/docs/ship" }}
-                    {{ range .Pages }}
-                        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                            <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                {{ .Title }}
-                            </a>
-                        </p>
-                    {{ end }}
-                    {{ range .Sections }}
-                        {{ $firstPage := index (first 1 .Pages) 0 }}
-                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
-                            <a href="{{ $firstPage.Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}">{{ .Title }}</a>
-                        </h3>
-                        {{ if .InSection $currentPage }}
-                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
-                                {{ range .Pages }}
-                                    {{ if not .Params.hideFromList }}
-                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                                        <a href="{{ .Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                            {{ .Title }}
-                                        </a>
-                                    </p>
-                                    {{ end }}
-                                {{ end }}
-                            </div>
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
-            </div>
-            {{ end }}
-            {{ if eq $scope "Server Troubleshoot" }}
-            <div class="u-marginBottom--most">
-                <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Server Troubleshoot</h3>
-                {{ with .Site.GetPage "/docs/troubleshoot/server" }}
-                    {{ range .Pages }}
-                        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                            <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                {{ .Title }}
-                            </a>
-                        </p>
-                    {{ end }}
-                    {{ range .Sections }}
-                        {{ $firstPage := index (first 1 .Pages) 0 }}
-                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
-                            <a href="{{ $firstPage.Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}">{{ .Title }}</a>
-                        </h3>
-                        {{ if .InSection $currentPage }}
-                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
-                                {{ range .Pages }}
-                                    {{ if not .Params.hideFromList }}
-                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                                        <a href="{{ .Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                            {{ .Title }}
-                                        </a>
-                                    </p>
-                                    {{ end }}
-                                {{ end }}
-                            </div>
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
-            </div>
-            {{ end }}
-            {{ if eq $scope "Kubernetes Troubleshoot" }}
-            <div class="u-marginBottom--most">
-                <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Kubernetes Troubleshoot</h3>
-                {{ with .Site.GetPage "/docs/troubleshoot/kubernetes" }}
-                    {{ range .Pages }}
-                        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                            <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                {{ .Title }}
-                            </a>
-                        </p>
-                    {{ end }}
-                    {{ range .Sections }}
-                        {{ $firstPage := index (first 1 .Pages) 0 }}
-                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
-                            <a href="{{ $firstPage.Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}">{{ .Title }}</a>
-                        </h3>
-                        {{ if .InSection $currentPage }}
-                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
-                                {{ range .Pages }}
-                                    {{ if not .Params.hideFromList }}
-                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                                        <a href="{{ .Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                            {{ .Title }}
-                                        </a>
-                                    </p>
-                                    {{ end }}
-                                {{ end }}
-                            </div>
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
-            </div>
-            {{ end }}
-            {{ if eq $scope "Entitlements" }}
-            <div class="u-marginBottom--most">
-                <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Replicated Entitlements</h3>
-                {{ with .Site.GetPage "/docs/entitlements" }}
-                    {{ range .Pages }}
-                        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                            <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                {{ .Title }}
-                            </a>
-                        </p>
-                    {{ end }}
-                    {{ range .Sections }}
-                        {{ $firstPage := index (first 1 .Pages) 0 }}
-                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
-                            <a href="{{ $firstPage.Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}">{{ .Title }}</a>
-                        </h3>
-                        {{ if .InSection $currentPage }}
-                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
-                                {{ range .Pages }}
-                                    {{ if not .Params.hideFromList }}
-                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                                        <a href="{{ .Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                            {{ .Title }}
-                                        </a>
-                                    </p>
-                                    {{ end }}
-                                {{ end }}
-                            </div>
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
-            </div>
-            {{ end }}
-            {{ if eq $category "GitHub Actions" }}
-            <div class="u-marginBottom--most">
-                <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">GitHub Actions</h3>
-                {{ with .Site.GetPage "/docs/github-actions" }}
-                    {{ range .Pages }}
-                        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                            <a href="{{ .Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                {{ .Title }}
-                            </a>
-                        </p>
-                    {{ end }}
-                    {{ range .Sections }}
-                        {{ $firstPage := index (first 1 .Pages) 0 }}
-                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
-                            <a href="{{ $firstPage.Permalink }}" class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}">{{ .Title }}</a>
-                        </h3>
-                        {{ if .InSection $currentPage }}
-                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
-                                {{ range .Pages }}
-                                    {{ if not .Params.hideFromList }}
-                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
-                                        <a href="{{ .Permalink }}" class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}">
-                                            {{ .Title }}
-                                        </a>
-                                    </p>
-                                    {{ end }}
-                                {{ end }}
-                            </div>
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
-            </div>
-            {{ end }}
-        </div>
+  <div class="dropdown u-marginBottom--most">
+    <p class="u-fontWeight--bold u-fontSize--largest u-color--tuna">
+      Documentation
+    </p>
+  </div>
+  <div class="desktop-only">
+    {{ if eq $scope "Native Scheduler" }}
+    <div class="u-marginBottom--most">
+      <h3
+        class="u-fontWeight--bold u-fontSize--large u-lineHeight--normal u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal"
+      >
+        Replicated Native Scheduler
+      </h3>
+      {{ with .Site.GetPage "/docs/native" }} {{ range .Pages }}
+      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+        <a
+          href="{{ .Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+        >
+          {{ .Title }}
+        </a>
+      </p>
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
+      }}
+      <h3
+        class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
+      >
+        <a
+          href="{{ $firstPage.Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}"
+          >{{ .Title }}</a
+        >
+      </h3>
+      {{ if .InSection $currentPage }}
+      <div
+        class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small"
+      >
+        {{ range .Pages }} {{ if not .Params.hideFromList }}
+        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+          <a
+            href="{{ .Permalink }}"
+            class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+          >
+            {{ .Title }}
+          </a>
+        </p>
+        {{ end }} {{ end }}
+      </div>
+      {{ end }} {{ end }} {{ end }}
     </div>
+    {{ end }} {{ if eq $scope "Docker Swarm" }}
+    <div class="u-marginBottom--most">
+      <h3
+        class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal"
+      >
+        Swarm
+      </h3>
+      {{ with .Site.GetPage "/docs/swarm" }} {{ range .Pages }}
+      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+        <a
+          href="{{ .Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+        >
+          {{ .Title }}
+        </a>
+      </p>
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
+      }}
+      <h3
+        class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
+      >
+        <a
+          href="{{ $firstPage.Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}"
+          >{{ .Title }}</a
+        >
+      </h3>
+      {{ if .InSection $currentPage }}
+      <div
+        class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small"
+      >
+        {{ range .Pages }} {{ if not .Params.hideFromList }}
+        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+          <a
+            href="{{ .Permalink }}"
+            class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+          >
+            {{ .Title }}
+          </a>
+        </p>
+        {{ end }} {{ end }}
+      </div>
+      {{ end }} {{ end }} {{ end }}
+    </div>
+    {{ end }} {{ if eq $scope "Kubernetes" }}
+    <div class="u-marginBottom--most">
+      <h3
+        class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal"
+      >
+        Kubernetes
+      </h3>
+      {{ with .Site.GetPage "/docs/kubernetes" }} {{ range .Pages }}
+      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+        <a
+          href="{{ .Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+        >
+          {{ .Title }}
+        </a>
+      </p>
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
+      }}
+      <h3
+        class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
+      >
+        <a
+          href="{{ $firstPage.Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}"
+          >{{ .Title }}</a
+        >
+      </h3>
+      {{ if .InSection $currentPage }}
+      <div
+        class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small"
+      >
+        {{ range .Pages }} {{ if not .Params.hideFromList }}
+        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+          <a
+            href="{{ .Permalink }}"
+            class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+          >
+            {{ .Title }}
+          </a>
+        </p>
+        {{ end }} {{ end }}
+      </div>
+      {{ end }} {{ end }} {{ end }}
+    </div>
+    {{ end }} {{ if eq $category "Config Screen" }}
+    <div class="u-marginBottom--most">
+      <h3
+        class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal"
+      >
+        Config Screen
+      </h3>
+      {{ with .Site.GetPage "docs/config-screen" }} {{ range .Pages }}
+      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+        <a
+          href="{{ .Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+        >
+          {{ .Title }}
+        </a>
+      </p>
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
+      }}
+      <h3
+        class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
+      >
+        <a
+          href="{{ $firstPage.Permalink }}"
+          class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}"
+          >{{ .Title }}</a
+        >
+      </h3>
+      {{ if .InSection $currentPage }}
+      <div
+        class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small"
+      >
+        {{ range .Pages }} {{ if not .Params.hideFromList }}
+        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+          <a
+            href="{{ .Permalink }}"
+            class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+          >
+            {{ .Title }}
+          </a>
+        </p>
+        {{ end }} {{ end }}
+      </div>
+      {{ end }} {{ end }} {{ end }}
+    </div>
+    {{ end }} {{ if eq $category "Snapshots" }}
+    <div class="u-marginBottom--most">
+      <h3
+        class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal"
+      >
+        Snapshots
+      </h3>
+      {{ with .Site.GetPage "/docs/snapshots" }} {{ range .Pages }}
+      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+        <a
+          href="{{ .Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+        >
+          {{ .Title }}
+        </a>
+      </p>
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
+      }}
+      <h3
+        class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
+      >
+        <a
+          href="{{ $firstPage.Permalink }}"
+          class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}"
+          >{{ .Title }}</a
+        >
+      </h3>
+      {{ if .InSection $currentPage }}
+      <div
+        class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small"
+      >
+        {{ range .Pages }} {{ if not .Params.hideFromList }}
+        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+          <a
+            href="{{ .Permalink }}"
+            class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+          >
+            {{ .Title }}
+          </a>
+        </p>
+        {{ end }} {{ end }}
+      </div>
+      {{ end }} {{ end }} {{ end }}
+    </div>
+    {{ end }} {{ if eq $category "LDAP and Identity Integration" }}
+    <div class="u-marginBottom--most">
+      <h3
+        class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal"
+      >
+        LDAP & Identity
+      </h3>
+      {{ with .Site.GetPage "/docs/ldap-and-identity" }} {{ range .Pages }}
+      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+        <a
+          href="{{ .Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+        >
+          {{ .Title }}
+        </a>
+      </p>
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
+      }}
+      <h3
+        class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
+      >
+        <a
+          href="{{ $firstPage.Permalink }}"
+          class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}"
+          >{{ .Title }}</a
+        >
+      </h3>
+      {{ if .InSection $currentPage }}
+      <div
+        class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small"
+      >
+        {{ range .Pages }} {{ if not .Params.hideFromList }}
+        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+          <a
+            href="{{ .Permalink }}"
+            class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+          >
+            {{ .Title }}
+          </a>
+        </p>
+        {{ end }} {{ end }}
+      </div>
+      {{ end }} {{ end }} {{ end }}
+    </div>
+    {{ end }} {{ if eq $category "Vendor RBAC" }}
+    <div class="u-marginBottom--most">
+      <h3
+        class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal"
+      >
+        Vendor RBAC
+      </h3>
+      {{ with .Site.GetPage "/docs/vendor-rbac" }} {{ range .Pages }} {{ if not
+      .Params.hideFromList }}
+      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+        <a
+          href="{{ .Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+        >
+          {{ .Title }}
+        </a>
+      </p>
+      {{ end }} {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1
+      .Pages) 0 }}
+      <h3
+        class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
+      >
+        <a
+          href="{{ $firstPage.Permalink }}"
+          class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}"
+          >{{ .Title }}</a
+        >
+      </h3>
+      {{ if .InSection $currentPage }}
+      <div
+        class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small"
+      >
+        {{ range .Pages }} {{ if not .Params.hideFromList }}
+        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+          <a
+            href="{{ .Permalink }}"
+            class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+          >
+            {{ .Title }}
+          </a>
+        </p>
+        {{ end }} {{ end }}
+      </div>
+      {{ end }} {{ end }} {{ end }}
+    </div>
+    {{ end }} {{ if eq $scope "Audit Log" }}
+    <div class="u-marginBottom--most">
+      <h3
+        class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal"
+      >
+        Replicated Audit Log
+      </h3>
+      {{ with .Site.GetPage "/docs/audit-log" }} {{ range .Pages }}
+      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+        <a
+          href="{{ .Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+        >
+          {{ .Title }}
+        </a>
+      </p>
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
+      }}
+      <h3
+        class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
+      >
+        <a
+          href="{{ $firstPage.Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}"
+          >{{ .Title }}</a
+        >
+      </h3>
+      {{ if .InSection $currentPage }}
+      <div
+        class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small"
+      >
+        {{ range .Pages }} {{ if not .Params.hideFromList }}
+        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+          <a
+            href="{{ .Permalink }}"
+            class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+          >
+            {{ .Title }}
+          </a>
+        </p>
+        {{ end }} {{ end }}
+      </div>
+      {{ end }} {{ end }} {{ end }}
+    </div>
+    {{ end }} {{ if eq $scope "Ship" }}
+    <div class="u-marginBottom--most">
+      <h3
+        class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal"
+      >
+        Replicated Ship
+      </h3>
+      {{ with .Site.GetPage "/docs/ship" }} {{ range .Pages }}
+      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+        <a
+          href="{{ .Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+        >
+          {{ .Title }}
+        </a>
+      </p>
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
+      }}
+      <h3
+        class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
+      >
+        <a
+          href="{{ $firstPage.Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}"
+          >{{ .Title }}</a
+        >
+      </h3>
+      {{ if .InSection $currentPage }}
+      <div
+        class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small"
+      >
+        {{ range .Pages }} {{ if not .Params.hideFromList }}
+        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+          <a
+            href="{{ .Permalink }}"
+            class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+          >
+            {{ .Title }}
+          </a>
+        </p>
+        {{ end }} {{ end }}
+      </div>
+      {{ end }} {{ end }} {{ end }}
+    </div>
+    {{ end }} {{ if eq $scope "Server Troubleshoot" }}
+    <div class="u-marginBottom--most">
+      <h3
+        class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal"
+      >
+        Server Troubleshoot
+      </h3>
+      {{ with .Site.GetPage "/docs/troubleshoot/server" }} {{ range .Pages }}
+      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+        <a
+          href="{{ .Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+        >
+          {{ .Title }}
+        </a>
+      </p>
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
+      }}
+      <h3
+        class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
+      >
+        <a
+          href="{{ $firstPage.Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}"
+          >{{ .Title }}</a
+        >
+      </h3>
+      {{ if .InSection $currentPage }}
+      <div
+        class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small"
+      >
+        {{ range .Pages }} {{ if not .Params.hideFromList }}
+        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+          <a
+            href="{{ .Permalink }}"
+            class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+          >
+            {{ .Title }}
+          </a>
+        </p>
+        {{ end }} {{ end }}
+      </div>
+      {{ end }} {{ end }} {{ end }}
+    </div>
+    {{ end }} {{ if eq $scope "Kubernetes Troubleshoot" }}
+    <div class="u-marginBottom--most">
+      <h3
+        class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal"
+      >
+        Kubernetes Troubleshoot
+      </h3>
+      {{ with .Site.GetPage "/docs/troubleshoot/kubernetes" }} {{ range .Pages
+      }}
+      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+        <a
+          href="{{ .Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+        >
+          {{ .Title }}
+        </a>
+      </p>
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
+      }}
+      <h3
+        class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
+      >
+        <a
+          href="{{ $firstPage.Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}"
+          >{{ .Title }}</a
+        >
+      </h3>
+      {{ if .InSection $currentPage }}
+      <div
+        class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small"
+      >
+        {{ range .Pages }} {{ if not .Params.hideFromList }}
+        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+          <a
+            href="{{ .Permalink }}"
+            class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+          >
+            {{ .Title }}
+          </a>
+        </p>
+        {{ end }} {{ end }}
+      </div>
+      {{ end }} {{ end }} {{ end }}
+    </div>
+    {{ end }} {{ if eq $scope "Entitlements" }}
+    <div class="u-marginBottom--most">
+      <h3
+        class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal"
+      >
+        Replicated Entitlements
+      </h3>
+      {{ with .Site.GetPage "/docs/entitlements" }} {{ range .Pages }}
+      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+        <a
+          href="{{ .Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+        >
+          {{ .Title }}
+        </a>
+      </p>
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
+      }}
+      <h3
+        class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
+      >
+        <a
+          href="{{ $firstPage.Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}"
+          >{{ .Title }}</a
+        >
+      </h3>
+      {{ if .InSection $currentPage }}
+      <div
+        class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small"
+      >
+        {{ range .Pages }} {{ if not .Params.hideFromList }}
+        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+          <a
+            href="{{ .Permalink }}"
+            class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+          >
+            {{ .Title }}
+          </a>
+        </p>
+        {{ end }} {{ end }}
+      </div>
+      {{ end }} {{ end }} {{ end }}
+    </div>
+    {{ end }} {{ if eq $category "GitHub Actions" }}
+    <div class="u-marginBottom--most">
+      <h3
+        class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal"
+      >
+        GitHub Actions
+      </h3>
+      {{ with .Site.GetPage "/docs/github-actions" }} {{ range .Pages }}
+      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+        <a
+          href="{{ .Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+        >
+          {{ .Title }}
+        </a>
+      </p>
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
+      }}
+      <h3
+        class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
+      >
+        <a
+          href="{{ $firstPage.Permalink }}"
+          class="{{ if and (eq .Title $currentPage.Title) (eq .CurrentSection $currentSection) }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--tuna {{ end }}"
+          >{{ .Title }}</a
+        >
+      </h3>
+      {{ if .InSection $currentPage }}
+      <div
+        class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small"
+      >
+        {{ range .Pages }} {{ if not .Params.hideFromList }}
+        <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+          <a
+            href="{{ .Permalink }}"
+            class="{{ if eq .Title $currentPage.Title }} u-color--curiousBlueDark u-fontWeight--bold {{ else }} u-color--curiousBlue {{ end }}"
+          >
+            {{ .Title }}
+          </a>
+        </p>
+        {{ end }} {{ end }}
+      </div>
+      {{ end }} {{ end }} {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</div>
