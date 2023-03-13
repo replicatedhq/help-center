@@ -112,12 +112,14 @@ components:
           max_size: "10m"
         memory_limit: 500000000
         memory_swap_limit: 1000000000
+        oom_kill_disable: true
         ports:
           - interface: "docker0"
             port_type: tcp
             private_port: 80
             when: true
         privileged: true
+        readonly_rootfs: true
         restart:
           max: 5
           policy: on-failure
@@ -137,6 +139,7 @@ components:
           - name: nofile
             soft: 1024
             hard: 1024
+        user: 1000:1000
         version: "1.1.0"
         volumes:
           - container_path: /mnt-path
