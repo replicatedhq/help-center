@@ -1,6 +1,4 @@
-{{ $currentPage := . }} {{ $currentSection := .CurrentSection }} {{ $scope := ""
-}} {{ if .CurrentSection.Parent }} {{ $scope = .CurrentSection.Parent.Title }}
-{{ end }} {{ $category := .CurrentSection.Title }}
+{{ $currentPage := . }} {{ $currentSection := .CurrentSection }} {{ $scope := "" }} {{ if .CurrentSection.Parent }} {{ $scope = .CurrentSection.Parent.Title }} {{ end }} {{ $category := .CurrentSection.Title }}
 <div class="sidebar">
   <div class="dropdown u-marginBottom--most">
     <p class="u-fontWeight--bold u-fontSize--largest u-color--tuna">
@@ -24,8 +22,7 @@
           {{ .Title }}
         </a>
       </p>
-      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
-      }}
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0 }}
       <h3
         class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
       >
@@ -68,8 +65,7 @@
           {{ .Title }}
         </a>
       </p>
-      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
-      }}
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0 }}
       <h3
         class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
       >
@@ -112,8 +108,7 @@
           {{ .Title }}
         </a>
       </p>
-      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
-      }}
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0 }}
       <h3
         class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
       >
@@ -156,8 +151,7 @@
           {{ .Title }}
         </a>
       </p>
-      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
-      }}
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0 }}
       <h3
         class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
       >
@@ -200,8 +194,7 @@
           {{ .Title }}
         </a>
       </p>
-      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
-      }}
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0 }}
       <h3
         class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
       >
@@ -244,8 +237,7 @@
           {{ .Title }}
         </a>
       </p>
-      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
-      }}
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0 }}
       <h3
         class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
       >
@@ -279,8 +271,7 @@
       >
         Vendor RBAC
       </h3>
-      {{ with .Site.GetPage "/docs/vendor-rbac" }} {{ range .Pages }} {{ if not
-      .Params.hideFromList }}
+      {{ with .Site.GetPage "/docs/vendor-rbac" }} {{ range .Pages }} {{ if not .Params.hideFromList }}
       <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
         <a
           href="{{ .Permalink }}"
@@ -289,8 +280,7 @@
           {{ .Title }}
         </a>
       </p>
-      {{ end }} {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1
-      .Pages) 0 }}
+      {{ end }} {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0 }}
       <h3
         class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
       >
@@ -333,8 +323,7 @@
           {{ .Title }}
         </a>
       </p>
-      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
-      }}
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0 }}
       <h3
         class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
       >
@@ -377,8 +366,7 @@
           {{ .Title }}
         </a>
       </p>
-      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
-      }}
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0 }}
       <h3
         class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
       >
@@ -421,8 +409,7 @@
           {{ .Title }}
         </a>
       </p>
-      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
-      }}
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0 }}
       <h3
         class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
       >
@@ -456,8 +443,7 @@
       >
         Kubernetes Troubleshoot
       </h3>
-      {{ with .Site.GetPage "/docs/troubleshoot/kubernetes" }} {{ range .Pages
-      }}
+      {{ with .Site.GetPage "/docs/troubleshoot/kubernetes" }} {{ range .Pages }}
       <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
         <a
           href="{{ .Permalink }}"
@@ -466,8 +452,7 @@
           {{ .Title }}
         </a>
       </p>
-      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
-      }}
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0 }}
       <h3
         class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
       >
@@ -510,8 +495,7 @@
           {{ .Title }}
         </a>
       </p>
-      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
-      }}
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0 }}
       <h3
         class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
       >
@@ -554,8 +538,7 @@
           {{ .Title }}
         </a>
       </p>
-      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0
-      }}
+      {{ end }} {{ range .Sections }} {{ $firstPage := index (first 1 .Pages) 0 }}
       <h3
         class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal"
       >
