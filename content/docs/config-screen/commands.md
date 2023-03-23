@@ -23,6 +23,16 @@ Data imported with `value_cmd` or `data_cmd` will not be overwritten upon updati
 (For all three import methods the command is rerun during app update, but the results will only be used to overwrite prior values in the case of `default_cmd`)
 Modifying the name of a config item will cause it to be recognized as a new item and a new value will be generated.
 
+# Parameters
+
+- `name`: The name of the command which can be referenced from other sections of the yaml.
+- `cmd`: The ID of the command. See [Available Commands](#available-commands) below for enumeration.
+- `args`: A variable number of string arguments. This is unique per command. For more details see [Available Commands](#available-commands) below.
+- `timeout`: Timeout in seconds to wait for the command to run before aborting. Defaults to 15 seconds for the [Raw](#raw) command.
+- `readonly_rootfs`: Whether to mount the container's root filesystem as read only. Applies to the [Raw](#raw) command only.
+
+# Example
+
 Below is an example of a command that will generate a private key, a x509 certificate, and a random admin password that are used as configuration for our app.
 
 ```yaml
@@ -168,6 +178,8 @@ Runs command from a bash shell inside an "ubuntu:trusty" docker container. The d
   args:
   - echo
   - Hello World!
+  timeout: 5
+  readonly_rootfs: true
 ```
 
 
