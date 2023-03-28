@@ -11,7 +11,7 @@
   <meta name="description" content="{{ . }}" />
   {{ end }} {{ with .Site.Params.author }}
   <meta name="author" content="{{ . }}" />
-  {{ end }} {{ if not (in $.Permalink "api")}}
+  {{ end }} {{ if not (in $.Permalink "api") }}
   <meta name="robots" content="noindex" />
   <meta name="googlebot" content="noindex" />
   {{ end }}

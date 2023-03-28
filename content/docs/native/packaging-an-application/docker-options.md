@@ -68,6 +68,13 @@ Learn more about Docker's network settings at [Network Settings](https://docs.do
     network_aliases: ["my-service"]
 ```
 
+{{< linked_headline "User and Group" >}}
+
+Run the container as the specified user and optional group (format: `<name|uid>[:<group|gid>]`).
+
+```yaml
+  user: "1000:1000"
+```
 
 {{< linked_headline "Security Options" >}}
 
@@ -98,6 +105,14 @@ Security capabilities and access to devices are limited for containers by defaul
 ```
 
 Learn more about [Security Capabilities](https://docs.docker.com/engine/reference/run/#/runtime-privilege-and-linux-capabilities).
+
+{{< linked_headline "Read-only Root Filesystem" >}}
+
+Mount the container's root filesystem as read only.
+
+```yaml
+  readonly_rootfs: true
+```
 
 {{< linked_headline "Allocate TTY">}}
 
