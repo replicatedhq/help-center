@@ -63,4 +63,6 @@ menu:
     - Name: "Support"
       Weight: 3
       URL: "https://vendor.replicated.com/support"
+
+enableRobotsTXT: true
 ---
