@@ -11,10 +11,9 @@
   <meta name="description" content="{{ . }}" />
   {{ end }} {{ with .Site.Params.author }}
   <meta name="author" content="{{ . }}" />
-  {{ end }} {{ if not (in $.Permalink "api") }}
+  {{ end }} 
   <meta name="robots" content="noindex" />
   <meta name="googlebot" content="noindex" />
-  {{ end }}
   <link
     rel="apple-touch-icon"
     sizes="180x180"
