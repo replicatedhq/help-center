@@ -25,14 +25,14 @@ Params:
   pagetitle: "Replicated"
   permalink: "#"
 
-  docker_version_default: "20.10.7"
+  docker_version_default: "24.0.2"
   docker_version_minimum: "1.10.3"
   replicated_api_version_current: "2.55.0"
   replicated_latest_version: "2.55.0"
   replicated_latest_release_date: "March 27, 2023"
 
   swarm_docker_version_minimum: "1.13.1"
-  swarm_docker_version_default: "20.10.7"
+  swarm_docker_version_default: "24.0.2"
 
   kubernetes_docker_version_minimum: "1.13.1"
   kubernetes_docker_version_default: "18.09.7"
