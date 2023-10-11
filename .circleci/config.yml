@@ -16,7 +16,7 @@ environment: &environment
 defaults: &defaults
   <<: *environment
   docker:
-    - image: circleci/node:8.9.4
+    - image: circleci/node:8
 
 defaults_eks: &defaults_eks
   docker:
@@ -36,7 +36,12 @@ defaults_py: &defaults_py
 
 setup_steps: &setup_steps
   command: |
-    sudo apt-get install python-pip python-dev build-essential
+    cat /etc/os-release ## the sed commands are stretch specific, so this is to help future troubleshooting
+    sudo sed -i s/deb.debian.org/archive.debian.org/g /etc/apt/sources.list
+    sudo sed -i 's|security.debian.org|archive.debian.org|g' /etc/apt/sources.list
+    sudo sed -i '/stretch-updates/d' /etc/apt/sources.list
+    sudo apt-get update -y
+    sudo apt-get install -y python-pip python-dev build-essential
     sudo npm install -g npm@3.x.x
     sudo npm install -g grunt-cli
     yarn install
