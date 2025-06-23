@@ -1,14 +1,17 @@
 name: Hugo Link Check
 on:
   pull_request:
-    types: [opened, synchronized]
+    branches:
+      - main
+
 jobs:
-  filter-to-pr-open-synced:
+  broken-link-check:
     runs-on: ubuntu-latest
+    name: Check for broken links
     steps:
-    - uses: actions/checkout@v2
-    - name: linkcheck
-      uses: marccampbell/hugo-linkcheck-action@v0.1.2
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        HUGO_FINAL_URL: https://help.replicated.com
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 1
+    - name: Check for broken Links
+      uses: marojor/hugo-broken-link-checker@v1.1.0
