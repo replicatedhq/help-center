@@ -382,9 +382,9 @@ bytes@^3.0.0:
   integrity sha512-pMhOfFDPiv9t5jjIXkHosWmkSyQbvsgEVNkz0ERHbuLh2T/7j4Mqqpz523Fe8MVY89KC6Sh/QfS2sM+SjgFDcw==
 
 cached-path-relative@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/cached-path-relative/-/cached-path-relative-1.0.1.tgz"
-  integrity sha512-cI79dgUmNqTnvvcEofBa2MikCUUPi91mot41JzWBXe0jyR4+fSQfuzkSmuGrRl3rtFRVAJTBvw39vyHkMHHbVg==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/cached-path-relative/-/cached-path-relative-1.1.0.tgz#865576dfef39c0d6a7defde794d078f5308e3ef3"
+  integrity sha512-WF0LihfemtesFcJgO7xfOoOcnWzY/QHR4qeDqV44jPU3HTI54+LnfXK3SA27AVVGCdZFgjjFFaqUA9Jx7dMJZA==
 
 camelcase-keys@^2.0.0:
   version "2.1.0"
