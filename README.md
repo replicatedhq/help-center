@@ -17,7 +17,7 @@ Before you are able to run this locally you need to have NodeJS v8.x, [YARN](htt
    make serve
    ```
 
-1. In your browser navigate to `localhost:1313` to view the project.
+1. In your browser navigate to `localhost:1313` to view the documentation.
 
 ### Staging vs Prod
 
